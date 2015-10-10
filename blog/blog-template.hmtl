@@ -1,0 +1,49 @@
+<!DOCTYPE <html>
+<head>
+  <title> Blog Template </title>
+</head>
+
+<body>
+
+  <header>
+
+  </header>
+
+  <article>
+    <h2> Blog Post Title </h2>
+    <h4> Date </h4>
+    <p> </p>
+
+    <p> </p>
+
+    <p> </p>
+
+  </article>
+
+  <aside>
+    <h3> Archive </h3>
+    <ul>
+      <li><a href="#"> Post 1 </a></li>
+    </ul>
+  </aside>
+
+  <footer>
+
+  </footer>
+
+</body>
+</html>
+
+<!--
+  How was it to wireframe and create an HTML page with a pair?
+  - Wireframing and creating an html page with a pair was a little different at first because you can't just make decisions. You must discuss with your partner what your are imagining and vice versa and then slowly compromise on the layouts. It took us I'd say a good 15-20min before we even pulled out a wireframing program. Luckily my partner and I had a similar vision.
+
+  Did you find wireframing to be helpful to your development process?
+  - Yes, the wireframing process is very helpful because when you code it gives you a visual to go off of. All you have to do is write the correct instructions.
+
+  What did you and your pair decide made a good wireframe?
+  - I believe we both decided tha we needed to have at least three main parts the header, body, and footer. We had different visions for header but we decided that for the content we should have a standard box with stories and next to it another box with previous links. We didn't want to overflow the layout either so we kept it simple to this standard and at the bottom we have the footer.
+
+  What new semantic elements did you learn about (if any) ?
+  - I actually learned some new semantic elements thanks to my partner. We used <article> and <aside>. I also learned about <header> &  <footer> tags.
+-->
