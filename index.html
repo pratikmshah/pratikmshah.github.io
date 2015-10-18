@@ -2,35 +2,43 @@
 <html>
   <head>
     <title> Pratik Shah Dev In Training</title>
-    <!-- place holder not sure if I'll need this -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
-    <aside> <!-- left side navigation -->
+    <aside class="navi navi-bckgrd debug"> <!-- left side navigation -->
       <nav>
-        <!-- have unordered list as of right now but then switch to img + word -->
-        <h3> PRATIK SHAH </h3>
-        <ul>
-          <li><a href="https://about.me/pratikshah"> About </a></li>
-          <li><a href="https://github.com/pratikmshah"> Portfolio </a></li>
-          <li><a href="blog/index.html"> Blog </a></li>
-          <li><a href="mailto:pratik.t.shah@gmail.com"> Contact </a></li>
+        <!-- navigation has 3 parts name, nav links, and social media -->
+        <h3 class="navi-title debug"> Pratik Shah </h3>
+        <ul class="n-menu debug">
+          <li><img src="imgs/icons/person.png" alt="person icon" class="navi-icon debug"/><a href="https://about.me/pratikshah" class="navi-txt n-cntrl-a debug">About</a></li>
+          <li><img src="imgs/icons/code.png" alt="folder icon" class="navi-icon debug"/><a href="https://github.com/pratikmshah" class="navi-txt n-cntrl-p debug">Portfolio</a></li>
+          <li><img src="imgs/icons/blog.png" alt="blog icon" class="navi-icon debug"/><a href="blog/index.html" class="navi-txt n-cntrl-b debug">Blog</a></li>
+          <li><img src="imgs/icons/email.png" alt="email icon" class="navi-icon debug"/><a href="mailto:pratik.t.shah@gmail.com" class="navi-txt n-cntrl-c debug">Contact</a></li>
         </ul>
       </nav>
 
-      <section>
-        <h4>SOCIAL MEDIA</h4>
-        <ul>
-          <li><a href="https://www.facebook.com/Pratik.M.Shah"> facebook </a></li>
-          <li><a href="https://twitter.com/pratikshah"> twitter </a></li>
-          <li><a href="https://www.linkedin.com/pub/pratik-shah/4a/90a/37a"> linkedin </a></li>
-          <li><a href="https://github.com/pratikmshah"> github </a></li>
-        </ul>
-      </section>
+      <div class="scl-bx debug">
+        <div>
+          <h4 class="scl-title">Social Media</h4> <!-- social media links -->
+        </div>
+        <div>
+          <ul class="scl-lnk">
+            <li><a href="https://www.facebook.com/Pratik.M.Shah" class="scl-fb"> facebook </a></li>
+            <li><a href="https://twitter.com/pratikshah" class="scl-twt"> twitter </a></li>
+            <li><a href="https://www.linkedin.com/pub/pratik-shah/4a/90a/37a" class="scl-in"> linkedin </a></li>
+            <li><a href="https://github.com/pratikmshah" class="scl-git"> github </a></li>
+          </ul>
+        </div>
+      </div>
     </aside>
 
-    <footer>
-      <p> Pratik Shah &#169; 2015 <p>
-    </footer>
+    <!-- main content area -->
+    <article class="con-main debug">
+      <p class="con-well center debug"> Wellcome! </p>
+    </article>
+
   </body>
 </html>
