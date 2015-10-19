@@ -1,0 +1,86 @@
+/* template homepage blog */
+
+.debug {
+  border: 0px solid red;
+}
+/* load fonts */
+@font-face {
+  font-family: 'AnkaCoder';
+  src: url(../font/AnkaCoder-r.ttf);
+}
+@font-face {
+  font-family: 'Akashi';
+  src: url(../font/Akashi.ttf);
+}
+.bckgrd {
+  background-image: url("../imgs/backgrounds/backtile.png");
+}
+.blg-title {
+  font-family: 'Times New Roman', sans-serif;
+  font-size: 3.250em;
+/*  text-align: center;*/
+}
+.fnt-w {
+  font-family: 'AnkaCoder', sans-serif;
+}
+.arc-t {
+  margin: 10px
+}
+.lnk a {
+  text-decoration: none;
+  color: black;
+}
+
+/*-----------------------*/
+
+.container {
+  width: 910px;
+  margin: 0 auto;
+  overflow: auto;
+  background: white;
+}
+.head {
+  height: 60px;
+}
+.nav {
+  height: 30px;
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.nav ul {
+  list-style: none;
+  height: 30px;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Akashi', sans-serif;
+}
+.nav ul li {
+  float: left;
+  margin: 10px;
+}
+.main {
+  overflow: auto;
+}
+.m-left {
+  float: left;
+  width: 590px;
+  padding: 10px;
+}
+.m-right {
+  float: left;
+  width: 300px;
+}
+.foot {
+  height: 30px;
+  border-top: 1px solid black;
+}
+.ft-det {
+  font-size: .875em;
+  text-align: center;
+}
+
+
+
+
