@@ -16,15 +16,21 @@
   background-image: url("../imgs/backgrounds/backtile.png");
 }
 .blg-title {
-  font-family: 'Times New Roman', sans-serif;
+  font-family: 'Georgia', sans-serif;
   font-size: 3.250em;
-/*  text-align: center;*/
+  text-align: center;
 }
 .fnt-w {
   font-family: 'AnkaCoder', sans-serif;
 }
 .arc-t {
-  margin: 10px
+  margin-bottom: .125em;
+  padding: 0px;
+  list-style-type: none;
+  text-decoration: underline;
+}
+.lst-style {
+  list-style-type: none;
 }
 .lnk a {
   text-decoration: none;
@@ -63,7 +69,7 @@
   height: 30px;
   padding: 0px;
   margin: 0px;
-  font-family: 'Akashi', sans-serif;
+  font-family: 'Ankacoder', sans-serif;
 }
 .nav ul li {
   float: left;
