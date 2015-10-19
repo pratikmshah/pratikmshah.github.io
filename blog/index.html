@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
     <title> Tech Blog of Pratik Shah </title>
-    <h1> Technical Blog of Pratik Shah </h1>
-    <!-- image to go here <img src="#"/> -->
   </head>
 
-  <body>
-     <!-- create navigation menu -->
-    <nav>
-      <!-- navigation Home/About/Website     [FB][T][L][G] -->
-      <div>
-       <a href="index.html">Home</a> /
-       <a href="https://about.me/pratikshah">About</a> /
-       <a href="../index.html">Website</a>
-       <a href="https://www.facebook.com/Pratik.M.Shah"><img src="../imgs/icons/fb.png" alt="facebook"/></a>
-       <a href="https://twitter.com/pratikshah"><img src="../imgs/icons/twitter.png" alt="twitter"/></a>
-       <a href="https://www.linkedin.com/pub/pratik-shah/4a/90a/37a"><img src="../imgs/icons/linked.png" alt="linkedin"/></a>
-       <a href="https://github.com/pratikmshah"><img src="../imgs/icons/git.png" alt="github"/></a>
-      </div>
-   </nav>
+  <!-- create a container -->
+  <body class="bckgrd">
+    <div class="container debug">
 
-   <!-- each article will have a header followed by the article in paragraph form -->
-    <article>
-      <h2> Article Title </h2>
-      <sub>Date: Oct. 11, 2015</sub>
-      <p>
-        This is where the most recent content for the article will go.
-      </p>
-    </article>
-   <!-- side bar that will link to all the older blog posts -->
-    <aside>
-      <section>
-        <h3>Archive</h3>
-        <ul>
-          <li><a href="git.html">Git & GitHub</a></li>
-          <li><a href="#">Post 2</a></li>
-          <li><a href="#">Post 3</a></li>
-          <li><a href="#">Post 4</a></li>
-          <li><a href="#">Post 5</a></li>
-          <li><a href="#">Post 6</a></li>
-          <li><a href="#">Post 7</a></li>
-       </ul>
-      </section>
-    </aside>
+      <header class="head debug">
+        <h1 class="blg-title debug"> Technical Blog of Pratik Shah </h1>
+      </header>
 
+      <nav class="nav debug">
+        <ul class="lnk">
+          <li><a href="index.html" class="m-lnk-h">HOME</a></li>
+          <li><a href="https://about.me/pratikshah" class="m-lnk-a">ABOUT</a></li>
+          <li><a href="../index.html" class="m-lnk-w">WEBSITE</a></li>
+          <li><a href="https://www.facebook.com/Pratik.M.Shah">FACEBOOK</a></li>
+          <li><a href="https://twitter.com/pratikshah">TWITTER</a></li>
+          <li><a href="https://www.linkedin.com/pub/pratik-shah/4a/90a/37a">LINKED</a></li>
+          <li><a href="https://github.com/pratikmshah">GITHUB</a></li>
+        </ul>
+      </nav>
 
-    <footer>
-      <p> Pratik Shah &#169; 2015 <p>
-      <a href="http://www.freepik.com/">Icons designed by Freepik</a>
-    </footer>
+      <main class="main debug">
+        <!-- split article and archive -->
+        <div class="m-left debug fnt-w">
+          <h2 class="debug">Welcome!</h2>
+          <h6>(October 18, 2015)</h6>
+          <p>
+            Check out my blog posts to the side -->
+          </p>
+        </div>
+
+        <div class="m-right debug">
+          <h3 class="arc-t fnt-w">Archive</h3>
+          <ul class="lnk">
+            <li><a href="git.html">Git & GitHub</a></li>
+            <li><a href="css-concepts.html">CSS Concepts</a></li>
+            <li><a href="#">Post 3</a></li>
+            <li><a href="#">Post 4</a></li>
+            <li><a href="#">Post 5</a></li>
+            <li><a href="#">Post 6</a></li>
+            <li><a href="#">Post 7</a></li>
+          </ul>
+        </div>
+      </main>
+
+      <footer class="foot debug">
+        <p class="ft-det"> &#169; Pratik Shah  2015 <p>
+      </footer>
+
+    </div>
   </body>
 </html>
