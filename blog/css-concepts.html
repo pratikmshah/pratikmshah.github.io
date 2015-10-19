@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <title> Tech Blog of Pratik Shah </title>
+  </head>
+
+  <!-- create a container -->
+  <body class="bckgrd">
+    <div class="container debug">
+
+      <header class="head debug">
+        <h1 class="blg-title debug"> Technical Blog of Pratik Shah </h1>
+      </header>
+
+      <nav class="nav debug">
+        <ul class="lnk">
+          <li><a href="index.html" class="m-lnk-h">HOME</a></li>
+          <li><a href="https://about.me/pratikshah" class="m-lnk-a">ABOUT</a></li>
+          <li><a href="../index.html" class="m-lnk-w">WEBSITE</a></li>
+          <li><a href="https://www.facebook.com/Pratik.M.Shah">FACEBOOK</a></li>
+          <li><a href="https://twitter.com/pratikshah">TWITTER</a></li>
+          <li><a href="https://www.linkedin.com/pub/pratik-shah/4a/90a/37a">LINKED</a></li>
+          <li><a href="https://github.com/pratikmshah">GITHUB</a></li>
+        </ul>
+      </nav>
+
+      <main class="main debug">
+        <!-- split article and archive -->
+        <div class="m-left debug fnt-w">
+          <h2 class="debug">The Definitive Guide Id & Class</h2>
+          <h6>(October 16, 2015)</h6>
+          <p>
+            In this modern day people expect your webpage to be visually appealing unlike the dull site of Berkshire Hathaways. In order to achieve this people use a markup language called Cascading Style Sheets; CSS for short. This language works in conjunction with HTML to add some color and delight to your site.
+          </p>
+          <p>
+            CSS consist of four basic parts: the selector, declaration, property and value. In figure-1 the selector is h2, the brackets are the declaration, font-size and margin-bottom are the property, and the 18pt/15px are the values. The selector is the key value that tells the html file which tags on the webpage need to be invoked with the specified CSS properties.
+          </p>
+          <figure>
+            <img src="../imgs/blog-pic/fig-1-selector.JPG" alt="selector" class="fig-img">
+            <figcaption class="fig">Fig1. - selector</figcaption>
+          </figure>
+          <p>
+            Although, there are several different types of selectors the two most widely used are Id (short of identifier) and Class. Each have their own purpose and syntax but also share some similarities. In figure-2 the left CSS statement shows an example of an Id which starts with a hash tag. To the right you see an example of a class which starts with a period. Those are the operators to use in order to use an identifier or class. When naming the selector at all cost avoid using numbers, abbreviate, and the name should reflect the purpose of the statement; for example, .bg-advert-bx could be used for a big advertisement box.
+          </p>
+          <figure>
+            <img src="../imgs/blog-pic/fig-2-idvsclass.JPG" alt="selector" class="fig-img">
+            <figcaption class="fig">Fig2. - id and class</figcaption>
+          </figure>
+          <p>
+            The Id selector is a unique identifier that can only be used once per html page. Meaning you can only use it for one element of the html page and cannot reuse it again in other parts.  The use case for an id would be if you have a part of the webpage that is unique, such as a navigation bar or want to target specific areas of the page: the top, middle, or bottom then it would be valid to use an id. Another use for Ids is that it can override a class. For example, if I had a class that changes the font color to blue and I create an id that changes the color to red and use both the id supersedes the class and the font-color will be red. However, after searching on this I am coming to a universal convention that ids should rarely if not never be used.
+          </p>
+          <p>
+            The class selector is just like the identifier except that it allows for reusability. You can reuse the classes in as many html elements you want. A great use case for this is that if you have several different sections but want a similar look to all of them then the class is the perfect selector to use. If an id and class have conflicting properties then the class will be overridden. In my opinion, a best practice for a class is that you don’t want to change a plethora of properties but it should be a range of about one to a handful. One consensus in the developer community is that classes are the preferred selector in CSS and all others should not be used.
+          </p>
+          <p>Below is additional material about selectors.</p>
+          <iframe width="550" height="350" src="https://www.youtube.com/embed/7aeRypQgkTo" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="m-right debug">
+          <h3 class="arc-t fnt-w">Archive</h3>
+          <ul class="lnk">
+            <li><a href="git.html">Git & GitHub</a></li>
+            <li><a href="css-concepts.html">Id Vs Class</a></li>
+            <li><a href="#">Post 3</a></li>
+            <li><a href="#">Post 4</a></li>
+            <li><a href="#">Post 5</a></li>
+            <li><a href="#">Post 6</a></li>
+            <li><a href="#">Post 7</a></li>
+          </ul>
+        </div>
+      </main>
+
+      <footer class="foot debug">
+        <p class="ft-det"> &#169; Pratik Shah  2015 <p>
+      </footer>
+
+    </div>
+  </body>
+</html>

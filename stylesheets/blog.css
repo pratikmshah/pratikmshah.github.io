@@ -30,6 +30,15 @@
   text-decoration: none;
   color: black;
 }
+.fig {
+  font-size: 12px;
+  text-align: center;
+}
+.fig-img {
+  display: block;
+  margin: 0px auto;
+}
+
 
 /*-----------------------*/
 
