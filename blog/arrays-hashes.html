@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <title> Tech Blog of Pratik Shah </title>
+  </head>
+
+  <!-- create a container -->
+  <body class="bckgrd">
+    <div class="container debug">
+
+      <header class="head debug">
+        <h1 class="blg-title debug">TECHNICAL STREET</h1>
+      </header>
+
+      <nav class="nav debug">
+        <ul class="lnk">
+          <li><a href="index.html" class="m-lnk-h">HOME</a></li>
+          <li><a href="https://about.me/pratikshah" class="m-lnk-a">ABOUT</a></li>
+          <li><a href="../index.html" class="m-lnk-w">WEBSITE</a></li>
+          <li><a href="https://www.facebook.com/Pratik.M.Shah">FACEBOOK</a></li>
+          <li><a href="https://twitter.com/pratikshah">TWITTER</a></li>
+          <li><a href="https://www.linkedin.com/pub/pratik-shah/4a/90a/37a">LINKED</a></li>
+          <li><a href="https://github.com/pratikmshah">GITHUB</a></li>
+        </ul>
+      </nav>
+
+      <main class="main debug">
+        <!-- split article and archive -->
+        <div class="m-left debug fnt-w">
+          <h2 class="debug">Storing Data in Ruby</h2>
+          <h6>(October 24, 2015)</h6>
+          <p>
+            When coding in ruby there will be times where you want to store a collection of data for later use. Two objects that can help you out with this are arrays and hashes. Both provide a way to store and access data but each has different rules on how you can use them. In my opinion, from what I can foresee is that arrays  are good when it comes to storing vast amounts of computational data; for example, statistics, grades, and any other data that has to do with numbers. Hashes on the other hand, have a great use case on a particular subject and the key-value pairs are unique to that subject; for example, take and employee which has a name, address, age, department, title etc... It’s probably best to show you.
+          </p>
+          <p>
+            Let’s start with the array; see figure 1. You can create an array to store numbers, strings, objects or all of them in one single array. To define an array you put brackets around the data. Make sure you give the array a name that is descriptive of what data it is going to house.
+          </p>
+          <figure>
+            <img src="../imgs/blog-pic/3-1-array.JPG" alt="array" class="fig-img">
+            <figcaption class="fig">Fig1. - array</figcaption>
+          </figure>
+          <p>
+           Arrays store the data in a set order and assign an index number starting with 0 to each element (value); see figure 2. In order to access the stored data you need to use the index number associated with the data point you want; see figure 3. To access the value you simply type the name of the array and in the brackets you specify the index number. You can also reassign a new value this way if you needed to.
+          </p>
+          <figure>
+            <img src="../imgs/blog-pic/3-2-index.JPG" alt="array index" class="fig-img">
+            <figcaption class="fig">Fig2. - array index</figcaption>
+          </figure>
+          <figure>
+            <img src="../imgs/blog-pic/3-3-access-array.JPG" alt="access array" class="fig-img">
+            <figcaption class="fig">Fig3. - access array</figcaption>
+          </figure>
+          <p>
+            Hashes have a different setup structure as you can see in figure 4. In order to define a hash you use curly braces and then define a key value followed by an assignment and greater than operator (also known as the rocket) and last you specify a value. After each key/value pair, except for the last pair, you need to add a comma. Your keys must be unique per hash and you cannot have two of the same keys in a single hash otherwise the interpreter will return an error because it does not know which key value pair you are trying to access.
+          </p>
+          <figure>
+            <img src="../imgs/blog-pic/3-4-hash.JPG" alt="access array" class="fig-img">
+            <figcaption class="fig">Fig4. - hash</figcaption>
+          </figure>
+          <p>
+            To access the data in a hash you need simply need to specify the hash name and then the key name in between the brackets.
+          </p>
+          <figure>
+            <img src="../imgs/blog-pic/3-5-access-hash.JPG" alt="access hash" class="fig-img">
+            <figcaption class="fig">Fig5. - hash</figcaption>
+          </figure>
+          <p>This is only the basics when it comes to storing a collection of data in ruby. See below for some more interesting references on array and hashes.
+          </p>
+          <p><a href="http://www.tutorialspoint.com/ruby/ruby_arrays.htm" class="lnk-post">ARRAYS</a>  |  <a href="http://www.tutorialspoint.com/ruby/ruby_hashes.htm" class="lnk-post">HASHES</a>
+          </p>
+        </div>
+
+        <div class="m-right debug">
+          <ul class="lnk">
+            <li class="lst-style"><h3 class="arc-t fnt-w">Posts</h3>
+            <li><a href="git.html">Git & GitHub</a></li>
+            <li><a href="css-concepts.html">CSS Concepts</a></li>
+            <li><a href="arrays-hashes.html">Arrays & Hashes</a></li>
+            <li><a href="#">Post 4</a></li>
+            <li><a href="#">Post 5</a></li>
+            <li><a href="#">Post 6</a></li>
+            <li><a href="#">Post 7</a></li>
+          </ul>
+        </div>
+      </main>
+
+      <footer class="foot debug">
+        <p class="ft-det"> &#169; Pratik Shah  2015 <p>
+      </footer>
+
+    </div>
+  </body>
+</html>
