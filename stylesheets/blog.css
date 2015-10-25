@@ -33,6 +33,7 @@
 }
 .lst-style {
   list-style-type: none;
+  text-decoration: none;
 }
 .lnk a {
   text-decoration: none;
@@ -51,8 +52,25 @@
   display: block;
   margin: 0px auto;
 }
+/*navi links home, about, web, social*/
+.m-lnk-h:hover {
+  color: #87CEFA;
+}
+.m-lnk-a:hover {
+  color: #87CEFA;
+}
+.m-lnk-w:hover {
+  color: #0BDA51;
+}
+.m-lnk-s:hover {
+  color: #E00000;
+}
+.posts-lnk a:hover {
+  text-decoration: underline;
+  color: #87CEFA;
+}
 
-/*-----------------------*/
+/*--------Container----------*/
 
 .container {
   width: 910px;
@@ -74,12 +92,12 @@
   list-style: none;
   height: 30px;
   padding: 0px;
-  margin: 0px;
+  margin: .313em;
   font-family: 'Ankacoder', sans-serif;
 }
 .nav ul li {
-  float: left;
-  margin: 10px;
+  display: inline;
+  padding: 10px;
 }
 .main {
   overflow: auto;
@@ -101,6 +119,7 @@
   font-size: .875em;
   text-align: center;
 }
+
 
 
 
