@@ -114,9 +114,10 @@
 }
 .m-right {
   float: left;
-  width: 300px;
+  width: 280px;
 }
 .foot {
+  clear: both;
   height: 30px;
   border-top: 1px solid black;
 }
