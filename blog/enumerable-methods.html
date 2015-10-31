@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <title> Pratik Shah Dev In Training</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header d">
+        <nav>
+          <div>
+            <h1 class="menu-title d">PRATIK SHAH</h1>
+            <ul class="menu d">
+              <li><a href="http://pratikmshah.github.io/" class="lnk-abt">HOME</a></li>
+              <li><a href="https://about.me/pratikshah" class="lnk-abt">ABOUT</a></li>
+              <li><a href="https://github.com/pratikmshah" class="lnk-wrk">WORK</a></li>
+              <li><a href="http://pratikmshah.github.io/blog/index.html" class="lnk-blg">BLOG</a></li>
+              <li><a href="https://twitter.com/pratikshah" class="lnk-twt"><img src="../imgs/icons/twt.png" alt="twitter" class="menu-i"></a></li>
+              <li><a href="https://www.linkedin.com/in/pratikmshah" class="lnk-in"><img src="../imgs/icons/in.png" alt="linkedin" class="menu-i"></a></li>
+              <li><a href="https://www.facebook.com/Pratik.M.Shah" class="lnk-fb"><img src="../imgs/icons/fb.png" alt="facebook" class="menu-i"></a></li>
+              <li><a href="https://github.com/pratikmshah" class="lnk-git"><img src="../imgs/icons/git.png" alt="github" class="menu-i"></a></li>
+              <li><a href="mailto:pratik.t.shah@gmail.com?Subject=Hello" class="lnk-eml"><img src="../imgs/icons/email.png" alt="email" class="menu-i"></a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <div class="spacer"></div>
+      <!-- START OF BLOG -->
+
+      <main class="main debug">
+        <div class="container debug">
+          <div class="blog-container">
+          <div class="m-left debug fnt-w">
+            <h2 class="debug title-clr">Use a Map</h2>
+            <h5>(October 31, 2015)</h5>
+              <p>
+                The enumerable class in ruby houses some powerful methods that allow you to iterate through a collection of objects by passing values in succession. One of these methods called map is method that allows you to return an array that is identical in size. It is a great method to use with a collection of items if you want to manipulate such as, capitalize all strings in the array.
+              </p>
+              <br/>
+              <p>
+                Let’s do a problem together (figure-1).  We have an array from 1 to 6 and we would like to square each number. To setup so we could use the map method we need to write the name of the array and then use the dot operator followed by map (array_name.map).  Next, you need to create a code block using brackets ({ }). Then in between the brackets we setup our bars and a variable that will be our element iterator (|x|). Last, we write our statement that we want to compute; in this case it will be the element times itself to get the square (x * x). Note, if you have multiple statements you need to process use the do-end code block.
+              </p>
+              <br/>
+              <figure>
+                <img src="../imgs/blog-pic/fig1-map.JPG" alt="map method" class="fig-img">
+                <figcaption class="fig">Fig1. - map method</figcaption>
+              </figure>
+              <br/>
+              <p>
+                Ok so what is exactly happening here (figure-2)? Well, map method is processing each element one by one into a result array that it will return after it is done iterating. The return value is the same size as the original array; so if length of array was 6 we will receive a 6 element array. Another, method that does the same exact thing as map is called collect and it is used exactly like map. One, last thing you might say why not use the each iterator instead? The each iterator is different as it return a single element value one by one and not a full array. Also, it doesn’t return an identical size array as map does.
+              </p>
+              <br/>
+              <figure>
+                <img src="../imgs/blog-pic/fig2-output.JPG" alt="map method output" class="fig-img">
+                <figcaption class="fig">Fig2. - map output</figcaption>
+              </figure>
+              <br/>
+              <p>
+                So, I hope you were able to get a quick grasp about the map method and how useful it will be when you develop. For more information check out the documentation <a href="http://ruby-doc.org/core-2.2.3/Enumerable.html" class="lnk-post">here</a>.
+              </p>
+          </div>
+
+          <div class="m-right debug">
+            <ul class="archive">
+              <li class=""><h2 class="arc-t">Posts</h2>
+              <li><a href="git.html">Git & GitHub</a></li>
+              <li><a href="css-concepts.html">CSS Concepts</a></li>
+              <li><a href="arrays-hashes.html">Arrays & Hashes</a></li>
+              <li><a href="enumerable-methods.html">#Map</a></li>
+              <li><a href="#">Post 5</a></li>
+              <li><a href="#">Post 6</a></li>
+              <li><a href="#">Post 7</a></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </main>
+
+
+      <footer class="footer d">
+        <p class="">&copy 2015 Pratik Shah</p>
+      </footer>
+    </div>
+  </body>
+</html>

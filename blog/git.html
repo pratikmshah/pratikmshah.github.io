@@ -2,72 +2,84 @@
 <html>
   <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
-    <title> Tech Blog of Pratik Shah </title>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <title> Pratik Shah Dev In Training</title>
   </head>
 
-  <!-- create a container -->
-  <body class="bckgrd">
-    <div class="container bckgrd debug">
-
-      <header class="head debug">
-        <h1 class="blg-title debug">TECHNICAL STREET</h1>
+  <body>
+    <div class="wrapper">
+      <header class="header d">
+        <nav>
+          <div>
+            <h1 class="menu-title d">PRATIK SHAH</h1>
+            <ul class="menu d">
+              <li><a href="http://pratikmshah.github.io/" class="lnk-abt">HOME</a></li>
+              <li><a href="https://about.me/pratikshah" class="lnk-abt">ABOUT</a></li>
+              <li><a href="https://github.com/pratikmshah" class="lnk-wrk">WORK</a></li>
+              <li><a href="http://pratikmshah.github.io/blog/index.html" class="lnk-blg">BLOG</a></li>
+              <li><a href="https://twitter.com/pratikshah" class="lnk-twt"><img src="../imgs/icons/twt.png" alt="twitter" class="menu-i"></a></li>
+              <li><a href="https://www.linkedin.com/in/pratikmshah" class="lnk-in"><img src="../imgs/icons/in.png" alt="linkedin" class="menu-i"></a></li>
+              <li><a href="https://www.facebook.com/Pratik.M.Shah" class="lnk-fb"><img src="../imgs/icons/fb.png" alt="facebook" class="menu-i"></a></li>
+              <li><a href="https://github.com/pratikmshah" class="lnk-git"><img src="../imgs/icons/git.png" alt="github" class="menu-i"></a></li>
+              <li><a href="mailto:pratik.t.shah@gmail.com?Subject=Hello" class="lnk-eml"><img src="../imgs/icons/email.png" alt="email" class="menu-i"></a></li>
+            </ul>
+          </div>
+        </nav>
       </header>
 
-      <nav class="nav debug">
-        <div class="center">
-        <ul class="lnk">
-          <li><a href="index.html" class="m-lnk-h">HOME</a></li>
-          <li><a href="https://about.me/pratikshah" class="m-lnk-a">ABOUT</a></li>
-          <li><a href="../index.html" class="m-lnk-w">WEBSITE</a></li>
-          <li><a href="https://www.facebook.com/Pratik.M.Shah" class="m-lnk-s">FACEBOOK</a></li>
-          <li><a href="https://twitter.com/pratikshah" class="m-lnk-s">TWITTER</a></li>
-          <li><a href="https://www.linkedin.com/pub/pratik-shah/4a/90a/37a" class="m-lnk-s">LINKED</a></li>
-          <li><a href="https://github.com/pratikmshah" class="m-lnk-s">GITHUB</a></li>
-        </ul>
-        </div>
-      </nav>
+      <div class="spacer"></div>
+      <!-- START OF BLOG -->
 
       <main class="main debug">
-        <!-- split article and archive -->
-        <div class="m-left debug fnt-w">
-          <h2 class="debug">Why You Should Git It!</h2>
-          <h6>(October 3, 2015)</h6>
-            <p>
-              In this post I am going to talk to you about how a piece of software that is not as gooey as you would expect but plays a big role when managing source code versions. It is also open source, meaning it is free to use! It is called version control. Version control is simply the process of tracking and managing file changes over time. But, why use version control for your source code? Well, have you ever had code you were working on and found out it did not quite work only to wish you could go back to a stable version? Or what about when each member of your team is working on several files and everyone has to consolidate their work back to the original how would you track that? What about if you wanted to know who wrote the code, what they changed and why they changed it? Implementing version control will help solve all of these issues and more.
-           </p>
-            <p>
-             Ok so now you understand version control so what is this genius piece of free software that will help track all of this? It is called Git. Developers use Git because of its simple and fast design. Although there are some graphical user interfaces (GUI) clients available, in its true form Git runs purely through command line interface or interpreter (CLI). The CLI is a way for you to navigate and manipulate your systems files through text commands by terminal/console. Git allows you to check and progress changes to your files. It consist of three phases: the working phase, the staging phase, and the commit phase. Afterwards you are able to do a pull/merge request.
-           </p>
-           <p>
-             In the working phase you create a copy of the file on your local drive and then create a new branch (subdivision) to make your changes. Once you finish your editing you move to the staging phase where you add the file to be tracked or staged by Git. Next, your file moves to the commit phase where you finalize and commit (save) the changes. Last, you send your files back to the remote location, such as GitHub; more about that later. You then create a pull request for your code to be reviewed and approved to be merged with the original source.
+        <div class="container debug">
+          <div class="blog-container">
+          <div class="m-left debug fnt-w">
+            <h2 class="debug title-clr">Why You Should Git It!</h2>
+            <h5>(October 3, 2015)</h5>
+              <p>
+                In this post I am going to talk to you about how a piece of software that is not as gooey as you would expect but plays a big role when managing source code versions. It is also open source, meaning it is free to use! It is called version control. Version control is simply the process of tracking and managing file changes over time. But, why use version control for your source code? Well, have you ever had code you were working on and found out it did not quite work only to wish you could go back to a stable version? Or what about when each member of your team is working on several files and everyone has to consolidate their work back to the original how would you track that? What about if you wanted to know who wrote the code, what they changed and why they changed it? Implementing version control will help solve all of these issues and more.
+             </p>
+             <br/>
+              <p>
+               Ok so now you understand version control so what is this genius piece of free software that will help track all of this? It is called Git. Developers use Git because of its simple and fast design. Although there are some graphical user interfaces (GUI) clients available, in its true form Git runs purely through command line interface or interpreter (CLI). The CLI is a way for you to navigate and manipulate your systems files through text commands by terminal/console. Git allows you to check and progress changes to your files. It consist of three phases: the working phase, the staging phase, and the commit phase. Afterwards you are able to do a pull/merge request.
+             </p>
+             <br/>
+             <p>
+               In the working phase you create a copy of the file on your local drive and then create a new branch (subdivision) to make your changes. Once you finish your editing you move to the staging phase where you add the file to be tracked or staged by Git. Next, your file moves to the commit phase where you finalize and commit (save) the changes. Last, you send your files back to the remote location, such as GitHub; more about that later. You then create a pull request for your code to be reviewed and approved to be merged with the original source.
             </p>
-           <p>
-              GitHub is a great complementary source where people are now able to host their source files into repositories on the cloud.GitHub provides some great advantages when it comes to version control and collaboration. One reason is that your code is hosted remotely so if your computer dies you will be able to retrieve your files to the most recent stable version. Another reason is that it allows for your code to be forked (copied) and to be worked on by anyone allowing for growth and improvements on the project. In addition, it allows for code review and collaboration before the changes are merged (consolidated) with the original source file.
-           </p>
-            <p>
-             I hope you have taken a basic understanding on what the purpose of Git is and how it helps with version control. Also, what a supplementary tool GitHub is to Git. Remember, version control helps with who, what, why and recovery of files over time.
-           </p>
-        </div>
+            <br/>
+             <p>
+                GitHub is a great complementary source where people are now able to host their source files into repositories on the cloud.GitHub provides some great advantages when it comes to version control and collaboration. One reason is that your code is hosted remotely so if your computer dies you will be able to retrieve your files to the most recent stable version. Another reason is that it allows for your code to be forked (copied) and to be worked on by anyone allowing for growth and improvements on the project. In addition, it allows for code review and collaboration before the changes are merged (consolidated) with the original source file.
+             </p>
+             <br/>
+              <p>
+               I hope you have taken a basic understanding on what the purpose of Git is and how it helps with version control. Also, what a supplementary tool GitHub is to Git. Remember, version control helps with who, what, why and recovery of files over time.
+             </p>
+          </div>
 
-        <div class="m-right debug">
-          <ul class="lnk posts-lnk">
-            <li class="lst-style"><h3 class="arc-t fnt-w">Posts</h3>
-            <li><a href="git.html">Git & GitHub</a></li>
-            <li><a href="css-concepts.html">CSS Concepts</a></li>
-            <li><a href="arrays-hashes.html">Arrays & Hashes</a></li>
-            <li><a href="#">Post 4</a></li>
-            <li><a href="#">Post 5</a></li>
-            <li><a href="#">Post 6</a></li>
-            <li><a href="#">Post 7</a></li>
-          </ul>
+          <div class="m-right debug">
+            <ul class="archive">
+              <li class=""><h2 class="arc-t">Posts</h2>
+              <li><a href="git.html">Git & GitHub</a></li>
+              <li><a href="css-concepts.html">CSS Concepts</a></li>
+              <li><a href="arrays-hashes.html">Arrays & Hashes</a></li>
+              <li><a href="enumerable-methods.html">#Map</a></li>
+              <li><a href="#">Post 5</a></li>
+              <li><a href="#">Post 6</a></li>
+              <li><a href="#">Post 7</a></li>
+            </ul>
+          </div>
+        </div>
         </div>
       </main>
 
-      <footer class="foot debug">
-        <p class="ft-det"> Pratik Shah  2015 <p>
-      </footer>
 
+      <footer class="footer d">
+        <p class="">&copy 2015 Pratik Shah</p>
+      </footer>
     </div>
   </body>
 </html>
