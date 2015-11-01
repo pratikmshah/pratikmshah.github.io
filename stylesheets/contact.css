@@ -27,6 +27,7 @@
 .con-lst-style {
   list-style-type: none;
   text-decoration: none;
+  color: black;
 }
 .con-lst-style li {
   margin: 30px;
