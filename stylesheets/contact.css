@@ -1,0 +1,90 @@
+/* CONTACT CONTENT */
+.bckrd-con {
+  background-color: white;
+}
+.head-contact {
+  height: 50px;
+  padding-top: 50px;
+}
+.main-contact {
+  overflow: auto;
+}
+.con-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: underline;
+  color: black;
+}
+.con-fnt-c li a {
+  color: black;
+}
+.con-itm {
+  width: 50px;
+  height: 50px;
+}
+.con-lst-style {
+  list-style-type: none;
+  text-decoration: none;
+}
+.con-lst-style li {
+  margin: 30px;
+}
+.lnk a {
+  text-decoration: none;
+  color: white;
+}
+/* icons that will interchange pictures on hover */
+.con-em img:last-child {
+  display: none;
+}
+.con-em:hover img:first-child {
+  display: none;
+}
+.con-em:hover img:last-child {
+  display: inline-block;
+}
+
+.con-in img:last-child {
+  display: none;
+}
+.con-in:hover img:first-child {
+  display: none;
+}
+.con-in:hover img:last-child {
+  display: inline-block;
+}
+
+.con-t img:last-child {
+  display: none;
+}
+.con-t:hover img:first-child {
+  display: none;
+}
+.con-t:hover img:last-child {
+  display: inline-block;
+}
+
+.con-fb img:last-child {
+  display: none;
+}
+.con-fb:hover img:first-child {
+  display: none;
+}
+.con-fb:hover img:last-child {
+  display: inline-block;
+}
+/* END OF CONTACT */
+
+
+
+
+
+
+
+
+
+
+
+
