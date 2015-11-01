@@ -13,6 +13,7 @@ menu-title - title name of site
 lnk-abt, wrk...eml - link effects for each navi item
 */
 /* reset all margin and padding */
+@import url("contact.css");
 * {
   margin: 0px;
   padding: 0px;
@@ -63,6 +64,7 @@ lnk-abt, wrk...eml - link effects for each navi item
   text-align: left;
   vertical-align: middle;
   padding-top: 2em;
+  color: black;
 }
 .menu {
   float: right;
