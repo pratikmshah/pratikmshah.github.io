@@ -30,7 +30,8 @@
   color: black;
 }
 .con-lst-style li {
-  margin: 30px;
+  display: inline-block;
+  margin: 20px;
 }
 .lnk a {
   text-decoration: none;
