@@ -63,7 +63,8 @@
 }
 /*navi links home, about, web, social*/
 .lst-style a:hover {
-  color: #00AAE4;
+  color: #00aced;
+  text-shadow: white 0 0 25px;
 }
 .lst-style li {
   padding: .4em;
