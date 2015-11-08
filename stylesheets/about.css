@@ -22,7 +22,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 200px;
+  margin-top: 7.5em;
   margin-bottom: 1em;
 }
 .about-font {
@@ -31,7 +31,20 @@
   font-weight: 400;
   text-align: center;
   text-decoration: none;
-  color: #00ff00;
+  color: white;
+}
+.abt-bx {
+  width: 65%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.abt-lnk {
+  text-decoration: none;
+  color: #00aced;
+}
+p a:hover {
+  text-shadow: 0 0 20px white;
 }
 
 
