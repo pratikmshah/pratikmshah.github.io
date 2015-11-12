@@ -77,7 +77,12 @@
   display: block;
   margin: 0px auto;
 }
-
+/* END OF NAVI */
+.code {
+  font-family: 'Source Code Pro';
+  font-size: 1.1em;
+  color: #00aced;
+}
 /*--------Container----------*/
 .spacer {
   width: 100%;
@@ -124,3 +129,4 @@
   text-align: center;
   min-height: 1000px
 }
+

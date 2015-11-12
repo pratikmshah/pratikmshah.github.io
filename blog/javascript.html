@@ -38,38 +38,56 @@
         <div class="container debug">
           <div class="blog-container">
           <div class="m-left debug fnt-w">
-            <h2 class="debug title-clr">Blueprint of a Class</h2>
-            <h5>(November 8, 2015)</h5>
-            <br/>
-            <figure>
-              <img src="../imgs/blog-pic/fig1-class.JPG" alt="class" class="fig-img">
-              <figcaption class="fig">Fig1. - class</figcaption>
-            </figure>
-            <br/>
+            <h2 class="debug title-clr">Define Functions</h2>
+            <h5>(November 12, 2015)</h5>
             <p>
-             The class is an important concept in object oriented programming. It is a blueprint in which objects are created which give the object instructions for functions and attributes. For example, take a car it has wheels, a body frame, steering wheel etc… all of these are different shapes and sizes are attributes. Your car can drive, break, honk, and turn on lights all of these are examples of functions. In Ruby we create classes so that a collection of methods and variables can be encapsulated into one so that any object that invokes the class can use and access its methods and variables.
+             The method or function, I like function, is a useful code block in any programming language as it combines lines of code that can be reused throughout the program. To sum it up it’s basically write once and run anywhere in the code where accessible; keywords “write once”.Although each language has functions, the syntax for writing them are different due to the keywords but similar when it comes to the layout. Let me start with Ruby and then JavaScript.
             </p>
             <br/>
             <p>
-              In figure 1 we have a class called Person. It has four variables, called instance variables, first, middle, last and birthday. It also has two methods initialize that takes 3 arguments and print_info which returns a string.  Let’s start with the initialize function which is also called a constructor. The method must receive four strings and it assigns it to each instance variables. Instance variables are variables that start with the “@” sign and are used inside the class. The last method we have is called print_info and its purpose is to display the information in the variables.
+              See below the code block displays a basic Ruby method. To communicate to the interpreter you use the keyword “def” and then the method name followed by the arguments, if any. In order to close the method you need to close it with the end keyword. In order to use the method you simply call the method along with any arguments if any.
             </p>
+            <br/>
+            <pre>
+             <code class="code">
+    # define method 
+    def method_name (argument)
+         print argument
+    end
+    
+    # call code
+    method_name(“hello!”)
+             </code>
+            </pre>
             <br/>
             <p>
-              With the four variables we list them in attr_accessor, attr_reader, or attr_writer. We are using attr_accessor for first, middle, and last variables because we want to be able to read and write to those variables. For birthday we only want to be able to read this because you cannot change the day you were born.
+              Now let’s take a look at JavaScript and you will immediately notice the similarities and differences. In order to tell the interpreter we are creating a function we need to use the keyword “function” followed by the method name. The naming convention for JavaScript is to use camel case. In order to pass arguments to your function you must use the parentheses. Last, to open and close the function you use brackets to show this to the interpreter. Calling the method is the same as it is in ruby.
             </p>
+            <br/>
+            <pre>
+             <code class="code">
+    // define method
+    function methodName (argument) {
+         console.log(argument);
+    }
+
+    // call code
+    methodName(“hello!”)
+             </code>
+            </pre>
             <br/>
             <p>
-              Lets go outside the class so we can see how to use it. The first line creates an object called person by invoking the Person class. To create the new object we use the .new operator followed by our four required arguments to pass. Here we pass in “John Dover Smith April 5, 1988” to our class variable. This says that the instance object of person holds the value “John” in variable first, “Dover” in variable middle, and so on.
+              One last thing. In JavaScript you can create and store functions into variables also see the code block below. 
             </p>
             <br/>
-            <figure>
-              <img src="../imgs/blog-pic/fig2-class-output.JPG" alt="class output" class="fig-img">
-              <figcaption class="fig">Fig2. - output</figcaption>
-            </figure>
-            <br/>
-            <p>
-              To access any methods in the class we can use the object_name.method_name; for example, in the next line we run the print_info method which outputs the two string lines (see figure-2). We then access the first variable and display it to the console. The following line we can reassign the first name variable to a new name. If we try the birthday it will not work because it is an attr_reader and can only be read. I hope you were able to follow a long and see the basic pieces of classes.
-            </p>
+            <pre>
+             <code class="code">
+    // define method
+    var variable = function methodName (argument) {
+       console.log(argument);
+    }
+             </code>
+            </pre>
         </div>
 
           <div class="m-right debug">
