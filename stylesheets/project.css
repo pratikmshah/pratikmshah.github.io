@@ -1,0 +1,132 @@
+/* projects page  utilities*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url(../font/Montserrat-Light.otf);
+  src: url(font/Montserrat-Light.ttf);
+}
+}
+.debug {
+  border: 0px solid red;
+}
+.bckgrd {
+  background-color: black;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+/*--------Container----------*/
+.prj-container {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  border-top: 4px solid #21AEEC;
+  font-family: 'Lato', 'Montserrat', sans-serif;
+}
+.prj-main {
+  width: 990px;
+  margin: 0 auto;
+  min-height: 1000px;
+}
+.prj-nav {
+  width: 100%;
+  height: 3em;
+
+}
+.prj-icon li {
+  display: inline;
+  padding: 1em;
+}
+.prj-icon a {
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 13px;
+  color: #379FE2;
+}
+.prj-icon a:hover {
+  color: white;
+}
+.spacing img {
+  height: 16px;
+  width: 16px;
+  margin-top: 20px;
+}
+/*--- main projects --- */
+/*box links & horizontal break & fonts*/
+.box-lnk {
+  overflow: auto;
+  padding: 8px;
+  border: 1px solid #55ACEE;
+  background-color: #55ACEE;
+  text-decoration: none;
+  font-size: 1em;
+  color: white;
+}
+.box-lnk:hover {
+  border: 1px solid #55ACEE;
+  background-color: black;
+  color: #55ACEE;
+}
+.hr-break {
+  width: 100%;
+  margin: 4.25em 0;
+  border-bottom: 1px solid #1F3142;
+  box-shadow: 0 0 10px #1F3142;
+}
+.fnt-wt-light {
+  font-weight: 300;
+}
+.fnt-clr-white {
+  color: white;
+}
+.fnt-clr-twtblu {
+  color: #55ACEF;
+}
+.fnt-clr-gry {
+  color: #A9A9A9;
+}
+/* ---------------------- */
+/* Title */
+.prj-title {
+  margin-top: 3em;
+}
+.prj-title h1 {
+  font-size: 6.25em;
+  font-weight: 300;
+  color: #55ACEF;
+}
+.prj-title p {
+  margin: .75em 0;
+  margin-bottom: 2em;
+  font-size: 1.75em;
+  font-weight: 300;
+  color: white;
+}
+
+/* Game of War Project */
+.war h1 {
+  font-size: 3em;
+}
+.war p {
+  padding: 1em;
+  font-size: 1.125em;
+}
+.war img {
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+/* Footer */
+.footer {
+  height: 5.625em;
+  padding: 1em;
+  background-color: #00070D;
+  font-size: .688em;
+  text-align: center;
+}
