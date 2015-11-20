@@ -109,14 +109,15 @@
 }
 
 /* Game of War Project */
-.war h1 {
+/* Cheat Sheet Project */
+.prj h1 {
   font-size: 3em;
 }
-.war p {
+.prj p {
   padding: 1em;
   font-size: 1.125em;
 }
-.war img {
+.prj img {
   display: block;
   margin: 0 auto;
   padding-bottom: 2em;
