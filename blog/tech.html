@@ -38,54 +38,61 @@
         <div class="container debug">
           <div class="blog-container">
           <div class="m-left debug fnt-w">
-            <h2 class="debug title-clr">Define Functions</h2>
-            <h5>(November 12, 2015)</h5>
+            <h2 class="debug title-clr">My Way Your Way of Sorting</h2>
+            <h5>(November 19, 2015)</h5>
             <p>
-             The method or function, I like function, is a useful code block in any programming language as it combines lines of code that can be reused throughout the program. To sum it up it’s basically write once and run anywhere in the code where accessible; keywords “write once”.Although each language has functions, the syntax for writing them are different due to the keywords but similar when it comes to the layout. Let me start with Ruby and then JavaScript.
+             Important for any set of data is the ability to sort it. Although these algorithms run behind the scenes, it is an integral part for any program that stores and processess information. Sorting is what made Google such a dominant search engine; besides AdWords of course. They introduced a sorting algorithm for search engines called PageRank which ranked websites in order of most importance by the number of links that linked to the site. Today I am going to introduce you to 3 simple sorting algorithms that are used by programmers; bubble sort, insertion sort, and merge step. I also accompanied an online video after each sort algorithm to help.
             </p>
             <br/>
+            <h4>Bubble Sort aka Big O</h4>
             <p>
-              See below the code block displays a basic Ruby method. To communicate to the interpreter you use the keyword “def” and then the method name followed by the arguments, if any. In order to close the method you need to close it with the end keyword. In order to use the method you simply call the method along with any arguments if any.
+              The bubble sort is the simplest of the sorting algorithms. The bubble sort works like this, you compare each pair of adjacent elements and swap if they are out of order. You continue to loop through the array until the whole array is sorted from low to high. See below the visual example (el is short for element). <a href="https://www.youtube.com/watch?v=P00xJgWzz2c" target='_blank' class="lnk-post">Video</a>
             </p>
             <br/>
             <pre>
              <code class="code">
-    # define method
-    def method_name (argument)
-         print argument
-    end
-
-    # call code
-    method_name(“hello!”)
+[1, 5, 3, 7, 4] // compare element 1 and 5. 
+                // if el 1 is < el 0 swap else next el.
+[1, 3, 5, 7, 4] // compare el 1 to el 2 el 1 < el 2. Swap
+[1, 3, 5, 4, 7] // continue & repeat until array low-high
+       …
+[1, 3, 4, 5, 7]
              </code>
             </pre>
             <br/>
+            <h4>Insertion Sort</h4>
             <p>
-              Now let’s take a look at JavaScript and you will immediately notice the similarities and differences. In order to tell the interpreter we are creating a function we need to use the keyword “function” followed by the method name. The naming convention for JavaScript is to use camel case. In order to pass arguments to your function you must use the parentheses. Last, to open and close the function you use brackets to show this to the interpreter. Calling the method is the same as it is in ruby.
+              The insertion sort is similar to the bubble sort. In the insertion sort an element is compared to the next adjacent element to see if the value is lower than the current value. If it is lower the elements are swapped and the new swapped element is then compared to each lower element (so el 5 compared to 4, 3…) until the element is the greater than the element to the left of it and lower than the element to the right (ex: 1 < 2 < 3). This algorithm is faster than the bubble sort because it has to make fewer comparisons. <a href="https://www.youtube.com/watch?v=c4BRHC7kTaQ" target='_blank' class="lnk-post">Video</a>
             </p>
             <br/>
             <pre>
              <code class="code">
-    // define method
-    function methodName (argument) {
-         console.log(argument);
-    }
-
-    // call code
-    methodName(“hello!”)
+[3, 5, 1, 9, 6] // compare 3 and 5 - already sorted. 
+[3, 1, 5, 9, 6] // now compare 5 & 1 and swap them. 
+[1, 3, 5, 9, 6] // stick with el 1 and compare 3 & 1.
+    …          // Move 1 to the 1st el.
+[1, 3, 5, 6, 9] // repeat until array sorted low to high.
              </code>
             </pre>
             <br/>
+            <h4>Merge Step</h4>
             <p>
-              One last thing. In JavaScript you can create and store functions into variables also see the code block below.
+              This last algorithm called merge sort can be a little complex but it breaks the array into smaller arrays and sorts each subarray. Once each subarray has been fully sorted they merge and repeat the sorting. This continues until the last merge where the array will be sorted.The reason for this is that sorting mini sub arrays is much faster than one big array. <a href="https://www.youtube.com/watch?v=GCae1WNvnZM" target='_blank' class="lnk-post">Video</a>
             </p>
             <br/>
             <pre>
              <code class="code">
-    // define method
-    var variable = function methodName (argument) {
-       console.log(argument);
-    }
+// take the 8 el array & break them into 1 el arrays
+[10, 9, 15, 20, 17, 12, 5, 2] 
+
+// then we merge and sort the mini subarrays
+[10] [9] [15] [20] [17] [12] [5] [2]   
+
+// we continue and merge once more and sort
+[9, 10] [15, 20] [12, 17] [2, 5]  
+[9, 10, 15, 20]  [2, 5, 12, 17]
+               …
+[2, 5, 9, 10, 15, 17, 20]
              </code>
             </pre>
         </div>
