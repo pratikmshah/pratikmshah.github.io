@@ -1,41 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
-    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-    <title> Pratik Shah Dev In Training</title>
-  </head>
+---
+layout: default
+---
 
-  <body>
-    <div class="wrapper">
-      <header class="header d">
-        <nav>
-          <div>
-            <h1 class="menu-title d">PRATIK SHAH</h1>
-            <ul class="menu d">
-              <li><a href="http://pratikmshah.github.io/" class="lnk-abt">HOME</a></li>
-              <li><a href="about.html" class="lnk-abt">ABOUT</a></li>
-              <li><a href="projects/index.html" class="lnk-wrk">WORK</a></li>
-              <li><a href="http://pratikmshah.github.io/blog/index.html" class="lnk-blg">BLOG</a></li>
-              <li><a href="https://twitter.com/pratikshah" class="lnk-twt" target="_blank"><img src="imgs/icons/twt.png" alt="twitter" class="menu-i"></a></li>
-              <li><a href="https://www.linkedin.com/in/pratikmshah" class="lnk-in" target="_blank"><img src="imgs/icons/in.png" alt="linkedin" class="menu-i"></a></li>
-              <li><a href="https://www.facebook.com/Pratik.M.Shah" class="lnk-fb" target="_blank"><img src="imgs/icons/fb.png" alt="facebook" class="menu-i"></a></li>
-              <li><a href="https://github.com/pratikmshah" class="lnk-git" target="_blank"><img src="imgs/icons/git.png" alt="github" class="menu-i"></a></li>
-              <li><a href="mailto:pratik.t.shah@gmail.com?Subject=Hello" class="lnk-eml"><img src="imgs/icons/email.png" alt="email" class="menu-i"></a></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
+<div class="home">
 
-      <main class="main">
-        <h1 class="main-home">WELCOME!</h1>
-      </main>
+  <h1 class="page-heading">Posts</h1>
 
-      <footer class="footer d">
-        <p>&copy 2015 Pratik Shah.<a href="contact.html" class="con-lst-style" >  Contact</a></p>
-      </footer>
-    </div>
-  </body>
-</html>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

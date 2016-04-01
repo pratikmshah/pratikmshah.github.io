@@ -1,0 +1,115 @@
+/* CSS FOR MAIN SITE'S index.html*/
+/*
+d - debug border around objects
+wrapper - outer most container
+header - header which contains menu
+main - main content area
+footer - bottom footer area
+footer p - paragraph in the footer
+menu - menu navigation for title links and social
+menu li - list item menu for navi links & social
+menu-i - image specification for social icons
+menu-title - title name of site
+lnk-abt, wrk...eml - link effects for each navi item
+*/
+/* reset all margin and padding */
+@import url("contact.css");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url(font/Oswald-Regular.ttf);
+}
+.d {
+  border: 0px solid red;
+}
+.wrapper {
+  width: 100%;
+  height: 100%
+}
+.header {
+  position: fixed;
+  width: 100%;
+  height: 7.813em;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0px 0px 8px #d9d9d9;
+  -moz-box-shadow: 0px 0px 8px #d9d9d9;
+  -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+}
+.main {
+  clear: both;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  min-height: 1000px;
+  overflow: auto;
+}
+.main-home {
+  font-family: 'Arial';
+  color: white;
+  font-size: 4.5em;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1000px;
+}
+.footer {
+  clear: both;
+  height: 5.5em;
+  padding-left: 20em;
+  text-align: left;
+  border-top: 1px solid black;
+  font-size: .75em;
+}
+.footer p {
+  text-align: left;
+  vertical-align: middle;
+  padding-top: 2em;
+  color: black;
+}
+.menu {
+  float: right;
+  margin-right: 3em;
+  margin-top: 3em;
+}
+.menu li {
+  display: inline;
+  padding: .313em;
+}
+.menu li a {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.063em;
+  text-decoration: none;
+  vertical-align: top;
+  color: black;
+  display: inline-block; /* used for underline */
+}
+.menu-i {
+  width: 1em;
+  height: 1em;
+}
+.menu-title {
+  float: left;
+  margin-left: 2.75em;
+  margin-top: 1em;
+  border: 3px solid black;
+  padding: .25em .12em;
+  font-family: 'Arial', 'Verdana';
+  font-weight: bold;
+  font-size: 2em;
+}
+/* menu links effects */
+.header a:after {
+  content: '';
+  display: block;
+  border-bottom: 1px solid red;
+  width: 0;
+  -webkit-transition: 0.5s ease;
+          transition: 0.5s ease;
+}
+.header a:hover:after {
+  width: 100%;
+}
+/* end of underline transition */
