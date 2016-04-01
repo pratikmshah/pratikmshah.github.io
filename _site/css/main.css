@@ -212,12 +212,13 @@ pre {
  * Site footer
  */
 .site-footer {
+  background-color: #000;
   border-top: 1px solid #e8e8e8;
   padding: 30px 0; }
 
 .footer-copyw {
   font-size: 15px;
-  margin-bottom: 15px; }
+  margin-bottom: 0; }
 
 .contact-list,
 .social-media-list {
