@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <title> Pratik Shah Dev In Training</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header d">
+        <nav>
+          <div>
+            <h1 class="menu-title d">PRATIK SHAH</h1>
+            <ul class="menu d">
+              <li><a href="http://pratikmshah.github.io/" class="lnk-abt">HOME</a></li>
+              <li><a href="../about.html" class="lnk-abt">ABOUT</a></li>
+              <li><a href="../projects/index.html" class="lnk-wrk">WORK</a></li>
+              <li><a href="http://pratikmshah.github.io/blog/index.html" class="lnk-blg">BLOG</a></li>
+              <li><a href="https://twitter.com/pratikshah" class="lnk-twt" target="_blank"><img src="../imgs/icons/twt.png" alt="twitter" class="menu-i"></a></li>
+              <li><a href="https://www.linkedin.com/in/pratikmshah" class="lnk-in" target="_blank"><img src="../imgs/icons/in.png" alt="linkedin" class="menu-i"></a></li>
+              <li><a href="https://www.facebook.com/Pratik.M.Shah" class="lnk-fb" target="_blank"><img src="../imgs/icons/fb.png" alt="facebook" class="menu-i"></a></li>
+              <li><a href="https://github.com/pratikmshah" class="lnk-git" target="_blank"><img src="../imgs/icons/git.png" alt="github" class="menu-i"></a></li>
+              <li><a href="mailto:pratik.t.shah@gmail.com?Subject=Hello" class="lnk-eml"><img src="../imgs/icons/email.png" alt="email" class="menu-i"></a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <div class="spacer"></div>
+      <!-- START OF BLOG -->
+
+      <main class="main debug">
+        <div class="container debug">
+          <div class="blog-container">
+          <div class="m-left debug fnt-w">
+            <h2 class="debug title-clr">The Definitive Guide Id & Class</h2>
+            <h5>(October 16, 2015)</h5>
+              <p>
+                In this modern day people expect your webpage to be visually appealing unlike the dull site of Berkshire Hathaways. In order to achieve this people use a markup language called Cascading Style Sheets; CSS for short. This language works in conjunction with HTML to add some color and delight to your site.
+              </p>
+              <br/>
+              <p>
+                CSS consist of four basic parts: the selector, declaration, property and value. In figure-1 the selector is h2, the brackets are the declaration, font-size and margin-bottom are the property, and the 18pt/15px are the values. The selector is the key value that tells the html file which tags on the webpage need to be invoked with the specified CSS properties.
+              </p>
+              <br/>
+              <figure>
+                <img src="../imgs/blog-pic/fig-1-selector.JPG" alt="selector" class="fig-img">
+                <figcaption class="fig">Fig1. - selector</figcaption>
+              </figure>
+              <br/>
+              <p>
+                Although, there are several different types of selectors the two most widely used are Id (short of identifier) and Class. Each have their own purpose and syntax but also share some similarities. In figure-2 the left CSS statement shows an example of an Id which starts with a hash tag. To the right you see an example of a class which starts with a period. Those are the operators to use in order to use an identifier or class. When naming the selector at all cost avoid using numbers, abbreviate, and the name should reflect the purpose of the statement; for example, .bg-advert-bx could be used for a big advertisement box.
+              </p>
+              <br/>
+              <figure>
+                <img src="../imgs/blog-pic/fig-2-idvsclass.JPG" alt="selector" class="fig-img">
+                <figcaption class="fig">Fig2. - id and class</figcaption>
+              </figure>
+              <br/>
+              <p>
+                The Id selector is a unique identifier that can only be used once per html page. Meaning you can only use it for one element of the html page and cannot reuse it again in other parts.  The use case for an id would be if you have a part of the webpage that is unique, such as a navigation bar or want to target specific areas of the page: the top, middle, or bottom then it would be valid to use an id. Another use for Ids is that it can override a class. For example, if I had a class that changes the font color to blue and I create an id that changes the color to red and use both the id supersedes the class and the font-color will be red. However, after searching on this I am coming to a universal convention that ids should rarely if not never be used.
+              </p>
+              <br/>
+              <p>
+                The class selector is just like the identifier except that it allows for reusability. You can reuse the classes in as many html elements you want. A great use case for this is that if you have several different sections but want a similar look to all of them then the class is the perfect selector to use. If an id and class have conflicting properties then the class will be overridden. In my opinion, a best practice for a class is that you don’t want to change a plethora of properties but it should be a range of about one to a handful. One consensus in the developer community is that classes are the preferred selector in CSS and all others should not be used.
+              </p>
+              <br/>
+              <p>Below is additional material about selectors.</p>
+              <iframe width="550" height="350" src="https://www.youtube.com/embed/7aeRypQgkTo" frameborder="1" allowfullscreen></iframe>
+          </div>
+
+          <div class="m-right debug">
+            <ul class="archive">
+              <li class=""><h2 class="arc-t">Posts</h2>
+              <li><a href="git.html">Git & GitHub</a></li>
+              <li><a href="css-concepts.html">CSS Concepts</a></li>
+              <li><a href="arrays-hashes.html">Arrays & Hashes</a></li>
+              <li><a href="enumerable-methods.html">#Map</a></li>
+              <li><a href="ruby-classes.html">Blueprint of a Class</a></li>
+              <li><a href="javascript.html">Define Functions</a></li>
+              <li><a href="tech.html">Sorting Algorithms</a></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+      </main>
+
+
+      <footer class="footer d">
+        <p>&copy 2015 Pratik Shah.<a href="../contact.html" class="con-lst-style" >  Contact</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
