@@ -215,8 +215,8 @@ pre {
   border-top: 1px solid #e8e8e8;
   padding: 30px 0; }
 
-.footer-heading {
-  font-size: 18px;
+.footer-copyw {
+  font-size: 15px;
   margin-bottom: 15px; }
 
 .contact-list,
@@ -455,3 +455,38 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+.center {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  float: none; }
+
+/* icons that will interchange pictures on hover */
+.icon-social img:last-child {
+  display: none; }
+
+.icon-social:hover img:first-child {
+  display: none; }
+
+.icon-social:hover img:last-child {
+  display: inline-block; }
+
+.icon-social img {
+  height: 25px;
+  width: 25px; }
+
+/*Footer*/
+#twitter-btn {
+  margin-bottom: 15px; }
+
+#social-media {
+  padding-left: 0;
+  margin-bottom: 10px; }
+
+.social-media-list li {
+  display: inline;
+  padding: 0 10px; }
+
+.social-media-list li a {
+  text-decoration: none; }
