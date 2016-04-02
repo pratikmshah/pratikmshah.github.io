@@ -26,6 +26,17 @@ body {
 }
 
 
+/**
+ * Set fonts to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-title;
+}
+p, blockquote, pre,
+ul, ol, dl, figure {
+    font-family: $font-body;
+}
+
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm

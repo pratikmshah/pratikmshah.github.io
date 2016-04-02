@@ -1,13 +1,8 @@
-/*variables*/
-$twt-clr: #55acee;
-$whte: white;
-$blk: black;
-
 /**
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
+    border-top: 5px solid $twt-clr;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
     background-color: #000;
