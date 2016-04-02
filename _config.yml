@@ -21,3 +21,14 @@ instagram_username: pratikshah_
 
 # Build settings
 markdown: kramdown
+
+# Default settings
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      category: programming
+      permalink: /blog/:categories/:title
+      layout: "post"
