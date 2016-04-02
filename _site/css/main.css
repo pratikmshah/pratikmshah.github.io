@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,400italic,700,700italic,300);
+/* variables */
 /**
  * Reset some basic elements
  */
@@ -20,6 +23,16 @@ body {
   -o-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
   font-kerning: normal; }
+
+/**
+ * Set fonts to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", "Helvetica Neue", sans-serif; }
+
+p, blockquote, pre,
+ul, ol, dl, figure {
+  font-family: "Lato", "Helvetica Neue", sans-serif; }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -144,7 +157,6 @@ pre {
   .icon > svg path {
     fill: #828282; }
 
-/*variables*/
 /**
  * Site header
  */
@@ -170,7 +182,7 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: white;
+    color: #fff;
     line-height: 1.5; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
@@ -484,13 +496,15 @@ pre {
   height: 25px;
   width: 25px; }
 
-/*variables*/
 /* Navigation effects */
 /*navigation title*/
 #title {
   color: #fff; }
   #title:hover {
     color: #55acee; }
+
+.font-title {
+  font-family: "Oswald", "Helvetica Neue", sans-serif; }
 
 /*navigation links for desktop*/
 @media only screen and (min-width: 600px) {
@@ -520,7 +534,6 @@ pre {
 @media only screen and (max-width: 600px) {
   .nav-link span {
     color: black; } }
-/* variables */
 /* homepage body */
 .page-content {
   background-color: #F4F4F4; }
@@ -539,7 +552,7 @@ pre {
     margin-bottom: 0;
     text-transform: uppercase; }
     .block h2 a.post-link {
-      color: #000; }
+      color: black; }
     .block h2 a.post-link:hover {
       text-decoration: none;
       transition: color 0.3s;

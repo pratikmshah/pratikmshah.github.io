@@ -1,3 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,400italic,700,700italic,300);
+
+/* variables */
+$font-title: 'Oswald', 'Helvetica Neue', sans-serif;
+$font-body: 'Lato', 'Helvetica Neue', sans-serif;
+$twt-clr: #55acee;
+$whte: #fff;
+$blk: black;
+$bckgrd-clr: #F4F4F4;
+$post-hover-clr: #7a7a7a;
+$upcase: uppercase;
+
 /**
  * Reset some basic elements
  */
@@ -25,6 +38,17 @@ body {
     font-kerning: normal;
 }
 
+
+/**
+ * Set fonts to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-title;
+}
+p, blockquote, pre,
+ul, ol, dl, figure {
+    font-family: $font-body;
+}
 
 
 /**
