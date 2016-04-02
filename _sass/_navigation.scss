@@ -1,25 +1,53 @@
-/* Navigation effects */
-.nav-link {
-  display: inline-block;
-  padding: 0 5px;
-  text-align: center;
-  transition: background 0.2s;
-  -webkit-transform: skew(-20deg);
-     -moz-transform: skew(-20deg);
-       -o-transform: skew(-20deg);
-          transform: skew(-20deg);
+/*variables*/
+$twt-clr: #55acee;
+$whte: #fff;
+$blk: black;
 
-  a {
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    -webkit-transform: skew(20deg);
-       -moz-transform: skew(20deg);
-         -o-transform: skew(20deg);
-            transform: skew(20deg);
-  }
+/* Navigation effects */
+
+/*navigation title*/
+#title {
+  color: $whte;
 
   &:hover {
-    background: white;
+    color: $twt-clr;
   }
+}
+
+/*navigation links for desktop*/
+@media only screen and (min-width: 600px) {
+  .nav-link {
+    display: inline-block;
+    padding: 15px 5px;
+    text-align: center;
+    transition: background 0.2s;
+    -webkit-transform: skew(-20deg);
+       -moz-transform: skew(-20deg);
+         -o-transform: skew(-20deg);
+            transform: skew(-20deg);
+
+    span {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      -webkit-transform: skew(20deg);
+         -moz-transform: skew(20deg);
+           -o-transform: skew(20deg);
+              transform: skew(20deg);
+    }
+
+    &:hover {
+      background: $twt-clr;
+
+      span {
+        color: $blk !important;
+      }
+    }
+  }
+}
+
+/*navigation for mobile*/
+@media only screen and (max-width: 600px) {
+  .nav-link span { color: $blk;}
 }

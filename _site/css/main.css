@@ -144,6 +144,7 @@ pre {
   .icon > svg path {
     fill: #828282; }
 
+/*variables*/
 /**
  * Site header
  */
@@ -151,6 +152,7 @@ pre {
   border-top: 5px solid #424242;
   border-bottom: 1px solid #e8e8e8;
   min-height: 56px;
+  background-color: #000;
   position: relative; }
 
 .site-title {
@@ -159,9 +161,8 @@ pre {
   line-height: 56px;
   letter-spacing: -1px;
   margin-bottom: 0;
-  float: left; }
-  .site-title, .site-title:visited {
-    color: #424242; }
+  float: left;
+  text-decoration: none; }
 
 .site-nav {
   float: right;
@@ -169,7 +170,7 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: #111;
+    color: white;
     line-height: 1.5; }
     .site-nav .page-link:not(:last-child) {
       margin-right: 20px; }
@@ -204,7 +205,7 @@ pre {
       .site-nav .page-link {
         display: block;
         padding: 5px 10px;
-        margin-left: 20px; }
+        margin-left: 5px; }
         .site-nav .page-link:not(:last-child) {
           margin-right: 0; } }
 
@@ -477,27 +478,42 @@ pre {
   height: 25px;
   width: 25px; }
 
+/*variables*/
 /* Navigation effects */
-.nav-link {
-  display: inline-block;
-  padding: 0 5px;
-  text-align: center;
-  transition: background 0.2s;
-  -webkit-transform: skew(-20deg);
-  -moz-transform: skew(-20deg);
-  -o-transform: skew(-20deg);
-  transform: skew(-20deg); }
-  .nav-link a {
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    -webkit-transform: skew(20deg);
-    -moz-transform: skew(20deg);
-    -o-transform: skew(20deg);
-    transform: skew(20deg); }
-  .nav-link:hover {
-    background: white; }
+/*navigation title*/
+#title {
+  color: #fff; }
+  #title:hover {
+    color: #55acee; }
 
+/*navigation links for desktop*/
+@media only screen and (min-width: 600px) {
+  .nav-link {
+    display: inline-block;
+    padding: 15px 5px;
+    text-align: center;
+    transition: background 0.2s;
+    -webkit-transform: skew(-20deg);
+    -moz-transform: skew(-20deg);
+    -o-transform: skew(-20deg);
+    transform: skew(-20deg); }
+    .nav-link span {
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      -webkit-transform: skew(20deg);
+      -moz-transform: skew(20deg);
+      -o-transform: skew(20deg);
+      transform: skew(20deg); }
+    .nav-link:hover {
+      background: #55acee; }
+      .nav-link:hover span {
+        color: black !important; } }
+/*navigation for mobile*/
+@media only screen and (max-width: 600px) {
+  .nav-link span {
+    color: black; } }
 /*Footer*/
 #twitter-btn {
   margin-bottom: 15px; }
