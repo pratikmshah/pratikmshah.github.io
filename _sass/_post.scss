@@ -1,0 +1,20 @@
+#post {
+  max-width: $content-width * .71;
+  padding-left: $spacing-unit;
+  padding-right: $spacing-unit;
+  margin: 0 auto;
+  display: block;
+}
+
+#post-title {
+  text-transform: $upcase;
+  letter-spacing: .25px;
+}
+
+.post-meta {
+  margin-bottom: 10px;
+}
+
+time {
+  text-transform: $upcase;
+}
