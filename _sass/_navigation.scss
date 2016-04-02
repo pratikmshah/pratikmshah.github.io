@@ -1,0 +1,25 @@
+/* Navigation effects */
+.nav-link {
+  display: inline-block;
+  padding: 0 5px;
+  text-align: center;
+  transition: background 0.2s;
+  -webkit-transform: skew(-20deg);
+     -moz-transform: skew(-20deg);
+       -o-transform: skew(-20deg);
+          transform: skew(-20deg);
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transform: skew(20deg);
+       -moz-transform: skew(20deg);
+         -o-transform: skew(20deg);
+            transform: skew(20deg);
+  }
+
+  &:hover {
+    background: white;
+  }
+}
