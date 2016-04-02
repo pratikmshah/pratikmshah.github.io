@@ -514,6 +514,24 @@ pre {
 @media only screen and (max-width: 600px) {
   .nav-link span {
     color: black; } }
+/* variables */
+/* homepage body */
+.page-content {
+  background-color: #F4F4F4; }
+
+/* masonry config */
+.grid-container {
+  margin: 0 auto; }
+
+.block {
+  background-color: #fff;
+  display: inline-block;
+  width: 300px;
+  padding: 1em;
+  margin: .4em; }
+  .block h2 {
+    margin-bottom: 0px; }
+
 /*Footer*/
 #twitter-btn {
   margin-bottom: 15px; }

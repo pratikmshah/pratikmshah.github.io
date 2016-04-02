@@ -1,1 +1,23 @@
-/*homepage body*/
+/* variables */
+$bckgrd-clr: #F4F4F4;
+$whte: #fff;
+
+/* homepage body */
+.page-content { background-color: $bckgrd-clr; }
+
+/* masonry config */
+.grid-container {
+  margin: 0 auto;
+}
+
+.block {
+  background-color: $whte;
+  display: inline-block;
+  width: 300px;
+  padding: 1em;
+  margin: .4em;
+
+  h2 {
+    margin-bottom: 0px;
+  }
+}
