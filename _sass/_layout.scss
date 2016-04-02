@@ -1,6 +1,7 @@
 /*variables*/
-$twt-clr: 55acee;
+$twt-clr: #55acee;
 $whte: white;
+$blk: black;
 
 /**
  * Site header
@@ -31,7 +32,6 @@ $whte: white;
 
     .menu-icon {
         display: none;
-        z-index: 10;
     }
 
     .page-link {
@@ -75,11 +75,17 @@ $whte: white;
         .trigger {
             clear: both;
             display: none;
+            transition: display 5.0s;
         }
 
         &:hover .trigger {
+            position: relative;
+            background: $blk;
+            z-index: 10;
             display: block;
             padding-bottom: 5px;
+
+            span { color: $twt-clr; }
         }
 
         .page-link {
