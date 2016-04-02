@@ -1,6 +1,10 @@
 /* variables */
 $bckgrd-clr: #F4F4F4;
+$blk: #000;
 $whte: #fff;
+$post-hover-clr: #7a7a7a;
+$upcase: uppercase;
+
 
 /* homepage body */
 .page-content { background-color: $bckgrd-clr; }
@@ -13,11 +17,22 @@ $whte: #fff;
 .block {
   background-color: $whte;
   display: inline-block;
-  width: 300px;
+  max-width: 300px;
   padding: 1em;
   margin: .4em;
 
   h2 {
-    margin-bottom: 0px;
+    margin-bottom: 0;
+    text-transform: $upcase;
+
+    a.post-link { color: $blk; }
+
+    a.post-link:hover {
+      text-decoration: none;
+      transition: color 0.3s;
+      color: $post-hover-clr;
+    }
   }
+
+  .post-meta { text-transform: $upcase; }
 }

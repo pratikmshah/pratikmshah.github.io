@@ -526,11 +526,20 @@ pre {
 .block {
   background-color: #fff;
   display: inline-block;
-  width: 300px;
+  max-width: 300px;
   padding: 1em;
   margin: .4em; }
   .block h2 {
-    margin-bottom: 0px; }
+    margin-bottom: 0;
+    text-transform: uppercase; }
+    .block h2 a.post-link {
+      color: #000; }
+    .block h2 a.post-link:hover {
+      text-decoration: none;
+      transition: color 0.3s;
+      color: #7a7a7a; }
+  .block .post-meta {
+    text-transform: uppercase; }
 
 /*Footer*/
 #twitter-btn {
