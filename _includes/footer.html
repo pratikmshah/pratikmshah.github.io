@@ -2,18 +2,15 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
 
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
+      <div id="social-media" class="footer-col footer-col-3 center">
+
+        <div id="twitter-btn">
+          {% include twitter-btn.html %}
+        </div>
+
+        <ul class="social-media-list center">
           {% if site.github_username %}
           <li>
             {% include icon-github.html username=site.github_username %}
@@ -25,12 +22,31 @@
             {% include icon-twitter.html username=site.twitter_username %}
           </li>
           {% endif %}
+
+          {% if site.linkedin_username %}
+          <li>
+            {% include icon-linkedin.html username=site.linkedin_username %}
+          </li>
+          {% endif %}
+
+          {% if site.instagram_username %}
+          <li>
+            {% include icon-instagram.html username=site.instagram_username %}
+          </li>
+          {% endif %}
+
+          {% if site.email %}
+          <li>
+            {% include icon-email.html username=site.email %}
+          </li>
+          {% endif %}
         </ul>
       </div>
 
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
+     <div class="center">
+      <p class="footer-copyw">Copyright © Pratik Shah</p>
+     </div>
+
     </div>
 
   </div>
