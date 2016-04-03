@@ -1,0 +1,23 @@
+#project { background-color: $blk; }
+
+.text-center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#heading {
+  .prj-heading {
+    color: $twt-clr;
+    font-family: $font-body;
+    font-weight: 300;
+    font-size: 6.25em;
+  }
+
+  .prj-body {
+    color: $whte;
+    font-family: $font-body;
+    font-weight: 300;
+    font-size: 1.75em;
+  }
+}

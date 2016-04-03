@@ -593,3 +593,22 @@ pre {
 
 time {
   text-transform: uppercase; }
+
+#project {
+  background-color: black; }
+
+.text-center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+#heading .prj-heading {
+  color: #55acee;
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: 6.25em; }
+#heading .prj-body {
+  color: #fff;
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  font-size: 1.75em; }
