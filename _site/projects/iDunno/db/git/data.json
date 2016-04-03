@@ -1,0 +1,211 @@
+[
+  {
+    "title":"Other Resources",
+    "url":"https://git-scm.com/",
+    "desc":"Official git source website",
+    "tags":[],
+    "subTxt": {
+      "Wiki-Git":"https://en.wikipedia.org/wiki/Git_(software)",
+      "Atlassian Git Tuts":"https://www.atlassian.com/git"
+    },
+    "subVid": {
+      "Git Basics":"https://www.youtube.com/watch?v=U8GBXvdmHT4"
+    }
+  },
+  {
+    "title":"Install & Configure",
+    "url":"https://git-scm.com/book/en/v2/Getting-Started-Installing-Git",
+    "desc":"Install git and configure user account/setting",
+    "tags":[],
+    "subCmd": {
+      "VERSION OF GIT":"git --version",
+      "CONFIG SYSTEM":"git config --system",
+      "CONFIG USER":"git config --global",
+      "CONFIG PROJECT":"git config",
+      "SET USER":"git config --gloabl user.name \"Your Name\"",
+      "SET EMAIL":"git config --global user.email \"john@mail.com\"",
+      "SET COLOR UI FEEDBACK":"git config --global color.ui true",
+      "GIT HELP MENU":"git help",
+      "GIT HELP SPECIFIC":"git help <command>"
+    }
+  },
+  {
+    "title":"Git Repository (init, commit, log)",
+    "url":"",
+    "desc":"Initialize, commit, and view logs of git repository",
+    "tags":[],
+    "subCmd": {
+      "INITIALIZE REPO": "git init",
+      "COMMIT TO REPO - Step 1": "git add <filename> or . (for all) or -u (for only files being worked on)",
+      "COMMIT TO REPO - Step 2": "git commit -m \"<message>\" or git commit (for lengthy)",
+      "GIT MESSAGES":"Short single line less than 50 chars in present tense describing what changes are made.",
+      "COMMIT LOG": "git log",
+      "LOG VIEW X # COMMITS": "git log -n #",
+      "VIEW SINCE CERTAIN DATE": "git log --since=YEAR-MONTH-DAY",
+      "VIEW UNTIL CERTAIN DATE": "git log --until=YEAR-MONTH-DAY",
+      "SEARCH LOG BY AUTHOR": "git log --author=NAME",
+      "SEARCH LOG BY KEYWORD": "git log --grep=KEYWORD"
+    }
+  },
+  {
+    "title":"Make Changes",
+    "url":"",
+    "desc":"Make, view, add, delete, move, rename changes to files",
+    "tags":[],
+    "subCmd": {
+      "VIEW CURRENT CHANGE VS UNTRACKED":"git status",
+      "ADD FILE TO STAGE FOR COMMIT": "git add <filename>",
+      "ADD ALL FILES TO COMMIT": "git add .",
+      "ADD ALL WORKED ON FILES": "git add -u",
+      "VIEW CHANGES IN ALL FILES": "git diff",
+      "VIEW CHANGES TO A FILE":"git diff <filename>",
+      "VIEW FILES IN STAGING AREA":"git diff --staged or --cached",
+      "VIEW CHANGES SIDE BY SIDE":"git diff --color-words <filename>",
+      "DELETE FILE":"git rm <filename> or manually remove it through GUI",
+      "RENAME FILE":"git mv <original-filename> <new-filename> or manually through GUI",
+      "MOVE FILE":"git mv <filename> <file-path>",
+      "ADD & COMMIT SHORTCUT":"git commit -am \"<message>\""
+    }
+  },
+  {
+    "title":"Undoing Changes",
+    "url":"",
+    "desc":"Undo working directory changes, unstage changes, reset commits, and remove tracked files",
+    "tags":[],
+    "subCmd": {
+      "UNDO WORKING DIR CHANGES":"git checkout -- <filename>",
+      "UNSTAGE CHANGES":"git reset HEAD <filename>",
+      "EDIT HEAD COMMIT - METH1":"git commit --amend -m <message>",
+      "EDIT HEAD COMMIT - METH2":"git checkout SHA-1 -- <filename>",
+      "EDIT HEAD COMMIT - METH3":"git revert SHA-1 (undo commit completely)",
+      "RESETTING LOGS": "--- good idea to copy logs before resetting incase you want to revert back ---",
+      "RESET BUT !CHANGE STAGING OR WORKING DIR": "git reset --soft SHA-1",
+      "RESET AND CHANGE STAGING  BUT !WORKING DIR": "git reset --mixed SHA-1",
+      "RESET BOTH STAGING AND WORKING DIR 2 MATCH REPO": "git reset --hard SHA-1",
+      "REMOVE UNTRACKED FILES":"git clearn -n/-f (n will tell you what git can remove but not exec -f will run and remove untracked files via perma delete."
+    }
+  },
+  {
+    "title":"Ignoring Files",
+    "url":"",
+    "desc":"Ignore files that you do not want git to track or put into repo",
+    "tags":[],
+    "subTxt": {
+      "Git Ignore Reference":"https://git-scm.com/docs/gitignore",
+      "Git Ignore Templates":"https://github.com/github/gitignore"
+    },
+    "subCmd": {
+      "GLOBAL GIT IGNORE":"create a gitignore file .gitignore",
+      "GLOBAL GIT IGNORE CMD":"git config --global core.excludesfile <filepath>",
+      "IGNORE TRACKED FILES":"git rm --cached <filename>",
+      "TRACK EMPTY DIR": "Add a file in the folder usually named .keep"
+    }
+  },
+  {
+    "title":"Navigating Commits",
+    "url":"",
+    "desc":"Navigate through commit hierarchy using SHA-1 and HEAD followed by ^ or ~#",
+    "tags":[],
+    "subCmd": {
+      "TREE HIERARCHY": "git ls-tree <tree-ish> ex: git ls-tree HEAD^^",
+      "LOG ONE LINE":"git log --oneline",
+      "SEARCH LOG SINCE DATE":"git log --since=YEAR-MONTH-DAY or simple strings ex: \"3 days ago\"",
+      "SEARCH LOG UNTIL DATE":"git log --until=YEAR-MONTH-DAY",
+      "SEARCH BY RANGE":"git log SHA-1..SHA-1",
+      "SEARCH BY RANGE-2":"git log SHA-1..<filename-OPTIONAL>",
+      "DISPLAY DIFF BTWN FILES":"git log -p <timeframe>",
+      "STATS ABOUT CHANGES":"git log --stat",
+      "SUMMARY OF CHANGES":"git log --summary",
+      "FORMAT-SHORT":"git log --format=short",
+      "FORMAT-MEDIUM":"git log --format=medium",
+      "FORMAT-FULL":"git log --format=full",
+      "FORMAT-FULLER":"git log --format=fuller",
+      "FORMAT-EMAIL":"git log --format=email",
+      "FORMAT-RAW":"git log --format=raw",
+      "FULL TREE GRAPH":"git log --graph",
+      "VIEW CHANGES IN SPEC COMMIT":"git show <tree-ish> ex: git show 345d7ac or git show --format=oneline HEAD^",
+      "COMPARE COMMITS":"git diff <SHAH-1>",
+      "COMPARE COMMITS SPEC FILE":"git diff <SHAH-1> <filename>",
+      "COMPARE COMMITS IGNR WHITESPCE":"git diff -w <SHAH-1>..<SHA-1>"
+    }
+  },
+  {
+    "title":"Branching",
+    "url":"",
+    "desc":"Navigate through branches and create branches for experimentation and features",
+    "tags":[],
+    "subCmd": {
+      "LIST ALL BRANCHES":"git branch",
+      "CREATE NEW BRANCH":"git branch <branch-name>",
+      "SWITCH TO A BRANCH":"git checkout <branch-name>",
+      "CREATE AND SWITCH TO BRANCH (SHRT CUT)":"git chekcout -b <branch-name>",
+      "COMPARE 2 BRANCHES":"git diff branch_name_1..branch_name_2",
+      "VIEW IF BRANCH HAS BEEN MERGED":"git branch --merged",
+      "RENAME BRANCH":"git branch -m <original-branch-name> <new-branch-name>",
+      "DELETE BRANCH":"git branch -d <branch-name> or -D for force delete"
+    }
+  },
+  {
+    "title":"Merging Branches",
+    "url":"",
+    "desc":"Take current branch's files and merge them with another branches's",
+    "tags":[],
+    "subCmd": {
+      "MERGE BRANCH TO PARENT":"git merge <branch-name>",
+      "MERGE BRANCH TO SPECIFIC BRANCH":"git merge <branch-name> <other-branch-name>",
+      "REAL MERGE (NO FAST FORWARD)":"git merge --no-ff <branch-name>",
+      "FAST FORWARD MERGER ONLY":"git merge --ff-only <branch-name>",
+      "MERGE CONFLICTS":"---conflicts occur when same file has different contents which manually need resolve---",
+      "MERGE CON - STEP 1":"Open up files that have conflicts",
+      "MERGE CON - STEP 2":"Go through them and manually edit/select/fix the branch you want to keep",
+      "MERGE CON - STEP 3":"Git add and commit",
+      "ABORT MERGE":"git merge --abort",
+      "MERGE TOOLS LIST":"git mergetool",
+      "MERGE TOOLS":"git mergetool --tool=<tool-name>"
+    }
+  },
+  {
+    "title":"Stashing",
+    "url":"",
+    "desc":"Stash stores changes for later use (they do not contain SHA-1)",
+    "tags":[],
+    "subCmd": {
+      "STASH CHANGES":"git stash save <message>",
+      "VIEW STASHES":"git stash list",
+      "VIEW SPEC STASH":"git stash show stash@{#} or git stash show -p stash@{#}",
+      "RETRIEVE ITEM":"git stash pop stash@{#} (removes it from stash perma)",
+      "RETRIEVE ITEM":"git stash apply stash@{#} (leaves a copy in the stash)",
+      "DELETE STASH":"git stash drop stash@{#} or git stash clear (clears all stash)"
+    }
+  },
+  {
+    "title":"Remote Repositories",
+    "url":"",
+    "desc":"Repositories hosted somewhere else besides local computer. Github",
+    "tags":[],
+    "subCmd": {
+      "VIEW ALL REMOTE REPO":"git remote or git remote -v",
+      "CREATE REMOTE":"git remote add <remote-name> <url> (git remote add origin https://github.com/<your-github-acct>/something.git",
+      "REMOVE REMOTE":"git remote rm <remote-name>",
+      "PUSH CHANGES TO REMOTE MASTER": "git push -u <remote-name> <branch-to-push> (-u will track changes)",
+      "VIEW REMOTE BRANCHES":"git branch -r",
+      "VIEW ALL REMOTE BRANCHES":"git branch -a",
+      "CLONE REMOTE REPO TO MACHINE":"git clone <url>",
+      "PULL/MERGE CHANGES - 1":"git fetch <remote-name> (retrieves remote changes)",
+      "PULL/MERGE CHANGES - 2":"git merge <remote-name> <local-branch-name> (merges fetched changes to local)",
+      "PULL/MERGE SHORTCUT":"git pull",
+      "DELETE REMOTE BRANCH":"git push <remote-name> :<branch-name>",
+      "DELETE REMOTE BRANCH":"git push <remote-name> --delete <branch-name>"
+    }
+  },
+  {
+    "title":"Create Keyboard Shortcuts",
+    "url":"",
+    "desc":"Create shortcuts to save time",
+    "tags":[],
+    "subCmd": {
+      "ALIAS":"git config --global alias.<shortcut key> \"git command\"",
+      "EXAMPLE":"git config --global alias.pu \"git pull\""
+    }
+  }
+]
