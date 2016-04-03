@@ -1,0 +1,272 @@
+[
+  {
+    "title":"HTML intro",
+    "url":"http://www.w3schools.com/html/html_intro.asp",
+    "desc":"What is HTML markup language used for and how are they structured?",
+    "tags":[],
+    "sub": {
+      "HTML intro":"http://www.w3schools.com/html/html_intro.asp",
+      "HTML Wikipedia":"https://en.wikipedia.org/wiki/HTML"
+    }
+  },
+  {
+    "title":"HTML Basic Structure <!DOCTYPE html>",
+    "url":"http://www.w3schools.com/html/html_basic.asp",
+    "desc":"Learn about the main formatting of all HTML documents, tags, images, and links",
+    "sub": {}
+  },
+  {
+    "title":"Elements <tagname> </tagname>",
+    "url":"http://www.w3schools.com/html/html_elements.asp",
+    "desc":"Learn about tags and the markup ability of each tag.",
+    "sub": {}
+  },
+  {
+    "title":"Attributes href=, title=",
+    "url":"http://www.w3schools.com/html/html_attributes.asp",
+    "desc":"Attributes provide additional information about HTML elements.",
+    "sub": {}
+  },
+  {
+    "title":"Headings <h1>",
+    "url":"http://www.w3schools.com/html/html_headings.asp",
+    "desc":"Headings range in size but are there for indexing and navigating the user through different sections of your content",
+    "sub": {}
+  },
+  {
+    "title":"Paragraphs <p> & Line Break <br>",
+    "url":"http://www.w3schools.com/html/html_paragraphs.asp",
+    "desc":"You can use paragraphs to seperate information",
+    "sub": {}
+  },
+  {
+    "title":"Styles style=\"property:value\" (DO NOT USE)",
+    "url":"http://www.w3schools.com/html/html_styles.asp",
+    "desc":"Directly embed styling to your elements.",
+    "sub": {}
+  },
+  {
+    "title":"Text Formatting Elements <b> <i>",
+    "url":"http://www.w3schools.com/html/html_formatting.asp",
+    "desc":"Bold, italicize, delete, important etc...define text with meaning",
+    "sub": {}
+  },
+  {
+    "title":"Quotations and Citation <blockquote> <cite>",
+    "url":"http://www.w3schools.com/html/html_quotation_elements.asp",
+    "desc":"Show quotes, abbreviations, citations etc...",
+    "sub": {}
+  },
+  {
+    "title":"Computer Code <code>",
+    "url":"http://www.w3schools.com/html/html_computercode_elements.asp",
+    "desc":"Display computer code, variables, keyboard etc... ",
+    "sub": {}
+  },
+  {
+    "title":"Comments <!-- -->",
+    "url":"http://www.w3schools.com/html/html_comments.asp",
+    "desc":"Help document your code",
+    "sub": {}
+  },
+  {
+    "title":"Colors",
+    "url":"http://www.w3schools.com/html/html_colors.asp",
+    "desc":"Display colors using red, green and blue (RGB)",
+    "sub": {}
+  },
+  {
+    "title":"Cascading Style Sheets (CSS) - DO NOT EMBED",
+    "url":"http://www.w3schools.com/html/html_css.asp",
+    "desc":"Using style tags you can style multiple properties for each element ",
+    "sub": {}
+  },
+  {
+    "title":"Links <a href=\"\">",
+    "url":"http://www.w3schools.com/html/html_links.asp",
+    "desc":"Link to other websites for users to navigate to.",
+    "sub": {}
+  },
+  {
+    "title":"Images <img src=>",
+    "url":"http://www.w3schools.com/html/html_images.asp",
+    "desc":"Embed images to your document for visual displays",
+    "sub": {}
+  },
+  {
+    "title":"Tables <table>",
+    "url":"http://www.w3schools.com/html/html_tables.asp",
+    "desc":"Create tables to display and organize data",
+    "sub": {}
+  },
+  {
+    "title":"Lists <ul>, <ol>, <li>",
+    "url":"http://www.w3schools.com/html/html_lists.asp",
+    "desc":"You can list information via bullet points using lists",
+    "sub": {}
+  },
+  {
+    "title":"Block and Inline Elements",
+    "url":"http://www.w3schools.com/html/html_blocks.asp",
+    "desc":"Each element has different styles in which they take up whole width of the line or flow in place of the line",
+    "sub": {}
+  },
+  {
+    "title":"Classes class=",
+    "url":"http://www.w3schools.com/html/html_classes.asp",
+    "desc":"Use class to create set css styles that can be applied to any element to display in a similar style.",
+    "sub": {}
+  },
+  {
+    "title":"Layout <div>",
+    "url":"http://www.w3schools.com/html/html_layout.asp",
+    "desc":"You can format your document into different sections via divs",
+    "sub": {}
+  },
+  {
+    "title":"Responsive Web Design (!important)",
+    "url":"http://www.w3schools.com/html/html_responsive.asp",
+    "desc":"Using css and html you can resize your page to fit and look nice on a desktop, tablet or phone.",
+    "sub": {}
+  },
+  {
+    "title":"Iframes",
+    "url":"http://www.w3schools.com/html/html_iframe.asp",
+    "desc":"Use iframes to display other web pages within your current page.",
+    "sub": {}
+  },
+  {
+    "title":"Javascript <script>",
+    "url":"http://www.w3schools.com/html/html_scripts.asp",
+    "desc":"Javascript helps make your pages more interactive and also dynamic.",
+    "sub": {}
+  },
+  {
+    "title":"Head <head>",
+    "url":"http://www.w3schools.com/html/html_head.asp",
+    "desc":"Use head tag to put meta data, stylesheets, scripts and titles",
+    "sub": {}
+  },
+  {
+    "title":"Entities",
+    "url":"http://www.w3schools.com/html/html_entities.asp",
+    "desc":"There are reserved characters for the browser so in order to use reserved keywords in html you will have to use entity names or numbers",
+    "sub": {}
+  },
+  {
+    "title":"Symbol Entities",
+    "url":"http://www.w3schools.com/html/html_symbols.asp",
+    "desc":"There are reserved characters for the browser so in order to use reserved keywords in html you will have to use entity names or numbers",
+    "sub": {}
+  },
+  {
+    "title":"Encoding (char set)",
+    "url":"http://www.w3schools.com/html/html_charset.asp",
+    "desc":"Using meta data you can tell the browser what language and character sets your code will use.",
+    "sub": {}
+  },
+  {
+    "title":"Uniform Resource Locators (URL Encode)",
+    "url":"http://www.w3schools.com/html/html_urlencode.asp",
+    "desc":"Send data from html to another address using http protocols",
+    "sub": {}
+  },
+  {
+    "title":"Extensible Hypertext Markup Language (XHTML)",
+    "url":"http://www.w3schools.com/html/html_xhtml.asp",
+    "desc":"Identical to HTML but more stricter on rules",
+    "sub": {}
+  },
+  {
+    "title":"Forms <form>",
+    "url":"http://www.w3schools.com/html/html_forms.asp",
+    "desc":"Form elements are used to collect information from user.",
+    "sub": {}
+  },
+  {
+    "title":"Form Elements <input> <textarea> <button> ",
+    "url":"http://www.w3schools.com/html/html_form_elements.asp",
+    "desc":"There are many tags that help collect information: input, textarea, button, keygen, output, datalist, option...",
+    "sub": {}
+  },
+  {
+    "title":"Input Types <input type=>",
+    "url":"http://www.w3schools.com/html/html_form_input_types.asp",
+    "desc":"There are many ways to get user input via text, password, radio btn, checkboxes.",
+    "sub": {}
+  },
+  {
+    "title":"Input Attributes",
+    "url":"http://www.w3schools.com/html/html_form_attributes.asp",
+    "desc":"Attributes can be added to block forms, set size or store value in variable",
+    "sub": {}
+  },
+  {
+    "title":"HTML5 Intro",
+    "url":"",
+    "desc":"Provides new better elements, graphics, multimedia and APIs",
+    "sub": {
+    	"Intro":"http://www.w3schools.com/html/html5_intro.asp",
+    	"Support":"http://www.w3schools.com/html/html5_browsers.asp",
+    	"New Elements":"http://www.w3schools.com/html/html5_new_elements.asp",
+    	"Semantic Elements":"http://www.w3schools.com/html/html5_semantic_elements.asp",
+    	"HTML4 to 5 Migration":"http://www.w3schools.com/html/html5_migration.asp",
+    	"HTML5 Style Guide":"http://www.w3schools.com/html/html5_syntax.asp"
+    }
+  },
+  {
+    "title":"HTML5 Graphics",
+    "url":"",
+    "desc":"Use canvas to draw onto page and include SVG graphics.",
+    "sub": {
+    	"Canvas":"http://www.w3schools.com/html/html5_canvas.asp",
+    	"SVG":"http://www.w3schools.com/html/html5_svg.asp"
+    }
+  },
+  {
+    "title":"HTML5 Multimedia",
+    "url":"",
+    "desc":"Multimedia on the web, is sound, music, videos, movies, and animations.",
+    "sub": {
+    	"Media":"http://www.w3schools.com/html/html_media.asp",
+    	"Video":"http://www.w3schools.com/html/html5_video.asp",
+    	"Audio":"http://www.w3schools.com/html/html5_audio.asp",
+    	"Plug-ins":"http://www.w3schools.com/html/html_object.asp",
+    	"Youtube":"http://www.w3schools.com/html/html_youtube.asp"
+    }
+  },
+  {
+    "title":"HTML5 APIs",
+    "url":"",
+    "desc":"Application Programming Interfaces",
+    "sub": {
+    	"Geolocation":"http://www.w3schools.com/html/html5_geolocation.asp",
+    	"Drag/Drop":"http://www.w3schools.com/html/html5_draganddrop.asp",
+    	"Local Storage":"http://www.w3schools.com/html/html5_webstorage.asp",
+    	"App Cache":"http://www.w3schools.com/html/html5_app_cache.asp",
+    	"Web Workers":"http://www.w3schools.com/html/html5_webworkers.asp",
+    	"Server-Sent Events (SSE)":"http://www.w3schools.com/html/html5_serversentevents.asp"
+    }
+  },
+  {
+    "title":"HTML References",
+    "url":"",
+    "desc":"Tag list, attributes, events, canvas, media, doctype, color, char, url, lang, messages, methods, px, keyboard shortcuts",
+    "sub": {
+    	"Tag List":"http://www.w3schools.com/tags/default.asp",
+    	"Attributes":"http://www.w3schools.com/tags/ref_standardattributes.asp",
+    	"Events":"http://www.w3schools.com/tags/ref_eventattributes.asp",
+    	"Canvas":"http://www.w3schools.com/tags/ref_canvas.asp",
+    	"Audio/Video":"http://www.w3schools.com/tags/ref_av_dom.asp",
+    	"Doctypes":"http://www.w3schools.com/tags/ref_html_dtd.asp",
+    	"Colors":"http://www.w3schools.com/colors/default.asp",
+    	"Character Sets":"http://www.w3schools.com/charsets/default.asp",
+    	"URL Encode":"http://www.w3schools.com/tags/ref_urlencode.asp",
+    	"Lang Codes":"http://www.w3schools.com/tags/ref_language_codes.asp",
+    	"Messages":"http://www.w3schools.com/tags/ref_httpmessages.asp",
+    	"Methods (HTTP GET/POST)":"http://www.w3schools.com/tags/ref_httpmethods.asp",
+    	"PX to EM Converter":"http://www.w3schools.com/tags/ref_pxtoemconversion.asp",
+    	"Keyboard Shortcuts":"http://www.w3schools.com/tags/ref_keyboardshortcuts.asp"
+    }
+  }
+]

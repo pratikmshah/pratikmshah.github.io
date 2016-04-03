@@ -1,0 +1,210 @@
+[
+  {
+    "title":"List of Commands",
+    "url":"http://cli.learncodethehardway.org/book/ex1.html",
+    "desc":"Access the terminal on your computer and view essential list of commands for mac, linux, and windows",
+    "tags":["commands", "list", "terminal"],
+    "sub": {
+      "Mac OSX Commands":"http://ss64.com/osx/",
+      "Mac terminal cheatsheet":"https://github.com/0nn0/terminal-mac-cheatsheet/wiki/Terminal-Cheatsheet-for-Mac-(-basics-)",
+      "40 Terminal Tricks":"http://computers.tutsplus.com/tutorials/40-terminal-tips-and-tricks-you-never-thought-you-needed--mac-51192"
+    }
+  },
+  {
+    "title":"Path, Folders and Directories (pwd)",
+    "url":"http://cli.learncodethehardway.org/book/ex2.html",
+    "desc":"Learn to find the full path to the current directory you are in.",
+    "tags":["pwd", "folder", "path", "directory"],
+    "sub": {}
+  },
+  {
+    "title":"Computer Name (hostname)",
+    "url":"http://cli.learncodethehardway.org/book/ex3.html",
+    "desc":"Find out the hostname/computer name.",
+    "tags":["hostname", "computer name", "name"],
+    "sub": {}
+  },
+  {
+    "title":"Make Directory (mkdir)",
+    "url":"http://cli.learncodethehardway.org/book/ex4.html",
+    "desc":"Make directory/folder",
+    "tags":["directory", "folder"],
+    "sub": {}
+  },
+  {
+    "title":"Change Directory (cd)",
+    "url":"http://cli.learncodethehardway.org/book/ex5.html",
+    "desc":"Navigate forward or backward through the directory tree",
+    "tags":["change directory", "cd"],
+    "sub": {
+      "More informative cd cmds":"https://en.wikipedia.org/wiki/Cd_(command)"
+    }
+  },
+  {
+    "title":"List Directory (ls)",
+    "url":"http://cli.learncodethehardway.org/book/ex6.html",
+    "desc":"Lists out the contents of the directory you are currently in.",
+    "tags":["list directory", "ls"],
+    "sub": {
+      "Advanced ls cmds":"http://www.tecmint.com/15-basic-ls-command-examples-in-linux/"
+    }
+  },
+  {
+    "title":"Remove Directory (rmdir)",
+    "url":"http://cli.learncodethehardway.org/book/ex7.html",
+    "desc":"Remove/delete empty directory",
+    "tags":["remove", "directory", "delete"],
+    "sub": {
+      "force remove":"http://www.slackbook.org/html/file-commands-deletion.html"
+    }
+  },
+  {
+    "title":"Navigate around (pushd, popd)",
+    "url":"http://cli.learncodethehardway.org/book/ex8.html",
+    "desc":"Commands let you temporarily go to a different directory and then come back, easily switching between the two.",
+    "tags":["push", "pop"],
+    "sub": {
+      "Advanced":"https://www.safaribooksonline.com/library/view/learning-the-bash/1565923472/ch04s05.html"
+    }
+  },
+  {
+    "title":"Create new files (touch)",
+    "url":"http://cli.learncodethehardway.org/book/ex9.html",
+    "desc":"Create new empty files in current directory",
+    "tags":["create", "new", "file", "create new file"],
+    "sub": {
+      "The touch Command":"http://www.linfo.org/touch.html",
+      "5 Linux Touch Command Examples":"http://www.thegeekstuff.com/2012/11/linux-touch-command/"
+    }
+  },
+  {
+    "title":"Copy a file (cp)",
+    "url":"http://cli.learncodethehardway.org/book/ex10.html",
+    "desc":"Copy a file",
+    "tags":["copy file", "copy"],
+    "sub": {
+      "more info":"https://en.wikipedia.org/wiki/Cp_(Unix)"
+    }
+  },
+  {
+    "title":"Move File (mv)",
+    "url":"http://cli.learncodethehardway.org/book/ex11.html",
+    "desc":"",
+    "tags":["move", "file", "rename"],
+    "sub": {
+      "mv command in Linux/Unix":"http://www.rapidtables.com/code/linux/mv.htm"
+    }
+  },
+  {
+    "title":"Read File (less, more)",
+    "url":"http://cli.learncodethehardway.org/book/ex12.html",
+    "desc":"Use less and more commands to view/read files",
+    "tags":["less", "more", "read"],
+    "sub": {
+      "Less vs More":"http://unix.stackexchange.com/questions/81129/what-are-the-differences-between-most-more-and-less"
+    }
+  },
+  {
+    "title":"Stream through a file (cat)",
+    "url":"http://cli.learncodethehardway.org/book/ex13.html",
+    "desc":"Parse through a file in the terminal.",
+    "tags":["cat"],
+    "sub": {
+      "More uses":"http://www.linfo.org/cat.html"
+    }
+  },
+  {
+    "title":"Remove/Delete file (rm)",
+    "url":"http://cli.learncodethehardway.org/book/ex14.html",
+    "desc":"Permenently remove/delete a file",
+    "tags":["remove", "delete"],
+    "sub": {
+      "rm commands":"http://linuxcommand.org/man_pages/rm1.html"
+    }
+  },
+  {
+    "title":"Pipes ( | )",
+    "url":"http://cli.learncodethehardway.org/book/ex15.html",
+    "desc":"Use pipes to redirect commands.",
+    "tags":["redirect", "pipe"],
+    "sub": {
+      "Command Line Tutorial – Redirection & Pipes":"https://quickleft.com/blog/command-line-tutorials-redirection-pipes/"
+    }
+  },
+  {
+    "title":"Wild card for match(*)",
+    "url":"http://cli.learncodethehardway.org/book/ex16.html",
+    "desc":"Select all types of certain files",
+    "tags":["wild", "asterisk"],
+    "sub": {
+      "How to use wildcards":"http://www.linfo.org/wildcard.html"
+    }
+  },
+  {
+    "title":"Find Files (find, DIR -R)",
+    "url":"http://cli.learncodethehardway.org/book/ex17.html",
+    "desc":"Search and find info in files",
+    "tags":[],
+    "sub": {
+      "Find and Locate to Search for Files":"https://www.digitalocean.com/community/tutorials/how-to-use-find-and-locate-to-search-for-files-on-a-linux-vps"
+    }
+  },
+  {
+    "title":"Look inside files (grep)",
+    "url":"http://cli.learncodethehardway.org/book/ex18.html",
+    "desc":"Used to search text or searches the given file for lines containing a match to the given strings or words.",
+    "tags":[],
+    "sub": {
+      "grep syntax":"http://www.cyberciti.biz/faq/howto-use-grep-command-in-linux-unix/"
+    }
+  },
+  {
+    "title":"Command Help (man, HELP)",
+    "url":"http://cli.learncodethehardway.org/book/ex19.html",
+    "desc":"ou can use the man command on Unix, and the help command in Windows to find information about commands.",
+    "tags":[],
+    "sub": {}
+  },
+  {
+    "title":"Finding help (apropos)",
+    "url":"http://cli.learncodethehardway.org/book/ex20.html",
+    "desc":"This command will search through help commands and find what you are looking for.",
+    "tags":[],
+    "sub": {}
+  },
+  {
+    "title":"Environment (env, echo)",
+    "url":"http://cli.learncodethehardway.org/book/ex21.html",
+    "desc":"Shell has these hidden variables that can change how other programs work",
+    "tags":[],
+    "sub": {}
+  },
+  {
+    "title":"Change environemnt variables (export)",
+    "url":"http://cli.learncodethehardway.org/book/ex22.html",
+    "desc":"Change an environment variable to something else, as well as unset it so it isn't in your environment at all.",
+    "tags":[],
+    "sub": {}
+  },
+  {
+    "title":"Exit your terminal (exit)",
+    "url":"http://cli.learncodethehardway.org/book/ex23.html",
+    "desc":"Close your terminal process.",
+    "tags":[],
+    "sub": {}
+  },
+  {
+    "title":"Become a superuser (sudo)",
+    "url":"https://kb.iu.edu/d/amyi",
+    "desc":"Sudo allows you to become a superuser or admin.",
+    "tags":[],
+    "sub": {}
+  },
+  {
+    "title":"Change permissions (chmod)",
+    "url":"http://www.computerhope.com/unix/uchmod.htm",
+    "desc":"Allows you to change the permissions on a file from rwx (read, write, execute)",
+    "tags":[],
+    "sub": {}
+  }
+]

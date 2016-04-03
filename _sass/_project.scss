@@ -1,0 +1,81 @@
+#project { background-color: $blk; }
+
+.text-center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.heading {
+
+  /* project header */
+  .prj-heading {
+    color: $twt-clr;
+    font-family: $font-body;
+    font-weight: 300;
+    font-size: 6.25em;
+  }
+
+  .prj-body {
+    margin-bottom: 45px;
+    padding: 0 5px;
+    color: $whte;
+    font-family: $font-body;
+    font-weight: 300;
+    font-size: 1.75em;
+  }
+
+  /*individual project sections*/
+  .prj-title {
+    color: $whte;
+    font-family: $font-body;
+    font-weight: 300;
+    font-size: 3.875em;
+  }
+
+  .prj-desc {
+    margin-bottom: 45px;
+    padding: 0 5px;
+    color: $prj-desc;
+    font-family: $font-body;
+    font-weight: 300;
+    font-size: 1.125em;
+  }
+}
+
+/* project section */
+
+
+/* line break */
+.twt-haze {
+  width: 100%;
+  margin-top: 4.25em;
+  margin-bottom: 1.25em;
+  border-bottom: 1px solid #1F3142;
+  box-shadow: 0 0 10px #1F3142;
+}
+
+/* box links */
+.box-lnk {
+  transition: background 0.3s;
+  margin-top: 25px;
+  padding: 8px;
+  border: 1px solid $twt-clr;
+  background-color: $twt-clr;
+  text-decoration: none;
+  font-size: 1em;
+  color: $whte !important;
+
+  &:hover {
+    text-decoration: none;
+    border: 1px solid $twt-clr;
+    background-color: $blk;
+    color: $twt-clr !important;
+  }
+
+  .caret {
+    font-size: .75em;
+    vertical-align: text-top;
+  }
+
+}

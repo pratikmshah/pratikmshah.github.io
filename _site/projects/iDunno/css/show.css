@@ -1,0 +1,16 @@
+/* GENERAL */
+#show { margin-top: 2.5%; }
+
+#show div.panel-heading h1,h2,h3,h4,h5,h6 { margin-top: 10px; }
+
+#show .panel-body li a:hover {
+  color: #FBBC05;
+  text-decoration: none;
+}
+
+.gblue  { color: #4285F4; }
+.gred   { color: #EA4335; }
+.ggreen { color: #34A853; }
+
+/* Git */
+#git-command li { margin-bottom: 10px; }

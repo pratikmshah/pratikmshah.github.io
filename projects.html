@@ -1,5 +1,35 @@
 ---
-layout: page
+layout: project
 title: Projects
 permalink: /projects/
 ---
+
+<div id="project" class="wrapper text-center">
+  <section class="heading">
+    <h1 class="prj-heading">projects</h1>
+    <p class="prj-body">All programmers are playwrights, and all computers are lousy actors.</p>
+    <a href="www.github.com/{{ site.github_username }}" class="box-lnk">View My Github</a>
+    <div class="twt-haze"></div>
+  </section>
+
+  <!-- individual projects section -->
+  <section id="prism" class="heading">
+    <h1 class="prj-title">Prism</h1>
+    <p class="prj-desc">Prism is a web app that refactors color into sound. It takes a png image and analyzes the colors, luminence, and contrast of the image. It then generates a custom sound set consisting of a melody, pad, and percussion. This was a team project that was created in 7 days at Dev Bootcamp</p>
+    <span>
+      <a href="{{ site.prism-src }}" target="_blank" class="box-lnk">View source<span class="caret"> ></span></a>
+      <a href="{{ site.prism-demo }}" target="_blank" class="box-lnk">Live demo</a>
+    </span>
+    <div class="twt-haze"></div>
+  </section>
+
+  <section id="idunno" class="heading">
+    <h1 class="prj-title">iDunno</h1>
+    <p class="prj-desc">iDunno is a single page cheatsheet resource application that is a collection of links and snippets. The interface and design is similar to Goolge with just plain search and topic selector. The problem to solve is to have a one stop shop to look up resource instead of having multiple widows open. This app is still a work in progress depending on actual usability and may change. It uses AngularJS(1.5) as the framework and is desktop first app</p>
+    <span>
+      <a href="{{ site.idunno-src }}" target="_blank" class="box-lnk">View source<span class="caret"> ></span></a>
+      <a href="{{ site.idunno-demo }}" target="_blank" class="box-lnk">Live site</a>
+    </span>
+    <div class="twt-haze"></div>
+  </section>
+</div>

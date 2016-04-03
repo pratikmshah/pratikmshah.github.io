@@ -1,0 +1,441 @@
+[
+  {
+    "title":"Javascript Intro",
+    "url":"http://www.w3schools.com/js/js_intro.asp",
+    "desc":"Intro of what javascript is and what is it capable of.",
+    "sub": {}
+  },
+  {
+    "title":"How to Load JS files",
+    "url":"http://www.w3schools.com/js/js_whereto.asp",
+    "desc":"Where and how to put javascript code.",
+    "sub": {}
+  },
+  {
+    "title":"Output",
+    "url":"http://www.w3schools.com/js/js_output.asp",
+    "desc":"There are a few different ways to output and display data.",
+    "sub": {}
+  },
+  {
+    "title":"JS Syntax",
+    "url":"http://www.w3schools.com/js/js_syntax.asp",
+    "desc":"Rules on how javascript programs are structured.",
+    "sub": {}
+  },
+  {
+    "title":"Statements",
+    "url":"http://www.w3schools.com/js/js_statements.asp",
+    "desc":"Each statment are instructions to be executed by the web browser.",
+    "sub": {}
+  },
+  {
+    "title":"Comments",
+    "url":"http://www.w3schools.com/js/js_comments.asp",
+    "desc":"Comments are great for documenting code for when you or other devs come back to it later.",
+    "sub": {}
+  },
+  {
+    "title":"Variables",
+    "url":"http://www.w3schools.com/js/js_variables.asp",
+    "desc":"Use variables to store data",
+    "sub": {}
+  },
+  {
+    "title":"Operators",
+    "url":"http://www.w3schools.com/js/js_operators.asp",
+    "desc":"Using + - * / and other operators.",
+    "sub": {}
+  },
+  {
+    "title":"Arithmetic",
+    "url":"http://www.w3schools.com/js/js_arithmetic.asp",
+    "desc":"Computation with numbers.",
+    "sub": {}
+  },
+  {
+    "title":"Assignment",
+    "url":"http://www.w3schools.com/js/js_assignment.asp",
+    "desc":"Assign values to variables.",
+    "sub": {}
+  },
+  {
+    "title":"Data Types",
+    "url":"http://www.w3schools.com/js/js_datatypes.asp",
+    "desc":"String, Number, Boolean, Array, Object",
+    "sub": {}
+  },
+  {
+    "title":"Functions",
+    "url":"http://www.w3schools.com/js/js_functions.asp",
+    "desc":"Use functions to write code that gets repeated. It is a block of code that performs a specific task.",
+    "sub": {}
+  },
+  {
+    "title":"Object (OOJS)",
+    "url":"http://www.w3schools.com/js/js_objects.asp",
+    "desc":"Use objects for OOJS design by giving it properties and methods",
+    "sub": {}
+  },
+  {
+    "title":"Scope",
+    "url":"http://www.w3schools.com/js/js_scope.asp",
+    "desc":"Variables are not always accessible.",
+    "sub": {}
+  },
+  {
+    "title":"Events",
+    "url":"http://www.w3schools.com/js/js_events.asp",
+    "desc":"Events are things that happen in the HTML document.",
+    "sub": {}
+  },
+  {
+    "title":"Strings",
+    "url":"http://www.w3schools.com/js/js_strings.asp",
+    "desc":"Store and manipulate text via strings",
+    "sub": {
+      "String Methods":"http://www.w3schools.com/js/js_string_methods.asp"
+    }
+  },
+  {
+    "title":"String Methods",
+    "url":"http://www.w3schools.com/js/js_string_methods.asp",
+    "desc":"Use string methods to help extract and maniputlate strings.",
+    "sub": {}
+  },
+  {
+    "title":"Numbers",
+    "url":"http://www.w3schools.com/js/js_numbers.asp",
+    "desc":"JS has only one type of number and can be written with or without decimals",
+    "sub": {
+      "Number Methods":"http://www.w3schools.com/js/js_number_methods.asp"
+    }
+  },
+  {
+    "title":"Number Methods",
+    "url":"http://www.w3schools.com/js/js_number_methods.asp",
+    "desc":"Number methods will help you with numbers.",
+    "sub": {}
+  },
+  {
+    "title":"Math Lib",
+    "url":"http://www.w3schools.com/js/js_math.asp",
+    "desc":"Math object gives you ability to use mathematical functions for computation.",
+    "sub": {}
+  },
+  {
+    "title":"Dates",
+    "url":"http://www.w3schools.com/js/js_dates.asp",
+    "desc":"Date object will let you work with dates.",
+    "sub": {
+      "Date Formats":"http://www.w3schools.com/js/js_date_formats.asp",
+      "Date Methods":"http://www.w3schools.com/js/js_date_methods.asp"
+    }
+  },
+  {
+    "title":"Date Formats",
+    "url":"http://www.w3schools.com/js/js_date_formats.asp",
+    "desc":"4 different types of date formats.",
+    "sub": {}
+  },
+  {
+    "title":"Date Methods",
+    "url":"http://www.w3schools.com/js/js_date_methods.asp",
+    "desc":"Date methods allow you to get and set date values.",
+    "sub": {}
+  },
+  {
+    "title":"Arrays",
+    "url":"http://www.w3schools.com/js/js_arrays.asp",
+    "desc":"User arrays to store multiple data in a single variable",
+    "sub": {
+      "Array Methods":"http://www.w3schools.com/js/js_array_methods.asp"
+    }
+  },
+  {
+    "title":"Array Methods",
+    "url":"http://www.w3schools.com/js/js_array_methods.asp",
+    "desc":"Array methods will help you manipulate and extract data in arrays.",
+    "sub": {}
+  },
+  {
+    "title":"Booleans",
+    "url":"http://www.w3schools.com/js/js_booleans.asp",
+    "desc":"True or False 0/1",
+    "sub": {}
+  },
+  {
+    "title":"Comparison Operators",
+    "url":"http://www.w3schools.com/js/js_comparisons.asp",
+    "desc":"Comparison and Logical operators are used to test if a statement is true or false.",
+    "sub": {}
+  },
+  {
+    "title":"If Else Statements",
+    "url":"http://www.w3schools.com/js/js_if_else.asp",
+    "desc":"Use conditional statements to make decisions based on validity of statements/variables",
+    "sub": {}
+  },
+  {
+    "title":"Switch Statement",
+    "url":"http://www.w3schools.com/js/js_switch.asp",
+    "desc":"Use to perform different actions based on several cases.",
+    "sub": {}
+  },
+  {
+    "title":"Loops",
+    "url":"http://www.w3schools.com/js/js_loop_for.asp",
+    "desc":"Loops will execute blocks of code over and over again until condition is false.",
+    "sub": {
+      "While Loop":"http://www.w3schools.com/js/js_loop_while.asp",
+      "Break and Continue":"Break stops a loop and continue skips one iteration of loop."
+    }
+  },
+  {
+    "title":"While Loop",
+    "url":"http://www.w3schools.com/js/js_loop_while.asp",
+    "desc":"Loops will execute blocks of code over and over again until condition is false.",
+    "sub": {}
+  },
+  {
+    "title":"Break and Continue (for loops)",
+    "url":"http://www.w3schools.com/js/js_break.asp",
+    "desc":"Break stops a loop and continue skips one iteration of loop.",
+    "sub": {}
+  },
+  {
+    "title":"Type Converstion",
+    "url":"http://www.w3schools.com/js/js_type_conversion.asp",
+    "desc":"Convert numbers to strings and strings to numbers, booleans etc...",
+    "sub": {}
+  },
+  {
+    "title":"Regular Expressions",
+    "url":"http://www.w3schools.com/js/js_regexp.asp",
+    "desc":"Use regex to perform search patterns in strings.",
+    "sub": {}
+  },
+  {
+    "title":"Throw and Try to Catch",
+    "url":"http://www.w3schools.com/js/js_errors.asp",
+    "desc":"Prevent errors from crashing your program by using try, catch, throw and finally.",
+    "sub": {}
+  },
+  {
+    "title":"Debugging",
+    "url":"http://www.w3schools.com/js/js_debugging.asp",
+    "desc":"Using breakpoints, DOM, console.log and other tactics to help debug your code.",
+    "sub": {}
+  },
+  {
+    "title":"Hoisting",
+    "url":"http://www.w3schools.com/js/js_hoisting.asp",
+    "desc":"Move declarations to the top of the script.",
+    "sub": {}
+  },
+  {
+    "title":"Strict Mode",
+    "url":"http://www.w3schools.com/js/js_strict.asp",
+    "desc":"Use strict mode to have more strict rules for the js file.",
+    "sub": {}
+  },
+  {
+    "title":"JS Style and Coding Conventions",
+    "url":"http://www.w3schools.com/js/js_conventions.asp",
+    "desc":"Use best practices when it comes to naming, spacing, commenting...",
+    "sub": {
+      "Best Practices":"http://www.w3schools.com/js/js_best_practices.asp"
+    }
+  },
+  {
+    "title":"Best Practices",
+    "url":"http://www.w3schools.com/js/js_best_practices.asp",
+    "desc":"Use best practices when it comes to naming, spacing, commenting...",
+    "sub": {}
+  },
+  {
+    "title":"Common JS Mistakes",
+    "url":"http://www.w3schools.com/js/js_mistakes.asp",
+    "desc":"Common errors noobs make.",
+    "sub": {}
+  },
+  {
+    "title":"Performance (Refactor)",
+    "url":"http://www.w3schools.com/js/js_performance.asp",
+    "desc":"Refactor your code to improve performance",
+    "sub": {}
+  },
+  {
+    "title":"Reserved Words",
+    "url":"http://www.w3schools.com/js/js_reserved.asp",
+    "desc":"Some identifiers cannot be used as variables or functions becuase they are reserved for javascript.",
+    "sub": {}
+  },
+  {
+    "title":"Javascript Object Notation (JSON)",
+    "url":"http://www.w3schools.com/js/js_json.asp",
+    "desc":"Popular format for storing and transporting data.",
+    "sub": {}
+  },
+  {
+    "title":"Forms",
+    "url":"",
+    "desc":"Use javascript to perform form validation via manually or form API",
+    "sub": {
+      "Form Validation":"http://www.w3schools.com/js/js_validation.asp",
+      "Form API":"http://www.w3schools.com/js/js_validation_api.asp"
+    }
+  },
+  {
+    "title":"JS Objects (OOJS)",
+    "url":"",
+    "desc":"Make Objects as in JS objects are everything.",
+    "sub": {
+      "Defenitions":"http://www.w3schools.com/js/js_object_definition.asp",
+      "Properties":"http://www.w3schools.com/js/js_properties.asp",
+      "Methods":"http://www.w3schools.com/js/js_object_methods.asp",
+      "Prototypes":"http://www.w3schools.com/js/js_object_prototypes.asp"
+    }
+  },
+  {
+    "title":"Functions",
+    "url":"",
+    "desc":"Functions execute a block of code when invoked so you don't have to keep writing the same code over and over again",
+    "sub": {
+      "Defenitions":"http://www.w3schools.com/js/js_object_prototypes.asp",
+      "Parameters":"http://www.w3schools.com/js/js_function_parameters.asp",
+      "Invocation":"http://www.w3schools.com/js/js_function_invocation.asp",
+      "Closures":"http://www.w3schools.com/js/js_function_closures.asp" 
+    }
+  },
+  {
+    "title":"DOM Intro",
+    "url":"http://www.w3schools.com/js/js_htmldom.asp",
+    "desc":"With javascript you can access and change elements of the HTML doc.",
+    "sub": {}
+  },
+  {
+    "title":"DOM Methods",
+    "url":"http://www.w3schools.com/js/js_htmldom_methods.asp",
+    "desc":"You can use methods to get data and values to change data in HTML doc.",
+    "sub": {}
+  },
+  {
+    "title":"DOM Document",
+    "url":"http://www.w3schools.com/js/js_htmldom_document.asp",
+    "desc":"DOM document object stores all other objects in your web page.",
+    "sub": {}
+  },
+  {
+    "title":"DOM Elements",
+    "url":"http://www.w3schools.com/js/js_htmldom_elements.asp",
+    "desc":"Use js to find elements by elements and selectors.",
+    "sub": {}
+  },
+    {
+    "title":"DOM Change HTML",
+    "url":"http://www.w3schools.com/js/js_htmldom_html.asp",
+    "desc":"DOM lets js change the contents of elements.",
+    "sub": {}
+  },
+  {
+    "title":"DOM Changing CSS",
+    "url":"http://www.w3schools.com/js/js_htmldom_css.asp",
+    "desc":"You can even change the style of the HTML.",
+    "sub": {}
+  },
+  {
+    "title":"DOM Animation",
+    "url":"http://www.w3schools.com/js/js_htmldom_animate.asp",
+    "desc":"Use js to create animations.",
+    "sub": {}
+  },
+  {
+    "title":"DOM Events",
+    "url":"http://www.w3schools.com/js/js_htmldom_events.asp",
+    "desc":"",
+    "sub": {}
+  },
+  {
+    "title":"DOM EventListener",
+    "url":"http://www.w3schools.com/js/js_htmldom_eventlistener.asp",
+    "desc":"Event listeners listen for when actions occur and execute a method when it occurs.",
+    "sub": {}
+  },
+  {
+    "title":"DOM Navigation",
+    "url":"http://www.w3schools.com/js/js_htmldom_navigation.asp",
+    "desc":"Traversing the DOM is key to getting to any element you want.",
+    "sub": {}
+  },
+  {
+    "title":"DOM Elements(Nodes)",
+    "url":"http://www.w3schools.com/js/js_htmldom_nodes.asp",
+    "desc":"Add and remove nodes.",
+    "sub": {}
+  },
+  {
+    "title":"DOM Node List",
+    "url":"http://www.w3schools.com/js/js_htmldom_nodelist.asp",
+    "desc":"Node list is a collection of nodes.",
+    "sub": {}
+  },
+  {
+    "title":"BOM Window",
+    "url":"http://www.w3schools.com/js/js_window.asp",
+    "desc":"Browser Object Model (BOM) allows js to talk to the broswer.",
+    "sub": {}
+  },
+  {
+    "title":"BOM Window Screen",
+    "url":"http://www.w3schools.com/js/js_window_screen.asp",
+    "desc":"The window.screen object contains information about the user's screen.",
+    "sub": {}
+  },
+    {
+    "title":"BOM Window Location",
+    "url":"http://www.w3schools.com/js/js_window_location.asp",
+    "desc":"The window.location object can be used to get the current page address (URL) and to redirect the browser to a new page.",
+    "sub": {}
+  },
+  {
+    "title":"BOM Window History",
+    "url":"http://www.w3schools.com/js/js_window_history.asp",
+    "desc":"The window.history object contains the browsers history.",
+    "sub": {}
+  },
+  {
+    "title":"BOM Window Navigator",
+    "url":"http://www.w3schools.com/js/js_window_navigator.asp",
+    "desc":"The window.navigator object contains information about the visitor's browser.",
+    "sub": {}
+  },
+  {
+    "title":"BOM Popup Boxes",
+    "url":"http://www.w3schools.com/js/js_popup.asp",
+    "desc":"Alert, Confirm, and Prompt Boxes",
+    "sub": {}
+  },
+  {
+    "title":"BOM Timing Events",
+    "url":"http://www.w3schools.com/js/js_timing.asp",
+    "desc":"The window object allows execution of code at specified time intervals.",
+    "sub": {}
+  },
+  {
+    "title":"BOM Cookies",
+    "url":"http://www.w3schools.com/js/js_cookies.asp",
+    "desc":"Cookies let you store user information in web pages.",
+    "sub": {}
+  },
+  {
+    "title":"Other Resources",
+    "url":"",
+    "desc":"Additional javascript resources",
+    "sub": {
+      "Examples":"http://www.w3schools.com/js/js_examples.asp",
+      "JS Objects":"http://www.w3schools.com/jsref/default.asp"
+
+    }
+  }
+]
