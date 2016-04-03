@@ -602,22 +602,38 @@ time {
   margin-right: auto;
   text-align: center; }
 
-#heading .prj-heading {
-  color: #55acee;
-  font-family: "Lato", "Helvetica Neue", sans-serif;
-  font-weight: 300;
-  font-size: 6.25em; }
-#heading .prj-body {
-  margin-bottom: 45px;
-  color: #fff;
-  font-family: "Lato", "Helvetica Neue", sans-serif;
-  font-weight: 300;
-  font-size: 1.75em; }
+.heading {
+  /* project header */
+  /*individual project sections*/ }
+  .heading .prj-heading {
+    color: #55acee;
+    font-family: "Lato", "Helvetica Neue", sans-serif;
+    font-weight: 300;
+    font-size: 6.25em; }
+  .heading .prj-body {
+    margin-bottom: 45px;
+    color: #fff;
+    font-family: "Lato", "Helvetica Neue", sans-serif;
+    font-weight: 300;
+    font-size: 1.75em; }
+  .heading .prj-title {
+    color: #fff;
+    font-family: "Lato", "Helvetica Neue", sans-serif;
+    font-weight: 300;
+    font-size: 3.875em; }
+  .heading .prj-desc {
+    margin-bottom: 45px;
+    color: #A9A9A9;
+    font-family: "Lato", "Helvetica Neue", sans-serif;
+    font-weight: 300;
+    font-size: 1.125em; }
 
+/* project section */
 /* line break */
 .twt-haze {
   width: 100%;
-  margin: 4.25em 0;
+  margin-top: 4.25em;
+  margin-bottom: 1.25em;
   border-bottom: 1px solid #1F3142;
   box-shadow: 0 0 10px #1F3142; }
 
@@ -630,9 +646,9 @@ time {
   background-color: #55acee;
   text-decoration: none;
   font-size: 1em;
-  color: #fff; }
+  color: #fff !important; }
   .box-lnk:hover {
     text-decoration: none;
     border: 1px solid #55acee;
     background-color: black;
-    color: #55acee; }
+    color: #55acee !important; }
