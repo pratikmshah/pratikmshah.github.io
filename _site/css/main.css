@@ -652,3 +652,6 @@ time {
     border: 1px solid #55acee;
     background-color: black;
     color: #55acee !important; }
+  .box-lnk .caret {
+    font-size: .75em;
+    vertical-align: text-top; }
