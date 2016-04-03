@@ -25,6 +25,8 @@ aboutme: "https://about.me/pratikshah"
 # project links
 prism-demo: "http://prism-dbc.herokuapp.com/"
 prism-src: "https://github.com/pratikmshah/prism"
+idunno-demo: "/projects/iDunno/index.html"
+idunno-src: "https://github.com/pratikmshah/iDunno"
 
 # Build settings
 markdown: kramdown
