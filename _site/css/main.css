@@ -608,7 +608,30 @@ time {
   font-weight: 300;
   font-size: 6.25em; }
 #heading .prj-body {
+  margin-bottom: 45px;
   color: #fff;
   font-family: "Lato", "Helvetica Neue", sans-serif;
   font-weight: 300;
   font-size: 1.75em; }
+
+/* line break */
+.twt-haze {
+  width: 100%;
+  margin: 4.25em 0;
+  border-bottom: 1px solid #1F3142;
+  box-shadow: 0 0 10px #1F3142; }
+
+/* box links */
+.box-lnk {
+  margin-top: 25px;
+  padding: 8px;
+  border: 1px solid #55acee;
+  background-color: #55acee;
+  text-decoration: none;
+  font-size: 1em;
+  color: #fff; }
+  .box-lnk:hover {
+    text-decoration: none;
+    border: 1px solid #55acee;
+    background-color: black;
+    color: #55acee; }

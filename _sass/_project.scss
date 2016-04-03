@@ -15,9 +15,36 @@
   }
 
   .prj-body {
+    margin-bottom: 45px;
     color: $whte;
     font-family: $font-body;
     font-weight: 300;
     font-size: 1.75em;
+  }
+}
+
+/* line break */
+.twt-haze {
+  width: 100%;
+  margin: 4.25em 0;
+  border-bottom: 1px solid #1F3142;
+  box-shadow: 0 0 10px #1F3142;
+}
+
+/* box links */
+.box-lnk {
+  margin-top: 25px;
+  padding: 8px;
+  border: 1px solid $twt-clr;
+  background-color: $twt-clr;
+  text-decoration: none;
+  font-size: 1em;
+  color: $whte;
+
+  &:hover {
+    text-decoration: none;
+    border: 1px solid $twt-clr;
+    background-color: $blk;
+    color: $twt-clr;
   }
 }
