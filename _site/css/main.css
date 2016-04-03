@@ -612,6 +612,7 @@ time {
     font-size: 6.25em; }
   .heading .prj-body {
     margin-bottom: 45px;
+    padding: 0 5px;
     color: #fff;
     font-family: "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
@@ -623,6 +624,7 @@ time {
     font-size: 3.875em; }
   .heading .prj-desc {
     margin-bottom: 45px;
+    padding: 0 5px;
     color: #A9A9A9;
     font-family: "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
