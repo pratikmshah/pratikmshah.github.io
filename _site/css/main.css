@@ -623,6 +623,7 @@ time {
 
 /* box links */
 .box-lnk {
+  transition: background 0.3s;
   margin-top: 25px;
   padding: 8px;
   border: 1px solid #55acee;
