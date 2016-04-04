@@ -667,7 +667,7 @@ time {
 /* About me description */
 #aboutme {
   width: 75%;
-  margin: 0 auto 50px auto; }
+  margin: 0 auto 30px auto; }
   #aboutme ul.tab-btns {
     list-style-type: none;
     margin: 0;
@@ -700,14 +700,28 @@ time {
   border-radius: 0 10px 10px 10px; }
 
 /* Skills section*/
-#skills i {
-  font-size: 4em; }
-#skills img {
-  height: 64px;
-  width: 64px;
-  margin-bottom: 40px; }
+#skills {
+  margin: 0 auto;
+  display: block;
+  width: 75%; }
+  #skills h1 {
+    font-size: 3.5em;
+    text-decoration: underline; }
+  #skills h3 {
+    text-decoration: underline;
+    margin-top: 1em; }
+  #skills i {
+    font-size: 4em;
+    margin-left: .75em; }
+  #skills img {
+    height: 64px;
+    width: 64px;
+    padding-bottom: 16px; }
 
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
   #aboutme {
-    width: 100%; } }
+    width: 100%; }
+
+  #skills {
+    width: 90%; } }
