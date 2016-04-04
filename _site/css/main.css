@@ -666,26 +666,38 @@ time {
 
 /* About me description */
 #aboutme {
-  margin-bottom: 50px; }
+  width: 75%;
+  margin: 0 auto 50px auto; }
   #aboutme ul.tab-btns {
     list-style-type: none;
     margin: 0;
     padding: 0; }
     #aboutme ul.tab-btns li {
-      display: inline-block;
-      border-top: 2px solid #55acee;
-      border-left: 2px solid #55acee;
-      border-right: 2px solid #55acee;
-      padding: 5px; }
+      display: inline-block; }
+      #aboutme ul.tab-btns li a {
+        padding: 5px 5px 7px 5px;
+        border-top: 2px solid #55acee;
+        border-left: 2px solid #55acee;
+        border-right: 2px solid #55acee; }
+      #aboutme ul.tab-btns li a:hover {
+        text-decoration: none; }
+      #aboutme ul.tab-btns li a.active {
+        background-color: #55acee;
+        color: #fff; }
 
-.active {
+.show {
   display: block;
   padding: 10px;
   border: 2px solid #55acee;
-  border-radius: 0 10px 10px 10px; }
+  border-radius: 0 10px 10px 10px;
+  background-color: #55acee;
+  color: white; }
 
-.inactive {
-  display: none; }
+.hide {
+  display: none !important;
+  padding: 10px;
+  border: 2px solid #55acee;
+  border-radius: 0 10px 10px 10px; }
 
 /* Skills section*/
 #skills i {
@@ -694,3 +706,8 @@ time {
   height: 64px;
   width: 64px;
   margin-bottom: 40px; }
+
+/*navigation for mobile*/
+@media only screen and (max-width: 600px) {
+  #aboutme {
+    width: 100%; } }

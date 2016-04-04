@@ -7,7 +7,8 @@
 
 /* About me description */
 #aboutme {
-  margin-bottom: 50px;
+  width: 75%;
+  margin: 0 auto 50px auto;
 
   ul.tab-btns {
     list-style-type: none;
@@ -16,23 +17,36 @@
 
     li {
       display: inline-block;
-      border-top: 2px solid $twt-clr;
-      border-left: 2px solid $twt-clr;
-      border-right: 2px solid $twt-clr;
-      padding: 5px;
+
+      a {
+        padding: 5px 5px 7px 5px;
+        border-top: 2px solid $twt-clr;
+        border-left: 2px solid $twt-clr;
+        border-right: 2px solid $twt-clr;
+      }
+      a:hover { text-decoration: none; }
+      a.active {
+        background-color: $twt-clr;
+        color: $whte;
+      }
     }
   }
 }
 
-.active {
+.show {
   display: block;
   padding: 10px;
   border: 2px solid $twt-clr;
   border-radius: 0 10px 10px 10px;
+  background-color: $twt-clr;
+  color: white;
 }
 
-.inactive {
-  display: none;
+.hide {
+  display: none !important;
+  padding: 10px;
+  border: 2px solid $twt-clr;
+  border-radius: 0 10px 10px 10px;
 }
 
 /* Skills section*/
@@ -44,4 +58,9 @@
     width: 64px;
     margin-bottom: 40px;
   }
+}
+
+/*navigation for mobile*/
+@media only screen and (max-width: 600px) {
+  #aboutme { width: 100%; }
 }
