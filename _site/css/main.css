@@ -657,3 +657,10 @@ time {
   .box-lnk .caret {
     font-size: .75em;
     vertical-align: text-top; }
+
+#skills i {
+  font-size: 4em; }
+#skills img {
+  height: 64px;
+  width: 64px;
+  margin-bottom: 40px; }
