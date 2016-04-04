@@ -4,22 +4,22 @@ title: About
 permalink: /about/
 ---
 <div id="about">
-  <section class="headshot">
+  <section id="headshot" class="center">
     <img src="/img/headshot/self-sp.gif">
   </section>
 
-  <section id="tab-content" class="aboutme">
+  <section id="aboutme" class="tab-content">
     <ul class="tab-btns">
-      <li><a href="#">Short Story</a></li>
-      <li><a href="#">Long Story</a></li>
+      <li><a href="short">Short story</a></li>
+      <li><a href="long">Long story</a></li>
     </ul>
 
-    <div id="short">
+    <div id="short" class="active">
       <p>
         Hi, I'm Pratik a future jr developer or as I like to call it Padawan in training from <a href="https://news.artnet.com/wp-content/news-upload/2014/06/Chicago-Skyline.jpg" target="_blank">Chicago</a>. I used to be a 10-key crunching vlookuping beast of an <a href="http://ct.fra.bz/ol/fz/sw/i39/2/1/28/frabz-Accountant-What-my-friends-think-I-do-What-my-mom-thinks-I-do-Wh-b3c571.jpg" target="_blank">Accountant</a>. But my passion for technology led me to <a href="https://devbootcamp.com/" target="_blank">Dev Bootcamp</a> where I hope to fulfill my dream by developing software that will help change society; like the <a href="https://www.tacobell.com/mobileapp" target="_blank">Taco Bell</a> app! Another interest I have is investing and analyzing markets which is why I also have a B.S. in Finance; did someone say <a href="https://en.wikipedia.org/wiki/Financial_technology" target="_blank">Fintech?</a> You want more? Ok lighting round: my favorite color you should know by now is #55acee, I love pad thai and pho, I like collecting free t's, and love to site see while thinking/inspiration. Feel free to <a href="mailto:{{ site.email }}">contact me</a> or read my <a href="/">TechCrunchesque blog</a>. Ok its just a basic blog but I shows some interesting concepts, tips, tricks, tutorials I have learned; and sometimes random life things. Oh and I love Taco Bell!
       </p>
     </div>
-    <div id="long">
+    <div id="long" class="inactive">
       <p>
         I am a web developer and former accountant. I'm Indian, and live in Chicago enjoying the cities deep dish pizza offerings. Niles has been my home for over 20 years along with the snow and humidity. If I had a choice to visit any place over and over again it would be San Francisco; I just love the scenery and atmosphere of the west coast.
       </p>
@@ -39,11 +39,11 @@ permalink: /about/
   </section>
 
   <section id="skills">
-    <div>
+    <section id="resume">
       <a href="{{ site.resume }}">
         <img src="/img/icons/cv.png" title="Click to go to my CV">
       </a>
-    </div>
+    </section>
 
     <section id="languages">
       <i class="devicon-ruby-plain-wordmark colored"></i>

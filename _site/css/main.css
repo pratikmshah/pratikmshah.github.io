@@ -658,6 +658,36 @@ time {
     font-size: .75em;
     vertical-align: text-top; }
 
+/* Headshot photo */
+#headshot {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 50px; }
+
+/* About me description */
+#aboutme {
+  margin-bottom: 50px; }
+  #aboutme ul.tab-btns {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    #aboutme ul.tab-btns li {
+      display: inline-block;
+      border-top: 2px solid #55acee;
+      border-left: 2px solid #55acee;
+      border-right: 2px solid #55acee;
+      padding: 5px; }
+
+.active {
+  display: block;
+  padding: 10px;
+  border: 2px solid #55acee;
+  border-radius: 0 10px 10px 10px; }
+
+.inactive {
+  display: none; }
+
+/* Skills section*/
 #skills i {
   font-size: 4em; }
 #skills img {
