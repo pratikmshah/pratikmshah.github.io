@@ -546,7 +546,10 @@ pre {
   display: inline-block;
   width: 275px;
   padding: 1em;
-  margin: .4em; }
+  margin: .4em;
+  -webkit-box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.19); }
   .block h2 {
     margin-bottom: 0;
     text-transform: uppercase; }
@@ -657,3 +660,71 @@ time {
   .box-lnk .caret {
     font-size: .75em;
     vertical-align: text-top; }
+
+/* Headshot photo */
+#headshot {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 50px; }
+
+/* About me description */
+#aboutme {
+  width: 75%;
+  margin: 0 auto 30px auto; }
+  #aboutme ul.tab-btns {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    #aboutme ul.tab-btns li {
+      display: inline-block; }
+      #aboutme ul.tab-btns li a {
+        padding: 5px 5px 7px 5px;
+        border-top: 2px solid #55acee;
+        border-left: 2px solid #55acee;
+        border-right: 2px solid #55acee; }
+      #aboutme ul.tab-btns li a:hover {
+        text-decoration: none; }
+      #aboutme ul.tab-btns li a.active {
+        background-color: #55acee;
+        color: #fff; }
+
+.show {
+  display: block;
+  padding: 10px;
+  border: 2px solid #55acee;
+  border-radius: 0 10px 10px 10px;
+  background-color: #55acee;
+  color: white; }
+
+.hide {
+  display: none !important;
+  padding: 10px;
+  border: 2px solid #55acee;
+  border-radius: 0 10px 10px 10px; }
+
+/* Skills section*/
+#skills {
+  margin: 0 auto;
+  display: block;
+  width: 75%; }
+  #skills h1 {
+    font-size: 3.5em;
+    text-decoration: underline; }
+  #skills h3 {
+    text-decoration: underline;
+    margin-top: 1em; }
+  #skills i {
+    font-size: 4em;
+    margin-left: .75em; }
+  #skills img {
+    height: 64px;
+    width: 64px;
+    padding-bottom: 16px; }
+
+/*navigation for mobile*/
+@media only screen and (max-width: 600px) {
+  #aboutme {
+    width: 100%; }
+
+  #skills {
+    width: 90%; } }

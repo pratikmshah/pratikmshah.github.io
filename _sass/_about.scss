@@ -1,0 +1,84 @@
+/* Headshot photo */
+#headshot {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 50px;
+}
+
+/* About me description */
+#aboutme {
+  width: 75%;
+  margin: 0 auto 30px auto;
+
+  ul.tab-btns {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+
+      a {
+        padding: 5px 5px 7px 5px;
+        border-top: 2px solid $twt-clr;
+        border-left: 2px solid $twt-clr;
+        border-right: 2px solid $twt-clr;
+      }
+      a:hover { text-decoration: none; }
+      a.active {
+        background-color: $twt-clr;
+        color: $whte;
+      }
+    }
+  }
+}
+
+.show {
+  display: block;
+  padding: 10px;
+  border: 2px solid $twt-clr;
+  border-radius: 0 10px 10px 10px;
+  background-color: $twt-clr;
+  color: white;
+}
+
+.hide {
+  display: none !important;
+  padding: 10px;
+  border: 2px solid $twt-clr;
+  border-radius: 0 10px 10px 10px;
+}
+
+/* Skills section*/
+#skills {
+  margin: 0 auto;
+  display: block;
+  width: 75%;
+
+  h1 {
+    font-size: 3.5em;
+    text-decoration: underline;
+  }
+
+  h3 {
+    text-decoration: underline;
+    margin-top: 1em;
+  }
+
+  i {
+    font-size: 4em;
+    margin-left: .75em;
+  }
+
+  img {
+    height: 64px;
+    width: 64px;
+    padding-bottom: 16px;
+  }
+}
+
+/*navigation for mobile*/
+@media only screen and (max-width: 600px) {
+  #aboutme { width: 100%; }
+  #skills {width: 90%; }
+}
