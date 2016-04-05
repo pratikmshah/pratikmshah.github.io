@@ -15,8 +15,8 @@
 
 .font-title { font-family: $font-title; }
 
-
 /* navigation link and dropdown list */
+
 #prj-nav {
   position: relative;
   display: inline-block;
@@ -25,7 +25,7 @@
 .prj-content {
   display: none;
   position: absolute;
-  min-width: 150px;
+  min-width: 200px;
   left: -10px;
   line-height: 40px;
   background-color: $twt-clr;
@@ -47,8 +47,11 @@
   }
 }
 
-#prj-nav:hover .prj-content {
-  display: block;
+#prj-nav:hover {
+  .prj-link {
+    background-color: $twt-clr;
+  }
+  .prj-content { display: block; }
 }
 
 .cust-page-lnks {
@@ -106,5 +109,11 @@
 
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
-  .nav-link span { color: $blk;}
+  .nav-link span { color: $blk; }
+
+  #prj-nav:hover {
+    .prj-link {
+      background-color: $blk;
+    }
+  }
 }

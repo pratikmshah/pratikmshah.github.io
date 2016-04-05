@@ -516,7 +516,7 @@ pre {
 .prj-content {
   display: none;
   position: absolute;
-  min-width: 150px;
+  min-width: 200px;
   left: -10px;
   line-height: 40px;
   background-color: #55acee;
@@ -533,6 +533,8 @@ pre {
   .prj-content a:hover {
     background-color: white; }
 
+#prj-nav:hover .prj-link {
+  background-color: #55acee; }
 #prj-nav:hover .prj-content {
   display: block; }
 
@@ -576,7 +578,10 @@ pre {
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
   .nav-link span {
-    color: black; } }
+    color: black; }
+
+  #prj-nav:hover .prj-link {
+    background-color: black; } }
 /* homepage body */
 .page-content {
   background-color: #F4F4F4; }
