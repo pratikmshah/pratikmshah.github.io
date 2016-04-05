@@ -1,4 +1,8 @@
-/* Navigation effects */
+/* Navigation editing */
+
+.site-nav {
+  line-height: 0;
+}
 
 /*navigation title*/
 #title {
@@ -10,6 +14,62 @@
 }
 
 .font-title { font-family: $font-title; }
+
+
+/* navigation link and dropdown list */
+#prj-nav {
+  position: relative;
+  display: inline-block;
+}
+
+.prj-content {
+  display: none;
+  position: absolute;
+  min-width: 150px;
+  left: -10px;
+  line-height: 40px;
+  background-color: $twt-clr;
+  -web-kit-border-radius: 0 5px 5px 5px;
+    -moz-border-radius: 0 5px 5px 5px;
+      -o-border-radius: 0 5px 5px 5px;
+         border-radius: 0 5px 5px 5px;
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-family: $font-title;
+    padding-left: 15px;
+    display: block;
+  }
+
+  a:hover {
+    background-color: white;
+  }
+}
+
+#prj-nav:hover .prj-content {
+  display: block;
+}
+
+.cust-page-lnks {
+  float: left;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 600px){
+  .cust-page-lnks {
+    float: none;
+    margin-right: 5px;
+  }
+  div.prj-content {
+    display: none;
+
+    a {
+      display: none;
+    }
+  }
+}
+
 
 /*navigation links for desktop*/
 @media only screen and (min-width: 600px) {

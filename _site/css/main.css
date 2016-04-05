@@ -495,7 +495,10 @@ pre {
   height: 25px;
   width: 25px; }
 
-/* Navigation effects */
+/* Navigation editing */
+.site-nav {
+  line-height: 0; }
+
 /*navigation title*/
 #title {
   color: #fff; }
@@ -505,6 +508,47 @@ pre {
 .font-title {
   font-family: "Oswald", "Helvetica Neue", sans-serif; }
 
+/* navigation link and dropdown list */
+#prj-nav {
+  position: relative;
+  display: inline-block; }
+
+.prj-content {
+  display: none;
+  position: absolute;
+  min-width: 150px;
+  left: -10px;
+  line-height: 40px;
+  background-color: #55acee;
+  -web-kit-border-radius: 0 5px 5px 5px;
+  -moz-border-radius: 0 5px 5px 5px;
+  -o-border-radius: 0 5px 5px 5px;
+  border-radius: 0 5px 5px 5px; }
+  .prj-content a {
+    text-decoration: none;
+    color: black;
+    font-family: "Oswald", "Helvetica Neue", sans-serif;
+    padding-left: 15px;
+    display: block; }
+  .prj-content a:hover {
+    background-color: white; }
+
+#prj-nav:hover .prj-content {
+  display: block; }
+
+.cust-page-lnks {
+  float: left;
+  margin-right: 20px; }
+
+@media only screen and (max-width: 600px) {
+  .cust-page-lnks {
+    float: none;
+    margin-right: 5px; }
+
+  div.prj-content {
+    display: none; }
+    div.prj-content a {
+      display: none; } }
 /*navigation links for desktop*/
 @media only screen and (min-width: 600px) {
   .nav-link {
