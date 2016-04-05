@@ -605,27 +605,27 @@ time {
   margin-right: auto;
   text-align: center; }
 
-.heading {
+.project {
   /* project header */
   /*individual project sections*/ }
-  .heading .prj-heading {
+  .project .prj-heading {
     color: #55acee;
     font-family: "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 6.25em; }
-  .heading .prj-body {
+  .project .prj-body {
     margin-bottom: 45px;
     padding: 0 5px;
     color: #fff;
     font-family: "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 1.75em; }
-  .heading .prj-title {
+  .project .prj-title {
     color: #fff;
     font-family: "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 3.875em; }
-  .heading .prj-desc {
+  .project .prj-desc {
     margin-bottom: 45px;
     padding: 0 5px;
     color: #A9A9A9;
@@ -661,6 +661,12 @@ time {
     font-size: .75em;
     vertical-align: text-top; }
 
+@media only screen and (max-width: 350px) {
+  .project h1.prj-heading {
+    font-size: 5em; }
+
+  .project p.prj-body {
+    font-size: 1.25em; } }
 /* Headshot photo */
 #headshot {
   width: 250px;
