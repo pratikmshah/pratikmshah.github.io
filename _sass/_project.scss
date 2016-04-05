@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.heading {
+.project {
 
   /* project header */
   .prj-heading {
@@ -41,6 +41,7 @@
     font-weight: 300;
     font-size: 1.125em;
   }
+
 }
 
 /* project section */
@@ -78,4 +79,9 @@
     vertical-align: text-top;
   }
 
+}
+
+@media only screen and (max-width: 350px) {
+ .project h1.prj-heading { font-size: 5em; }
+ .project p.prj-body { font-size: 1.25em; }
 }

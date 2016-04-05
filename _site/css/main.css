@@ -495,7 +495,10 @@ pre {
   height: 25px;
   width: 25px; }
 
-/* Navigation effects */
+/* Navigation editing */
+.site-nav {
+  line-height: 0; }
+
 /*navigation title*/
 #title {
   color: #fff; }
@@ -505,6 +508,49 @@ pre {
 .font-title {
   font-family: "Oswald", "Helvetica Neue", sans-serif; }
 
+/* navigation link and dropdown list */
+#prj-nav {
+  position: relative;
+  display: inline-block; }
+
+.prj-content {
+  display: none;
+  position: absolute;
+  min-width: 200px;
+  left: -10px;
+  line-height: 40px;
+  background-color: #55acee;
+  -web-kit-border-radius: 0 5px 5px 5px;
+  -moz-border-radius: 0 5px 5px 5px;
+  -o-border-radius: 0 5px 5px 5px;
+  border-radius: 0 5px 5px 5px; }
+  .prj-content a {
+    text-decoration: none;
+    color: black;
+    font-family: "Oswald", "Helvetica Neue", sans-serif;
+    padding-left: 15px;
+    display: block; }
+  .prj-content a:hover {
+    background-color: white; }
+
+#prj-nav:hover .prj-link {
+  background-color: #55acee; }
+#prj-nav:hover .prj-content {
+  display: block; }
+
+.cust-page-lnks {
+  float: left;
+  margin-right: 20px; }
+
+@media only screen and (max-width: 600px) {
+  .cust-page-lnks {
+    float: none;
+    margin-right: 5px; }
+
+  div.prj-content {
+    display: none; }
+    div.prj-content a {
+      display: none; } }
 /*navigation links for desktop*/
 @media only screen and (min-width: 600px) {
   .nav-link {
@@ -532,7 +578,10 @@ pre {
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
   .nav-link span {
-    color: black; } }
+    color: black; }
+
+  #prj-nav:hover .prj-link {
+    background-color: black; } }
 /* homepage body */
 .page-content {
   background-color: #F4F4F4; }
@@ -605,27 +654,27 @@ time {
   margin-right: auto;
   text-align: center; }
 
-.heading {
+.project {
   /* project header */
   /*individual project sections*/ }
-  .heading .prj-heading {
+  .project .prj-heading {
     color: #55acee;
     font-family: "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 6.25em; }
-  .heading .prj-body {
+  .project .prj-body {
     margin-bottom: 45px;
     padding: 0 5px;
     color: #fff;
     font-family: "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 1.75em; }
-  .heading .prj-title {
+  .project .prj-title {
     color: #fff;
     font-family: "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 3.875em; }
-  .heading .prj-desc {
+  .project .prj-desc {
     margin-bottom: 45px;
     padding: 0 5px;
     color: #A9A9A9;
@@ -661,6 +710,12 @@ time {
     font-size: .75em;
     vertical-align: text-top; }
 
+@media only screen and (max-width: 350px) {
+  .project h1.prj-heading {
+    font-size: 5em; }
+
+  .project p.prj-body {
+    font-size: 1.25em; } }
 /* Headshot photo */
 #headshot {
   width: 250px;

@@ -18,12 +18,23 @@
       <div class="trigger">
         {% for my_page in site.pages %}
           {% if my_page.title %}
-            <a class="page-link nav-link" href="{{ my_page.url | prepend: site.baseurl }}"><span class="font-title">{{ my_page.title }}</span></a>
+            {% if my_page.title == "Projects" %}
+              <div id="prj-nav" class="cust-page-lnks">
+                <a class="page-link nav-link prj-link" href="{{ my_page.url | prepend: site.baseurl }}"><span class="font-title">{{ my_page.title }}</span></a>
+                <div class="prj-content">
+                  <a href="/projects/#prism">Prism</a>
+                  <a href="/projects/#idunno">iDunno</a>
+                </div>
+              </div>
+              {% else %}
+              <div class="cust-page-lnks">
+                <a class="page-link nav-link" href="{{ my_page.url | prepend: site.baseurl }}"><span class="font-title">{{ my_page.title }}</span></a>
+              </div>
+            {% endif %}
           {% endif %}
         {% endfor %}
       </div>
     </nav>
-
   </div>
 
 </header>
