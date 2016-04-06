@@ -8,9 +8,7 @@
 #title {
   color: $whte;
 
-  &:hover {
-    color: $twt-clr;
-  }
+  &:hover { color: #031D34; }
 }
 
 .font-title { font-family: $font-title; }
@@ -28,7 +26,7 @@
   min-width: 200px;
   left: -10px;
   line-height: 40px;
-  background-color: $twt-clr;
+  background-color: $whte;
   -web-kit-border-radius: 0 5px 5px 5px;
     -moz-border-radius: 0 5px 5px 5px;
       -o-border-radius: 0 5px 5px 5px;
@@ -36,21 +34,26 @@
 
   a {
     text-decoration: none;
-    color: black;
+    color: $twt-clr;
     font-family: $font-title;
     padding-left: 15px;
     display: block;
   }
 
   a:hover {
-    background-color: white;
+    background-color: $twt-clr;
+    color: $whte;
   }
 }
 
 #prj-nav:hover {
   .prj-link {
-    background-color: $twt-clr;
+    background-color: $whte;
+    span {
+      color: $twt-clr;
+    }
   }
+
   .prj-content { display: block; }
 }
 
@@ -98,10 +101,10 @@
     }
 
     &:hover {
-      background: $twt-clr;
+      background: $whte;
 
       span {
-        color: $blk !important;
+        color: $twt-clr;
       }
     }
   }
@@ -109,11 +112,11 @@
 
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
-  .nav-link span { color: $blk; }
+  .site-nav:hover .trigger {
+    background-color: $twt-clr;
 
-  #prj-nav:hover {
-    .prj-link {
-      background-color: $blk;
+    a span {
+      color: $whte;
     }
   }
 }
