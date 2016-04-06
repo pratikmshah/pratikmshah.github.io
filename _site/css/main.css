@@ -161,7 +161,7 @@ pre {
  */
 .site-header {
   /*border-top: 5px solid $twt-clr;*/
-  border-bottom: 1px solid #e8e8e8;
+  /*border-bottom: 1px solid $grey-color-light;*/
   min-height: 56px;
   background-color: #55acee;
   position: relative; }
@@ -230,13 +230,15 @@ pre {
  * Site footer
  */
 .site-footer {
-  background-color: #000;
-  border-top: 1px solid #e8e8e8;
+  background: none;
+  background-color: #00070D;
+  border-top: 1px solid #2e3439;
   padding: 10px 0; }
 
 .footer-copyw {
   font-size: 15px;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  color: #55acee; }
 
 .contact-list,
 .social-media-list {
@@ -575,14 +577,13 @@ pre {
     .nav-link:hover {
       background: #fff; }
       .nav-link:hover span {
-        color: #55acee !important; } }
+        color: #55acee; } }
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
-  .nav-link span {
-    color: black; }
-
-  #prj-nav:hover .prj-link {
-    background-color: black; } }
+  .site-nav:hover .trigger {
+    background-color: #55acee; }
+    .site-nav:hover .trigger a span {
+      color: #fff; } }
 /* homepage body */
 .page-content {
   background-color: #F4F4F4; }

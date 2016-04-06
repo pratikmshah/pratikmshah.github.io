@@ -100,7 +100,7 @@
       background: $whte;
 
       span {
-        color: $twt-clr !important;
+        color: $twt-clr;
       }
     }
   }
@@ -108,11 +108,11 @@
 
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
-  .nav-link span { color: $blk; }
+  .site-nav:hover .trigger {
+    background-color: $twt-clr;
 
-  #prj-nav:hover {
-    .prj-link {
-      background-color: $blk;
+    a span {
+      color: $whte;
     }
   }
 }
