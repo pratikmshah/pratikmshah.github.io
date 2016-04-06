@@ -84,7 +84,7 @@ a {
     color: #1756a9; }
   a:hover {
     color: #111;
-    text-decoration: underline; }
+    text-decoration: none; }
 
 /**
  * Blockquotes
@@ -160,10 +160,10 @@ pre {
  * Site header
  */
 .site-header {
-  border-top: 5px solid #55acee;
+  /*border-top: 5px solid $twt-clr;*/
   border-bottom: 1px solid #e8e8e8;
   min-height: 56px;
-  background-color: #000;
+  background-color: #55acee;
   position: relative; }
 
 .site-title {
@@ -502,8 +502,6 @@ pre {
 /*navigation title*/
 #title {
   color: #fff; }
-  #title:hover {
-    color: #55acee; }
 
 .font-title {
   font-family: "Oswald", "Helvetica Neue", sans-serif; }
@@ -519,22 +517,25 @@ pre {
   min-width: 200px;
   left: -10px;
   line-height: 40px;
-  background-color: #55acee;
+  background-color: #fff;
   -web-kit-border-radius: 0 5px 5px 5px;
   -moz-border-radius: 0 5px 5px 5px;
   -o-border-radius: 0 5px 5px 5px;
   border-radius: 0 5px 5px 5px; }
   .prj-content a {
     text-decoration: none;
-    color: black;
+    color: #55acee;
     font-family: "Oswald", "Helvetica Neue", sans-serif;
     padding-left: 15px;
     display: block; }
   .prj-content a:hover {
-    background-color: white; }
+    background-color: #55acee;
+    color: #fff; }
 
 #prj-nav:hover .prj-link {
-  background-color: #55acee; }
+  background-color: #fff; }
+  #prj-nav:hover .prj-link span {
+    color: #55acee; }
 #prj-nav:hover .prj-content {
   display: block; }
 
@@ -572,9 +573,9 @@ pre {
       -o-transform: skew(20deg);
       transform: skew(20deg); }
     .nav-link:hover {
-      background: #55acee; }
+      background: #fff; }
       .nav-link:hover span {
-        color: black !important; } }
+        color: #55acee !important; } }
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
   .nav-link span {

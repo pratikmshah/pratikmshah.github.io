@@ -2,10 +2,10 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $twt-clr;
+    /*border-top: 5px solid $twt-clr;*/
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
-    background-color: #000;
+    background-color: $twt-clr;
 
     // Positioning context for the mobile navigation icon
     position: relative;
