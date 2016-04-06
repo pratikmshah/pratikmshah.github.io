@@ -504,6 +504,8 @@ pre {
 /*navigation title*/
 #title {
   color: #fff; }
+  #title:hover {
+    color: #031D34; }
 
 .font-title {
   font-family: "Oswald", "Helvetica Neue", sans-serif; }
@@ -777,6 +779,10 @@ time {
     height: 64px;
     width: 64px;
     padding-bottom: 16px; }
+  #skills #resume h3 {
+    display: inline-block; }
+  #skills #resume span {
+    font-size: 1.5em; }
 
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {

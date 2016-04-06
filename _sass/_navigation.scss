@@ -5,7 +5,11 @@
 }
 
 /*navigation title*/
-#title { color: $whte; }
+#title {
+  color: $whte;
+
+  &:hover { color: #031D34; }
+}
 
 .font-title { font-family: $font-title; }
 
