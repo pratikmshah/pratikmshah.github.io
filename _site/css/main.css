@@ -797,3 +797,22 @@ time {
   margin-left: 25px; }
   .blg-lists li {
     margin-bottom: 5px; }
+
+.blg-img {
+  padding: 10px;
+  margin: 0 auto;
+  display: block;
+  max-width: 600px;
+  height: auto;
+  border: 1px solid #E0E0E0; }
+
+figure {
+  margin: 10px 0; }
+
+figcaption {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic; }
+
+pre {
+  border: none; }
