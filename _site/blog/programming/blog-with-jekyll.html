@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Blog With Jekyll</title>
+  <meta name="description" content="">
+
+  <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
+  <link rel="stylesheet" href="/css/devicon.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/blog/programming/blog-with-jekyll">
+  <link rel="alternate" type="application/rss+xml" title="PRATIK SHAH" href="http://yourdomain.com/feed.xml">
+
+  <script type="text/javascript" src="/js/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="/js/masonry.pkgd.js"></script>
+  <script type="text/javascript" src="/js/homepage.js"></script>
+  <script type="text/javascript" src="/js/about.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">
+      <span id="title" class="font-title">PRATIK SHAH</span>
+    </a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+            
+              <div class="cust-page-lnks">
+                <a class="page-link nav-link" href="/about/"><span class="font-title">About</span></a>
+              </div>
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+              <div id="prj-nav" class="cust-page-lnks">
+                <a class="page-link nav-link prj-link" href="/projects/"><span class="font-title">Projects</span></a>
+                <div class="prj-content">
+                  <a href="/projects/#prism">Prism</a>
+                  <a href="/projects/#idunno">iDunno</a>
+                </div>
+              </div>
+              
+          
+        
+      </div>
+    </nav>
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article id="post" class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <p class="post-meta"><time datetime="2016-04-08T00:00:00-05:00" itemprop="datePublished">Apr 8, 2016</time></p>
+    <h1 id="post-title" class="post-title" itemprop="name headline">Blog With Jekyll</h1>
+  </header>
+
+  
+  <div>
+    <img src="/img/posts/jekyll-blog/header.png">
+  </div>
+  
+
+  <div class="post-content" itemprop="articleBody">
+    <p><br /></p>
+
+<p>Jekyll is a static site generator that is written in ruby. Jekyll takes text files and renders them into HTML page. If you are looking for a simple web page or blog without having a database or maintaining a lot of code then Jekyll is for you. Another bonus for Jekyll is that you can host your page on GitHub pages.</p>
+
+<p><br /></p>
+
+<h3 id="installation">Installation</h3>
+
+<p>Installing Jekyll is just like installing any ruby gem. If you are on windows you will need to get ruby so check out <a href="http://rubyinstaller.org/">ruby installer</a>. I will be installing on a mac but for further information on how to install look at the <a href="https://jekyllrb.com/docs/installation/">Jekyll docs</a>. In your console type <code class="highlighter-rouge">gem install jekyll</code> and wait till it installs (restart your console after). If installed successfully it will say <code class="highlighter-rouge">Successfully installed jekyll-version#</code> and to double check installation type <code class="highlighter-rouge">jekyll –v</code>.</p>
+
+<p><br /></p>
+
+<h3 id="creating-a-new-project">Creating a New Project</h3>
+
+<p>Creating a new project is just as easy as installing (I hope it is for you). To create a new project in the command line at whatever root directory you want (I did mine on desktop for demo purposes) type <code class="highlighter-rouge">jekyll new your-project-name</code>.</p>
+
+<p><br /></p>
+
+<h4 id="viewing-the-files-created-here-is-a-rundown-of-what-the-filefolders-do">Viewing the files created here is a rundown of what the file/folders do:</h4>
+<ul class="blg-lists">
+  <li>config.yml – is where you can configure all the configuration data</li>
+  <li>_includes – contains partials which can be reused and rendered in html templates in layouts</li>
+  <li>_layouts – contains main page templates such as for a blog post or homepage</li>
+  <li>_posts – contains markdown files for blog posts. If you don’t know markdown here is a cheat sheet and an environment you can practice in.</li>
+  <li>_sass – is a scripting language for css to make things more efficient and jekyll offers this.</li>
+  <li>css – contains the main stylesheet that is in Sass but if you just want to use plain css you can rename main.scss to main.css.</li>
+</ul>
+
+<p><br /></p>
+
+<p>In order to view the webpage it needs to be hosted on a server and Jekyll provides one for us through the command line. Navigate to the root folder of the project and type <code class="highlighter-rouge">jekyll serve</code>.  Once server is running copy the server address (2nd to last line) and paste it in your browser and whala! You now have a website. If you look at your project folder you will see a new folder that was created called _site. This is where the site’s assets will be placed and what you will need to host the page on a webserver. One important thing to remember is that folders beginning with an underscore will be compiled but will not be copied over to the _site folder. If you want other assets like videos, images or sounds make sure the folder does not start with an underscore.</p>
+
+<p><br /></p>
+
+<h3 id="configure-project">Configure Project</h3>
+
+<p>To configure your project you will have to edit the <code class="highlighter-rouge">_config.yml</code> file. The <a href="https://jekyllrb.com/docs/configuration/">Jekyll documentation</a> provides a full list of commands that can be configured. Go through and give your site/blog a title, email, and description. Set the url to the host domain name you will use to host the live site on and you can also set your twitter/github usernames if you want. There is one more configuration we need to manually add under build settings called <a href="https://jekyllrb.com/docs/permalinks/">permalink</a> and it defines how the file path is displayed. View the docs for a selection of built in settings but I like either none or /: categories/:title. Type <code class="highlighter-rouge">permalink: none</code>or the custom permalink <code class="highlighter-rouge">/:categories/:title</code> restart your server.</p>
+
+<p><br /></p>
+
+<h3 id="yaml">Yaml</h3>
+
+<p>In your text editor go to your posts and look at the sample markdown file. You will notice a block of text between the dashes. This is called a yaml (ya-mull) front matter and its basically creating and assigning variables to be used within the file. Change the title value to whatever you want your post title to be. The date variable is what Jekyll uses to sort your blog posts in order and it can be changed if you would like. You can also specify categories for your post; for multiple categories use spaces. You can also add an author by adding an <code class="highlighter-rouge">author: name</code> in the yaml front matter. After that you can get rid of all the default content and place one of your own. I am going to use a lorem ipsum generator to fill in my content. Save once you are done and have a look at your post.</p>
+
+<p><br /></p>
+
+<h3 id="the-liquid-template-system">The Liquid Template System</h3>
+
+<p>Your entire project will be made up of either posts or pages. Jekyll uses liquid templates to render a model for each page or post and these templates are stored in the layouts folder. The default.html file provides the html layout and has handles (the brackets) which contain data to render or logic to be performed. Handles with percent signs (%) after it perform logic/calculations while double handles stands for render content. The handles are used throughout rendering partials from includes folder, layouts and posts.</p>
+
+<p><br /></p>
+
+<p>Let’s edit how the format the way we show our blog posts on the homepage. Go to the index.html file and inside the <code class="highlighter-rouge">&lt;ul&gt;</code> tags move the h2 tag up above the span tag. In the span tag add <code class="highlighter-rouge">by:  on</code>. So we can display the author’s name. Next add a <code class="highlighter-rouge">&lt;p&gt;</code> tag after the span tags and add this line in between them ``. Reload the page and see the difference! We just added an author to each post and the first 50 words of the post.</p>
+
+<p><br /></p>
+
+<h3 id="adding-images">Adding Images</h3>
+<p>We can easily embed and image to our blog post. First grab and image and create a new folder called <code class="highlighter-rouge">img</code> at the root path of the project folder and place the image inside. Go to post.html under layouts folder and type the below code right after the ending header tag.</p>
+
+<p><br /></p>
+
+<p>Now go back to your first post in posts folder and inside the yaml front matter block add <code class="highlighter-rouge">image: your-image-name.file-extension</code>. I added a bit of styling to center the image. Refresh the site and check it out a picture. We added an if statement so for posts that do not have an image the code is skipped and not rendered.</p>
+
+<p><br /></p>
+
+<h3 id="refactor-by-creating-default-variables">Refactor by Creating Default Variables</h3>
+<p>When creating new posts over and over again defining the yaml front matter variables again and again can be tiresome but Jekyll lets you configure the default values in the config.yml file copy the code below to your config file. What we are doing is defining values that should automatically be loaded in any post template so that we don’t have to keep writing the yaml block. Next, go to the post and delete the author, category and layout we do not need them anymore. Restart your sever and everything should be the same as it was. You can always override the defaults by specifying the values in the yaml block in the post.</p>
+
+<p><br /></p>
+
+<h3 id="creating-a-new-page">Creating a New Page</h3>
+<p>Creating a new page is pretty simple. Let’s create a contact page for our blog. In the root folder of your project create a new file called contact.md or contact.html it doesn’t matter Jekyll will render both as long as you have the front matter at the top of the page; I will use markdown. See below how I did the contact page. Now when you refresh the page you should see a new link up top next to navigation called contact.  I have the <code class="highlighter-rouge">layout: page</code> variable but technically this should be under defaults in the config.yml file.</p>
+
+<p><br /></p>
+
+<h3 id="naming-posts-and-pagination">Naming Posts and Pagination</h3>
+<p>When creating new posts you need to specify a certain format so that Jekyll can organize in order by date. The format goes <code class="highlighter-rouge">YEAR-DAY-MONTH-Title-Of-Post-extension</code> ex: 2106-03-31-AT&amp;T-Dividend-King.md.</p>
+
+<p>I created a whole bunch of posts. As time goes on I will have hundreds of post that I can’t just display all at once so in order to post about 3 at a time we will use the built in pagination feature. First, we have to install the pagination gem via console so type <code class="highlighter-rouge">gem install jekyll-paginate</code> and restart after.  Go to the config.yml file and under site settings add the line <code class="highlighter-rouge">paginate: 3;</code> this will show 3 articles at a time. Under build settings add the line <code class="highlighter-rouge">gems: [jekyll-paginate]</code> Go to the index.html file and in the for loop for posts replace site.posts with <code class="highlighter-rouge">paginator.posts</code>.</p>
+
+<p>You should now see a list of the first 3 articles but we are missing the navigation for the rest of the articles and we have to write some code for this to work; luckily there is a template already written on the Jekyll docs page so <a href="https://jekyllrb.com/docs/pagination/">click this link</a>. Copy the HTML snippet on the bottom and paste it right after the end of the ul tag in the index.html page. Refresh the page and you should now have a little pagination at the bottom</p>
+
+<p>I hope you enjoyed this post and congrats you now know the basics of creating a blog or website using Jekyll. Now try adding comments to your posts or hosting your blog on GitHub pages. See links below and please leave any comments below.</p>
+
+<p><br /></p>
+
+<p><a href="https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions">Comments</a></p>
+
+<p><a href="https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/">Github pages</a></p>
+
+<!-- links -->
+<!-- pics -->
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div id="social-media" class="footer-col footer-col-3 center">
+
+        <div id="twitter-btn">
+          <a href="https://twitter.com/pratikshah" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @pratikshah</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+
+        <ul class="social-media-list center">
+          
+          <li>
+            <a href="https://github.com/pratikmshah" class="icon-social">
+  <img src="/img/icons/github-blk.png">
+  <img src="/img/icons/github-clr.png">
+</a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/pratikshah" class="icon-social">
+  <img src="/img/icons/twt-blk.png">
+  <img src="/img/icons/twt-clr.png">
+</a>
+
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://linkedin.com/in/pratikmshah" class="icon-social">
+  <img src="/img/icons/lnkdn-blk.png">
+  <img src="/img/icons/lnkdn-clr.png">
+</a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://instagram.com/pratikshah_" class="icon-social">
+  <img src="/img/icons/insta-blk.png">
+  <img src="/img/icons/insta-clr.png">
+</a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:pratik.t.shah@gmail.com" class="icon-social">
+  <img src="/img/icons/email-blk.png">
+  <img src="/img/icons/email-clr.png">
+</a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+     <div class="center">
+      <p class="footer-copyw">Copyright © Pratik Shah</p>
+     </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

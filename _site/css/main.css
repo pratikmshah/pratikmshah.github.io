@@ -792,3 +792,8 @@ time {
 
   #skills {
     width: 90%; } }
+/*utility tool when writting blog post*/
+.blg-lists {
+  margin-left: 25px; }
+  .blg-lists li {
+    margin-bottom: 5px; }
