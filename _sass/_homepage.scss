@@ -10,22 +10,26 @@
   background-color: $whte;
   display: inline-block;
   width: 275px;
-  padding: 1em;
   margin: .4em;
   -webkit-box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.19);
     -moz-box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.19);
          box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.19);
 
-  h2 {
-    margin-bottom: 0;
-    text-transform: $upcase;
+  div {
+    padding: 1em;
 
-    a.post-link { color: $blk; }
+    h2 {
+      margin-bottom: 0;
+      text-transform: $upcase;
 
-    a.post-link:hover {
-      text-decoration: none;
-      transition: color 0.3s;
-      color: $post-hover-clr;
+      a.post-link { color: $blk; }
+
+      a.post-link:hover {
+        text-decoration: none;
+        transition: color 0.3s;
+        color: $post-hover-clr;
+      }
+
     }
   }
 

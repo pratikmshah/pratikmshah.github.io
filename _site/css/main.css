@@ -598,20 +598,21 @@ pre {
   background-color: #fff;
   display: inline-block;
   width: 275px;
-  padding: 1em;
   margin: .4em;
   -webkit-box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.19);
   -moz-box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.19);
   box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.19); }
-  .block h2 {
-    margin-bottom: 0;
-    text-transform: uppercase; }
-    .block h2 a.post-link {
-      color: black; }
-    .block h2 a.post-link:hover {
-      text-decoration: none;
-      transition: color 0.3s;
-      color: #7a7a7a; }
+  .block div {
+    padding: 1em; }
+    .block div h2 {
+      margin-bottom: 0;
+      text-transform: uppercase; }
+      .block div h2 a.post-link {
+        color: black; }
+      .block div h2 a.post-link:hover {
+        text-decoration: none;
+        transition: color 0.3s;
+        color: #7a7a7a; }
   .block .post-meta {
     text-transform: uppercase; }
 
