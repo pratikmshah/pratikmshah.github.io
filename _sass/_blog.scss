@@ -1,0 +1,32 @@
+/*utility tool when writting blog post*/
+
+.blg-lists {
+  margin-left: 25px;
+
+  li {
+    margin-bottom: 5px;
+  }
+}
+
+.blg-img {
+  padding: 5px;
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #E0E0E0;
+}
+
+figure {
+  margin: 10px 0;
+}
+
+figcaption {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+ pre {
+  border: none;
+}

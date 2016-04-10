@@ -598,23 +598,31 @@ pre {
   background-color: #fff;
   display: inline-block;
   width: 275px;
-  padding: 1em;
   margin: .4em;
   -webkit-box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.19);
   -moz-box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.19);
   box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.19); }
-  .block h2 {
-    margin-bottom: 0;
-    text-transform: uppercase; }
-    .block h2 a.post-link {
-      color: black; }
-    .block h2 a.post-link:hover {
-      text-decoration: none;
-      transition: color 0.3s;
-      color: #7a7a7a; }
+  .block div {
+    padding: 1em; }
+    .block div h2 {
+      margin-bottom: 0;
+      text-transform: uppercase; }
+      .block div h2 a.post-link {
+        color: black; }
+      .block div h2 a.post-link:hover {
+        text-decoration: none;
+        transition: color 0.3s;
+        color: #7a7a7a; }
   .block .post-meta {
     text-transform: uppercase; }
 
+@media only screen and (max-width: 415px) {
+  .grid-container {
+    margin: 0; }
+
+  .block {
+    margin: 0;
+    width: 100%; } }
 /*Footer*/
 #twitter-btn {
   margin-bottom: 15px; }
@@ -791,3 +799,27 @@ time {
 
   #skills {
     width: 90%; } }
+/*utility tool when writting blog post*/
+.blg-lists {
+  margin-left: 25px; }
+  .blg-lists li {
+    margin-bottom: 5px; }
+
+.blg-img {
+  padding: 5px;
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #E0E0E0; }
+
+figure {
+  margin: 10px 0; }
+
+figcaption {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic; }
+
+pre {
+  border: none; }

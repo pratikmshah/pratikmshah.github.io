@@ -7,13 +7,20 @@ layout: default
   <div class="grid-container">
     {% for post in site.posts %}
       <div class="block">
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
 
-        <p>{{post.excerpt | truncatewords:75 }}</p>
+        {% if post.image %}
+          <img src="/img/posts/{{ post.image }}">
+        {% endif %}
 
-        <span class="post-meta font-title">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <div>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+
+          <p>{{post.excerpt | truncatewords:75 }}</p>
+
+          <span class="post-meta font-title">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </div>
       </div>
     {% endfor %}
   </div>
