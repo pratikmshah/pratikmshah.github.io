@@ -35,3 +35,7 @@
 
   .post-meta { text-transform: $upcase; }
 }
+
+@media only screen and (max-width: 414px) {
+  .block { margin: 0; }
+}
