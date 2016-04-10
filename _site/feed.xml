@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 09 Apr 2016 17:57:12 -0500</pubDate>
-    <lastBuildDate>Sat, 09 Apr 2016 17:57:12 -0500</lastBuildDate>
+    <pubDate>Sat, 09 Apr 2016 19:07:05 -0500</pubDate>
+    <lastBuildDate>Sat, 09 Apr 2016 19:07:05 -0500</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -21,7 +21,7 @@
 &lt;p&gt;Installing Jekyll is just like installing any ruby gem. If you are on windows you will need to get ruby so check out &lt;a href=&quot;http://rubyinstaller.org/&quot;&gt;ruby installer&lt;/a&gt;. I will be installing on a mac but for further information on how to install look at the &lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;Jekyll docs&lt;/a&gt;. In your console type &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install jekyll&lt;/code&gt; and wait till it installs (restart your console after). If installed successfully it will say &lt;code class=&quot;highlighter-rouge&quot;&gt;Successfully installed jekyll-version#&lt;/code&gt; and to double check installation type &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll –v&lt;/code&gt;.&lt;/p&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/img/posts/jekyll-blog/jekyll-install.png&quot; class=&quot;blg-img&quot; alt=&quot;command line install&quot; /&gt;
+  &lt;img src=&quot;/img/posts/jekyll-blog/jekyll-install.jpg&quot; class=&quot;blg-img&quot; alt=&quot;command line install&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -43,7 +43,7 @@
 &lt;/ul&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/img/posts/jekyll-blog/prj-files.png&quot; class=&quot;blg-img&quot; alt=&quot;list of project files&quot; /&gt;
+  &lt;img src=&quot;/img/posts/jekyll-blog/prj-files.jpg&quot; class=&quot;blg-img&quot; alt=&quot;list of project files&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -51,15 +51,15 @@
 &lt;p&gt;In order to view the webpage it needs to be hosted on a server and Jekyll provides one for us through the command line. Navigate to the root folder of the project and type &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;.  Once server is running copy the server address (2nd to last line) and paste it in your browser and whala! You now have a website. If you look at your project folder you will see a new folder that was created called _site. This is where the site’s assets will be placed and what you will need to host the page on a webserver. One important thing to remember is that folders beginning with an underscore will be compiled but will not be copied over to the _site folder. If you want other assets like videos, images or sounds make sure the folder does not start with an underscore.&lt;/p&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/img/posts/jekyll-blog/jekyll-server.png&quot; class=&quot;blg-img&quot; alt=&quot;jekyll server in command line&quot; /&gt;
+  &lt;img src=&quot;/img/posts/jekyll-blog/jekyll-server.jpg&quot; class=&quot;blg-img&quot; alt=&quot;jekyll server in command line&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/img/posts/jekyll-blog/live-site.png&quot; class=&quot;blg-img&quot; alt=&quot;Live site files&quot; /&gt;
+  &lt;img src=&quot;/img/posts/jekyll-blog/live-site.jpg&quot; class=&quot;blg-img&quot; alt=&quot;Live site files&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/img/posts/jekyll-blog/website.png&quot; class=&quot;blg-img&quot; alt=&quot;Default live site&quot; /&gt;
+  &lt;img src=&quot;/img/posts/jekyll-blog/website.jpg&quot; class=&quot;blg-img&quot; alt=&quot;Default live site&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -90,7 +90,7 @@
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/img/posts/jekyll-blog/permalink.png&quot; class=&quot;blg-img&quot; alt=&quot;permalink&quot; /&gt;
+  &lt;img src=&quot;/img/posts/jekyll-blog/permalink.jpg&quot; class=&quot;blg-img&quot; alt=&quot;permalink&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -100,11 +100,11 @@
 &lt;p&gt;In your text editor go to your posts and look at the sample markdown file. You will notice a block of text between the dashes. This is called a yaml (ya-mull) front matter and its basically creating and assigning variables to be used within the file. Change the title value to whatever you want your post title to be. The date variable is what Jekyll uses to sort your blog posts in order and it can be changed if you would like. You can also specify categories for your post; for multiple categories use spaces. You can also add an author by adding an &lt;code class=&quot;highlighter-rouge&quot;&gt;author: name&lt;/code&gt; in the yaml front matter. After that you can get rid of all the default content and place one of your own. I am going to use a lorem ipsum generator to fill in my content. Save once you are done and have a look at your post.&lt;/p&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/img/posts/jekyll-blog/yaml-front-matter.png&quot; class=&quot;blg-img&quot; alt=&quot;YAML front matter&quot; /&gt;
+  &lt;img src=&quot;/img/posts/jekyll-blog/yaml-front-matter.jpg&quot; class=&quot;blg-img&quot; alt=&quot;YAML front matter&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/img/posts/jekyll-blog/edited-post.png&quot; class=&quot;blg-img&quot; alt=&quot;edited post&quot; /&gt;
+  &lt;img src=&quot;/img/posts/jekyll-blog/edited-post.jpg&quot; class=&quot;blg-img&quot; alt=&quot;edited post&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -198,7 +198,7 @@ layout: default
 &lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/img/posts/jekyll-blog/edited-homepage.png&quot; class=&quot;blg-img&quot; alt=&quot;edited post&quot; /&gt;
+  &lt;img src=&quot;/img/posts/jekyll-blog/edited-homepage.jpg&quot; class=&quot;blg-img&quot; alt=&quot;edited post&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -314,11 +314,11 @@ Please feel free to [email me](mailto:{{ site.email }})&lt;span class=&quot;w&qu
 &lt;p&gt;I hope you enjoyed this post and congrats you now know the basics of creating a blog or website using Jekyll. Now try adding comments to your posts or hosting your blog on GitHub pages. See links below and please leave any comments below.&lt;/p&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/img/posts/jekyll-blog/jekyll-pag-gem.png&quot; class=&quot;blg-img&quot; alt=&quot;jekyll paginator gem&quot; /&gt;
+  &lt;img src=&quot;/img/posts/jekyll-blog/jekyll-pag-gem.jpg&quot; class=&quot;blg-img&quot; alt=&quot;jekyll paginator gem&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/img/posts/jekyll-blog/pagination-img.png&quot; class=&quot;blg-img&quot; alt=&quot;image of pagination&quot; /&gt;
+  &lt;img src=&quot;/img/posts/jekyll-blog/pagination-img.jpg&quot; class=&quot;blg-img&quot; alt=&quot;image of pagination&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions&quot;&gt;Comments&lt;/a&gt;&lt;/p&gt;

@@ -1,7 +1,7 @@
 ---
 title:  "Blog With Jekyll"
 date:   2016-04-08
-image: "/jekyll-blog/header.png"
+image: "/jekyll-blog/header.jpg"
 ---
 Jekyll is a static site generator that is written in ruby. Jekyll takes text files and renders them into HTML page. If you are looking for a simple web page or blog without having a database or maintaining a lot of code then Jekyll is for you. Another bonus for Jekyll is that you can host your page on GitHub pages.
 
@@ -12,7 +12,7 @@ Jekyll is a static site generator that is written in ruby. Jekyll takes text fil
 Installing Jekyll is just like installing any ruby gem. If you are on windows you will need to get ruby so check out [ruby installer][ruby-installer]. I will be installing on a mac but for further information on how to install look at the [Jekyll docs][jekyll-docs]. In your console type `gem install jekyll` and wait till it installs (restart your console after). If installed successfully it will say `Successfully installed jekyll-version#` and to double check installation type `jekyll –v`.
 
 <figure>
-  <img src="/img/posts/jekyll-blog/jekyll-install.png" class="blg-img" alt="command line install">
+  <img src="/img/posts/jekyll-blog/jekyll-install.jpg" class="blg-img" alt="command line install">
 </figure>
 
 <br/>
@@ -35,7 +35,7 @@ Creating a new project is just as easy as installing (I hope it is for you). To 
 </ul>
 
 <figure>
-  <img src="/img/posts/jekyll-blog/prj-files.png" class="blg-img" alt="list of project files">
+  <img src="/img/posts/jekyll-blog/prj-files.jpg" class="blg-img" alt="list of project files">
 </figure>
 
 <br/>
@@ -43,15 +43,15 @@ Creating a new project is just as easy as installing (I hope it is for you). To 
 In order to view the webpage it needs to be hosted on a server and Jekyll provides one for us through the command line. Navigate to the root folder of the project and type `jekyll serve`.  Once server is running copy the server address (2nd to last line) and paste it in your browser and whala! You now have a website. If you look at your project folder you will see a new folder that was created called _site. This is where the site’s assets will be placed and what you will need to host the page on a webserver. One important thing to remember is that folders beginning with an underscore will be compiled but will not be copied over to the _site folder. If you want other assets like videos, images or sounds make sure the folder does not start with an underscore.
 
 <figure>
-  <img src="/img/posts/jekyll-blog/jekyll-server.png" class="blg-img" alt="jekyll server in command line">
+  <img src="/img/posts/jekyll-blog/jekyll-server.jpg" class="blg-img" alt="jekyll server in command line">
 </figure>
 
 <figure>
-  <img src="/img/posts/jekyll-blog/live-site.png" class="blg-img" alt="Live site files">
+  <img src="/img/posts/jekyll-blog/live-site.jpg" class="blg-img" alt="Live site files">
 </figure>
 
 <figure>
-  <img src="/img/posts/jekyll-blog/website.png" class="blg-img" alt="Default live site">
+  <img src="/img/posts/jekyll-blog/website.jpg" class="blg-img" alt="Default live site">
 </figure>
 
 <br/>
@@ -76,7 +76,7 @@ github_username:  pratikmshah
 <br>
 
 <figure>
-  <img src="/img/posts/jekyll-blog/permalink.png" class="blg-img" alt="permalink">
+  <img src="/img/posts/jekyll-blog/permalink.jpg" class="blg-img" alt="permalink">
 </figure>
 
 <br/>
@@ -86,11 +86,11 @@ github_username:  pratikmshah
 In your text editor go to your posts and look at the sample markdown file. You will notice a block of text between the dashes. This is called a yaml (ya-mull) front matter and its basically creating and assigning variables to be used within the file. Change the title value to whatever you want your post title to be. The date variable is what Jekyll uses to sort your blog posts in order and it can be changed if you would like. You can also specify categories for your post; for multiple categories use spaces. You can also add an author by adding an `author: name` in the yaml front matter. After that you can get rid of all the default content and place one of your own. I am going to use a lorem ipsum generator to fill in my content. Save once you are done and have a look at your post.
 
 <figure>
-  <img src="/img/posts/jekyll-blog/yaml-front-matter.png" class="blg-img" alt="YAML front matter">
+  <img src="/img/posts/jekyll-blog/yaml-front-matter.jpg" class="blg-img" alt="YAML front matter">
 </figure>
 
 <figure>
-  <img src="/img/posts/jekyll-blog/edited-post.png" class="blg-img" alt="edited post">
+  <img src="/img/posts/jekyll-blog/edited-post.jpg" class="blg-img" alt="edited post">
 </figure>
 
 <br>
@@ -153,7 +153,7 @@ layout: default
 {% endhighlight %}
 
 <figure>
-  <img src="/img/posts/jekyll-blog/edited-homepage.png" class="blg-img" alt="edited post">
+  <img src="/img/posts/jekyll-blog/edited-homepage.jpg" class="blg-img" alt="edited post">
 </figure>
 
 <br>
@@ -249,11 +249,11 @@ You should now see a list of the first 3 articles but we are missing the navigat
 I hope you enjoyed this post and congrats you now know the basics of creating a blog or website using Jekyll. Now try adding comments to your posts or hosting your blog on GitHub pages. See links below and please leave any comments below.
 
 <figure>
-  <img src="/img/posts/jekyll-blog/jekyll-pag-gem.png" class="blg-img" alt="jekyll paginator gem">
+  <img src="/img/posts/jekyll-blog/jekyll-pag-gem.jpg" class="blg-img" alt="jekyll paginator gem">
 </figure>
 
 <figure>
-  <img src="/img/posts/jekyll-blog/pagination-img.png" class="blg-img" alt="image of pagination">
+  <img src="/img/posts/jekyll-blog/pagination-img.jpg" class="blg-img" alt="image of pagination">
 </figure>
 
 
