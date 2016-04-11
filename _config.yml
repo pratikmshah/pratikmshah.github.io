@@ -44,3 +44,4 @@ defaults:
       category: programming
       permalink: /blog/:categories/:title
       layout: "post"
+      comments: true
