@@ -30,6 +30,7 @@ idunno-src: "https://github.com/pratikmshah/iDunno"
 
 # about me links
 resume: "https://resume.creddle.io/resume/f4o552ugu6v"
+resume-pdf: "/files/pratik-resume.pdf"
 
 # Build settings
 markdown: kramdown

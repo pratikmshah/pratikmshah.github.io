@@ -795,6 +795,10 @@ time {
     display: inline-block; }
   #skills #resume span {
     font-size: 1.5em; }
+  #skills .download {
+    width: 45px;
+    height: auto;
+    margin-left: 15px; }
 
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
