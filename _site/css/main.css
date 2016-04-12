@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,400italic,700,700italic,300);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
 /**
  * Reset some basic elements
  */
@@ -640,6 +641,9 @@ pre {
 
 .social-media-list li a {
   text-decoration: none; }
+
+code, pre {
+  font-family: "Source Code Pro", sans-serif !important; }
 
 #post {
   max-width: 702.9px;
