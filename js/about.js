@@ -1,5 +1,6 @@
 $(function(){
   $(".tab-btns").on('click', 'a', function(e){
+
     // grab item clicked on
     var $this = $(this);
 
@@ -24,24 +25,29 @@ function swapClass(clickedTabLink, clickedTab) {
   if(clickedTabLink === story) {
 
     // change the tabs
-    $tabButtons.find("li a.active").removeClass('active');
-    clickedTab.addClass('active')
+    swapTabs($tabButtons);
 
     // change the content
-    $longs.fadeOut('fast', function() {
+    $.when($longs.slideUp(1000, function() {
       $longs.removeClass('show').addClass('hide');
       $shorts.addClass('show').removeClass('hide');
-    }).fadeIn();
+    })).then($shorts.slideDown('slow'));
+
   } else {
 
     // change the tabs
-    $tabButtons.find("li a.active").removeClass('active');
-    clickedTab.addClass('active')
+    swapTabs($tabButtons)
 
     // change the content
-    $shorts.fadeOut('fast', function() {
+    $.when($shorts.slideUp(1000, function() {
       $shorts.addClass('hide').removeClass('show');
       $longs.removeClass('hide').addClass('show');
-    }).fadeIn();
+    })).then($longs.slideDown('slow'));
   }
+}
+
+// swap current tab class from active to inactive
+function swapTabs(tabButtons) {
+  tabButtons.find("li a.active").removeClass('active');
+  clickedTab.addClass('active');
 }
