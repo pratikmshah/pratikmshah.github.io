@@ -726,6 +726,21 @@ time {
     font-size: .75em;
     vertical-align: text-top; }
 
+/* photo slideshow */
+.slideshow {
+  position: relative; }
+  .slideshow img {
+    border: 1px solid rgba(33, 174, 236, 0.2);
+    box-shadow: 0px 0px 10px rgba(33, 174, 236, 0.2);
+    margin: 5px 0; }
+  .slideshow .show-img {
+    position: relative; }
+  .slideshow .hide-img {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px; }
+
 @media only screen and (max-width: 350px) {
   .project h1.prj-heading {
     font-size: 5em; }
