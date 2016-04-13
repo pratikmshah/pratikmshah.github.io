@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,400italic,700,700italic,300);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
 /**
  * Reset some basic elements
  */
@@ -163,7 +164,7 @@ pre {
   /*border-top: 5px solid $twt-clr;*/
   /*border-bottom: 1px solid $grey-color-light;*/
   min-height: 56px;
-  background-color: #55acee;
+  background-color: #00AEEF;
   position: relative; }
 
 .site-title {
@@ -218,7 +219,7 @@ pre {
         display: block;
         padding-bottom: 5px; }
         .site-nav:hover .trigger span {
-          color: #55acee; }
+          color: #00AEEF; }
       .site-nav .page-link {
         display: block;
         padding: 5px 10px;
@@ -238,7 +239,7 @@ pre {
 .footer-copyw {
   font-size: 15px;
   margin-bottom: 0;
-  color: #55acee; }
+  color: #00AEEF; }
 
 .contact-list,
 .social-media-list {
@@ -528,18 +529,18 @@ pre {
   border-radius: 0 5px 5px 5px; }
   .prj-content a {
     text-decoration: none;
-    color: #55acee;
+    color: #00AEEF;
     font-family: "Oswald", "Helvetica Neue", sans-serif;
     padding-left: 15px;
     display: block; }
   .prj-content a:hover {
-    background-color: #55acee;
+    background-color: #00AEEF;
     color: #fff; }
 
 #prj-nav:hover .prj-link {
   background-color: #fff; }
   #prj-nav:hover .prj-link span {
-    color: #55acee; }
+    color: #00AEEF; }
 #prj-nav:hover .prj-content {
   display: block; }
 
@@ -579,11 +580,11 @@ pre {
     .nav-link:hover {
       background: #fff; }
       .nav-link:hover span {
-        color: #55acee; } }
+        color: #00AEEF; } }
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
   .site-nav:hover .trigger {
-    background-color: #55acee; }
+    background-color: #00AEEF; }
     .site-nav:hover .trigger a span {
       color: #fff; } }
 /* homepage body */
@@ -641,6 +642,9 @@ pre {
 .social-media-list li a {
   text-decoration: none; }
 
+code, pre {
+  font-family: "Source Code Pro", sans-serif !important; }
+
 #post {
   max-width: 702.9px;
   padding-left: 10px;
@@ -670,7 +674,7 @@ time {
   /* project header */
   /*individual project sections*/ }
   .project .prj-heading {
-    color: #55acee;
+    color: #00AEEF;
     font-family: "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 6.25em; }
@@ -708,19 +712,34 @@ time {
   transition: background 0.3s;
   margin-top: 25px;
   padding: 8px;
-  border: 1px solid #55acee;
-  background-color: #55acee;
+  border: 1px solid #00AEEF;
+  background-color: #00AEEF;
   text-decoration: none;
   font-size: 1em;
   color: #fff !important; }
   .box-lnk:hover {
     text-decoration: none;
-    border: 1px solid #55acee;
+    border: 1px solid #00AEEF;
     background-color: black;
-    color: #55acee !important; }
+    color: #00AEEF !important; }
   .box-lnk .caret {
     font-size: .75em;
     vertical-align: text-top; }
+
+/* photo slideshow */
+.slideshow {
+  position: relative; }
+  .slideshow img {
+    border: 1px solid rgba(33, 174, 236, 0.2);
+    box-shadow: 0px 0px 10px #21aeec;
+    margin: 5px 0; }
+  .slideshow .show-img {
+    position: relative; }
+  .slideshow .hide-img {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px; }
 
 @media only screen and (max-width: 350px) {
   .project h1.prj-heading {
@@ -733,11 +752,16 @@ time {
   width: 250px;
   height: 250px;
   margin-bottom: 50px; }
+  #headshot img {
+    width: 250px;
+    height: 250px; }
 
 /* About me description */
 #aboutme {
   width: 75%;
   margin: 0 auto 30px auto; }
+  #aboutme ul.prj-lst {
+    margin-left: 25px; }
   #aboutme ul.tab-btns {
     list-style-type: none;
     margin: 0;
@@ -746,27 +770,29 @@ time {
       display: inline-block; }
       #aboutme ul.tab-btns li a {
         padding: 5px 5px 7px 5px;
-        border-top: 2px solid #55acee;
-        border-left: 2px solid #55acee;
-        border-right: 2px solid #55acee; }
+        border-top: 2px solid #00AEEF;
+        border-left: 2px solid #00AEEF;
+        border-right: 2px solid #00AEEF; }
       #aboutme ul.tab-btns li a:hover {
         text-decoration: none; }
       #aboutme ul.tab-btns li a.active {
-        background-color: #55acee;
+        background-color: #00AEEF;
         color: #fff; }
 
 .show {
   display: block;
   padding: 10px;
-  border: 2px solid #55acee;
+  border: 2px solid #00AEEF;
   border-radius: 0 10px 10px 10px;
-  background-color: #55acee;
+  background-color: #00AEEF;
   color: white; }
+  .show a {
+    color: #22FF01; }
 
 .hide {
   display: none !important;
   padding: 10px;
-  border: 2px solid #55acee;
+  border: 2px solid #00AEEF;
   border-radius: 0 10px 10px 10px; }
 
 /* Skills section*/
@@ -781,16 +807,38 @@ time {
     text-decoration: underline;
     margin-top: 1em; }
   #skills i {
+    -webkit-transition: font 1s ease;
+    -moz-transition: font 1s ease;
+    -o-transition: font 1s ease;
+    -ms-transition: font 1s ease;
+    transition: font 1s ease;
     font-size: 4em;
     margin-left: .75em; }
+    #skills i:hover {
+      font-size: 4.5em; }
   #skills img {
+    -webkit-transition: width 1s ease;
+    -moz-transition: width 1s ease;
+    -o-transition: width 1s ease;
+    -ms-transition: width 1s ease;
+    transition: width 1s ease;
     height: 64px;
     width: 64px;
     padding-bottom: 16px; }
+    #skills img:hover {
+      width: 75px;
+      height: auto; }
   #skills #resume h3 {
     display: inline-block; }
   #skills #resume span {
     font-size: 1.5em; }
+  #skills .download {
+    width: 45px;
+    height: auto;
+    margin-left: 15px; }
+    #skills .download:hover {
+      width: 49px;
+      height: auto; }
 
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {

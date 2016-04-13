@@ -20,6 +20,7 @@
   <script type="text/javascript" src="/js/masonry.pkgd.js"></script>
   <script type="text/javascript" src="/js/homepage.js"></script>
   <script type="text/javascript" src="/js/about.js"></script>
+  <script type="text/javascript" src="/js/project.js"></script>
 </head>
 
 
@@ -50,8 +51,6 @@
                 <a class="page-link nav-link" href="/about/"><span class="font-title">About</span></a>
               </div>
             
-          
-        
           
         
           
@@ -97,7 +96,12 @@
   <!-- individual projects section -->
   <section id="prism" class="project">
     <h1 class="prj-title">Prism</h1>
-    <img src="/img/projects/prism.png" alt="prim image" class="prj-img">
+    <div id="prism-slide" class="slideshow center">
+      <img src="/img/projects/prism/prism-home.jpg" alt="prim home" class="prj-img">
+      <img src="/img/projects/prism/prism-nav.jpg"  alt="prim nav" class="hide-img">
+      <img src="/img/projects/prism/prism-index.jpg" alt="prim index" class="hide-img">
+      <img src="/img/projects/prism/prism-show.jpg" alt="prim show" class="hide-img">
+    </div>
     <p class="prj-desc">Prism is a web app that refactors color into sound. It takes a png image and analyzes the colors, luminence, and contrast of the image. It then generates a custom sound set consisting of a melody, pad, and percussion. This was a team project that was created in 7 days at Dev Bootcamp</p>
     <span>
       <a href="https://github.com/pratikmshah/prism" target="_blank" class="box-lnk">View source<span class="caret"> ></span></a>
@@ -108,7 +112,11 @@
 
   <section id="idunno" class="project">
     <h1 class="prj-title">iDunno</h1>
-    <img src="/img/projects/idunno.png">
+    <div id="idunno-slide" class="slideshow center">
+      <img src="/img/projects/idunno/idunno-home.jpg"  alt="idunno homepage" class="prj-img">
+      <img src="/img/projects/idunno/idunno-index.jpg" alt="idunno index" class="hide-img">
+      <img src="/img/projects/idunno/idunno-cheat.jpg" alt="idunno cheat" class="hide-img">
+    </div>
     <p class="prj-desc">iDunno is a single page cheatsheet resource application that is a collection of links and snippets. The interface and design is similar to Goolge with just plain search and topic selector. The problem to solve is to have a one stop shop to look up resource instead of having multiple widows open. This app is still a work in progress depending on actual usability and may change. It uses AngularJS(1.5) as the framework and is desktop first app</p>
     <span>
       <a href="https://github.com/pratikmshah/iDunno" target="_blank" class="box-lnk">View source<span class="caret"> ></span></a>
@@ -139,7 +147,7 @@
         <ul class="social-media-list center">
           
           <li>
-            <a href="https://github.com/pratikmshah" class="icon-social">
+            <a href="https://github.com/pratikmshah" class="icon-social" title="GitHub">
   <img src="/img/icons/github-blk.png">
   <img src="/img/icons/github-clr.png">
 </a>
@@ -149,7 +157,7 @@
 
           
           <li>
-            <a href="https://twitter.com/pratikshah" class="icon-social">
+            <a href="https://twitter.com/pratikshah" class="icon-social" title="Twitter">
   <img src="/img/icons/twt-blk.png">
   <img src="/img/icons/twt-clr.png">
 </a>
@@ -160,7 +168,7 @@
 
           
           <li>
-            <a href="https://linkedin.com/in/pratikmshah" class="icon-social">
+            <a href="https://linkedin.com/in/pratikmshah" class="icon-social" title="LinkedIn">
   <img src="/img/icons/lnkdn-blk.png">
   <img src="/img/icons/lnkdn-clr.png">
 </a>
@@ -170,7 +178,7 @@
 
           
           <li>
-            <a href="https://instagram.com/pratikshah_" class="icon-social">
+            <a href="https://instagram.com/pratikshah_" class="icon-social" title="Instagram">
   <img src="/img/icons/insta-blk.png">
   <img src="/img/icons/insta-clr.png">
 </a>
@@ -180,7 +188,7 @@
 
           
           <li>
-            <a href="mailto:pratik.t.shah@gmail.com" class="icon-social">
+            <a href="mailto:pratik.t.shah@gmail.com" class="icon-social" title="E-Mail">
   <img src="/img/icons/email-blk.png">
   <img src="/img/icons/email-clr.png">
 </a>
