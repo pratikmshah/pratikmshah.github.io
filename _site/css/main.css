@@ -737,6 +737,9 @@ time {
   width: 250px;
   height: 250px;
   margin-bottom: 50px; }
+  #headshot img {
+    width: 250px;
+    height: 250px; }
 
 /* About me description */
 #aboutme {
