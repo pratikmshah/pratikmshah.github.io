@@ -20,12 +20,11 @@ function swapClass(clickedTabLink, clickedTab) {
   var $tabButtons = $(".tab-btns");
 
   // if short story was clicked add class show to short and add hide to long
-  // else reverse the above
-  // also add an show tab
+  // else reverse the above and also add an show tab
   if(clickedTabLink === story) {
 
     // change the tabs
-    swapTabs($tabButtons);
+    swapTabs($tabButtons, clickedTab);
 
     // change the content
     $.when($longs.slideUp(1000, function() {
@@ -36,7 +35,7 @@ function swapClass(clickedTabLink, clickedTab) {
   } else {
 
     // change the tabs
-    swapTabs($tabButtons)
+    swapTabs($tabButtons, clickedTab);
 
     // change the content
     $.when($shorts.slideUp(1000, function() {
@@ -46,8 +45,8 @@ function swapClass(clickedTabLink, clickedTab) {
   }
 }
 
-// swap current tab class from active to inactive
-function swapTabs(tabButtons) {
+// swap tab from active to inactive
+function swapTabs(tabButtons, clickedTab) {
   tabButtons.find("li a.active").removeClass('active');
   clickedTab.addClass('active');
 }
