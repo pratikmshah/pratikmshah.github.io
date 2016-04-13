@@ -742,6 +742,8 @@ time {
 #aboutme {
   width: 75%;
   margin: 0 auto 30px auto; }
+  #aboutme ul.prj-lst {
+    margin-left: 25px; }
   #aboutme ul.tab-btns {
     list-style-type: none;
     margin: 0;
@@ -766,6 +768,8 @@ time {
   border-radius: 0 10px 10px 10px;
   background-color: #55acee;
   color: white; }
+  .show a {
+    color: #22FF01; }
 
 .hide {
   display: none !important;

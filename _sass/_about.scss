@@ -10,6 +10,10 @@
   width: 75%;
   margin: 0 auto 30px auto;
 
+  ul.prj-lst {
+    margin-left: 25px;
+  }
+
   ul.tab-btns {
     list-style-type: none;
     margin: 0;
@@ -40,6 +44,10 @@
   border-radius: 0 10px 10px 10px;
   background-color: $twt-clr;
   color: white;
+
+  a {
+    color: $nke-g-clr;
+  }
 }
 
 .hide {
