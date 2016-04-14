@@ -614,6 +614,10 @@ pre {
         text-decoration: none;
         transition: color 0.3s;
         color: #7a7a7a; }
+    .block div p .btn-read {
+      padding: 3px;
+      border-radius: 16px;
+      background-color: #22FF01; }
   .block .post-meta {
     text-transform: uppercase; }
 

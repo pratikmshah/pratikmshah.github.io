@@ -29,7 +29,14 @@
         transition: color 0.3s;
         color: $post-hover-clr;
       }
+    }
 
+    p {
+      .btn-read {
+        padding: 3px;
+        border-radius: 16px;
+        background-color: $nke-g-clr;
+      }
     }
   }
 
