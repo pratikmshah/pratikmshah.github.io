@@ -614,8 +614,16 @@ pre {
         text-decoration: none;
         transition: color 0.3s;
         color: #7a7a7a; }
+    .block div p .btn-read {
+      padding: 3px;
+      border-radius: 16px;
+      background-color: #22FF01; }
   .block .post-meta {
     text-transform: uppercase; }
+
+/* temp fix footer and block overlap */
+div.spacer {
+  height: 150px; }
 
 @media only screen and (max-width: 415px) {
   .grid-container {
@@ -623,7 +631,10 @@ pre {
 
   .block {
     margin: 0;
-    width: 100%; } }
+    width: 100%; }
+
+  div.spacer {
+    height: 0; } }
 /*Footer*/
 #twitter-btn {
   margin-bottom: 15px; }
@@ -834,8 +845,7 @@ time {
     font-size: 1.5em; }
   #skills .download {
     width: 45px;
-    height: auto;
-    margin-left: 15px; }
+    height: auto; }
     #skills .download:hover {
       width: 49px;
       height: auto; }
