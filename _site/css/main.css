@@ -621,13 +621,20 @@ pre {
   .block .post-meta {
     text-transform: uppercase; }
 
+/* temp fix footer and block overlap */
+div.spacer {
+  height: 150px; }
+
 @media only screen and (max-width: 415px) {
   .grid-container {
     margin: 0; }
 
   .block {
     margin: 0;
-    width: 100%; } }
+    width: 100%; }
+
+  div.spacer {
+    height: 0; } }
 /*Footer*/
 #twitter-btn {
   margin-bottom: 15px; }

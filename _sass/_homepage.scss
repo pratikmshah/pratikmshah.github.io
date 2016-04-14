@@ -43,6 +43,10 @@
   .post-meta { text-transform: $upcase; }
 }
 
+
+/* temp fix footer and block overlap */
+div.spacer { height: 150px; }
+
 @media only screen and (max-width: 415px) {
   .grid-container {
     margin: 0;
@@ -52,4 +56,6 @@
     margin: 0;
     width: 100%;
   }
+
+  div.spacer { height: 0; }
 }
