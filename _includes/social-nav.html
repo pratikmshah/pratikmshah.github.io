@@ -1,34 +1,33 @@
-<div class="home">
-  <div id="social-nav">
-    <ul>
-      {% if site.github_username %}
-      <li>
-        {% include icon-github.html username=site.github_username %}
-      </li>
-      {% endif %}
+<div id="social-nav">
+  <ul>
+    {% if site.github_username %}
+    <li>
+      {% include nav-github.html username=site.github_username %}
+    </li>
+    {% endif %}
 
-      {% if site.twitter_username %}
-      <li>
-        {% include icon-twitter.html username=site.twitter_username %}
-      </li>
-      {% endif %}
+    {% if site.twitter_username %}
+    <li>
+      {% include nav-twitter.html username=site.twitter_username %}
+    </li>
+    {% endif %}
 
-      {% if site.linkedin_username %}
-      <li>
-        {% include icon-linkedin.html username=site.linkedin_username %}
-      </li>
-      {% endif %}
+    {% if site.linkedin_username %}
+    <li>
+      {% include nav-linkedin.html username=site.linkedin_username %}
+    </li>
+    {% endif %}
 
-      {% if site.instagram_username %}
-      <li>
-        {% include icon-instagram.html username=site.instagram_username %}
-      </li>
-      {% endif %}
+    {% if site.instagram_username %}
+    <li>
+      {% include nav-instagram.html username=site.instagram_username %}
+    </li>
+    {% endif %}
 
-      {% if site.email %}
-      <li>
-        {% include icon-email.html username=site.email %}
-      </li>
-      {% endif %}
-    </ul>
-  </div>
+    {% if site.email %}
+    <li>
+      {% include nav-email.html username=site.email %}
+    </li>
+    {% endif %}
+  </ul>
+</div>

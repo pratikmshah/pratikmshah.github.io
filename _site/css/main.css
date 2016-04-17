@@ -504,8 +504,8 @@ pre {
     list-style-type: none;
     margin: 0px; }
     #social-nav ul li a img {
-      min-width: 40px;
-      height: auto; }
+      height: 40px;
+      width: 40px; }
 
 /* Navigation editing */
 .site-nav {
