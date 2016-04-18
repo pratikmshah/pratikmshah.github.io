@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>The Sass Way!</title>
-  <meta name="description" content="If you get frustrated with how messy and unmanageable your CSS gets, wish you didn’t have to specify properties over and over, or wished you could computemat...">
+  <meta name="description" content="If you get frustrated with how messy and unmanageable your CSS gets, wish you didn’t have to specify properties over and over, or wished you could compute ma...">
 
   <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
   <link rel="stylesheet" href="/css/devicon.min.css">
@@ -28,6 +28,53 @@
     <header class="site-header">
 
   <div class="wrapper">
+    <div id="social-nav">
+  <ul>
+    
+    <li>
+      <a href="https://github.com/pratikmshah"  title="GitHub">
+  <img src="/img/icons/github-nav.png">
+</a>
+
+    </li>
+    
+
+    
+    <li>
+      <a href="https://twitter.com/pratikshah" title="Twitter">
+  <img src="/img/icons/twitter-nav.png">
+</a>
+    </li>
+    
+
+    
+    <li>
+      <a href="https://linkedin.com/in/pratikmshah" title="LinkedIn">
+  <img src="/img/icons/linkedin-nav.png">
+</a>
+
+    </li>
+    
+
+    
+    <li>
+      <a href="https://instagram.com/pratikshah_" title="Instagram">
+  <img src="/img/icons/instagram-nav.png">
+</a>
+
+    </li>
+    
+
+    
+    <li>
+      <a href="mailto:pratik.t.shah@gmail.com" title="E-Mail">
+  <img src="/img/icons/email-nav.png">
+</a>
+
+    </li>
+    
+  </ul>
+</div>
 
     <a class="site-title" href="/">
       <span id="title" class="font-title">PRATIK SHAH</span>
@@ -91,16 +138,17 @@
   
 
   <div class="post-content" itemprop="articleBody">
-    <p>If you get frustrated with how messy and unmanageable your CSS gets, wish you didn’t have to specify properties over and over, or wished you could compute
-mathematical operations then you need SASS an extention of CSS that does all of this and more. I wished I had known about SASS sooner as I would have saved countless hours of time writting CSS. Lucky for you today I am going to give you the full crash coure of how to write in the SASS scripting language. Don’t worry its as easy as learning Texas Holdem and you will thank yourself for learning it. <code class="highlighter-rouge">Note: This version is unedited version</code></p>
+    <p>If you get frustrated with how messy and unmanageable your CSS gets, wish you didn’t have to specify properties over and over, or wished you could compute mathematical operations then you need Sass an extention of CSS that does all of this and more. I wished I had known about Sass sooner as I would have saved countless hours of time writting CSS. Lucky for you today I am going to give you the full crash coure of how to write in the Sass scripting language. Don’t worry its as easy as learning Texas Holdem and you will thank yourself for learning it.</p>
 
 <p><br /></p>
 
-<h3 id="what-is-sass">What is SASS?</h3>
+<h3 id="what-is-sass">What is Sass?</h3>
 
-<p>Well according to the <a href="http://sass-lang.com/">official SASS</a> site SASS is:</p>
+<p>Well according to the <a href="http://sass-lang.com/">official Sass</a> site Sass is:</p>
 <blockquote>CSS with superpowers</blockquote>
-<p>SASS is a preprocessed language written in Ruby that extends the functionality of css; preprocessed meaning compiler must compile the code from sass to css.</p>
+<p>Sass is a preprocessed language written in Ruby that extends the functionality of css; preprocessed meaning compiler must compile the code from sass to css.</p>
+
+<p><br /></p>
 
 <h4 id="below-is-a-list-of-powers-you-get">Below is a list of powers you get:</h4>
 <ul class="blg-lists">
@@ -112,13 +160,17 @@ mathematical operations then you need SASS an extention of CSS that does all of 
 	<li>Mixins - aka functions/methods</li>
 </ul>
 
-<p>There are two different versions of SASS the old format ends in extentions <code class="highlighter-rouge">.sass</code> and the new format ends in <code class="highlighter-rouge">.scss</code> I will be teaching you the <code class="highlighter-rouge">.scss</code> way.</p>
+<p><br /></p>
+
+<p>There are two different versions of Sass the old format ends in extentions <code class="highlighter-rouge">.sass</code> and the new format ends in <code class="highlighter-rouge">.scss</code> I will be teaching you the <code class="highlighter-rouge">.scss</code> way.</p>
 
 <p><br /></p>
 
 <h3 id="variables">Variables</h3>
 
-<p>Variables are great to store property values so that you don’t have to keep referencing them over and over again; colors are a great use for this. To create a variable begin the variable name with a <code class="highlighter-rouge">$</code> sign and then the variable name followed by a colon and the value <code class="highlighter-rouge">$varname: value</code>. To use the the variable simply reference the variable name when after the css property. Another great use is to store font list to a variable. See below for examples</p>
+<p>Variables are great to store property values so you don’t have to keep referencing them over again; colors are a great use for this. To create a variable begin the variable name with a <code class="highlighter-rouge">$</code> sign and then the variable name followed by a colon and the value <code class="highlighter-rouge">$varname: value</code>. To use the the variable simply reference the variable name after the css property. Another great use is to store font list to a variable. See below for examples</p>
+
+<p><br /></p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// variables in sass start off with at $variableName: value
 </span><span class="nv">$offwhite</span><span class="p">:</span> <span class="mh">#EEE86D</span><span class="err">;</span>
@@ -138,7 +190,10 @@ mathematical operations then you need SASS an extention of CSS that does all of 
 <p><br /></p>
 
 <h3 id="nesting">Nesting</h3>
-<p>One of the best features of <code class="highlighter-rouge">SASS</code> is the ability to nest slectors. This helps writting less code and makes it more readable and organized. Think about if you had a <code class="highlighter-rouge">div</code> and inside was an <code class="highlighter-rouge">ul</code>, <code class="highlighter-rouge">li</code> and inside the list was an anchor ‘a’. Instead of having to traverse each selector individually I can nest inside the div and change each selector’s property; basically creating sub rules. Nest only 3-4 levels deep otherwise it may be hard to manage. See below.</p>
+
+<p>One of the best features of Sass is the ability to nest slectors. This helps writting less code and makes it more readable and organized. Think about if you had a <code class="highlighter-rouge">div</code> and inside was an <code class="highlighter-rouge">ul</code>, <code class="highlighter-rouge">li</code> and inside the list was an anchor ‘a’. Instead of having to traverse each selector individually I can nest inside the div and edit each selector’s properties; basically creating sub rules. Nest only a few levels deep otherwise it may be hard to manage. See below.</p>
+
+<p><br /></p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// putting rules inside other rules creates nested sub rules
 </span><span class="nc">.div</span> <span class="err">{</span>
@@ -163,6 +218,8 @@ mathematical operations then you need SASS an extention of CSS that does all of 
 
 <p>Just like you do when you develop, creating partials is a great way to split up sections of your css and making it easier to pinpoint parts of your css. When creating a a partial you begin the file name with an underscore; for example, <code class="highlighter-rouge">_variables</code> will house all your variables. You can seperate more than your variables such as mixins, your entire footer or header css into partials. To import a partial into another file use the <code class="highlighter-rouge">@import</code> keyword followed by the filename; `@import ‘header;’.</p>
 
+<p><br /></p>
+
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// to import files partial files use @import
 // you could have all of these imported in style.scss file
 // partial file begin with _ ex: _variables
@@ -176,7 +233,9 @@ mathematical operations then you need SASS an extention of CSS that does all of 
 
 <h3 id="mixins">Mixins</h3>
 
-<p>Mixins are just like functions that you see in javascript. It helps keep your code DRY (don’t repeat yourself) and becomes very useful when you have to keep repeating properties with differnt values. I can create a simple mixin using the format: <code class="highlighter-rouge">@mixin mixinName($args) { code }</code>. To use the mixin you simple use the <code class="highlighter-rouge">@import</code> keyword so <code class="highlighter-rouge">@import mixinName($args)</code>. One more thing to specify a default value of an argument use the <code class="highlighter-rouge">: value</code> symbol. See below for detailed example.</p>
+<p>Mixins are just like functions that you see in javascript. It helps keep your code DRY (don’t repeat yourself) and becomes very useful when you have to keep repeating properties with differnt values or calculations. I can create a simple mixin using the format: <code class="highlighter-rouge">@mixin mixinName($args) { code }</code>. To use the mixin you simple use the <code class="highlighter-rouge">@import</code> keyword so <code class="highlighter-rouge">@import mixinName($args)</code>. One more thing to specify a default value of an argument use the <code class="highlighter-rouge">: value</code> symbol. See below for detailed example.</p>
+
+<p><br /></p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// to create a mixin use @mixin mixinName($varName) { code }
 </span><span class="k">@mixin</span> <span class="nf">setSize</span><span class="p">(</span><span class="nv">$height</span><span class="o">,</span> <span class="nv">$width</span><span class="p">)</span> <span class="err">{</span>
@@ -201,6 +260,8 @@ mathematical operations then you need SASS an extention of CSS that does all of 
 
 <p>The <code class="highlighter-rouge">@extend</code> keyword allows you to import another selector’s properties and values into another; its basically inhertiance the second selector inherits all the properties. To use simply write <code class="highlighter-rouge">@inherit selector</code>.</p>
 
+<p><br /></p>
+
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nc">.button</span> <span class="err">{</span>
     <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="err">;</span>
     <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">blue</span><span class="err">;</span>
@@ -224,7 +285,9 @@ mathematical operations then you need SASS an extention of CSS that does all of 
 
 <h3 id="using-parent-elements-with--symbol">Using Parent Elements With &amp; Symbol</h3>
 
-<p>The <code class="highlighter-rouge">&amp;</code> symbol allows you to select the parent element which is really usefule when applying pseudo class such as :hover :active etc…</p>
+<p>The <code class="highlighter-rouge">&amp;</code> symbol allows you to select the parent element which is really useful when applying pseudo class such as :hover :active etc…</p>
+
+<p><br /></p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">a</span> <span class="err">{</span>
     <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span> <span class="m">5px</span><span class="err">;</span>
@@ -235,13 +298,16 @@ mathematical operations then you need SASS an extention of CSS that does all of 
 <span class="err">}</span>
 </code></pre>
 </div>
+<p><br /></p>
 
 <p>The <code class="highlighter-rouge">&amp;</code> symbol is also used as a conditional if that you can apply styling to if the html doc contains the selector. See below</p>
 
-<p>// you can use &amp; for a conditional and
-// below says if inside html there is a head class and typography id then apply a color of twitter blue</p>
+<p><br /></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="nc">.title</span> <span class="err">{</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// you can use &amp; for a conditional and
+// below says if inside html there is a head class and typography id then apply a color of twitter blue
+</span>
+<span class="nc">.title</span> <span class="err">{</span>
     <span class="nl">margin</span><span class="err">, </span><span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="err">;</span>
     <span class="nl">color</span><span class="p">:</span> <span class="nv">$color-media-head</span><span class="err">;</span>
     <span class="nl">font-size</span><span class="p">:</span> <span class="m">2em</span><span class="err">;</span>
@@ -259,6 +325,8 @@ mathematical operations then you need SASS an extention of CSS that does all of 
 
 <p>SASS allows you the ability to create simple mathematical calculations using operators for addition <code class="highlighter-rouge">+</code>, subtraction <code class="highlighter-rouge">-</code>, multiplication <code class="highlighter-rouge">*</code>, division <code class="highlighter-rouge">\</code> and modulus <code class="highlighter-rouge">%</code>.</p>
 
+<p><br /></p>
+
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">setWidth</span><span class="p">(</span><span class="nv">$qty</span><span class="p">)</span> <span class="err">{</span>
     <span class="nl">width</span><span class="p">:</span> <span class="m">960px</span> <span class="o">/</span> <span class="nv">$qty</span> <span class="o">*</span> <span class="m">100%</span><span class="err">;</span>
 <span class="err">}</span>
@@ -270,6 +338,8 @@ mathematical operations then you need SASS an extention of CSS that does all of 
 <h3 id="creating-arrays">Creating Arrays</h3>
 
 <p>To create a list/array of values with a property simply add a comma and then the value. The arrays are not 0 index so the first element is index number 1. To access a specific value use the <code class="highlighter-rouge">$</code> parenthesis <code class="highlighter-rouge">()</code> and inside parenthesis put the variable name and index number: <code class="highlighter-rouge">$(color 2)</code>.</p>
+
+<p><br /></p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// you can create lists using commas or spaces
 </span><span class="nv">$font-body</span><span class="p">:</span> <span class="n">Industry</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Serif</span><span class="err">;</span>
@@ -285,6 +355,8 @@ mathematical operations then you need SASS an extention of CSS that does all of 
 <h3 id="if-else-conditionals">If Else Conditionals</h3>
 
 <p>Using the <code class="highlighter-rouge">@if condiiton</code> and <code class="highlighter-rouge">@else</code> you can assign differnt properties and values depending on the truthiness of the condition.</p>
+
+<p><br /></p>
 
 <pre><code class="language-sass}">// you can create lists using commas or spaces
 $btn-clr: blue;
@@ -304,6 +376,8 @@ $btn-clr: blue;
 
 <p>Yes, you can even loop through your variables and assign different properties for each iteration. Since there are many types of loops take a look at this <a href="http://thesassway.com/intermediate/if-for-each-while">great article on loops</a>. Below is an example of a using a for loop to change the color of each heading tag.</p>
 
+<p><br /></p>
+
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="c1">// you can use for loop by @for counterName from start# through end# { code }
 </span><span class="nv">$colors</span><span class="p">:</span> <span class="nv">$red</span><span class="o">,</span> <span class="nv">$blue</span><span class="o">,</span> <span class="nv">$green</span><span class="o">,</span> <span class="nv">$orange</span><span class="o">,</span> <span class="nv">$yellow</span><span class="o">,</span> <span class="nv">$purple</span><span class="err">;</span>
 
@@ -321,6 +395,8 @@ $btn-clr: blue;
 
 <p>Last, I want to show you how to create a hash and access a key and its value. To create a hash you use the format <code class="highlighter-rouge">$variable: ( key: value, key: value)</code> and to access one of the values of the key you use map-get function: <code class="highlighter-rouge">map-get($map, $key)</code>. Here is a nice detailed <a href="http://www.sitepoint.com/using-sass-maps/">article on hashes</a>.</p>
 
+<p><br /></p>
+
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nv">$button-color</span><span class="p">:</span> <span class="p">(</span>
     <span class="na">default</span><span class="p">:</span> <span class="nv">$white</span><span class="o">,</span>
     <span class="na">danger</span><span class="p">:</span> <span class="nv">$red</span><span class="o">,</span>
@@ -336,8 +412,7 @@ $btn-clr: blue;
 
 <h3 id="commenting">Commenting</h3>
 
-<p>One final thing. Comments are really useful when documenting your code to understand what is executing in the below statements.
-Create a comment b <code class="highlighter-rouge">/* comment */</code>. You can force a comment to show up even in minified versions using a <code class="highlighter-rouge">!</code> after opening  <code class="highlighter-rouge">/*! comment */</code>. you can create hidden comments using <code class="highlighter-rouge">//</code> and the comments will not show up in processed version of stylesheet</p>
+<p>One final thing. Comments are really useful when documenting your code to understand what is executing in the below statements. Create a comment b <code class="highlighter-rouge">/* comment */</code>. You can force a comment to show up even in minified versions using a <code class="highlighter-rouge">!</code> after opening  <code class="highlighter-rouge">/*! comment */</code>. you can create hidden comments using <code class="highlighter-rouge">//</code> and the comments will not show up in processed version of stylesheet</p>
 
 <!-- links -->
 

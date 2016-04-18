@@ -4,16 +4,17 @@ date:   2016-04-15
 image: "/sass-blog/sass-logo.png"
 ---
 
-If you get frustrated with how messy and unmanageable your CSS gets, wish you didn't have to specify properties over and over, or wished you could compute
-mathematical operations then you need SASS an extention of CSS that does all of this and more. I wished I had known about SASS sooner as I would have saved countless hours of time writting CSS. Lucky for you today I am going to give you the full crash coure of how to write in the SASS scripting language. Don't worry its as easy as learning Texas Holdem and you will thank yourself for learning it. `Note: This version is unedited version`
+If you get frustrated with how messy and unmanageable your CSS gets, wish you didn't have to specify properties over and over, or wished you could compute mathematical operations then you need Sass an extention of CSS that does all of this and more. I wished I had known about Sass sooner as I would have saved countless hours of time writting CSS. Lucky for you today I am going to give you the full crash coure of how to write in the Sass scripting language. Don't worry its as easy as learning Texas Holdem and you will thank yourself for learning it.
 
 <br>
 
-### What is SASS?
+### What is Sass?
 
-Well according to the [official SASS][SASS] site SASS is:
+Well according to the [official Sass][SASS] site Sass is:
 <blockquote>CSS with superpowers</blockquote>
-SASS is a preprocessed language written in Ruby that extends the functionality of css; preprocessed meaning compiler must compile the code from sass to css.
+Sass is a preprocessed language written in Ruby that extends the functionality of css; preprocessed meaning compiler must compile the code from sass to css.
+
+<br>
 
 #### Below is a list of powers you get:
 <ul class="blg-lists">
@@ -25,14 +26,17 @@ SASS is a preprocessed language written in Ruby that extends the functionality o
 	<li>Mixins - aka functions/methods</li>
 </ul>
 
-There are two different versions of SASS the old format ends in extentions `.sass` and the new format ends in `.scss` I will be teaching you the `.scss` way.
+<br>
+
+There are two different versions of Sass the old format ends in extentions `.sass` and the new format ends in `.scss` I will be teaching you the `.scss` way.
 
 <br>
 
 ### Variables
 
-Variables are great to store property values so that you don't have to keep referencing them over and over again; colors are a great use for this. To create a variable begin the variable name with a `$` sign and then the variable name followed by a colon and the value `$varname: value`. To use the the variable simply reference the variable name when after the css property. Another great use is to store font list to a variable. See below for examples
+Variables are great to store property values so you don't have to keep referencing them over again; colors are a great use for this. To create a variable begin the variable name with a `$` sign and then the variable name followed by a colon and the value `$varname: value`. To use the the variable simply reference the variable name after the css property. Another great use is to store font list to a variable. See below for examples
 
+<br>
 
 ``` sass
 // variables in sass start off with at $variableName: value
@@ -52,7 +56,10 @@ $font-main: 'Oswald', 'Helvetica', 'serif';
 <br>
 
 ### Nesting
-One of the best features of `SASS` is the ability to nest slectors. This helps writting less code and makes it more readable and organized. Think about if you had a `div` and inside was an `ul`, `li` and inside the list was an anchor 'a'. Instead of having to traverse each selector individually I can nest inside the div and change each selector's property; basically creating sub rules. Nest only 3-4 levels deep otherwise it may be hard to manage. See below.
+
+One of the best features of Sass is the ability to nest slectors. This helps writting less code and makes it more readable and organized. Think about if you had a `div` and inside was an `ul`, `li` and inside the list was an anchor 'a'. Instead of having to traverse each selector individually I can nest inside the div and edit each selector's properties; basically creating sub rules. Nest only a few levels deep otherwise it may be hard to manage. See below.
+
+<br>
 
 ``` sass
 // putting rules inside other rules creates nested sub rules
@@ -77,6 +84,8 @@ One of the best features of `SASS` is the ability to nest slectors. This helps w
 
 Just like you do when you develop, creating partials is a great way to split up sections of your css and making it easier to pinpoint parts of your css. When creating a a partial you begin the file name with an underscore; for example, `_variables` will house all your variables. You can seperate more than your variables such as mixins, your entire footer or header css into partials. To import a partial into another file use the `@import` keyword followed by the filename; `@import 'header;'.
 
+<br>
+
 ``` sass
 // to import files partial files use @import
 // you could have all of these imported in style.scss file
@@ -90,7 +99,9 @@ Just like you do when you develop, creating partials is a great way to split up 
 
 ### Mixins
 
-Mixins are just like functions that you see in javascript. It helps keep your code DRY (don't repeat yourself) and becomes very useful when you have to keep repeating properties with differnt values. I can create a simple mixin using the format: `@mixin mixinName($args) { code }`. To use the mixin you simple use the `@import` keyword so `@import mixinName($args)`. One more thing to specify a default value of an argument use the `: value` symbol. See below for detailed example.
+Mixins are just like functions that you see in javascript. It helps keep your code DRY (don't repeat yourself) and becomes very useful when you have to keep repeating properties with differnt values or calculations. I can create a simple mixin using the format: `@mixin mixinName($args) { code }`. To use the mixin you simple use the `@import` keyword so `@import mixinName($args)`. One more thing to specify a default value of an argument use the `: value` symbol. See below for detailed example.
+
+<br>
 
 ``` sass
 // to create a mixin use @mixin mixinName($varName) { code }
@@ -115,6 +126,8 @@ img {
 
 The `@extend` keyword allows you to import another selector's properties and values into another; its basically inhertiance the second selector inherits all the properties. To use simply write `@inherit selector`.
 
+<br>
+
 ``` sass
 .button {
     background-color: red;
@@ -138,7 +151,9 @@ The `@extend` keyword allows you to import another selector's properties and val
 
 ### Using Parent Elements With & Symbol
 
-The `&` symbol allows you to select the parent element which is really usefule when applying pseudo class such as :hover :active etc...
+The `&` symbol allows you to select the parent element which is really useful when applying pseudo class such as :hover :active etc...
+
+<br>
 
 ``` sass
 a {
@@ -149,13 +164,16 @@ a {
     }
 }
 ```
+<br>
 
 The `&` symbol is also used as a conditional if that you can apply styling to if the html doc contains the selector. See below
 
+<br>
+
+``` sass
 // you can use & for a conditional and
 // below says if inside html there is a head class and typography id then apply a color of twitter blue
 
-``` sass
 .title {
     margin, padding: 0;
     color: $color-media-head;
@@ -173,6 +191,8 @@ The `&` symbol is also used as a conditional if that you can apply styling to if
 
 SASS allows you the ability to create simple mathematical calculations using operators for addition `+`, subtraction `-`, multiplication `*`, division `\` and modulus `%`.
 
+<br>
+
 ``` sass
 @mixin setWidth($qty) {
     width: 960px / $qty * 100%;
@@ -184,6 +204,8 @@ SASS allows you the ability to create simple mathematical calculations using ope
 ### Creating Arrays
 
 To create a list/array of values with a property simply add a comma and then the value. The arrays are not 0 index so the first element is index number 1. To access a specific value use the `$` parenthesis `()` and inside parenthesis put the variable name and index number: `$(color 2)`.
+
+<br>
 
 ``` sass
 // you can create lists using commas or spaces
@@ -199,6 +221,8 @@ $(font-body 1);
 ### If Else Conditionals
 
 Using the `@if condiiton` and `@else` you can assign differnt properties and values depending on the truthiness of the condition.
+
+<br>
 
 ``` sass}
 // you can create lists using commas or spaces
@@ -219,6 +243,8 @@ $btn-clr: blue;
 
 Yes, you can even loop through your variables and assign different properties for each iteration. Since there are many types of loops take a look at this [great article on loops][loops]. Below is an example of a using a for loop to change the color of each heading tag.
 
+<br>
+
 ``` sass
 // you can use for loop by @for counterName from start# through end# { code }
 $colors: $red, $blue, $green, $orange, $yellow, $purple;
@@ -236,6 +262,8 @@ $colors: $red, $blue, $green, $orange, $yellow, $purple;
 
 Last, I want to show you how to create a hash and access a key and its value. To create a hash you use the format `$variable: ( key: value, key: value)` and to access one of the values of the key you use map-get function: `map-get($map, $key)`. Here is a nice detailed [article on hashes][hash].
 
+<br>
+
 ``` sass
 $button-color: (
     default: $white,
@@ -251,8 +279,7 @@ $button-color: (
 
 ### Commenting
 
-One final thing. Comments are really useful when documenting your code to understand what is executing in the below statements.
-Create a comment b `/* comment */`. You can force a comment to show up even in minified versions using a `!` after opening  `/*! comment */`. you can create hidden comments using `//` and the comments will not show up in processed version of stylesheet
+One final thing. Comments are really useful when documenting your code to understand what is executing in the below statements. Create a comment b `/* comment */`. You can force a comment to show up even in minified versions using a `!` after opening  `/*! comment */`. you can create hidden comments using `//` and the comments will not show up in processed version of stylesheet
 
 
 
