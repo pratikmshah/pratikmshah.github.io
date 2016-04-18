@@ -481,6 +481,9 @@ pre {
   text-align: center;
   float: none; }
 
+.read-m-clr {
+  color: #00AEEF !important; }
+
 /* icons that will interchange pictures on hover */
 .icon-social img:last-child {
   display: none; }
@@ -614,7 +617,28 @@ pre {
   margin: .4em;
   -webkit-box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.19);
   -moz-box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.19);
-  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.19); }
+  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0px rgba(0, 0, 0, 0.19);
+  /* scale effect for images */ }
+  .block a.img-link {
+    overflow: hidden;
+    display: inline-block; }
+    .block a.img-link img {
+      -webkit-transition: all .2s ease;
+      -moz-transition: all .2s ease;
+      -ms-transition: all .2s ease;
+      -o-transition: all .2s ease;
+      transition: all .2s ease;
+      vertical-align: middle; }
+      .block a.img-link img:hover {
+        -webkit-transform: scale(1.5);
+        /* Safari and Chrome */
+        -moz-transform: scale(1.5);
+        /* Firefox */
+        -ms-transform: scale(1.5);
+        /* IE 9 */
+        -o-transform: scale(1.5);
+        /* Opera */
+        transform: scale(1.5); }
   .block div {
     padding: 1em; }
     .block div h2 {
@@ -642,7 +666,7 @@ div.spacer {
     margin: 0; }
 
   .block {
-    margin: 0;
+    margin: 0 0 5px 0;
     width: 100%; }
 
   div.spacer {
