@@ -506,9 +506,11 @@ pre {
   #social-nav ul {
     list-style-type: none;
     margin: 0px; }
-    #social-nav ul li a img {
-      height: 40px;
-      width: 40px; }
+    #social-nav ul li {
+      margin-bottom: 2px; }
+      #social-nav ul li a img {
+        height: 40px;
+        width: 40px; }
 
 @media only screen and (max-width: 415px) {
   #social-nav {
