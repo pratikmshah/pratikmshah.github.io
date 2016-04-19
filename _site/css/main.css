@@ -693,6 +693,10 @@ div.spacer {
 .social-media-list li a {
   text-decoration: none; }
 
+/* hire */
+#hire {
+  color: #22FF01; }
+
 code, pre {
   font-family: "Source Code Pro", sans-serif !important; }
 
