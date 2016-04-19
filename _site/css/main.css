@@ -623,6 +623,8 @@ pre {
     overflow: hidden;
     display: inline-block; }
     .block a.img-link img {
+      width: 100%;
+      /* for Firefox so images don't extend outside box*/
       -webkit-transition: all .2s ease;
       -moz-transition: all .2s ease;
       -ms-transition: all .2s ease;

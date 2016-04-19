@@ -21,6 +21,8 @@
     display: inline-block;
 
     img {
+      width: 100%;  /* for Firefox so images don't extend outside box*/
+
       -webkit-transition: all .2s ease;
       -moz-transition: all .2s ease;
       -ms-transition: all .2s ease;
