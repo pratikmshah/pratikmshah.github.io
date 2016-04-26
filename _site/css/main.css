@@ -502,7 +502,7 @@ pre {
 #social-nav {
   position: fixed;
   top: 20%;
-  left: 0; }
+  left: 2px; }
   #social-nav ul {
     list-style-type: none;
     margin: 0px; }
@@ -701,6 +701,8 @@ code, pre {
   font-family: "Source Code Pro", sans-serif !important; }
 
 #post {
+  font-size: 1.1875em;
+  font-weight: 300;
   max-width: 702.9px;
   padding-left: 10px;
   padding-right: 10px;
@@ -717,6 +719,9 @@ code, pre {
 time {
   text-transform: uppercase; }
 
+@media only screen and (max-width: 436px) {
+  #post {
+    font-size: 1em; } }
 #project {
   background-color: black; }
 
