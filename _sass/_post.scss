@@ -1,6 +1,10 @@
-code, pre { font-family: $source-code !important; }
+code, pre {
+  font-family: $source-code !important;
+}
 
 #post {
+  font-size: 1.1875em;
+  font-weight: 300;
   max-width: $content-width * .71;
   padding-left: $spacing-unit;
   padding-right: $spacing-unit;
@@ -19,4 +23,8 @@ code, pre { font-family: $source-code !important; }
 
 time {
   text-transform: $upcase;
+}
+
+@media only screen and (max-width: 436px) {
+  #post { font-size: 1em; }
 }
