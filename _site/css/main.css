@@ -523,6 +523,8 @@ pre {
       padding-left: 10px; }
     #social-nav ul li:nth-child(4) a + span img {
       padding-left: 5px; }
+    #social-nav ul li:nth-child(5) a + span img {
+      padding-left: 10px; }
 
 @media only screen and (max-width: 415px) {
   #social-nav {

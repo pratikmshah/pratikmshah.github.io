@@ -63,6 +63,7 @@
       // fix position of linked in and instagram images
       &:nth-child(3) a + span img { padding-left: 10px; }
       &:nth-child(4) a + span img { padding-left: 5px; }
+      &:nth-child(5) a + span img { padding-left: 10px; }
     }
   }
 }
