@@ -505,9 +505,15 @@ pre {
   #social-nav ul {
     list-style-type: none;
     margin: 0px; }
+    #social-nav ul li a span {
+      opacity: 0;
+      transition: 1s;
+      color: red; }
     #social-nav ul li a img {
       height: 40px;
       width: 40px; }
+    #social-nav ul li a:hover span {
+      opacity: 1; }
 
 @media only screen and (max-width: 415px) {
   #social-nav {

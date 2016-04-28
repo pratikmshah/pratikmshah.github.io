@@ -37,10 +37,13 @@
 
     li {
       a {
+        span { opacity: 0; transition: 1s; color: red; }
         img {
           height: 40px;
           width: 40px;
         }
+
+        &:hover span { opacity: 1; }
       }
     }
   }
