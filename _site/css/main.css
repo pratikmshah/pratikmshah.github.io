@@ -505,15 +505,24 @@ pre {
   #social-nav ul {
     list-style-type: none;
     margin: 0px; }
-    #social-nav ul li a span {
-      opacity: 0;
-      transition: 1s;
-      color: red; }
-    #social-nav ul li a img {
-      height: 40px;
-      width: 40px; }
-    #social-nav ul li a:hover span {
-      opacity: 1; }
+    #social-nav ul li a {
+      /* icon logo */
+      /* word logo */ }
+      #social-nav ul li a img {
+        height: 40px;
+        width: 40px; }
+      #social-nav ul li a + span {
+        opacity: 0;
+        transition: 1s; }
+        #social-nav ul li a + span img {
+          height: auto;
+          width: 100px; }
+      #social-nav ul li a:hover + span {
+        opacity: 1; }
+    #social-nav ul li:nth-child(3) a + span img {
+      padding-left: 10px; }
+    #social-nav ul li:nth-child(4) a + span img {
+      padding-left: 5px; }
 
 @media only screen and (max-width: 415px) {
   #social-nav {

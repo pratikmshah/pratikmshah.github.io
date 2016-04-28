@@ -37,14 +37,32 @@
 
     li {
       a {
-        span { opacity: 0; transition: 1s; color: red; }
+
+        /* icon logo */
         img {
           height: 40px;
           width: 40px;
         }
 
-        &:hover span { opacity: 1; }
+        /* word logo */
+       & + span {
+          opacity: 0;
+          transition: 1s;
+
+          img {
+            height: auto;
+            width: 100px;
+          }
+        }
+
+        &:hover + span {
+          opacity: 1;
+        }
       }
+
+      // fix position of linked in and instagram images
+      &:nth-child(3) a + span img { padding-left: 10px; }
+      &:nth-child(4) a + span img { padding-left: 5px; }
     }
   }
 }
