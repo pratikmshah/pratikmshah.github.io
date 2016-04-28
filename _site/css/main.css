@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,400italic,700,700italic,300);
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,800,300);
 /**
  * Reset some basic elements
  */
@@ -32,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p, blockquote, pre,
 ul, ol, dl, figure {
-  font-family: "Lato", "Helvetica Neue", sans-serif; }
+  font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif; }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -702,7 +703,6 @@ code, pre {
 
 #post {
   font-size: 1.1875em;
-  font-weight: 300;
   max-width: 702.9px;
   padding-left: 10px;
   padding-right: 10px;
@@ -735,19 +735,19 @@ time {
   /*individual project sections*/ }
   .project .prj-heading {
     color: #00AEEF;
-    font-family: "Lato", "Helvetica Neue", sans-serif;
+    font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 6.25em; }
   .project .prj-body {
     margin-bottom: 45px;
     padding: 0 5px;
     color: #fff;
-    font-family: "Lato", "Helvetica Neue", sans-serif;
+    font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 1.75em; }
   .project .prj-title {
     color: #fff;
-    font-family: "Lato", "Helvetica Neue", sans-serif;
+    font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 3.875em; }
   .project .project div.slideshow img.prj-img {
@@ -757,7 +757,7 @@ time {
     margin-bottom: 45px;
     padding: 0 5px;
     color: #A9A9A9;
-    font-family: "Lato", "Helvetica Neue", sans-serif;
+    font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 1.125em; }
 
