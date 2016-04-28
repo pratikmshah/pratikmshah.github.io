@@ -501,7 +501,7 @@ pre {
 #social-nav {
   position: fixed;
   top: 20%;
-  left: 2px; }
+  left: 0px; }
   #social-nav ul {
     list-style-type: none;
     margin: 0px; }
@@ -546,7 +546,10 @@ pre {
     color: #00AEEF;
     font-family: "Oswald", "Helvetica Neue", sans-serif;
     padding-left: 15px;
-    display: block; }
+    display: block;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease; }
   .prj-content a:hover {
     background-color: #00AEEF;
     color: #fff; }

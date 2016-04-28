@@ -38,6 +38,9 @@
     font-family: $font-title;
     padding-left: 15px;
     display: block;
+    -webkit-transition: background-color 0.5s ease;
+      -moz-transition: background-color 0.5s ease;
+        transition: background-color 0.5s ease;
   }
 
   a:hover {
