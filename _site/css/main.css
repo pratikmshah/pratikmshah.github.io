@@ -82,8 +82,6 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: #2a7ae2;
   text-decoration: none; }
-  a:visited {
-    color: #1756a9; }
   a:hover {
     color: #111;
     text-decoration: none; }
@@ -503,15 +501,30 @@ pre {
 #social-nav {
   position: fixed;
   top: 20%;
-  left: 2px; }
+  left: 0px; }
   #social-nav ul {
     list-style-type: none;
     margin: 0px; }
-    #social-nav ul li {
-      margin-bottom: 2px; }
+    #social-nav ul li a {
+      /* icon logo */
+      /* word logo */ }
       #social-nav ul li a img {
         height: 40px;
         width: 40px; }
+      #social-nav ul li a + span {
+        opacity: 0;
+        transition: 1s; }
+        #social-nav ul li a + span img {
+          height: auto;
+          width: 100px; }
+      #social-nav ul li a:hover + span {
+        opacity: 1; }
+    #social-nav ul li:nth-child(3) a + span img {
+      padding-left: 10px; }
+    #social-nav ul li:nth-child(4) a + span img {
+      padding-left: 5px; }
+    #social-nav ul li:nth-child(5) a + span img {
+      padding-left: 10px; }
 
 @media only screen and (max-width: 415px) {
   #social-nav {
@@ -550,7 +563,10 @@ pre {
     color: #00AEEF;
     font-family: "Oswald", "Helvetica Neue", sans-serif;
     padding-left: 15px;
-    display: block; }
+    display: block;
+    -webkit-transition: background-color 0.5s ease;
+    -moz-transition: background-color 0.5s ease;
+    transition: background-color 0.5s ease; }
   .prj-content a:hover {
     background-color: #00AEEF;
     color: #fff; }
@@ -754,12 +770,23 @@ time {
     max-width: 552px;
     height: auto; }
   .project .prj-desc {
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     padding: 0 5px;
     color: #A9A9A9;
     font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 1.125em; }
+  .project div.prj-tech h4 {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: underline; }
+  .project div.prj-tech ul {
+    margin: 0;
+    margin-bottom: 50px; }
+    .project div.prj-tech ul li {
+      display: inline-block; }
+      .project div.prj-tech ul li i {
+        font-size: 3em; }
 
 /* project section */
 /* line break */
