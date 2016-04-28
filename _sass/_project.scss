@@ -39,12 +39,31 @@
   }
 
   .prj-desc {
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     padding: 0 5px;
     color: $prj-desc;
     font-family: $font-body;
     font-weight: 300;
     font-size: 1.125em;
+  }
+
+  div.prj-tech {
+    h4 {
+      font-size: 24px;
+      color: $whte;
+      text-decoration: underline;
+    }
+
+    ul {
+      margin: 0;
+      margin-bottom: 30px;
+
+      li {
+        display: inline-block;
+
+        i { font-size: 3em; }
+      }
+    }
   }
 
 }

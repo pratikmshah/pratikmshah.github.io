@@ -82,8 +82,6 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: #2a7ae2;
   text-decoration: none; }
-  a:visited {
-    color: #1756a9; }
   a:hover {
     color: #111;
     text-decoration: none; }
@@ -507,11 +505,9 @@ pre {
   #social-nav ul {
     list-style-type: none;
     margin: 0px; }
-    #social-nav ul li {
-      margin-bottom: 2px; }
-      #social-nav ul li a img {
-        height: 40px;
-        width: 40px; }
+    #social-nav ul li a img {
+      height: 40px;
+      width: 40px; }
 
 @media only screen and (max-width: 415px) {
   #social-nav {
@@ -754,12 +750,23 @@ time {
     max-width: 552px;
     height: auto; }
   .project .prj-desc {
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     padding: 0 5px;
     color: #A9A9A9;
     font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 1.125em; }
+  .project div.prj-tech h4 {
+    font-size: 24px;
+    color: #fff;
+    text-decoration: underline; }
+  .project div.prj-tech ul {
+    margin: 0;
+    margin-bottom: 30px; }
+    .project div.prj-tech ul li {
+      display: inline-block; }
+      .project div.prj-tech ul li i {
+        font-size: 3em; }
 
 /* project section */
 /* line break */
