@@ -15,6 +15,6 @@ function nextImage(id) {
   cur.removeClass('show-img').addClass('hide-img'); // remove showing the img and hide the img
   nxt.css('opacity', '0.0').removeClass('hide-img')
                            .addClass('show-img')
-                           .animate( { 'opacity': 1.0 }, 1000);
+                           .animate( { 'opacity': 1.0 }, 1500);
 
 }
