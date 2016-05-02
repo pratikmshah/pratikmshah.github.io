@@ -28,13 +28,6 @@ body {
 /**
  * Set fonts to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Oswald", "Helvetica Neue", sans-serif; }
-
-p, blockquote, pre,
-ul, ol, dl, figure {
-  font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif; }
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -540,7 +533,7 @@ pre {
     color: #031D34; }
 
 .font-title {
-  font-family: "Oswald", "Helvetica Neue", sans-serif; }
+  font-family: "Oswald", "Lato", "Helvetica Neue", sans-serif; }
 
 /* navigation link and dropdown list */
 #prj-nav {
@@ -561,7 +554,7 @@ pre {
   .prj-content a {
     text-decoration: none;
     color: #00AEEF;
-    font-family: "Oswald", "Helvetica Neue", sans-serif;
+    font-family: "Oswald", "Lato", "Helvetica Neue", sans-serif;
     padding-left: 15px;
     display: block;
     -webkit-transition: background-color 0.5s ease;
@@ -747,23 +740,21 @@ time {
   text-align: center; }
 
 .project {
+  font-family: "Lato", "Open Sans", "Helvetica Neue", sans-serif;
   /* project header */
   /*individual project sections*/ }
   .project .prj-heading {
     color: #00AEEF;
-    font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 6.25em; }
   .project .prj-body {
     margin-bottom: 45px;
     padding: 0 5px;
     color: #fff;
-    font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 1.75em; }
   .project .prj-title {
     color: #fff;
-    font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 3.875em; }
   .project .project div.slideshow img.prj-img {
@@ -773,7 +764,6 @@ time {
     margin-bottom: 30px;
     padding: 0 5px;
     color: #A9A9A9;
-    font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 1.125em; }
   .project div.prj-tech h4 {
