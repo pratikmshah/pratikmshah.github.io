@@ -3,21 +3,30 @@ code, pre {
 }
 
 #post {
-  font-size: 1.1875em;
+  font-size: 1.125em;
   max-width: $content-width * .71;
   padding-left: $spacing-unit;
   padding-right: $spacing-unit;
   margin: 0 auto;
   display: block;
+
+  div.post-content {
+    font-family: $font-body;
+    line-height: 1.75em;
+
+    h3 { font-weight: bold; }
+  }
 }
 
 #post-title {
+  font-family: $font-title;
   text-transform: $upcase;
   letter-spacing: .25px;
 }
 
 .post-meta {
   margin-bottom: 10px;
+  font-family: $font-title;
 }
 
 time {

@@ -659,17 +659,21 @@ pre {
       margin-bottom: 0;
       text-transform: uppercase; }
       .block div h2 a.post-link {
+        font-family: "Oswald", "Lato", "Helvetica Neue", sans-serif;
         color: black; }
       .block div h2 a.post-link:hover {
         text-decoration: none;
         transition: color 0.3s;
         color: #7a7a7a; }
-    .block div p .btn-read {
-      padding: 3px;
-      border-radius: 16px;
-      background-color: #22FF01; }
-  .block .post-meta {
-    text-transform: uppercase; }
+    .block div p {
+      font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif; }
+      .block div p .btn-read {
+        padding: 3px;
+        border-radius: 16px;
+        background-color: #22FF01; }
+  .block .post-date {
+    text-transform: uppercase;
+    font-family: "Oswald", "Lato", "Helvetica Neue", sans-serif; }
 
 /* temp fix footer and block overlap */
 div.spacer {
@@ -711,19 +715,26 @@ code, pre {
   font-family: "Source Code Pro", sans-serif !important; }
 
 #post {
-  font-size: 1.1875em;
+  font-size: 1.125em;
   max-width: 702.9px;
   padding-left: 10px;
   padding-right: 10px;
   margin: 0 auto;
   display: block; }
+  #post div.post-content {
+    font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
+    line-height: 1.75em; }
+    #post div.post-content h3 {
+      font-weight: bold; }
 
 #post-title {
+  font-family: "Oswald", "Lato", "Helvetica Neue", sans-serif;
   text-transform: uppercase;
   letter-spacing: .25px; }
 
 .post-meta {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font-family: "Oswald", "Lato", "Helvetica Neue", sans-serif; }
 
 time {
   text-transform: uppercase; }
@@ -839,7 +850,8 @@ time {
 /* About me description */
 #aboutme {
   width: 75%;
-  margin: 0 auto 30px auto; }
+  margin: 0 auto 30px auto;
+  font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif; }
   #aboutme ul.prj-lst {
     margin-left: 25px; }
   #aboutme ul.tab-btns {
