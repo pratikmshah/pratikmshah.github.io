@@ -156,7 +156,7 @@ pre {
   /*border-top: 5px solid $twt-clr;*/
   /*border-bottom: 1px solid $grey-color-light;*/
   min-height: 56px;
-  background-color: #00AEEF;
+  background-color: black;
   position: relative; }
 
 .site-title {
@@ -529,7 +529,7 @@ pre {
 #title {
   color: #fff; }
   #title:hover {
-    color: #031D34; }
+    color: #00AEEF; }
 
 .font-title {
   font-family: "Oswald", "Lato", "Helvetica Neue", sans-serif; }
