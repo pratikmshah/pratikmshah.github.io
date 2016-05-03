@@ -28,13 +28,6 @@ body {
 /**
  * Set fonts to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Oswald", "Helvetica Neue", sans-serif; }
-
-p, blockquote, pre,
-ul, ol, dl, figure {
-  font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif; }
-
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
@@ -500,8 +493,7 @@ pre {
 /* social nav on side */
 #social-nav {
   position: fixed;
-  top: 20%;
-  left: 0px; }
+  top: 20%; }
   #social-nav ul {
     list-style-type: none;
     margin: 0px; }
@@ -540,7 +532,7 @@ pre {
     color: #031D34; }
 
 .font-title {
-  font-family: "Oswald", "Helvetica Neue", sans-serif; }
+  font-family: "Oswald", "Lato", "Helvetica Neue", sans-serif; }
 
 /* navigation link and dropdown list */
 #prj-nav {
@@ -561,7 +553,7 @@ pre {
   .prj-content a {
     text-decoration: none;
     color: #00AEEF;
-    font-family: "Oswald", "Helvetica Neue", sans-serif;
+    font-family: "Oswald", "Lato", "Helvetica Neue", sans-serif;
     padding-left: 15px;
     display: block;
     -webkit-transition: background-color 0.5s ease;
@@ -666,17 +658,21 @@ pre {
       margin-bottom: 0;
       text-transform: uppercase; }
       .block div h2 a.post-link {
+        font-family: "Oswald", "Lato", "Helvetica Neue", sans-serif;
         color: black; }
       .block div h2 a.post-link:hover {
         text-decoration: none;
         transition: color 0.3s;
         color: #7a7a7a; }
-    .block div p .btn-read {
-      padding: 3px;
-      border-radius: 16px;
-      background-color: #22FF01; }
-  .block .post-meta {
-    text-transform: uppercase; }
+    .block div p {
+      font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif; }
+      .block div p .btn-read {
+        padding: 3px;
+        border-radius: 16px;
+        background-color: #22FF01; }
+  .block .post-date {
+    text-transform: uppercase;
+    font-family: "Oswald", "Lato", "Helvetica Neue", sans-serif; }
 
 /* temp fix footer and block overlap */
 div.spacer {
@@ -718,19 +714,26 @@ code, pre {
   font-family: "Source Code Pro", sans-serif !important; }
 
 #post {
-  font-size: 1.1875em;
+  font-size: 1.125em;
   max-width: 702.9px;
   padding-left: 10px;
   padding-right: 10px;
   margin: 0 auto;
   display: block; }
+  #post div.post-content {
+    font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
+    line-height: 1.75em; }
+    #post div.post-content h3 {
+      font-weight: bold; }
 
 #post-title {
+  font-family: "Oswald", "Lato", "Helvetica Neue", sans-serif;
   text-transform: uppercase;
   letter-spacing: .25px; }
 
 .post-meta {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font-family: "Oswald", "Lato", "Helvetica Neue", sans-serif; }
 
 time {
   text-transform: uppercase; }
@@ -747,23 +750,21 @@ time {
   text-align: center; }
 
 .project {
+  font-family: "Lato", "Open Sans", "Helvetica Neue", sans-serif;
   /* project header */
   /*individual project sections*/ }
   .project .prj-heading {
     color: #00AEEF;
-    font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 6.25em; }
   .project .prj-body {
     margin-bottom: 45px;
     padding: 0 5px;
     color: #fff;
-    font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 1.75em; }
   .project .prj-title {
     color: #fff;
-    font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 3.875em; }
   .project .project div.slideshow img.prj-img {
@@ -773,7 +774,6 @@ time {
     margin-bottom: 30px;
     padding: 0 5px;
     color: #A9A9A9;
-    font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
     font-weight: 300;
     font-size: 1.125em; }
   .project div.prj-tech h4 {
@@ -849,7 +849,8 @@ time {
 /* About me description */
 #aboutme {
   width: 75%;
-  margin: 0 auto 30px auto; }
+  margin: 0 auto 30px auto;
+  font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif; }
   #aboutme ul.prj-lst {
     margin-left: 25px; }
   #aboutme ul.tab-btns {
@@ -904,8 +905,6 @@ time {
     transition: font 1s ease;
     font-size: 4em;
     margin-left: .75em; }
-    #skills i:hover {
-      font-size: 4.5em; }
   #skills img {
     -webkit-transition: width 1s ease;
     -moz-transition: width 1s ease;
@@ -915,9 +914,6 @@ time {
     height: 64px;
     width: 64px;
     padding-bottom: 16px; }
-    #skills img:hover {
-      width: 75px;
-      height: auto; }
   #skills #resume h3 {
     display: inline-block; }
   #skills #resume span {
@@ -925,9 +921,6 @@ time {
   #skills .download {
     width: 45px;
     height: auto; }
-    #skills .download:hover {
-      width: 49px;
-      height: auto; }
 
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {

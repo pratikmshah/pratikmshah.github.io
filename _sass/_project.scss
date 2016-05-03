@@ -8,10 +8,11 @@
 
 .project {
 
+  font-family: $font-project;
+
   /* project header */
   .prj-heading {
     color: $twt-clr;
-    font-family: $font-body;
     font-weight: 300;
     font-size: 6.25em;
   }
@@ -20,7 +21,6 @@
     margin-bottom: 45px;
     padding: 0 5px;
     color: $whte;
-    font-family: $font-body;
     font-weight: 300;
     font-size: 1.75em;
   }
@@ -28,7 +28,6 @@
   /*individual project sections*/
   .prj-title {
     color: $whte;
-    font-family: $font-body;
     font-weight: 300;
     font-size: 3.875em;
   }
@@ -42,7 +41,6 @@
     margin-bottom: 30px;
     padding: 0 5px;
     color: $prj-desc;
-    font-family: $font-body;
     font-weight: 300;
     font-size: 1.125em;
   }

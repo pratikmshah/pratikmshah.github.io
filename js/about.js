@@ -1,4 +1,6 @@
 $(function(){
+
+  //===========================================TAB STORY
   $(".tab-btns").on('click', 'a', function(e){
 
     // grab item clicked on
@@ -9,6 +11,7 @@ $(function(){
 
     e.preventDefault();
   });
+
 });
 
 function swapClass(clickedTabLink, clickedTab) {
