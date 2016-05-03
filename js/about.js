@@ -1,4 +1,6 @@
 $(function(){
+
+  //===========================================TAB STORY
   $(".tab-btns").on('click', 'a', function(e){
 
     // grab item clicked on
@@ -9,6 +11,16 @@ $(function(){
 
     e.preventDefault();
   });
+
+  //====================================MASONRY FOR SKILLS
+  $('div.page-content').imagesLoaded( function() {
+    $("div.grid-container").masonry({
+      isFitWidth: true,
+      columnWidth: 'div.skill-block',
+      itemSelector: 'div.skill-block'
+    });
+  });
+
 });
 
 function swapClass(clickedTabLink, clickedTab) {
