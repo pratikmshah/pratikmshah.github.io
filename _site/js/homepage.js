@@ -24,5 +24,5 @@ $(function() {
 
 function socialNavPosition() {
   var pos = $('#title').position();
-  $('#social-nav').css('left', (pos.left - 100));
+  $('#social-nav').css('left', (pos.left - 70));
 }
