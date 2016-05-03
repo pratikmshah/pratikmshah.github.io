@@ -653,7 +653,7 @@ pre {
         /* Opera */
         transform: scale(1.5); }
   .block div {
-    padding: 1em; }
+    padding: 5px 16px 16px 16px; }
     .block div h2 {
       margin-bottom: 0;
       text-transform: uppercase; }
