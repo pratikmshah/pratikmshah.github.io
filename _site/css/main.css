@@ -156,7 +156,7 @@ pre {
   /*border-top: 5px solid $twt-clr;*/
   /*border-bottom: 1px solid $grey-color-light;*/
   min-height: 56px;
-  background-color: #00AEEF;
+  background-color: black;
   position: relative; }
 
 .site-title {
@@ -224,7 +224,7 @@ pre {
  */
 .site-footer {
   background: none;
-  background-color: #00070D;
+  background-color: black;
   border-top: 1px solid #2e3439;
   padding: 10px 0; }
 
@@ -529,7 +529,7 @@ pre {
 #title {
   color: #fff; }
   #title:hover {
-    color: #031D34; }
+    color: #00AEEF; }
 
 .font-title {
   font-family: "Oswald", "Lato", "Helvetica Neue", sans-serif; }
@@ -653,7 +653,7 @@ pre {
         /* Opera */
         transform: scale(1.5); }
   .block div {
-    padding: 1em; }
+    padding: 5px 16px 16px 16px; }
     .block div h2 {
       margin-bottom: 0;
       text-transform: uppercase; }
