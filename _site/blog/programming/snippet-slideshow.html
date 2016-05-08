@@ -106,6 +106,57 @@
 
 <p>There are a couple of things we will need in order for this to work. First, you will need the jQuery plugin which you can find <a href="http://jquery.com/">here</a>. Another item we will need is of course a set of images! Images need to be the same height and width. I used JPEG images for performance but give up quality; for more information on file types check out this <a href="http://1stwebdesigner.com/image-file-types/">post</a>.</p>
 
+<p><br /></p>
+
+<h3 id="setup">Setup</h3>
+
+<p>Lets get the file structure out of the way. Create a folder called <code class="highlighter-rouge">slideshow</code> and inside of it create a file called <code class="highlighter-rouge">index.html</code>. Next, inside of the <code class="highlighter-rouge">slideshow</code> folder create another folder called <code class="highlighter-rouge">imgs</code> and place all your images inside of there. Then, in root directory create two files one called <code class="highlighter-rouge">script.js</code> and the other <code class="highlighter-rouge">style.css</code>. Your folder structure should look similar to below. Also, make sure jquery is loaded before the script file.</p>
+
+<figure>
+  <img src="/img/posts/snip-slideshow-blog/folder-structure.jpg" class="blg-img" alt="folder structure" />
+</figure>
+
+<p>Last open up your text editor and setup basic html strucutre in <code class="highlighter-rouge">index.html</code>. You can copy the code below.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Image Sildeshow<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"style.css"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;script   </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-2.2.3.min.js"</span>   <span class="na">integrity=</span><span class="s">"sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="</span>   <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"script.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h3 id="html-structure">HTML Structure</h3>
+
+<p>We will need to setup the html markup first so head back to your index.html file. Create a <code class="highlighter-rouge">div</code> tag with <code class="highlighter-rouge">id="slideshow-demo"</code> and inside create <code class="highlighter-rouge">img</code> tags for however many images you have in your slideshow. Set the file path for each image which should be <code class="highlighter-rouge">imgs/&lt;image-name.extension&gt;</code>. Your images will be unstacked for now but that is ok we will work on that in the next part.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"slideshow-demo"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"imgs/yeeld-home.jpg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"imgs/yeeld-index.png"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"imgs/yeeld-show.png"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+<figure>
+  <img src="/img/posts/snip-slideshow-blog/div-imgs.jpg" class="blg-img" alt="html output of div and imgs" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="css-structure">CSS Structure</h3>
+
+<p>We need to set some properties for the div and images so that the position of the images stack ontop of each other. In your <code class="highlighter-rouge">style.css</code> file set the <code class="highlighter-rouge">div#slideshow-demo</code> position to <code class="highlighter-rouge">relative</code>. Set the position for the images inside of the div to <code class="highlighter-rouge">absolute</code>.</p>
+
 <!-- links -->
 
   </div>
