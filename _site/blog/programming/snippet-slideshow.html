@@ -118,6 +118,8 @@
 
 <p>Last open up your text editor and setup basic html strucutre in <code class="highlighter-rouge">index.html</code>. You can copy the code below.</p>
 
+<p><br /></p>
+
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;head&gt;</span>
@@ -140,6 +142,8 @@
 
 <p>We will need to setup the html markup first so head back to your index.html file. Create a <code class="highlighter-rouge">div</code> tag with <code class="highlighter-rouge">id="slideshow-demo"</code> and inside create <code class="highlighter-rouge">img</code> tags for however many images you have in your slideshow. Set the file path for each image which should be <code class="highlighter-rouge">imgs/&lt;image-name.extension&gt;</code>. Your images will be unstacked for now but that is ok we will work on that in the next part.</p>
 
+<p><br /></p>
+
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"slideshow-demo"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"imgs/yeeld-home.jpg"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"imgs/yeeld-index.png"</span><span class="nt">&gt;</span>
@@ -147,6 +151,8 @@
 <span class="nt">&lt;/div&gt;</span>
 </code></pre>
 </div>
+<p><br /></p>
+
 <figure>
   <img src="/img/posts/snip-slideshow-blog/div-imgs.jpg" class="blg-img" alt="html output of div and imgs" />
 </figure>
@@ -157,22 +163,30 @@
 
 <p>We need to set some properties for the div and images so that the position of the images stack ontop of each other. In your <code class="highlighter-rouge">style.css</code> file set the <code class="highlighter-rouge">div#slideshow-demo</code> position to <code class="highlighter-rouge">relative</code>. Set the position for the images inside of the div to <code class="highlighter-rouge">absolute</code>. This will stack all the images on top of each other leaving the last image showing. What the css is simply stating is that for <code class="highlighter-rouge">img</code> tags position them relative to where the div tag is.</p>
 
+<p><br /></p>
+
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">div</span><span class="nf">#slideshow-demo</span> <span class="p">{</span> <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span> <span class="p">}</span>
 
 <span class="nt">div</span><span class="nf">#slideshow-demo</span> <span class="nt">img</span> <span class="p">{</span> <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span> <span class="p">}</span>
 </code></pre>
 </div>
+<p><br /></p>
+
 <figure>
   <img src="/img/posts/snip-slideshow-blog/css-position.jpg" class="blg-img" alt="div and imgs positioning" />
 </figure>
 
 <p>We need to create two classes that will be used later to set the state of an image to be hidding or showing. Create a class called <code class="highlighter-rouge">show-img</code> with a property of <code class="highlighter-rouge">display</code> and value of <code class="highlighter-rouge">inline-block</code>. Create another class called <code class="highlighter-rouge">hide-img</code> with a property of <code class="highlighter-rouge">display</code> and value of <code class="highlighter-rouge">none</code>. Also in your <code class="highlighter-rouge">index.html</code> set the class of the first image to <code class="highlighter-rouge">show-img</code> and the rest to <code class="highlighter-rouge">hide-img</code>.</p>
 
+<p><br /></p>
+
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nc">.show-img</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span> <span class="p">}</span>
 
 <span class="nc">.hide-img</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
 </code></pre>
 </div>
+
+<p><br /></p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"slideshow-demo"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"imgs/yeeld-home.jpg"</span> <span class="na">class=</span><span class="s">"show-img"</span><span class="nt">&gt;</span>
@@ -187,6 +201,8 @@
 <h3 id="javascript-part-1">JavaScript Part 1</h3>
 
 <p>Ok now for the main event of this tutorial. Open your <code class="highlighter-rouge">script.js</code> file and lets get down to work for the workhorse of this plugin. Lets start by working on the function that will add and remove classes during a specified time. See the code below I will explain each line.</p>
+
+<p><br /></p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
@@ -213,6 +229,8 @@
 <span class="p">}</span><span class="w">
 </span></pre></td></tr></tbody></table></code></pre></figure>
 
+<p><br /></p>
+
 <p>Lets start top down. Line 1 we declare a function called <code class="highlighter-rouge">nextImage</code> and it takes in a parameter of <code class="highlighter-rouge">id</code> which will be the div container with the unique id of <code class="highlighter-rouge">#slideshow-demo</code>. In line 2 we are setting the current image to be displayed by querying the DOM to grab the first image. This is for our starting image. In line 3 we use the jQuery method <code class="highlighter-rouge">next()</code> to query the DOM and retrieve the next sibiling of the the image tag that has <code class="highlighter-rouge">.show-img</code> class.</p>
 
 <p>Line 4-6 we need to check for a condition such that what if this is the last image in the set? So we say hey if you query and get nothing back then lets reset <code class="highlighter-rouge">nxt</code> to be the first image.</p>
@@ -223,13 +241,57 @@
 
 <h3 id="javascript-part-2">JavaScript Part 2</h3>
 
-<p>Now that we got or function that will be exectured every X seconds we now need to the the web page to start this method and automatically execute it every lets say 3.5 seconds. Take a look at the code below we are using a jQuery</p>
+<p>Now that we got or function that will be exectured every X seconds we now need to the the web page to start this method and automatically execute it every lets say 3.5 seconds. Take a look at the code below we are using a jQuery to help us execute this function.</p>
+
+<p><br /></p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-  <span class="nx">setInterval</span><span class="p">(</span><span class="s1">'nextImage("#slideshow-demo")'</span><span class="p">,</span> <span class="mi">3500</span><span class="p">);</span>   <span class="c1">// prism</span>
+  <span class="nx">setInterval</span><span class="p">(</span><span class="s1">'nextImage("#slideshow-demo")'</span><span class="p">,</span> <span class="mi">3500</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre>
 </div>
+<p><br /></p>
+
+<p>The first line <code class="highlighter-rouge">$(function(){</code> is a jQuery method that waits till the webpage has been loaded its a shortcut for <code class="highlighter-rouge">$(document).ready()</code>. Once the page has been loaded it executes the next function called <code class="highlighter-rouge">setInterval</code> which is a function that loops over infinitely every X miliseconds specified. We state that every 3500 miliseconds (3.5 seconds) we need to call the <code class="highlighter-rouge">nextImage()</code> function and we pass in the id of <code class="highlighter-rouge">#slideshow-demo</code>. You can change whatever time you want the images to transition by changing the second parameter.</p>
+
+<p><br /></p>
+
+<p>The full code for the <code class="highlighter-rouge">script.js</code> file is below.</p>
+
+<p><br /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="c1">// call nextImage over and over every 3.5 seconds</span>
+  <span class="nx">setInterval</span><span class="p">(</span><span class="s1">'nextImage("#slideshow-demo")'</span><span class="p">,</span> <span class="mi">3500</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="kd">function</span> <span class="nx">nextImage</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">cur</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">id</span> <span class="o">+</span> <span class="s1">' img.show-img'</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">nxt</span> <span class="o">=</span> <span class="nx">cur</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">nxt</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">nxt</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">id</span> <span class="o">+</span> <span class="s1">' img:first'</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">cur</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'show-img'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'hide-img'</span><span class="p">);</span>
+  <span class="nx">nxt</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">'opacity'</span><span class="p">,</span> <span class="s1">'0.0'</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'hide-img'</span><span class="p">)</span>
+                           <span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'show-img'</span><span class="p">)</span>
+                           <span class="p">.</span><span class="nx">animate</span><span class="p">(</span> <span class="p">{</span> <span class="s1">'opacity'</span><span class="p">:</span> <span class="mf">1.0</span> <span class="p">},</span> <span class="mi">1500</span><span class="p">);</span>
+
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><br /></p>
+
+<p>Here is the final result.</p>
+
+<div id="slideshow-demo" class="slideshow center">
+    <img src="/img/projects/yeeld/yeeld-home.jpg" class="show-img" />
+    <img src="/img/projects/yeeld//yeeld-index.png" class="hide-img" />
+    <img src="/img/projects/yeeld//yeeld-show.png" class="hide-img" />
+</div>
+
+<p>Now that you see the full code making a slideshow isn’t all that tough as it seems to be. Hope you enjoyed this quick tutorial. Please leave any feedback or questions below, thanks.</p>
 
 <!-- links -->
 
