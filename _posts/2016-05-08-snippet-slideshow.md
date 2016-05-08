@@ -90,9 +90,43 @@ We need to create two classes that will be used later to set the state of an ima
 
 <br>
 
-### JavaScript Plugin Creation
+### JavaScript Part 1
 
-Ok now for the main event of this tutorial. Open your `script.js` file and lets get down to work for the workhorse of this plugin.
+Ok now for the main event of this tutorial. Open your `script.js` file and lets get down to work for the workhorse of this plugin. Lets start by working on the function that will add and remove classes during a specified time. See the code below I will explain each line.
+
+{% highlight javascript linenos %}
+function nextImage(id) {
+  var cur = $(id + ' img.show-img');
+  var nxt = cur.next();
+  if (nxt.length == 0) {
+    nxt = $(id + ' img:first');
+  }
+
+  cur.removeClass('show-img').addClass('hide-img');
+  nxt.css('opacity', '0.0').removeClass('hide-img')
+                           .addClass('show-img')
+                           .animate( { 'opacity': 1.0 }, 1500);
+}
+{% endhighlight %}
+
+Lets start top down. Line 1 we declare a function called `nextImage` and it takes in a parameter of `id` which will be the div container with the unique id of `#slideshow-demo`. In line 2 we are setting the current image to be displayed by querying the DOM to grab the first image. This is for our starting image. In line 3 we use the jQuery method `next()` to query the DOM and retrieve the next sibiling of the the image tag that has `.show-img` class.
+
+
+Line 4-6 we need to check for a condition such that what if this is the last image in the set? So we say hey if you query and get nothing back then lets reset `nxt` to be the first image.
+
+Now when X seconds hits and we query the DOM for the position we have to shuffle the classes around which is what lines 8-12 do. In line 8 we access the current image being showen and remove the `.show-img` class and add the `hide-img` class to hide it. Next, we grab the next item give it a css `opacity` property with a `0.0` value, remove the `hide-img` class and add the `show-img` class. We also need to slowly change the opacity to 1.0 which is where we use the jQuery `animate` function. The 1500 is the time in miliseconds it will take for the opacity to change from 0 to 1.0.
+
+<br>
+
+### JavaScript Part 2
+
+Now that we got or function that will be exectured every X seconds we now need to the the web page to start this method and automatically execute it every lets say 3.5 seconds. Take a look at the code below we are using a jQuery
+
+``` javascript
+$(function(){
+  setInterval('nextImage("#slideshow-demo")', 3500);   // prism
+});
+```
 
 <!-- links -->
 [JQUERY]: http://jquery.com/

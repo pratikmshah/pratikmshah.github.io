@@ -184,9 +184,52 @@
 
 <p><br /></p>
 
-<h3 id="javascript-plugin-creation">JavaScript Plugin Creation</h3>
+<h3 id="javascript-part-1">JavaScript Part 1</h3>
 
-<p>Ok now for the main event of this tutorial. Open your <code class="highlighter-rouge">script.js</code> file and lets get down to work for the workhorse of this plugin.</p>
+<p>Ok now for the main event of this tutorial. Open your <code class="highlighter-rouge">script.js</code> file and lets get down to work for the workhorse of this plugin. Lets start by working on the function that will add and remove classes during a specified time. See the code below I will explain each line.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12</pre></td><td class="code"><pre><span class="kd">function</span> <span class="nx">nextImage</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">cur</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">id</span> <span class="o">+</span> <span class="s1">' img.show-img'</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">nxt</span> <span class="o">=</span> <span class="nx">cur</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">nxt</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">nxt</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">id</span> <span class="o">+</span> <span class="s1">' img:first'</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">cur</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'show-img'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'hide-img'</span><span class="p">);</span>
+  <span class="nx">nxt</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">'opacity'</span><span class="p">,</span> <span class="s1">'0.0'</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'hide-img'</span><span class="p">)</span>
+                           <span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'show-img'</span><span class="p">)</span>
+                           <span class="p">.</span><span class="nx">animate</span><span class="p">(</span> <span class="p">{</span> <span class="s1">'opacity'</span><span class="p">:</span> <span class="mf">1.0</span> <span class="p">},</span> <span class="mi">1500</span><span class="p">);</span>
+<span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Lets start top down. Line 1 we declare a function called <code class="highlighter-rouge">nextImage</code> and it takes in a parameter of <code class="highlighter-rouge">id</code> which will be the div container with the unique id of <code class="highlighter-rouge">#slideshow-demo</code>. In line 2 we are setting the current image to be displayed by querying the DOM to grab the first image. This is for our starting image. In line 3 we use the jQuery method <code class="highlighter-rouge">next()</code> to query the DOM and retrieve the next sibiling of the the image tag that has <code class="highlighter-rouge">.show-img</code> class.</p>
+
+<p>Line 4-6 we need to check for a condition such that what if this is the last image in the set? So we say hey if you query and get nothing back then lets reset <code class="highlighter-rouge">nxt</code> to be the first image.</p>
+
+<p>Now when X seconds hits and we query the DOM for the position we have to shuffle the classes around which is what lines 8-12 do. In line 8 we access the current image being showen and remove the <code class="highlighter-rouge">.show-img</code> class and add the <code class="highlighter-rouge">hide-img</code> class to hide it. Next, we grab the next item give it a css <code class="highlighter-rouge">opacity</code> property with a <code class="highlighter-rouge">0.0</code> value, remove the <code class="highlighter-rouge">hide-img</code> class and add the <code class="highlighter-rouge">show-img</code> class. We also need to slowly change the opacity to 1.0 which is where we use the jQuery <code class="highlighter-rouge">animate</code> function. The 1500 is the time in miliseconds it will take for the opacity to change from 0 to 1.0.</p>
+
+<p><br /></p>
+
+<h3 id="javascript-part-2">JavaScript Part 2</h3>
+
+<p>Now that we got or function that will be exectured every X seconds we now need to the the web page to start this method and automatically execute it every lets say 3.5 seconds. Take a look at the code below we are using a jQuery</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">setInterval</span><span class="p">(</span><span class="s1">'nextImage("#slideshow-demo")'</span><span class="p">,</span> <span class="mi">3500</span><span class="p">);</span>   <span class="c1">// prism</span>
+<span class="p">});</span>
+</code></pre>
+</div>
 
 <!-- links -->
 
