@@ -540,6 +540,7 @@ pre {
   display: inline-block; }
 
 .prj-content {
+  z-index: 9999;
   display: none;
   position: absolute;
   min-width: 200px;
@@ -610,7 +611,7 @@ pre {
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
   .site-nav:hover .trigger {
-    background-color: #00AEEF; }
+    background-color: black; }
     .site-nav:hover .trigger a span {
       color: #fff; } }
 /* homepage body */
