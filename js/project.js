@@ -3,6 +3,10 @@ $(function(){
   setInterval('nextImage("#prism-slide")', 3500);   // prism
   setInterval('nextImage("#idunno-slide")', 3500);  // idunno
   setInterval('nextImage("#yeeld-slide")', 3500);   // yeeld
+
+  if( $('#slideshow-demo') ) {
+    setInterval('nextImage("#slideshow-demo")', 3500);   // prism
+  }
 });
 
 function nextImage(id) {

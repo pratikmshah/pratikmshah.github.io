@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Programming tutorials tips and tricks">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Ruby, Jekyll, Sass, Rails, AngularJS, React">
+  <meta name="author" content="Pratik Shah">
+
+  <title>Snippet - Slideshow</title>
+  <meta name="description" content="Creating an automated slideshow plugin may look a little challenging at first but its actually pretty simple once you break it down. This code will allow you...">
+
+  <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
+  <link rel="stylesheet" href="/css/devicon.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://yourdomain.com/blog/programming/snippet-slideshow">
+  <link rel="alternate" type="application/rss+xml" title="PRATIK SHAH" href="http://yourdomain.com/feed.xml">
+
+
+  <script type="text/javascript" src="/js/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="/js/analytics.js"></script>
+  <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="/js/masonry.pkgd.js"></script>
+  <script type="text/javascript" src="/js/homepage.js"></script>
+  <script type="text/javascript" src="/js/about.js"></script>
+  <script type="text/javascript" src="/js/project.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">
+      <span id="title" class="font-title">PRATIK SHAH</span>
+    </a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+            
+              <div class="cust-page-lnks">
+                <a class="page-link nav-link" href="/about/"><span class="font-title">About</span></a>
+              </div>
+            
+          
+        
+          
+        
+          
+        
+          
+            
+              <div id="prj-nav" class="cust-page-lnks">
+                <a class="page-link nav-link prj-link" href="/projects/"><span class="font-title">Projects</span></a>
+                <div class="prj-content">
+                  <a href="/projects/#yeeld">YEELD - stock portfolio mgmt</a>
+                  <a href="/projects/#prism">PRISM - images into sound</a>
+                </div>
+              </div>
+              
+          
+        
+      </div>
+    </nav>
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article id="post" class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <p class="post-meta"><time datetime="2016-05-08T00:00:00-05:00" itemprop="datePublished">May 8, 2016</time></p>
+    <h1 id="post-title" class="post-title" itemprop="name headline">Snippet - Slideshow</h1>
+  </header>
+
+  
+  <div>
+    <img src="/img/posts/snip-slideshow-blog/header.jpg">
+  </div>
+  
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Creating an automated slideshow plugin may look a little challenging at first but its actually pretty simple once you break it down. This code will allow you to show a set of images that transition every X seconds. It will be reusable and for a great example check out my projects page to see them in action.</p>
+
+<p><br /></p>
+
+<h3 id="requirements">Requirements?</h3>
+
+<p>There are a couple of things we will need in order for this to work. First, you will need the jQuery plugin which you can find <a href="http://jquery.com/">here</a>. Another item we will need is of course a set of images! Images need to be the same height and width. I used JPEG images for performance but give up quality; for more information on file types check out this <a href="http://1stwebdesigner.com/image-file-types/">post</a>.</p>
+
+<p><br /></p>
+
+<h3 id="setup">Setup</h3>
+
+<p>Lets get the file structure out of the way. Create a folder called <code class="highlighter-rouge">slideshow</code> and inside of it create a file called <code class="highlighter-rouge">index.html</code>. Next, inside of the <code class="highlighter-rouge">slideshow</code> folder create another folder called <code class="highlighter-rouge">imgs</code> and place all your images inside of there. Then, in root directory create two files one called <code class="highlighter-rouge">script.js</code> and the other <code class="highlighter-rouge">style.css</code>. Your folder structure should look similar to below. Also, make sure jquery is loaded before the script file.</p>
+
+<figure>
+  <img src="/img/posts/snip-slideshow-blog/folder-structure.jpg" class="blg-img" alt="folder structure" />
+</figure>
+
+<p>Last open up your text editor and setup basic html strucutre in <code class="highlighter-rouge">index.html</code>. You can copy the code below.</p>
+
+<p><br /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;title&gt;</span>Image Sildeshow<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"style.css"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;script   </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-2.2.3.min.js"</span>   <span class="na">integrity=</span><span class="s">"sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="</span>   <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"script.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+
+<span class="nt">&lt;body&gt;</span>
+
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h3 id="html-structure">HTML Structure</h3>
+
+<p>We will need to setup the html markup first so head back to your index.html file. Create a <code class="highlighter-rouge">div</code> tag with <code class="highlighter-rouge">id="slideshow-demo"</code> and inside create <code class="highlighter-rouge">img</code> tags for however many images you have in your slideshow. Set the file path for each image which should be <code class="highlighter-rouge">imgs/&lt;image-name.extension&gt;</code>. Your images will be unstacked for now but that is ok we will work on that in the next part.</p>
+
+<p><br /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"slideshow-demo"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"imgs/yeeld-home.jpg"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"imgs/yeeld-index.png"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"imgs/yeeld-show.png"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<figure>
+  <img src="/img/posts/snip-slideshow-blog/div-imgs.jpg" class="blg-img" alt="html output of div and imgs" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="css-structure">CSS Structure</h3>
+
+<p>We need to set some properties for the div and images so that the position of the images stack ontop of each other. In your <code class="highlighter-rouge">style.css</code> file set the <code class="highlighter-rouge">div#slideshow-demo</code> position to <code class="highlighter-rouge">relative</code>. Set the position for the images inside of the div to <code class="highlighter-rouge">absolute</code>. This will stack all the images on top of each other leaving the last image showing. What the css is simply stating is that for <code class="highlighter-rouge">img</code> tags position them relative to where the div tag is.</p>
+
+<p><br /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">div</span><span class="nf">#slideshow-demo</span> <span class="p">{</span> <span class="nl">position</span><span class="p">:</span> <span class="nb">relative</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nt">div</span><span class="nf">#slideshow-demo</span> <span class="nt">img</span> <span class="p">{</span> <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span> <span class="p">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<figure>
+  <img src="/img/posts/snip-slideshow-blog/css-position.jpg" class="blg-img" alt="div and imgs positioning" />
+</figure>
+
+<p>We need to create two classes that will be used later to set the state of an image to be hidding or showing. Create a class called <code class="highlighter-rouge">show-img</code> with a property of <code class="highlighter-rouge">display</code> and value of <code class="highlighter-rouge">inline-block</code>. Create another class called <code class="highlighter-rouge">hide-img</code> with a property of <code class="highlighter-rouge">display</code> and value of <code class="highlighter-rouge">none</code>. Also in your <code class="highlighter-rouge">index.html</code> set the class of the first image to <code class="highlighter-rouge">show-img</code> and the rest to <code class="highlighter-rouge">hide-img</code>.</p>
+
+<p><br /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nc">.show-img</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="nc">.hide-img</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
+</code></pre>
+</div>
+
+<p><br /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"slideshow-demo"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"imgs/yeeld-home.jpg"</span> <span class="na">class=</span><span class="s">"show-img"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"imgs/yeeld-index.png"</span> <span class="na">class=</span><span class="s">"hide-img"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"imgs/yeeld-show.png"</span> <span class="na">class=</span><span class="s">"hide-img"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p><br /></p>
+
+<h3 id="javascript-part-1">JavaScript Part 1</h3>
+
+<p>Ok now for the main event of this tutorial. Open your <code class="highlighter-rouge">script.js</code> file and lets get down to work for the workhorse of this plugin. Lets start by working on the function that will add and remove classes during a specified time. See the code below I will explain each line.</p>
+
+<p><br /></p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12</pre></td><td class="code"><pre><span class="kd">function</span> <span class="nx">nextImage</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">cur</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">id</span> <span class="o">+</span> <span class="s1">' img.show-img'</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">nxt</span> <span class="o">=</span> <span class="nx">cur</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">nxt</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">nxt</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">id</span> <span class="o">+</span> <span class="s1">' img:first'</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">cur</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'show-img'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'hide-img'</span><span class="p">);</span>
+  <span class="nx">nxt</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">'opacity'</span><span class="p">,</span> <span class="s1">'0.0'</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'hide-img'</span><span class="p">)</span>
+                           <span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'show-img'</span><span class="p">)</span>
+                           <span class="p">.</span><span class="nx">animate</span><span class="p">(</span> <span class="p">{</span> <span class="s1">'opacity'</span><span class="p">:</span> <span class="mf">1.0</span> <span class="p">},</span> <span class="mi">1500</span><span class="p">);</span>
+<span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p><br /></p>
+
+<p>Lets start top down. Line 1 we declare a function called <code class="highlighter-rouge">nextImage</code> and it takes in a parameter of <code class="highlighter-rouge">id</code> which will be the div container with the unique id of <code class="highlighter-rouge">#slideshow-demo</code>. In line 2 we are setting the current image to be displayed by querying the DOM to grab the first image. This is for our starting image. In line 3 we use the jQuery method <code class="highlighter-rouge">next()</code> to query the DOM and retrieve the next sibiling of the the image tag that has <code class="highlighter-rouge">.show-img</code> class.</p>
+
+<p>Line 4-6 we need to check for a condition such that what if this is the last image in the set? So we say hey if you query and get nothing back then lets reset <code class="highlighter-rouge">nxt</code> to be the first image.</p>
+
+<p>Now when X seconds hits and we query the DOM for the position we have to shuffle the classes around which is what lines 8-12 do. In line 8 we access the current image being showen and remove the <code class="highlighter-rouge">.show-img</code> class and add the <code class="highlighter-rouge">hide-img</code> class to hide it. Next, we grab the next item give it a css <code class="highlighter-rouge">opacity</code> property with a <code class="highlighter-rouge">0.0</code> value, remove the <code class="highlighter-rouge">hide-img</code> class and add the <code class="highlighter-rouge">show-img</code> class. We also need to slowly change the opacity to 1.0 which is where we use the jQuery <code class="highlighter-rouge">animate</code> function. The 1500 is the time in miliseconds it will take for the opacity to change from 0 to 1.0.</p>
+
+<p><br /></p>
+
+<h3 id="javascript-part-2">JavaScript Part 2</h3>
+
+<p>Now that we got or function that will be exectured every X seconds we now need to the the web page to start this method and automatically execute it every lets say 3.5 seconds. Take a look at the code below we are using a jQuery to help us execute this function.</p>
+
+<p><br /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">setInterval</span><span class="p">(</span><span class="s1">'nextImage("#slideshow-demo")'</span><span class="p">,</span> <span class="mi">3500</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<p>The first line <code class="highlighter-rouge">$(function(){</code> is a jQuery method that waits till the webpage has been loaded its a shortcut for <code class="highlighter-rouge">$(document).ready()</code>. Once the page has been loaded it executes the next function called <code class="highlighter-rouge">setInterval</code> which is a function that loops over infinitely every X miliseconds specified. We state that every 3500 miliseconds (3.5 seconds) we need to call the <code class="highlighter-rouge">nextImage()</code> function and we pass in the id of <code class="highlighter-rouge">#slideshow-demo</code>. You can change whatever time you want the images to transition by changing the second parameter.</p>
+
+<p><br /></p>
+
+<p>The full code for the <code class="highlighter-rouge">script.js</code> file is below.</p>
+
+<p><br /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+  <span class="c1">// call nextImage over and over every 3.5 seconds</span>
+  <span class="nx">setInterval</span><span class="p">(</span><span class="s1">'nextImage("#slideshow-demo")'</span><span class="p">,</span> <span class="mi">3500</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="kd">function</span> <span class="nx">nextImage</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">cur</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">id</span> <span class="o">+</span> <span class="s1">' img.show-img'</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">nxt</span> <span class="o">=</span> <span class="nx">cur</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">nxt</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">nxt</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="nx">id</span> <span class="o">+</span> <span class="s1">' img:first'</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nx">cur</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'show-img'</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'hide-img'</span><span class="p">);</span>
+  <span class="nx">nxt</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">'opacity'</span><span class="p">,</span> <span class="s1">'0.0'</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'hide-img'</span><span class="p">)</span>
+                           <span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'show-img'</span><span class="p">)</span>
+                           <span class="p">.</span><span class="nx">animate</span><span class="p">(</span> <span class="p">{</span> <span class="s1">'opacity'</span><span class="p">:</span> <span class="mf">1.0</span> <span class="p">},</span> <span class="mi">1500</span><span class="p">);</span>
+
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><br /></p>
+
+<p>Here is the final result.</p>
+
+<div id="slideshow-demo" class="slideshow center">
+    <img src="/img/projects/yeeld/yeeld-home.jpg" class="show-img" />
+    <img src="/img/projects/yeeld//yeeld-index.png" class="hide-img" />
+    <img src="/img/projects/yeeld//yeeld-show.png" class="hide-img" />
+</div>
+
+<p>Now that you see the full code making a slideshow isn’t all that tough as it seems to be. Hope you enjoyed this quick tutorial. Please leave any feedback or questions below, thanks.</p>
+
+<!-- links -->
+
+  </div>
+
+
+<div id="disqus_thread"></div>
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+
+// var disqus_config = function () {
+//   this.page.url = /blog/programming/snippet-slideshow;         // Replace PAGE_URL with your page's canonical URL variable
+//   //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+// };
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//pratikshah.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div id="social-media" class="footer-col footer-col-3 center">
+
+        <div id="twitter-btn">
+          <a href="https://twitter.com/pratikshah" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @pratikshah</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+
+        <ul class="social-media-list center">
+          
+          <li>
+            <a href="https://github.com/pratikmshah" class="icon-social" title="GitHub">
+  <img src="/img/icons/github-blk.png">
+  <img src="/img/icons/github-clr.png">
+</a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/pratikshah" class="icon-social" title="Twitter">
+  <img src="/img/icons/twt-blk.png">
+  <img src="/img/icons/twt-clr.png">
+</a>
+
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://linkedin.com/in/pratikmshah" class="icon-social" title="LinkedIn">
+  <img src="/img/icons/lnkdn-blk.png">
+  <img src="/img/icons/lnkdn-clr.png">
+</a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://instagram.com/pratikshah_" class="icon-social" title="Instagram">
+  <img src="/img/icons/insta-blk.png">
+  <img src="/img/icons/insta-clr.png">
+</a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:pratik.t.shah@gmail.com" class="icon-social" title="E-Mail">
+  <img src="/img/icons/email-blk.png">
+  <img src="/img/icons/email-clr.png">
+</a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+     <div class="center">
+      <p id="hire">Available for hire! Email me and lets talk.</p>
+      <p class="footer-copyw">Site created by Pratik Shah</p>
+     </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
