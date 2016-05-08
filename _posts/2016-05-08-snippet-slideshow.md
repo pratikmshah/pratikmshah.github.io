@@ -4,7 +4,7 @@ date:   2016-05-08
 image: "/snip-slideshow-blog/header.jpg"
 ---
 
-Creating an automated slideshow plugin may look a little challenging at first but its actually pretty simple once you break it down. This plugin will allow you to show a set of images that transition every X seconds. It will be reusable and for a great example check out my projects page to see them in action.
+Creating an automated slideshow plugin may look a little challenging at first but its actually pretty simple once you break it down. This code will allow you to show a set of images that transition every X seconds. It will be reusable and for a great example check out my projects page to see them in action.
 
 <br>
 
@@ -61,7 +61,38 @@ We will need to setup the html markup first so head back to your index.html file
 
 ### CSS Structure
 
-We need to set some properties for the div and images so that the position of the images stack ontop of each other. In your `style.css` file set the `div#slideshow-demo` position to `relative`. Set the position for the images inside of the div to `absolute`.
+We need to set some properties for the div and images so that the position of the images stack ontop of each other. In your `style.css` file set the `div#slideshow-demo` position to `relative`. Set the position for the images inside of the div to `absolute`. This will stack all the images on top of each other leaving the last image showing. What the css is simply stating is that for `img` tags position them relative to where the div tag is.
+
+``` css
+div#slideshow-demo { position: relative; }
+
+div#slideshow-demo img { position: absolute; }
+```
+<figure>
+  <img src="/img/posts/snip-slideshow-blog/css-position.jpg" class="blg-img" alt="div and imgs positioning">
+</figure>
+
+We need to create two classes that will be used later to set the state of an image to be hidding or showing. Create a class called `show-img` with a property of `display` and value of `inline-block`. Create another class called `hide-img` with a property of `display` and value of `none`. Also in your `index.html` set the class of the first image to `show-img` and the rest to `hide-img`.
+
+``` css
+.show-img { display: inline-block; }
+
+.hide-img { display: none; }
+```
+
+``` html
+  <div id="slideshow-demo">
+    <img src="imgs/yeeld-home.jpg" class="show-img">
+    <img src="imgs/yeeld-index.png" class="hide-img">
+    <img src="imgs/yeeld-show.png" class="hide-img">
+  </div>
+```
+
+<br>
+
+### JavaScript Plugin Creation
+
+Ok now for the main event of this tutorial. Open your `script.js` file and lets get down to work for the workhorse of this plugin.
 
 <!-- links -->
 [JQUERY]: http://jquery.com/
