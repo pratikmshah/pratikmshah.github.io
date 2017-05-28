@@ -527,9 +527,8 @@ pre {
 
 /*navigation title*/
 #title {
-  color: #fff; }
-  #title:hover {
-    color: #00AEEF; }
+  color: #fff;
+  font-weight: bold; }
 
 .font-title {
   font-family: "Lato", "Helvetica Neue", sans-serif; }
@@ -588,32 +587,21 @@ pre {
 @media only screen and (min-width: 600px) {
   .nav-link {
     display: inline-block;
-    padding: 15px 5px;
-    text-align: center;
-    transition: background 0.2s;
-    -webkit-transform: skew(-20deg);
-    -moz-transform: skew(-20deg);
-    -o-transform: skew(-20deg);
-    transform: skew(-20deg); }
+    padding: 15px 5px 0px 5px;
+    text-align: center; }
     .nav-link span {
       display: inline-block;
-      color: white;
+      color: #fff;
       text-decoration: none;
-      text-transform: uppercase;
-      -webkit-transform: skew(20deg);
-      -moz-transform: skew(20deg);
-      -o-transform: skew(20deg);
-      transform: skew(20deg); }
-    .nav-link:hover {
-      background: #fff; }
-      .nav-link:hover span {
-        color: #00AEEF; } }
+      letter-spacing: 1px; }
+      .nav-link span:hover {
+        border-bottom: 1px solid #fff; } }
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
   .site-nav:hover .trigger {
     background-color: black; }
     .site-nav:hover .trigger a span {
-      color: #fff; } }
+      color: #00AEEF; } }
 /* homepage body */
 .page-content {
   background-color: #F4F4F4; }
