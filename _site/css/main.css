@@ -225,8 +225,11 @@ pre {
 .site-footer {
   background: none;
   background-color: black;
-  border-top: 1px solid #2e3439;
-  padding: 10px 0; }
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0; }
 
 .footer-copyw {
   font-size: 15px;
@@ -593,9 +596,10 @@ pre {
       display: inline-block;
       color: #fff;
       text-decoration: none;
-      letter-spacing: 1px; }
+      letter-spacing: 1px;
+      border-bottom: 0; }
       .nav-link span:hover {
-        border-bottom: 1px solid #fff; } }
+        border-bottom: 1px solid #00AEEF; } }
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
   .site-nav:hover .trigger {
@@ -698,6 +702,10 @@ div.spacer {
 /* hire */
 #hire {
   color: #22FF01; }
+
+.footer-copyw {
+  font-size: .85em;
+  color: #fff; }
 
 code, pre {
   font-family: "Source Code Pro", sans-serif !important; }

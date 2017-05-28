@@ -92,9 +92,10 @@
       color: $whte;
       text-decoration: none;
       letter-spacing: 1px;
+      border-bottom: 0;
 
       &:hover {
-        border-bottom: 1px solid $whte;
+        border-bottom: 1px solid $twt-clr;
       }
     }
   }
