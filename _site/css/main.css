@@ -183,8 +183,8 @@ pre {
       position: absolute;
       top: 9px;
       right: 5px;
-      background-color: #fdfdfd;
-      border: 1px solid #e8e8e8;
+      background-color: black;
+      border: 1px solid black;
       border-radius: 5px;
       text-align: right; }
       .site-nav .menu-icon {
@@ -193,13 +193,13 @@ pre {
         width: 36px;
         height: 26px;
         line-height: 0;
-        padding-top: 10px;
+        padding-top: 5px;
         text-align: center; }
         .site-nav .menu-icon > svg {
           width: 18px;
           height: 15px; }
           .site-nav .menu-icon > svg path {
-            fill: #424242; }
+            fill: #00AEEF; }
       .site-nav .trigger {
         clear: both;
         display: none;
@@ -667,10 +667,6 @@ pre {
     text-transform: uppercase;
     font-family: "Oswald", "Lato", "Helvetica Neue", sans-serif; }
 
-/* temp fix footer and block overlap */
-div.spacer {
-  height: 175px; }
-
 @media only screen and (max-width: 415px) {
   .grid-container {
     margin: 0; }
@@ -707,6 +703,12 @@ div.spacer {
   font-size: .85em;
   color: #fff; }
 
+@media only screen and (max-width: 415px) {
+  #twitter-btn {
+    display: none; }
+
+  .site-footer {
+    padding-bottom: 0; } }
 code, pre {
   font-family: "Source Code Pro", sans-serif !important; }
 
