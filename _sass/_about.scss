@@ -31,13 +31,17 @@
 }
 
 @media only screen and (max-width: 415px) {
-  #about div {
-    top: 50%;
+  #social-nav { display: none; }
+
+  #about { min-height: 500px; }
+
+  .v-center {
+    position: static;
+    transform: none;
+    top: 0;
   }
 }
 
 @media only screen and (max-width: 350px) {
-  #about div {
-    top: 70%;
-  }
+  #about { min-height: 600px; }
 }
