@@ -37,8 +37,12 @@
 
   .v-center {
     position: static;
-    transform: none;
     top: 0;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
   }
 }
 

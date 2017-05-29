@@ -475,11 +475,19 @@ pre {
 .v-center {
   position: relative;
   top: 40%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%); }
 
 .indx-v-center {
   position: relative;
   top: 40%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%); }
 
 .read-m-clr {
@@ -866,8 +874,12 @@ time {
 
   .v-center {
     position: static;
-    transform: none;
-    top: 0; } }
+    top: 0;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none; } }
 @media only screen and (max-width: 350px) {
   #about {
     min-height: 600px; } }
