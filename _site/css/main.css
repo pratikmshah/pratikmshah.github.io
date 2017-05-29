@@ -225,11 +225,7 @@ pre {
 .site-footer {
   background: none;
   background-color: black;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0; }
+  padding: 10px 0; }
 
 .footer-copyw {
   font-size: 15px;

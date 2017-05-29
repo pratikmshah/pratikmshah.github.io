@@ -43,7 +43,7 @@ function socialNavPosition() {
 }
 
 function homepageTextPosition() {
-  var pos = $(window).height() - $(".wrapper").height() - $("footer").height();
+  var pos = $(window).height() - $(".wrapper").height() - $("footer").height() - 15;
   $('#hero-container').css('height', pos)
   $('.blog').css('height', pos);
   $('#about').css('height', pos);
