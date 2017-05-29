@@ -46,4 +46,5 @@ function homepageTextPosition() {
   var pos = $(window).height() - $(".wrapper").height() - $("footer").height();
   $('#hero-container').css('height', pos)
   $('.blog').css('height', pos);
+  $('#about').css('height', pos);
 }
