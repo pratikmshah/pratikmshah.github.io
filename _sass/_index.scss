@@ -1,0 +1,29 @@
+#homepage {
+  background-color: $blk;
+}
+
+#hero-container {
+  font-size: 8em;
+
+  .texts {
+    color: $twt-clr;
+
+    span {
+      color: $whte;
+      font-family: serif;
+    }
+  }
+}
+
+/*navigation for mobile*/
+@media only screen and (max-width: 600px) {
+  #hero-container {
+    font-size: 6em;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #hero-container {
+    font-size: 3.2em;
+  }
+}

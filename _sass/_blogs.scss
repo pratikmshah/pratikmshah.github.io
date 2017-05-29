@@ -1,4 +1,4 @@
-/* homepage body */
+/* Blog body */
 .page-content { background-color: $bckgrd-clr; }
 
 /* masonry config */
@@ -79,10 +79,6 @@
   }
 }
 
-
-/* temp fix footer and block overlap */
-div.spacer { height: 175px; }
-
 @media only screen and (max-width: 415px) {
   .grid-container {
     margin: 0;
@@ -92,6 +88,4 @@ div.spacer { height: 175px; }
     margin: 0 0 5px 0;
     width: 100%;
   }
-
-  div.spacer { height: 0; }
 }

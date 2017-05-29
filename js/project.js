@@ -4,14 +4,11 @@ $(function(){
   setInterval('nextImage("#idunno-slide")', 3500);  // idunno
   setInterval('nextImage("#yeeld-slide")', 3500);   // yeeld
 
-  if( $('#slideshow-demo') ) {
-    setInterval('nextImage("#slideshow-demo")', 3500);   // prism
-  }
 });
 
 function nextImage(id) {
   var cur = $(id + ' img.show-img');  // get current image
-  var nxt = cur.next();                   // get next image
+  var nxt = cur.next();               // get next image
   if (nxt.length == 0) {
     nxt = $(id + ' img:first');      // reset and get the first img
   }

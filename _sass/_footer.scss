@@ -19,3 +19,15 @@
 
 /* hire */
 #hire { color: $nke-g-clr; }
+
+.footer-copyw {
+  font-size: .85em;
+  color: $whte;
+}
+
+@media only screen and (max-width: 415px) {
+  .site-footer {
+    position: relative;
+    padding-bottom: 0;
+  }
+}

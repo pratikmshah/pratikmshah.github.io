@@ -44,8 +44,8 @@
         position: absolute;
         top: 9px;
         right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
+        background-color: $blk;
+        border: 1px solid $blk;
         border-radius: 5px;
         text-align: right;
 
@@ -55,7 +55,7 @@
             width: 36px;
             height: 26px;
             line-height: 0;
-            padding-top: 10px;
+            padding-top: 5px;
             text-align: center;
 
             > svg {
@@ -63,7 +63,7 @@
                 height: 15px;
 
                 path {
-                    fill: $grey-color-dark;
+                    fill: $twt-clr;
                 }
             }
         }
@@ -102,9 +102,7 @@
  */
 .site-footer {
     background: none;
-    // background-image: linear-gradient(to right, rgb(0, 174, 239) 0%, rgb(0, 174, 239) 30%, rgb(0, 0, 0) 51%, rgb(0, 0, 0) 100%);
     background-color: $blk;
-    border-top: 1px solid #2e3439;
     padding: $spacing-unit 0;
 }
 

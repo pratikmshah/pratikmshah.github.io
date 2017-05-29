@@ -5,6 +5,12 @@
   float: none;
 }
 
+.v-center {
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
 .read-m-clr { color: $twt-clr !important; }
 
 /* icons that will interchange pictures on hover */

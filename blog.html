@@ -1,0 +1,35 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+---
+
+  <div class="grid-container">
+    {% for post in site.posts %}
+      <div class="block">
+
+        {% if post.image %}
+         <a href="{{ post.url | prepend: site.baseurl }}" class="img-link">
+          <img src="/img/posts/{{ post.image }}" style="width=275 height=auto">
+         </a>
+        {% endif %}
+
+        <div>
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+
+          {{ post.excerpt | truncatewords:55 }}
+          <a href="{{ post.url | prepend: site.baseurl }}" class="read-m-clr">Read more</a>
+
+          <p class="post-date">
+            {{ post.date | date: "%b %-d, %Y" }}
+          </p>
+
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+
+</div>

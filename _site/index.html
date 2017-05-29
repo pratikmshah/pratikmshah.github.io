@@ -10,21 +10,23 @@
   <meta name="keywords" content="HTML, CSS, JavaScript, Ruby, Jekyll, Sass, Rails, AngularJS, React">
   <meta name="author" content="Pratik Shah">
 
-  <title>PRATIK SHAH</title>
+  <title>pratik.</title>
   <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 ">
 
   <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
   <link rel="stylesheet" href="/css/devicon.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/">
-  <link rel="alternate" type="application/rss+xml" title="PRATIK SHAH" href="http://yourdomain.com/feed.xml">
+  <link rel="canonical" href="http://localhost:4000/">
+  <link rel="alternate" type="application/rss+xml" title="pratik." href="http://localhost:4000/feed.xml">
 
 
   <script type="text/javascript" src="/js/jquery-2.2.0.min.js"></script>
   <script type="text/javascript" src="/js/analytics.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
   <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
-  <script type="text/javascript" src="/js/masonry.pkgd.js"></script>
+  <script type="text/javascript" src="/js/masonry.pkgd.min.js"></script>
   <script type="text/javascript" src="/js/homepage.js"></script>
   <script type="text/javascript" src="/js/about.js"></script>
   <script type="text/javascript" src="/js/project.js"></script>
@@ -38,7 +40,7 @@
   <div class="wrapper">
 
     <a class="site-title" href="/">
-      <span id="title" class="font-title">PRATIK SHAH</span>
+      <span id="title" class="font-title h1">pratik.</span>
     </a>
 
     <nav class="site-nav">
@@ -53,11 +55,15 @@
       <div class="trigger">
         
           
-            
-              <div class="cust-page-lnks">
-                <a class="page-link nav-link" href="/about/"><span class="font-title">About</span></a>
-              </div>
-            
+            <div class="cust-page-lnks">
+              <a class="page-link nav-link" href="/about/"><span class="font-title">About</span></a>
+            </div>
+          
+        
+          
+            <div class="cust-page-lnks">
+              <a class="page-link nav-link" href="/blog/"><span class="font-title">Blog</span></a>
+            </div>
           
         
           
@@ -65,15 +71,9 @@
           
         
           
-            
-              <div id="prj-nav" class="cust-page-lnks">
-                <a class="page-link nav-link prj-link" href="/projects/"><span class="font-title">Projects</span></a>
-                <div class="prj-content">
-                  <a href="/projects/#yeeld">YEELD - stock portfolio mgmt</a>
-                  <a href="/projects/#prism">PRISM - images into sound</a>
-                </div>
-              </div>
-              
+            <div class="cust-page-lnks">
+              <a class="page-link nav-link" href="/projects/"><span class="font-title">Projects</span></a>
+            </div>
           
         
       </div>
@@ -83,83 +83,12 @@
 </header>
 
 
-    <div class="page-content">
+    <div id="homepage">
       <div class="wrapper">
-          <div class="grid-container">
-    
-      <div class="block">
-
-        
-         <a href="/blog/programming/snippet-slideshow" class="img-link">
-          <img src="/img/posts//snip-slideshow-blog/header.jpg" style="width=275 height=auto">
-         </a>
-        
-
-        <div>
-          <h2>
-            <a class="post-link" href="/blog/programming/snippet-slideshow">Snippet - Slideshow</a>
-          </h2>
-
-          <p>Creating an automated slideshow plugin may look a little challenging at first but its actually pretty simple once you break it down. This code will allow you to show a set of images that transition every X seconds. It will be reusable and for a great example check out my projects page to see them...
-          <a href="/blog/programming/snippet-slideshow" class="read-m-clr">Read more</a>
-
-          <p class="post-date">
-            May 8, 2016
-          </p>
-
-        </div>
-      </div>
-    
-      <div class="block">
-
-        
-         <a href="/blog/programming/sass-superpowers" class="img-link">
-          <img src="/img/posts//sass-blog/sass-logo.png" style="width=275 height=auto">
-         </a>
-        
-
-        <div>
-          <h2>
-            <a class="post-link" href="/blog/programming/sass-superpowers">The Sass Way!</a>
-          </h2>
-
-          <p>If you get frustrated with how messy and unmanageable your CSS gets, wish you didn’t have to specify properties over and over, or wished you could compute mathematical operations then you need Sass an extention of CSS that does all of this and more. I wished I had known about Sass sooner as I would...
-          <a href="/blog/programming/sass-superpowers" class="read-m-clr">Read more</a>
-
-          <p class="post-date">
-            Apr 15, 2016
-          </p>
-
-        </div>
-      </div>
-    
-      <div class="block">
-
-        
-         <a href="/blog/programming/blog-with-jekyll" class="img-link">
-          <img src="/img/posts//jekyll-blog/header.jpg" style="width=275 height=auto">
-         </a>
-        
-
-        <div>
-          <h2>
-            <a class="post-link" href="/blog/programming/blog-with-jekyll">Blog With Jekyll</a>
-          </h2>
-
-          <p>Jekyll is a static site generator that is written in ruby. It takes text files and renders them into HTML page. If you are looking for a simple web page or blog without having a database or maintaining a lot of code then Jekyll is for you. Another bonus when using Jekyll is that you...
-          <a href="/blog/programming/blog-with-jekyll" class="read-m-clr">Read more</a>
-
-          <p class="post-date">
-            Apr 8, 2016
-          </p>
-
-        </div>
-      </div>
-    
+        <div id="hero-container">
+  <div class="texts v-center">
+    <p class="text text-center">Developer<span>.</span></p>
   </div>
-
-  <div class="spacer"></div>
-
 </div>
 
       </div>
@@ -233,7 +162,7 @@
       </div>
 
      <div class="center">
-      <p class="footer-copyw">Site created by Pratik Shah</p>
+      <p class="footer-copyw">This site is powered by <a href="https://jekyllrb.com/">Jekyll</a></p>
      </div>
 
     </div>

@@ -1,135 +1,43 @@
-/* Headshot photo */
-#headshot {
-  width: 250px;
-  height: 250px;
-  margin-bottom: 50px;
+#about {
 
-  img {
-    width: 250px;
-    height: 250px;
-  }
+  font-family: $font-lato;
 
-}
+  div {
+    color: $whte;
+    max-width: 750px;
+    padding: 15px;
 
-/* About me description */
-#aboutme {
-  width: 75%;
-  margin: 0 auto 30px auto;
-  font-family: $font-body;
+    h2 {
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
 
-  ul.prj-lst {
-    margin-left: 25px;
-  }
-
-  ul.tab-btns {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      display: inline-block;
+    p {
+      text-align: left;
+      font-weight: lighter;
+      line-height: 1.7em;
+      letter-spacing: 1px;
+      margin-bottom: 1.5em;
 
       a {
-        padding: 5px 5px 7px 5px;
-        border-top: 2px solid $twt-clr;
-        border-left: 2px solid $twt-clr;
-        border-right: 2px solid $twt-clr;
-      }
-      a:hover { text-decoration: none; }
-      a.active {
-        background-color: $twt-clr;
-        color: $whte;
+        font-weight: bold;
+        color: $twt-clr;
+        border-bottom: 1px dotted $whte;
+
+        &:hover { border-bottom-style: solid; }
       }
     }
   }
 }
 
-.show {
-  display: block;
-  padding: 10px;
-  border: 2px solid $twt-clr;
-  border-radius: 0 10px 10px 10px;
-  background-color: $twt-clr;
-  color: white;
-
-  a {
-    color: $nke-g-clr;
+@media only screen and (max-width: 415px) {
+  #about div {
+    top: 50%;
   }
 }
 
-.hide {
-  display: none !important;
-  padding: 10px;
-  border: 2px solid $twt-clr;
-  border-radius: 0 10px 10px 10px;
-}
-
-/* Skills section*/
-#skills {
-  margin: 0 auto;
-  display: block;
-  width: 75%;
-
-  h1 {
-    font-size: 3.5em;
-    text-decoration: underline;
+@media only screen and (max-width: 350px) {
+  #about div {
+    top: 70%;
   }
-
-  h3 {
-    text-decoration: underline;
-    margin-top: 1em;
-  }
-
-  i {
-    -webkit-transition: font 1s ease;
-    -moz-transition: font 1s ease;
-    -o-transition: font 1s ease;
-    -ms-transition: font 1s ease;
-     transition: font 1s ease;
-    font-size: 4em;
-    margin-left: .75em;
-
-    // &:hover {
-    //   font-size: 4.5em;
-    // }
-  }
-
-  img {
-    -webkit-transition: width 1s ease;
-    -moz-transition: width 1s ease;
-    -o-transition: width 1s ease;
-    -ms-transition: width 1s ease;
-     transition: width 1s ease;
-
-    height: 64px;
-    width: 64px;
-    padding-bottom: 16px;
-
-    // &:hover {
-    //   width: 75px;
-    //   height: auto;
-    // }
-
-  }
-
-  #resume {
-    h3 { display: inline-block; }
-    span { font-size: 1.5em; }
-  }
-
-  .download {
-    width: 45px;
-    height: auto;
-
-    // &:hover {
-    //   width: 49px;
-    //   height: auto;
-    // }
-  }
-}
-
-/*navigation for mobile*/
-@media only screen and (max-width: 600px) {
-  #aboutme { width: 100%; }
-  #skills {width: 90%; }
 }

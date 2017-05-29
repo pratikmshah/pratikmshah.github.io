@@ -7,11 +7,10 @@
 /*navigation title*/
 #title {
   color: $whte;
-
-  &:hover { color: $twt-clr; }
+  font-weight: bold;
 }
 
-.font-title { font-family: $font-title; }
+.font-title { font-family: $font-lato; }
 
 /* navigation link and dropdown list */
 
@@ -85,30 +84,18 @@
 @media only screen and (min-width: 600px) {
   .nav-link {
     display: inline-block;
-    padding: 15px 5px;
+    padding: 15px 5px 0px 5px;
     text-align: center;
-    transition: background 0.2s;
-    -webkit-transform: skew(-20deg);
-       -moz-transform: skew(-20deg);
-         -o-transform: skew(-20deg);
-            transform: skew(-20deg);
 
     span {
       display: inline-block;
-      color: white;
+      color: $whte;
       text-decoration: none;
-      text-transform: uppercase;
-      -webkit-transform: skew(20deg);
-         -moz-transform: skew(20deg);
-           -o-transform: skew(20deg);
-              transform: skew(20deg);
-    }
+      letter-spacing: 1px;
+      border-bottom: 0;
 
-    &:hover {
-      background: $whte;
-
-      span {
-        color: $twt-clr;
+      &:hover {
+        border-bottom: 1px solid $twt-clr;
       }
     }
   }
@@ -120,7 +107,8 @@
     background-color: $blk;
 
     a span {
-      color: $whte;
+      color: $twt-clr;
     }
   }
+
 }
