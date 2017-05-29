@@ -12,7 +12,6 @@ $(function() {
 
 
   //====================================SOCIAL-NAV & INDEX PAGE CONTENT
-
   // run once page loads
   socialNavPosition();
   homepageTextPosition();
@@ -23,8 +22,21 @@ $(function() {
     homepageTextPosition();
   });
 
+  //====================================INDEX TEXT CYCLE
+  var words = ['Developer', 'Trader', 'Investor', 'Read', 'Walk', 'Sightsee', 'Taco Bell'];
+  var wordLength = words.length;
+  var word = 1;
+
+  setInterval(function() {
+    $('p.text').html("<p class=\"text text-center\">" + words[word]+ "<span>.</span></p>");
+    word + 1 == wordLength ? word = 0 : word++;
+  }, 3000);
+
 });
 
+
+
+//====================================HELPER FUNCTIONS
 function socialNavPosition() {
   var pos = $('#title').position();
   $('#social-nav').css('left', (pos.left - 70));
@@ -32,5 +44,6 @@ function socialNavPosition() {
 
 function homepageTextPosition() {
   var pos = $(window).height() - $(".wrapper").height() - $("footer").height();
-  $('#hero-container').css('height', pos);
+  $('#hero-container').css('height', pos)
+  $('.blog').css('height', pos);
 }
