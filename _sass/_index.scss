@@ -1,0 +1,19 @@
+#homepage {
+  background-color: $blk;
+}
+
+#hero-container {
+  font-size: 8em;
+
+  .texts {
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    color: $twt-clr;
+
+    span {
+      color: $whte;
+      font-family: serif;
+    }
+  }
+}

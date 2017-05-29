@@ -11,13 +11,16 @@ $(function() {
   });
 
 
-  //====================================SOCIAL-NAV
+  //====================================SOCIAL-NAV & INDEX PAGE CONTENT
 
-  socialNavPosition();  // run once page loads
+  // run once page loads
+  socialNavPosition();
+  homepageTextPosition();
 
-  // reposition the social nav on window resize
+  // reposition the social nav on window resize & index page
   $(window).resize(function() {
     socialNavPosition();
+    homepageTextPosition();
   });
 
 });
@@ -25,4 +28,9 @@ $(function() {
 function socialNavPosition() {
   var pos = $('#title').position();
   $('#social-nav').css('left', (pos.left - 70));
+}
+
+function homepageTextPosition() {
+  var pos = $(window).height() - $(".wrapper").height() - $("footer").height();
+  $('#hero-container').css('height', pos);
 }

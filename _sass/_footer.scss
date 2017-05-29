@@ -26,11 +26,8 @@
 }
 
 @media only screen and (max-width: 415px) {
-  #twitter-btn {
-    display: none;
-  }
-
   .site-footer {
+    position: relative;
     padding-bottom: 0;
   }
 }

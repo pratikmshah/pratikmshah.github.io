@@ -606,7 +606,7 @@ pre {
     background-color: black; }
     .site-nav:hover .trigger a span {
       color: #00AEEF; } }
-/* homepage body */
+/* Blog body */
 .page-content {
   background-color: #F4F4F4; }
 
@@ -673,10 +673,7 @@ pre {
 
   .block {
     margin: 0 0 5px 0;
-    width: 100%; }
-
-  div.spacer {
-    height: 0; } }
+    width: 100%; } }
 /*Footer*/
 #twitter-btn {
   margin-bottom: 15px; }
@@ -704,10 +701,8 @@ pre {
   color: #fff; }
 
 @media only screen and (max-width: 415px) {
-  #twitter-btn {
-    display: none; }
-
   .site-footer {
+    position: relative;
     padding-bottom: 0; } }
 code, pre {
   font-family: "Source Code Pro", sans-serif !important; }
@@ -952,3 +947,17 @@ figcaption {
 
 pre {
   border: none; }
+
+#homepage {
+  background-color: black; }
+
+#hero-container {
+  font-size: 8em; }
+  #hero-container .texts {
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    color: #00AEEF; }
+    #hero-container .texts span {
+      color: #fff;
+      font-family: serif; }
