@@ -538,7 +538,7 @@ pre {
 @media only screen and (max-width: 415px) {
   #social-nav {
     display: none; } }
-/* Navigation editing */
+/* navigation editing */
 .site-nav {
   line-height: 0; }
 
@@ -546,6 +546,20 @@ pre {
 #title {
   color: #fff;
   font-weight: bold; }
+
+/* create underline effect for nav links */
+a.nav-link {
+  position: relative; }
+  a.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 1px solid #00AEEF;
+    transition: 0.75s; }
+  a.nav-link:hover:after {
+    width: 100%; }
 
 .font-title {
   font-family: "Lato", "Helvetica Neue", sans-serif; }
@@ -611,9 +625,7 @@ pre {
       color: #fff;
       text-decoration: none;
       letter-spacing: 1px;
-      border-bottom: 0; }
-      .nav-link span:hover {
-        border-bottom: 1px solid #00AEEF; } }
+      border-bottom: 0; } }
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
   .site-nav:hover .trigger {
@@ -651,13 +663,9 @@ pre {
       vertical-align: middle; }
       .block a.img-link img:hover {
         -webkit-transform: scale(1.5);
-        /* Safari and Chrome */
         -moz-transform: scale(1.5);
-        /* Firefox */
         -ms-transform: scale(1.5);
-        /* IE 9 */
         -o-transform: scale(1.5);
-        /* Opera */
         transform: scale(1.5); }
   .block div {
     padding: 5px 16px 16px 16px; }
@@ -912,7 +920,8 @@ pre {
   background-color: black; }
 
 #hero-container {
-  font-size: 8em; }
+  font-size: 8em;
+  font-family: "Times New Roman"; }
   #hero-container .texts {
     color: #00AEEF; }
     #hero-container .texts span {

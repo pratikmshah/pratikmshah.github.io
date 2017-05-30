@@ -23,14 +23,15 @@ $(function() {
   });
 
   //====================================INDEX TEXT CYCLE
-  var words = ['Developer', 'Trader', 'Investor', 'Read', 'Walk', 'Sightsee', 'Taco Bell'];
+  var words = ['Developer', 'with', 'Knowledge', 'of', 'HTML/CSS', 'JavaScript', 'Ruby', 'Rails',
+               'also', 'I like to', 'Trade', 'Invest', 'and', 'Taco Bell'];
   var wordLength = words.length;
   var word = 1;
 
   setInterval(function() {
     $('p.text').html("<p class=\"text text-center\">" + words[word]+ "<span>.</span></p>");
     word + 1 == wordLength ? word = 0 : word++;
-  }, 3000);
+  }, 1000);
 
 });
 
