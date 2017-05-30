@@ -651,13 +651,9 @@ pre {
       vertical-align: middle; }
       .block a.img-link img:hover {
         -webkit-transform: scale(1.5);
-        /* Safari and Chrome */
         -moz-transform: scale(1.5);
-        /* Firefox */
         -ms-transform: scale(1.5);
-        /* IE 9 */
         -o-transform: scale(1.5);
-        /* Opera */
         transform: scale(1.5); }
   .block div {
     padding: 5px 16px 16px 16px; }
@@ -912,7 +908,8 @@ pre {
   background-color: black; }
 
 #hero-container {
-  font-size: 8em; }
+  font-size: 8em;
+  font-family: "Times New Roman"; }
   #hero-container .texts {
     color: #00AEEF; }
     #hero-container .texts span {
