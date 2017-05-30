@@ -1,4 +1,4 @@
-/* Navigation editing */
+/* navigation editing */
 
 .site-nav {
   line-height: 0;
@@ -10,7 +10,28 @@
   font-weight: bold;
 }
 
-.font-title { font-family: $font-lato; }
+/* create underline effect for nav links */
+a.nav-link {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 1px solid $twt-clr;
+    transition: 0.75s;
+  }
+
+  &:hover:after {
+    width: 100%
+  }
+}
+
+.font-title {
+  font-family: $font-lato;
+}
 
 /* navigation link and dropdown list */
 
@@ -93,10 +114,6 @@
       text-decoration: none;
       letter-spacing: 1px;
       border-bottom: 0;
-
-      &:hover {
-        border-bottom: 1px solid $twt-clr;
-      }
     }
   }
 }
