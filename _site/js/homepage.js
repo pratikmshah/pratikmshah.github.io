@@ -23,20 +23,20 @@ $(function() {
   });
 
   //====================================INDEX TEXT CYCLE
-  var words = ['Developer', 'with', 'knowledge', 'in', 'devicon-html5-plain-wordmark colored', 'devicon-css3-plain-wordmark colored', 'devicon-javascript-plain colored', 'devicon-ruby-plain-wordmark colored', 'devicon-rails-plain-wordmark colored', 'devicon-sass-original colored', 'and', 'I continue', 'to learn', 'more'],
+  const COLOR = 'color';
+  var words = ['Hello', 'I\'m', 'a', 'developer', 'with', 'knowledge', 'in', 'devicon-html5-plain-wordmark colored', 'devicon-css3-plain-wordmark colored', 'devicon-javascript-plain colored', 'devicon-ruby-plain-wordmark colored', 'devicon-rails-plain-wordmark colored', 'devicon-sass-original colored', 'and', 'more'],
       wordLength = words.length,
       word = 1;
-  const COLOR = 'color';
+      $word = $('p.text');
 
   setInterval(function() {
     if (words[word].indexOf(COLOR) >= 0) {
-      $('p.text').html("<p class=\"text text-center " + words[word] + "\">" + "</p>");
+      $word.html("<p class=\"text text-center " + words[word] + "\">" + "</p>");
     } else {
-      $('p.text').empty();
-      $('p.text').html("<p class=\"text text-center\">" + words[word] + "<span>.</span></p>");
+      $word.html("<p class=\"text text-center\">" + words[word] + "<span>.</span></p>");
     }
     word + 1 == wordLength ? word = 0 : word++;
-  }, 4000);
+  }, 1000);
 
 });
 
