@@ -736,7 +736,8 @@ code, pre {
   display: block; }
   #post div.post-content {
     font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
-    line-height: 1.75em; }
+    line-height: 1.75em;
+    height: auto; }
     #post div.post-content h3 {
       font-weight: bold; }
 
