@@ -24,7 +24,7 @@ $(function() {
 
   //====================================INDEX TEXT CYCLE
   const COLOR = 'color';
-  var words = ['Hello', 'I\'m', 'a', 'developer', 'with', 'knowledge', 'in', 'devicon-html5-plain-wordmark colored', 'devicon-css3-plain-wordmark colored', 'devicon-javascript-plain colored', 'devicon-ruby-plain-wordmark colored', 'devicon-rails-plain-wordmark colored', 'devicon-sass-original colored', 'and', 'more'],
+  var words = ['Hello', 'I\'m', 'a', 'developer', 'with', 'knowledge', 'in', 'devicon-html5-plain-wordmark colored', 'devicon-css3-plain-wordmark colored', 'devicon-javascript-plain colored', 'devicon-ruby-plain-wordmark colored', 'devicon-rails-plain-wordmark colored', 'devicon-bootstrap-plain-wordmark colored', 'devicon-sass-original colored', 'and', 'more'],
       wordLength = words.length,
       word = 1;
       $word = $('p.text');
