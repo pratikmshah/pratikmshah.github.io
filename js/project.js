@@ -1,9 +1,9 @@
 $(function(){
   // call nextImage over and over every 3.5 seconds
-  setInterval('nextImage("#prism-slide")', 3500);   // prism
-  setInterval('nextImage("#idunno-slide")', 3500);  // idunno
-  setInterval('nextImage("#yeeld-slide")', 3500);   // yeeld
-
+  setInterval('nextImage("#prism-slide")', 3500);    // prism
+  setInterval('nextImage("#idunno-slide")', 3500);   // idunno
+  setInterval('nextImage("#yeeld-slide")', 3500);    // yeeld
+  setInterval('nextImage("#slideshow-demo")', 3500); // blog demo
 });
 
 function nextImage(id) {
