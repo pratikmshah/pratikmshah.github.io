@@ -10,7 +10,7 @@
   <meta name="keywords" content="HTML, CSS, JavaScript, Ruby, Jekyll, Sass, Rails, AngularJS, React">
   <meta name="author" content="Pratik Shah">
 
-  <title>Python 3 Guide</title>
+  <title>Python 3 Reference</title>
   <meta name="description" content="Python is a programming language which has gained quite attraction for people working with data; especially in the finance industry.  One reason why is its v...">
 
   <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
@@ -87,7 +87,7 @@
 
   <header class="post-header">
     <p class="post-meta"><time datetime="2017-06-05T00:00:00-05:00" itemprop="datePublished">Jun 5, 2017</time></p>
-    <h1 id="post-title" class="post-title" itemprop="name headline">Python 3 Guide</h1>
+    <h1 id="post-title" class="post-title" itemprop="name headline">Python 3 Reference</h1>
   </header>
 
   
@@ -101,9 +101,130 @@
 
 <p><br /></p>
 
-<h3 id="requirements">Requirements?</h3>
+<h3 id="table-of-contents">Table of Contents</h3>
+<ul>
+  <li><a href="#requirements">Requirements</a></li>
+  <li><a href="#syntax">Syntax</a></li>
+  <li><a href="#varobjval">Variables, Objects and Values</a></li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="requirements-">Requirements? <a name="requirements"></a></h3>
 
 <p>You will need to install a version of Python 3 from the installer found <a href="https://www.python.org/">here</a>. You will also need to a text editor and two popular ones as of this time are <a href="https://www.sublimetext.com/">sublime</a>. and <a href="http://atom.io/">atom</a>. Once those are installed you are ready to begin.</p>
+
+<p><br /></p>
+
+<h3 id="syntax-">Syntax <a name="syntax"></a></h3>
+
+<h4 id="main">Main</h4>
+
+<p>The main function is used so that functions can be invoked no matter where the function is defined. We need an if statement to insure that the main function gets called if one exists in the script.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/python3</span>
+<span class="c"># auto exec main function if exists</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Hello World!"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span> <span class="n">main</span><span class="p">()</span>
+
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="whitespace">Whitespace</h4>
+<p>The whitespace tell the compiler that the statements are associated with the preceding function or conditional. Traditionally there are 4 spaces for indentation. There are no character braces ({}) like there are in other languages to specify a block.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># this is correct</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Hello World!"</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"Line 2"</span><span class="p">)</span>
+
+<span class="c"># if you have one line to exec you can put all on one line</span>
+<span class="c"># you can put spaces after :</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span><span class="k">print</span><span class="p">(</span><span class="s">"This will work"</span><span class="p">)</span>
+
+<span class="c">#....</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span> <span class="n">main</span><span class="p">()</span>
+
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="comments">Comments</h4>
+<p>To comment use the <code class="highlighter-rouge">#</code> symbol for one line comments. Other languages have multi line comments; however, in python they should be avoided.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># this is a comment</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="assignment">Assignment</h4>
+<p>Assigning values is just like other languages by using the <code class="highlighter-rouge">=</code> operator. You also don’t need to specify the type of variable being created; like in ruby.</p>
+
+<p>You can see the class of the variable by using the <code class="highlighter-rouge">type(x)</code> function. Also you can mass assign variable in a single line.</p>
+
+<figure>
+  <img src="/img/posts/python3/assignment.png" class="blg-img" alt="assigning values" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="conditionals-structure">Conditionals Structure</h4>
+<p>The conditionals are similarly strucutred to how they are in other languages. Use <code class="highlighter-rouge">if</code>, <code class="highlighter-rouge">elif</code>, <code class="highlighter-rouge">else</code> to evaluate statements</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
+
+<span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"first statement"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"second statement"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"third statement"</span><span class="p">)</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<p>You can use ternary operation but instead of <code class="highlighter-rouge">?</code> and <code class="highlighter-rouge">:</code> you use <code class="highlighter-rouge">if</code> and <code class="highlighter-rouge">else</code>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
+<span class="n">x</span> <span class="o">=</span> <span class="s">"is True"</span> <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span> <span class="k">else</span> <span class="s">"is False"</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="function-structure">Function Structure</h4>
+<p>To create a function you must specify the <code class="highlighter-rouge">def</code> keyword followed by the <code class="highlighter-rouge">name</code> of the function and then brackets <code class="highlighter-rouge">()</code> or with arguments <code class="highlighter-rouge">(x)</code>. You can also specify default value for an argument <code class="highlighter-rouge">(a=3)</code>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># prints out a + b</span>
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="objects">Objects</h4>
+<p>You need a class before you can instantiate and object. Every class will have an <code class="highlighter-rouge">init</code> method which is called each time you create an object for that class.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># create person class</span>
+<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"John Smith"</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+  <span class="k">def</span> <span class="nf">getName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+
+<span class="c"># create a person object    </span>
+<span class="n">pratik</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="n">pratik</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Pratik Shah"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">pratik</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h3 id="variables-objects--values-">Variables, Objects &amp; Values <a name="varobjval"></a></h3>
 
   </div>
 
