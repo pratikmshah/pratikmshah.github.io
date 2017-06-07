@@ -105,7 +105,7 @@
 <ul>
   <li><a href="#requirements">Requirements</a></li>
   <li><a href="#syntax">Syntax</a></li>
-  <li><a href="#varobjval">Variables, Objects and Values</a></li>
+  <li><a href="#var-obj-val">Variables, Objects and Values</a></li>
 </ul>
 
 <p><br /></p>
@@ -224,7 +224,36 @@
 </div>
 <p><br /></p>
 
-<h3 id="variables-objects--values-">Variables, Objects &amp; Values <a name="varobjval"></a></h3>
+<h3 id="variables-objects--values-">Variables, Objects &amp; Values <a name="var-obj-val"></a></h3>
+<p>Everything in Python 3 is an object so it contains an ID, Type and Value.</p>
+
+<figure>
+  <img src="/img/posts/python3/objvar.png" class="blg-img" alt="object's value, id and type" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="mutable-or-immutable">Mutable or Immutable</h4>
+<p>Some object can in Python can change their values which would render them as mutable. If they cannot then they are immutable. You can tell if and object is immutable or not by looking to see if it’s ID has changed.</p>
+
+<p>Immutable - numbers, strings, tuples.</p>
+
+<p>Mutable - lists, dictionaries, and other objects depending on how they are implemented.</p>
+
+<p><br /></p>
+
+<h4 id="numbers">Numbers</h4>
+<p>There are two types of numbers: integers and floats. When you divide the return value is a float unless you round by using // or use round(expression, rounding_digits).</p>
+
+<p>You can also get the remainder of a number by using <code class="highlighter-rouge">%</code> modulus. If you want to convert floating point to integer you can typecast by using <code class="highlighter-rouge">int(x)</code> or vice versa <code class="highlighter-rouge">float(x)</code>.</p>
+
+<figure>
+  <img src="/img/posts/python3/numbers.png" class="blg-img" alt="object's value, id and type" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="strings">Strings</h4>
 
   </div>
 
