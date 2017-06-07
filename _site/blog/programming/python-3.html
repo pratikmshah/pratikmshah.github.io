@@ -112,6 +112,7 @@
   <li><a href="#regex">Regular Expressions</a></li>
   <li><a href="#except">Exceptions</a></li>
   <li><a href="#function">Functions</a></li>
+  <li><a href="#classes">Classes</a></li>
 </ul>
 
 <p><br /></p>
@@ -513,6 +514,91 @@
 <p><br /></p>
 
 <h3 id="functions-">Functions <a name="function"></a></h3>
+
+<h4 id="defining-a-function">Defining a Function</h4>
+<p>To create a function you must first use the <code class="highlighter-rouge">def</code> keyword followed by the name of the function and parenthesis with optional arguments, if any, ex: <code class="highlighter-rouge">def add(x, y)</code>. If you would like to create the function signature without any statements you can use the <code class="highlighter-rouge">pass</code> keyword so that the interpreter will skip over it.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># run main function on load</span>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">testfunc</span><span class="p">()</span>
+    <span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+
+<span class="c"># function without arguments</span>
+<span class="k">def</span> <span class="nf">testfunc</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"this is a test function"</span><span class="p">)</span>
+
+<span class="c"># function with arguments</span>
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span> <span class="n">main</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<h4 id="arguments">Arguments</h4>
+<p>If you don’t know the number of arguments that may be passed you can pass <code class="highlighter-rouge">*args</code> which will then give you access to the values through a tuple.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># function with unknown arguments</span>
+<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+      <span class="n">total</span> <span class="o">+=</span> <span class="n">i</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+
+<span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h4 id="named-functions">Named Functions</h4>
+<p>Use named arguments <code class="highlighter-rouge">**kwargs</code> to specify default values and access via dictionary.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">numbers</span><span class="p">(</span><span class="n">one</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ten</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">hundred</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c"># function with named arguments</span>
+<span class="k">def</span> <span class="nf">numbers</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s">'one'</span><span class="p">],</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">'ten'</span><span class="p">])</span>
+
+<span class="n">main</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<h4 id="return-values-from-functions">Return Values from Functions</h4>
+<p>Use <code class="highlighter-rouge">return</code> keyword followed by object or variable</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">numbers</span><span class="p">()</span>
+
+<span class="c"># function with named arguments</span>
+<span class="k">def</span> <span class="nf">numbers</span><span class="p">():</span>
+    <span class="k">return</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="n">main</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<h4 id="generator-function">Generator Function</h4>
+<p>The generator function allows you to continue running statements after the <code class="highlighter-rouge">yield</code> keyword each time it runs until the loop becomes false.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+      <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">' '</span><span class="p">)</span>
+
+<span class="c"># function with named arguments</span>
+<span class="k">def</span> <span class="nf">numbers</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">start</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">stop</span><span class="p">:</span>
+      <span class="k">yield</span> <span class="n">i</span>
+      <span class="n">i</span> <span class="o">+=</span> <span class="n">step</span>
+
+<span class="n">main</span><span class="p">()</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h3 id="classes-">Classes <a name="classes"></a></h3>
+
+<h3>#</h3>
 
   </div>
 
