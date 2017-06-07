@@ -598,7 +598,205 @@
 
 <h3 id="classes-">Classes <a name="classes"></a></h3>
 
-<h3>#</h3>
+<h4 id="classes-and-objects">Classes and Objects</h4>
+<p>Classes are how you create your own objects. A class is the blueprint for an object. An object is an instance of a class.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># create human class</span>
+<span class="k">class</span> <span class="nc">Human</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'Hello!'</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'Zoom zoom!'</span><span class="p">)</span>
+
+<span class="c"># create an instance from Human class        </span>
+<span class="n">pratik</span> <span class="o">=</span> <span class="n">Human</span><span class="p">()</span>
+<span class="n">pratik</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
+<span class="n">pratik</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<h4 id="methods">Methods</h4>
+<p>Call an attribute of an object by using the <code class="highlighter-rouge">.</code> operator. The keyword <code class="highlighter-rouge">self</code> refers to the instance of the object. You can create a constructor method <code class="highlighter-rouge">def __init__(self)</code> which auto executes when a new instance of the class is created.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># create human class</span>
+<span class="k">class</span> <span class="nc">Human</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+
+    <span class="k">def</span> <span class="nf">info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"My name is {} and I am {} years old and am {} tall"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
+
+<span class="c"># create an instance from Human class        </span>
+<span class="n">pratik</span> <span class="o">=</span> <span class="n">Human</span><span class="p">(</span><span class="s">"Pratik"</span><span class="p">,</span> <span class="s">"25"</span><span class="p">,</span> <span class="s">"5</span><span class="se">\'</span><span class="s">7"</span><span class="p">)</span>
+<span class="n">pratik</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<h4 id="object-data">Object Data</h4>
+<p>After creating attributes for an object you can create methods to get and set values of each attribute. A better design would be to take in a hash of values and mass assign it.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># create human class</span>
+<span class="k">class</span> <span class="nc">Human</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+
+    <span class="k">def</span> <span class="nf">info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"My name is {} and I am {} years old and am {} tall"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">set_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+<span class="n">pratik</span> <span class="o">=</span> <span class="n">Human</span><span class="p">(</span><span class="s">"Pratik"</span><span class="p">,</span> <span class="s">"25"</span><span class="p">,</span> <span class="s">"5</span><span class="se">\'</span><span class="s">7"</span><span class="p">)</span>
+<span class="n">pratik</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">pratik</span><span class="o">.</span><span class="n">get_name</span><span class="p">())</span>
+</code></pre>
+</div>
+
+<p>scalability refactoring</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">variables</span> <span class="o">=</span> <span class="n">kwargs</span>
+
+<span class="k">def</span> <span class="nf">set_variable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">variables</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+
+<span class="k">def</span> <span class="nf">get_variable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">variables</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h4 id="inheritance">Inheritance</h4>
+<p>A class can use methods of another class via inheritance. To inherit you simply drop the class as an argument to the inheriting class ex: <code class="highlighter-rouge">def Human(Mammal)</code>. If you have conflicting method signatures the child will override the parent unless you use the <code class="highlighter-rouge">super().methodName()</code>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># create mammal class</span>
+<span class="k">class</span> <span class="nc">Mammal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">walk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">print</span><span class="p">(</span><span class="s">'I walk normally.'</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">print</span><span class="p">(</span><span class="s">'I can speak!'</span><span class="p">)</span>
+
+<span class="c"># human class inherits from Mammal</span>
+<span class="k">class</span> <span class="nc">Human</span><span class="p">(</span><span class="n">Mammal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
+
+    <span class="k">def</span> <span class="nf">info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"My name is {} and I am {} years old and am {} tall"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
+
+    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+
+    <span class="k">def</span> <span class="nf">set_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+      <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+    <span class="c"># The super().method() will call the parent</span>
+    <span class="k">def</span> <span class="nf">walk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">walk</span><span class="p">()</span>
+      <span class="k">print</span><span class="p">(</span><span class="s">'Zoom Zoom!'</span><span class="p">)</span>
+
+<span class="n">pratik</span> <span class="o">=</span> <span class="n">Human</span><span class="p">(</span><span class="s">"Pratik"</span><span class="p">,</span> <span class="s">"25"</span><span class="p">,</span> <span class="s">"5</span><span class="se">\'</span><span class="s">7"</span><span class="p">)</span>
+<span class="n">pratik</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">pratik</span><span class="o">.</span><span class="n">get_name</span><span class="p">())</span>
+<span class="n">pratik</span><span class="o">.</span><span class="n">walk</span><span class="p">()</span>
+<span class="n">pratik</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
+</code></pre>
+</div>
+
+<h4 id="polymorphism">Polymorphism</h4>
+<p>Transforms one class as if it was another class. Also known is duck typing. This is good to create one super class to be used by multiple sub classes.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Wooof!'</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">walk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Runs!'</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">fur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Lots of it.'</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
+  <span class="k">def</span> <span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Meeeoooowww!'</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">walk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Slow!'</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">fur</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'Silky smooth'</span><span class="p">)</span>
+
+<span class="n">bud</span> <span class="o">=</span> <span class="n">Dog</span><span class="p">()</span>
+<span class="n">whisk</span> <span class="o">=</span> <span class="n">Cat</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="p">(</span><span class="n">bud</span><span class="p">,</span> <span class="n">whisk</span><span class="p">):</span>
+  <span class="n">obj</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span>
+  <span class="n">obj</span><span class="o">.</span><span class="n">walk</span><span class="p">()</span>
+  <span class="n">obj</span><span class="o">.</span><span class="n">fur</span><span class="p">()</span>
+
+<span class="c"># create method where it takes an obj</span>
+<span class="k">def</span> <span class="nf">dog_or_cat_doesnt_matter</span><span class="p">(</span><span class="n">dog</span><span class="p">):</span>
+  <span class="n">dog</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span>
+  <span class="n">dog</span><span class="o">.</span><span class="n">walk</span><span class="p">()</span>
+
+<span class="c"># put cat obj inside method for dog obj</span>
+<span class="n">dog_or_cat_doesnt_matter</span><span class="p">(</span><span class="n">whisk</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h4 id="using-generators">Using Generators</h4>
+<p>You can create a class that is iterate-able.  You need to specify in the class the method <code class="highlighter-rouge">def __iter__(self)</code>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">inclusive_range</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+      <span class="n">numargs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+      <span class="k">if</span> <span class="n">numargs</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span> <span class="k">raise</span> <span class="nb">TypeError</span><span class="p">(</span><span class="s">'Requires 1 or more arguments'</span><span class="p">)</span>
+      <span class="k">elif</span> <span class="n">numargs</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">stop</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">step</span> <span class="o">=</span> <span class="mi">1</span>
+      <span class="k">elif</span> <span class="n">numargs</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">)</span> <span class="o">=</span> <span class="n">args</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">step</span> <span class="o">=</span> <span class="mi">1</span>
+      <span class="k">elif</span> <span class="n">numargs</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="p">)</span> <span class="o">=</span> <span class="n">args</span>
+      <span class="k">else</span><span class="p">:</span> <span class="k">raise</span> <span class="nb">TypeError</span><span class="p">(</span><span class="s">'Expected 3 arguments, got {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">numargs</span><span class="p">))</span>
+
+    <span class="c"># allows class to iterate</span>
+    <span class="k">def</span> <span class="nf">__iter_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+      <span class="n">i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span>
+      <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">:</span>
+          <span class="k">yield</span> <span class="n">i</span>
+          <span class="n">i</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">step</span>
+</code></pre>
+</div>
+
+<h4 id="decorators">Decorators</h4>
+<p>Special functions that return other functions. Using <code class="highlighter-rouge"><span class="k">@property</span></code> before a getter or setter method turns it into a decorator. Other decs are <code class="highlighter-rouge">@prop.setter</code> or <code class="highlighter-rouge">@prop.deleter</code>. This will give the control to the object and you don’t have to call the method each time simply access the property and set a new value.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nd">@property</span>
+<span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'name'</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+
+<span class="nd">@name.setter</span>
+<span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+<span class="c"># you can now do this</span>
+<span class="n">pratik</span> <span class="o">=</span> <span class="n">Human</span><span class="p">()</span>
+
+<span class="n">pratik</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Pratik"</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h2>#</h2>
 
   </div>
 
