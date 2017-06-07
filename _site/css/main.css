@@ -912,7 +912,8 @@ h4 {
   font-weight: bold; }
 
 figure {
-  margin: 25px 0; }
+  margin-top: 25px;
+  margin-bottom: 15px; }
 
 figcaption {
   text-align: center;
