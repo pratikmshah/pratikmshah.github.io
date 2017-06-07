@@ -109,6 +109,9 @@
   <li><a href="#conditional">Conditionals</a></li>
   <li><a href="#loops">Loops</a></li>
   <li><a href="#operator">Operators</a></li>
+  <li><a href="#regex">Regular Expressions</a></li>
+  <li><a href="#except">Exceptions</a></li>
+  <li><a href="#function">Functions</a></li>
 </ul>
 
 <p><br /></p>
@@ -441,6 +444,75 @@
 <p>Basic order of operations work when adding, subtracting etc… Use <code class="highlighter-rouge">()</code> to evaluate a block that you need first. Here is a link to <a href="http://www.mathcs.emory.edu/~valerie/courses/fall10/155/resources/op_precedence.html">Python’s Order of Operations</a></p>
 
 <p><br /></p>
+
+<h3 id="regular-expressions-">Regular Expressions <a name="regex"></a></h3>
+
+<h4 id="regex-module">RegEx Module</h4>
+<p>Regular expressions helps match patterns in text. In Python you use the <code class="highlighter-rouge">re</code> module to implement regular expressions. The module must be imported first <code class="highlighter-rouge">import re</code>. To use it you simply use method <code class="highlighter-rouge">re.compile(r'\d')</code> to create a pattern and <code class="highlighter-rouge">re.search(regex, text)</code> to search for the pattern within the text.</p>
+<ul>
+  <li><a href="http://regexr.com/">RegEx Resource</a></li>
+  <li><a href="https://docs.python.org/3/library/re.html">Python Docs</a></li>
+</ul>
+
+<h4 id="searching--replacing">Searching &amp; Replacing</h4>
+<p>To search and replace text use the sub method <code class="highlighter-rouge">sub(search_text, replace_val, text)</code>.</p>
+
+<h4 id="regex-compiling">RegEx Compiling</h4>
+<p>To precompile the regex you will be looking for use the <code class="highlighter-rouge">compile(pattern)</code> method and set it to a variable ex: <code class="highlighter-rouge">pattern = re.compile('Pratik')</code></p>
+
+<p><br /></p>
+
+<h3 id="exceptions-">Exceptions <a name="except"></a></h3>
+<p>Exceptions are use to handle error control. You can use <code class="highlighter-rouge">try</code> and <code class="highlighter-rouge">catch</code> to execute statements and retrieve errors if any. You can create your own exceptions with <code class="highlighter-rouge">raise</code></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
+    <span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"filename"</span><span class="p">)</span>
+<span class="k">except</span> <span class="nb">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span><span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h4 id="handling-exceptions">Handling Exceptions</h4>
+<p>Use <code class="highlighter-rouge">try</code> and <code class="highlighter-rouge">except</code> for code that may return errors.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># this will catch all error</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"errrrror.txt"</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"File open error"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+
+<span class="c">#-----------------------------</span>
+
+<span class="c"># you can also specify a specific error type</span>
+<span class="k">except</span> <span class="nb">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</code></pre>
+</div>
+
+<h4 id="raising-exceptions">Raising Exceptions</h4>
+<p>You can create your own custom error messages by using <code class="highlighter-rouge">raise</code></p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># check to see if the filename ends with .doc</span>
+<span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">'.doc'</span><span class="p">):</span>
+  <span class="n">fh</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="k">raise</span> <span class="n">FileExtension</span><span class="p">(</span><span class="s">'Filename must end with .doc'</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"errrrror.txt"</span><span class="p">)</span>
+<span class="k">except</span> <span class="n">FileExtension</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Bad filename"</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p><br /></p>
+
+<h3 id="functions-">Functions <a name="function"></a></h3>
 
   </div>
 
