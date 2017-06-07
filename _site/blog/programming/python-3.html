@@ -107,6 +107,8 @@
   <li><a href="#syntax">Syntax</a></li>
   <li><a href="#var-obj-val">Variables, Objects and Values</a></li>
   <li><a href="#conditional">Conditionals</a></li>
+  <li><a href="#loops">Loops</a></li>
+  <li><a href="#operator">Operators</a></li>
 </ul>
 
 <p><br /></p>
@@ -303,7 +305,7 @@
 
 <h3 id="conditionals-">Conditionals <a name="conditional"></a></h3>
 
-<h4 id="if-else-statements">If Else Statements</h4>
+<h4 id="if-elif-else-statements">If Elif Else Statements</h4>
 <p>Use <code class="highlighter-rouge">if</code> keyword followed by a statement to run a block of code if the statement evaluates to <code class="highlighter-rouge">True</code>. You can add an <code class="highlighter-rouge">else</code> statement which executes a block of code in the event that the statement in the if evaluates to <code class="highlighter-rouge">False</code></p>
 
 <figure>
@@ -342,6 +344,101 @@
 <span class="k">print</span><span class="p">(</span><span class="s">"X is true"</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="bp">True</span> <span class="k">else</span> <span class="s">"X is false"</span><span class="p">)</span>
 </code></pre>
 </div>
+
+<p><br /></p>
+
+<h3 id="loops-">Loops <a name="loops"></a></h3>
+
+<h4 id="while">While</h4>
+<p>The <code class="highlighter-rouge">while</code> loop loops through until the expression evaluates to false. While loop ex: <code class="highlighter-rouge">while x &lt; 15</code>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># fibonacci sequence up to 10</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">' '</span><span class="p">)</span>
+  <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="for">For</h4>
+<p><code class="highlighter-rouge">for</code> loops allows you to to iterate through an object’s values one by one. For loop ex; <code class="highlighter-rouge">for i in cards</code>. For introduces the loop, variable i represents each value one by one and cards will be object you are looping through. You can loop through almost any object.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'text'</span><span class="p">,</span> <span class="mf">4.57</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="for-with-counter-og-style">For with Counter (OG style)</h4>
+<p>You can use the enumerate method to create and index while looping. <code class="highlighter-rouge">for index, line in enumerate(array)</code>.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]):</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="break--continue">Break &amp; Continue</h4>
+<p>If you want to skip an occurrence in a loop use <code class="highlighter-rouge">continue</code>. If you want to break out of the loop completely use <code class="highlighter-rouge">break</code>. Python also has an <code class="highlighter-rouge">else</code> statement which gets run once the loop condition becomes <code class="highlighter-rouge">False</code>.</p>
+
+<figure>
+  <img src="/img/posts/python3/break-cont.png" class="blg-img" alt="break continue else" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="operators-">Operators <a name="operator"></a></h3>
+
+<h4 id="arithmetic">Arithmetic</h4>
+<ul>
+  <li><code class="highlighter-rouge">+</code> add</li>
+  <li><code class="highlighter-rouge">-</code> subtract</li>
+  <li><code class="highlighter-rouge">*</code> multiply</li>
+  <li><code class="highlighter-rouge">/</code> divide</li>
+  <li><code class="highlighter-rouge">//</code> divides and floors number</li>
+  <li><code class="highlighter-rouge">*</code> returns remainder</li>
+  <li><code class="highlighter-rouge">divmod(5, 3)</code> will return both number and remainder</li>
+  <li><code class="highlighter-rouge">+=</code>, <code class="highlighter-rouge">-=</code>, <code class="highlighter-rouge">*=</code>, <code class="highlighter-rouge">/=</code>, <code class="highlighter-rouge">//=</code> short hand</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="comparison">Comparison</h4>
+<p>The comparison operators will either return <code class="highlighter-rouge">True</code> or <code class="highlighter-rouge">False</code></p>
+<ul>
+  <li><code class="highlighter-rouge">&lt;</code> less than</li>
+  <li><code class="highlighter-rouge">&gt;</code> greater than</li>
+  <li><code class="highlighter-rouge">&lt;=</code> less than or equal to</li>
+  <li><code class="highlighter-rouge">&gt;=</code> greater than or equal to</li>
+  <li><code class="highlighter-rouge">==</code> equal to</li>
+  <li><code class="highlighter-rouge">!=</code> not equal to</li>
+  <li><code class="highlighter-rouge">is</code> and <code class="highlighter-rouge">is not</code> will compare ids of Objects</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="boolean-1">Boolean</h4>
+<p><code class="highlighter-rouge">True</code> and <code class="highlighter-rouge">False</code> are part of boolean class</p>
+<ul>
+  <li><code class="highlighter-rouge">and</code> both statments must be true</li>
+  <li><code class="highlighter-rouge">or</code> one of the two statements must be true</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="container-with-slice">Container with Slice</h4>
+<p>You can use slices or ranges to return a specific starting and end point in an object. The last point is non inclusive.</p>
+
+<figure>
+  <img src="/img/posts/python3/slice.png" class="blg-img" alt="slice" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="operator-precedence">Operator Precedence</h4>
+<p>Basic order of operations work when adding, subtracting etc… Use <code class="highlighter-rouge">()</code> to evaluate a block that you need first. Here is a link to <a href="http://www.mathcs.emory.edu/~valerie/courses/fall10/155/resources/op_precedence.html">Python’s Order of Operations</a></p>
 
 <p><br /></p>
 
