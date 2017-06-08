@@ -796,7 +796,42 @@
 </div>
 <p><br /></p>
 
-<h2>#</h2>
+<h3 id="string-methods">String Methods</h3>
+
+<h4 id="object-of-type-string--methods">Object of Type String &amp; Methods</h4>
+<ul>
+  <li><code class="highlighter-rouge">.format(var)</code> use format method to do string interpolation</li>
+  <li><code class="highlighter-rouge">.capitalize()</code> will capitalize the first letter</li>
+  <li><code class="highlighter-rouge">.upper()</code> will capitalize all letters</li>
+  <li><code class="highlighter-rouge">.lower()</code> will lowercase all letters</li>
+  <li><code class="highlighter-rouge">.swapcase()</code> will alter the case of the letter</li>
+  <li><code class="highlighter-rouge">.find('str')</code> will return first index of the letter found</li>
+  <li><code class="highlighter-rouge">.replace('str', 'str2')</code> replaces and returns a new string (new ID)</li>
+  <li><code class="highlighter-rouge">.strip()</code> removes all whitespaces</li>
+  <li><code class="highlighter-rouge">.rstrip()</code> removes whitespaces at end of string</li>
+  <li><code class="highlighter-rouge">.isalnum()</code> checks to see if all characters are alphanumeric (t/f)</li>
+  <li><code class="highlighter-rouge">.isalpha()</code> checks for characters a-z</li>
+  <li><code class="highlighter-rouge">.isdigit()</code> checks to see if text are all digits</li>
+  <li><code class="highlighter-rouge">.isprintable()</code> checks to see if all characters are printable</li>
+</ul>
+
+<h4 id="string-format">String Format</h4>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># this will display b twice and a once.</span>
+<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">4</span>
+<span class="s">'this {1} will display {1} {0}'</span>
+
+<span class="c"># you can even use variables and drop in a dictionary in the format</span>
+<span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span> <span class="n">pratik</span> <span class="o">=</span> <span class="n">a</span><span class="p">,</span> <span class="n">john</span> <span class="o">=</span> <span class="n">b</span><span class="p">)</span>
+<span class="s">'my name is {pratik} and he is {john}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">d</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h4 id="split-and-join-strings">Split and Join Strings</h4>
+<ul>
+  <li><code class="highlighter-rouge">.split()</code> will split each word one by one</li>
+  <li><code class="highlighter-rouge">.split('split text')</code> will split each time based on “split text”</li>
+  <li><code class="highlighter-rouge">'join divider'.join(arr_to_join)</code> will join string and place “join divider” in between each word.</li>
+</ul>
 
   </div>
 
