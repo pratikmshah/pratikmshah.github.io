@@ -117,6 +117,7 @@
   <li><a href="#containers">Containers</a></li>
   <li><a href="#fileio">File I/O</a></li>
   <li><a href="#database">Databases</a></li>
+  <li><a href="#module">Modules</a></li>
 </ul>
 
 <p><br /></p>
@@ -932,6 +933,52 @@
 <p><br /></p>
 
 <h3 id="databases-">Databases <a name="database"></a></h3>
+
+<h4 id="sqlite-3-database">SQLite 3 Database</h4>
+<p>Python works well with SQLite 3 for databases and even contains a built in class for it: <code class="highlighter-rouge">import sqlite3</code>. Create a db by using <code class="highlighter-rouge">sqlite3.connect('name.db')</code> and use the <code class="highlighter-rouge">.execute('text command')</code> command to drop, add and select data. Use <code class="highlighter-rouge">commit()</code> to save the records to the db. To get rows back in an object form use the command <code class="highlighter-rouge">sqlite3.Row</code>.</p>
+
+<p><br /></p>
+
+<h3 id="modules-">Modules <a name="module"></a></h3>
+
+<h4 id="standard-library">Standard Library</h4>
+<p>Python has quite a few standard library modules that you can use which can be found here <a href="https://docs.python.org/3/library/">DOCS</a>.</p>
+<ul>
+  <li><code class="highlighter-rouge">sys</code> allows you to get back system specs
+    <ul>
+      <li><code class="highlighter-rouge">.version_info</code> sends back python version</li>
+      <li><code class="highlighter-rouge">.platform</code> sends back OS kernal version</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">os</code> send back operating system information
+    <ul>
+      <li><code class="highlighter-rouge">.name</code> gets back OS name</li>
+      <li><code class="highlighter-rouge">.getenv(var_name)</code> gets back environment variable</li>
+      <li><code class="highlighter-rouge">.getcwd</code> get working directory path</li>
+      <li><code class="highlighter-rouge">.name</code> gets back OS name</li>
+      <li><code class="highlighter-rouge">.urandom(n)</code> gets random n bytes of letters</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">urllib.request</code> used to get url pages
+    <ul>
+      <li><code class="highlighter-rouge">.urlopen(url)</code> get back http webpage object (must convert from binary)</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">random</code>
+    <ul>
+      <li><code class="highlighter-rouge">randint(start, stop)</code> gets back random number from and to start stop</li>
+      <li><code class="highlighter-rouge">shuffle(x)</code> shuffles around an array/list</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">datetime</code>
+    <ul>
+      <li><code class="highlighter-rouge">datetime.now()</code> gets back time in year, month, day, hour, minute, seconds, microseconds</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="third-party-pypi-modules">Third Party PyPi Modules</h4>
+<p><a href="https://pypi.python.org/pypi">List of modules</a>. The modules installed are located in <code class="highlighter-rouge">site-packages</code></p>
 
   </div>
 
