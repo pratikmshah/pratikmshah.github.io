@@ -113,6 +113,9 @@
   <li><a href="#except">Exceptions</a></li>
   <li><a href="#function">Functions</a></li>
   <li><a href="#classes">Classes</a></li>
+  <li><a href="#strings">String Methods</a></li>
+  <li><a href="#containers">Containers</a></li>
+  <li><a href="#fileio">File I/O</a></li>
 </ul>
 
 <p><br /></p>
@@ -796,7 +799,7 @@
 </div>
 <p><br /></p>
 
-<h3 id="string-methods">String Methods</h3>
+<h3 id="string-methods--">String Methods  <a name="strings"></a></h3>
 
 <h4 id="object-of-type-string--methods">Object of Type String &amp; Methods</h4>
 <ul>
@@ -832,6 +835,45 @@
   <li><code class="highlighter-rouge">.split('split text')</code> will split each time based on “split text”</li>
   <li><code class="highlighter-rouge">'join divider'.join(arr_to_join)</code> will join string and place “join divider” in between each word.</li>
 </ul>
+
+<p><br /></p>
+
+<h3 id="containers-">Containers <a name="containers"></a></h3>
+
+<h4 id="tuples-and-lists-methods">Tuples and Lists Methods</h4>
+<p>To create a tuple you must include a <code class="highlighter-rouge">,</code> or else it will return an integer ex: <code class="highlighter-rouge">t = (1,)</code></p>
+<ul>
+  <li><code class="highlighter-rouge">len(list)</code> gets length of collection</li>
+  <li><code class="highlighter-rouge">min(list)</code> gets smallest data</li>
+  <li><code class="highlighter-rouge">max(list)</code> gets largest data</li>
+  <li><code class="highlighter-rouge">x in list</code> returns t/f if x is in tuple</li>
+  <li><code class="highlighter-rouge">x not in list</code> returns t/f if x is not in tuple</li>
+  <li><code class="highlighter-rouge">.count(x)</code> returns occurrence of x</li>
+  <li><code class="highlighter-rouge">.index(x)</code> returns the first index x is found at</li>
+  <li><code class="highlighter-rouge">.append(x)</code> appends x to list (NO WORK ON TUPPLE)</li>
+  <li><code class="highlighter-rouge">.extend(x)</code> appends x to end of list</li>
+  <li><code class="highlighter-rouge">.insert(i, v)</code> inserts v into index i</li>
+  <li><code class="highlighter-rouge">.remove(v)</code> removes first occurrence of v</li>
+  <li><code class="highlighter-rouge">del arr[i]</code> deletes arr data at index i</li>
+  <li><code class="highlighter-rouge">.pop()</code> removes last element in list</li>
+  <li><code class="highlighter-rouge">.pop(i)</code> removes element at index i</li>
+</ul>
+
+<h4 id="dictionaries-methods">Dictionaries Methods</h4>
+<ul>
+  <li><code class="highlighter-rouge">dict( name = v, name2, v2)</code> creates dictionary</li>
+  <li><code class="highlighter-rouge">'one' in hash</code> returns true/false if key is in dictionary</li>
+  <li><code class="highlighter-rouge">h.get('two')</code> gets value from dictionary</li>
+  <li><code class="highlighter-rouge">h.get('two', default)</code> gets value from dictionary else returns default value</li>
+  <li><code class="highlighter-rouge">del h['one']</code> deletes dictionary key value</li>
+  <li><code class="highlighter-rouge">h.pop(key)</code> deletes dictionary key value</li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="file-io-">File I/O <a name="fileio"></a></h3>
+
+<h4 id="opening-files">Opening Files</h4>
 
   </div>
 
