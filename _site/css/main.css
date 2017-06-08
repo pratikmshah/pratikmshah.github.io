@@ -557,7 +557,7 @@ a.nav-link {
     left: 0;
     width: 0%;
     border-bottom: 1px solid #00AEEF;
-    transition: 0.75s; }
+    transition: 0.50s; }
   a.nav-link:hover:after {
     width: 100%; }
 
@@ -906,8 +906,14 @@ time {
   height: auto;
   border: 1px solid #E0E0E0; }
 
+h4 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: bold; }
+
 figure {
-  margin: 10px 0; }
+  margin-top: 25px;
+  margin-bottom: 15px; }
 
 figcaption {
   text-align: center;
@@ -915,7 +921,12 @@ figcaption {
   font-style: italic; }
 
 pre {
-  border: none; }
+  border: none;
+  margin-top: 30px !important;
+  margin-bottom: 50px !important; }
+
+ul, ol {
+  margin-left: 30px; }
 
 #homepage {
   background-color: black; }

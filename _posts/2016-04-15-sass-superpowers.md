@@ -4,7 +4,7 @@ date:   2016-04-15
 image: "/sass-blog/sass-logo.png"
 ---
 
-If you get frustrated with how messy and unmanageable your CSS gets, wish you didn't have to specify properties over and over, or wished you could compute mathematical operations then you need Sass an extention of CSS that does all of this and more. I wished I had known about Sass sooner as I would have saved countless hours of time writting CSS. Lucky for you today I am going to give you the full crash coure of how to write in the Sass scripting language. Don't worry its as easy as learning Texas Holdem and you will thank yourself for learning it.
+If you get frustrated with how messy and unmanageable your CSS gets, wish you didn't have to specify properties over and over, or wished you could compute mathematical operations then you need Sass an extension of CSS that does all of this and more. I wished I had known about Sass sooner as I would have saved countless hours of time writing CSS. Lucky for you today I am going to give you the full crash course of how to write in the Sass scripting language. Don't worry its as easy as learning Texas Holdem and you will thank yourself for learning it.
 
 <br>
 

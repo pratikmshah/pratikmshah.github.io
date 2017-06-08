@@ -265,7 +265,7 @@ You should now see a list of the first 3 articles but we are missing the navigat
 [jekyll-docs]: https://jekyllrb.com/docs/installation/
 [jekyll-documentation]: https://jekyllrb.com/docs/configuration/
 [markdown-cheat]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-[markdown-virtual]: dillinger.io/
+[markdown-virtual]: dillinger.io
 [permalink-link]: https://jekyllrb.com/docs/permalinks/
 [template]: https://jekyllrb.com/docs/pagination/
 [comments-addon]: https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions

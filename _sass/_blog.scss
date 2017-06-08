@@ -17,8 +17,15 @@
   border: 1px solid #E0E0E0;
 }
 
+h4 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
 figure {
-  margin: 10px 0;
+  margin-top: 25px;
+  margin-bottom: 15px;
 }
 
 figcaption {
@@ -29,4 +36,10 @@ figcaption {
 
  pre {
   border: none;
+  margin-top: 30px !important;
+  margin-bottom: 50px !important;
+}
+
+ul, ol {
+  margin-left: 30px;
 }
