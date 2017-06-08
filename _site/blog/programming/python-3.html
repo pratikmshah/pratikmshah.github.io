@@ -874,6 +874,60 @@
 <h3 id="file-io-">File I/O <a name="fileio"></a></h3>
 
 <h4 id="opening-files">Opening Files</h4>
+<p>To open files use <code class="highlighter-rouge">open('text.txt')</code> and it will send back file object.</p>
+<ul>
+  <li><code class="highlighter-rouge">r</code> read only mode</li>
+  <li><code class="highlighter-rouge">w</code> write only mode</li>
+  <li><code class="highlighter-rouge">a</code> append mode</li>
+  <li><code class="highlighter-rouge">r+</code> read and write</li>
+  <li><code class="highlighter-rouge">rt</code> text file mode</li>
+  <li><code class="highlighter-rouge">rb</code> binary mode</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># alternate options r = read only, w = write, a = append to end of file.</span>
+<span class="c"># r+ for read and write</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'text.txt'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+  <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s">''</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h4 id="reading-and-writing-files">Reading and Writing Files</h4>
+<p>For small text files you can copy line by line</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">infile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'lines.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
+<span class="n">outfile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'new.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">infile</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="nb">file</span> <span class="o">=</span> <span class="n">outfile</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s">''</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Use buffer for large text files to copy in chunks</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">buffersize</span> <span class="o">=</span> <span class="mi">50000</span>
+<span class="n">infile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'lines.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
+<span class="n">outfile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'new.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+<span class="nb">buffer</span> <span class="o">=</span> <span class="n">infile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">buffersize</span><span class="p">)</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="nb">buffer</span><span class="p">):</span>
+    <span class="n">outfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">buffer</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'.'</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s">''</span><span class="p">)</span>
+    <span class="nb">buffer</span> <span class="o">=</span> <span class="n">infile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">buffersize</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<h4 id="reading-and-writing-binary-files">Reading and Writing Binary Files</h4>
+<p>You must open the file in binary mode but also use buffer</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">buffersize</span> <span class="o">=</span> <span class="mi">50000</span>
+<span class="n">infile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'pics.jpg'</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">)</span>
+<span class="n">outfile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'new.jpg'</span><span class="p">,</span> <span class="s">'w'</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">buffer</span> <span class="o">=</span> <span class="n">infile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">buffersize</span><span class="p">)</span>
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="nb">buffer</span><span class="p">):</span>
+    <span class="n">outfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">buffer</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'.'</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s">''</span><span class="p">)</span>
+    <span class="nb">buffer</span> <span class="o">=</span> <span class="n">infile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">buffersize</span><span class="p">)</span>
+</code></pre>
+</div>
 
   </div>
 
