@@ -58,9 +58,7 @@ function homepageTextPosition() {
 }
 
 function toggleListNav() {
-  if( $(window).width() <= 600 ) {
-    $('ul.trigger').removeClass('list-inline');
-  } else {
-    $('ul.trigger').addClass('list-inline');
-  }
+  return $(window).width() <= 600 ? $('ul.trigger').removeClass('list-inline') :
+                                    $('ul.trigger').addClass('list-inline');
+
 }
