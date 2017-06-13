@@ -166,7 +166,8 @@ pre {
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
-  text-decoration: none; }
+  text-decoration: none;
+  visibility: hidden; }
 
 .site-nav {
   float: right;
