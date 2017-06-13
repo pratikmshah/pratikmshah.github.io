@@ -15,18 +15,18 @@
         </svg>
       </a>
 
-      <div class="trigger">
-        <div class="cust-page-lnks">
+      <ul class="trigger list-unstyled list-inline">
+        <li class="cust-page-lnks">
           <a class="page-link nav-link" href="{{ site.baseurl }}/"><span class="font-title">Home</span></a>
-        </div>
+        </li>
         {% for my_page in site.pages %}
           {% if my_page.title %}
-            <div class="cust-page-lnks">
+            <li class="cust-page-lnks">
               <a class="page-link nav-link" href="{{ my_page.url | prepend: site.baseurl }}"><span class="font-title">{{ my_page.title }}</span></a>
-            </div>
+            </li>
           {% endif %}
         {% endfor %}
-      </div>
+      </ul>
 
     </nav>
   </div>

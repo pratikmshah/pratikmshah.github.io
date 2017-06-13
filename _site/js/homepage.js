@@ -15,11 +15,13 @@ $(function() {
   // run once page loads
   socialNavPosition();
   homepageTextPosition();
+  toggleListNav();
 
   // reposition the social nav on window resize & index page
   $(window).resize(function() {
     socialNavPosition();
     homepageTextPosition();
+    toggleListNav();
   });
 
   /*====================================INDEX TEXT CYCLE
@@ -53,4 +55,12 @@ function homepageTextPosition() {
   $('#hero-container').css('height', pos)
   $('.blog').css('height', pos);
   $('#about').css('height', pos);
+}
+
+function toggleListNav() {
+  if( $(window).width() <= 600 ) {
+    $('ul.trigger').removeClass('list-inline');
+  } else {
+    $('ul.trigger').addClass('list-inline');
+  }
 }
