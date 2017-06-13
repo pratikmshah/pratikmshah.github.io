@@ -166,7 +166,8 @@ pre {
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
-  text-decoration: none; }
+  text-decoration: none;
+  visibility: hidden; }
 
 .site-nav {
   float: right;
@@ -858,9 +859,12 @@ time {
     color: #fff;
     max-width: 750px;
     padding: 15px; }
-    #about div h2 {
+    #about div h1 {
       font-weight: bold;
-      margin-bottom: 18px; }
+      margin-bottom: 1.5em;
+      letter-spacing: 25px; }
+      #about div h1 span {
+        letter-spacing: 0; }
     #about div p {
       text-align: left;
       font-weight: lighter;
@@ -891,7 +895,9 @@ time {
     transform: none; } }
 @media only screen and (max-width: 350px) {
   #about {
-    min-height: 600px; } }
+    min-height: 600px; }
+    #about div h1 {
+      margin-bottom: 0.75em; } }
 /*utility tool when writting blog post*/
 .blg-lists {
   margin-left: 25px; }
@@ -933,14 +939,19 @@ ul, ol {
 
 #hero-container {
   font-size: 8em;
-  font-family: "Times New Roman"; }
+  font-family: "Lato", "Open Sans", "Helvetica Neue", sans-serif; }
   #hero-container .colored {
     font-size: 3.0em; }
   #hero-container .texts {
     color: #00AEEF; }
-    #hero-container .texts span {
-      color: #fff;
-      font-family: serif; }
+    #hero-container .texts p {
+      letter-spacing: 25px;
+      background: -webkit-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+      background: -moz-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent; }
 
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {

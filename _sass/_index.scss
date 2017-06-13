@@ -4,16 +4,21 @@
 
 #hero-container {
   font-size: 8em;
-  font-family: "Times New Roman";
+  font-family: $font-project;
 
   .colored { font-size: 3.0em; }
 
   .texts {
     color: $twt-clr;
 
-    span {
-      color: $whte;
-      font-family: serif;
+    p {
+      letter-spacing: 25px;
+      background: -webkit-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+      background: -moz-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
     }
   }
 }

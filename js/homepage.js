@@ -15,14 +15,16 @@ $(function() {
   // run once page loads
   socialNavPosition();
   homepageTextPosition();
+  toggleListNav();
 
   // reposition the social nav on window resize & index page
   $(window).resize(function() {
     socialNavPosition();
     homepageTextPosition();
+    toggleListNav();
   });
 
-  //====================================INDEX TEXT CYCLE
+  /*====================================INDEX TEXT CYCLE
   const COLOR = 'color';
   var words = ['Hello', 'I\'m', 'a', 'developer', 'with', 'knowledge', 'in', 'devicon-html5-plain-wordmark colored', 'devicon-css3-plain-wordmark colored', 'devicon-javascript-plain colored', 'devicon-ruby-plain-wordmark colored', 'devicon-rails-plain-wordmark colored', 'devicon-bootstrap-plain-wordmark colored', 'devicon-sass-original colored', 'and', 'more'],
       wordLength = words.length,
@@ -37,7 +39,7 @@ $(function() {
     }
     word + 1 == wordLength ? word = 0 : word++;
   }, 1000);
-
+  */
 });
 
 
@@ -53,4 +55,10 @@ function homepageTextPosition() {
   $('#hero-container').css('height', pos)
   $('.blog').css('height', pos);
   $('#about').css('height', pos);
+}
+
+function toggleListNav() {
+  return $(window).width() <= 600 ? $('ul.trigger').removeClass('list-inline') :
+                                    $('ul.trigger').addClass('list-inline');
+
 }
