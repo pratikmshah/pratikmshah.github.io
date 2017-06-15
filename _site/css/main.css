@@ -953,8 +953,8 @@ ul, ol {
     color: #00AEEF; }
     #hero-container .texts p {
       letter-spacing: 25px;
-      background: -webkit-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-      background: -moz-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+      background: -webkit-linear-gradient(left, #296ad4 0%, #4e8ef7 100%);
+      background: -moz-linear-gradient(left, #296ad4 0%, #4e8ef7 100%);
       -webkit-background-clip: text;
       -moz-background-clip: text;
       -webkit-text-fill-color: transparent;
