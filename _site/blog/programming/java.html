@@ -114,6 +114,8 @@
     <ul>
       <li><a href="#variables">Declare and Initialize Variables</a></li>
       <li><a href="#numbers">Numbers</a></li>
+      <li><a href="#cnumbers">Convert Numbers</a></li>
+      <li><a href="#operator">Operators</a></li>
     </ul>
   </li>
 </ol>
@@ -189,6 +191,8 @@
 </div>
 
 <p>You can declare variables inside a function or outside which will change the variable’s scope visibility. If you declare it inside the function the variable can only be used inside the function. If it is declared outside then it is a class/field variable and can be used everywhere.</p>
+
+<p><br /></p>
 
 <h4 id="numbers-">Numbers <a name="numbers"></a></h4>
 <p>A primitive data type has only one value and cannot hold complex objects such as strings.</p>
@@ -273,6 +277,40 @@
 <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">bigDec</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
 </code></pre>
 </div>
+<p><br /></p>
+
+<h4 id="convert-numbers-">Convert Numbers <a name="cnumbers"></a></h4>
+<p>The primitive data types from the smallest to the largest memory usage and value storage are:</p>
+<ul>
+  <li>byte</li>
+  <li>short</li>
+  <li>int</li>
+  <li>long</li>
+  <li>float</li>
+  <li>double
+You can implicitly convert a number upwards from short to int to long by assigning the value of the smaller type to the bigger one.</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">15</span><span class="o">;</span>           <span class="c1">// 15</span>
+<span class="kt">long</span> <span class="n">longUpcast</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>  <span class="c1">// 15.0</span>
+</code></pre>
+</div>
+
+<p>If you want to convert downwards then you need to explicitly tell the compiler via typecast. An alternative is to use a helper class method from the class of the type.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// typecasting</span>
+<span class="kt">double</span> <span class="n">dubVal</span> <span class="o">=</span> <span class="mf">15.74</span><span class="o">;</span>      
+<span class="kt">int</span> <span class="n">intDowncast</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span><span class="n">dubVal</span><span class="o">;</span>
+
+<span class="c1">// helper class</span>
+<span class="kt">double</span> <span class="n">dValue</span> <span class="o">=</span> <span class="mf">5.55</span><span class="o">;</span>
+<span class="kt">double</span> <span class="n">doubleObject</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Double</span><span class="o">(</span><span class="n">dValue</span><span class="o">);</span>
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">doubleObject</span><span class="o">.</span><span class="na">intValue</span><span class="o">();</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="operators-">Operators <a name="operator"></a></h4>
 
   </div>
 
