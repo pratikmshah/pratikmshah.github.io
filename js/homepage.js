@@ -13,13 +13,13 @@ $(function() {
 
   //====================================SOCIAL-NAV & INDEX PAGE CONTENT
   // run once page loads
-  socialNavPosition();
+  //socialNavPosition();
   homepageTextPosition();
   toggleListNav();
 
   // reposition the social nav on window resize & index page
   $(window).resize(function() {
-    socialNavPosition();
+    //socialNavPosition();
     homepageTextPosition();
     toggleListNav();
   });
