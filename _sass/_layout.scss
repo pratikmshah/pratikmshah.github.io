@@ -18,13 +18,12 @@
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
-    float: left;
     text-decoration: none;
     visibility: hidden;
+    width: 0;
 }
 
 .site-nav {
-    float: right;
     line-height: 56px;
 
     .menu-icon {
