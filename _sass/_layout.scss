@@ -25,7 +25,10 @@
 
 .site-nav {
     min-height: 44px;
-    
+    margin: 0 auto;
+    max-width: 450px;
+    z-index: 10;
+
     .menu-icon {
         display: none;
     }
