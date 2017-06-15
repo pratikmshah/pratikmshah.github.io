@@ -191,6 +191,88 @@
 <p>You can declare variables inside a function or outside which will change the variable’s scope visibility. If you declare it inside the function the variable can only be used inside the function. If it is declared outside then it is a class/field variable and can be used everywhere.</p>
 
 <h4 id="numbers-">Numbers <a name="numbers"></a></h4>
+<p>A primitive data type has only one value and cannot hold complex objects such as strings.</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Data Type</th>
+      <th>Bits</th>
+      <th>Minimum</th>
+      <th>Maximum</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>byte</td>
+      <td>8</td>
+      <td>-128</td>
+      <td>127</td>
+    </tr>
+    <tr>
+      <td>short</td>
+      <td>16</td>
+      <td>-32,768</td>
+      <td>32,767</td>
+    </tr>
+    <tr>
+      <td>int</td>
+      <td>32</td>
+      <td>-2,147,483,648</td>
+      <td>2,147,483,647</td>
+    </tr>
+    <tr>
+      <td>long</td>
+      <td>64</td>
+      <td>-9.22337E+18</td>
+      <td>9.22337E+18</td>
+    </tr>
+    <tr>
+      <td>float</td>
+      <td>32</td>
+      <td class="text-center" colspan="2">See documentation</td>
+    </tr>
+    <tr>
+      <td>double</td>
+      <td>64</td>
+      <td class="text-center" colspan="2">See documentation</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="cm">/* PRIMITIVE DATA TYPES */</span>
+
+<span class="kt">byte</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+
+<span class="kt">short</span> <span class="n">s</span> <span class="o">=</span> <span class="mi">15</span><span class="o">;</span>
+
+<span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">100</span><span class="o">;</span>
+
+<span class="cm">/*
+ L, f and d should be included else the value will be cast from byte short int to long, float or double causing more memory to be used.
+*/</span>
+
+<span class="kt">long</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">1000L</span><span class="o">;</span>
+
+<span class="kt">float</span> <span class="n">f</span> <span class="o">=</span> <span class="mf">125.75f</span><span class="o">;</span>
+
+<span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">125.5d</span><span class="o">;</span>
+</code></pre>
+</div>
+
+<p>You can access each primitive value’s helper class which is typically the data type with the first letter being capitalized ex: <code class="highlighter-rouge">byte -&gt; Byte</code>. Only exception is <code class="highlighter-rouge">int -&gt; Integer</code>.</p>
+
+<p>If you are doing big computational or currency and need precision then you need to use the <code class="highlighter-rouge">BigDecimal</code> class. Create the <code class="highlighter-rouge">BigDecimal</code> object from a string or else you will have floater values and will lose precision.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// create BigDecimal object</span>
+<span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">123.45</span><span class="o">;</span>
+<span class="n">String</span> <span class="n">dStr</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">d</span><span class="o">);</span>
+<span class="n">BigDecimal</span> <span class="n">bigDec</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BigDecimal</span><span class="o">(</span><span class="n">dStr</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">bigDec</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+</code></pre>
+</div>
 
   </div>
 
