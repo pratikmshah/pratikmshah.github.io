@@ -122,7 +122,8 @@ pre {
   margin-right: auto;
   margin-left: auto;
   padding-right: 10px;
-  padding-left: 10px; }
+  padding-left: 10px;
+  padding-top: 10px; }
   @media screen and (max-width: 960px) {
     .wrapper {
       max-width: -webkit-calc(990px - (10px));
@@ -165,13 +166,15 @@ pre {
   line-height: 56px;
   letter-spacing: -1px;
   margin-bottom: 0;
-  float: left;
   text-decoration: none;
-  visibility: hidden; }
+  visibility: hidden;
+  width: 0; }
 
 .site-nav {
-  float: right;
-  line-height: 56px; }
+  min-height: 44px;
+  margin: 0 auto;
+  max-width: 450px;
+  z-index: 10; }
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
@@ -467,6 +470,9 @@ pre {
   .highlight .il {
     color: #099; }
 
+.debug {
+  border: 1px solid red; }
+
 .center {
   display: block;
   margin: 0 auto;
@@ -540,9 +546,6 @@ pre {
   #social-nav {
     display: none; } }
 /* navigation editing */
-.site-nav {
-  line-height: 0; }
-
 /*navigation title*/
 #title {
   color: #fff;
@@ -571,7 +574,7 @@ a.nav-link {
   display: inline-block; }
 
 .prj-content {
-  z-index: 9999;
+  z-index: 5;
   display: none;
   position: absolute;
   min-width: 200px;
@@ -602,9 +605,9 @@ a.nav-link {
 #prj-nav:hover .prj-content {
   display: block; }
 
-.cust-page-lnks {
-  float: left;
-  margin-right: 20px; }
+ul li.cust-page-lnks {
+  margin: 0 20px;
+  padding-bottom: 15px; }
 
 @media only screen and (max-width: 600px) {
   .cust-page-lnks {
@@ -630,9 +633,13 @@ a.nav-link {
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
   .site-nav:hover .trigger {
-    background-color: black; }
+    background-color: black;
+    margin: 0; }
     .site-nav:hover .trigger a span {
-      color: #00AEEF; } }
+      color: #00AEEF; }
+    .site-nav:hover .trigger li.cust-page-lnks {
+      margin-left: 0;
+      padding-bottom: 5px; } }
 /* Blog body */
 .page-content {
   background-color: #F4F4F4; }
@@ -946,8 +953,8 @@ ul, ol {
     color: #00AEEF; }
     #hero-container .texts p {
       letter-spacing: 25px;
-      background: -webkit-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-      background: -moz-linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+      background: -webkit-linear-gradient(left, #296ad4 0%, #4e8ef7 100%);
+      background: -moz-linear-gradient(left, #296ad4 0%, #4e8ef7 100%);
       -webkit-background-clip: text;
       -moz-background-clip: text;
       -webkit-text-fill-color: transparent;

@@ -18,14 +18,16 @@
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
-    float: left;
     text-decoration: none;
     visibility: hidden;
+    width: 0;
 }
 
 .site-nav {
-    float: right;
-    line-height: 56px;
+    min-height: 44px;
+    margin: 0 auto;
+    max-width: 450px;
+    z-index: 10;
 
     .menu-icon {
         display: none;

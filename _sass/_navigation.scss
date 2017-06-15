@@ -1,8 +1,5 @@
 /* navigation editing */
 
-.site-nav {
-  line-height: 0;
-}
 
 /*navigation title*/
 #title {
@@ -41,7 +38,7 @@ a.nav-link {
 }
 
 .prj-content {
-  z-index: 9999;
+  z-index: 5;
   display: none;
   position: absolute;
   min-width: 200px;
@@ -81,9 +78,9 @@ a.nav-link {
   .prj-content { display: block; }
 }
 
-.cust-page-lnks {
-  float: left;
-  margin-right: 20px;
+ul li.cust-page-lnks {
+  margin: 0 20px;
+  padding-bottom: 15px;
 }
 
 @media only screen and (max-width: 600px){
@@ -122,9 +119,15 @@ a.nav-link {
 @media only screen and (max-width: 600px) {
   .site-nav:hover .trigger {
     background-color: $blk;
+    margin: 0;
 
     a span {
       color: $twt-clr;
+    }
+
+    li.cust-page-lnks {
+      margin-left: 0;
+      padding-bottom: 5px;
     }
   }
 
