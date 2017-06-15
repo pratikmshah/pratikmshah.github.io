@@ -102,14 +102,26 @@
 <p><br /></p>
 
 <h3 id="table-of-contents">Table of Contents</h3>
-<ul>
-  <li><a href="#resource">Resources</a></li>
-  <li><a href="#cli-compile-run">CLI Compile &amp; Run</a></li>
-</ul>
+<ol>
+  <li><a href="#intro">Intro</a>
+    <ul>
+      <li><a href="#resource">Resources</a></li>
+      <li><a href="#cli-compile-run">CLI Compile &amp; Run</a></li>
+      <li><a href="#memory">Memory Management</a></li>
+    </ul>
+  </li>
+  <li><a href="#data-types">Data Types</a>
+    <ul>
+      <li><a href="#variables">Declare and Initialize Variables</a></li>
+      <li><a href="#numbers">Numbers</a></li>
+    </ul>
+  </li>
+</ol>
 
 <p><br /></p>
 
-<h3 id="resources-">Resources <a name="resource"></a></h3>
+<h3 id="intro-">Intro <a name="intro"></a></h3>
+<h4 id="resources-">Resources <a name="resource"></a></h4>
 <ul>
   <li><a href="http://www.oracle.com/technetwork/java/index.html">Java Home</a></li>
   <li><a href="https://eclipse.org/">Eclipse IDE</a></li>
@@ -118,7 +130,7 @@
 
 <p><br /></p>
 
-<h3 id="cli-compile--run-">CLI Compile &amp; Run <a name="cli-compile-run"></a></h3>
+<h4 id="cli-compile--run-">CLI Compile &amp; Run <a name="cli-compile-run"></a></h4>
 <p>To compile your java class you need to navigate using your console to the <code class="highlighter-rouge">src</code> directory. You then need to compile your java class using <code class="highlighter-rouge">javac Name.java</code> and Java is case sensitive. Then to run the compiled app you use <code class="highlighter-rouge">java Name</code> without the .class.</p>
 
 <p>To view a list of all the <code class="highlighter-rouge">javac</code> commands type <code class="highlighter-rouge">javac</code> to view the entire list. If you want to see what java compiler is doing in the background use the <code class="highlighter-rouge">-verbose</code> command and it will list every action being done while compiling.</p>
@@ -135,7 +147,50 @@
 
 <p><br /></p>
 
-<h3 id="cli-compile--run--1">CLI Compile &amp; Run <a name="cli-compile-run"></a></h3>
+<h4 id="memory-management-">Memory Management <a name="memory"></a></h4>
+<p>Java manages memory usage automatically using the garbage collector. When you create an object they are stored in heap memory and as long as the variable references an object it is retained.</p>
+
+<p>Variables expire in 2 ways. The first is if you are running a code block in which a variable is created then after the block has been executed then the variable that was created can be destroyed. The second way is for you to assign the variable to <code class="highlighter-rouge">null</code>.</p>
+
+<p>The garbage collector has its own set of algorithm to identify when to destroy and reclaim memory. You as the developer can design your program to use the least amount of memory as possible. If you need to know the amount of memory available use the below methods to assist.</p>
+
+<ul>
+  <li>Runtime.maxMemory()</li>
+  <li>Runtime.totalMemory()</li>
+  <li>Runtime.freeMemory()</li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="data-types-">Data Types <a name="data-types"></a></h3>
+<p>Everything in Java is an object. Each data type has their own class for example: strings have their own class called String with several useful methods that can be used. Each time you create a data type you are creating an instance of a class.</p>
+
+<p><br /></p>
+
+<h4 id="declare-and-initialize-variables-">Declare and Initialize Variables <a name="variables"></a></h4>
+<p>There are two types of variables that Java has. Primitives are stored in fast memory and are Integers, Floats, Chars, or Booleans. The other data type is complex objects which can be Strings, Dates and everything else.</p>
+
+<p>To declare a primitive data type in Java you need to 3 things.</p>
+<ul>
+  <li>Data Type</li>
+  <li>Variable Name</li>
+  <li>Value (optional)</li>
+</ul>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// data type - variable name = value</span>
+<span class="kt">int</span> <span class="n">myVar</span> <span class="o">=</span> <span class="mi">15</span><span class="o">;</span>
+</code></pre>
+</div>
+<p>To declare objects you also need to 3 things and the <code class="highlighter-rouge">new</code> keyword.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// data type class - variable name = initial value from constructor</span>
+<span class="n">Dog</span> <span class="n">fido</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dog</span><span class="o">();</span>
+</code></pre>
+</div>
+
+<p>You can declare variables inside a function or outside which will change the variable’s scope visibility. If you declare it inside the function the variable can only be used inside the function. If it is declared outside then it is a class/field variable and can be used everywhere.</p>
+
+<h4 id="numbers-">Numbers <a name="numbers"></a></h4>
 
   </div>
 
