@@ -1,8 +1,5 @@
 /* navigation editing */
 
-.site-nav {
-  line-height: 0;
-}
 
 /*navigation title*/
 #title {
@@ -81,9 +78,9 @@ a.nav-link {
   .prj-content { display: block; }
 }
 
-.cust-page-lnks {
-  float: left;
-  margin-right: 20px;
+ul li.cust-page-lnks {
+  margin: 0 20px;
+  padding-bottom: 15px;
 }
 
 @media only screen and (max-width: 600px){
