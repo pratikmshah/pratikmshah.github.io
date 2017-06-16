@@ -126,6 +126,7 @@
       <li><a href="#condition">Conditionals</a></li>
       <li><a href="#switch">Switch Statement</a></li>
       <li><a href="#loop">Loops</a></li>
+      <li><a href="#method">Method</a></li>
     </ul>
   </li>
 </ol>
@@ -575,7 +576,33 @@ You can implicitly convert a number upwards from short to int to long by assigni
 </div>
 <p><br /></p>
 
-<h4 id="loops--1">Loops <a name="loop"></a></h4>
+<h4 id="methods-">Methods <a name="method"></a></h4>
+<p>Methods are equivalent to functions like in other languages. They are called methods because in OOP functions or an object are called methods and everything in Java is an object. Methods are good to create if you see yourself running the same code over and over again. Every method must be defined within a class. The one method you always see is <code class="highlighter-rouge">public static void main(String[] args)</code>.</p>
+
+<p>There are three types of methods you can create: <code class="highlighter-rouge">public</code>, <code class="highlighter-rouge">private</code>, <code class="highlighter-rouge">protected</code>.</p>
+<ul>
+  <li>public - method is available to the entire program as long as it can access it.</li>
+  <li>private - method is only available to the class it is in.</li>
+  <li>protected - method is available to the class and its inherited class.</li>
+</ul>
+
+<p>The <code class="highlighter-rouge">static</code> keyword means that the method is a class method vs an instance method. Static methods can call other static methods and instance methods can call other instance methods.</p>
+
+<p>Next you declare the return type if you are returning a data type else just put <code class="highlighter-rouge">void</code>. After you name the method using camel case followed by parentheses with optional arguments: <code class="highlighter-rouge">myMethod()</code>.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">saySomething</span><span class="o">();</span>
+  <span class="o">}</span>
+
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">saySomething</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"You just ran this method."</span><span class="o">);</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
 
   </div>
 
