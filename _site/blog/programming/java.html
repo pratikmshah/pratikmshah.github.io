@@ -116,6 +116,7 @@
       <li><a href="#numbers">Numbers</a></li>
       <li><a href="#cnumbers">Convert Numbers</a></li>
       <li><a href="#operator">Operators</a></li>
+      <li><a href="#char">Characters</a></li>
     </ul>
   </li>
 </ol>
@@ -353,6 +354,32 @@ You can implicitly convert a number upwards from short to int to long by assigni
   <li><code class="highlighter-rouge">||</code> at least one side must evaluate to true</li>
   <li><code class="highlighter-rouge">instanceof</code> Class membership ex: <code class="highlighter-rouge">str instanceof java.lang.String</code></li>
 </ul>
+
+<p><br /></p>
+
+<h4 id="characters-">Characters <a name="char"></a></h4>
+<p>You can work with single characters by using the primitive data type of <code class="highlighter-rouge">char</code>. To assign variable to a single character you must use single quotes. You can also assign <a href="https://en.wikipedia.org/wiki/List_of_Unicode_characters">unicode</a> to characters. You can use the <code class="highlighter-rouge">Character</code> class to find helper methods.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">char</span> <span class="n">chr1</span> <span class="o">=</span> <span class="sc">'a'</span><span class="o">;</span>
+    <span class="kt">char</span> <span class="n">chr2</span> <span class="o">=</span> <span class="sc">'A'</span><span class="o">;</span>
+    <span class="kt">char</span> <span class="n">chr3</span> <span class="o">=</span> <span class="sc">'3'</span><span class="o">;</span>
+    <span class="kt">char</span> <span class="n">pound</span> <span class="o">=</span> <span class="err">'\</span><span class="n">u00A3</span><span class="err">'</span><span class="o">;</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">chr1</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">chr2</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">chr3</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">pound</span><span class="o">);</span>
+
+    <span class="kt">char</span> <span class="n">chr4</span> <span class="o">=</span> <span class="sc">'y'</span><span class="o">;</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">Character</span><span class="o">.</span><span class="na">toUpperCase</span><span class="o">(</span><span class="n">chr4</span><span class="o">));</span>    
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
 
   </div>
 
