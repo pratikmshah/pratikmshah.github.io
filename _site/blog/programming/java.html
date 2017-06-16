@@ -121,6 +121,12 @@
       <li><a href="#str">Strings</a></li>
     </ul>
   </li>
+  <li><a href="#ctrl">Control Flow</a>
+    <ul>
+      <li><a href="#condition">Conditionals</a></li>
+      <li><a href="#switch">Switch Statement</a></li>
+    </ul>
+  </li>
 </ol>
 
 <p><br /></p>
@@ -429,6 +435,100 @@ You can implicitly convert a number upwards from short to int to long by assigni
 <span class="o">}</span>
 </code></pre>
 </div>
+<p><br /></p>
+
+<h3 id="control-flow-">Control Flow <a name="ctrl"></a></h3>
+
+<h4 id="conditionals-">Conditionals <a name="condition"></a></h4>
+<p>Use the keyword <code class="highlighter-rouge">if</code> to control the flow of the program. The syntax is <code class="highlighter-rouge">if (condition)</code> followed by a code block. You can also add in the additional keywords <code class="highlighter-rouge">else if</code> and <code class="highlighter-rouge">else</code> for multiple condition checks. If you are comparing strings you will need to use methods from the string class to compare ex: <code class="highlighter-rouge">equals(str)</code> <code class="highlighter-rouge">str.equals(str2)</code>.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+
+    <span class="k">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">5</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Excellent Rating!"</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">else</span> <span class="nf">if</span> <span class="o">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Good but not great."</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">else</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Junk Rating"</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="switch-statement-">Switch Statement <a name="switch"></a></h4>
+<p>Use switch statements to evaluate a single int, byte, short, enum and string (Java 7 only). Use the <code class="highlighter-rouge">switch</code>, <code class="highlighter-rouge">case</code>, <code class="highlighter-rouge">break</code>, and <code class="highlighter-rouge">default</code> keywords. The <code class="highlighter-rouge">break</code> keyword is used to exit a code block. You can also use <code class="highlighter-rouge">enum</code> which are a list of constants and good to pair with switch statements.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// switch structure</span>
+<span class="k">switch</span> <span class="o">(</span><span class="n">key</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">case</span> <span class="nl">value:</span>
+
+    <span class="k">break</span><span class="o">;</span>
+
+  <span class="k">default</span><span class="o">;</span>
+    <span class="k">break</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Scanner</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">Scanner</span> <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="n">System</span><span class="o">.</span><span class="na">in</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Rate this ad with a # between 1 - 5: "</span><span class="o">);</span>
+    <span class="kt">int</span> <span class="n">rate</span> <span class="o">=</span> <span class="n">input</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
+
+    <span class="k">switch</span> <span class="o">(</span><span class="n">rate</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">case</span> <span class="mi">5</span><span class="o">:</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Excellent"</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+      <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Great"</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+      <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Average"</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+      <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Poor"</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+      <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Bad"</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+      <span class="k">default</span><span class="o">:</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Out of range select between 1 - 5"</span><span class="o">);</span>
+        <span class="k">break</span><span class="o">;</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// enum example</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">enum</span> <span class="n">Days</span> <span class="o">{</span>
+    <span class="n">Monday</span><span class="o">,</span> <span class="n">Tuesday</span><span class="o">,</span> <span class="n">Wednesday</span><span class="o">,</span> <span class="n">Thursday</span><span class="o">,</span> <span class="n">Friday</span><span class="o">,</span> <span class="n">Saturday</span><span class="o">,</span> <span class="n">Sunday</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="n">Days</span> <span class="n">day</span> <span class="o">=</span> <span class="n">Days</span><span class="o">.</span><span class="na">Tuesday</span><span class="o">;</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">day</span><span class="o">.</span><span class="na">Thursday</span><span class="o">);</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p><br /></p>
+
+<h4 id="switch-statement--enum-">Switch Statement &amp; Enum <a name="switch"></a></h4>
 
   </div>
 
