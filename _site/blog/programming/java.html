@@ -118,6 +118,7 @@
       <li><a href="#operator">Operators</a></li>
       <li><a href="#char">Characters</a></li>
       <li><a href="#bool">Booleans</a></li>
+      <li><a href="#str">Strings</a></li>
     </ul>
   </li>
 </ol>
@@ -399,6 +400,30 @@ You can implicitly convert a number upwards from short to int to long by assigni
     <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
     <span class="kt">boolean</span> <span class="n">num</span> <span class="o">=</span> <span class="o">(</span><span class="n">i</span> <span class="o">!=</span> <span class="mi">3</span><span class="o">);</span>
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">num</span><span class="o">);</span> <span class="c1">// prints true   </span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="strings-">Strings <a name="str"></a></h4>
+<p>Java can print any number type as a string which it automatically does when using the print or println. In Java it doesn’t matter if you concatenate and begin the expression with a number because if there is one string involved the entire expression becomes a string. Every object in Java has a <code class="highlighter-rouge">toString()</code> method. So if you were concatenating an object to a string it would call its <code class="highlighter-rouge">toString()</code> method.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Date</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1421313</span><span class="o">;</span>
+    <span class="kt">double</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">3.14</span><span class="o">;</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>   
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">d</span><span class="o">);</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="mi">1</span> <span class="o">+</span> <span class="s">" string "</span> <span class="o">+</span> <span class="mi">5</span><span class="o">);</span>  
+
+    <span class="n">Date</span> <span class="n">today</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The date is "</span> <span class="o">+</span> <span class="n">today</span><span class="o">);</span>
 
   <span class="o">}</span>
 <span class="o">}</span>
