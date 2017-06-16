@@ -125,6 +125,7 @@
     <ul>
       <li><a href="#condition">Conditionals</a></li>
       <li><a href="#switch">Switch Statement</a></li>
+      <li><a href="#loop">Loops</a></li>
     </ul>
   </li>
 </ol>
@@ -528,7 +529,53 @@ You can implicitly convert a number upwards from short to int to long by assigni
 
 <p><br /></p>
 
-<h4 id="switch-statement--enum-">Switch Statement &amp; Enum <a name="switch"></a></h4>
+<h4 id="loops-">Loops <a name="loop"></a></h4>
+<p>There are several types of loops that can be helpful repeating the same code over and over or loop through and array. When creating loops you need to make sure that there will be a point in time when the condition returns false or else you will have an infinite loop.</p>
+
+<p>The <code class="highlighter-rouge">for</code> loop consists of three parts: <code class="highlighter-rouge">for (int i = 0; i &lt; 10; i++)</code>. The first is a counter variable. The second is the comparison that when return false will exit the loop. The last is an increment to the counter variable.</p>
+
+<p>The <code class="highlighter-rouge">for each</code> loop is used to loop through an entire array or hash once ex: <code class="highlighter-rouge">for (Integer day : days)</code>.</p>
+
+<p>The <code class="highlighter-rouge">while</code> loop checks the condition first then runs the code ex: <code class="highlighter-rouge">while (x != 0)</code>.</p>
+
+<p>The <code class="highlighter-rouge">do while</code> loop runs the code at least once and then checks the condition ex: <code class="highlighter-rouge">do { code } while (x != 0);</code>.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span><span class="o">[]</span> <span class="n">data</span> <span class="o">=</span> <span class="o">{</span> <span class="mi">10</span><span class="o">,</span> <span class="mi">20</span><span class="o">,</span> <span class="mi">30</span><span class="o">,</span> <span class="mi">40</span><span class="o">,</span> <span class="mi">50</span><span class="o">,</span> <span class="mi">60</span><span class="o">,</span> <span class="mi">70</span><span class="o">,</span> <span class="mi">80</span><span class="o">,</span> <span class="mi">90</span><span class="o">,</span> <span class="mi">100</span> <span class="o">};</span>
+
+    <span class="c1">// For Loop</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">data</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">data</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// For Each</span>
+    <span class="k">for</span> <span class="o">(</span><span class="n">Integer</span> <span class="n">num</span> <span class="o">:</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">num</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">// While Loop</span>
+    <span class="kt">int</span>  <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="k">while</span> <span class="o">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">data</span><span class="o">.</span><span class="na">length</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">data</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+      <span class="n">i</span><span class="o">++;</span>
+    <span class="o">}</span>
+
+    <span class="c1">// Do While Loop</span>
+    <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="k">do</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">data</span><span class="o">[</span><span class="n">j</span><span class="o">]);</span>
+      <span class="n">j</span><span class="o">++;</span>
+    <span class="o">}</span> <span class="k">while</span> <span class="o">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">data</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="loops--1">Loops <a name="loop"></a></h4>
 
   </div>
 
