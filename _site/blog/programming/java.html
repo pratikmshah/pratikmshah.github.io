@@ -117,6 +117,7 @@
       <li><a href="#cnumbers">Convert Numbers</a></li>
       <li><a href="#operator">Operators</a></li>
       <li><a href="#char">Characters</a></li>
+      <li><a href="#bool">Booleans</a></li>
     </ul>
   </li>
 </ol>
@@ -375,6 +376,29 @@ You can implicitly convert a number upwards from short to int to long by assigni
     <span class="kt">char</span> <span class="n">chr4</span> <span class="o">=</span> <span class="sc">'y'</span><span class="o">;</span>
 
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">Character</span><span class="o">.</span><span class="na">toUpperCase</span><span class="o">(</span><span class="n">chr4</span><span class="o">));</span>    
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="booleans-">Booleans <a name="bool"></a></h4>
+<p>Booleans are <code class="highlighter-rouge">true</code> or <code class="highlighter-rouge">false</code> values thats it. Use the <code class="highlighter-rouge">Boolean</code> class in order to use helper methods.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">boolean</span> <span class="n">x</span> <span class="o">=</span> <span class="kc">true</span><span class="o">;</span>
+    <span class="kt">boolean</span> <span class="n">y</span> <span class="o">=</span> <span class="kc">false</span><span class="o">;</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">x</span><span class="o">);</span>  <span class="c1">// prints true    </span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">y</span><span class="o">);</span>  <span class="c1">// prints false</span>
+
+    <span class="kt">boolean</span> <span class="n">b</span> <span class="o">=</span> <span class="o">!</span><span class="n">x</span><span class="o">;</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">b</span><span class="o">);</span>  <span class="c1">// prints false</span>
+
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+    <span class="kt">boolean</span> <span class="n">num</span> <span class="o">=</span> <span class="o">(</span><span class="n">i</span> <span class="o">!=</span> <span class="mi">3</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">num</span><span class="o">);</span> <span class="c1">// prints true   </span>
 
   <span class="o">}</span>
 <span class="o">}</span>
