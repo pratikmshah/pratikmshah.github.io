@@ -604,6 +604,80 @@ You can implicitly convert a number upwards from short to int to long by assigni
 </code></pre>
 </div>
 
+<p>When creating your own method you have the option to allow it to pass in arguments. If you take in arguments you must specify the data type of the argument.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">add</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">7</span><span class="o">));</span>
+  <span class="o">}</span>
+
+  <span class="c1">// returns double and takes in 2 double arguments</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">add</span><span class="o">(</span><span class="kt">double</span> <span class="n">x</span><span class="o">,</span> <span class="kt">double</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p>If you do not know how many arguments may come through you can use the <code class="highlighter-rouge">...</code> to tell Java that there might be multiple values that are passed in ex: <code class="highlighter-rouge">multiple(double ... values)</code>. Java will build an array of all the arguments passed.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">add</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">12</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">));</span>
+  <span class="o">}</span>
+
+  <span class="c1">// returns double and takes in multiple double arguments</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">add</span><span class="o">(</span><span class="kt">double</span> <span class="o">...</span> <span class="n">numbers</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="n">d</span><span class="o">;</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">double</span> <span class="n">n</span> <span class="o">:</span> <span class="n">numbers</span> <span class="o">)</span> <span class="o">{</span>
+      <span class="n">sum</span> <span class="o">+=</span> <span class="n">n</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">sum</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p>Method signature is the unique combination of the keywords and arguments that method receives. You can create multiple methods with the same name as long as the signatures are different. Creating multiple same named methods is called method overloading.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// run first add method with 2 args</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">add</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">7</span><span class="o">));</span>
+
+    <span class="c1">// run second add method with 3 args</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">add</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="mi">7</span><span class="o">,</span> <span class="mi">12</span><span class="o">));</span>
+
+    <span class="c1">// run third add method with 2 strings</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">add</span><span class="o">(</span><span class="s">"15"</span><span class="o">,</span> <span class="s">"13"</span><span class="o">));</span>
+  <span class="o">}</span>
+
+  <span class="c1">// returns double and takes in 2 double arguments</span>
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">,</span> <span class="kt">int</span> <span class="n">y</span><span class="o">,</span> <span class="kt">int</span> <span class="n">z</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="n">z</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">add</span><span class="o">(</span><span class="n">String</span> <span class="n">one</span><span class="o">,</span> <span class="n">String</span> <span class="n">two</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">val1</span> <span class="o">=</span> <span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">one</span><span class="o">);</span>
+    <span class="kt">int</span> <span class="n">val2</span> <span class="o">=</span> <span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">two</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">val1</span> <span class="o">+</span> <span class="n">val2</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>When passing variables as arguments they are always passed by copy. Passing by copy means that a copy of the variable is passed through and not the variable itself. Passing by reference means that the original variable itself is being altered.
+Complex objects are references. A reference variable points to the location in memory. When you pass the variable into a method a new reference is created but both of these are pointing to the original object. Strings cannot be changed and are immutable so when passing in a string and altering it you are simply creating another string.</p>
+
   </div>
 
 
