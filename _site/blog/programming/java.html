@@ -132,6 +132,7 @@
   <li><a href="#com-data">Complex Data Types</a>
     <ul>
       <li><a href="#str-class">String Class</a></li>
+      <li><a href="#date">Date Class</a></li>
     </ul>
   </li>
 </ol>
@@ -760,6 +761,41 @@ Complex objects are references. A reference variable points to the location in m
     <span class="c1">// trim all the surrounding whitespace by using trim method</span>
     <span class="n">String</span> <span class="n">str1</span> <span class="o">=</span> <span class="s">"whitespace      "</span><span class="o">;</span>
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str1</span><span class="o">.</span><span class="na">trim</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="date-class-">Date Class <a name="date"></a></h4>
+<p>The <code class="highlighter-rouge">Date</code> class is part of the java.util package and must be imported. You can have the date in Gregorian Calender by using the <code class="highlighter-rouge">GregorianCalender</code> class.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.Date</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.text.DateFormat</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.GregorianCalendar</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">Date</span> <span class="n">date</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+
+    <span class="c1">// standard no arguments output</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">date</span><span class="o">);</span>
+
+    <span class="c1">// gregorian calender</span>
+    <span class="n">GregorianCalendar</span> <span class="n">gc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GregorianCalendar</span><span class="o">(</span><span class="mi">2015</span><span class="o">,</span> <span class="mi">4</span><span class="o">,</span> <span class="mi">25</span><span class="o">);</span>
+
+    <span class="c1">// increment the day by one</span>
+    <span class="n">gc</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">GregorianCalendar</span><span class="o">.</span><span class="na">DATE</span><span class="o">,</span> <span class="mi">1</span><span class="o">);</span>
+
+    <span class="c1">// get full date string version with time</span>
+    <span class="n">Date</span> <span class="n">d2</span> <span class="o">=</span> <span class="n">gc</span><span class="o">.</span><span class="na">getTime</span><span class="o">();</span>
+
+    <span class="c1">// returns the date in month, day, year format</span>
+    <span class="n">DateFormat</span> <span class="n">df</span> <span class="o">=</span> <span class="n">DateFormat</span><span class="o">.</span><span class="na">getDateInstance</span><span class="o">();</span>
+    <span class="n">String</span> <span class="n">strDate</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">d2</span><span class="o">);</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">strDate</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre>
