@@ -129,6 +129,11 @@
       <li><a href="#method">Method</a></li>
     </ul>
   </li>
+  <li><a href="#com-data">Complex Data Types</a>
+    <ul>
+      <li><a href="#str-class">String Class</a></li>
+    </ul>
+  </li>
 </ol>
 
 <p><br /></p>
@@ -677,6 +682,88 @@ You can implicitly convert a number upwards from short to int to long by assigni
 
 <p>When passing variables as arguments they are always passed by copy. Passing by copy means that a copy of the variable is passed through and not the variable itself. Passing by reference means that the original variable itself is being altered.
 Complex objects are references. A reference variable points to the location in memory. When you pass the variable into a method a new reference is created but both of these are pointing to the original object. Strings cannot be changed and are immutable so when passing in a string and altering it you are simply creating another string.</p>
+
+<p><br /></p>
+
+<h3 id="complex-data-types-">Complex Data Types <a name="com-data"></a></h3>
+<h4 id="string-class-">String Class <a name="str-class"></a></h4>
+<p>There are plenty of helpful methods to be used in the string class. You can create a string by using the string class ex: <code class="highlighter-rouge">String str = new String("My string goes here");</code>.</p>
+
+<p>If you need to compare two strings and case matters you need to use the <code class="highlighter-rouge">equals(str)</code> method or else you can use the <code class="highlighter-rouge">equalsIgnoreCase(str)</code> method. The <code class="highlighter-rouge">toCharArray()</code> splits each character into an element via array.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// string literal</span>
+    <span class="n">String</span> <span class="n">str1</span> <span class="o">=</span> <span class="s">"This is literal"</span><span class="o">;</span>
+
+    <span class="c1">// string via String constructor</span>
+    <span class="n">String</span> <span class="n">str2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">String</span><span class="o">(</span><span class="s">"Create string via string class"</span><span class="o">);</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str2</span><span class="o">);</span>
+
+    <span class="c1">// use .equals method to compare two strings and case matters</span>
+    <span class="c1">// use .equalsIgnoreCase method to compare two strings without case sensitivity.</span>
+    <span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="s">"this"</span><span class="o">;</span>
+    <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="s">"this"</span><span class="o">;</span>
+    <span class="n">String</span> <span class="n">s3</span> <span class="o">=</span> <span class="s">"THIS"</span><span class="o">;</span>
+
+    <span class="k">if</span> <span class="o">(</span><span class="n">str1</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="n">str2</span><span class="o">))</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"matches"</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">else</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"no match"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kt">char</span><span class="o">[]</span> <span class="n">characters</span> <span class="o">=</span> <span class="n">s3</span><span class="o">.</span><span class="na">toCharArray</span><span class="o">();</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">char</span> <span class="n">c</span> <span class="o">:</span> <span class="n">characters</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p>Strings are immutable and cannot be concatenated. You can use the <code class="highlighter-rouge">StringBuilder</code> or <code class="highlighter-rouge">StringBuffer</code> to append, prepend or insert string.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="s">"I want to go to "</span><span class="o">;</span>
+    <span class="n">StringBuilder</span> <span class="n">strbuild</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+
+    <span class="n">strbuild</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"California!"</span><span class="o">);</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">strbuild</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>To find out the length of a string use the <code class="highlighter-rouge">.length()</code> method. You can find out where a particular character or string starts using the <code class="highlighter-rouge">indexOf(letter)</code> method. To extract a range of the string use the <code class="highlighter-rouge">substring(index#)</code> method. To get rid of whitespace use the <code class="highlighter-rouge">trim()</code> method.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="s">"This is a test string"</span><span class="o">;</span>
+
+    <span class="c1">// use the length method to get the length of a string</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">length</span><span class="o">());</span>
+
+    <span class="c1">// use the indexOf method to return the first index pos of the matched string</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">"a"</span><span class="o">));</span>
+
+    <span class="c1">// extract a range of the string use substring</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">5</span><span class="o">));</span>
+
+    <span class="c1">// trim all the surrounding whitespace by using trim method</span>
+    <span class="n">String</span> <span class="n">str1</span> <span class="o">=</span> <span class="s">"whitespace      "</span><span class="o">;</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str1</span><span class="o">.</span><span class="na">trim</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
 
   </div>
 
