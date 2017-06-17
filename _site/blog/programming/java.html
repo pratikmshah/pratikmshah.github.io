@@ -144,6 +144,7 @@
     <ul>
       <li><a href="#array">Arrays</a></li>
       <li><a href="#hash">Hash Map</a></li>
+      <li><a href="#iterator">Iterators</a></li>
     </ul>
   </li>
 </ol>
@@ -850,6 +851,8 @@ Complex objects are references. A reference variable points to the location in m
 <span class="o">}</span>
 </code></pre>
 </div>
+<p><br /></p>
+
 <h3 id="data-collections-">Data Collections <a name="collection"></a></h3>
 <h4 id="arrays-">Arrays <a name="array"></a></h4>
 <p>Simple arrays are great for storing large sets of data but they are not flexible as you can only store one type of data type. They also cannot be resized once they are created; you need to use the <code class="highlighter-rouge">Array&lt;list&gt;</code> class.</p>
@@ -923,6 +926,91 @@ Complex objects are references. A reference variable points to the location in m
 
 <h4 id="hash-map-">Hash Map <a name="hash"></a></h4>
 <p>Hash maps are key value pairs. You instantiate a hash map via the <code class="highlighter-rouge">HashMap</code> class: <code class="highlighter-rouge">HashMap&lt;String, String&gt; map = new HashMap&lt;String, String&gt;();</code></p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// create hash map</span>
+    <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;();</span>
+
+    <span class="c1">// add key values to hash map using put</span>
+    <span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"Thai"</span><span class="o">,</span> <span class="s">"Pad Thai"</span><span class="o">);</span>
+    <span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"Indian"</span><span class="o">,</span> <span class="s">"Palak Paneer"</span><span class="o">);</span>
+    <span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"American"</span><span class="o">,</span> <span class="s">"Cheese Burger"</span><span class="o">);</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">map</span><span class="o">);</span>
+
+    <span class="c1">// retrieve the value by using get</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">map</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"Thai"</span><span class="o">));</span>
+
+    <span class="c1">// to remove an item refer to the key</span>
+    <span class="n">map</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="s">"Indian"</span><span class="o">);</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">map</span><span class="o">);</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="iterators-">Iterators <a name="iterator"></a></h4>
+<p>You can use iterators to loop through the entire collection. To loop through list use the <code class="highlighter-rouge">ListIterator</code>: <code class="highlighter-rouge">ListIterator&lt;String&gt; listIterator = list.listIterator();</code>.  When looping through use the <code class="highlighter-rouge">hasNext()</code> method to check to see if the next element exists. To grab the current element use the <code class="highlighter-rouge">next()</code> method.</p>
+
+<p>To iterate through a hash map use the <code class="highlighter-rouge">Set</code> object: <code class="highlighter-rouge">Set&lt;String&gt; keys = map.keySet();</code>. Next create an <code class="highlighter-rouge">Iterator</code> object: <code class="highlighter-rouge">Iterator&lt;String&gt; iterator = keys.iterator();</code>. Like the list use <code class="highlighter-rouge">hasNext()</code>, <code class="highlighter-rouge">next()</code>, and <code class="highlighter-rouge">get</code> to check and get key value pairs.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.HashMap</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.ListIterator</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Set</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Iterator</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// loop through array list</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
+    <span class="n">arr</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Jack"</span><span class="o">);</span>
+    <span class="n">arr</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Jill"</span><span class="o">);</span>
+    <span class="n">arr</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"John"</span><span class="o">);</span>
+    <span class="n">arr</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Jerry"</span><span class="o">);</span>
+
+    <span class="c1">// create list iterator</span>
+    <span class="n">ListIterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">listIterate</span> <span class="o">=</span> <span class="n">arr</span><span class="o">.</span><span class="na">listIterator</span><span class="o">();</span>
+
+    <span class="c1">// check to see if there is another element after</span>
+    <span class="c1">// use next to get the value</span>
+    <span class="k">while</span><span class="o">(</span><span class="n">listIterate</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+      <span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="n">listIterate</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="c1">//---------------------------------------------</span>
+
+    <span class="c1">// loop through hash map</span>
+    <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">map</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="o">,</span> <span class="n">String</span><span class="o">&gt;();</span>
+    <span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"Thai"</span><span class="o">,</span> <span class="s">"Pad Thai"</span><span class="o">);</span>
+    <span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"Indian"</span><span class="o">,</span> <span class="s">"Palak Paneer"</span><span class="o">);</span>
+    <span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"American"</span><span class="o">,</span> <span class="s">"Cheese Burger"</span><span class="o">);</span>
+    <span class="n">map</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="s">"Mexican"</span><span class="o">,</span> <span class="s">"Tacos"</span><span class="o">);</span>
+
+    <span class="c1">// get the keys</span>
+    <span class="n">Set</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">keys</span> <span class="o">=</span> <span class="n">map</span><span class="o">.</span><span class="na">keySet</span><span class="o">();</span>
+    <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">iterator</span> <span class="o">=</span> <span class="n">keys</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+
+    <span class="c1">// check to see if there is a k,v set after</span>
+    <span class="c1">// use next to get the key and get to get the value</span>
+    <span class="k">while</span> <span class="o">(</span><span class="n">iterator</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+      <span class="n">String</span> <span class="n">val</span> <span class="o">=</span> <span class="n">iterator</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">val</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="n">map</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">val</span><span class="o">));</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
 
   </div>
 
