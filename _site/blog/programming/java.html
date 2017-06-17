@@ -140,6 +140,11 @@
       <li><a href="#try-catch">Try-Catch</a></li>
     </ul>
   </li>
+  <li><a href="#collection">Data Collections</a>
+    <ul>
+      <li><a href="#array">Arrays</a></li>
+    </ul>
+  </li>
 </ol>
 
 <p><br /></p>
@@ -840,6 +845,75 @@ Complex objects are references. A reference variable points to the location in m
   <span class="kd">private</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">returnArr</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">ArrayIndexOutOfBoundsException</span> <span class="o">{</span>
       <span class="n">String</span><span class="o">[]</span> <span class="n">str</span> <span class="o">=</span> <span class="o">{</span><span class="s">"Illinois"</span><span class="o">};</span>
       <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">[</span><span class="mi">1</span><span class="o">]);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<h3 id="data-collections-">Data Collections <a name="collection"></a></h3>
+<h4 id="arrays-">Arrays <a name="array"></a></h4>
+<p>Simple arrays are great for storing large sets of data but they are not flexible as you can only store one type of data type. They also cannot be resized once they are created; you need to use the <code class="highlighter-rouge">Array&lt;list&gt;</code> class.</p>
+
+<p>You can create a simple array literal via 3 methods: <code class="highlighter-rouge">int[] arr = new int[3]</code>, <code class="highlighter-rouge">int arr[] = new int[3]</code>, <code class="highlighter-rouge">int[] arr = {1, 2, 3}</code>. To access data of the array specify the index between brackets (index starts at 0) use <code class="highlighter-rouge">arr[index#]</code>.</p>
+
+<p>You can also create multi dimensional arrays by putting an additional set of brackets when instantiating: <code class="highlighter-rouge">double[][] arr = new Double[3][3]</code></p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// create 5 by 2 array</span>
+    <span class="kt">int</span><span class="o">[][]</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">3</span><span class="o">][</span><span class="mi">3</span><span class="o">];</span>
+
+    <span class="c1">// access array by specifiying first column index then row.</span>
+    <span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+    <span class="n">arr</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+    <span class="n">arr</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">4</span><span class="o">;</span>
+    <span class="n">arr</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+    <span class="n">arr</span><span class="o">[</span><span class="mi">1</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">6</span><span class="o">;</span>
+    <span class="n">arr</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="mi">7</span><span class="o">;</span>
+    <span class="n">arr</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="mi">8</span><span class="o">;</span>
+    <span class="n">arr</span><span class="o">[</span><span class="mi">2</span><span class="o">][</span><span class="mi">2</span><span class="o">]</span> <span class="o">=</span> <span class="mi">9</span><span class="o">;</span>
+
+    <span class="c1">// using a double for loop is best way to run through each row and column</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">].</span><span class="na">length</span><span class="o">;</span> <span class="n">j</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">j</span><span class="o">]);</span>
+      <span class="o">}</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">();</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p>If you need dynamic amount of array size then you need to use Array Lists. To create an array list use: <code class="highlighter-rouge">ArrayList&lt;int&gt; arr = new ArrayList&lt;int&gt;()</code>. The <code class="highlighter-rouge">&lt; &gt;</code> are generics which means that this data will only carry a particular data type.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// create string list</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;();</span>
+
+    <span class="c1">// add items</span>
+    <span class="n">arr</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Jack"</span><span class="o">);</span>
+    <span class="n">arr</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Jill"</span><span class="o">);</span>
+    <span class="n">arr</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"John"</span><span class="o">);</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">arr</span><span class="o">);</span>
+
+    <span class="c1">// remove items</span>
+    <span class="n">arr</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">arr</span><span class="o">);</span>
+
+    <span class="c1">// get item from list</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">arr</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="mi">1</span><span class="o">));</span>
+
+    <span class="c1">// get index of and item</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">arr</span><span class="o">.</span><span class="na">indexOf</span><span class="o">(</span><span class="s">"Jill"</span><span class="o">));</span>
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre>
