@@ -164,6 +164,7 @@
       <li><a href="#inherit-poly-concept">Inheritance &amp; Polymorphism Concepts</a></li>
       <li><a href="#extend">Extending Classes</a></li>
       <li><a href="#over-super">Override Super Class</a></li>
+      <li><a href="#cast-super">Casting Super Class</a></li>
     </ul>
   </li>
 </ol>
@@ -1428,7 +1429,7 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <p><br /></p>
 
 <h4 id="override-super-class-">Override Super Class <a name="over-super"></a></h4>
-<p>To override a super class method use the same signature and write out the new/modified code block. Putting a <code class="highlighter-rouge">@Override</code> is not necessary but lets programmer know that you are modifying a method from the superclass.</p>
+<p>To override a super class method use the same signature and write out the new/modified code block. Putting a <code class="highlighter-rouge">@Override</code> is not necessary but lets programmer know that you are modifying a method from the superclass. If you want to use the code from the superclass you can put a <code class="highlighter-rouge">super.methodName()</code> inside the override method.</p>
 
 <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">dogs</span>
 
@@ -1445,10 +1446,14 @@ To create an instance method you leave off the word <code class="highlighter-rou
   <span class="nd">@Override</span>
   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">+</span> <span class="s">" is running at "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">speed</span> <span class="s">" mph!"</span><span class="o">);</span>
+    <span class="k">return</span> <span class="kd">super</span><span class="o">.</span><span class="na">run</span><span class="o">();</span>
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre>
 </div>
+<p><br /></p>
+
+<h4 id="casting-super-class-">Casting Super Class <a name="cast-super"></a></h4>
 
   </div>
 
