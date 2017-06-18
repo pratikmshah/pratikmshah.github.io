@@ -162,6 +162,8 @@
   <li><a href="#inherit-poly">Inheritance &amp; Polymorphism</a>
     <ul>
       <li><a href="#inherit-poly-concept">Inheritance &amp; Polymorphism Concepts</a></li>
+      <li><a href="#extend">Extending Classes</a></li>
+      <li><a href="#over-super">Override Super Class</a></li>
     </ul>
   </li>
 </ol>
@@ -1368,6 +1370,85 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <p>Superclasses don’t need any code and any class can be a superclass. You can inherit all fields and methods unless it is <code class="highlighter-rouge">private</code>. If the field is set to <code class="highlighter-rouge">private</code> then only the superclass can deal with it directly.</p>
 
 <p>In order for the class to inherit a superclass use the <code class="highlighter-rouge">extends</code> keyword when defining the class: <code class="highlighter-rouge">public class Pug extends Dog</code>. Once this relationship is established you are able to create all different types of classes under the superclass <code class="highlighter-rouge">Dog</code>: Dog[] dogs = {new GermanShepard(), new Pug(), new Bulldog()};</p>
+
+<p><br /></p>
+
+<h4 id="extending-classes-">Extending Classes <a name="extend"></a></h4>
+<p>Looking below the Pug class we use the <code class="highlighter-rouge">extends</code> keyword to inherit the Dog class. We also are able to use/change the variables in the Dog class and we also set the speed using the <code class="highlighter-rouge">super</code> keyword.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="err">'</span><span class="n">fido</span><span class="err">'</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="n">String</span> <span class="n">type</span> <span class="o">=</span> <span class="err">'</span><span class="n">dog</span><span class="err">'</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getSpeed</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">speed</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSpeed</span><span class="o">(</span><span class="kt">int</span> <span class="n">speed</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">speed</span> <span class="o">=</span> <span class="n">speed</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nf">Dog</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Woof! My name is "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nf">Dog</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Your dog is running at "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">speed</span> <span class="o">+</span> <span class="s">" mph"</span><span class="o">)</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">dogs</span>
+
+<span class="c1">// create pug dog type that extends dog</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Pug</span> <span class="kd">extends</span> <span class="n">Dog</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="nf">Pug</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// the super calls the constructor from class Dog</span>
+    <span class="c1">// it also changes the name, type and age</span>
+    <span class="kd">super</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">"Patrick"</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">type</span> <span class="o">=</span> <span class="s">"Pug"</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="mi">4</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="override-super-class-">Override Super Class <a name="over-super"></a></h4>
+<p>To override a super class method use the same signature and write out the new/modified code block. Putting a <code class="highlighter-rouge">@Override</code> is not necessary but lets programmer know that you are modifying a method from the superclass.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">dogs</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Pug</span> <span class="kd">extends</span> <span class="n">Dog</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="nf">Pug</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">super</span><span class="o">(</span><span class="mi">5</span><span class="o">);</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="s">"Patrick"</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">type</span> <span class="o">=</span> <span class="s">"Pug"</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="mi">4</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="c1">// the @Override tells the programmer that you are overriding a method from the super class.</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">+</span> <span class="s">" is running at "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">speed</span> <span class="s">" mph!"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
 
   </div>
 
