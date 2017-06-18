@@ -172,6 +172,7 @@
   <li><a href="#file">Files</a>
     <ul>
       <li><a href="#mg-file">Managing Files</a></li>
+      <li><a href="#apache-file">Apache Commons File</a></li>
     </ul>
   </li>
 </ol>
@@ -1514,38 +1515,93 @@ To create an instance method you leave off the word <code class="highlighter-rou
 
 <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">files</span><span class="o">;</span>
 
-<span class="kn">import</span> <span class="nn">java.io.File</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">CopyFile</span> <span class="o">{</span>
 
   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">try</span> <span class="o">{</span>
-    <span class="c1">// create 2 file object</span>
-    <span class="c1">// f1 - file to copy</span>
-    <span class="c1">// f2 - file to target or file to create</span>
-    <span class="n">File</span> <span class="n">f1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"mytext.txt"</span><span class="o">);</span>
-    <span class="n">File</span> <span class="n">f2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"create.txt"</span><span class="o">);</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="c1">// create 2 file object</span>
+      <span class="c1">// f1 - file to copy</span>
+      <span class="c1">// f2 - file to target or file to create</span>
+      <span class="n">File</span> <span class="n">f1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"mytext.txt"</span><span class="o">);</span>
+      <span class="n">File</span> <span class="n">f2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"create.txt"</span><span class="o">);</span>
 
-    <span class="c1">// create two file streams one for input and other for output</span>
-    <span class="c1">// make sure to grab the correct objects from java.io</span>
-    <span class="n">InputStream</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="o">(</span><span class="n">f1</span><span class="o">);</span>
-    <span class="n">OutputStream</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="n">f2</span><span class="o">);</span>
+      <span class="c1">// create two file streams one for input and other for output</span>
+      <span class="c1">// make sure to grab the correct objects from java.io</span>
+      <span class="n">InputStream</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="o">(</span><span class="n">f1</span><span class="o">);</span>
+      <span class="n">OutputStream</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="n">f2</span><span class="o">);</span>
 
-    <span class="c1">// create an array of bytes - 1024 bytes at a time</span>
-    <span class="kt">byte</span><span class="o">[]</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="mi">1024</span><span class="o">];</span>
-    <span class="kt">int</span> <span class="n">len</span><span class="o">;</span>
+      <span class="c1">// create an array of bytes - 1024 bytes at a time</span>
+      <span class="kt">byte</span><span class="o">[]</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="mi">1024</span><span class="o">];</span>
+      <span class="kt">int</span> <span class="n">len</span><span class="o">;</span>
 
-    <span class="c1">// loop through file until all the bytes have been copied</span>
-    <span class="k">while</span> <span class="o">((</span><span class="n">len</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">buffer</span><span class="o">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+      <span class="c1">// loop through file until all the bytes have been copied</span>
+      <span class="k">while</span> <span class="o">((</span><span class="n">len</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">buffer</span><span class="o">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
 
-      <span class="c1">// write the buffered data to the new file. The 0 is the starting point</span>
-      <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">buffer</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">len</span><span class="o">);</span>
+        <span class="c1">// write the buffered data to the new file. The 0 is the starting point</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">buffer</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">len</span><span class="o">);</span>
 
+      <span class="o">}</span>
+
+      <span class="c1">// close the streams once you are finished</span>
+      <span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+      <span class="n">out</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
     <span class="o">}</span>
 
-    <span class="c1">// close the streams once you are finished</span>
-    <span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-    <span class="n">out</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="apache-commons-files-">Apache Commons Files <a name="apache-file"></a></h4>
+<p><a href="https://commons.apache.org/">The Apache Commons</a> community has created maintainable reusable Java code to help ease common tasks when programming. Below is</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">files</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.io.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CopyFile</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="c1">// create 2 file object</span>
+      <span class="c1">// f1 - file to copy</span>
+      <span class="c1">// f2 - file to target or file to create</span>
+      <span class="n">File</span> <span class="n">f1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"mytext.txt"</span><span class="o">);</span>
+      <span class="n">File</span> <span class="n">f2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"create.txt"</span><span class="o">);</span>
+
+      <span class="c1">// create two file streams one for input and other for output</span>
+      <span class="c1">// make sure to grab the correct objects from java.io</span>
+      <span class="n">InputStream</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="o">(</span><span class="n">f1</span><span class="o">);</span>
+      <span class="n">OutputStream</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="n">f2</span><span class="o">);</span>
+
+      <span class="c1">// create an array of bytes - 1024 bytes at a time</span>
+      <span class="kt">byte</span><span class="o">[]</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="mi">1024</span><span class="o">];</span>
+      <span class="kt">int</span> <span class="n">len</span><span class="o">;</span>
+
+      <span class="c1">// loop through file until all the bytes have been copied</span>
+      <span class="k">while</span> <span class="o">((</span><span class="n">len</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">buffer</span><span class="o">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+
+        <span class="c1">// write the buffered data to the new file. The 0 is the starting point</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">buffer</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">len</span><span class="o">);</span>
+
+      <span class="o">}</span>
+
+      <span class="c1">// close the streams once you are finished</span>
+      <span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+      <span class="n">out</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
 
   <span class="o">}</span>
 
