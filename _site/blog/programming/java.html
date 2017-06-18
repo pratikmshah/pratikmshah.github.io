@@ -155,6 +155,7 @@
       <li><a href="#instance">Instance Methods</a></li>
       <li><a href="#instance-var">Instance Variables</a></li>
       <li><a href="#construct">Constructor Method</a></li>
+      <li><a href="#set-get">Setter Getter Methods</a></li>
     </ul>
   </li>
 </ol>
@@ -1262,6 +1263,11 @@ To create an instance method you leave off the word <code class="highlighter-rou
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The fruit is "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">);</span>
   <span class="o">}</span>
 
+  <span class="c1">// constructor taking in an argument</span>
+  <span class="kd">public</span> <span class="nf">Fruit</span><span class="o">(</span><span class="kt">int</span> <span class="n">oz</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">oz</span> <span class="o">=</span> <span class="n">oz</span><span class="o">;</span>
+  <span class="o">}</span>
+
   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">drop</span><span class="o">()</span> <span class="o">{</span>
     <span class="k">return</span> <span class="n">oz</span><span class="o">;</span>
   <span class="o">}</span>
@@ -1269,6 +1275,10 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <span class="o">}</span>
 </code></pre>
 </div>
+<p><br /></p>
+
+<h4 id="setter-getter-methods-">Setter Getter Methods <a name="set-get"></a></h4>
+<p>Fields should be private and you need to use the setter and getter methods to access them. Naming convention is just as it sounds <code class="highlighter-rouge">setName(data x)</code> and <code class="highlighter-rouge">getName()</code>.</p>
 
   </div>
 
