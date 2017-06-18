@@ -147,6 +147,15 @@
       <li><a href="#iterator">Iterators</a></li>
     </ul>
   </li>
+  <li><a href="#class">Classes</a>
+    <ul>
+      <li><a href="#encap">Encapsulation</a></li>
+      <li><a href="#cust-class">Custom Class</a></li>
+      <li><a href="#package">Packages</a></li>
+      <li><a href="#instance">Instance Methods</a></li>
+      <li><a href="#instance-var">Instance Variables</a></li>
+    </ul>
+  </li>
 </ol>
 
 <p><br /></p>
@@ -1011,6 +1020,153 @@ Complex objects are references. A reference variable points to the location in m
 <span class="o">}</span>
 </code></pre>
 </div>
+<p><br /></p>
+
+<h3 id="classes-">Classes <a name="class"></a></h3>
+<h4 id="encapsulation-">Encapsulation <a name="encap"></a></h4>
+<p>Encapsulation means to package complex functionality to make it easy to use in the program. You should break the code out into different functionality or in other words pieces. Encapsulation allows user to use the methods without having to know how the data is stored or how the methods are constructed.</p>
+
+<p>The benefits of encapsulation:</p>
+<ul>
+  <li>splitting functionality into small units</li>
+  <li>grouping functions and data together</li>
+  <li>support testing of the software</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="custom-classes-">Custom Classes <a name="cust-class"></a></h4>
+<p>You can package methods that do similar tasks into their own class. Create classes that are reusable. You can only have one public class in a java file but if you have more they have to be private.</p>
+
+<p>Below is a simple math class. To use the class you call on it and then the  method you want <code class="highlighter-rouge">ArithmeticMath.multiply(x, y)</code></p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArithmeticMath</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">divide</span><span class="o">(</span><span class="n">String</span> <span class="n">str1</span><span class="o">,</span> <span class="n">String</span> <span class="n">str2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">double</span> <span class="n">d1</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">str1</span><span class="o">);</span>
+    <span class="kt">double</span> <span class="n">d2</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">str2</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">d1</span> <span class="o">/</span> <span class="n">d2</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">multiply</span><span class="o">(</span><span class="n">String</span> <span class="n">str1</span><span class="o">,</span> <span class="n">String</span> <span class="n">str2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">double</span> <span class="n">d1</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">str1</span><span class="o">);</span>
+    <span class="kt">double</span> <span class="n">d2</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">str2</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">d1</span> <span class="o">*</span> <span class="n">d2</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">add</span><span class="o">(</span><span class="n">String</span> <span class="n">str1</span><span class="o">,</span> <span class="n">String</span> <span class="n">str2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">double</span> <span class="n">d1</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">str1</span><span class="o">);</span>
+    <span class="kt">double</span> <span class="n">d2</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">str2</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">d1</span> <span class="o">+</span> <span class="n">d2</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">subtract</span><span class="o">(</span><span class="n">String</span> <span class="n">str1</span><span class="o">,</span> <span class="n">String</span> <span class="n">str2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">double</span> <span class="n">d1</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">str1</span><span class="o">);</span>
+    <span class="kt">double</span> <span class="n">d2</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">str2</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">d1</span> <span class="o">-</span> <span class="n">d2</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="packages-">Packages <a name="package"></a></h4>
+<p>A package is just a collection of classes. When a class is anywhere but the default package you must import the package: <code class="highlighter-rouge">package name</code>. In real world you usually create packages starting with the company website prefix such as <code class="highlighter-rouge">com.pratik.math</code>. This helps avoid naming conflicts.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">helpers</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArithmeticMath</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">divide</span><span class="o">(</span><span class="n">String</span> <span class="n">str1</span><span class="o">,</span> <span class="n">String</span> <span class="n">str2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">double</span> <span class="n">d1</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">str1</span><span class="o">);</span>
+    <span class="kt">double</span> <span class="n">d2</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">str2</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">d1</span> <span class="o">/</span> <span class="n">d2</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">multiply</span><span class="o">(</span><span class="n">String</span> <span class="n">str1</span><span class="o">,</span> <span class="n">String</span> <span class="n">str2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">double</span> <span class="n">d1</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">str1</span><span class="o">);</span>
+    <span class="kt">double</span> <span class="n">d2</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">str2</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">d1</span> <span class="o">*</span> <span class="n">d2</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">add</span><span class="o">(</span><span class="n">String</span> <span class="n">str1</span><span class="o">,</span> <span class="n">String</span> <span class="n">str2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">double</span> <span class="n">d1</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">str1</span><span class="o">);</span>
+    <span class="kt">double</span> <span class="n">d2</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">str2</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">d1</span> <span class="o">+</span> <span class="n">d2</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">subtract</span><span class="o">(</span><span class="n">String</span> <span class="n">str1</span><span class="o">,</span> <span class="n">String</span> <span class="n">str2</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kt">double</span> <span class="n">d1</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">str1</span><span class="o">);</span>
+    <span class="kt">double</span> <span class="n">d2</span> <span class="o">=</span> <span class="n">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">str2</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">d1</span> <span class="o">-</span> <span class="n">d2</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="instance-methods-">Instance Methods <a name="instance"></a></h4>
+<p>Instance methods are called from an instance of the class unlike class method which are called from the class itself.
+To create an instance method you leave off the word <code class="highlighter-rouge">static</code> from the method signature.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">juicer</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.pratik.juicer.fruit.Fruit</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.pratik.juicer.Juicer</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// create array of fruit objects and then a juicer</span>
+    <span class="n">Fruit</span><span class="o">[]</span> <span class="n">fruits</span> <span class="o">=</span> <span class="o">{</span><span class="k">new</span> <span class="n">Fruit</span><span class="o">(),</span> <span class="k">new</span> <span class="n">Fruit</span><span class="o">(),</span> <span class="k">new</span> <span class="n">Fruit</span><span class="o">()};</span>
+    <span class="n">Juicer</span> <span class="n">machine</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Juicer</span><span class="o">();</span>
+
+    <span class="c1">// drop the fruit arrays into the machine</span>
+    <span class="n">machine</span><span class="o">.</span><span class="na">blend</span><span class="o">(</span><span class="n">fruits</span><span class="o">);</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">juicer</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Fruit</span> <span class="o">{</span>
+
+  <span class="c1">// instance method</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">drop</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"You picked an fruit."</span><span class="o">);</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">juicer</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.pratik.juicer.fruit.Fruit</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Juicer</span> <span class="o">{</span>
+
+  <span class="c1">// juicer instance method</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">blend</span><span class="o">(</span><span class="n">Fruit</span><span class="o">[]</span> <span class="n">fruits</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// loop through the fruits and drop them</span>
+    <span class="k">for</span> <span class="o">(</span><span class="n">Fruit</span> <span class="n">fruit</span> <span class="o">:</span> <span class="n">fruits</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">fruit</span><span class="o">.</span><span class="na">drop</span><span class="o">();</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="instance-variables-">Instance Variables <a name="instance-var"></a></h4>
+<p>Instance variables are called fields and are assigned at the class level</p>
 
   </div>
 
