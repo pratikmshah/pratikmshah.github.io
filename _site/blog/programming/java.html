@@ -173,6 +173,7 @@
     <ul>
       <li><a href="#mg-file">Managing Files</a></li>
       <li><a href="#apache-file">Apache Commons File</a></li>
+      <li><a href="#read-network">Read File From Network</a></li>
     </ul>
   </li>
 </ol>
@@ -1561,7 +1562,7 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <p><br /></p>
 
 <h4 id="apache-commons-files-">Apache Commons Files <a name="apache-file"></a></h4>
-<p><a href="https://commons.apache.org/">The Apache Commons</a> community has created maintainable reusable Java code to help ease common tasks when programming. Below is</p>
+<p><a href="https://commons.apache.org/">The Apache Commons</a> community has created maintainable reusable Java code to help ease common tasks when programming. Download the file and copy the <code class="highlighter-rouge">.jar</code> file into your project <code class="highlighter-rouge">bin</code> directory. You now need to create a <code class="highlighter-rouge">build path</code> so you can use the library (if you right-click on eclipse and select build path it will automatically do this for you). Below is when you use the apache commons library.</p>
 
 <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">files</span><span class="o">;</span>
 
@@ -1571,37 +1572,35 @@ To create an instance method you leave off the word <code class="highlighter-rou
 
   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">try</span> <span class="o">{</span>
-      <span class="c1">// create 2 file object</span>
-      <span class="c1">// f1 - file to copy</span>
-      <span class="c1">// f2 - file to target or file to create</span>
       <span class="n">File</span> <span class="n">f1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"mytext.txt"</span><span class="o">);</span>
       <span class="n">File</span> <span class="n">f2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"create.txt"</span><span class="o">);</span>
 
-      <span class="c1">// create two file streams one for input and other for output</span>
-      <span class="c1">// make sure to grab the correct objects from java.io</span>
-      <span class="n">InputStream</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="o">(</span><span class="n">f1</span><span class="o">);</span>
-      <span class="n">OutputStream</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="n">f2</span><span class="o">);</span>
+      <span class="c1">// using apache commons library.</span>
+      <span class="n">FileUtils</span><span class="o">.</span><span class="na">copyFile</span><span class="o">(</span><span class="n">f1</span><span class="o">,</span> <span class="n">f2</span><span class="o">);</span>
 
-      <span class="c1">// create an array of bytes - 1024 bytes at a time</span>
-      <span class="kt">byte</span><span class="o">[]</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="mi">1024</span><span class="o">];</span>
-      <span class="kt">int</span> <span class="n">len</span><span class="o">;</span>
-
-      <span class="c1">// loop through file until all the bytes have been copied</span>
-      <span class="k">while</span> <span class="o">((</span><span class="n">len</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">buffer</span><span class="o">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
-
-        <span class="c1">// write the buffered data to the new file. The 0 is the starting point</span>
-        <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">buffer</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">len</span><span class="o">);</span>
-
-      <span class="o">}</span>
-
-      <span class="c1">// close the streams once you are finished</span>
-      <span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-      <span class="n">out</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
     <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
       <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
     <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
       <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
     <span class="o">}</span>
+
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="reading-text-from-network-">Reading Text From Network <a name="read-network"></a></h4>
+<p>You can use the apache commons library but below is the long way to reading a network file. You will need to use the <code class="highlighter-rouge">URL</code> object to retrieve the address of the file.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.net.URL</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">NetworkFile</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="n">URL</span> <span class="n">url</span> <span class="o">=</span> <span class="k">new</span> <span class="n">URL</span><span class="o">(</span><span class="s">""</span><span class="o">);</span>
 
   <span class="o">}</span>
 
