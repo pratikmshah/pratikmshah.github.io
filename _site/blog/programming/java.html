@@ -156,7 +156,12 @@
       <li><a href="#instance-var">Instance Variables</a></li>
       <li><a href="#construct">Constructor Method</a></li>
       <li><a href="#set-get">Setter Getter Methods</a></li>
-      <li><a href="#enum">Class Variable &amp; Enum</a></li>
+      <li><a href="#class-var">Class Variable</a></li>
+    </ul>
+  </li>
+  <li><a href="#inherit-poly">Inheritance &amp; Polymorphism</a>
+    <ul>
+      <li><a href="#inherit-poly-concept">Inheritance &amp; Polymorphism Concepts</a></li>
     </ul>
   </li>
 </ol>
@@ -1315,7 +1320,7 @@ To create an instance method you leave off the word <code class="highlighter-rou
 </div>
 <p><br /></p>
 
-<h4 id="class-variables--enums-">Class Variables &amp; Enums <a name="enum"></a></h4>
+<h4 id="class-variables-">Class Variables <a name="class-var"></a></h4>
 <p>You can also create class variables by using the word <code class="highlighter-rouge">static</code> and <code class="highlighter-rouge">final</code>. Its typically to set variables as a constant. An example would be <code class="highlighter-rouge">public static final String COLOR = "black"</code>. The public would allow it to be accessible to any class. The static would mean its a class type and final would mean it is a constant. Constant names are always all uppercase.</p>
 
 <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Fruit</span> <span class="o">{</span>
@@ -1351,6 +1356,18 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <span class="o">}</span>
 </code></pre>
 </div>
+<p><br /></p>
+
+<h3 id="inheritance--polymorphism-">Inheritance &amp; Polymorphism <a name="inherit-poly"></a></h3>
+
+<h4 id="inheritance--polymorphism-concept-">Inheritance &amp; Polymorphism Concept <a name="inherit-poly-concept"></a></h4>
+<p>Inheritance means that there is a relationship between multiple classes. Inheritance allows you to extend functionality from one class to many. In Java you can only inherit from one other class. The inheritance relationship can be described as <code class="highlighter-rouge">Superclass/subclass</code>. Subclass extends the superclass.</p>
+
+<p>Polymorphism means that when there is a relationship between classes you can deal with the object as it is in the subclass or superclass. When you instantiate a subclass, you can declare it as a superclass type. So lets take a dog there are many types of dogs but they all share similar characteristics. You can create  a <code class="highlighter-rouge">Dog</code> class that has attributes such as; eye color, fur color, name, owner, id etc… You can then use the <code class="highlighter-rouge">Dog</code> class to create subclasses for each type of dog such as <code class="highlighter-rouge">GermanShepard</code>, <code class="highlighter-rouge">Pug</code>, <code class="highlighter-rouge">Bulldog</code> etc…</p>
+
+<p>Superclasses don’t need any code and any class can be a superclass. You can inherit all fields and methods unless it is <code class="highlighter-rouge">private</code>. If the field is set to <code class="highlighter-rouge">private</code> then only the superclass can deal with it directly.</p>
+
+<p>In order for the class to inherit a superclass use the <code class="highlighter-rouge">extends</code> keyword when defining the class: <code class="highlighter-rouge">public class Pug extends Dog</code>. Once this relationship is established you are able to create all different types of classes under the superclass <code class="highlighter-rouge">Dog</code>: Dog[] dogs = {new GermanShepard(), new Pug(), new Bulldog()};</p>
 
   </div>
 
