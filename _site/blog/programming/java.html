@@ -154,6 +154,7 @@
       <li><a href="#package">Packages</a></li>
       <li><a href="#instance">Instance Methods</a></li>
       <li><a href="#instance-var">Instance Variables</a></li>
+      <li><a href="#construct">Constructor Method</a></li>
     </ul>
   </li>
 </ol>
@@ -1204,6 +1205,7 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <span class="o">}</span>
 </code></pre>
 </div>
+
 <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">juicer</span><span class="o">.</span><span class="na">fruit</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Fruit</span> <span class="o">{</span>
@@ -1221,6 +1223,7 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <span class="o">}</span>
 </code></pre>
 </div>
+
 <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">juicer</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">com.pratik.juicer.fruit.Fruit</span>
@@ -1239,6 +1242,30 @@ To create an instance method you leave off the word <code class="highlighter-rou
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Your glass has "</span> <span class="o">+</span> <span class="n">oz</span> <span class="o">+</span> <span class="s">" oz of apple juice."</span><span class="o">);</span>
 
   <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p><br /></p>
+
+<h4 id="constructor-methods-">Constructor Methods <a name="construct"></a></h4>
+<p>A constructor method is a special kind of method that gets called  when you create an instance of class. To create a constructor method: <code class="highlighter-rouge">public NameOfClass()</code>. Use the <code class="highlighter-rouge">this</code> keyword to reference the current instance of the class. It goes after instance variables but before methods. Constructors never return a value.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Fruit</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"Apple"</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kt">long</span> <span class="n">color</span> <span class="o">=</span> <span class="mh">0xff0000</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">oz</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+
+  <span class="c1">// constructor calling the current instance's name</span>
+  <span class="kd">public</span> <span class="nf">Fruit</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The fruit is "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">drop</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">oz</span><span class="o">;</span>
+  <span class="o">}</span>
+
 <span class="o">}</span>
 </code></pre>
 </div>
