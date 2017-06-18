@@ -177,6 +177,12 @@
       <li><a href="#xml-file">Parsing XML File</a></li>
     </ul>
   </li>
+  <li><a href="#app-dev">App Development</a>
+    <ul>
+      <li><a href="#jar">Creating JAR Files</a></li>
+      <li><a href="#classpath">Classpath</a></li>
+    </ul>
+  </li>
 </ol>
 
 <p><br /></p>
@@ -1676,6 +1682,29 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <span class="o">}</span>
 </code></pre>
 </div>
+<p><br /></p>
+
+<h3 id="application-development-">Application Development <a name="app-dev"></a></h3>
+<h4 id="creating-jar-files-">Creating JAR Files <a name="jar"></a></h4>
+<p>JAR file is a java archive file that packages up your code for deployment. For eclipse you go to <code class="highlighter-rouge">file -&gt; export -&gt; java -&gt; jar</code> select all the <code class="highlighter-rouge">src</code> and deselect <code class="highlighter-rouge">classpath</code> and <code class="highlighter-rouge">project</code>. Select from the check boxes (make sure “Export generated class files and resources” is selected). Select the destination. Next x 2 and ok.</p>
+
+<h4 id="classpath-">Classpath <a name="classpath"></a></h4>
+<p>In order to run apps outside of the IDE you need to specify to the OS the class path. The class path is a list of file locations. There are two ways to do this the command or as an environment variable.</p>
+
+<ul>
+  <li>Windows
+    <ul>
+      <li><code class="highlighter-rouge">java -classpath .;JarFileName.jar com.site.dog.Main</code></li>
+      <li><code class="highlighter-rouge">set CLASSPATH=.;JarFileName.jar</code> and then you can type <code class="highlighter-rouge">java com.site.dog.Main</code></li>
+    </ul>
+  </li>
+  <li>Mac
+    <ul>
+      <li><code class="highlighter-rouge">java -classpath .:JarFileName.jar com.site.juicer.Main</code></li>
+      <li><code class="highlighter-rouge">set CLASSPATH=.:JarFileName.jar</code> and then you can type <code class="highlighter-rouge">java com.site.dog.Main</code></li>
+    </ul>
+  </li>
+</ul>
 
   </div>
 
