@@ -169,6 +169,11 @@
       <li><a href="#abstract">Abstract Classes &amp; Methods</a></li>
     </ul>
   </li>
+  <li><a href="#file">Files</a>
+    <ul>
+      <li><a href="#mg-file">Managing Files</a></li>
+    </ul>
+  </li>
 </ol>
 
 <p><br /></p>
@@ -1470,6 +1475,83 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <p><br /></p>
 
 <h4 id="abstract-classes--methods-">Abstract Classes &amp; Methods <a name="abstract"></a></h4>
+<p>You create interfaces just like classes. You then add your methods signatures and final fields. No constructor methods. Its best to use interfaces when you are modeling behavior and not dynamic management of data. The methods must be either <code class="highlighter-rouge">public</code> or <code class="highlighter-rouge">abstract</code> as you cannot modify if they are set to <code class="highlighter-rouge">private</code>. You can implement as many interfaces as you want.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">interface</span> <span class="nc">Machine</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">getOz</span><span class="o">(</span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">Fruit</span><span class="o">&gt;</span> <span class="n">fruits</span><span class="o">);</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">totalOz</span><span class="o">();</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setTotalOz</span><span class="o">(</span><span class="kt">int</span> <span class="n">totalOz</span><span class="o">);</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Juicer</span> <span class="kd">implements</span> <span class="n">Machine</span> <span class="o">{</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">getOz</span><span class="o">(</span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">Fruit</span><span class="o">&gt;</span> <span class="n">fruits</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// add implementing code here</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">totalOz</span><span class="o">()</span> <span class="o">{</span>
+    <span class="c1">// add implementing code here</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setTotalOz</span><span class="o">(</span><span class="kt">int</span> <span class="n">totalOz</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// add implementing code here</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p><br /></p>
+
+<h3 id="files-">Files <a name="file"></a></h3>
+<h4 id="managing-files-">Managing Files <a name="mg-file"></a></h4>
+<p>You can copy existing files using the <code class="highlighter-rouge">File</code> class built in Java. To copy a file you need to create 2 file objects one is the file you want to copy and the other is the target file (can be existing or one you want to create). you will need to have the correct path unless you are in the root directory. In Java you can read files bytes at a time so you have the option of processing 1 byte at a time or chunks of bytes at a time (more memory). Once you are finished close both the in and out streams. Make sure to surround the statements with a <code class="highlighter-rouge">try-catch</code> block in case of exceptions.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">files</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">java.io.File</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">CopyFile</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">try</span> <span class="o">{</span>
+    <span class="c1">// create 2 file object</span>
+    <span class="c1">// f1 - file to copy</span>
+    <span class="c1">// f2 - file to target or file to create</span>
+    <span class="n">File</span> <span class="n">f1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"mytext.txt"</span><span class="o">);</span>
+    <span class="n">File</span> <span class="n">f2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="o">(</span><span class="s">"create.txt"</span><span class="o">);</span>
+
+    <span class="c1">// create two file streams one for input and other for output</span>
+    <span class="c1">// make sure to grab the correct objects from java.io</span>
+    <span class="n">InputStream</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="o">(</span><span class="n">f1</span><span class="o">);</span>
+    <span class="n">OutputStream</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="n">f2</span><span class="o">);</span>
+
+    <span class="c1">// create an array of bytes - 1024 bytes at a time</span>
+    <span class="kt">byte</span><span class="o">[]</span> <span class="n">buffer</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="o">[</span><span class="mi">1024</span><span class="o">];</span>
+    <span class="kt">int</span> <span class="n">len</span><span class="o">;</span>
+
+    <span class="c1">// loop through file until all the bytes have been copied</span>
+    <span class="k">while</span> <span class="o">((</span><span class="n">len</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">buffer</span><span class="o">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+
+      <span class="c1">// write the buffered data to the new file. The 0 is the starting point</span>
+      <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">buffer</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">len</span><span class="o">);</span>
+
+    <span class="o">}</span>
+
+    <span class="c1">// close the streams once you are finished</span>
+    <span class="n">in</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="n">out</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
 
   </div>
 
