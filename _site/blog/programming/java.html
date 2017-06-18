@@ -156,6 +156,7 @@
       <li><a href="#instance-var">Instance Variables</a></li>
       <li><a href="#construct">Constructor Method</a></li>
       <li><a href="#set-get">Setter Getter Methods</a></li>
+      <li><a href="#enum">Class Variable &amp; Enum</a></li>
     </ul>
   </li>
 </ol>
@@ -1279,6 +1280,77 @@ To create an instance method you leave off the word <code class="highlighter-rou
 
 <h4 id="setter-getter-methods-">Setter Getter Methods <a name="set-get"></a></h4>
 <p>Fields should be private and you need to use the setter and getter methods to access them. Naming convention is just as it sounds <code class="highlighter-rouge">setName(data x)</code> and <code class="highlighter-rouge">getName()</code>.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Fruit</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"Apple"</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kt">long</span> <span class="n">color</span> <span class="o">=</span> <span class="mh">0xff0000</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">oz</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+
+  <span class="c1">// getter for oz</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getOz</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">oz</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="c1">// setter for oz</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">setOz</span><span class="o">(</span><span class="kt">int</span> <span class="n">oz</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">oz</span> <span class="o">=</span> <span class="n">oz</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nf">Fruit</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The fruit is "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="c1">// constructor taking in an argument</span>
+  <span class="kd">public</span> <span class="nf">Fruit</span><span class="o">(</span><span class="kt">int</span> <span class="n">oz</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">setOz</span><span class="o">(</span><span class="n">oz</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">drop</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">oz</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="class-variables--enums-">Class Variables &amp; Enums <a name="enum"></a></h4>
+<p>You can also create class variables by using the word <code class="highlighter-rouge">static</code> and <code class="highlighter-rouge">final</code>. Its typically to set variables as a constant. An example would be <code class="highlighter-rouge">public static final String COLOR = "black"</code>. The public would allow it to be accessible to any class. The static would mean its a class type and final would mean it is a constant. Constant names are always all uppercase.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Fruit</span> <span class="o">{</span>
+
+  <span class="c1">// create constant class variable</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">RED</span> <span class="o">=</span> <span class="mh">0xff0000</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"Apple"</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kt">long</span> <span class="n">color</span> <span class="o">=</span> <span class="n">Fruit</span><span class="o">.</span><span class="na">RED</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">oz</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getOz</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">oz</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">setOz</span><span class="o">(</span><span class="kt">int</span> <span class="n">oz</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">oz</span> <span class="o">=</span> <span class="n">oz</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nf">Fruit</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"The fruit is "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="c1">// constructor taking in an argument</span>
+  <span class="kd">public</span> <span class="nf">Fruit</span><span class="o">(</span><span class="kt">int</span> <span class="n">oz</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">setOz</span><span class="o">(</span><span class="n">oz</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">drop</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">oz</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
 
   </div>
 
