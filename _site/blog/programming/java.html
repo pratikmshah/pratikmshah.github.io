@@ -1166,7 +1166,82 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <p><br /></p>
 
 <h4 id="instance-variables-">Instance Variables <a name="instance-var"></a></h4>
-<p>Instance variables are called fields and are assigned at the class level</p>
+<p>Instance variables are called fields and are assigned at the class level. You declare each variable with an access type, data type, and a name. The data will persist as long as the object persists.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">juicer</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.pratik.juicer.fruit.Fruit</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">com.pratik.juicer.Juicer</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// create array list of fruit obejcts</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Fruit</span><span class="o">&gt;</span> <span class="n">fruits</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Fruit</span><span class="o">&gt;();</span>
+
+    <span class="c1">// delcare it once to use it multiple times</span>
+    <span class="n">Fruit</span> <span class="n">fruit</span><span class="o">;</span>
+
+    <span class="c1">// add three new fruits obejcts to fruits</span>
+    <span class="n">fruit</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Fruit</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">fruit</span><span class="o">.</span><span class="na">name</span><span class="o">);</span>
+    <span class="n">fruits</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">fruit</span><span class="o">);</span>
+
+    <span class="n">fruit</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Fruit</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">fruit</span><span class="o">.</span><span class="na">name</span><span class="o">);</span>
+    <span class="n">fruits</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">fruit</span><span class="o">);</span>
+
+    <span class="n">fruit</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Fruit</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">fruit</span><span class="o">.</span><span class="na">name</span><span class="o">);</span>
+    <span class="n">fruits</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">fruit</span><span class="o">);</span>
+
+    <span class="n">Juicer</span> <span class="n">machine</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Juicer</span><span class="o">();</span>
+
+    <span class="n">machine</span><span class="o">.</span><span class="na">blend</span><span class="o">(</span><span class="n">fruits</span><span class="o">);</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">juicer</span><span class="o">.</span><span class="na">fruit</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Fruit</span> <span class="o">{</span>
+
+  <span class="c1">// instance variables</span>
+  <span class="kd">public</span> <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"Apple"</span><span class="o">;</span>
+  <span class="kd">public</span> <span class="kt">long</span> <span class="n">color</span> <span class="o">=</span> <span class="mh">0xff0000</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">oz</span> <span class="o">=</span> <span class="mi">3</span><span class="o">;</span>
+
+  <span class="c1">// return the amount of ounces</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">drop</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">oz</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">juicer</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">com.pratik.juicer.fruit.Fruit</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Juicer</span> <span class="o">{</span>
+
+  <span class="c1">// change to take in array list of fruits</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">blend</span><span class="o">(</span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Fruit</span><span class="o">&gt;</span> <span class="n">fruits</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="kt">int</span> <span class="n">oz</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">for</span> <span class="o">(</span><span class="n">Fruit</span> <span class="n">fruit</span> <span class="o">:</span> <span class="n">fruits</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">oz</span> <span class="o">+=</span> <span class="n">fruit</span><span class="o">.</span><span class="na">drop</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Your glass has "</span> <span class="o">+</span> <span class="n">oz</span> <span class="o">+</span> <span class="s">" oz of apple juice."</span><span class="o">);</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
 
   </div>
 
