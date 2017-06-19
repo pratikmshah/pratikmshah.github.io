@@ -126,6 +126,7 @@
     <ul>
       <li><a href="#condition">Conditionals</a></li>
       <li><a href="#switch">Switch Statement</a></li>
+      <li><a href="#j7switch">Switch Java 7+</a></li>
       <li><a href="#loop">Loops</a></li>
       <li><a href="#method">Method</a></li>
     </ul>
@@ -159,6 +160,7 @@
       <li><a href="#construct">Constructor Method</a></li>
       <li><a href="#set-get">Setter Getter Methods</a></li>
       <li><a href="#class-var">Class Variable</a></li>
+      <li><a href="#static">Static Initializers</a></li>
     </ul>
   </li>
   <li><a href="#inherit-poly">Inheritance &amp; Polymorphism</a>
@@ -593,6 +595,30 @@ You can implicitly convert a number upwards from short to int to long by assigni
   <span class="o">}</span>
 
 <span class="o">}</span>
+</code></pre>
+</div>
+
+<p><br /></p>
+
+<h4 id="switch---java-7-">Switch - Java 7 <a name="j7switch"></a></h4>
+<p>You can now evaluate a string with switch statements starting with Java 7.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// you can now evaluate strings in switch case</span>
+<span class="k">switch</span> <span class="o">(</span><span class="s">"yes"</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">case</span> <span class="s">"yes"</span><span class="o">:</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Of course!"</span><span class="o">);</span>
+    <span class="k">break</span><span class="o">;</span>
+  <span class="k">case</span> <span class="s">"no"</span><span class="o">:</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"No thanks."</span><span class="o">);</span>
+    <span class="k">break</span><span class="o">;</span>
+  <span class="k">case</span> <span class="s">"maybe"</span><span class="o">:</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Not sure."</span><span class="o">);</span>
+    <span class="k">break</span><span class="o">;</span>
+  <span class="k">default</span><span class="o">:</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Thats not an answer."</span><span class="o">);</span>
+    <span class="k">break</span><span class="o">;</span>
+<span class="o">}</span>
+
 </code></pre>
 </div>
 
@@ -1398,6 +1424,28 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <span class="o">}</span>
 </code></pre>
 </div>
+
+<p><br /></p>
+
+<h4 id="static-initializers-">Static Initializers <a name="static"></a></h4>
+<p>Static initializers run only one time before the constructor or main method is called.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DogHouse</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">dogs</span><span class="o">;</span>
+
+  <span class="c1">// this will run once</span>
+  <span class="kd">static</span> <span class="o">{</span>
+    <span class="n">dogs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="n">dogs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="s">"GermanShepard"</span><span class="o">,</span> <span class="mh">0xaa7243</span><span class="o">));</span>
+    <span class="n">dogs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="s">"Pug"</span><span class="o">,</span> <span class="mi">0</span><span class="n">xFFFFFF</span><span class="o">));</span>
+    <span class="n">dogs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="s">"Bulldog"</span><span class="o">,</span> <span class="mh">0xaa7243</span><span class="o">));</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+
 <p><br /></p>
 
 <h3 id="inheritance--polymorphism-">Inheritance &amp; Polymorphism <a name="inherit-poly"></a></h3>
