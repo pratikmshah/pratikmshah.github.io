@@ -919,6 +919,9 @@ time {
   height: auto;
   border: 1px solid #E0E0E0; }
 
+p {
+  margin-bottom: 15px; }
+
 h4 {
   margin-top: 15px;
   margin-bottom: 15px;
