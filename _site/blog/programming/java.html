@@ -162,6 +162,7 @@
       <li><a href="#class-var">Class Variable</a></li>
       <li><a href="#static">Static Initializers</a></li>
       <li><a href="#static-field">Instance Field Initializer</a></li>
+      <li><a href="#member">Member Classes</a></li>
     </ul>
   </li>
   <li><a href="#inherit-poly">Inheritance &amp; Polymorphism</a>
@@ -1449,6 +1450,105 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <p><br /></p>
 
 <h4 id="instance-field-initializers-">Instance Field Initializers <a name="static-field"></a></h4>
+<p>Non static Initializers do not have the keyword <code class="highlighter-rouge">static</code> in them. Its very handy when you have more than one constructor method but have certain type of code that always needs to be executed.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DogHouse</span> <span class="o">{</span>
+
+  <span class="kd">public</span>  <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">dogs</span><span class="o">;</span>
+
+  <span class="c1">// this will run once but it is not</span>
+  <span class="o">{</span>
+    <span class="n">dogs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="n">dogs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="s">"Rare"</span><span class="o">,</span> <span class="mi">0</span><span class="n">xFFFFFF</span><span class="o">));</span>
+  <span class="o">}</span>
+
+  <span class="c1">// constructors</span>
+  <span class="kd">public</span> <span class="nf">DogHouse</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Default constructor"</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="c1">// you can then add as many objects as you like when instantiating</span>
+  <span class="c1">// ArrayList&lt;Dogs&gt; dogs = new DogHouse(4, "Pug", 0x000000).dogs;</span>
+  <span class="kd">public</span> <span class="nf">DogHouse</span><span class="o">(</span><span class="kt">int</span> <span class="n">nDogs</span><span class="o">,</span> <span class="n">String</span> <span class="n">dogName</span><span class="o">,</span> <span class="kt">long</span> <span class="n">color</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">nDogs</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+      <span class="n">dogs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="n">dogName</span><span class="o">,</span> <span class="n">color</span><span class="o">));</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="member-classes-">Member Classes <a name="member"></a></h4>
+<p>Member classes are classes that are inside other classes. This helps with encapsulation and limiting who can manipulate what data.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DogHouse</span> <span class="o">{</span>
+
+  <span class="kd">public</span>  <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">dogs</span><span class="o">;</span>
+
+  <span class="o">{</span>
+    <span class="n">dogs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="n">dogs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="s">"Rare"</span><span class="o">,</span> <span class="mi">0</span><span class="n">xFFFFFF</span><span class="o">));</span>
+  <span class="o">}</span>
+
+  <span class="c1">// constructors</span>
+  <span class="kd">public</span> <span class="nf">DogHouse</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Default constructor"</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nf">DogHouse</span><span class="o">(</span><span class="kt">int</span> <span class="n">nDogs</span><span class="o">,</span> <span class="n">String</span> <span class="n">dogName</span><span class="o">,</span> <span class="kt">long</span> <span class="n">color</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">nDogs</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+      <span class="n">dogs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="n">dogName</span><span class="o">,</span> <span class="n">color</span><span class="o">));</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="c1">// create method to be able to add a dog</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addDog</span><span class="o">(</span><span class="n">String</span> <span class="n">dogName</span><span class="o">,</span> <span class="kt">long</span> <span class="n">color</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">dogs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="n">dogName</span><span class="o">,</span> <span class="n">color</span><span class="o">));</span>
+  <span class="o">}</span>
+
+  <span class="c1">// create a report to display all the dogs in the dog house</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">reportDogs</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="n">Dogs</span> <span class="n">dog</span> <span class="o">:</span> <span class="n">dogs</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"This is a "</span> <span class="o">+</span> <span class="n">dog</span><span class="o">.</span><span class="na">dogName</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="c1">// we will make class Dog a member of DogHouse class and it can only be called here</span>
+  <span class="kd">class</span> <span class="nc">Dog</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="err">'</span><span class="n">fido</span><span class="err">'</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">type</span> <span class="o">=</span> <span class="err">'</span><span class="n">dog</span><span class="err">'</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getSpeed</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">speed</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSpeed</span><span class="o">(</span><span class="kt">int</span> <span class="n">speed</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">speed</span> <span class="o">=</span> <span class="n">speed</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nf">Dog</span><span class="o">()</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Woof! My name is "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nf">Dog</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Your dog is running at "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">speed</span> <span class="o">+</span> <span class="s">" mph"</span><span class="o">)</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
 
 <p><br /></p>
 
