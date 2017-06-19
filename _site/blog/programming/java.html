@@ -163,6 +163,9 @@
       <li><a href="#static">Static Initializers</a></li>
       <li><a href="#static-field">Instance Field Initializer</a></li>
       <li><a href="#member">Member Classes</a></li>
+      <li><a href="#inner-c">Inner Classes</a></li>
+      <li><a href="#anon-inner">Anonymous Inner Class</a></li>
+      <li><a href="#enum-c">Enumeration Classes</a></li>
     </ul>
   </li>
   <li><a href="#inherit-poly">Inheritance &amp; Polymorphism</a>
@@ -188,6 +191,11 @@
       <li><a href="#jar">Creating JAR Files</a></li>
       <li><a href="#classpath">Classpath</a></li>
       <li><a href="#jdoc">Java Docs</a></li>
+    </ul>
+  </li>
+  <li><a href="#reflect">Reflection API</a>
+    <ul>
+      <li><a href="#classclass">Class Class</a></li>
     </ul>
   </li>
 </ol>
@@ -1549,6 +1557,90 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <span class="o">}</span>
 </code></pre>
 </div>
+<p><br /></p>
+
+<h4 id="inner-classes-">Inner Classes <a name="inner-c"></a></h4>
+<p>Inner class is a class that is within a code block. It is only visible to the code block it is within because its private. You can only use instance methods so you will have to instantiate and instance of the class.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">reportDogs</span><span class="o">()</span> <span class="o">{</span>
+
+  <span class="c1">// class declared inside of the method is only available to the method.</span>
+  <span class="kd">class</span> <span class="nc">DogHouseDoor</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">open</span><span class="o">()</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Door has been opened."</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="c1">// create an instance of DogHouseDoor and use open method.</span>
+  <span class="k">new</span> <span class="nf">DogHouseDoor</span><span class="o">().</span><span class="na">open</span><span class="o">();</span>
+
+  <span class="k">for</span> <span class="o">(</span><span class="n">Dogs</span> <span class="n">dog</span> <span class="o">:</span> <span class="n">dogs</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"This is a "</span> <span class="o">+</span> <span class="n">dog</span><span class="o">.</span><span class="na">dogName</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="anonymous-inner-class-">Anonymous Inner Class <a name="anon-inner"></a></h4>
+<p>An anonymous class doesn’t have a name and is defined and used once.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">reportDogs</span><span class="o">()</span> <span class="o">{</span>
+
+  <span class="c1">// class DogHouseDoor {</span>
+  <span class="c1">//   public void open() {</span>
+  <span class="c1">//     System.out.println("Door has been opened.");</span>
+  <span class="c1">//   }</span>
+  <span class="c1">// }</span>
+  <span class="c1">//</span>
+  <span class="c1">// new DogHouseDoor().open();</span>
+
+
+  <span class="c1">// creating an anonymous function by calling Object class's constructor.</span>
+  <span class="c1">// call the function right after.</span>
+  <span class="k">new</span> <span class="nf">Object</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">open</span><span class="o">()</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">prinln</span><span class="o">(</span><span class="s">"This is an anonymous function"</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}.</span><span class="na">open</span><span class="o">();</span>
+
+  <span class="k">for</span> <span class="o">(</span><span class="n">Dogs</span> <span class="n">dog</span> <span class="o">:</span> <span class="n">dogs</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"This is a "</span> <span class="o">+</span> <span class="n">dog</span><span class="o">.</span><span class="na">dogName</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="enumeration-classes-">Enumeration Classes <a name="enum-c"></a></h4>
+<p>You can create and independent enum class that can be used throughout the application. If you have constant strings that are used throughout the app you can create an enum class to ensure that each time when you use the variable the string is spelled correctly.</p>
+
+<p>Below the code is returning the string name into the constructor and saving it to the nameAsString variable. When calling the name the toString() method returns the string variable.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// create and enum to insure that the correct spelling of the name is being done.</span>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="n">DogName</span> <span class="o">{</span>
+  <span class="n">GERMAN_SHEPARD</span><span class="o">(</span><span class="s">"German Sherpard"</span><span class="o">),</span> <span class="n">PUG</span><span class="o">(</span><span class="s">"Pug"</span><span class="o">),</span> <span class="n">BULLDOG</span><span class="o">(</span><span class="s">"Bulldog"</span><span class="o">);</span>
+
+  <span class="kd">private</span> <span class="n">String</span> <span class="n">nameAsString</span><span class="o">;</span>
+
+  <span class="c1">// enums can only have private methods.</span>
+  <span class="kd">private</span> <span class="nf">DogName</span><span class="o">(</span><span class="n">String</span> <span class="n">nameAsString</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">nameAsString</span> <span class="o">=</span> <span class="n">nameAsString</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="c1">// ovverride string method to make it lowercase</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">nameAsString</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
 
 <p><br /></p>
 
@@ -1896,6 +1988,19 @@ To create an instance method you leave off the word <code class="highlighter-rou
 
    <span class="o">}</span>
  <span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h3 id="reflection-api-">Reflection API <a name="reflect"></a></h3>
+<p>The reflection api allows you to dynamically instantiate and interrogate classes.</p>
+
+<h4 id="class-class-">Class Class <a name="classclass"></a></h4>
+<p>Each object you create in Java has an associated class it is from. The class class uses the <code class="highlighter-rouge">&lt;&gt;</code> to specify the data type but you can enter a <code class="highlighter-rouge">&lt;?&gt;</code> to say it is from some class. Once you have reference from the class and object is from you can retrieve all sorts of information (see docs).</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">Dog</span> <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="n">DogName</span><span class="o">.</span><span class="na">PUG</span><span class="o">,</span> <span class="mi">0</span><span class="n">x</span><span class="o">)</span>
+<span class="o">}</span>
 </code></pre>
 </div>
 
