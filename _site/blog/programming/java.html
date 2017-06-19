@@ -119,6 +119,7 @@
       <li><a href="#char">Characters</a></li>
       <li><a href="#bool">Booleans</a></li>
       <li><a href="#str">Strings</a></li>
+      <li><a href="#j7data-type">Java 7 Enhancements</a></li>
     </ul>
   </li>
   <li><a href="#ctrl">Control Flow</a>
@@ -145,6 +146,7 @@
       <li><a href="#array">Arrays</a></li>
       <li><a href="#hash">Hash Map</a></li>
       <li><a href="#iterator">Iterators</a></li>
+      <li><a href="#j7collect">Java 7 Enhancements</a></li>
     </ul>
   </li>
   <li><a href="#class">Classes</a>
@@ -492,6 +494,10 @@ You can implicitly convert a number upwards from short to int to long by assigni
 <span class="o">}</span>
 </code></pre>
 </div>
+<p><br /></p>
+
+<h4 id="java-7-enhancements-">Java 7 Enhancements <a name="j7data-type"></a></h4>
+
 <p><br /></p>
 
 <h3 id="control-flow-">Control Flow <a name="ctrl"></a></h3>
@@ -1050,6 +1056,15 @@ Complex objects are references. A reference variable points to the location in m
 </div>
 <p><br /></p>
 
+<h4 id="java-7-enhancements--1">Java 7 Enhancements <a name="j7collect"></a></h4>
+<p>In Java 7 when declaring a collection such as, a list or hash map, you don’t need to declare the data type again in the constructor method and instead just leave an empty <code class="highlighter-rouge">&lt;&gt;</code>.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// you don't need to write dog out twice anymore.</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Dogs</span><span class="o">&gt;</span> <span class="n">dog2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+</code></pre>
+</div>
+
+<p><br /></p>
 <h3 id="classes-">Classes <a name="class"></a></h3>
 <h4 id="encapsulation-">Encapsulation <a name="encap"></a></h4>
 <p>Encapsulation means to package complex functionality to make it easy to use in the program. You should break the code out into different functionality or in other words pieces. Encapsulation allows user to use the methods without having to know how the data is stored or how the methods are constructed.</p>
