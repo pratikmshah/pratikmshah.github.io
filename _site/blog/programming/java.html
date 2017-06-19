@@ -181,6 +181,7 @@
     <ul>
       <li><a href="#jar">Creating JAR Files</a></li>
       <li><a href="#classpath">Classpath</a></li>
+      <li><a href="#jdoc">Java Docs</a></li>
     </ul>
   </li>
 </ol>
@@ -1705,6 +1706,24 @@ To create an instance method you leave off the word <code class="highlighter-rou
     </ul>
   </li>
 </ul>
+
+<p><br /></p>
+
+<h4 id="java-docs-">Java Docs <a name="jdoc"></a></h4>
+<p>The first step to creating java docs is to add <code class="highlighter-rouge">element comments</code> to your code. The element comment is like a block comment but adds an extra asterisk on the first line. In eclipse you can select <code class="highlighter-rouge">file -&gt; export -&gt; JavaDocs</code> and select the files you will create docs for. You can then select where you will store the doc. Since the markup is in HTML you can add a little bit of HTML into your documentation.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="cm">/**
+ * This is the &lt;b&gt;main&lt;b&gt; class for the app
+ *@author Pratik
+ *@version 2.0
+ */</span>
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+   <span class="o">}</span>
+ <span class="o">}</span>
+</code></pre>
+</div>
 
   </div>
 
