@@ -194,6 +194,7 @@
       <li><a href="#path-class">Path Class</a></li>
       <li><a href="#mgm-file">Manage File &amp; Directories</a></li>
       <li><a href="#read-write">Reading &amp; Writing</a></li>
+      <li><a href="#dir-tree">Directory Tree</a></li>
     </ul>
   </li>
   <li><a href="#app-dev">App Development</a>
@@ -2289,21 +2290,64 @@ To create an instance method you leave off the word <code class="highlighter-rou
     <span class="n">Charset</span> <span class="n">charset</span> <span class="o">=</span> <span class="n">Charset</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">"US-ASCII"</span><span class="o">);</span>  
     <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lines</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
 
+    <span class="c1">// READING</span>
     <span class="c1">// create a new buffered reader and use the newBufferedReader method</span>
     <span class="k">try</span> <span class="o">(</span><span class="n">BufferedReader</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">newBufferedReader</span><span class="o">(</span><span class="n">src</span><span class="o">,</span> <span class="n">charset</span><span class="o">))</span>
     <span class="o">{</span>
-        <span class="n">String</span>  <span class="n">line</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;;</span>
+        <span class="c1">// loop through file and keep reading lines until it returns null</span>
+        <span class="c1">// add lines to the list</span>
+        <span class="n">String</span>  <span class="n">line</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
         <span class="k">while</span> <span class="o">((</span><span class="n">line</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="na">readLine</span><span class="o">())</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
-          
+          <span class="n">lines</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">line</span><span class="o">);</span>
         <span class="o">}</span>
-    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
-
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
     <span class="o">}</span>
+
+    <span class="c1">// WRITING</span>
+    <span class="c1">// create a new buffered writer and use the newBufferedWriter method</span>
+    <span class="k">try</span> <span class="o">(</span><span class="n">BufferedWriter</span> <span class="n">writer</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">newBufferedWriter</span><span class="o">(</span><span class="n">tgt</span><span class="o">,</span> <span class="n">charset</span><span class="o">))</span>
+    <span class="o">{</span>
+        <span class="c1">// create an iterator to loop through the lines list</span>
+        <span class="c1">// append the lines to the end of the file.</span>
+        <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">iterator</span> <span class="o">=</span> <span class="n">lines</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+        <span class="k">while</span> <span class="o">(</span><span class="n">iterator</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+          <span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="n">iterator</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+          <span class="n">writer</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">str</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">str</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
+          <span class="n">writer</span><span class="o">.</span><span class="na">newLine</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>  
 
   <span class="o">}</span>
 <span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
 
+<h3 id="directory-tree-">Directory Tree <a name="dir-tree"></a></h3>
+<p>You can easily walk up the directory tree with the new <code class="highlighter-rouge">Files</code> class.</p>
 
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// point to files directory</span>
+    <span class="n">Path</span> <span class="n">fileDir</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"files"</span><span class="o">);</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.nio.file.Path</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.SimpleFileVisitor</span><span class="o">;</span>
+
+<span class="c1">// the SimpleFileVisitor has 4 methods that are callback methods</span>
+<span class="c1">// you can override whichever ones you want.</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyFileVisitor</span> <span class="kd">extends</span> <span class="n">SimpleFileVisitor</span><span class="o">&lt;</span><span class="n">Path</span><span class="o">&gt;</span> <span class="o">{</span>
+
+<span class="o">}</span>
 </code></pre>
 </div>
 
