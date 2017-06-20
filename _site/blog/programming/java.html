@@ -191,6 +191,7 @@
       <li><a href="#apache-file">Apache Commons File</a></li>
       <li><a href="#read-network">Read File From Network</a></li>
       <li><a href="#xml-file">Parsing XML File</a></li>
+      <li><a href="#path-class">Path Class</a></li>
     </ul>
   </li>
   <li><a href="#app-dev">App Development</a>
@@ -2202,6 +2203,40 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <span class="o">}</span>
 </code></pre>
 </div>
+<p><br /></p>
+
+<h4 id="path-class-">Path Class <a name="path-class"></a></h4>
+<p>In Java 7 there is a new system for working with directories and files Java.NIO (New input output). The core class in this system is called <code class="highlighter-rouge">Path</code>.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+
+    <span class="c1">// create path object and use the get method to get the contents of the file or url</span>
+    <span class="n">Path</span> <span class="n">path</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"/tmp/text.txt"</span><span class="o">);</span>
+
+    <span class="c1">// the toString method gives you the value that you passed in from the get method</span>
+    <span class="c1">// this will return "\tmp\text.txt"</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+
+    <span class="c1">// the get file name will send you the last part of the string which is the actual file name</span>
+    <span class="c1">// this returns "text.txt"</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">getFileName</span><span class="o">());</span>
+
+    <span class="c1">// returns integer value on how many folders the file is nested in</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">getNameCount</span><span class="o">());</span>
+
+    <span class="c1">// to get a section of the file path use the getName method. Data is list data type.</span>
+    <span class="c1">// to get actual name of the file in get name use .getNameCount - 1</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">getName</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span>
+
+    <span class="c1">// The too real path method only will work if you are pointing to an existing file</span>
+    <span class="n">Path</span> <span class="n">actualPath</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="na">toRealPath</span><span class="o">(</span><span class="n">LinkOption</span><span class="o">.</span><span class="na">NOFOLLOW_LINKS</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">getName</span><span class="o">(</span><span class="n">actualPath</span><span class="o">));</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
 <p><br /></p>
 
 <h3 id="application-development-">Application Development <a name="app-dev"></a></h3>
