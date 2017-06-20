@@ -142,6 +142,7 @@
       <li><a href="#try-catch">Try-Catch</a></li>
       <li><a href="#finally">Finally</a></li>
       <li><a href="#try-resource">Try-With-Resources (J7)</a></li>
+      <li><a href="#cust-except">Custom Exceptions</a></li>
     </ul>
   </li>
   <li><a href="#collection">Data Collections</a>
@@ -290,52 +291,54 @@
 <h4 id="numbers-">Numbers <a name="numbers"></a></h4>
 <p>A primitive data type has only one value and cannot hold complex objects such as strings.</p>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Data Type</th>
-      <th>Bits</th>
-      <th>Minimum</th>
-      <th>Maximum</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>byte</td>
-      <td>8</td>
-      <td>-128</td>
-      <td>127</td>
-    </tr>
-    <tr>
-      <td>short</td>
-      <td>16</td>
-      <td>-32,768</td>
-      <td>32,767</td>
-    </tr>
-    <tr>
-      <td>int</td>
-      <td>32</td>
-      <td>-2,147,483,648</td>
-      <td>2,147,483,647</td>
-    </tr>
-    <tr>
-      <td>long</td>
-      <td>64</td>
-      <td>-9.22337E+18</td>
-      <td>9.22337E+18</td>
-    </tr>
-    <tr>
-      <td>float</td>
-      <td>32</td>
-      <td class="text-center" colspan="2">See documentation</td>
-    </tr>
-    <tr>
-      <td>double</td>
-      <td>64</td>
-      <td class="text-center" colspan="2">See documentation</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Data Type</th>
+        <th>Bits</th>
+        <th>Minimum</th>
+        <th>Maximum</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>byte</td>
+        <td>8</td>
+        <td>-128</td>
+        <td>127</td>
+      </tr>
+      <tr>
+        <td>short</td>
+        <td>16</td>
+        <td>-32,768</td>
+        <td>32,767</td>
+      </tr>
+      <tr>
+        <td>int</td>
+        <td>32</td>
+        <td>-2,147,483,648</td>
+        <td>2,147,483,647</td>
+      </tr>
+      <tr>
+        <td>long</td>
+        <td>64</td>
+        <td>-9.22337E+18</td>
+        <td>9.22337E+18</td>
+      </tr>
+      <tr>
+        <td>float</td>
+        <td>32</td>
+        <td class="text-center" colspan="2">See documentation</td>
+      </tr>
+      <tr>
+        <td>double</td>
+        <td>64</td>
+        <td class="text-center" colspan="2">See documentation</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <p><br /></p>
 
@@ -989,6 +992,62 @@ Complex objects are references. A reference variable points to the location in m
 <p><br /></p>
 
 <h4 id="try-with-resources-">Try With Resources <a name="try-resource"></a></h4>
+<p>Java 7 created a new syntax to clean up resources vs the old way of cleaning up (see above).</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+
+    <span class="c1">// the try with resources allows you to instantiate the object within a try via ()</span>
+    <span class="c1">// these objects will be cleaned up automatically so you don't need the finally block anymore</span>
+    <span class="k">try</span> <span class="o">(</span>
+          <span class="n">FileReader</span> <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="s">"text.txt"</span><span class="o">);</span>
+          <span class="n">BufferedReader</span> <span class="n">buff</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="n">f</span><span class="o">);</span>
+        <span class="o">)</span>
+        <span class="o">{</span>
+          <span class="n">String</span> <span class="n">str</span><span class="o">;</span>
+          <span class="k">while</span> <span class="o">((</span><span class="n">str</span> <span class="o">=</span> <span class="n">buff</span><span class="o">.</span><span class="na">readLine</span><span class="o">())</span> <span class="o">!</span> <span class="o">=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+          <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="custom-exceptions-">Custom Exceptions <a name="cust-except"></a></h4>
+<p>You can create your own custom exceptions classes. When creating a custom exception class the superclass should be <code class="highlighter-rouge">Exception</code>. It is required to have a <code class="highlighter-rouge">static final long &lt;name&gt;</code> field in the class.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">java</span><span class="o">.</span><span class="na">exceptions</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BadFileException</span> <span class="kd">extends</span> <span class="n">Exception</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">34L</span><span class="o">;</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">String</span> <span class="nf">getMessage</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="s">"Bad file!"</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// To use the class in main part of program.</span>
+<span class="k">try</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"correct"</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"This is the right file."</span><span class="o">);</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="c1">// throw exception into the catch block</span>
+    <span class="k">throw</span> <span class="o">(</span><span class="k">new</span> <span class="n">BadFileException</span><span class="o">());</span>
+  <span class="o">}</span>  
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">BadFileException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+<span class="o">}</span>
+
+</code></pre>
+</div>
 
 <p><br /></p>
 
