@@ -150,6 +150,7 @@
       <li><a href="#hash-set">Hash Set</a></li>
       <li><a href="#tree-set">Tree Set</a></li>
       <li><a href="#linked">Linked List</a></li>
+      <li><a href="#queues">Queues</a></li>
       <li><a href="#j7collect">Java 7 Enhancements</a></li>
     </ul>
   </li>
@@ -201,6 +202,11 @@
       <li><a href="#class-class">Class Class</a></li>
       <li><a href="#inst-class-dyn">Instantiate Class Dynamically</a></li>
       <li><a href="#inherit-tree">Inheritance Tree</a></li>
+    </ul>
+  </li>
+  <li><a href="#test">Testing</a>
+    <ul>
+      <li><a href="#assert">Assert Keyword</a></li>
     </ul>
   </li>
 </ol>
@@ -1209,6 +1215,39 @@ Complex objects are references. A reference variable points to the location in m
 <span class="o">}</span>
 </code></pre>
 </div>
+<p><br /></p>
+
+<h4 id="queues-">Queues <a name="queues"></a></h4>
+<p>Linked List class interfaces a class called Queues which allows for a FIFO type operations. To add use <code class="highlighter-rouge">add(e) or offer(e)</code>, remove <code class="highlighter-rouge">remove() or poll()</code>, and examine <code class="highlighter-rouge">element() or peek()</code>. If you use the <code class="highlighter-rouge">offer, poll or peak</code> it not only adds or removes the item but it returns the item that was just effected. There are a whole bunch of different queues that you can use see the docs.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;();</span>
+
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Pug</span><span class="o">());</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Bulldog</span><span class="o">());</span>
+
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="k">new</span> <span class="n">GermanShepard</span><span class="o">());</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">addFirst</span><span class="o">(</span><span class="k">new</span> <span class="n">Pug</span><span class="o">());</span>
+
+    <span class="n">display</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+
+    <span class="n">Dog</span> <span class="n">o1</span> <span class="o">=</span> <span class="n">list</span><span class="o">.</span><span class="na">peek</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">o1</span><span class="o">.</span><span class="na">dogName</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+  <span class="o">}</span>
+
+  <span class="kd">static</span> <span class="kd">private</span> <span class="kt">void</span> <span class="nf">display</span><span class="o">(</span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">col</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"List order: "</span><span class="o">);</span>
+    <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">iterator</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+    <span class="k">while</span><span class="o">(</span><span class="n">iterator</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+      <span class="n">Dog</span> <span class="n">dog</span> <span class="o">=</span> <span class="o">(</span><span class="n">Dog</span> <span class="n">iterator</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">dog</span><span class="o">.</span><span class="na">dogName</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
 
 <p><br /></p>
 
@@ -2179,6 +2218,33 @@ To create an instance method you leave off the word <code class="highlighter-rou
     <span class="c1">// you can also get the package</span>
     <span class="n">Package</span> <span class="n">pack</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">getPackage</span><span class="o">();</span>
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Package name: "</span> <span class="o">+</span> <span class="n">pack</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p><br /></p>
+
+<h3 id="testing-">Testing <a name="test"></a></h3>
+<h4 id="assert-keyword-">Assert Keyword <a name="assert"></a></h4>
+<p>Assert is a way to testing a condition in your code. You create the <code class="highlighter-rouge">assert</code> command and then the condition after it. If it is false it throws an exception. Assert works only after you enter a command in the CLI.</p>
+
+<p>To add the assert command to the command line in eclipse go to <code class="highlighter-rouge">Debug Configurations</code>. Next select the java app and in the tab <code class="highlighter-rouge">Arguments</code> under <code class="highlighter-rouge">VM arguments</code> type in <code class="highlighter-rouge">-ea</code>.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// get string input and check to see if it can convert</span>
+<span class="n">String</span> <span class="n">str1</span> <span class="o">=</span> <span class="n">InputHelper</span><span class="o">.</span><span class="na">getInput</span><span class="o">(</span><span class="s">"Enter a value: "</span><span class="o">);</span>
+<span class="k">assert</span> <span class="nf">inputCheck</span><span class="o">(</span><span class="n">str1</span><span class="o">);</span>
+<span class="n">String</span> <span class="n">str2</span> <span class="o">=</span> <span class="n">InputHelper</span><span class="o">.</span><span class="na">getInput</span><span class="o">(</span><span class="s">"Enter a value: "</span><span class="o">);</span>
+<span class="k">assert</span> <span class="nf">inputCheck</span><span class="o">(</span><span class="n">str2</span><span class="o">);</span>
+<span class="c1">// code</span>
+
+<span class="c1">// create a private method to check if the input can be converted to string</span>
+<span class="kd">private</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">inputCheck</span><span class="o">(</span><span class="n">String</span> <span class="n">str</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">try</span> <span class="o">{</span>
+    <span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre>
