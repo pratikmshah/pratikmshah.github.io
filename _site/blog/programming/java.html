@@ -148,6 +148,7 @@
       <li><a href="#hash">Hash Map</a></li>
       <li><a href="#iterator">Iterators</a></li>
       <li><a href="#hash-set">Hash Set</a></li>
+      <li><a href="#tree-set">Tree Set</a></li>
       <li><a href="#j7collect">Java 7 Enhancements</a></li>
     </ul>
   </li>
@@ -1103,7 +1104,75 @@ Complex objects are references. A reference variable points to the location in m
 <p><br /></p>
 
 <h4 id="hash-set-">Hash Set <a name="hash-set"></a></h4>
-<p>The hash set</p>
+<p>The hash set is a <code class="highlighter-rouge">Set</code> which means that each object can only appear once in the set. The hash set is a bit faster than the tree set. The hash set output does not have any order the data comes out to; it will change each time.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="n">Dog</span> <span class="n">pg</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Pug</span><span class="o">();</span>
+    <span class="n">Dog</span> <span class="n">gs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GermanShepard</span><span class="o">();</span>
+    <span class="n">Dog</span> <span class="n">bd</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bulldog</span><span class="o">();</span>
+
+    <span class="c1">// define hash set class</span>
+    <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">set</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;&gt;();</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">pg</span><span class="o">);</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">gs</span><span class="o">);</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">bd</span><span class="o">);</span>
+
+    <span class="c1">// return how many in the set</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">set</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
+
+    <span class="c1">// try to add same object again</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">pg</span><span class="o">);</span>
+    <span class="n">Sysetm</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">set</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
+
+    <span class="c1">// you can add one null</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+    <span class="n">Sysetm</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">set</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
+
+    <span class="c1">// you can remove item from set</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">pg</span><span class="o">);</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="tree-set-">Tree Set <a name="tree-set"></a></h4>
+<p>Tree set does everything that the hash set does but it keeps items in order that you can control. It uses an interface called <code class="highlighter-rouge">Comparable</code> which must be added to the classes (you can just add it to the superclass). When adding to a tree set the objects will be put in alphabetical order; this drops performance because each time you add and object it must sort. The <code class="highlighter-rouge">compareTo</code> method will return and integer value of -1, 0, -1. You must implement this method yourself</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// to use the tree set the classes must have an interface of the Comparable class</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Comparable</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="o">{</span>
+  <span class="c1">//code</span>
+  <span class="c1">// must implement compareTo method from Comparable</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">compareTo</span><span class="o">(</span><span class="n">Dog</span> <span class="n">obj</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">dogName</span><span class="o">;</span>
+    <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="na">dogName</span><span class="o">;</span>
+    <span class="k">return</span> <span class="n">s1</span><span class="o">.</span><span class="na">compareTo</span><span class="o">(</span><span class="n">s2</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="n">Dog</span> <span class="n">pg</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Pug</span><span class="o">();</span>
+    <span class="n">Dog</span> <span class="n">gs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GermanShepard</span><span class="o">();</span>
+    <span class="n">Dog</span> <span class="n">bd</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bulldog</span><span class="o">();</span>
+
+    <span class="c1">// create tree set and need to implement interface called Comparable</span>
+    <span class="n">TreeSet</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">set</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeSet</span><span class="o">&lt;&gt;();</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">pg</span><span class="o">);</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">gs</span><span class="o">);</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">bd</span><span class="o">);</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
 
 <p><br /></p>
 
