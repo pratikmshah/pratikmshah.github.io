@@ -197,6 +197,7 @@
     <ul>
       <li><a href="#class-class">Class Class</a></li>
       <li><a href="#inst-class-dyn">Instantiate Class Dynamically</a></li>
+      <li><a href="#inherit-tree">Inheritance Tree</a></li>
     </ul>
   </li>
 </ol>
@@ -2039,6 +2040,36 @@ To create an instance method you leave off the word <code class="highlighter-rou
   <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
 <span class="o">}</span>
 
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="inheritance-tree-">Inheritance Tree <a name="inherit-tree"></a></h4>
+<p>Once you have a reference to an object you can walk up the hierarchy to its superclass. Use the <code class="highlighter-rouge">getSuperClass()</code> method to move up the hierarchy. You can walk up the tree but not down.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// create new object bulldog</span>
+    <span class="n">Object</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bulldog</span><span class="o">();</span>
+
+    <span class="c1">// get base class</span>
+    <span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="na">getClass</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Class name: "</span> <span class="o">+</span> <span class="n">c</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+
+    <span class="c1">// get the superclass</span>
+    <span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">sup</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">getSuperClass</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Super name: "</span> <span class="o">+</span> <span class="n">sup</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+
+    <span class="c1">// get the superclass's super</span>
+    <span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">sup2</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">getSuperClass</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Super Super name: "</span> <span class="o">+</span> <span class="n">sup2</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+
+    <span class="c1">// you can also get the package</span>
+    <span class="n">Package</span> <span class="n">pack</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">getPackage</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Package name: "</span> <span class="o">+</span> <span class="n">pack</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
 </code></pre>
 </div>
 
