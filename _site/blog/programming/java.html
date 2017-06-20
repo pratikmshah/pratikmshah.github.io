@@ -195,6 +195,7 @@
       <li><a href="#mgm-file">Manage File &amp; Directories</a></li>
       <li><a href="#read-write">Reading &amp; Writing</a></li>
       <li><a href="#dir-tree">Directory Tree</a></li>
+      <li><a href="#find-file">Finding Files</a></li>
     </ul>
   </li>
   <li><a href="#app-dev">App Development</a>
@@ -2327,14 +2328,16 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <p><br /></p>
 
 <h3 id="directory-tree-">Directory Tree <a name="dir-tree"></a></h3>
-<p>You can easily walk up the directory tree with the new <code class="highlighter-rouge">Files</code> class.</p>
+<p>You can easily walk up the directory tree with the new <code class="highlighter-rouge">Files</code> class. Once you create/extend the <code class="highlighter-rouge">SimpleFileVisitor</code> you can use the <code class="highlighter-rouge">File</code> class’s <code class="highlighter-rouge">walkFileTree</code> method.</p>
 
 <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
 
     <span class="c1">// point to files directory</span>
+    <span class="c1">// create new object from the MyFileVisitor class which extends SimpleFileVisitor</span>
     <span class="n">Path</span> <span class="n">fileDir</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"files"</span><span class="o">);</span>
-
+    <span class="n">MyFileVisitor</span> <span class="n">visit</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyFileVisitor</span><span class="o">();</span>
+    <span class="n">Files</span><span class="o">.</span><span class="na">walkFileTree</span><span class="o">(</span><span class="n">fileDir</span><span class="o">,</span> <span class="n">visit</span><span class="o">);</span>
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre>
@@ -2347,9 +2350,39 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <span class="c1">// you can override whichever ones you want.</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyFileVisitor</span> <span class="kd">extends</span> <span class="n">SimpleFileVisitor</span><span class="o">&lt;</span><span class="n">Path</span><span class="o">&gt;</span> <span class="o">{</span>
 
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">FileVisitResult</span> <span class="nf">postVisitDirectory</span><span class="o">(</span><span class="n">Path</span> <span class="n">dir</span><span class="o">,</span> <span class="n">IOException</span> <span class="n">exc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Visited "</span> <span class="o">+</span> <span class="n">dir</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">FileVisitResult</span><span class="o">.</span><span class="na">CONTINUE</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">FileVisitResult</span> <span class="nf">preVisitDirectory</span><span class="o">(</span><span class="n">Path</span> <span class="n">dir</span><span class="o">,</span> <span class="n">BasicFileAttributes</span> <span class="n">attrs</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"About to visit "</span> <span class="o">+</span> <span class="n">dir</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">FileVisitResult</span><span class="o">.</span><span class="na">CONTINUE</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">FileVisitResult</span> <span class="nf">visitFile</span><span class="o">(</span><span class="n">Path</span> <span class="n">file</span><span class="o">,</span> <span class="n">BasicFileAttributes</span> <span class="n">attrs</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">attrs</span><span class="o">.</span><span class="na">isRegularFile</span><span class="o">())</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Regular File: "</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">FileVisitResult</span><span class="o">.</span><span class="na">CONTINUE</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">FileVisitResult</span> <span class="nf">visitFileFailed</span><span class="o">(</span><span class="n">Path</span> <span class="n">file</span><span class="o">,</span> <span class="n">BasicFileAttributes</span> <span class="n">attrs</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">exc</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="k">return</span> <span class="n">FileVisitResult</span><span class="o">.</span><span class="na">CONTINUE</span><span class="o">;</span>
+  <span class="o">}</span>
+
 <span class="o">}</span>
 </code></pre>
 </div>
+<p><br /></p>
+
+<h4 id="finding-files-">Finding Files <a name="find-file"></a></h4>
 
 <p><br /></p>
 
