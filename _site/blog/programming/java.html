@@ -196,6 +196,7 @@
       <li><a href="#read-write">Reading &amp; Writing</a></li>
       <li><a href="#dir-tree">Directory Tree</a></li>
       <li><a href="#find-file">Finding Files</a></li>
+      <li><a href="#dir-watch">Watch Directory Changes</a></li>
     </ul>
   </li>
   <li><a href="#app-dev">App Development</a>
@@ -2383,6 +2384,59 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <p><br /></p>
 
 <h4 id="finding-files-">Finding Files <a name="find-file"></a></h4>
+<p>You can use the <code class="highlighter-rouge">PathMatcher</code> to look at names of each file as you encounter them. To find a file you will want to make a class that extends <code class="highlighter-rouge">SimpleFileVisitor</code>. After use the <code class="highlighter-rouge">FileFinder</code> object to find the file you are looking for.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="n">Path</span> <span class="n">dir</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"files"</span><span class="o">);</span>
+    <span class="n">FileFinder</span> <span class="n">finder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileFinder</span><span class="o">(</span><span class="s">"file.txt"</span><span class="o">);</span>
+    <span class="n">Files</span><span class="o">.</span><span class="na">walkFileTree</span><span class="o">(</span><span class="n">fileDir</span><span class="o">,</span> <span class="n">finder</span><span class="o">);</span>
+
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Path</span><span class="o">&gt;</span> <span class="n">foundFiles</span> <span class="o">=</span> <span class="n">finder</span><span class="o">.</span><span class="na">foundPaths</span><span class="o">;</span>
+
+    <span class="k">if</span><span class="o">(</span><span class="n">foundFiles</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="n">Path</span> <span class="n">path</span> <span class="o">:</span> <span class="n">foundFiles</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">toRealPath</span><span class="o">(</span><span class="n">LinkOption</span><span class="o">.</span><span class="na">NOFOLLOW_LINKS</span><span class="o">));</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">else</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"No files found."</span><span class="o">);</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyFileVisitor</span> <span class="kd">extends</span> <span class="n">SimpleFileVisitor</span><span class="o">&lt;</span><span class="n">Path</span><span class="o">&gt;</span> <span class="o">{</span>
+
+  <span class="c1">// PathMatcher is an interface</span>
+  <span class="kd">private</span> <span class="n">PathMatcher</span> <span class="n">matcher</span><span class="o">;</span>
+
+  <span class="c1">// hold all the files found</span>
+  <span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Path</span><span class="o">&gt;</span> <span class="n">foundPaths</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+
+  <span class="c1">// you can compare files using the glob or regex.</span>
+  <span class="kd">public</span> <span class="nf">FileFinder</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">matcher</span> <span class="o">=</span> <span class="n">FileSystems</span><span class="o">.</span><span class="na">getDefault</span><span class="o">().</span><span class="na">getPathMatcher</span><span class="o">(</span><span class="s">"glob:"</span> <span class="o">+</span> <span class="n">pattern</span><span class="o">)</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">FileVisitResult</span> <span class="nf">visitFile</span><span class="o">(</span><span class="n">Path</span> <span class="n">file</span><span class="o">,</span> <span class="n">BasicFileAttributes</span> <span class="n">attrs</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="n">Path</span> <span class="n">name</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">getFileName</span><span class="o">();</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">matcher</span><span class="o">.</span><span class="na">matches</span><span class="o">(</span><span class="n">name</span><span class="o">))</span> <span class="o">{</span>
+      <span class="n">foundPaths</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">FileVisitResult</span><span class="o">.</span><span class="na">CONTINUE</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="watch-directory-changes-">Watch Directory Changes <a name="dir-watch"></a></h4>
+<p>Java allows you to create a watch service that watches a directory for any changes.</p>
 
 <p><br /></p>
 
