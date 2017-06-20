@@ -195,7 +195,8 @@
   </li>
   <li><a href="#reflect">Reflection API</a>
     <ul>
-      <li><a href="#classclass">Class Class</a></li>
+      <li><a href="#class-class">Class Class</a></li>
+      <li><a href="#inst-class-dyn">Instantiate Class Dynamically</a></li>
     </ul>
   </li>
 </ol>
@@ -1995,12 +1996,49 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <h3 id="reflection-api-">Reflection API <a name="reflect"></a></h3>
 <p>The reflection api allows you to dynamically instantiate and interrogate classes.</p>
 
-<h4 id="class-class-">Class Class <a name="classclass"></a></h4>
+<h4 id="class-class-">Class Class <a name="class-class"></a></h4>
 <p>Each object you create in Java has an associated class it is from. The class class uses the <code class="highlighter-rouge">&lt;&gt;</code> to specify the data type but you can enter a <code class="highlighter-rouge">&lt;?&gt;</code> to say it is from some class. Once you have reference from the class and object is from you can retrieve all sorts of information (see docs).</p>
 
 <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-  <span class="n">Dog</span> <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="n">DogName</span><span class="o">.</span><span class="na">PUG</span><span class="o">,</span> <span class="mi">0</span><span class="n">x</span><span class="o">)</span>
+  <span class="n">Dog</span> <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="n">DogName</span><span class="o">.</span><span class="na">PUG</span><span class="o">,</span> <span class="mi">0</span><span class="n">xFFFFFF</span><span class="o">);</span>
+
+  <span class="c1">// retrieve information about dog class</span>
+  <span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="na">getClass</span><span class="o">();</span>
+
+  <span class="c1">// get full name</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>
+
+  <span class="c1">// get just the name ex: com.pratik.dog</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+
+  <span class="c1">// get only the class name</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">getSimpleName</span><span class="o">());</span>
 <span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="instantiate-class-dynamically-">Instantiate Class Dynamically <a name="inst-class-dyn"></a></h4>
+<p>You can use the <code class="highlighter-rouge">Constructor&lt;?&gt;</code> data type to store constructor methods which you can then use to instantiate and object.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="na">getClass</span><span class="o">();</span>
+
+<span class="c1">// get an array of constructors</span>
+<span class="n">Constructor</span><span class="o">&lt;?&gt;[]</span> <span class="n">constructors</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">getConstructors</span><span class="o">();</span>
+
+<span class="c1">// get the first constructor</span>
+<span class="n">Constructor</span><span class="o">&lt;?&gt;</span> <span class="n">con</span> <span class="o">=</span> <span class="n">constructors</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+
+<span class="n">Object</span> <span class="n">obj</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+<span class="c1">// the new instance method takes arbitrary number of arguments which YOU MUST know</span>
+<span class="c1">// you need to wrap this around a try catch block due to any exceptions</span>
+<span class="k">try</span> <span class="o">{</span>
+  <span class="n">obj</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="n">DogName</span><span class="o">.</span><span class="na">PUG</span><span class="o">,</span> <span class="mi">0</span><span class="n">xFFFFFF</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+<span class="o">}</span>
+
 </code></pre>
 </div>
 
