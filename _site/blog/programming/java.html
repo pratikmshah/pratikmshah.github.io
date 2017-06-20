@@ -149,6 +149,7 @@
       <li><a href="#iterator">Iterators</a></li>
       <li><a href="#hash-set">Hash Set</a></li>
       <li><a href="#tree-set">Tree Set</a></li>
+      <li><a href="#linked">Linked List</a></li>
       <li><a href="#j7collect">Java 7 Enhancements</a></li>
     </ul>
   </li>
@@ -1169,6 +1170,41 @@ Complex objects are references. A reference variable points to the location in m
     <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">gs</span><span class="o">);</span>
     <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">bd</span><span class="o">);</span>
 
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="linked-list-">Linked List <a name="linked"></a></h4>
+<p>Linked lists are high performance and very easy to use. You can add items to any position in the list unlike list where you can only add them at the end: <code class="highlighter-rouge">list.add(index#, data)</code>. You can add items to the beginning of the list by using the <code class="highlighter-rouge">addFirst(data)</code> and remove them by <code class="highlighter-rouge">remove(int index)</code>.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// create new linked list</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;();</span>
+
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Pug</span><span class="o">());</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Bulldog</span><span class="o">());</span>
+
+    <span class="c1">// you can add items in any position. give it the index pos then the item</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="k">new</span> <span class="n">GermanShepard</span><span class="o">());</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">addFirst</span><span class="o">(</span><span class="k">new</span> <span class="n">Pug</span><span class="o">());</span>
+
+    <span class="c1">// remove item from list at index 2</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+
+    <span class="n">display</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">static</span> <span class="kd">private</span> <span class="kt">void</span> <span class="nf">display</span><span class="o">(</span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">col</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"List order: "</span><span class="o">);</span>
+    <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">iterator</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+    <span class="k">while</span><span class="o">(</span><span class="n">iterator</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+      <span class="n">Dog</span> <span class="n">dog</span> <span class="o">=</span> <span class="o">(</span><span class="n">Dog</span> <span class="n">iterator</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">dog</span><span class="o">.</span><span class="na">dogName</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+    <span class="o">}</span>
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre>
