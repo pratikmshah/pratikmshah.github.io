@@ -192,6 +192,7 @@
       <li><a href="#read-network">Read File From Network</a></li>
       <li><a href="#xml-file">Parsing XML File</a></li>
       <li><a href="#path-class">Path Class</a></li>
+      <li><a href="#mgm-file">Manage File &amp; Directories</a></li>
     </ul>
   </li>
   <li><a href="#app-dev">App Development</a>
@@ -2232,6 +2233,43 @@ To create an instance method you leave off the word <code class="highlighter-rou
     <span class="c1">// The too real path method only will work if you are pointing to an existing file</span>
     <span class="n">Path</span> <span class="n">actualPath</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="na">toRealPath</span><span class="o">(</span><span class="n">LinkOption</span><span class="o">.</span><span class="na">NOFOLLOW_LINKS</span><span class="o">);</span>
     <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">getName</span><span class="o">(</span><span class="n">actualPath</span><span class="o">));</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="manage-file--directories-">Manage File &amp; Directories <a name="mgm-file"></a></h4>
+<p>The <code class="highlighter-rouge">Files</code> class can help copy, delete, and move files.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.nio.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+
+    <span class="n">Path</span> <span class="n">src</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"/tmp/text.txt"</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">src</span><span class="o">.</span><span class="na">getFileName</span><span class="o">());</span>
+
+    <span class="c1">// to copy the file you need the source path and then a target path</span>
+    <span class="n">Path</span> <span class="n">tgt</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"tmp/newtext.txt"</span><span class="o">);</span>
+
+    <span class="c1">// to copy file use the copy method and put in the source  path, target path, and then an optional copy option</span>
+    <span class="n">Files</span><span class="o">.</span><span class="na">copy</span><span class="o">(</span><span class="n">src</span><span class="o">,</span> <span class="n">tgt</span><span class="o">,</span> <span class="n">StandardCopyOption</span><span class="o">.</span><span class="na">REPLACE_EXISTING</span><span class="o">);</span>
+
+    <span class="c1">// to delete a file get the file path to delete and use the delete method</span>
+    <span class="n">Path</span> <span class="n">del</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"files/deltext.txt"</span><span class="o">);</span>
+    <span class="n">Files</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">del</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"deleted!"</span><span class="o">);</span>
+
+    <span class="c1">// to create a new directory retrieve the location of the new directory</span>
+    <span class="c1">// use the createDirectory method.</span>
+    <span class="n">Path</span> <span class="n">newdir</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"file/newfolder"</span><span class="o">);</span>
+    <span class="n">Files</span><span class="o">.</span><span class="na">createDirectory</span><span class="o">(</span><span class="n">newdir</span><span class="o">);</span>
+
+    <span class="c1">// to move a file use the move method and pass arguments of the file to move, where to move using</span>
+    <span class="c1">// the resolve method which will convert </span>
+    <span class="n">Files</span><span class="o">.</span><span class="na">move</span><span class="o">(</span><span class="n">src</span><span class="o">,</span> <span class="n">newdir</span><span class="o">.</span><span class="na">resolve</span><span class="o">(</span><span class="n">src</span><span class="o">.</span><span class="na">getFileName</span><span class="o">()),</span> <span class="n">StandardCopyOption</span><span class="o">.</span><span class="na">REPLACE_EXISTING</span><span class="o">);</span>
+
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre>
