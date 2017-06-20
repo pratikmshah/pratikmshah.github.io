@@ -140,6 +140,7 @@
   <li><a href="#exception">Exception Handling</a>
     <ul>
       <li><a href="#try-catch">Try-Catch</a></li>
+      <li><a href="#finally">Finally</a></li>
     </ul>
   </li>
   <li><a href="#collection">Data Collections</a>
@@ -948,6 +949,43 @@ Complex objects are references. A reference variable points to the location in m
 <span class="o">}</span>
 </code></pre>
 </div>
+<p><br /></p>
+
+<h4 id="finally-">Finally <a name="finally"></a></h4>
+<p>If you use a resource that needs to be cleaned after a try-catch block use the <code class="highlighter-rouge">finally</code> block. Finally block executes after a <code class="highlighter-rouge">try</code> regardless of if an exception is thrown.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+
+    <span class="c1">// create the file and buffer reader</span>
+    <span class="n">FileReader</span> <span class="n">f</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="n">BufferedReader</span> <span class="n">buff</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+    <span class="c1">// the finally block closes the reader streams regardless of an exception or not</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="s">"text.txt"</span><span class="o">);</span>
+      <span class="n">buff</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="n">f</span><span class="o">);</span>
+      <span class="n">String</span> <span class="n">str</span><span class="o">;</span>
+      <span class="k">while</span> <span class="o">((</span><span class="n">str</span> <span class="o">=</span> <span class="n">buff</span><span class="o">.</span><span class="na">readLine</span><span class="o">())</span> <span class="o">!</span> <span class="o">=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>
+    <span class="k">finally</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">f</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">f</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+      <span class="o">}</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">f</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">buff</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
 <p><br /></p>
 
 <h3 id="data-collections-">Data Collections <a name="collection"></a></h3>
