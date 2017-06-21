@@ -906,19 +906,6 @@ time {
     #about div h1 {
       margin-bottom: 0.75em; } }
 /*utility tool when writting blog post*/
-.blg-lists {
-  margin-left: 25px; }
-  .blg-lists li {
-    margin-bottom: 5px; }
-
-.blg-img {
-  padding: 5px;
-  margin: 0 auto;
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #E0E0E0; }
-
 p {
   margin-bottom: 15px; }
 
@@ -945,6 +932,33 @@ pre {
 
 ul, ol {
   margin-left: 30px; }
+
+.blg-lists {
+  margin-left: 25px; }
+  .blg-lists li {
+    margin-bottom: 5px; }
+
+.blg-img {
+  padding: 5px;
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #E0E0E0; }
+
+#scroll-top {
+  display: block;
+  position: fixed;
+  border: none;
+  bottom: 25px;
+  right: 75px;
+  background-color: transparent;
+  z-index: 99;
+  padding: 0px;
+  font-size: 3em; }
+  #scroll-top span.glyphicon {
+    color: #00AEEF;
+    text-shadow: 2px 0px black, 1px -1px black, 1px -1px black, 2px 0px black; }
 
 #homepage {
   background-color: black; }
