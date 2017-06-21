@@ -940,6 +940,8 @@ pre {
   border: none;
   margin-top: 30px !important;
   margin-bottom: 50px !important; }
+  pre code {
+    white-space: pre; }
 
 ul, ol {
   margin-left: 30px; }
