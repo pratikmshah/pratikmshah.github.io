@@ -67,6 +67,11 @@ ul, ol {
     color: $twt-clr;
     text-shadow: 2px 0px $blk, 1px -1px $blk, 1px -1px $blk, 2px 0px $blk;
   }
+
+  span.glyphicon:hover {
+    color: $whte;
+    text-shadow: 2px 0px $twt-clr, 1px -1px $twt-clr, 1px -1px $twt-clr, 2px 0px $twt-clr;
+  }
 }
 
 @media only screen and (max-width: 415px) {

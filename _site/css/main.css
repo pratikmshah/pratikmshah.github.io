@@ -959,6 +959,9 @@ ul, ol {
   #scroll-top span.glyphicon {
     color: #00AEEF;
     text-shadow: 2px 0px black, 1px -1px black, 1px -1px black, 2px 0px black; }
+  #scroll-top span.glyphicon:hover {
+    color: #fff;
+    text-shadow: 2px 0px #00AEEF, 1px -1px #00AEEF, 1px -1px #00AEEF, 2px 0px #00AEEF; }
 
 @media only screen and (max-width: 415px) {
   #scroll-top {
