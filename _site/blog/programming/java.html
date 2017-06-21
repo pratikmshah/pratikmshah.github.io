@@ -225,6 +225,14 @@
       <li><a href="#token">Scan Tokenized Text</a></li>
     </ul>
   </li>
+  <li><a href="#multi-thread">Multi-Threading</a>
+    <ul>
+      <li><a href="#thread">Thread Class</a></li>
+      <li><a href="#run">Runnable Interface</a></li>
+      <li><a href="#inter-thread">Interrupt Thread</a></li>
+      <li><a href="#sync-thread">Synchronize Threads</a></li>
+    </ul>
+  </li>
 </ol>
 
 <p><br /></p>
@@ -2739,6 +2747,241 @@ To create an instance method you leave off the word <code class="highlighter-rou
 </code></pre>
 </div>
 <p><br /></p>
+
+<h3 id="multi-threading-">Multi-Threading <a name="multi-thread"></a></h3>
+<h4 id="thread-class-">Thread Class <a name="thread"></a></h4>
+<p>Multi threading is the process of have multiple things going on at the same time. You can create your own classes that implements <code class="highlighter-rouge">Thread</code> or implement and interface.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="kt">int</span> <span class="n">iterations</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="n">MyThread</span> <span class="n">thread</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyThread</span><span class="o">();</span>
+
+    <span class="c1">// this will cause the run method to begin from custom class</span>
+    <span class="n">thread</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">iterations</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"From main process"</span><span class="o">);</span>
+
+        <span class="c1">// sleep will take argument in milliseconds</span>
+        <span class="c1">// must call on class directly</span>
+        <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">);</span>
+      <span class="o">}</span>  
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyThread</span> <span class="kd">extends</span> <span class="n">Thread</span> <span class="o">{</span>
+
+  <span class="c1">// you have to implement run method</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">iterations</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">iterations</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"From secondary thread"</span><span class="o">);</span>
+
+        <span class="c1">// sleep will take argument in milliseconds</span>
+        <span class="n">sleep</span><span class="o">(</span><span class="mi">2000</span><span class="o">);</span>
+      <span class="o">}</span>  
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="runnable-interface-">Runnable Interface <a name="run"></a></h4>
+<p>You can also implement and interface called <code class="highlighter-rouge">Runnable</code> instead of using the <code class="highlighter-rouge">Thread</code> class.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="kt">int</span> <span class="n">iterations</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="n">MyThread</span> <span class="n">thread</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyThread</span><span class="o">();</span>
+
+    <span class="c1">// this will cause the run method to begin from custom class</span>
+    <span class="n">thread</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+
+    <span class="c1">// must create runnable object</span>
+    <span class="n">MyRunnable</span> <span class="n">run</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyRunnable</span><span class="o">();</span>
+
+    <span class="c1">// anonymous method</span>
+    <span class="k">new</span> <span class="nf">Thread</span><span class="o">(</span><span class="n">run</span><span class="o">).</span><span class="na">start</span><span class="o">();</span>
+
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">iterations</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"From main process"</span><span class="o">);</span>
+        <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">2000</span><span class="o">);</span>
+      <span class="o">}</span>  
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// You are implementing the Runnable interface.</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyThread</span> <span class="kd">implements</span> <span class="n">Runnable</span> <span class="o">{</span>
+
+  <span class="c1">// you have to implement run method</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">iterations</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">iterations</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"From runnable"</span><span class="o">);</span>
+
+        <span class="c1">// sleep will take argument in milliseconds</span>
+        <span class="c1">// when you implement Runnable you lose access to the Thread class's methods</span>
+        <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">4000</span><span class="o">);</span>
+      <span class="o">}</span>  
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="interrupt-thread-">Interrupt Thread <a name="inter-thread"></a></h4>
+<p>The thread runs until it completes, or its interrupted or you explicitly interrupt it. You can use the interrupt method to break the thread.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyThread</span> <span class="kd">extends</span> <span class="n">Thread</span> <span class="o">{</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">iterations</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">iterations</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"From secondary thread"</span><span class="o">);</span>
+        <span class="n">sleep</span><span class="o">(</span><span class="mi">2000</span><span class="o">);</span>
+      <span class="o">}</span>  
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Interrupted!"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="kt">int</span> <span class="n">iterations</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="n">MyThread</span> <span class="n">thread</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyThread</span><span class="o">();</span>
+
+    <span class="n">thread</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">iterations</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"From main process"</span><span class="o">);</span>
+
+        <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">);</span>
+      <span class="o">}</span>  
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="c1">// interrupt a thread thats being executed.</span>
+    <span class="n">thread</span><span class="o">.</span><span class="na">interrupt</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Call interrupt"</span><span class="o">);</span>
+
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="synchronize-threads-">Synchronize Threads <a name="sync-thread"></a></h4>
+<p>In applications there are times when multiple threads need to share resources and you will have to synchronize so that the thread can only access the resources one at a time.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="n">TargetClass</span> <span class="n">tgt</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TargetClass</span><span class="o">();</span>
+
+    <span class="c1">// create multiple instances of MyThread object</span>
+    <span class="n">MyThread</span> <span class="n">t1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyThread</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">tgt</span><span class="o">);</span>
+    <span class="n">MyThread</span> <span class="n">t2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyThread</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="n">tgt</span><span class="o">);</span>
+    <span class="n">MyThread</span> <span class="n">t3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyThread</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="n">tgt</span><span class="o">);</span>
+
+    <span class="c1">// start all of the threads</span>
+    <span class="n">t1</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+    <span class="n">t2</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+    <span class="n">t3</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">TargetClass</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">call</span><span class="o">(</span><span class="kt">int</span> <span class="n">threadId</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Call from "</span> <span class="o">+</span> <span class="n">threadId</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyThread</span> <span class="kd">extends</span> <span class="n">Thread</span> <span class="o">{</span>
+
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">threadId</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="n">TargetClass</span> <span class="n">target</span><span class="o">;</span>
+
+  <span class="c1">// create constructor to save values as private fields</span>
+  <span class="kd">public</span> <span class="nf">MyThread</span><span class="o">(</span><span class="kt">int</span> <span class="n">threadId</span><span class="o">,</span> <span class="n">TargetClass</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">threadId</span> <span class="o">=</span> <span class="n">threadId</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">target</span> <span class="o">=</span> <span class="n">target</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+
+    <span class="c1">// create synchronized code block and pass in a target</span>
+    <span class="c1">// only one of the thread objects will be able to access this method at a time</span>
+    <span class="c1">// the execution does not guarantee what order the objects will be executed in</span>
+    <span class="kd">synchronized</span><span class="o">(</span><span class="n">target</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">try</span> <span class="o">{</span>
+          <span class="n">sleep</span><span class="o">(</span><span class="mi">2000</span><span class="o">);</span>
+        <span class="o">}</span>  
+      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Interrupted!"</span><span class="o">);</span>
+      <span class="o">}</span>
+      <span class="n">target</span><span class="o">.</span><span class="na">call</span><span class="o">(</span><span class="n">threadId</span><span class="o">);</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
 
   </div>
 
