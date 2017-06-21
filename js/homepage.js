@@ -24,22 +24,15 @@ $(function() {
     toggleListNav();
   });
 
-  /*====================================INDEX TEXT CYCLE
-  const COLOR = 'color';
-  var words = ['Hello', 'I\'m', 'a', 'developer', 'with', 'knowledge', 'in', 'devicon-html5-plain-wordmark colored', 'devicon-css3-plain-wordmark colored', 'devicon-javascript-plain colored', 'devicon-ruby-plain-wordmark colored', 'devicon-rails-plain-wordmark colored', 'devicon-bootstrap-plain-wordmark colored', 'devicon-sass-original colored', 'and', 'more'],
-      wordLength = words.length,
-      word = 1;
-      $word = $('p.text');
-
-  setInterval(function() {
-    if (words[word].indexOf(COLOR) >= 0) {
-      $word.html("<p class=\"text text-center " + words[word] + "\">" + "</p>");
+  //====================================SCROLL UP BUTTON
+  $(document).scroll(function() {
+    if($(document).scrollTop() > 100) {
+      $("button#scroll-top").css("display", "block");
     } else {
-      $word.html("<p class=\"text text-center\">" + words[word] + "<span>.</span></p>");
+      $("button#scroll-top").css("display", "none");
     }
-    word + 1 == wordLength ? word = 0 : word++;
-  }, 1000);
-  */
+  });
+
 });
 
 

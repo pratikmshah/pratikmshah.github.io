@@ -53,7 +53,7 @@ ul, ol {
 }
 
 #scroll-top {
-  display: block;
+  display: none;
   position: fixed;
   border: none;
   bottom: 25px;
@@ -79,6 +79,6 @@ ul, ol {
 @media only screen and (max-width: 375px) {
   #scroll-top {
     bottom: 10px;
-    right: 30px;
+    right: 20px;
   }
 }
