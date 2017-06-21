@@ -1,5 +1,10 @@
 $(function() {
 
+  //====================================HOMEPAGE NAME
+  $("#hero-container .texts p").animate({ opacity: 1 }, 2500);
+
+
+
   //====================================MASONRY
   // setup specs for masonry
   $('div.page-content').imagesLoaded( function() {
