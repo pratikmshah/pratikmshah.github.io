@@ -906,19 +906,6 @@ time {
     #about div h1 {
       margin-bottom: 0.75em; } }
 /*utility tool when writting blog post*/
-.blg-lists {
-  margin-left: 25px; }
-  .blg-lists li {
-    margin-bottom: 5px; }
-
-.blg-img {
-  padding: 5px;
-  margin: 0 auto;
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #E0E0E0; }
-
 p {
   margin-bottom: 15px; }
 
@@ -940,10 +927,50 @@ pre {
   border: none;
   margin-top: 30px !important;
   margin-bottom: 50px !important; }
+  pre code {
+    white-space: pre; }
 
 ul, ol {
   margin-left: 30px; }
 
+.blg-lists {
+  margin-left: 25px; }
+  .blg-lists li {
+    margin-bottom: 5px; }
+
+.blg-img {
+  padding: 5px;
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #E0E0E0; }
+
+#scroll-top {
+  display: none;
+  position: fixed;
+  border: none;
+  bottom: 25px;
+  right: 75px;
+  background-color: transparent;
+  z-index: 99;
+  padding: 0px;
+  font-size: 3em; }
+  #scroll-top span.glyphicon {
+    color: #00AEEF;
+    text-shadow: 2px 0px black, 1px -1px black, 1px -1px black, 2px 0px black; }
+  #scroll-top span.glyphicon:hover {
+    color: #fff;
+    text-shadow: 2px 0px #00AEEF, 1px -1px #00AEEF, 1px -1px #00AEEF, 2px 0px #00AEEF; }
+
+@media only screen and (max-width: 415px) {
+  #scroll-top {
+    bottom: 20px;
+    right: 40px; } }
+@media only screen and (max-width: 375px) {
+  #scroll-top {
+    bottom: 10px;
+    right: 20px; } }
 #homepage {
   background-color: black; }
 
@@ -955,6 +982,7 @@ ul, ol {
   #hero-container .texts {
     color: #00AEEF; }
     #hero-container .texts p {
+      opacity: 0;
       letter-spacing: 25px;
       background: -webkit-linear-gradient(left, #296ad4 0%, #4e8ef7 100%);
       background: -moz-linear-gradient(left, #296ad4 0%, #4e8ef7 100%);

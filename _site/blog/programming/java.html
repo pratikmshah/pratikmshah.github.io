@@ -119,12 +119,14 @@
       <li><a href="#char">Characters</a></li>
       <li><a href="#bool">Booleans</a></li>
       <li><a href="#str">Strings</a></li>
+      <li><a href="#j7data-type">Underscores (J7)</a></li>
     </ul>
   </li>
   <li><a href="#ctrl">Control Flow</a>
     <ul>
       <li><a href="#condition">Conditionals</a></li>
       <li><a href="#switch">Switch Statement</a></li>
+      <li><a href="#j7switch">Switch (J7)</a></li>
       <li><a href="#loop">Loops</a></li>
       <li><a href="#method">Method</a></li>
     </ul>
@@ -138,6 +140,9 @@
   <li><a href="#exception">Exception Handling</a>
     <ul>
       <li><a href="#try-catch">Try-Catch</a></li>
+      <li><a href="#finally">Finally</a></li>
+      <li><a href="#try-resource">Try-With-Resources (J7)</a></li>
+      <li><a href="#cust-except">Custom Exceptions</a></li>
     </ul>
   </li>
   <li><a href="#collection">Data Collections</a>
@@ -145,6 +150,11 @@
       <li><a href="#array">Arrays</a></li>
       <li><a href="#hash">Hash Map</a></li>
       <li><a href="#iterator">Iterators</a></li>
+      <li><a href="#hash-set">Hash Set</a></li>
+      <li><a href="#tree-set">Tree Set</a></li>
+      <li><a href="#linked">Linked List</a></li>
+      <li><a href="#queues">Queues</a></li>
+      <li><a href="#j7collect">Java 7 Enhancements</a></li>
     </ul>
   </li>
   <li><a href="#class">Classes</a>
@@ -157,6 +167,12 @@
       <li><a href="#construct">Constructor Method</a></li>
       <li><a href="#set-get">Setter Getter Methods</a></li>
       <li><a href="#class-var">Class Variable</a></li>
+      <li><a href="#static">Static Initializers</a></li>
+      <li><a href="#static-field">Instance Field Initializer</a></li>
+      <li><a href="#member">Member Classes</a></li>
+      <li><a href="#inner-c">Inner Classes</a></li>
+      <li><a href="#anon-inner">Anonymous Inner Class</a></li>
+      <li><a href="#enum-c">Enumeration Classes</a></li>
     </ul>
   </li>
   <li><a href="#inherit-poly">Inheritance &amp; Polymorphism</a>
@@ -175,6 +191,12 @@
       <li><a href="#apache-file">Apache Commons File</a></li>
       <li><a href="#read-network">Read File From Network</a></li>
       <li><a href="#xml-file">Parsing XML File</a></li>
+      <li><a href="#path-class">Path Class</a></li>
+      <li><a href="#mgm-file">Manage File &amp; Directories</a></li>
+      <li><a href="#read-write">Reading &amp; Writing</a></li>
+      <li><a href="#dir-tree">Directory Tree</a></li>
+      <li><a href="#find-file">Finding Files</a></li>
+      <li><a href="#dir-watch">Watch Directory Changes</a></li>
     </ul>
   </li>
   <li><a href="#app-dev">App Development</a>
@@ -182,6 +204,33 @@
       <li><a href="#jar">Creating JAR Files</a></li>
       <li><a href="#classpath">Classpath</a></li>
       <li><a href="#jdoc">Java Docs</a></li>
+    </ul>
+  </li>
+  <li><a href="#reflect">Reflection API</a>
+    <ul>
+      <li><a href="#class-class">Class Class</a></li>
+      <li><a href="#inst-class-dyn">Instantiate Class Dynamically</a></li>
+      <li><a href="#inherit-tree">Inheritance Tree</a></li>
+    </ul>
+  </li>
+  <li><a href="#test">Testing</a>
+    <ul>
+      <li><a href="#assert">Assert Keyword</a></li>
+    </ul>
+  </li>
+  <li><a href="#iostream">I/O Stream</a>
+    <ul>
+      <li><a href="#rwstream">Read Write Byte &amp; Character Stream</a></li>
+      <li><a href="#buffer">Buffered Stream</a></li>
+      <li><a href="#token">Scan Tokenized Text</a></li>
+    </ul>
+  </li>
+  <li><a href="#multi-thread">Multi-Threading</a>
+    <ul>
+      <li><a href="#thread">Thread Class</a></li>
+      <li><a href="#run">Runnable Interface</a></li>
+      <li><a href="#inter-thread">Interrupt Thread</a></li>
+      <li><a href="#sync-thread">Synchronize Threads</a></li>
     </ul>
   </li>
 </ol>
@@ -263,52 +312,54 @@
 <h4 id="numbers-">Numbers <a name="numbers"></a></h4>
 <p>A primitive data type has only one value and cannot hold complex objects such as strings.</p>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Data Type</th>
-      <th>Bits</th>
-      <th>Minimum</th>
-      <th>Maximum</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>byte</td>
-      <td>8</td>
-      <td>-128</td>
-      <td>127</td>
-    </tr>
-    <tr>
-      <td>short</td>
-      <td>16</td>
-      <td>-32,768</td>
-      <td>32,767</td>
-    </tr>
-    <tr>
-      <td>int</td>
-      <td>32</td>
-      <td>-2,147,483,648</td>
-      <td>2,147,483,647</td>
-    </tr>
-    <tr>
-      <td>long</td>
-      <td>64</td>
-      <td>-9.22337E+18</td>
-      <td>9.22337E+18</td>
-    </tr>
-    <tr>
-      <td>float</td>
-      <td>32</td>
-      <td class="text-center" colspan="2">See documentation</td>
-    </tr>
-    <tr>
-      <td>double</td>
-      <td>64</td>
-      <td class="text-center" colspan="2">See documentation</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Data Type</th>
+        <th>Bits</th>
+        <th>Minimum</th>
+        <th>Maximum</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>byte</td>
+        <td>8</td>
+        <td>-128</td>
+        <td>127</td>
+      </tr>
+      <tr>
+        <td>short</td>
+        <td>16</td>
+        <td>-32,768</td>
+        <td>32,767</td>
+      </tr>
+      <tr>
+        <td>int</td>
+        <td>32</td>
+        <td>-2,147,483,648</td>
+        <td>2,147,483,647</td>
+      </tr>
+      <tr>
+        <td>long</td>
+        <td>64</td>
+        <td>-9.22337E+18</td>
+        <td>9.22337E+18</td>
+      </tr>
+      <tr>
+        <td>float</td>
+        <td>32</td>
+        <td class="text-center" colspan="2">See documentation</td>
+      </tr>
+      <tr>
+        <td>double</td>
+        <td>64</td>
+        <td class="text-center" colspan="2">See documentation</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <p><br /></p>
 
@@ -494,6 +545,17 @@ You can implicitly convert a number upwards from short to int to long by assigni
 </div>
 <p><br /></p>
 
+<h4 id="underscores-j7-">Underscores (J7) <a name="j7data-type"></a></h4>
+<p>Long numeric literals can now have underscores in them to make readability easier.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// below both numbers read correctly but using _ makes reading much quicker</span>
+<span class="kt">int</span> <span class="n">bank</span> <span class="o">=</span> <span class="mi">1500000000</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">bank2</span> <span class="o">=</span> <span class="mi">1</span><span class="n">_500_000_000</span><span class="o">;</span>
+</code></pre>
+</div>
+
+<p><br /></p>
+
 <h3 id="control-flow-">Control Flow <a name="ctrl"></a></h3>
 
 <h4 id="conditionals-">Conditionals <a name="condition"></a></h4>
@@ -580,6 +642,30 @@ You can implicitly convert a number upwards from short to int to long by assigni
   <span class="o">}</span>
 
 <span class="o">}</span>
+</code></pre>
+</div>
+
+<p><br /></p>
+
+<h4 id="switch-j7-">Switch (J7) <a name="j7switch"></a></h4>
+<p>You can now evaluate a string with switch statements starting with Java 7.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// you can now evaluate strings in switch case</span>
+<span class="k">switch</span> <span class="o">(</span><span class="s">"yes"</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">case</span> <span class="s">"yes"</span><span class="o">:</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Of course!"</span><span class="o">);</span>
+    <span class="k">break</span><span class="o">;</span>
+  <span class="k">case</span> <span class="s">"no"</span><span class="o">:</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"No thanks."</span><span class="o">);</span>
+    <span class="k">break</span><span class="o">;</span>
+  <span class="k">case</span> <span class="s">"maybe"</span><span class="o">:</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Not sure."</span><span class="o">);</span>
+    <span class="k">break</span><span class="o">;</span>
+  <span class="k">default</span><span class="o">:</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Thats not an answer."</span><span class="o">);</span>
+    <span class="k">break</span><span class="o">;</span>
+<span class="o">}</span>
+
 </code></pre>
 </div>
 
@@ -890,6 +976,102 @@ Complex objects are references. A reference variable points to the location in m
 </div>
 <p><br /></p>
 
+<h4 id="finally-">Finally <a name="finally"></a></h4>
+<p>If you use a resource that needs to be cleaned after a try-catch block use the <code class="highlighter-rouge">finally</code> block. Finally block executes after a <code class="highlighter-rouge">try</code> regardless of if an exception is thrown.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+
+    <span class="c1">// create the file and buffer reader</span>
+    <span class="n">FileReader</span> <span class="n">f</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+    <span class="n">BufferedReader</span> <span class="n">buff</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+    <span class="c1">// the finally block closes the reader streams regardless of an exception or not</span>
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="s">"text.txt"</span><span class="o">);</span>
+      <span class="n">buff</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="n">f</span><span class="o">);</span>
+      <span class="n">String</span> <span class="n">str</span><span class="o">;</span>
+      <span class="k">while</span> <span class="o">((</span><span class="n">str</span> <span class="o">=</span> <span class="n">buff</span><span class="o">.</span><span class="na">readLine</span><span class="o">())</span> <span class="o">!</span> <span class="o">=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>
+    <span class="k">finally</span> <span class="o">{</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">f</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">f</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+      <span class="o">}</span>
+      <span class="k">if</span> <span class="o">(</span><span class="n">f</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">buff</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="try-with-resources-">Try With Resources <a name="try-resource"></a></h4>
+<p>Java 7 created a new syntax to clean up resources vs the old way of cleaning up (see above).</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+
+    <span class="c1">// the try with resources allows you to instantiate the object within a try via ()</span>
+    <span class="c1">// these objects will be cleaned up automatically so you don't need the finally block anymore</span>
+    <span class="k">try</span> <span class="o">(</span>
+          <span class="n">FileReader</span> <span class="n">f</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="s">"text.txt"</span><span class="o">);</span>
+          <span class="n">BufferedReader</span> <span class="n">buff</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="n">f</span><span class="o">);</span>
+        <span class="o">)</span>
+        <span class="o">{</span>
+          <span class="n">String</span> <span class="n">str</span><span class="o">;</span>
+          <span class="k">while</span> <span class="o">((</span><span class="n">str</span> <span class="o">=</span> <span class="n">buff</span><span class="o">.</span><span class="na">readLine</span><span class="o">())</span> <span class="o">!</span> <span class="o">=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+          <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="custom-exceptions-">Custom Exceptions <a name="cust-except"></a></h4>
+<p>You can create your own custom exceptions classes. When creating a custom exception class the superclass should be <code class="highlighter-rouge">Exception</code>. It is required to have a <code class="highlighter-rouge">static final long &lt;name&gt;</code> field in the class.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">com</span><span class="o">.</span><span class="na">pratik</span><span class="o">.</span><span class="na">java</span><span class="o">.</span><span class="na">exceptions</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">BadFileException</span> <span class="kd">extends</span> <span class="n">Exception</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">34L</span><span class="o">;</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">String</span> <span class="nf">getMessage</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="s">"Bad file!"</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// To use the class in main part of program.</span>
+<span class="k">try</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">"correct"</span><span class="o">))</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"This is the right file."</span><span class="o">);</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="c1">// throw exception into the catch block</span>
+    <span class="k">throw</span> <span class="o">(</span><span class="k">new</span> <span class="n">BadFileException</span><span class="o">());</span>
+  <span class="o">}</span>  
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">BadFileException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+<span class="o">}</span>
+
+</code></pre>
+</div>
+
+<p><br /></p>
+
 <h3 id="data-collections-">Data Collections <a name="collection"></a></h3>
 <h4 id="arrays-">Arrays <a name="array"></a></h4>
 <p>Simple arrays are great for storing large sets of data but they are not flexible as you can only store one type of data type. They also cannot be resized once they are created; you need to use the <code class="highlighter-rouge">Array&lt;list&gt;</code> class.</p>
@@ -1050,6 +1232,156 @@ Complex objects are references. A reference variable points to the location in m
 </div>
 <p><br /></p>
 
+<h4 id="hash-set-">Hash Set <a name="hash-set"></a></h4>
+<p>The hash set is a <code class="highlighter-rouge">Set</code> which means that each object can only appear once in the set. The hash set is a bit faster than the tree set. The hash set output does not have any order the data comes out to; it will change each time.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="n">Dog</span> <span class="n">pg</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Pug</span><span class="o">();</span>
+    <span class="n">Dog</span> <span class="n">gs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GermanShepard</span><span class="o">();</span>
+    <span class="n">Dog</span> <span class="n">bd</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bulldog</span><span class="o">();</span>
+
+    <span class="c1">// define hash set class</span>
+    <span class="n">HashSet</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">set</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="o">&lt;&gt;();</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">pg</span><span class="o">);</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">gs</span><span class="o">);</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">bd</span><span class="o">);</span>
+
+    <span class="c1">// return how many in the set</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">set</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
+
+    <span class="c1">// try to add same object again</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">pg</span><span class="o">);</span>
+    <span class="n">Sysetm</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">set</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
+
+    <span class="c1">// you can add one null</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+    <span class="n">Sysetm</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">set</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
+
+    <span class="c1">// you can remove item from set</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">pg</span><span class="o">);</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="tree-set-">Tree Set <a name="tree-set"></a></h4>
+<p>Tree set does everything that the hash set does but it keeps items in order that you can control. It uses an interface called <code class="highlighter-rouge">Comparable</code> which must be added to the classes (you can just add it to the superclass). When adding to a tree set the objects will be put in alphabetical order; this drops performance because each time you add and object it must sort. The <code class="highlighter-rouge">compareTo</code> method will return and integer value of -1, 0, -1. You must implement this method yourself</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// to use the tree set the classes must have an interface of the Comparable class</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Comparable</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="o">{</span>
+  <span class="c1">//code</span>
+  <span class="c1">// must implement compareTo method from Comparable</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">int</span> <span class="nf">compareTo</span><span class="o">(</span><span class="n">Dog</span> <span class="n">obj</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">String</span> <span class="n">s1</span> <span class="o">=</span> <span class="k">this</span><span class="o">.</span><span class="na">dogName</span><span class="o">;</span>
+    <span class="n">String</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="na">dogName</span><span class="o">;</span>
+    <span class="k">return</span> <span class="n">s1</span><span class="o">.</span><span class="na">compareTo</span><span class="o">(</span><span class="n">s2</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="n">Dog</span> <span class="n">pg</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Pug</span><span class="o">();</span>
+    <span class="n">Dog</span> <span class="n">gs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GermanShepard</span><span class="o">();</span>
+    <span class="n">Dog</span> <span class="n">bd</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bulldog</span><span class="o">();</span>
+
+    <span class="c1">// create tree set and need to implement interface called Comparable</span>
+    <span class="n">TreeSet</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">set</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TreeSet</span><span class="o">&lt;&gt;();</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">pg</span><span class="o">);</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">gs</span><span class="o">);</span>
+    <span class="n">set</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">bd</span><span class="o">);</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="linked-list-">Linked List <a name="linked"></a></h4>
+<p>Linked lists are high performance and very easy to use. You can add items to any position in the list unlike list where you can only add them at the end: <code class="highlighter-rouge">list.add(index#, data)</code>. You can add items to the beginning of the list by using the <code class="highlighter-rouge">addFirst(data)</code> and remove them by <code class="highlighter-rouge">remove(int index)</code>.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// create new linked list</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;();</span>
+
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Pug</span><span class="o">());</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Bulldog</span><span class="o">());</span>
+
+    <span class="c1">// you can add items in any position. give it the index pos then the item</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="k">new</span> <span class="n">GermanShepard</span><span class="o">());</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">addFirst</span><span class="o">(</span><span class="k">new</span> <span class="n">Pug</span><span class="o">());</span>
+
+    <span class="c1">// remove item from list at index 2</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+
+    <span class="n">display</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">static</span> <span class="kd">private</span> <span class="kt">void</span> <span class="nf">display</span><span class="o">(</span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">col</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"List order: "</span><span class="o">);</span>
+    <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">iterator</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+    <span class="k">while</span><span class="o">(</span><span class="n">iterator</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+      <span class="n">Dog</span> <span class="n">dog</span> <span class="o">=</span> <span class="o">(</span><span class="n">Dog</span> <span class="n">iterator</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">dog</span><span class="o">.</span><span class="na">dogName</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="queues-">Queues <a name="queues"></a></h4>
+<p>Linked List class interfaces a class called Queues which allows for a FIFO type operations. To add use <code class="highlighter-rouge">add(e) or offer(e)</code>, remove <code class="highlighter-rouge">remove() or poll()</code>, and examine <code class="highlighter-rouge">element() or peek()</code>. If you use the <code class="highlighter-rouge">offer, poll or peak</code> it not only adds or removes the item but it returns the item that was just effected. There are a whole bunch of different queues that you can use see the docs.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;();</span>
+
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Pug</span><span class="o">());</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Bulldog</span><span class="o">());</span>
+
+    <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="k">new</span> <span class="n">GermanShepard</span><span class="o">());</span>
+    <span class="n">list</span><span class="o">.</span><span class="na">addFirst</span><span class="o">(</span><span class="k">new</span> <span class="n">Pug</span><span class="o">());</span>
+
+    <span class="n">display</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+
+    <span class="n">Dog</span> <span class="n">o1</span> <span class="o">=</span> <span class="n">list</span><span class="o">.</span><span class="na">peek</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">o1</span><span class="o">.</span><span class="na">dogName</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+  <span class="o">}</span>
+
+  <span class="kd">static</span> <span class="kd">private</span> <span class="kt">void</span> <span class="nf">display</span><span class="o">(</span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">col</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"List order: "</span><span class="o">);</span>
+    <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">iterator</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+    <span class="k">while</span><span class="o">(</span><span class="n">iterator</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+      <span class="n">Dog</span> <span class="n">dog</span> <span class="o">=</span> <span class="o">(</span><span class="n">Dog</span> <span class="n">iterator</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">dog</span><span class="o">.</span><span class="na">dogName</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p><br /></p>
+
+<h4 id="java-7-enhancements-">Java 7 Enhancements <a name="j7collect"></a></h4>
+<p>In Java 7 when declaring a collection such as, a list or hash map, you don’t need to declare the data type again in the constructor method and instead just leave an empty <code class="highlighter-rouge">&lt;&gt;</code>.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// you don't need to write dog out twice anymore.</span>
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Dogs</span><span class="o">&gt;</span> <span class="n">dog2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+</code></pre>
+</div>
+
+<p><br /></p>
 <h3 id="classes-">Classes <a name="class"></a></h3>
 <h4 id="encapsulation-">Encapsulation <a name="encap"></a></h4>
 <p>Encapsulation means to package complex functionality to make it easy to use in the program. You should break the code out into different functionality or in other words pieces. Encapsulation allows user to use the methods without having to know how the data is stored or how the methods are constructed.</p>
@@ -1376,6 +1708,214 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <span class="o">}</span>
 </code></pre>
 </div>
+
+<p><br /></p>
+
+<h4 id="static-initializers-">Static Initializers <a name="static"></a></h4>
+<p>Static initializers run only one time before the constructor or main method is called.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DogHouse</span> <span class="o">{</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">dogs</span><span class="o">;</span>
+
+  <span class="c1">// this will run once</span>
+  <span class="kd">static</span> <span class="o">{</span>
+    <span class="n">dogs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="n">dogs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="s">"GermanShepard"</span><span class="o">,</span> <span class="mh">0xaa7243</span><span class="o">));</span>
+    <span class="n">dogs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="s">"Pug"</span><span class="o">,</span> <span class="mi">0</span><span class="n">xFFFFFF</span><span class="o">));</span>
+    <span class="n">dogs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="s">"Bulldog"</span><span class="o">,</span> <span class="mh">0xaa7243</span><span class="o">));</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="instance-field-initializers-">Instance Field Initializers <a name="static-field"></a></h4>
+<p>Non static Initializers do not have the keyword <code class="highlighter-rouge">static</code> in them. Its very handy when you have more than one constructor method but have certain type of code that always needs to be executed.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DogHouse</span> <span class="o">{</span>
+
+  <span class="kd">public</span>  <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">dogs</span><span class="o">;</span>
+
+  <span class="c1">// this will run once but it is not</span>
+  <span class="o">{</span>
+    <span class="n">dogs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="n">dogs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="s">"Rare"</span><span class="o">,</span> <span class="mi">0</span><span class="n">xFFFFFF</span><span class="o">));</span>
+  <span class="o">}</span>
+
+  <span class="c1">// constructors</span>
+  <span class="kd">public</span> <span class="nf">DogHouse</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Default constructor"</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="c1">// you can then add as many objects as you like when instantiating</span>
+  <span class="c1">// ArrayList&lt;Dogs&gt; dogs = new DogHouse(4, "Pug", 0x000000).dogs;</span>
+  <span class="kd">public</span> <span class="nf">DogHouse</span><span class="o">(</span><span class="kt">int</span> <span class="n">nDogs</span><span class="o">,</span> <span class="n">String</span> <span class="n">dogName</span><span class="o">,</span> <span class="kt">long</span> <span class="n">color</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">nDogs</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+      <span class="n">dogs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="n">dogName</span><span class="o">,</span> <span class="n">color</span><span class="o">));</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="member-classes-">Member Classes <a name="member"></a></h4>
+<p>Member classes are classes that are inside other classes. This helps with encapsulation and limiting who can manipulate what data.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DogHouse</span> <span class="o">{</span>
+
+  <span class="kd">public</span>  <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Dog</span><span class="o">&gt;</span> <span class="n">dogs</span><span class="o">;</span>
+
+  <span class="o">{</span>
+    <span class="n">dogs</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+    <span class="n">dogs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="s">"Rare"</span><span class="o">,</span> <span class="mi">0</span><span class="n">xFFFFFF</span><span class="o">));</span>
+  <span class="o">}</span>
+
+  <span class="c1">// constructors</span>
+  <span class="kd">public</span> <span class="nf">DogHouse</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Default constructor"</span><span class="o">);</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="nf">DogHouse</span><span class="o">(</span><span class="kt">int</span> <span class="n">nDogs</span><span class="o">,</span> <span class="n">String</span> <span class="n">dogName</span><span class="o">,</span> <span class="kt">long</span> <span class="n">color</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">nDogs</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+      <span class="n">dogs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="n">dogName</span><span class="o">,</span> <span class="n">color</span><span class="o">));</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="c1">// create method to be able to add a dog</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addDog</span><span class="o">(</span><span class="n">String</span> <span class="n">dogName</span><span class="o">,</span> <span class="kt">long</span> <span class="n">color</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">dogs</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="n">dogName</span><span class="o">,</span> <span class="n">color</span><span class="o">));</span>
+  <span class="o">}</span>
+
+  <span class="c1">// create a report to display all the dogs in the dog house</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">reportDogs</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">for</span> <span class="o">(</span><span class="n">Dogs</span> <span class="n">dog</span> <span class="o">:</span> <span class="n">dogs</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"This is a "</span> <span class="o">+</span> <span class="n">dog</span><span class="o">.</span><span class="na">dogName</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="c1">// we will make class Dog a member of DogHouse class and it can only be called here</span>
+  <span class="kd">class</span> <span class="nc">Dog</span> <span class="o">{</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="err">'</span><span class="n">fido</span><span class="err">'</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="n">type</span> <span class="o">=</span> <span class="err">'</span><span class="n">dog</span><span class="err">'</span><span class="o">;</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">speed</span> <span class="o">=</span> <span class="mi">10</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getSpeed</span><span class="o">()</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">speed</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setSpeed</span><span class="o">(</span><span class="kt">int</span> <span class="n">speed</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">speed</span> <span class="o">=</span> <span class="n">speed</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nf">Dog</span><span class="o">()</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Woof! My name is "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">name</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="nf">Dog</span><span class="o">(</span><span class="n">String</span> <span class="n">name</span><span class="o">,</span> <span class="kt">int</span> <span class="n">age</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">;</span>
+      <span class="k">this</span><span class="o">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="o">;</span>
+    <span class="o">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Your dog is running at "</span> <span class="o">+</span> <span class="k">this</span><span class="o">.</span><span class="na">speed</span> <span class="o">+</span> <span class="s">" mph"</span><span class="o">)</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="inner-classes-">Inner Classes <a name="inner-c"></a></h4>
+<p>Inner class is a class that is within a code block. It is only visible to the code block it is within because its private. You can only use instance methods so you will have to instantiate and instance of the class.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">reportDogs</span><span class="o">()</span> <span class="o">{</span>
+
+  <span class="c1">// class declared inside of the method is only available to the method.</span>
+  <span class="kd">class</span> <span class="nc">DogHouseDoor</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">open</span><span class="o">()</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Door has been opened."</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="c1">// create an instance of DogHouseDoor and use open method.</span>
+  <span class="k">new</span> <span class="nf">DogHouseDoor</span><span class="o">().</span><span class="na">open</span><span class="o">();</span>
+
+  <span class="k">for</span> <span class="o">(</span><span class="n">Dogs</span> <span class="n">dog</span> <span class="o">:</span> <span class="n">dogs</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"This is a "</span> <span class="o">+</span> <span class="n">dog</span><span class="o">.</span><span class="na">dogName</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="anonymous-inner-class-">Anonymous Inner Class <a name="anon-inner"></a></h4>
+<p>An anonymous class doesn’t have a name and is defined and used once.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">reportDogs</span><span class="o">()</span> <span class="o">{</span>
+
+  <span class="c1">// class DogHouseDoor {</span>
+  <span class="c1">//   public void open() {</span>
+  <span class="c1">//     System.out.println("Door has been opened.");</span>
+  <span class="c1">//   }</span>
+  <span class="c1">// }</span>
+  <span class="c1">//</span>
+  <span class="c1">// new DogHouseDoor().open();</span>
+
+
+  <span class="c1">// creating an anonymous function by calling Object class's constructor.</span>
+  <span class="c1">// call the function right after.</span>
+  <span class="k">new</span> <span class="nf">Object</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">open</span><span class="o">()</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">prinln</span><span class="o">(</span><span class="s">"This is an anonymous function"</span><span class="o">);</span>
+    <span class="o">}</span>
+  <span class="o">}.</span><span class="na">open</span><span class="o">();</span>
+
+  <span class="k">for</span> <span class="o">(</span><span class="n">Dogs</span> <span class="n">dog</span> <span class="o">:</span> <span class="n">dogs</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"This is a "</span> <span class="o">+</span> <span class="n">dog</span><span class="o">.</span><span class="na">dogName</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="enumeration-classes-">Enumeration Classes <a name="enum-c"></a></h4>
+<p>You can create and independent enum class that can be used throughout the application. If you have constant strings that are used throughout the app you can create an enum class to ensure that each time when you use the variable the string is spelled correctly.</p>
+
+<p>Below the code is returning the string name into the constructor and saving it to the nameAsString variable. When calling the name the toString() method returns the string variable.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// create and enum to insure that the correct spelling of the name is being done.</span>
+<span class="kd">public</span> <span class="kd">enum</span> <span class="n">DogName</span> <span class="o">{</span>
+  <span class="n">GERMAN_SHEPARD</span><span class="o">(</span><span class="s">"German Sherpard"</span><span class="o">),</span> <span class="n">PUG</span><span class="o">(</span><span class="s">"Pug"</span><span class="o">),</span> <span class="n">BULLDOG</span><span class="o">(</span><span class="s">"Bulldog"</span><span class="o">);</span>
+
+  <span class="kd">private</span> <span class="n">String</span> <span class="n">nameAsString</span><span class="o">;</span>
+
+  <span class="c1">// enums can only have private methods.</span>
+  <span class="kd">private</span> <span class="nf">DogName</span><span class="o">(</span><span class="n">String</span> <span class="n">nameAsString</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">nameAsString</span> <span class="o">=</span> <span class="n">nameAsString</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="c1">// ovverride string method to make it lowercase</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">.</span><span class="na">nameAsString</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+
 <p><br /></p>
 
 <h3 id="inheritance--polymorphism-">Inheritance &amp; Polymorphism <a name="inherit-poly"></a></h3>
@@ -1685,6 +2225,270 @@ To create an instance method you leave off the word <code class="highlighter-rou
 </div>
 <p><br /></p>
 
+<h4 id="path-class-">Path Class <a name="path-class"></a></h4>
+<p>In Java 7 there is a new system for working with directories and files Java.NIO (New input output). The core class in this system is called <code class="highlighter-rouge">Path</code>.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+
+    <span class="c1">// create path object and use the get method to get the contents of the file or url</span>
+    <span class="n">Path</span> <span class="n">path</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"/tmp/text.txt"</span><span class="o">);</span>
+
+    <span class="c1">// the toString method gives you the value that you passed in from the get method</span>
+    <span class="c1">// this will return "\tmp\text.txt"</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+
+    <span class="c1">// the get file name will send you the last part of the string which is the actual file name</span>
+    <span class="c1">// this returns "text.txt"</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">getFileName</span><span class="o">());</span>
+
+    <span class="c1">// returns integer value on how many folders the file is nested in</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">getNameCount</span><span class="o">());</span>
+
+    <span class="c1">// to get a section of the file path use the getName method. Data is list data type.</span>
+    <span class="c1">// to get actual name of the file in get name use .getNameCount - 1</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">getName</span><span class="o">(</span><span class="mi">0</span><span class="o">));</span>
+
+    <span class="c1">// The too real path method only will work if you are pointing to an existing file</span>
+    <span class="n">Path</span> <span class="n">actualPath</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="na">toRealPath</span><span class="o">(</span><span class="n">LinkOption</span><span class="o">.</span><span class="na">NOFOLLOW_LINKS</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">getName</span><span class="o">(</span><span class="n">actualPath</span><span class="o">));</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="manage-file--directories-">Manage File &amp; Directories <a name="mgm-file"></a></h4>
+<p>The <code class="highlighter-rouge">Files</code> class can help copy, delete, and move files.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.nio.*</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+
+    <span class="n">Path</span> <span class="n">src</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"/tmp/text.txt"</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">src</span><span class="o">.</span><span class="na">getFileName</span><span class="o">());</span>
+
+    <span class="c1">// to copy the file you need the source path and then a target path</span>
+    <span class="n">Path</span> <span class="n">tgt</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"tmp/newtext.txt"</span><span class="o">);</span>
+
+    <span class="c1">// to copy file use the copy method and put in the source  path, target path, and then an optional copy option</span>
+    <span class="n">Files</span><span class="o">.</span><span class="na">copy</span><span class="o">(</span><span class="n">src</span><span class="o">,</span> <span class="n">tgt</span><span class="o">,</span> <span class="n">StandardCopyOption</span><span class="o">.</span><span class="na">REPLACE_EXISTING</span><span class="o">);</span>
+
+    <span class="c1">// to delete a file get the file path to delete and use the delete method</span>
+    <span class="n">Path</span> <span class="n">del</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"files/deltext.txt"</span><span class="o">);</span>
+    <span class="n">Files</span><span class="o">.</span><span class="na">delete</span><span class="o">(</span><span class="n">del</span><span class="o">);</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"deleted!"</span><span class="o">);</span>
+
+    <span class="c1">// to create a new directory retrieve the location of the new directory</span>
+    <span class="c1">// use the createDirectory method.</span>
+    <span class="n">Path</span> <span class="n">newdir</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"file/newfolder"</span><span class="o">);</span>
+    <span class="n">Files</span><span class="o">.</span><span class="na">createDirectory</span><span class="o">(</span><span class="n">newdir</span><span class="o">);</span>
+
+    <span class="c1">// to move a file use the move method and pass arguments of the file to move, where to move using</span>
+    <span class="c1">// the resolve method combines the newdir path with the file name from src: file/newfolder/newtext.txt</span>
+    <span class="n">Files</span><span class="o">.</span><span class="na">move</span><span class="o">(</span><span class="n">src</span><span class="o">,</span> <span class="n">newdir</span><span class="o">.</span><span class="na">resolve</span><span class="o">(</span><span class="n">src</span><span class="o">.</span><span class="na">getFileName</span><span class="o">()),</span> <span class="n">StandardCopyOption</span><span class="o">.</span><span class="na">REPLACE_EXISTING</span><span class="o">);</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="reading--writing-">Reading &amp; Writing <a name="read-write"></a></h4>
+<p>In order to work with a text file you need to use an object called characterset from <code class="highlighter-rouge">Charset</code>.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="n">Path</span> <span class="n">src</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"files/mytext.txt"</span><span class="o">);</span>
+    <span class="n">Path</span> <span class="n">tgt</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"files/newfile.txt"</span><span class="o">);</span>
+
+    <span class="c1">// create a charset object to be able to read/write to text</span>
+    <span class="n">Charset</span> <span class="n">charset</span> <span class="o">=</span> <span class="n">Charset</span><span class="o">.</span><span class="na">forName</span><span class="o">(</span><span class="s">"US-ASCII"</span><span class="o">);</span>  
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">lines</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+
+    <span class="c1">// READING</span>
+    <span class="c1">// create a new buffered reader and use the newBufferedReader method</span>
+    <span class="k">try</span> <span class="o">(</span><span class="n">BufferedReader</span> <span class="n">reader</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">newBufferedReader</span><span class="o">(</span><span class="n">src</span><span class="o">,</span> <span class="n">charset</span><span class="o">))</span>
+    <span class="o">{</span>
+        <span class="c1">// loop through file and keep reading lines until it returns null</span>
+        <span class="c1">// add lines to the list</span>
+        <span class="n">String</span>  <span class="n">line</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="k">while</span> <span class="o">((</span><span class="n">line</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="na">readLine</span><span class="o">())</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+          <span class="n">lines</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">line</span><span class="o">);</span>
+        <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>
+
+    <span class="c1">// WRITING</span>
+    <span class="c1">// create a new buffered writer and use the newBufferedWriter method</span>
+    <span class="k">try</span> <span class="o">(</span><span class="n">BufferedWriter</span> <span class="n">writer</span> <span class="o">=</span> <span class="n">Files</span><span class="o">.</span><span class="na">newBufferedWriter</span><span class="o">(</span><span class="n">tgt</span><span class="o">,</span> <span class="n">charset</span><span class="o">))</span>
+    <span class="o">{</span>
+        <span class="c1">// create an iterator to loop through the lines list</span>
+        <span class="c1">// append the lines to the end of the file.</span>
+        <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">iterator</span> <span class="o">=</span> <span class="n">lines</span><span class="o">.</span><span class="na">iterator</span><span class="o">();</span>
+        <span class="k">while</span> <span class="o">(</span><span class="n">iterator</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+          <span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="n">iterator</span><span class="o">.</span><span class="na">next</span><span class="o">();</span>
+          <span class="n">writer</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">str</span><span class="o">,</span> <span class="mi">0</span><span class="o">,</span> <span class="n">str</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
+          <span class="n">writer</span><span class="o">.</span><span class="na">newLine</span><span class="o">();</span>
+        <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>  
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h3 id="directory-tree-">Directory Tree <a name="dir-tree"></a></h3>
+<p>You can easily walk up the directory tree with the new <code class="highlighter-rouge">Files</code> class. Once you create/extend the <code class="highlighter-rouge">SimpleFileVisitor</code> you can use the <code class="highlighter-rouge">File</code> class’s <code class="highlighter-rouge">walkFileTree</code> method.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// point to files directory</span>
+    <span class="c1">// create new object from the MyFileVisitor class which extends SimpleFileVisitor</span>
+    <span class="n">Path</span> <span class="n">fileDir</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"files"</span><span class="o">);</span>
+    <span class="n">MyFileVisitor</span> <span class="n">visit</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyFileVisitor</span><span class="o">();</span>
+    <span class="n">Files</span><span class="o">.</span><span class="na">walkFileTree</span><span class="o">(</span><span class="n">fileDir</span><span class="o">,</span> <span class="n">visit</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">java.nio.file.Path</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">java.nio.file.SimpleFileVisitor</span><span class="o">;</span>
+
+<span class="c1">// the SimpleFileVisitor has 4 methods that are callback methods</span>
+<span class="c1">// you can override whichever ones you want.</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyFileVisitor</span> <span class="kd">extends</span> <span class="n">SimpleFileVisitor</span><span class="o">&lt;</span><span class="n">Path</span><span class="o">&gt;</span> <span class="o">{</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">FileVisitResult</span> <span class="nf">postVisitDirectory</span><span class="o">(</span><span class="n">Path</span> <span class="n">dir</span><span class="o">,</span> <span class="n">IOException</span> <span class="n">exc</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Visited "</span> <span class="o">+</span> <span class="n">dir</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">FileVisitResult</span><span class="o">.</span><span class="na">CONTINUE</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">FileVisitResult</span> <span class="nf">preVisitDirectory</span><span class="o">(</span><span class="n">Path</span> <span class="n">dir</span><span class="o">,</span> <span class="n">BasicFileAttributes</span> <span class="n">attrs</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"About to visit "</span> <span class="o">+</span> <span class="n">dir</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">FileVisitResult</span><span class="o">.</span><span class="na">CONTINUE</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">FileVisitResult</span> <span class="nf">visitFile</span><span class="o">(</span><span class="n">Path</span> <span class="n">file</span><span class="o">,</span> <span class="n">BasicFileAttributes</span> <span class="n">attrs</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">attrs</span><span class="o">.</span><span class="na">isRegularFile</span><span class="o">())</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">print</span><span class="o">(</span><span class="s">"Regular File: "</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">FileVisitResult</span><span class="o">.</span><span class="na">CONTINUE</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">FileVisitResult</span> <span class="nf">visitFileFailed</span><span class="o">(</span><span class="n">Path</span> <span class="n">file</span><span class="o">,</span> <span class="n">BasicFileAttributes</span> <span class="n">attrs</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">exc</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="k">return</span> <span class="n">FileVisitResult</span><span class="o">.</span><span class="na">CONTINUE</span><span class="o">;</span>
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="finding-files-">Finding Files <a name="find-file"></a></h4>
+<p>You can use the <code class="highlighter-rouge">PathMatcher</code> to look at names of each file as you encounter them. To find a file you will want to make a class that extends <code class="highlighter-rouge">SimpleFileVisitor</code>. After use the <code class="highlighter-rouge">FileFinder</code> object to find the file you are looking for.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="n">Path</span> <span class="n">dir</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"files"</span><span class="o">);</span>
+    <span class="n">FileFinder</span> <span class="n">finder</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileFinder</span><span class="o">(</span><span class="s">"file.txt"</span><span class="o">);</span>
+    <span class="n">Files</span><span class="o">.</span><span class="na">walkFileTree</span><span class="o">(</span><span class="n">fileDir</span><span class="o">,</span> <span class="n">finder</span><span class="o">);</span>
+
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Path</span><span class="o">&gt;</span> <span class="n">foundFiles</span> <span class="o">=</span> <span class="n">finder</span><span class="o">.</span><span class="na">foundPaths</span><span class="o">;</span>
+
+    <span class="k">if</span><span class="o">(</span><span class="n">foundFiles</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="n">Path</span> <span class="n">path</span> <span class="o">:</span> <span class="n">foundFiles</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">toRealPath</span><span class="o">(</span><span class="n">LinkOption</span><span class="o">.</span><span class="na">NOFOLLOW_LINKS</span><span class="o">));</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="k">else</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"No files found."</span><span class="o">);</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyFileVisitor</span> <span class="kd">extends</span> <span class="n">SimpleFileVisitor</span><span class="o">&lt;</span><span class="n">Path</span><span class="o">&gt;</span> <span class="o">{</span>
+
+  <span class="c1">// PathMatcher is an interface</span>
+  <span class="kd">private</span> <span class="n">PathMatcher</span> <span class="n">matcher</span><span class="o">;</span>
+
+  <span class="c1">// hold all the files found</span>
+  <span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Path</span><span class="o">&gt;</span> <span class="n">foundPaths</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;();</span>
+
+  <span class="c1">// you can compare files using the glob or regex.</span>
+  <span class="kd">public</span> <span class="nf">FileFinder</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">matcher</span> <span class="o">=</span> <span class="n">FileSystems</span><span class="o">.</span><span class="na">getDefault</span><span class="o">().</span><span class="na">getPathMatcher</span><span class="o">(</span><span class="s">"glob:"</span> <span class="o">+</span> <span class="n">pattern</span><span class="o">)</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="n">FileVisitResult</span> <span class="nf">visitFile</span><span class="o">(</span><span class="n">Path</span> <span class="n">file</span><span class="o">,</span> <span class="n">BasicFileAttributes</span> <span class="n">attrs</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="o">{</span>
+    <span class="n">Path</span> <span class="n">name</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="na">getFileName</span><span class="o">();</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">matcher</span><span class="o">.</span><span class="na">matches</span><span class="o">(</span><span class="n">name</span><span class="o">))</span> <span class="o">{</span>
+      <span class="n">foundPaths</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">file</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="n">FileVisitResult</span><span class="o">.</span><span class="na">CONTINUE</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="watch-directory-changes-">Watch Directory Changes <a name="dir-watch"></a></h4>
+<p>Java allows you to create a watch service that watches a directory for any changes. You use the <code class="highlighter-rouge">WatchService</code> object to accomplish this.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="k">try</span> <span class="o">(</span><span class="n">WatchService</span> <span class="n">service</span> <span class="o">=</span> <span class="n">FileSystems</span><span class="o">.</span><span class="na">getDefault</span><span class="o">().</span><span class="na">newWatchService</span><span class="o">())</span> <span class="o">{</span>
+      <span class="n">Map</span><span class="o">&lt;</span><span class="n">WatchKey</span><span class="o">,</span> <span class="n">Path</span><span class="o">&gt;</span> <span class="n">keyMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+      <span class="n">Path</span> <span class="n">path</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"files"</span><span class="o">);</span>
+      <span class="n">keyMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">register</span><span class="o">(</span><span class="n">service</span><span class="o">,</span>
+              <span class="n">StandardWatchEventKinds</span><span class="o">.</span><span class="na">ENTRY_CREATE</span><span class="o">,</span>
+              <span class="n">StandardWatchEventKinds</span><span class="o">.</span><span class="na">ENTRY_DELETE</span><span class="o">,</span>
+              <span class="n">StandardWatchEventKinds</span><span class="o">.</span><span class="na">ENTRY_MODIFY</span><span class="o">),</span>
+              <span class="n">path</span><span class="o">);</span>
+
+      <span class="n">WatchKey</span> <span class="n">watchKey</span><span class="o">;</span>
+
+      <span class="k">do</span> <span class="o">{</span>
+        <span class="n">watchKey</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="na">take</span><span class="o">();</span>
+        <span class="n">Path</span> <span class="n">eventDir</span> <span class="o">=</span> <span class="n">keyMap</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">watchKey</span><span class="o">);</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="n">WatchEven</span><span class="o">&lt;?&gt;</span> <span class="n">event</span> <span class="o">:</span> <span class="n">watchKey</span><span class="o">.</span><span class="na">pollEvents</span><span class="o">())</span> <span class="o">{</span>
+          <span class="n">WatchEvent</span><span class="o">.</span><span class="na">Kind</span><span class="o">&lt;?&gt;</span> <span class="n">kind</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="na">kind</span><span class="o">();</span>
+          <span class="n">Path</span> <span class="n">eventPath</span> <span class="o">=</span> <span class="o">(</span><span class="n">Path</span><span class="o">)</span><span class="n">event</span><span class="o">.</span><span class="na">context</span><span class="o">();</span>
+          <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">eventDir</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="n">kind</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="n">eventPath</span><span class="o">);</span>
+        <span class="o">}</span>
+
+      <span class="o">}</span> <span class="k">while</span> <span class="o">(</span><span class="n">watchKey</span><span class="o">.</span><span class="na">reset</span><span class="o">());</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p><br /></p>
+
 <h3 id="application-development-">Application Development <a name="app-dev"></a></h3>
 <h4 id="creating-jar-files-">Creating JAR Files <a name="jar"></a></h4>
 <p>JAR file is a java archive file that packages up your code for deployment. For eclipse you go to <code class="highlighter-rouge">file -&gt; export -&gt; java -&gt; jar</code> select all the <code class="highlighter-rouge">src</code> and deselect <code class="highlighter-rouge">classpath</code> and <code class="highlighter-rouge">project</code>. Select from the check boxes (make sure “Export generated class files and resources” is selected). Select the destination. Next x 2 and ok.</p>
@@ -1724,7 +2528,462 @@ To create an instance method you leave off the word <code class="highlighter-rou
  <span class="o">}</span>
 </code></pre>
 </div>
+<p><br /></p>
 
+<h3 id="reflection-api-">Reflection API <a name="reflect"></a></h3>
+<p>The reflection api allows you to dynamically instantiate and interrogate classes.</p>
+
+<h4 id="class-class-">Class Class <a name="class-class"></a></h4>
+<p>Each object you create in Java has an associated class it is from. The class class uses the <code class="highlighter-rouge">&lt;&gt;</code> to specify the data type but you can enter a <code class="highlighter-rouge">&lt;?&gt;</code> to say it is from some class. Once you have reference from the class and object is from you can retrieve all sorts of information (see docs).</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">Dog</span> <span class="n">d</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dog</span><span class="o">(</span><span class="n">DogName</span><span class="o">.</span><span class="na">PUG</span><span class="o">,</span> <span class="mi">0</span><span class="n">xFFFFFF</span><span class="o">);</span>
+
+  <span class="c1">// retrieve information about dog class</span>
+  <span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="na">getClass</span><span class="o">();</span>
+
+  <span class="c1">// get full name</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>
+
+  <span class="c1">// get just the name ex: com.pratik.dog</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+
+  <span class="c1">// get only the class name</span>
+  <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">c</span><span class="o">.</span><span class="na">getSimpleName</span><span class="o">());</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="instantiate-class-dynamically-">Instantiate Class Dynamically <a name="inst-class-dyn"></a></h4>
+<p>You can use the <code class="highlighter-rouge">Constructor&lt;?&gt;</code> data type to store constructor methods which you can then use to instantiate and object.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="na">getClass</span><span class="o">();</span>
+
+<span class="c1">// get an array of constructors</span>
+<span class="n">Constructor</span><span class="o">&lt;?&gt;[]</span> <span class="n">constructors</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">getConstructors</span><span class="o">();</span>
+
+<span class="c1">// get the first constructor</span>
+<span class="n">Constructor</span><span class="o">&lt;?&gt;</span> <span class="n">con</span> <span class="o">=</span> <span class="n">constructors</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+
+<span class="n">Object</span> <span class="n">obj</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+
+<span class="c1">// the new instance method takes arbitrary number of arguments which YOU MUST know</span>
+<span class="c1">// you need to wrap this around a try catch block due to any exceptions</span>
+<span class="k">try</span> <span class="o">{</span>
+  <span class="n">obj</span> <span class="o">=</span> <span class="n">con</span><span class="o">.</span><span class="na">newInstance</span><span class="o">(</span><span class="n">DogName</span><span class="o">.</span><span class="na">PUG</span><span class="o">,</span> <span class="mi">0</span><span class="n">xFFFFFF</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+<span class="o">}</span>
+
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="inheritance-tree-">Inheritance Tree <a name="inherit-tree"></a></h4>
+<p>Once you have a reference to an object you can walk up the hierarchy to its superclass. Use the <code class="highlighter-rouge">getSuperClass()</code> method to move up the hierarchy. You can walk up the tree but not down.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// create new object bulldog</span>
+    <span class="n">Object</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bulldog</span><span class="o">();</span>
+
+    <span class="c1">// get base class</span>
+    <span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="na">getClass</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Class name: "</span> <span class="o">+</span> <span class="n">c</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+
+    <span class="c1">// get the superclass</span>
+    <span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">sup</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">getSuperClass</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Super name: "</span> <span class="o">+</span> <span class="n">sup</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+
+    <span class="c1">// get the superclass's super</span>
+    <span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">sup2</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">getSuperClass</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Super Super name: "</span> <span class="o">+</span> <span class="n">sup2</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+
+    <span class="c1">// you can also get the package</span>
+    <span class="n">Package</span> <span class="n">pack</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="na">getPackage</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Package name: "</span> <span class="o">+</span> <span class="n">pack</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<p><br /></p>
+
+<h3 id="testing-">Testing <a name="test"></a></h3>
+<h4 id="assert-keyword-">Assert Keyword <a name="assert"></a></h4>
+<p>Assert is a way to testing a condition in your code. You create the <code class="highlighter-rouge">assert</code> command and then the condition after it. If it is false it throws an exception. Assert works only after you enter a command in the CLI.</p>
+
+<p>To add the assert command to the command line in eclipse go to <code class="highlighter-rouge">Debug Configurations</code>. Next select the java app and in the tab <code class="highlighter-rouge">Arguments</code> under <code class="highlighter-rouge">VM arguments</code> type in <code class="highlighter-rouge">-ea</code>.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// get string input and check to see if it can convert</span>
+<span class="n">String</span> <span class="n">str1</span> <span class="o">=</span> <span class="n">InputHelper</span><span class="o">.</span><span class="na">getInput</span><span class="o">(</span><span class="s">"Enter a value: "</span><span class="o">);</span>
+<span class="k">assert</span> <span class="nf">inputCheck</span><span class="o">(</span><span class="n">str1</span><span class="o">);</span>
+<span class="n">String</span> <span class="n">str2</span> <span class="o">=</span> <span class="n">InputHelper</span><span class="o">.</span><span class="na">getInput</span><span class="o">(</span><span class="s">"Enter a value: "</span><span class="o">);</span>
+<span class="k">assert</span> <span class="nf">inputCheck</span><span class="o">(</span><span class="n">str2</span><span class="o">);</span>
+<span class="c1">// code</span>
+
+<span class="c1">// create a private method to check if the input can be converted to string</span>
+<span class="kd">private</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">inputCheck</span><span class="o">(</span><span class="n">String</span> <span class="n">str</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">try</span> <span class="o">{</span>
+    <span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+  <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h3 id="io-stream-">IO Stream <a name="iostream"></a></h3>
+<h4 id="read-write-byte--character-stream-">Read Write Byte &amp; Character Stream <a name="rwstream"></a></h4>
+<p>Java supports input and output streams via <code class="highlighter-rouge">FileInputStream</code> &amp; <code class="highlighter-rouge">FileOutputStream</code> classes.</p>
+
+<p>Below is best approach for binary characters such as images.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// create input and out put stream reading from text.txt and writing to newimage</span>
+    <span class="c1">// this is good for binary files such as images</span>
+    <span class="k">try</span> <span class="o">(</span>
+      <span class="n">FileInputStream</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="o">(</span><span class="s">"image.jpg"</span><span class="o">);</span>
+      <span class="n">FileOutputStream</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="s">"newimage.jpg"</span><span class="o">);</span>
+          <span class="o">)</span> <span class="o">{</span>
+      <span class="c1">// intger c to read by a single byte at a time      </span>
+      <span class="kt">int</span> <span class="n">c</span><span class="o">;</span>
+      <span class="k">while</span> <span class="o">((</span><span class="n">c</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">read</span><span class="o">())</span> <span class="o">!=</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// write one character to output file</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p>If you are reading &amp; writing to text files you should use the <code class="highlighter-rouge">FileReader</code> &amp; <code class="highlighter-rouge">FileWriter</code> to be able to handle all characters.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// create input and out put stream reading from text.txt and writing to newimage</span>
+    <span class="c1">// this is good for binary files such as images</span>
+    <span class="k">try</span> <span class="o">(</span>
+      <span class="n">FileReader</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="s">"text.txt"</span><span class="o">);</span>
+      <span class="n">FileWriter</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileWriter</span><span class="o">(</span><span class="s">"newtext.txt"</span><span class="o">);</span>
+          <span class="o">)</span> <span class="o">{</span>
+      <span class="c1">// intger c to read by a single byte at a time      </span>
+      <span class="kt">int</span> <span class="n">c</span><span class="o">;</span>
+      <span class="k">while</span> <span class="o">((</span><span class="n">c</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">read</span><span class="o">())</span> <span class="o">!=</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// write one character to output file</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="buffered-stream-">Buffered Stream <a name="buffer"></a></h4>
+<p>With large text files you should buffer the IO operations so that you are managing memory by putting data in and then taking it out once used.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// use BufferedReader and BufferedWriter to read long files and have a more efficient memory usage</span>
+    <span class="k">try</span> <span class="o">(</span>
+      <span class="n">BufferedReader</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="s">"long.txt"</span><span class="o">));</span>
+      <span class="n">BufferedWriter</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="n">FileWriter</span><span class="o">(</span><span class="s">"newlong.txt"</span><span class="o">));</span>
+          <span class="o">)</span> <span class="o">{</span>
+      <span class="c1">// intger c to read by a single byte at a time      </span>
+      <span class="kt">int</span> <span class="n">c</span><span class="o">;</span>
+      <span class="k">while</span> <span class="o">((</span><span class="n">c</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">read</span><span class="o">())</span> <span class="o">!=</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// write one character to output file</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="scan-tokenized-text-">Scan Tokenized Text <a name="token"></a></h4>
+<p>One of the most common files you will see are files that are split by specific characters such as a comma delimiter text.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// the default token is a space but you can use scanner's useDelimiter(pattern) to change it</span>
+    <span class="k">try</span> <span class="o">(</span> <span class="n">Scanner</span> <span class="n">s</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="s">"comma.txt"</span><span class="o">))))</span> <span class="o">{</span>
+      <span class="n">s</span><span class="o">.</span><span class="na">useDelimiter</span><span class="o">(</span><span class="s">","</span><span class="o">);</span>    
+      <span class="k">while</span> <span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">next</span><span class="o">());</span>
+      <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h3 id="multi-threading-">Multi-Threading <a name="multi-thread"></a></h3>
+<h4 id="thread-class-">Thread Class <a name="thread"></a></h4>
+<p>Multi threading is the process of have multiple things going on at the same time. You can create your own classes that implements <code class="highlighter-rouge">Thread</code> or implement and interface.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="kt">int</span> <span class="n">iterations</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="n">MyThread</span> <span class="n">thread</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyThread</span><span class="o">();</span>
+
+    <span class="c1">// this will cause the run method to begin from custom class</span>
+    <span class="n">thread</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">iterations</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"From main process"</span><span class="o">);</span>
+
+        <span class="c1">// sleep will take argument in milliseconds</span>
+        <span class="c1">// must call on class directly</span>
+        <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">);</span>
+      <span class="o">}</span>  
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyThread</span> <span class="kd">extends</span> <span class="n">Thread</span> <span class="o">{</span>
+
+  <span class="c1">// you have to implement run method</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">iterations</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">iterations</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"From secondary thread"</span><span class="o">);</span>
+
+        <span class="c1">// sleep will take argument in milliseconds</span>
+        <span class="n">sleep</span><span class="o">(</span><span class="mi">2000</span><span class="o">);</span>
+      <span class="o">}</span>  
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="runnable-interface-">Runnable Interface <a name="run"></a></h4>
+<p>You can also implement and interface called <code class="highlighter-rouge">Runnable</code> instead of using the <code class="highlighter-rouge">Thread</code> class.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="kt">int</span> <span class="n">iterations</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="n">MyThread</span> <span class="n">thread</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyThread</span><span class="o">();</span>
+
+    <span class="c1">// this will cause the run method to begin from custom class</span>
+    <span class="n">thread</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+
+    <span class="c1">// must create runnable object</span>
+    <span class="n">MyRunnable</span> <span class="n">run</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyRunnable</span><span class="o">();</span>
+
+    <span class="c1">// anonymous method</span>
+    <span class="k">new</span> <span class="nf">Thread</span><span class="o">(</span><span class="n">run</span><span class="o">).</span><span class="na">start</span><span class="o">();</span>
+
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">iterations</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"From main process"</span><span class="o">);</span>
+        <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">2000</span><span class="o">);</span>
+      <span class="o">}</span>  
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="c1">// You are implementing the Runnable interface.</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyThread</span> <span class="kd">implements</span> <span class="n">Runnable</span> <span class="o">{</span>
+
+  <span class="c1">// you have to implement run method</span>
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">iterations</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">iterations</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"From runnable"</span><span class="o">);</span>
+
+        <span class="c1">// sleep will take argument in milliseconds</span>
+        <span class="c1">// when you implement Runnable you lose access to the Thread class's methods</span>
+        <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">4000</span><span class="o">);</span>
+      <span class="o">}</span>  
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="interrupt-thread-">Interrupt Thread <a name="inter-thread"></a></h4>
+<p>The thread runs until it completes, or its interrupted or you explicitly interrupt it. You can use the interrupt method to break the thread.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyThread</span> <span class="kd">extends</span> <span class="n">Thread</span> <span class="o">{</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">iterations</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">iterations</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"From secondary thread"</span><span class="o">);</span>
+        <span class="n">sleep</span><span class="o">(</span><span class="mi">2000</span><span class="o">);</span>
+      <span class="o">}</span>  
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Interrupted!"</span><span class="o">);</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="kt">int</span> <span class="n">iterations</span> <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="n">MyThread</span> <span class="n">thread</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyThread</span><span class="o">();</span>
+
+    <span class="n">thread</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+
+    <span class="k">try</span> <span class="o">{</span>
+      <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">iterations</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"From main process"</span><span class="o">);</span>
+
+        <span class="n">Thread</span><span class="o">.</span><span class="na">sleep</span><span class="o">(</span><span class="mi">3000</span><span class="o">);</span>
+      <span class="o">}</span>  
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">e</span><span class="o">.</span><span class="na">printStackTrace</span><span class="o">();</span>
+    <span class="o">}</span>
+
+    <span class="c1">// interrupt a thread thats being executed.</span>
+    <span class="n">thread</span><span class="o">.</span><span class="na">interrupt</span><span class="o">();</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Call interrupt"</span><span class="o">);</span>
+
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="synchronize-threads-">Synchronize Threads <a name="sync-thread"></a></h4>
+<p>In applications there are times when multiple threads need to share resources and you will have to synchronize so that the thread can only access the resources one at a time.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="n">TargetClass</span> <span class="n">tgt</span> <span class="o">=</span> <span class="k">new</span> <span class="n">TargetClass</span><span class="o">();</span>
+
+    <span class="c1">// create multiple instances of MyThread object</span>
+    <span class="n">MyThread</span> <span class="n">t1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyThread</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="n">tgt</span><span class="o">);</span>
+    <span class="n">MyThread</span> <span class="n">t2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyThread</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="n">tgt</span><span class="o">);</span>
+    <span class="n">MyThread</span> <span class="n">t3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MyThread</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="n">tgt</span><span class="o">);</span>
+
+    <span class="c1">// start all of the threads</span>
+    <span class="n">t1</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+    <span class="n">t2</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+    <span class="n">t3</span><span class="o">.</span><span class="na">start</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">TargetClass</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">call</span><span class="o">(</span><span class="kt">int</span> <span class="n">threadId</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Call from "</span> <span class="o">+</span> <span class="n">threadId</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyThread</span> <span class="kd">extends</span> <span class="n">Thread</span> <span class="o">{</span>
+
+  <span class="kd">private</span> <span class="kt">int</span> <span class="n">threadId</span><span class="o">;</span>
+  <span class="kd">private</span> <span class="n">TargetClass</span> <span class="n">target</span><span class="o">;</span>
+
+  <span class="c1">// create constructor to save values as private fields</span>
+  <span class="kd">public</span> <span class="nf">MyThread</span><span class="o">(</span><span class="kt">int</span> <span class="n">threadId</span><span class="o">,</span> <span class="n">TargetClass</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">threadId</span> <span class="o">=</span> <span class="n">threadId</span><span class="o">;</span>
+    <span class="k">this</span><span class="o">.</span><span class="na">target</span> <span class="o">=</span> <span class="n">target</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
+
+    <span class="c1">// create synchronized code block and pass in a target</span>
+    <span class="c1">// only one of the thread objects will be able to access this method at a time</span>
+    <span class="c1">// the execution does not guarantee what order the objects will be executed in</span>
+    <span class="kd">synchronized</span><span class="o">(</span><span class="n">target</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">try</span> <span class="o">{</span>
+          <span class="n">sleep</span><span class="o">(</span><span class="mi">2000</span><span class="o">);</span>
+        <span class="o">}</span>  
+      <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">InterruptedException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">err</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Interrupted!"</span><span class="o">);</span>
+      <span class="o">}</span>
+      <span class="n">target</span><span class="o">.</span><span class="na">call</span><span class="o">(</span><span class="n">threadId</span><span class="o">);</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+
+<span class="o">}</span>
+</code></pre>
+</div>
+
+    <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
 
 

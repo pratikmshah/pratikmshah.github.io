@@ -12,6 +12,7 @@
     color: $twt-clr;
 
     p {
+      opacity: 0;
       letter-spacing: 25px;
       background: -webkit-linear-gradient(left, rgba(41,106,212,1) 0%, rgba(78,142,247,1) 100%);
       background: -moz-linear-gradient(left, rgba(41,106,212,1) 0%, rgba(78,142,247,1) 100%);

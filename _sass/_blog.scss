@@ -1,22 +1,5 @@
 /*utility tool when writting blog post*/
 
-.blg-lists {
-  margin-left: 25px;
-
-  li {
-    margin-bottom: 5px;
-  }
-}
-
-.blg-img {
-  padding: 5px;
-  margin: 0 auto;
-  display: block;
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #E0E0E0;
-}
-
 p {
   margin-bottom: 15px;
 }
@@ -42,8 +25,65 @@ pre {
   border: none;
   margin-top: 30px !important;
   margin-bottom: 50px !important;
+
+  code {
+    white-space: pre;
+  }
 }
 
 ul, ol {
   margin-left: 30px;
+}
+
+.blg-lists {
+  margin-left: 25px;
+
+  li {
+    margin-bottom: 5px;
+  }
+}
+
+.blg-img {
+  padding: 5px;
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #E0E0E0;
+}
+
+#scroll-top {
+  display: none;
+  position: fixed;
+  border: none;
+  bottom: 25px;
+  right: 75px;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 99;
+  padding: 0px;
+  font-size: 3em;
+
+  span.glyphicon {
+    color: $twt-clr;
+    text-shadow: 2px 0px $blk, 1px -1px $blk, 1px -1px $blk, 2px 0px $blk;
+  }
+
+  span.glyphicon:hover {
+    color: $whte;
+    text-shadow: 2px 0px $twt-clr, 1px -1px $twt-clr, 1px -1px $twt-clr, 2px 0px $twt-clr;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  #scroll-top {
+    bottom: 20px;
+    right: 40px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #scroll-top {
+    bottom: 10px;
+    right: 20px;
+  }
 }
