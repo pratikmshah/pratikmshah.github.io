@@ -220,7 +220,8 @@
   </li>
   <li><a href="#iostream">I/O Stream</a>
     <ul>
-      <li><a href="#rwbyte">Read Write Byte Stream</a></li>
+      <li><a href="#rwstream">Read Write Byte &amp; Character Stream</a></li>
+      <li>[Buffered Stream]</li>
     </ul>
   </li>
 </ol>
@@ -2628,8 +2629,10 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <p><br /></p>
 
 <h3 id="io-stream-">IO Stream <a name="iostream"></a></h3>
-<h4 id="read-write-byte-stream-">Read Write Byte Stream <a name="rwbyte"></a></h4>
+<h4 id="read-write-byte--character-stream-">Read Write Byte &amp; Character Stream <a name="rwstream"></a></h4>
 <p>Java supports input and output streams via <code class="highlighter-rouge">FileInputStream</code> &amp; <code class="highlighter-rouge">FileOutputStream</code> classes.</p>
+
+<p>Below is best approach for binary characters such as images.</p>
 
 <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
@@ -2639,6 +2642,33 @@ To create an instance method you leave off the word <code class="highlighter-rou
     <span class="k">try</span> <span class="o">(</span>
       <span class="n">FileInputStream</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="o">(</span><span class="s">"image.jpg"</span><span class="o">);</span>
       <span class="n">FileOutputStream</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="s">"newimage.jpg"</span><span class="o">);</span>
+          <span class="o">)</span> <span class="o">{</span>
+      <span class="c1">// intger c to read by a single byte at a time      </span>
+      <span class="kt">int</span> <span class="n">c</span><span class="o">;</span>
+      <span class="k">while</span> <span class="o">((</span><span class="n">c</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">read</span><span class="o">())</span> <span class="o">!=</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// write one character to output file</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p>If you are reading &amp; writing to text files you should use the <code class="highlighter-rouge">FileReader</code> &amp; <code class="highlighter-rouge">FileWriter</code> to be able to handle all characters.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// create input and out put stream reading from text.txt and writing to newimage</span>
+    <span class="c1">// this is good for binary files such as images</span>
+    <span class="k">try</span> <span class="o">(</span>
+      <span class="n">FileReader</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="s">"text.txt"</span><span class="o">);</span>
+      <span class="n">FileWriter</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileWriter</span><span class="o">(</span><span class="s">"newtext.txt"</span><span class="o">);</span>
           <span class="o">)</span> <span class="o">{</span>
       <span class="c1">// intger c to read by a single byte at a time      </span>
       <span class="kt">int</span> <span class="n">c</span><span class="o">;</span>
