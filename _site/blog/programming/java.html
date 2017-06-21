@@ -218,6 +218,11 @@
       <li><a href="#assert">Assert Keyword</a></li>
     </ul>
   </li>
+  <li><a href="#iostream">I/O Stream</a>
+    <ul>
+      <li><a href="#rwbyte">Read Write Byte Stream</a></li>
+    </ul>
+  </li>
 </ol>
 
 <p><br /></p>
@@ -2436,7 +2441,41 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <p><br /></p>
 
 <h4 id="watch-directory-changes-">Watch Directory Changes <a name="dir-watch"></a></h4>
-<p>Java allows you to create a watch service that watches a directory for any changes.</p>
+<p>Java allows you to create a watch service that watches a directory for any changes. You use the <code class="highlighter-rouge">WatchService</code> object to accomplish this.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="k">try</span> <span class="o">(</span><span class="n">WatchService</span> <span class="n">service</span> <span class="o">=</span> <span class="n">FileSystems</span><span class="o">.</span><span class="na">getDefault</span><span class="o">().</span><span class="na">newWatchService</span><span class="o">())</span> <span class="o">{</span>
+      <span class="n">Map</span><span class="o">&lt;</span><span class="n">WatchKey</span><span class="o">,</span> <span class="n">Path</span><span class="o">&gt;</span> <span class="n">keyMap</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;&gt;();</span>
+      <span class="n">Path</span> <span class="n">path</span> <span class="o">=</span> <span class="n">Paths</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"files"</span><span class="o">);</span>
+      <span class="n">keyMap</span><span class="o">.</span><span class="na">put</span><span class="o">(</span><span class="n">path</span><span class="o">.</span><span class="na">register</span><span class="o">(</span><span class="n">service</span><span class="o">,</span>
+              <span class="n">StandardWatchEventKinds</span><span class="o">.</span><span class="na">ENTRY_CREATE</span><span class="o">,</span>
+              <span class="n">StandardWatchEventKinds</span><span class="o">.</span><span class="na">ENTRY_DELETE</span><span class="o">,</span>
+              <span class="n">StandardWatchEventKinds</span><span class="o">.</span><span class="na">ENTRY_MODIFY</span><span class="o">),</span>
+              <span class="n">path</span><span class="o">);</span>
+
+      <span class="n">WatchKey</span> <span class="n">watchKey</span><span class="o">;</span>
+
+      <span class="k">do</span> <span class="o">{</span>
+        <span class="n">watchKey</span> <span class="o">=</span> <span class="n">service</span><span class="o">.</span><span class="na">take</span><span class="o">();</span>
+        <span class="n">Path</span> <span class="n">eventDir</span> <span class="o">=</span> <span class="n">keyMap</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">watchKey</span><span class="o">);</span>
+
+        <span class="k">for</span> <span class="o">(</span><span class="n">WatchEven</span><span class="o">&lt;?&gt;</span> <span class="n">event</span> <span class="o">:</span> <span class="n">watchKey</span><span class="o">.</span><span class="na">pollEvents</span><span class="o">())</span> <span class="o">{</span>
+          <span class="n">WatchEvent</span><span class="o">.</span><span class="na">Kind</span><span class="o">&lt;?&gt;</span> <span class="n">kind</span> <span class="o">=</span> <span class="n">event</span><span class="o">.</span><span class="na">kind</span><span class="o">();</span>
+          <span class="n">Path</span> <span class="n">eventPath</span> <span class="o">=</span> <span class="o">(</span><span class="n">Path</span><span class="o">)</span><span class="n">event</span><span class="o">.</span><span class="na">context</span><span class="o">();</span>
+          <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">eventDir</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="n">kind</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="n">eventPath</span><span class="o">);</span>
+        <span class="o">}</span>
+
+      <span class="o">}</span> <span class="k">while</span> <span class="o">(</span><span class="n">watchKey</span><span class="o">.</span><span class="na">reset</span><span class="o">());</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
 
 <p><br /></p>
 
@@ -2582,6 +2621,37 @@ To create an instance method you leave off the word <code class="highlighter-rou
     <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
   <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h3 id="io-stream-">IO Stream <a name="iostream"></a></h3>
+<h4 id="read-write-byte-stream-">Read Write Byte Stream <a name="rwbyte"></a></h4>
+<p>Java supports input and output streams via <code class="highlighter-rouge">FileInputStream</code> &amp; <code class="highlighter-rouge">FileOutputStream</code> classes.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// create input and out put stream reading from text.txt and writing to newimage</span>
+    <span class="c1">// this is good for binary files such as images</span>
+    <span class="k">try</span> <span class="o">(</span>
+      <span class="n">FileInputStream</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="o">(</span><span class="s">"image.jpg"</span><span class="o">);</span>
+      <span class="n">FileOutputStream</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileOutputStream</span><span class="o">(</span><span class="s">"newimage.jpg"</span><span class="o">);</span>
+          <span class="o">)</span> <span class="o">{</span>
+      <span class="c1">// intger c to read by a single byte at a time      </span>
+      <span class="kt">int</span> <span class="n">c</span><span class="o">;</span>
+      <span class="k">while</span> <span class="o">((</span><span class="n">c</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">read</span><span class="o">())</span> <span class="o">!=</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// write one character to output file</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>
+
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre>
