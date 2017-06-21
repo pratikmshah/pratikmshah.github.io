@@ -221,7 +221,8 @@
   <li><a href="#iostream">I/O Stream</a>
     <ul>
       <li><a href="#rwstream">Read Write Byte &amp; Character Stream</a></li>
-      <li>[Buffered Stream]</li>
+      <li><a href="#buffer">Buffered Stream</a></li>
+      <li><a href="#token">Scan Tokenized Text</a></li>
     </ul>
   </li>
 </ol>
@@ -2686,6 +2687,58 @@ To create an instance method you leave off the word <code class="highlighter-rou
 <span class="o">}</span>
 </code></pre>
 </div>
+<p><br /></p>
+
+<h4 id="buffered-stream-">Buffered Stream <a name="buffer"></a></h4>
+<p>With large text files you should buffer the IO operations so that you are managing memory by putting data in and then taking it out once used.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// use BufferedReader and BufferedWriter to read long files and have a more efficient memory usage</span>
+    <span class="k">try</span> <span class="o">(</span>
+      <span class="n">BufferedReader</span> <span class="n">in</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="s">"long.txt"</span><span class="o">));</span>
+      <span class="n">BufferedWriter</span> <span class="n">out</span> <span class="o">=</span> <span class="k">new</span> <span class="n">BufferedWriter</span><span class="o">(</span><span class="k">new</span> <span class="n">FileWriter</span><span class="o">(</span><span class="s">"newlong.txt"</span><span class="o">));</span>
+          <span class="o">)</span> <span class="o">{</span>
+      <span class="c1">// intger c to read by a single byte at a time      </span>
+      <span class="kt">int</span> <span class="n">c</span><span class="o">;</span>
+      <span class="k">while</span> <span class="o">((</span><span class="n">c</span> <span class="o">=</span> <span class="n">in</span><span class="o">.</span><span class="na">read</span><span class="o">())</span> <span class="o">!=</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">{</span>
+        <span class="c1">// write one character to output file</span>
+        <span class="n">out</span><span class="o">.</span><span class="na">write</span><span class="o">(</span><span class="n">c</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">IOException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
+
+<h4 id="scan-tokenized-text-">Scan Tokenized Text <a name="token"></a></h4>
+<p>One of the most common files you will see are files that are split by specific characters such as a comma delimiter text.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+
+    <span class="c1">// the default token is a space but you can use scanner's useDelimiter(pattern) to change it</span>
+    <span class="k">try</span> <span class="o">(</span> <span class="n">Scanner</span> <span class="n">s</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="o">(</span><span class="k">new</span> <span class="n">BufferedReader</span><span class="o">(</span><span class="k">new</span> <span class="n">FileReader</span><span class="o">(</span><span class="s">"comma.txt"</span><span class="o">))))</span> <span class="o">{</span>
+      <span class="n">s</span><span class="o">.</span><span class="na">useDelimiter</span><span class="o">(</span><span class="s">","</span><span class="o">);</span>    
+      <span class="k">while</span> <span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">hasNext</span><span class="o">())</span> <span class="o">{</span>
+        <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">s</span><span class="o">.</span><span class="na">next</span><span class="o">());</span>
+      <span class="o">}</span>
+    <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">FileNotFoundException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+      <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">e</span><span class="o">.</span><span class="na">getMessage</span><span class="o">());</span>
+    <span class="o">}</span>
+
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+</div>
+<p><br /></p>
 
   </div>
 
