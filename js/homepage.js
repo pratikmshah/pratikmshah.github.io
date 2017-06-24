@@ -44,6 +44,12 @@ $(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
 
+
+  //====================================BLOG HOME BACKGROUND
+  if($("div.page-content")) {
+    $("body").css('background-color', "#F4F4F4");
+  }
+
 });
 
 
