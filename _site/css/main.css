@@ -979,17 +979,16 @@ ul, ol {
   font-family: "Lato", "Open Sans", "Helvetica Neue", sans-serif; }
   #hero-container .colored {
     font-size: 3.0em; }
-  #hero-container .texts {
-    color: #00AEEF; }
-    #hero-container .texts p {
-      opacity: 0;
-      letter-spacing: 25px;
-      background: -webkit-linear-gradient(left, #296ad4 0%, #4e8ef7 100%);
-      background: -moz-linear-gradient(left, #296ad4 0%, #4e8ef7 100%);
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-text-fill-color: transparent; }
+  #hero-container .texts p {
+    opacity: 0;
+    letter-spacing: 25px; }
+    #hero-container .texts p .t1 {
+      background-color: #00AEEF; }
+    #hero-container .texts p .t2 {
+      border-top: 10px solid #00AEEF;
+      border-right: 10px solid #00AEEF;
+      border-bottom: 10px solid #00AEEF;
+      color: #00AEEF; }
 
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
