@@ -6,20 +6,29 @@
   font-size: 8em;
   font-family: $font-project;
 
-  .colored { font-size: 3.0em; }
-
   .texts {
-    color: $twt-clr;
 
     p {
-      opacity: 0;
       letter-spacing: 25px;
-      background: -webkit-linear-gradient(left, rgba(41,106,212,1) 0%, rgba(78,142,247,1) 100%);
-      background: -moz-linear-gradient(left, rgba(41,106,212,1) 0%, rgba(78,142,247,1) 100%);
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-text-fill-color: transparent;
+      // background: -webkit-linear-gradient(left, rgba(41,106,212,1) 0%, rgba(78,142,247,1) 100%);
+      // background: -moz-linear-gradient(left, rgba(41,106,212,1) 0%, rgba(78,142,247,1) 100%);
+      // -webkit-background-clip: text;
+      // -moz-background-clip: text;
+      // -webkit-text-fill-color: transparent;
+      // -moz-text-fill-color: transparent;
+
+      .t1 {
+        background-color: $twt-clr;
+        opacity: 0;
+      }
+
+      .t2 {
+        border-top: 10px solid $twt-clr;
+        border-right: 10px solid $twt-clr;
+        border-bottom: 10px solid $twt-clr;
+        color: $twt-clr;
+        opacity: 0;
+      }
     }
   }
 }
@@ -35,5 +44,19 @@
 @media only screen and (max-width: 450px) {
   #hero-container {
     font-size: 3.2em;
+
+    .texts p {
+      letter-spacing: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  #hero-container {
+    font-size: 2.75em;
+
+    .texts p {
+      letter-spacing: 18px;
+    }
   }
 }

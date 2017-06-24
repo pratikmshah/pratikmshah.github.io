@@ -977,19 +977,17 @@ ul, ol {
 #hero-container {
   font-size: 8em;
   font-family: "Lato", "Open Sans", "Helvetica Neue", sans-serif; }
-  #hero-container .colored {
-    font-size: 3.0em; }
-  #hero-container .texts {
-    color: #00AEEF; }
-    #hero-container .texts p {
-      opacity: 0;
-      letter-spacing: 25px;
-      background: -webkit-linear-gradient(left, #296ad4 0%, #4e8ef7 100%);
-      background: -moz-linear-gradient(left, #296ad4 0%, #4e8ef7 100%);
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -moz-text-fill-color: transparent; }
+  #hero-container .texts p {
+    letter-spacing: 25px; }
+    #hero-container .texts p .t1 {
+      background-color: #00AEEF;
+      opacity: 0; }
+    #hero-container .texts p .t2 {
+      border-top: 10px solid #00AEEF;
+      border-right: 10px solid #00AEEF;
+      border-bottom: 10px solid #00AEEF;
+      color: #00AEEF;
+      opacity: 0; }
 
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
@@ -998,4 +996,11 @@ ul, ol {
     min-height: 400px; } }
 @media only screen and (max-width: 450px) {
   #hero-container {
-    font-size: 3.2em; } }
+    font-size: 3.2em; }
+    #hero-container .texts p {
+      letter-spacing: 20px; } }
+@media only screen and (max-width: 350px) {
+  #hero-container {
+    font-size: 2.75em; }
+    #hero-container .texts p {
+      letter-spacing: 18px; } }

@@ -1,7 +1,9 @@
 $(function() {
 
   //====================================HOMEPAGE NAME
-  $("#hero-container .texts p").animate({ opacity: 1 }, 2500);
+  $("#hero-container .texts p span.t1").animate({ opacity: 1 }, 3000, "linear");
+  $("#hero-container .texts p span.t2").delay(750)
+                                       .animate({ opacity: 1 }, 3000, "linear");
 
 
 
@@ -41,6 +43,12 @@ $(function() {
   $("#scroll-top").click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
+
+
+  //====================================BLOG HOME BACKGROUND
+  if($("div.page-content")) {
+    $("body").css('background-color', "#F4F4F4");
+  }
 
 });
 
