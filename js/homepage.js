@@ -1,7 +1,9 @@
 $(function() {
 
   //====================================HOMEPAGE NAME
-  $("#hero-container .texts p").animate({ opacity: 1 }, 2500, "linear");
+  $("#hero-container .texts p span.t1").animate({ opacity: 1 }, 3000, "linear");
+  $("#hero-container .texts p span.t2").delay(750)
+                                       .animate({ opacity: 1 }, 3000, "linear");
 
 
 

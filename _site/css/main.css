@@ -980,15 +980,16 @@ ul, ol {
   #hero-container .colored {
     font-size: 3.0em; }
   #hero-container .texts p {
-    opacity: 0;
     letter-spacing: 25px; }
     #hero-container .texts p .t1 {
-      background-color: #00AEEF; }
+      background-color: #00AEEF;
+      opacity: 0; }
     #hero-container .texts p .t2 {
       border-top: 10px solid #00AEEF;
       border-right: 10px solid #00AEEF;
       border-bottom: 10px solid #00AEEF;
-      color: #00AEEF; }
+      color: #00AEEF;
+      opacity: 0; }
 
 /*navigation for mobile*/
 @media only screen and (max-width: 600px) {
