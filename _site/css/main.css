@@ -977,8 +977,6 @@ ul, ol {
 #hero-container {
   font-size: 8em;
   font-family: "Lato", "Open Sans", "Helvetica Neue", sans-serif; }
-  #hero-container .colored {
-    font-size: 3.0em; }
   #hero-container .texts p {
     letter-spacing: 25px; }
     #hero-container .texts p .t1 {
@@ -998,4 +996,11 @@ ul, ol {
     min-height: 400px; } }
 @media only screen and (max-width: 450px) {
   #hero-container {
-    font-size: 3.2em; } }
+    font-size: 3.2em; }
+    #hero-container .texts p {
+      letter-spacing: 20px; } }
+@media only screen and (max-width: 350px) {
+  #hero-container {
+    font-size: 2.75em; }
+    #hero-container .texts p {
+      letter-spacing: 18px; } }
