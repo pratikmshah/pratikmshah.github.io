@@ -12,7 +12,8 @@ I was listening to the "Invest Like the Best" (listen below) podcast the other d
 
 Before I explain the moats lets dig down into why Connor implements his strategy. He stated that the old school of value investing has shifted from qualitative to quantitative. The days where you could pick up cheap no brainer opportunities have been taken away by machines implementing algos faster than one can find a stock and hit buy themselves.
 
+IMC is a private holding company which was used to start a restaurant called Golden Corral. The business is 85% franchised keeping it capital light and generating lots of cash from royalties. IMC uses a similar concept as Berkshire Hathaway and uses the cash flow from Golden Corral to invest in other businesses.
 
-
+Connor likes buying public companies because when you are buying a company privately the owner who knows the business pretty well and is most likely selling at an opportune time. In the public markets prices change everyday and if you combine this with volatility and irrational selling you can find great long term businesses. The goal is to capture compounding intrinsic value meaning as the business grows the actual value of the stock should too. Furthermore, you are specifically looking for companies that is at a discount where you can take $1 of earnings today and over time increase the intrinsic value to $3, $6, $7 and so on. Connor looks at more than 100 companies a year but only selects 1-2.
 
 <br>
