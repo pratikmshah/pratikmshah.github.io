@@ -1,0 +1,1597 @@
+<html>
+  <head>
+    <title>Tradelytics | Dashboard</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" href="stylesheets/normalize.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="icon" type="image/ico" href="imgs/favicon.ico" sizes="32x32" />
+
+    <script src="scripts/jquery-2.2.0.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/script.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col-lg-10 col-lg-offset-1 col-sm-12 col-sm-offset-0 no-pad">
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a id="logo" class="navbar-brand big-icon" href="#"><strong>Tradelytics</strong></a>
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="http://gmail.com" target="_blank"><strong>
+                    <span class="fa fa-envelope big-icon"></span>
+                  </strong></a>
+                </li>
+                <li>
+                  <a href="#" class="exec"><strong>
+                    <span class="fa fa-power-off big-icon"></span>
+                  </strong></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <strong><span class="fa fa-globe big-icon"></span></strong>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                          <a href="https://finance.yahoo.com/chart/XLY#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiNm1vIn0%3D" target="_blank"><strong>Consumer Discretionary(XLY)</strong></a>
+                        </li>
+                        <li>
+                          <a href="https://finance.yahoo.com/chart/XLP#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiNm1vIn0%3D" target="_blank"><strong>Consumer Staples (XLP)</strong></a>
+                        </li>
+                        <li>
+                          <a href="https://finance.yahoo.com/chart/XLE#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiNm1vIn0%3D" target="_blank"><strong>Energy (XLE)</strong></a>
+                        </li>
+                        <li>
+                          <a href="https://finance.yahoo.com/chart/XLF#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiNm1vIn0%3D" target="_blank"><strong>Financials (XLF)</strong></a>
+                        </li>
+                        <li>
+                          <a href="https://finance.yahoo.com/chart/XLV#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiNm1vIn0%3D" target="_blank"><strong>Health Care (XLV)</strong></a>
+                        </li>
+                        <li>
+                          <a href="https://finance.yahoo.com/chart/XLI#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiNm1vIn0%3D" target="_blank"><strong>Industrials (XLI)</strong></a>
+                        </li>
+                        <li>
+                          <a href="https://finance.yahoo.com/chart/XLB#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiNm1vIn0%3D" target="_blank"><strong>Materials (XLB)</strong></a>
+                        </li>
+                        <li>
+                          <a href="https://finance.yahoo.com/chart/XLRE#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiNm1vIn0%3D" target="_blank"><strong>Real Estate (XLRE)</strong></a>
+                        </li>
+                        <li>
+                          <a href="https://finance.yahoo.com/chart/XLK#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiNm1vIn0%3D" target="_blank"><strong>Technology (XLK)</strong></a>
+                        </li>
+                        <li>
+                          <a href="https://finance.yahoo.com/chart/XLU#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiNm1vIn0%3D" target="_blank"><strong>Utilities (XLU)</strong></a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                  <a href="http://twitter.com" target="_blank"><strong>
+                    <span class="fa fa-twitter big-icon"></span>
+                  </strong></a>
+                </li>
+                <li>
+                  <a href="http://markets.businessinsider.com/commodities" target="_blank"><strong>
+                    <span class="fa fa-apple big-icon"></span>
+                  </strong></a>
+                </li>
+                <li>
+                  <a href="http://markets.businessinsider.com/currencies" target="_blank"><strong>
+                    <span class="fa fa-eur big-icon"></span>
+                  </strong></a>
+                </li>
+                <li>
+                  <a href="https://www.scottrade.com/" target="_blank"><strong>
+                    <span class="fa fa-scribd big-icon"></span>
+                  </strong></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <strong><span class="fa fa-500px big-icon"></span></strong>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                          <a href="http://www.nasdaq.com/aspx/52-week-high-low.aspx" target="_blank"><strong>NASDAQ</strong></a>
+                        </li>
+                        <li>
+                          <a href="http://online.wsj.com/mdc/public/page/2_3021-newhinyse-newhighs.html" target="_blank"><strong>WSJ</strong></a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#search"><strong><span class="glyphicon glyphicon-search big-icon"></span></strong></a>
+                </li>
+              </ul>
+            </div> <!-- end of navbar container-fluid -->
+          </nav>
+        </div>
+
+        <section id="market-index" class="col-lg-10 col-lg-offset-1">
+          <div class="col-sm-2 text-center">
+              <a href="https://finance.yahoo.com/chart/%5EGSPC#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiNm1vIn0%3D" target="_blank">S&P 500 </a>
+              <a href="https://finance.yahoo.com/chart/SPY#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiM21vIn0%3D" target="_blank" title="large cap">(SPY)</a>
+          </div>
+          <div class="col-sm-2 text-center">
+              <a href="https://finance.yahoo.com/chart/NDAQ#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiNm1vIn0%3D" target="_blank">NASDAQ</a>
+              <a href="https://finance.yahoo.com/chart/QQQ#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiM21vIn0%3D" target="_blank" title="large cap">(QQQ)</a>
+          </div>
+          <div class="col-sm-2 text-center">
+              <a href="https://finance.yahoo.com/chart/%5EDJI#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiNm1vIn0%3D" target="_blank">DOW</a>
+          </div>
+          <div class="col-sm-2 text-center">
+              <a href="https://finance.yahoo.com/chart/%5ERUT#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiNm1vIn0%3D" target="_blank">RUSSELL2K</a>
+              <a href="https://finance.yahoo.com/chart/IWM#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiMW1vIn0%3D" target="_blank" title="small cap">(IWM</a>
+              <span class="clr-w">|</span>
+              <a href="https://finance.yahoo.com/chart/MDY#eyJtdWx0aUNvbG9yTGluZSI6ZmFsc2UsImJvbGxpbmdlclVwcGVyQ29sb3IiOiIjZTIwMDgxIiwiYm9sbGluZ2VyTG93ZXJDb2xvciI6IiM5NTUyZmYiLCJzaG93RW1hIjp0cnVlLCJlbWFDb2xvcnMiOiIjZjAxMjZmLCMxYTlhZjksIzFhYzU2NyIsImVtYVBlcmlvZHMiOiI1MCwyMCwxMCIsImVtYVdpZHRocyI6IjIsMSwxIiwiZW1hR2hvc3RpbmciOiIwLDAsMCIsIm1maUxpbmVDb2xvciI6IiM0NWUzZmYiLCJtYWNkRGl2ZXJnZW5jZUNvbG9yIjoiI2ZmN2IxMiIsIm1hY2RNYWNkQ29sb3IiOiIjNzg3ZDgyIiwibWFjZFNpZ25hbENvbG9yIjoiIzAwMDAwMCIsInJzaUxpbmVDb2xvciI6IiNmZmI3MDAiLCJzdG9jaEtMaW5lQ29sb3IiOiIjZmZiNzAwIiwic3RvY2hETGluZUNvbG9yIjoiIzQ1ZTNmZiIsInJhbmdlIjoiMW1vIn0%3D" target="_blank" title="mid cap">MDY)</a>
+          </div>
+          <div class="col-sm-2 text-center">
+              <a href="http://markets.businessinsider.com/index/VIX" target="_blank">VIX</a>
+          </div>
+          <div class="col-sm-2 text-center">
+              <a href="http://finviz.com/futures_charts.ashx?t=ALL&p=d1" target="_blank">FUTURES</a>
+          </div>
+        </section>
+
+        <article id="main" class="col-lg-10 col-lg-offset-1 col-sm-12 col-sm-offset-0 no-pad">
+
+            <div class="row">
+
+                  <div class="col-lg-4">
+                        <div class="panel panel-default cell-left">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><strong><i class="fa fa-file-text"></i> Information</strong></h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="information" class="row">
+                                    <div class="col-md-6">
+                                      <ul>
+                                        <li><a href="https://www.google.com/finance" target="_blank">Google Finance</a></li>
+                                        <li><a href="https://finance.yahoo.com/" target="_blank">Yahoo Finance</a></li>
+                                        <li><a href="http://www.benzinga.com/" target="_blank">Benzinga</a></li>
+                                        <li><a href="https://www.thestreet.com/" target="_blank">The Street</a></li>
+                                        <li><a href="http://www.businessinsider.com/clusterstock" target="_blank">Business Insider</a></li>
+                                        <li><a href="http://markets.businessinsider.com/" target="_blank">Market Insider</a></li>
+                                        <li><a href="http://www.reuters.com/" target="_blank">Reuters</a></li>
+                                        <li><a href="http://www.cnbc.com/" target="_blank">CNBC News</a></li>
+                                        <li><a href="https://www.bloomberg.com/" target="_blank">Bloomberg</a></li>
+                                        <li><a href="http://www.fool.com/investing-news/" target="_blank">Mootley Fool</a></li>
+                                        <li><a href="http://www.morningstar.com/" target="_blank">Morning Star</a></li>
+                                        <li><a href="http://www.investors.com/" target="_blank">Investors Business Daily</a></li>
+                                        <li><a href="http://www.valuewalk.com/" target="_blank">Value Walk</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <ul>
+                                        <li><a href="http://www.investopedia.com/" target="_blank">Investopedia</a></li>
+                                        <li><a href="http://www.wsj.com/" target="_blank">The Wall Street Journal</a></li>
+                                        <li><a href="http://www.cnn.com/" target="_blank">CNN</a></li>
+                                        <li><a href="http://www.marketwatch.com/" target="_blank">Market Watch</a></li>
+                                        <li><a href="http://investorplace.com/" target="_blank">Investor Place</a></li>
+                                        <li><a href="http://www.investmentnews.com/" target="_blank">Investment News</a></li>
+                                        <li><a href="http://www.nytimes.com/pages/business/dealbook/index.html" target="_blank">Dealbook</a></li>
+                                        <li><a href="http://pitchbook.com/news" target="_blank">PitchBook</a></li>
+                                        <li><a href="https://www.zacks.com/" target="_blank">Zacks</a></li>
+                                        <li><a href="https://ibankcoin.com/" target="_blank">iBankcoin</a></li>
+                                        <li><a href="http://www.streetinsider.com/" target="_blank">Street Insider</a></li>
+                                        <li><a href="http://www.nasdaq.com/markets/ipos/" target="_blank">IPOS Schedule</a></li>
+                                        <li><a href="https://www.gurufocus.com/" target="_blank">Guru Focus</a></li>
+                                      </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- news panel -->
+
+                  <div class="col-lg-4">
+                        <div class="panel panel-default cell-mid">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><strong><i class="fa fa-wrench"></i> Tools</strong></h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="tools" class="row">
+                                    <div class="col-md-6">
+                                      <h4>Stock Screeners</h4>
+                                      <ul>
+                                        <li><a href="http://finviz.com/" target="_blank">Finviz</a></li>
+                                        <li><a href="https://www.google.com/finance/stockscreener" target="_blank">Google Finance</a></li>
+                                        <li><a href="https://finance.yahoo.com/screener" target="_blank">Yahoo Finance</a></li>
+                                        <li><a href="http://www.marketwatch.com/tools/stockresearch/screener/" target="_blank">Market Watch</a></li>
+                                        <li><a href="https://www.zacks.com/screening/stock-screener" target="_blank">Zacks</a></li>
+                                        <li><a href="http://caps.fool.com/Screener.aspx" target="_blank">Mootley Fool</a></li>
+                                        <li><a href="http://shortsqueeze.com/" target="_blank">Short Squeeze</a></li>
+                                        <li><a href="http://traderhq.com/" target="_blank">TraderHQ</a></li>
+                                        <li><a href="http://quantumonline.com/" target="_blank">Quantum Online</a></li>
+                                        <li><a href="http://www.finvids.com/" target="_blank">Finvids</a></li>
+                                        <li><a href="https://fintel.io/" target="_blank">Fintel</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <h4>Research & Analysis</h4>
+                                      <ul>
+                                        <li><a href="http://www.dataroma.com/m/home.php" target="_blank">Dataroma</a></li>
+                                        <li><a href="http://www.freestockcharts.com/" target="_blank">Free Stock Charts</a></li>
+                                        <li><a href="https://stockcharts.com/" target="_blank">Stock Charts</a></li>
+                                        <li><a href="http://stockcharts.com/school/doku.php?id=chart_school" target="_blank">Chart School</a></li>
+                                        <li><a href="http://www.marketwatch.com/investing/research-tools" target="_blank">Market Watch Tools</a></li>
+                                        <li><a href="https://biz.yahoo.com/research/earncal/today.html" target="_blank">Earnings Calendar</a></li>
+                                        <li><a href="https://www.bls.gov/home.htm" target="_blank">Bureau of Labor Statistics</a></li>
+                                        <li><a href="http://seekingalpha.com/" target="_blank">Seeking Alpha</a></li>
+                                        <li><a href="https://whalewisdom.com/" target="_blank">Whale Wisdom</a></li>
+                                        <li><a href="https://www.holdingschannel.com/" target="_blank">Holdings Channel</a></li>
+                                        <li><a href="https://www.tradingview.com/" target="_blank">Trading View</a></li>
+                                        <li><a href="https://stocktwits.com/" target="_blank">Stock Twits</a></li>
+                                      </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--  end of research and analysis -->
+
+                  <div class="col-lg-4">
+                        <div class="panel panel-default cell-right">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><strong><i class="fa fa-twitter"></i> Twitter</strong></h3>
+                            </div>
+                            <div class="panel-body">
+                              <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#news"><strong>News</strong></a></li>
+                                <li><a data-toggle="tab" href="#invest"><strong>Invest</strong></a></li>
+                                <li><a data-toggle="tab" href="#trader"><strong>Trader</strong></a></li>
+                                <li><a data-toggle="tab" href="#hedge"><strong>HFund</strong></a></li>
+                              </ul>
+
+                              <div class="tab-content">
+                                <div id="news" class="tab-pane fade in active">
+                                    <div class="col-md-4">
+                                        <ul class="list-unstyled">
+                                            <li><a href="https://twitter.com/cnbc" target="_blank">@CNBC</a></li>
+                                            <li><a href="https://twitter.com/theflynews" target="_blank">@theflynews</a></li>
+                                            <li><a href="https://twitter.com/benzinga" target="_blank">@benzinga</a></li>
+                                            <li><a href="https://twitter.com/stocktwits" target="_blank">@stocktwits</a></li>
+                                            <li><a href="https://twitter.com/ibdinvestors" target="_blank">@ibdinvestors</a></li>
+                                            <li><a href="https://twitter.com/Street_Insider" target="_blank">@Street_Insider</a></li>
+                                            <li><a href="https://twitter.com/BLS_gov" target="_blank">@BLS_gov</a></li>
+                                            <li><a href="https://twitter.com/econalert" target="_blank">@econalert</a></li>
+                                            <li><a href="https://twitter.com/business" target="_blank">@bloomberg</a></li>
+                                            <li><a href="https://twitter.com/thomsonreuters" target="_blank">@thomsonreuters</a></li>
+                                            <li><a href="https://twitter.com/TheStreet" target="_blank">@TheStreet</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <ul class="list-unstyled">
+                                            <li><a href="https://twitter.com/eWhispers" target="_blank">@eWhispers</a></li>
+                                            <li><a href="#" target="_blank"></a></li>
+                                            <li><a href="#" target="_blank"></a></li>
+                                            <li><a href="#" target="_blank"></a></li>
+                                            <li><a href="#" target="_blank"></a></li>
+                                            <li><a href="#" target="_blank"></a></li>
+                                            <li><a href="#" target="_blank"></a></li>
+                                        </ul>
+                                    </div>
+                                </div> <!-- end of news twitter  -->
+                                <div id="invest" class="tab-pane fade in">
+                                    <div class="col-md-4">
+                                        <ul class="list-unstyled">
+                                            <li><a href="https://twitter.com/bespokeinvest" target="_blank">@bespokeinvest</a></li>
+                                            <li><a href="https://twitter.com/FrankCurzio" target="_blank">@FrankCurzio</a></li>
+                                            <li><a href="https://twitter.com/stephanie_link" target="_blank">@stephanie_link</a></li>
+                                            <li><a href="https://twitter.com/jimcramer" target="_blank">@jimcramer</a></li>
+                                            <li><a href="https://twitter.com/kevinolearytv" target="_blank">@kevinolearytv</a></li>
+                                            <li><a href="#" target="_blank"></a></li>
+                                            <li><a href="#" target="_blank"></a></li>
+                                        </ul>
+                                    </div>
+                                </div> <!-- end of invest twitter -->
+                                <div id="trader" class="tab-pane fade in">
+                                    <div class="col-md-4">
+                                        <ul class="list-unstyled">
+                                            <li><a href="https://twitter.com/ReformedBroker" target="_blank">@ReformedBroker</a></li>
+                                            <li><a href="https://twitter.com/jlebenthal" target="_blank">@jlebenthal</a></li>
+                                            <li><a href="https://twitter.com/petenajarian" target="_blank">@petenajarian</a></li>
+                                            <li><a href="https://twitter.com/terranovajoe" target="_blank">@terranovajoe</a></li>
+                                            <li><a href="https://twitter.com/stephenLweiss" target="_blank">@stephenLweiss</a></li>
+                                            <li><a href="https://twitter.com/TripleDTrader" target="_blank">@TripleDTrader</a></li>
+                                            <li><a href="https://twitter.com/danzanger" target="_blank">@DanZanger</a></li>
+                                            <li><a href="https://twitter.com/harmongreg" target="_blank">@harmongreg</a></li>
+                                            <li><a href="https://twitter.com/crosshairtrader" target="_blank">@crosshairtrader</a></li>
+                                            <li><a href="https://twitter.com/FousAlerts" target="_blank">@FousAlerts</a></li>
+                                            <li><a href="https://twitter.com/Catalystrader" target="_blank">@Catalystrader</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <ul class="list-unstyled">
+                                            <li><a href="https://twitter.com/MikeBellafiore" target="_blank">@MikeBellafiore</a></li>
+                                            <li><a href="https://twitter.com/RedDogT3" target="_blank">@RedDogT3</a></li>
+                                            <li><a href="https://twitter.com/Spus" target="_blank">@Spus</a></li>
+                                            <li><a href="#" target="_blank"></a></li>
+                                            <li><a href="#" target="_blank"></a></li>
+                                            <li><a href="#" target="_blank"></a></li>
+                                            <li><a href="#" target="_blank"></a></li>
+                                            <li><a href="#" target="_blank"></a></li>
+                                            <li><a href="#" target="_blank"></a></li>
+                                            <li><a href="#" target="_blank"></a></li>
+                                            <li><a href="#" target="_blank"></a></li>
+                                        </ul>
+                                    </div>
+                                </div> <!-- end of trader twitter -->
+                                <div id="hedge" class="tab-pane fade in">
+                                    <div class="col-md-4">
+                                        <ul class="list-unstyled">
+                                            <li><a href="https://twitter.com/blackrock" target="_blank">@blackrock</a></li>
+                                            <li><a href="https://twitter.com/realDonaldTrump" target="_blank">@realDonaldTrump</a></li>
+                                            <li><a href="https://twitter.com/Carl_C_Icahn?lang=en" target="_blank">@Carl_C_Icahn</a></li>
+                                            <li><a href="https://twitter.com/fabiancapital" target="_blank">@fabiancapital</a></li>
+                                            <li><a href="https://twitter.com/TRowePrice" target="_blank">@TRowePrice</a></li>
+                                            <li><a href="https://twitter.com/smbcapital" target="_blank">@smbcapital</a></li>
+                                            <li><a href="https://twitter.com/BergenCapital" target="_blank">@BergenCapital</a></li>
+                                            <li><a href="https://twitter.com/geckojb" target="_blank">@geckojb</a></li>
+                                            <li><a href="" target="_blank"></a></li>
+                                            <li><a href="" target="_blank"></a></li>
+                                        </ul>
+                                    </div>
+                                </div> <!-- end of hedge fund twitter -->
+                              </div>
+
+                            </div>
+                        </div>
+                    </div>  <!-- end of twitter panel   -->
+
+                </div>
+
+
+                  <div class="col-lg-12">
+                        <div class="panel panel-default cell-right">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><strong><i class="fa fa-cube"></i> Market Sectors</strong></h3>
+                            </div>
+                            <div class="panel-body">
+                              <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#energy"><strong>Energy</strong></a></li>
+                                <li><a data-toggle="tab" href="#materials"><strong>Basic Materials</strong></a></li>
+                                <li><a data-toggle="tab" href="#industrials"><strong>Industrials</strong></a></li>
+                                <li><a data-toggle="tab" href="#goods"><strong>Cyclical Cons. Goods</strong></a></li>
+                                <li><a data-toggle="tab" href="#nongoods"><strong>Non-Cyclical Cons. Goods</strong></a></li>
+                                <li><a data-toggle="tab" href="#financials"><strong>Financials</strong></a></li>
+                                <li><a data-toggle="tab" href="#health"><strong>Healthcare</strong></a></li>
+                                <li><a data-toggle="tab" href="#technology"><strong>Technology</strong></a></li>
+                                <li><a data-toggle="tab" href="#telecom"><strong>Telecommunications</strong></a></li>
+                                <li><a data-toggle="tab" href="#utilities"><strong>Utilities</strong></a></li>
+                              </ul>
+
+
+                           <!--    SECTOR PANEL -->
+                              <div id="sector-info" class="tab-content">
+                                <div id="energy" class="tab-pane fade in active">
+                                    <div class="col-md-12">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sector</th>
+                                                    <th>Sub-Sector 1</th>
+                                                    <th>Sub-Sector 2</th>
+                                                    <th>Notable Companies</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="https://www.google.com/finance?catid=TRBC%3A50&ei=qp2DWNn_O4aa2AbhtY_gAQ" target="_blank">Energy</a></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC%3A5010&ei=pMeDWLHpK4ezjAGq06y4BQ" target="_blank">Energy</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:501010&ei=qseDWPG5JpSgjAHjpYzACg" target="_blank">Coal</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:501020&ei=qseDWPG5JpSgjAHjpYzACg" target="_blank">Oil & Gas</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC%3A501030&ei=qseDWPG5JpSgjAHjpYzACg" target="_blank">Oil & Gas Equip & Services</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC%3A501040&ei=qseDWPG5JpSgjAHjpYzACg" target="_blank">Renewable Energy</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Exxon Mobil, Chevron, Schlumberger, Occidental Petroleum</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:502010&ei=q8mDWMjQB4ezjAGq06y4BQ" target="blank">Renewable Energy</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:50201010&ei=Z8qDWOiSJoezjAGq06y4BQ" target="_blank">Renewable Energy Equipment & Services</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC%3A50201020&ei=Z8qDWOiSJoezjAGq06y4BQ" target="_blank">Renewable Fuels</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>First Solar & SolarCity</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC%3A5030&sort=MARKET_CAP&ei=L8uDWNG-Go7kjAHjhLKgCQ" target="_blank">Uranium</a></td>
+                                                    <td></td>
+                                                    <td>Cameco Corp</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div> <!-- end of energy -->
+                                <div id="materials" class="tab-pane fade in">
+                                    <div class="col-md-12">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sector</th>
+                                                    <th>Sub-Sector 1</th>
+                                                    <th>Sub-Sector 2</th>
+                                                    <th>Notable Companies</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="https://www.google.com/finance?catid=TRBC:51&ei=i8mDWJmGJY3ijAHr6rvACQ" target="_blank">Basic Materials</a></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5110&ei=FsyDWMGHPIPAjAH8wpvABg" target="_blank">Chemicals</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:51101010&ei=3M6DWPCqK8WtjAHSma7wBw" target="_blank">Commodity Chemicals</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:51101020&ei=3M6DWPCqK8WtjAHSma7wBw" target="_blank">Agricultural Chemicals</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:51101030&ei=3M6DWPCqK8WtjAHSma7wBw" target="_blank">Specialty Chemicals</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:51101090&ei=3M6DWPCqK8WtjAHSma7wBw" target="_blank">Diversified Chemicals</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Dow Chemical, Syngenta, PPG Industries, Potash Corp</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5120&ei=FsyDWMGHPIPAjAH8wpvABg" target="_blank">Mineral Resources</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:512010&ei=0s-DWNmhB4f7jAG74ar4Cw" target="_blank">Metals & Mining</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:512020&ei=0s-DWNmhB4f7jAG74ar4Cw" target="_blank">Construction Materials</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>BHP Billiton, Freeport-McMoRan, Vale, Rio Tinto, Newmont Mining</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC%3A5130&sort=MARKET_CAP&ei=XNKDWNmpLoXHjAHvqqfQBQ" target="_blank">Applied Resources</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:513010&ei=x9KDWKiBF4Sf2Ab59ZmgCw" target="_blank">Paper & Forest Products</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:513020&ei=x9KDWKiBF4Sf2Ab59ZmgCw" target="_blank">Containers & Packaging</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>International Paper Co, Ball Corporation, WestRock Co</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div> <!-- end of basic materials -->
+                                <div id="industrials" class="tab-pane fade in">
+                                    <div class="col-md-12">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sector</th>
+                                                    <th>Sub-Sector 1</th>
+                                                    <th>Sub-Sector 2</th>
+                                                    <th>Notable Companies</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="https://www.google.com/finance?catid=TRBC:52&ei=i8mDWJmGJY3ijAHr6rvACQ" target="_blank">Industrials</a></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5210&ei=2dODWInHH42TjAG06auIBw" target="_blank">Industrial Goods</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:521010&ei=h9aDWMGRD8zMjAGGtbqoBQ" target="_blank">Aerospace & Defense</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:521020&ei=h9aDWMGRD8zMjAGGtbqoBQ" target="_blank">Machinery, Equipment & Components</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Boeing, United Technologies, Caterpillar, Lockheed Martin, Raytheon, Deere</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5220&ei=2dODWInHH42TjAG06auIBw" target="_blank">Industrial & Commercial Services</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:522010&ei=2diDWImFNYe62Aam_4XoCQ" target="_blank">Construction & Engineering</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:522020&ei=2diDWImFNYe62Aam_4XoCQ" target="_blank">Diversified Trading & Distributing</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:522030&ei=2diDWImFNYe62Aam_4XoCQ" target="_blank">Professional & Commercial Services</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>ADP, Ecolab, Waste Management, Paychex, Thomson Reuters, Equifax</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5230&ei=ldqDWOG7Nce22AanmZnwCQ" target="_blank">Industrial Conglomerates</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="" target="_blank"></a></li>
+                                                            <li><a href="" target="_blank"></a></li>
+                                                            <li><a href="" target="_blank"></a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>3M, GE, Honeywell, Illinois Tool Works</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5240&ei=ldqDWOG7Nce22AanmZnwCQ" target="_blank">Transporation</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:524010&ei=E9uDWJndCIe62Aam_4XoCQ" target="_blank">Air Freight & Courier Services</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:524020&ei=E9uDWJndCIe62Aam_4XoCQ" target="_blank">Airline Services</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:524030&ei=E9uDWJndCIe62Aam_4XoCQ" target="_blank">Marine Services</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:524040&ei=E9uDWJndCIe62Aam_4XoCQ" target="_blank">Transportation, Ground</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:524050&ei=E9uDWJndCIe62Aam_4XoCQ" target="_blank">Freight & Logistics Services</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:524060&ei=E9uDWJndCIe62Aam_4XoCQ" target="_blank">Passenger Transportation Services</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:524070&ei=E9uDWJndCIe62Aam_4XoCQ" target="_blank">Transport Infrastructure</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>UPS, FedEx, Union Pacific, CSX, Delta Airlines, United Continental, CH Robinson</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>  <!-- end of industrials -->
+                                </div>
+                                <div id="goods" class="tab-pane fade in">
+                                    <div class="col-md-12">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sector</th>
+                                                    <th>Sub-Sector 1</th>
+                                                    <th>Sub-Sector 2</th>
+                                                    <th>Notable Companies</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="https://www.google.com/finance?catid=TRBC:53&ei=i8mDWJmGJY3ijAHr6rvACQ" target="_blank">Cyclical Consumer Goods & Services</a></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5310&ei=8t2DWKGPL5SgjAHjpYzACg" target="_blank">Automobiles & Auto Parts</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:53101010&ei=gd6DWLmCB86S2AbvrKXgDw" target="_blank">Auto & Truck Manufacturers</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:53101020&ei=gd6DWLmCB86S2AbvrKXgDw" target="_blank">Auto Truck & Motorcycle Parts</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:53101030&ei=gd6DWLmCB86S2AbvrKXgDw" target="_blank">Tires & Rubber Products</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Toyota, Ford, GM, Tesla</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5320&ei=8t2DWKGPL5SgjAHjpYzACg" target="_blank">Cyclical Consumer Products</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:532020&ei=5t-DWKL7C8XEjAGesYbABw" target="_blank">Textiles & Apparel</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:532030&ei=5t-DWKL7C8XEjAGesYbABw" target="_blank">Homebuilding & Construction Supplies</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:532040&ei=5t-DWKL7C8XEjAGesYbABw" target="_blank">Household Goods</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:532050&ei=5t-DWKL7C8XEjAGesYbABw" target="_blank">Leisure Products</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Nike, Activision BLizzard, Cummins, EA, VF Corp, Whirlpool, UA, Hasbro</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5330&ei=8t2DWKGPL5SgjAHjpYzACg" target="_blank">Cyclical Consumer Services</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:533010&ei=M-CDWNHlDc6S2AbvrKXgDw" target="_blank">Hotels & Entertainment Services</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:533020&ei=M-CDWNHlDc6S2AbvrKXgDw" target="_blank">Media & Publishing</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Comcast, Disney, Starbucks, Las Vegas Sands, Marriott, Yum Brands, Hilton</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5340&ei=8t2DWKGPL5SgjAHjpYzACg" target="_blank">Retailers</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:534020&ei=n-GDWKm2L8XEjAGesYbABw" target="_blank">Diversified Retail</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:534030&ei=n-GDWKm2L8XEjAGesYbABw" target="_blank">Other Specialty Retailers</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Amazon, Home Depot, Costco, Lowes, AutoZone, Ulta Salon, Best Buy, Wal-Mart</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div> <!-- end of cyclical consumer goods & services -->
+                                <div id="nongoods" class="tab-pane fade in">
+                                    <div class="col-md-12">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sector</th>
+                                                    <th>Sub-Sector 1</th>
+                                                    <th>Sub-Sector 2</th>
+                                                    <th>Notable Companies</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="https://www.google.com/finance?catid=TRBC:54&ei=i8mDWJmGJY3ijAHr6rvACQ" target="_blank">Non-Cyclical Consumer Goods & Services</a></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5410&ei=_-KDWODaAZCx2Aae8KvwBQ" target="_blank">Food & Beverages</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:541010&ei=buODWMnWBZXg2Aazh654" target="_blank">Beverages</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:541020&ei=buODWMnWBZXg2Aazh654" target="_blank">Food & Tobacco</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Coca-Cola, Anheuser Busch, Pepsi, Altria, Philip Morris Kraft Heinz</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5420&ei=_-KDWODaAZCx2Aae8KvwBQ" target="_blank">Personal & Household Products & Services</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:54201010&ei=ZOSDWOnfNsfDjAG8-6-QAQ" target="_blank">Household Products</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:54201020&ei=ZOSDWOnfNsfDjAG8-6-QAQ" target="_blank">Personal Products</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:54201030&ei=ZOSDWOnfNsfDjAG8-6-QAQ" target="_blank">Personal Services</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>P&G, Unilever, Kimberly Clark, Clorox, Estee Lauder, Graham Holdings</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5430&ei=_-KDWODaAZCx2Aae8KvwBQ" target="_blank">Food & Drug Retailing</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:54301010&ei=EeWDWIDVN4ezjAGq06y4BQ" target="_blank">Drug Retailers</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:54301020&ei=EeWDWIDVN4ezjAGq06y4BQ" target="_blank">Food Distribution</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Walgrees, CVS, SYSCO, McKesson, Whole Foods</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div> <!-- end of non cyclical consumer goods -->
+                                <div id="financials" class="tab-pane fade in">
+                                    <div class="col-md-12">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sector</th>
+                                                    <th>Sub-Sector 1</th>
+                                                    <th>Sub-Sector 2</th>
+                                                    <th>Notable Companies</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="https://www.google.com/finance?catid=TRBC:55&ei=i8mDWJmGJY3ijAHr6rvACQ" target="_blank">Financials</a></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5510&ei=jOWDWKC_H9LE2Abz7Z6oAw" target="_blank">Banking & Investment Services</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:551010&ei=wOuDWKCwJMzMjAGGtbqoBQ" target="_blank">Banking Services</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:551020&ei=wOuDWKCwJMzMjAGGtbqoBQ" target="_blank">Investment Banking & Investment Services</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:551030&ei=wOuDWKCwJMzMjAGGtbqoBQ" target="_blank">Diversified Financial Services</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>JP Morgan Chase, Wells Fargo, Bank of America, Goldman Sachs, Citigroup, Blackrock</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5530&ei=jOWDWKC_H9LE2Abz7Z6oAw" target="_blank">Insurance</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:55301010&ei=4OyDWOnZOIPAjAH8wpvABg" target="_blank">Multiline Insurance & Brokers</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:55301020&ei=4OyDWOnZOIPAjAH8wpvABg" target="_blank">Property & Casualty Insurance</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:55301030&ei=4OyDWOnZOIPAjAH8wpvABg" target="_blank">Life & Health Insurance</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:55301050&ei=4OyDWOnZOIPAjAH8wpvABg" target="_blank">Reinsurance</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:55301060&ei=4OyDWOnZOIPAjAH8wpvABg" target="_blank">Insurance Brokers</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Berkshire Hathaway, AIG, Chubb, Metlife, Travelers, Aflac, Allstate</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5540&ei=jOWDWKC_H9LE2Abz7Z6oAw" target="_blank">Real Estate</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:554020&ei=7PCDWNmsLcWtjAHSma7wBw" target="_blank">Real Estate Operations</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:554030&ei=7PCDWNmsLcWtjAHSma7wBw" target="_blank">Residential & Commercial REITs</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Simon Property Group, American Tower, Public Storage, AvalonBay Communities</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC%3A555010&ei=U_KDWLHkA5Cx2Aae8KvwBQ" target="_blank">Collective Investments</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:55501010&ei=ffKDWMCmCIPAjAH8wpvABg" target="_blank">Investment Trusts</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:55501020&ei=ffKDWMCmCIPAjAH8wpvABg" target="_blank">Mutual Fund</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:55501030&ei=ffKDWMCmCIPAjAH8wpvABg" target="_blank">Closed End Fund</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:55501040&ei=ffKDWMCmCIPAjAH8wpvABg" target="_blank">Exchange Traded Fund</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:55501050&ei=ffKDWMCmCIPAjAH8wpvABg" target="_blank">Investment Trust</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:55501060&ei=ffKDWMCmCIPAjAH8wpvABg" target="_blank">Pension Fund</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:55501070&ei=ffKDWMCmCIPAjAH8wpvABg" target="_blank">Insurance Fund</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>iShares, SPDR, Vanguard</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC%3A55601010&sort=MARKET_CAP&ei=X_ODWOHfKdDU2AaEsaSQAg" target="_blank">Holding Companies</a></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div> <!-- end of financials -->
+                                <div id="health" class="tab-pane fade in">
+                                    <div class="col-md-12">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sector</th>
+                                                    <th>Sub-Sector 1</th>
+                                                    <th>Sub-Sector 2</th>
+                                                    <th>Notable Companies</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="https://www.google.com/finance?catid=TRBC:56&ei=i8mDWJmGJY3ijAHr6rvACQ" target="_blank">Healthcare</a></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5610&ei=OPSDWInKHo7kjAHjhLKgCQ" target="_blank">Healthcare Services</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:561010&ei=OPaDWNLfD8OXjAGNwJQo" target="_blank">Healthcare Equipment & Supplies</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:561020&ei=OPaDWNLfD8OXjAGNwJQo" target="_blank">Healthcare Providers & Services</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>UnitedHealth Group, Medtronic, Thermo Fisher, Danaher, Aetna, Humana</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5620&ei=OPSDWInKHo7kjAHjhLKgCQ" target="_blank">Pharmaceuticals & Medical Research</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:562010&ei=zPaDWJjaCce22AanmZnwCQ" target="_blank">Pharmaceuticals</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:562020&ei=zPaDWJjaCce22AanmZnwCQ" target="_blank">Biotechnology & Medical Research</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Johnson & Johnson, Pfizer, Merck, AbbVie, Amgen, Eli Lilly</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div> <!-- end of healtcare -->
+                                <div id="technology" class="tab-pane fade in">
+                                    <div class="col-md-12">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sector</th>
+                                                    <th>Sub-Sector 1</th>
+                                                    <th>Sub-Sector 2</th>
+                                                    <th>Notable Companies</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="https://www.google.com/finance?catid=TRBC:57&ei=i8mDWJmGJY3ijAHr6rvACQ" target="_blank">Technology</a></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5710&ei=kfeDWImbBIaa2AbhtY_gAQ" target="_blank">Technology Equipment</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:571010&ei=6veDWNDbOpb2jAGKtJ-gBg" target="_blank">Semiconductors & Semiconductor Equipment</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:571020&ei=6veDWNDbOpb2jAGKtJ-gBg" target="_blank">Communications & Networking</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:571030&ei=6veDWNDbOpb2jAGKtJ-gBg" target="_blank">Office Equipment</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:571040&ei=6veDWNDbOpb2jAGKtJ-gBg" target="_blank">Electronic Equipment & Parts</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:571050&ei=6veDWNDbOpb2jAGKtJ-gBg" target="_blank">Computers, Phones & Household Electronics</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:571060&ei=6veDWNDbOpb2jAGKtJ-gBg" target="_blank">Computers, Phones & Household Electronics</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Apple, Intel, Cisco, Qualcom, Broadcom, Nvidia, HP</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:5720&ei=kfeDWImbBIaa2AbhtY_gAQ" target="_blank">Software & IT Services</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:57201010&ei=PQGEWICRJJCx2Aae8KvwBQ" target="_blank">IT Services & Consulting</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:57201020&ei=PQGEWICRJJCx2Aae8KvwBQ" target="_blank">Software</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:57201030&ei=PQGEWICRJJCx2Aae8KvwBQ" target="_blank">Internet Services</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Google, Microsoft, Facebook, Oracle, Visa, Alibaba, Salesforce, Netflix</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div> <!-- end of technology -->
+                                <div id="telecom" class="tab-pane fade in">
+                                    <div class="col-md-12">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sector</th>
+                                                    <th>Sub-Sector 1</th>
+                                                    <th>Sub-Sector 2</th>
+                                                    <th>Notable Companies</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC%3A581010&ei=dAGEWNi-J42TjAG06auIBw" target="_blank">Telecommunications</a></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:58101010&ei=dgGEWMixO9LE2Abz7Z6oAw" target="_blank">Integrated Telecommunications Services</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:5810101010&ei=5QGEWKHmEpb2jAGKtJ-gBg" target="_blank">Integrated Telecommunications Services - NEC</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:5810101011&ei=5QGEWKHmEpb2jAGKtJ-gBg" target="_blank">Wired Telecommunications Carriers</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:5810101012&ei=5QGEWKHmEpb2jAGKtJ-gBg" target="_blank">Telecommunications Resellers</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:5810101013&ei=5QGEWKHmEpb2jAGKtJ-gBg" target="_blank">Internet Service Providers</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:5810101014&ei=5QGEWKHmEpb2jAGKtJ-gBg" target="_blank">Telecommunications Network Infrastructure</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:5810101015&ei=5QGEWKHmEpb2jAGKtJ-gBg" target="_blank">VOIP Services</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Verizon, Level 3 Com, TELUS, Centurylink</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC%3A58101020&ei=dgGEWMixO9LE2Abz7Z6oAw" target="_blank">Wireless Telecommunications Services</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:5810102010&ei=0wKEWMmXGoSf2Ab59ZmgCw" target="_blank">Wireless Telecommunications Services - NEC</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:5810102012&ei=0wKEWMmXGoSf2Ab59ZmgCw" target="_blank">Satellite Service Operators</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:5810102013&ei=0wKEWMmXGoSf2Ab59ZmgCw" target="_blank">Wi-Fi & Wi-Max Providers</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:5810102014&ei=0wKEWMmXGoSf2Ab59ZmgCw" target="_blank">Wireless Telecom</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>AT&T, Sprint, T-Mobile, Rogers Communications</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div> <!-- end of telecom -->
+                                <div id="utilities" class="tab-pane fade in">
+                                    <div class="col-md-12">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sector</th>
+                                                    <th>Sub-Sector 1</th>
+                                                    <th>Sub-Sector 2</th>
+                                                    <th>Notable Companies</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC%3A5910&ei=2AOEWJmPIpCx2Aae8KvwBQ" target="_blank">Utilities</a></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:591010&ei=2wOEWIisKIaa2AbhtY_gAQ" target="_blank">Electrical Utilities & IPPs</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:59101010&ei=AASEWKGwJMXEjAGesYbABw" target="_blank">Electric Utilities</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:59101020&ei=AASEWKGwJMXEjAGesYbABw" target="_blank">Independent Power Producers</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>Duke Energy, Dominion Resources, PG&E, Exelon, Consolidated Edison</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC%3A59102010&ei=GAWEWOjIFJXg2Aazh654" target="_blank">Natural Gas Utilities</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:5910201010&ei=NgWEWPnAB42TjAG06auIBw" target="_blank">Natural Gas Utilities - NEC</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:5910201011&ei=NgWEWPnAB42TjAG06auIBw" target="_blank">Natural Gas Distribution</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>ONEOK, Southern Company Gas, Regency Energy Partners</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC:591030&ei=2wOEWIisKIaa2AbhtY_gAQ" target="_blank">Water Utilities</a></td>
+                                                    <td>
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:5910301010&ei=zgWEWKGQBYf7jAG74ar4Cw" target="_blank">Water Utilities - NEC</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:5910301011&ei=zgWEWKGQBYf7jAG74ar4Cw" target="_blank">Water Supply & Irrigation Systems</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:5910301012&ei=zgWEWKGQBYf7jAG74ar4Cw" target="_blank">Sewage Treatment Facilities</a></li>
+                                                            <li><a href="https://www.google.com/finance?catid=us-TRBC:5910301013&ei=zgWEWKGQBYf7jAG74ar4Cw" target="_blank">Steam & Air-Conditioning Supply</a></li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>American Water Works, Aqua America, California Water Service</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><a href="https://www.google.com/finance?catid=us-TRBC%3A59104010&ei=RAaEWJH3HMWtjAHSma7wBw" target="_blank">Multiline Utilities</a></td>
+                                                    <td></td>
+                                                    <td>National Grid plc, Sempra Energy, PPL Corp, Ameren Corp</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div> <!-- end of utilities -->
+                              </div>
+                            </div>
+                        </div>
+                    </div>  <!-- end of market sector panel -->
+
+                  <div class="col-lg-8">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><strong><i class="fa fa-line-chart"></i> Swing Trade Setups</strong></h3>
+                            </div>
+                            <div class="panel-body">
+                                <div id="tools" class="row">
+                                    <div class="col-md-12">
+                                      <h4 class="no-marg-top">Setups</h4>
+                                      <ul>
+                                        <li>
+                                          <a href="#" data-toggle="modal" data-target="#breakout">Breakout Setups  </a>
+                                          <a href="http://finviz.com/screener.ashx?v=141&f=geo_usa,ind_stocksonly,sh_avgvol_o100,sh_price_o2,ta_changeopen_u,ta_rsi_nos50,ta_sma20_pa,ta_sma50_pa&o=-perf1w" target="_blank"><i class="fa fa-link"></i></a>
+                                          <i><img src="imgs/icons/bull.png" class="sm-icon"></i>
+                                          <span> - IWM, MDY & SPY or QQQ > 50MA</span>
+                                        </li>
+                                        <li>
+                                          <a href="#" data-toggle="modal" data-target="#pullback">Pullback Setups  </a>
+                                          <a href="http://finviz.com/screener.ashx?v=141&f=geo_usa,ind_stocksonly,sh_avgvol_o100,sh_price_o2,ta_sma20_pa,ta_sma200_pa,ta_sma50_pa&o=-perf26w" target="_blank"><i class="fa fa-link"></i></a>
+                                          <i><img src="imgs/icons/bull.png" class="sm-icon"></i>
+                                          <span> - Market (all3) > 50MA - HOT SECTOR - Consolidation - Up 20% Month, 30% Quarter, 50% Six Months</span>
+                                        </li>
+                                        <li>
+                                          <a href="#" data-toggle="modal" data-target="#ipo">IPO Setups  </a>
+                                          <a href="http://finviz.com/screener.ashx?v=111&f=cap_midunder,fa_estltgrowth_pos,fa_salesqoq_pos,geo_usa,ind_stocksonly,ipodate_prevyear,sh_avgvol_o200,sh_price_o5&ft=2" target="_blank"><i class="fa fa-link"></i></a>
+                                          <i><img src="imgs/icons/bull.png" class="sm-icon"></i>
+                                          <span> - Market (all3) > 50MA - Low share float - Enter after correction, consolidation, hot industry</span>
+                                        </li>
+                                        <li>
+                                          <a href="#" data-toggle="modal" data-target="#industry">Industry Momentum Setups  </a>
+                                          <a href="http://finviz.com/groups.ashx" target="_blank"><i class="fa fa-link"></i></a>
+                                          <i><img src="imgs/icons/bull.png" class="sm-icon"></i> <i><img src="imgs/icons/bear.png" class="sm-icon"></i>
+                                          <span> - Any Market - Leading Industry -> Find top stocks -> Enter breakout/pullback</span>
+                                        </li>
+                                        <li>
+                                          <a href="#" data-toggle="modal" data-target="#earnings">Earnings Gap Setups  </a>
+                                          <a href="http://finviz.com/screener.ashx?v=111&f=geo_usa,ind_stocksonly,sh_avgvol_o100,sh_price_o5,ta_change_u,ta_changeopen_u,ta_gap_u3,ta_sma50_pa&ft=3" target="_blank"><i class="fa fa-link"></i></a>
+                                          <i><img src="imgs/icons/bull.png" class="sm-icon"></i>
+                                          <span> - Right after earnings release look for base on VWAP and take position</span>
+                                        </li>
+                                        <li>
+                                          <a href="#" data-toggle="modal" data-target="#squeeze">Short Squeeze Setups  </a>
+                                          <a href="http://finviz.com/screener.ashx?v=111&f=cap_midunder,geo_usa,ind_stocksonly,sh_price_o5,sh_short_o20,ta_highlow52w_b0to10h,ta_sma200_pa,ta_sma50_pa" target="_blank" title="uptrend"><i class="fa fa-link"></i></a>
+                                          <a href="http://finviz.com/screener.ashx?v=111&f=cap_midunder,geo_usa,ind_stocksonly,sh_price_o5,sh_short_o20,ta_highlow52w_a0to10h,ta_sma200_pb,ta_sma50_pb&ft=3" target="_blank" title="correction"><i class="fa fa-link"></i></a>
+                                          <i><img src="imgs/icons/bull.png" class="sm-icon"></i>
+                                          <span> - Near 52wk highs with catalyst or Near 52wk lows on a correction - Markets up</span>
+                                        </li>
+                                        <li>
+                                          <a href="#" data-toggle="modal" data-target="#volume">Huge Volume Setups  </a>
+                                          <a href="http://finviz.com/screener.ashx?v=111&f=cap_midunder,geo_usa,ind_stocksonly,sh_avgvol_o100,sh_price_1to20,sh_relvol_o3,ta_change_u&o=-change" target="_blank"><i class="fa fa-link"></i></a>
+                                          <i><img src="imgs/icons/bull.png" class="sm-icon"></i> <i><img src="imgs/icons/bear.png" class="sm-icon"></i>
+                                          <span> - Russel uptrend and IWN > 10, 50, & 200 MA. 10x volume can last few weeks or consolidate</span>
+                                        </li>
+                                        <li>
+                                          <a href="#" data-toggle="modal" data-target="#bearish">Bearish Setups  </a>
+                                          <a href="http://finviz.com/screener.ashx?v=111&f=geo_usa,ind_stocksonly,sh_avgvol_o200,sh_price_o15,ta_change_d,ta_sma20_pb,ta_sma200_pb,ta_sma50_pb" target="_blank"><i class="fa fa-link"></i></a>
+                                          <i><img src="imgs/icons/bull.png" class="sm-icon"></i> <i><img src="imgs/icons/bear.png" class="sm-icon"></i>
+                                          <span> - 2/3 IWN, MDY, SPY or QQQ < 10 & 50SMA. Best when market is in correction mode 8-10%</span>
+                                        </li>
+                                        <li>
+                                          <a href="#" data-toggle="modal" data-target="#strength">Relative Strength Setups  </a>
+                                          <a href="http://finviz.com/screener.ashx?v=141&f=sh_avgvol_o100,sh_price_o5,ta_highlow50d_nh,ta_highlow52w_b0to10h,ta_sma200_pa,ta_sma50_pa&ft=3&o=-perfytd" target="_blank"><i class="fa fa-link"></i></a>
+                                          <i><img src="imgs/icons/bull.png" class="sm-icon"></i> <i><img src="imgs/icons/bear.png" class="sm-icon"></i>
+                                          <span> - Stocks with high momentum best performers 3-6mths. Correction making new highs.</span>
+                                        </li>
+                                        <li>
+                                          <a href="#" data-toggle="modal" data-target="#mean">Mean-Reversion Setups  </a>
+                                          <a href="http://finviz.com/screener.ashx?v=111&f=geo_usa,ind_stocksonly,sh_avgvol_o100,sh_price_o2,ta_change_u,ta_highlow52w_a0to10h,ta_sma20_pb,ta_sma50_pb" target="_blank"><i class="fa fa-link"></i></a>
+                                          <i><img src="imgs/icons/bear.png" class="sm-icon"></i>
+                                          <span> - Best in range bound markets (1/3 index are up rest < 50SMA) - Long declining 50SMA end at top.</span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--  end of swing trade setups -->
+
+                    <div class="col-lg-4">
+                        <div class="panel panel-default cell-min-height">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><strong><i class="fa fa-black-tie"></i> Funds</strong></h3>
+                            </div>
+                            <div class="panel-body">
+                              <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#activist"><strong>Activist</strong></a></li>
+                                <li><a data-toggle="tab" href="#value"><strong>Value</strong></a></li>
+                                <li><a data-toggle="tab" href="#traders"><strong>Traders</strong></a></li>
+                                <li><a data-toggle="tab" href="#speical"><strong>Special</strong></a></li>
+                              </ul>
+
+                              <div class="tab-content">
+                                <div id="activist" class="tab-pane fade in active">
+                                    <div class="col-md-6">
+                                      <ul>
+                                        <li><a href="https://www.holdingschannel.com/13f/marcato-capital-management-lp-top-holdings/" target="_blank">Marcato Capital</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/elliott-management-corp-top-holdings/" target="_blank">Elliott Management</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/jana-partners-llc-top-holdings/" target="_blank">Jana Partners</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/third-point-llc-top-holdings/" target="_blank">Third Point</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/greenlight-capital-inc-top-holdings/" target="_blank">Greenlight Capital</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/corvex-management-lp-top-holdings/" target="_blank">Corvex Management</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/starboard-value-lp-top-holdings/" target="_blank">Starboard Value</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/trian-fund-management-l-p-top-holdings/" target="_blank">Trian Partners</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/pershing-square-capital-management-l-p-top-holdings/" target="_blank"> Pershing Square</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/icahn-carl-c-top-holdings/" target="_blank">Icahn Carl</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <ul>
+                                        <li><a href="https://www.holdingschannel.com/13f/valueact-holdings-l-p-top-holdings/" target="_blank">ValueAct</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/sachem-head-capital-management-lp-top-holdings/" target="_blank">Sachem Head</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/appaloosa-lp-top-holdings/" target="_blank">Appaloosa</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/omega-advisors-inc-top-holdings/" target="_blank">Omega Advisors</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/canyon-capital-advisors-llc-top-holdings/" target="_blank"> Canyon Capital</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/bridgewater-associates-lp-top-holdings/" target="_blank">Bridgewater</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/owl-creek-asset-management-l-p-top-holdings/" target="_blank">Owl Creek Mgmt</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/glenview-capital-management-llc-top-holdings/" target="_blank">Glenview Capital</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/gotham-asset-management-llc-top-holdings/" target="_blank">Gotham Funds</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/blue-harbour-group-l-p-top-holdings/" target="_blank">Blue Harbour</a></li>
+                                      </ul>
+                                    </div>
+                                </div> <!-- end of activist  -->
+                                <div id="value" class="tab-pane fade in">
+                                    <div class="col-md-6">
+                                      <ul>
+                                        <li><a href="https://www.holdingschannel.com/13f/berkshire-hathaway-inc-top-holdings/" target="_blank">Berkshire Hathaway</a></li>
+                                        <li><a href="http://www.dataroma.com/m/m_activity.php?m=PI&typ=a" target="_blank">Pabrai Funds</a></li>
+                                        <li><a href="https://www.holdingschannel.com/13f/oaktree-capital-management-lp-top-holdings/" target="_blank">Oaktree Capital</a></li>
+                                        <li><a href="http://portfolios.morningstar.com/fund/holdings?t=JANIX&region=usa&culture=fr-CA" target="_blank">Janus Triton</a></li>
+                                        <li><a href="http://portfolios.morningstar.com/fund/holdings?t=DGAGX" target="_blank">Dreyfus Appreciation</a></li>
+                                        <li><a href="http://portfolios.morningstar.com/fund/holdings?t=ACMVX" target="_blank">American Century</a></li>
+                                        <li><a href="http://portfolios.morningstar.com/fund/holdings?t=NSEIX" target="_blank">Nicholas Equity Inc</a></li>
+                                        <li><a href="http://portfolios.morningstar.com/fund/holdings?t=HQIAX" target="_blank">Hartford Equity Inc</a></li>
+                                        <li><a href="http://www.nasdaq.com/quotes/institutional-portfolio/markel-corp-68045" target="_blank">Markel Corp</a></li>
+                                        <li><a href="http://www.dataroma.com/m/holdings.php?m=LLPFX" target="_blank">Longleaf</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <ul>
+                                      </ul>
+                                    </div>
+                                </div> <!-- end of value -->
+                                <div id="traders" class="tab-pane fade in">
+                                    <div class="col-md-6">
+                                      <ul>
+                                      </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <ul>
+                                      </ul>
+                                    </div>
+                                </div> <!-- end of traders  -->
+                                <div id="speical" class="tab-pane fade in">
+                                    <div class="col-md-6">
+                                      <ul>
+                                        <li><a href="https://www.holdingschannel.com/13f/baker-bros-advisors-lp-top-holdings/" target="_blank">Baker Bros</a></li>
+                                      </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <ul>
+                                      </ul>
+                                    </div>
+                                </div> <!-- end of specialized funds -->
+                              </div>
+
+                            </div>
+                        </div>
+                    </div>  <!-- end of funds -->
+
+                   <!--  candle stick  -->
+                    <div class="col-lg-12">
+                        <div class="panel panel-default cell-right">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><strong><i class="fa fa-trello"></i> Candle Stick Patterns</strong></h3>
+                            </div>
+                            <div class="panel-body">
+                              <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#single"><strong>Single</strong></a></li>
+                                <li><a data-toggle="tab" href="#bull"><strong>Bull</strong></a></li>
+                                <li><a data-toggle="tab" href="#bear"><strong>Bear</strong></a></li>
+                                <li><a data-toggle="tab" href="#continue"><strong>Continuation</strong></a></li>
+                              </ul>
+
+                              <div class="tab-content">
+                                <div id="single" class="tab-pane fade in active">
+                                    <div class="col-md-12">
+                                        <ul class="list-unstyled list-inline">
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#doji">
+                                                  <img src="imgs/candle/single/doji.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Doji</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#hammer">
+                                                  <img src="imgs/candle/single/hammer.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Hammer</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#high-wave">
+                                                  <img src="imgs/candle/single/high-wave.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">High Wave</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#shoot-star">
+                                                  <img src="imgs/candle/single/shooting-star.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Shooting Star</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#spinning">
+                                                  <img src="imgs/candle/single/spinning.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Spinning Top</li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                    </div>
+                                </div> <!-- end of single candlestick  -->
+                                <div id="bull" class="tab-pane fade in">
+                                    <div class="col-md-12">
+                                        <ul class="list-unstyled list-inline">
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#b-engulf">
+                                                  <img src="imgs/candle/bull/b-engulf.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Bull Engulfing</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#b-harami">
+                                                  <img src="imgs/candle/bull/b-harami.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Bull Harami</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#morn-star">
+                                                  <img src="imgs/candle/bull/morn-star.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Morning Star</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#piercing">
+                                                  <img src="imgs/candle/bull/piercing.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Piercing</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#soldier">
+                                                  <img src="imgs/candle/bull/soldier.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">3 Green Soldier</li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                    </div>
+                                </div> <!-- end of bull candle -->
+                                <div id="bear" class="tab-pane fade in">
+                                    <div class="col-md-12">
+                                        <ul class="list-unstyled list-inline">
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#br-engulf">
+                                                  <img src="imgs/candle/bear/b-engulf.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Bear Engulfing</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#br-harami">
+                                                  <img src="imgs/candle/bear/b-harami.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Bear Harami</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#even-star">
+                                                  <img src="imgs/candle/bear/evening-star.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Evening Star</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#dark-cloud">
+                                                  <img src="imgs/candle/bear/dark-cloud.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Dark Cloud</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#crows">
+                                                  <img src="imgs/candle/bear/crows.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">3 Crows</li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                    </div>
+                                </div> <!-- end of bear candle -->
+                                <div id="continue" class="tab-pane fade in">
+                                    <div class="col-sm-12">
+                                        <ul class="list-unstyled list-inline">
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#">
+                                                  <img src="imgs/candle/continue/falling-3.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Falling 3</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#">
+                                                  <img src="imgs/candle/continue/rise-3.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Rising 3</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#">
+                                                  <img src="imgs/candle/continue/falling-w.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Falling Window</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#">
+                                                  <img src="imgs/candle/continue/rising-w.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Rising Window</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#">
+                                                  <img src="imgs/candle/continue/round-bot.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Rounding Bottom</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#">
+                                                  <img src="imgs/candle/continue/round-top.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Rounding Top</li>
+                                            </ul>
+                                          </li>
+                                          <li>
+                                            <ul class="list-unstyled">
+                                              <li>
+                                                <a href="#" data-toggle="modal" data-target="#">
+                                                  <img src="imgs/candle/continue/gaps.png" class="img-thumbnail img-candle">
+                                                </a>
+                                              </li>
+                                              <li class="text-center">Gaps</li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                    </div>
+                                </div> <!-- end of continuation -->
+                              </div>
+
+                            </div>
+                        </div>
+                    </div> <!--  end of candle stick -->
+
+
+            </div> <!-- end of first row -->
+
+        </article>
+      </div>
+    </div>
+
+  </body>
+
+<!--   Search modal -->
+<!-- Modal -->
+<div id="search" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Stock Chart Search</h4>
+      </div>
+      <div class="modal-body text-center">
+        <input id="ticker" type="text" class="text-center" placeholder="Ticker Symbol" maxlength="5">
+      </div>
+      <div class="modal-footer">
+        <button  id="stock-search" type="button" class="btn btn-default">Search</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- End of search modal -->
+
+<!-- Swing trade setup modals -->
+<div id="breakout" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/swing/breakout.JPG" width="auto">
+    </div>
+  </div>
+</div>
+
+<div id="pullback" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/swing/pullback.JPG" width="auto">
+    </div>
+  </div>
+</div>
+
+<div id="ipo" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/swing/ipo.JPG" width="auto">
+    </div>
+  </div>
+</div>
+
+<div id="industry" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/swing/industry.JPG" width="auto">
+    </div>
+  </div>
+</div>
+
+<div id="earnings" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/swing/earnings.JPG" width="auto">
+    </div>
+  </div>
+</div>
+
+<div id="squeeze" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/swing/squeeze.JPG" width="auto">
+    </div>
+  </div>
+</div>
+
+<div id="volume" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/swing/volume.JPG" width="auto">
+    </div>
+  </div>
+</div>
+
+<div id="bearish" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/swing/bearish.JPG" width="auto">
+    </div>
+  </div>
+</div>
+
+<div id="strength" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/swing/strength.JPG" width="auto">
+    </div>
+  </div>
+</div>
+
+<div id="mean" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/swing/mean.JPG" width="auto">
+    </div>
+  </div>
+</div>
+
+<!-- End of swing trading modals -->
+
+<!-- candle stick modals -->
+
+<!-- single -->
+<div id="doji" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/candle/single/doji-info.png" class="img-can-info">
+    </div>
+  </div>
+</div>
+
+<div id="hammer" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/candle/single/hammer-info.png" class="img-can-info">
+    </div>
+  </div>
+</div>
+
+<div id="high-wave" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/candle/single/high-info.png" class="img-can-info">
+    </div>
+  </div>
+</div>
+
+<div id="shoot-star" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/candle/single/shooting-info.png" class="img-can-info">
+    </div>
+  </div>
+</div>
+
+<div id="spinning" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/candle/single/spinning-info.png" class="img-can-info">
+    </div>
+  </div>
+</div>
+<!-- end of single -->
+
+<!-- bull pattern -->
+<div id="b-engulf" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/candle/bull/b-engulf-info.png" class="img-can-info">
+    </div>
+  </div>
+</div>
+
+<div id="b-harami" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/candle/bull/b-harami-info.png" class="img-can-info">
+    </div>
+  </div>
+</div>
+
+<div id="morn-star" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/candle/bull/morn-star-info.png" class="img-can-info">
+    </div>
+  </div>
+</div>
+
+<div id="piercing" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/candle/bull/pierce-info.png" class="img-can-info">
+    </div>
+  </div>
+</div>
+
+<div id="soldier" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/candle/bull/soldier-info.png" class="img-can-info">
+    </div>
+  </div>
+</div>
+<!-- end of bull -->
+
+<!-- bear pattern -->
+<div id="br-engulf" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/candle/bear/b-engulf-info.png" class="img-can-info">
+    </div>
+  </div>
+</div>
+
+<div id="br-harami" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/candle/bear/b-harami-info.png" class="img-can-info">
+    </div>
+  </div>
+</div>
+
+<div id="even-star" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/candle/bear/evening-info.png" class="img-can-info">
+    </div>
+  </div>
+</div>
+
+<div id="dark-cloud" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/candle/bear/dark-cloud-info.png" class="img-can-info">
+    </div>
+  </div>
+</div>
+
+<div id="crows" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <img src="imgs/candle/bear/crows-info.png" class="img-can-info">
+    </div>
+  </div>
+</div>
+<!-- end of bear -->
+
+<!-- end of candle stick modals -->
+
+
+</html>
