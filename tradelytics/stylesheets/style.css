@@ -136,3 +136,26 @@ ul.nav li a strong span:hover {
   border-bottom: 3px solid black;
 	background-color: white;
 }
+
+/* add hover effect over panels */
+.panel-default {
+	border-color: #fff;
+}
+
+.panel-default:hover {
+  border-color: #ddd !important;
+}
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.panel:hover {
+	border: 1px solid transparent;
+	border-radius: 4px;
+	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
