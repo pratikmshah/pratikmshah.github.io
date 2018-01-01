@@ -1,8 +1,11 @@
 $(function(){
   // call nextImage over and over every 3.5 seconds
-  setInterval('nextImage("#prism-slide")', 3500);    // prism
-  setInterval('nextImage("#yeeld-slide")', 3500);    // yeeld
-  setInterval('nextImage("#trade-slide")', 3500);    // tradelytics
+  var slides = ['nextImage("#prism-slide")', 'nextImage("#yeeld-slide")', 'nextImage("#trade-slide")'];
+
+  for (var i = 0; i < slides.length; i++) {
+    setInterval(slides[i], 3500); 
+  }
+
 });
 
 function nextImage(id) {
