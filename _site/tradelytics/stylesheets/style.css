@@ -3,16 +3,6 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
-.clr-w { color: white; }
-.no-pad { padding: 0px; }
-.no-marg { margin: 0px; }
-.no-marg-top { margin-top: 0px; }
-.big-icon { font-size: 24px; }
-.sm-icon {
-	height: 20px;
-	width: auto;
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -21,6 +11,20 @@ a {
 a:hover {
   color: #ff7700;
   text-decoration: none;
+}
+
+ul {
+	padding-left: 25px;
+}
+
+.clr-w { color: white; }
+.no-pad { padding: 0px; }
+.no-marg { margin: 0px; }
+.no-marg-top { margin-top: 0px; }
+.big-icon { font-size: 24px; }
+.sm-icon {
+	height: 20px;
+	width: auto;
 }
 
 .cell-min-height {
@@ -158,4 +162,9 @@ ul.nav li a strong span:hover {
 	border-radius: 4px;
 	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
 	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+/* lighten color for in setups */
+#tools div ul li span {
+	color: #999;
 }
