@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: red;
+  color: #ff7700;
   text-decoration: none;
 }
 
@@ -73,7 +73,10 @@ section#market-index div a {
 
 #main { background-color: #EBEBEB; }
 
-#news, #invest, #trader, #hedge div ul {
+#news,
+#invest,
+#trader,
+#hedge div ul {
 	padding-left: 5px;
 	padding-top: 5px;
 }
@@ -90,4 +93,30 @@ section#market-index div a {
 .img-can-info {
 	height: auto;
 	width: 100%;
+}
+
+/* change all headings to dark black color */
+ul.nav li a strong,
+.big-icon strong,
+.panel-title strong {
+	font-weight: 900;
+	color: black;
+}
+
+/* change hover for navbar icons and brand */
+#logo strong:hover,
+ul.nav li a strong span:hover {
+	color: #777;
+}
+
+/* remove background color and border for tabs */
+.nav-tabs>li>a:hover {
+	border-left-color: white;
+	border-right-color: white;
+	border-top-color: white;
+	background-color: white;
+}
+
+.nav-tabs>li>a:hover strong {
+	color: #777;
 }
