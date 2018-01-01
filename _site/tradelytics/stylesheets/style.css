@@ -1,5 +1,6 @@
 body {
 	background-color: #31A7E6;
+	font-family: 'Roboto', sans-serif;
 }
 
 .clr-w { color: white; }
@@ -23,7 +24,7 @@ a:hover {
 }
 
 .cell-min-height {
-	min-height: 322px;	
+	min-height: 322px;
 }
 
 .cell-left {
