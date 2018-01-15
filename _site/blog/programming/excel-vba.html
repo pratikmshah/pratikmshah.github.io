@@ -140,7 +140,34 @@
 
 <p><br /></p>
 
-<h4 id="first-macro">First Macro<a name="firstmacro"></a></h4>
+<h4 id="creating-a-macro">Creating a Macro<a name="firstmacro"></a></h4>
+<p>To open up the VBA developer IDE(Integrated Development Environment) use the shortcut key <code class="highlighter-rouge">alt</code>+<code class="highlighter-rouge">F11</code>. Alternatively you can go to the <code class="highlighter-rouge">Developer</code> tab and click on <code class="highlighter-rouge">Visual Basic</code>.</p>
+
+<p>To write your code you need to create <code class="highlighter-rouge">modules</code>. Click on the icon <code class="highlighter-rouge">Insert Modules</code>, they look like skittles, then <code class="highlighter-rouge">Module</code>. You can have as many modules as you like.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/add_module.jpg" class="blg-img" alt="Add module" />
+  <figcaption>Adding a module</figcaption>
+</figure>
+
+<p>Your macro code will go in between <code class="highlighter-rouge">Sub MacroName()</code> and <code class="highlighter-rouge">End Sub</code> keywords. To specify a value to a specific cell use the <code class="highlighter-rouge">Range("rowcolumn") = value</code>.  To run the macro click play button (green triangle). You can also specify multiple cell ranges using the <code class="highlighter-rouge">:</code>.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/hello.jpg" class="blg-img" alt="First Macro" />
+  <figcaption>Coding and running macro</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/excel-vba/number.jpg" class="blg-img" alt="Multiple Cells" />
+  <figcaption>Multiple ranges</figcaption>
+</figure>
+
+<p>You can stack multiple commands one right after each other. The compiler will read the code from top down.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/multicommands.jpg" class="blg-img" alt="Multiple Commands" />
+  <figcaption>Multiple commands</figcaption>
+</figure>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
