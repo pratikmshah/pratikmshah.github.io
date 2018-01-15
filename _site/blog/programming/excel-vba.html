@@ -122,6 +122,11 @@
   <li><a href="#rangeprop">Range Properties</a>
     <ul>
       <li><a href="#valueprop">Value</a></li>
+      <li><a href="#textprop">Text</a></li>
+      <li><a href="#rowcol">Row &amp; Column</a></li>
+      <li><a href="#select">Select</a></li>
+      <li><a href="#count">Count</a></li>
+      <li><a href="#address">Address</a></li>
     </ul>
   </li>
 </ol>
@@ -233,7 +238,72 @@
 
 <h3 id="range-properties-">Range Properties <a name="rangeprop"></a></h3>
 <h4 id="value-">Value <a name="valueprop"></a></h4>
-<p>The</p>
+<p>To access properties you use the <code class="highlighter-rouge">.</code> operator and a list of properties available should pop up. The value property gets the value for the range.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/value.jpg" class="blg-img" alt="Value Property" />
+  <figcaption>Value property</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="text-">Text <a name="textprop"></a></h4>
+<p>The text property gets the data as a string. If you don’t specify a property the default is the value property.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/text.jpg" class="blg-img" alt="Text Property" />
+  <figcaption>Text property</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="row-and-column-">Row and Column <a name="rowcol"></a></h4>
+<p>The row and column property will return the row number and column number back in integer of the range.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/row.jpg" class="blg-img" alt="Row Property" />
+  <figcaption>Row property</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/excel-vba/column.jpg" class="blg-img" alt="Column Property" />
+  <figcaption>Column property</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="select-">Select <a name="select"></a></h4>
+<p>The select property sets the cursor location to the referenced name.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/select.jpg" class="blg-img" alt="Select Property" />
+  <figcaption>Select property</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="count-">Count <a name="count"></a></h4>
+<p>The count property counts how many cells are in the referenced range. Note it does not matter if their is data in the cell or not.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/count.jpg" class="blg-img" alt="Count Property" />
+  <figcaption>Count property</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="address-">Address <a name="address"></a></h4>
+<p>The address property of a range returns the location of the row and column as in excel ex: <code class="highlighter-rouge">A5</code>. You can specify if you want absolute paths of the row/column by specifying a 1 or 0; absolute includes the <code class="highlighter-rouge">$</code> sign.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/address.jpg" class="blg-img" alt="Address Property" />
+  <figcaption>Address property</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/excel-vba/address2.jpg" class="blg-img" alt="Address Property No Absolute" />
+  <figcaption>Address property without absolute</figcaption>
+</figure>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
