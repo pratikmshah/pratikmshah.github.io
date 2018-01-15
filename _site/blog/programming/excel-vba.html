@@ -108,18 +108,39 @@
       <li><a href="#devtab">Developer Tab</a></li>
     </ul>
   </li>
+  <li><a href="#range">Range</a>
+    <ul>
+      <li><a href="#rangeobj">Range Object</a></li>
+      <li><a href="#firstmacro">Creating a Macro</a></li>
+    </ul>
+  </li>
 </ol>
 
 <p><br /></p>
 
 <h3 id="developer-">Developer <a name="dev"></a></h3>
 <h4 id="developer-tab-">Developer Tab <a name="devtab"></a></h4>
-<p>To enable the developer tab go to <code class="highlighter-rouge">File</code> –&gt; <code class="highlighter-rouge">Options</code> –&gt; <code class="highlighter-rouge">Customize Ribbon</code> –&gt; check <code class="highlighter-rouge">Developer</code> box.</p>
+<p>To enable the developer tab go to <code class="highlighter-rouge">File</code> –&gt; <code class="highlighter-rouge">Options</code> –&gt; <code class="highlighter-rouge">Customize Ribbon</code> –&gt; check <code class="highlighter-rouge">Developer</code> box –&gt; <code class="highlighter-rouge">OK</code>.</p>
 
 <figure>
   <img src="/img/posts/excel-vba/dev_tab.jpg" class="blg-img" alt="Dev Tab" />
   <figcaption>Enable the developer tab</figcaption>
 </figure>
+
+<p><br /></p>
+
+<h3 id="range-">Range <a name="range"></a></h3>
+<h4 id="range-object-">Range Object <a name="rangeobj"></a></h4>
+<p>The range object is the rows and columns of the element(s). For instance, if I have highlighted the first cell it would be a range of <code class="highlighter-rouge">A1</code>. If I highlighted the first three columns and first three rows it would be a range of <code class="highlighter-rouge">A1:C3</code>. For multiple columns you just take the first element <code class="highlighter-rouge">:</code> then the last element in range.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/rangeobj.jpg" class="blg-img" alt="Sample Range Object" />
+  <figcaption>Range of B2:E6</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="first-macro">First Macro<a name="firstmacro"></a></h4>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
