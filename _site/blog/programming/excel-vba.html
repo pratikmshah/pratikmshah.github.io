@@ -115,6 +115,8 @@
       <li><a href="#debug">Debugging</a></li>
       <li><a href="#save">Saving Macro</a></li>
       <li><a href="#trigger">Executing Macro</a></li>
+      <li><a href="#multirange">Multiple Cells One Range</a></li>
+      <li><a href="#namerange">Named Range</a></li>
     </ul>
   </li>
 </ol>
@@ -153,7 +155,7 @@
   <figcaption>Adding a module</figcaption>
 </figure>
 
-<p>Your macro code will go in between <code class="highlighter-rouge">Sub MacroName()</code> and <code class="highlighter-rouge">End Sub</code> keywords. To specify a value to a specific cell use the <code class="highlighter-rouge">Range("rowcolumn") = value</code>.  To run the macro click play button (green triangle). You can also specify multiple cell ranges using the <code class="highlighter-rouge">:</code>.</p>
+<p>Your macro code will go in between <code class="highlighter-rouge">Sub MacroName()</code> and <code class="highlighter-rouge">End Sub</code> keywords. To specify a value to a specific cell use the <code class="highlighter-rouge">Range("rowcolumn") = value</code>.  To run the macro click play button (green triangle). You can also specify multiple cell ranges using the <code class="highlighter-rouge">:</code>. You can set value to strings using the <code class="highlighter-rouge">""</code> ex: <code class="highlighter-rouge">Range("a1") = "Hello World!"</code></p>
 
 <figure>
   <img src="/img/posts/excel-vba/hello.jpg" class="blg-img" alt="First Macro" />
@@ -198,6 +200,29 @@
 <p>There are more sophisticated ways such as clicking on a button or a specific cell etc..</p>
 
 <p><br /></p>
+
+<h4 id="multiple-cells-one-range-">Multiple Cells One Range <a name="multirange"></a></h4>
+<p>You can set values to multiple cells in one range command ex: <code class="highlighter-rouge">Range("a1:c4, e3") = 15</code>.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/multirange.jpg" class="blg-img" alt="Multiple Cells From One Range Command" />
+  <figcaption>Multiple cell values from one range commmand</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="named-range-">Named Range <a name="namerange"></a></h4>
+<p>Instead of specifying specific rows and columns in a macro you can set the range to reference a named ranged.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/tax_table.jpg" class="blg-img" alt="Named Range" />
+  <figcaption>Set a named range</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/excel-vba/named_range.jpg" class="blg-img" alt="Reference Named Range" />
+  <figcaption>Reference a named range</figcaption>
+</figure>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
