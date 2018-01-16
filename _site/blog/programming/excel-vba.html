@@ -347,7 +347,7 @@
 
 <h3 id="cells-">Cells <a name="cell"></a></h3>
 <h4 id="cells-object-">Cells Object <a name="cellsobj"></a></h4>
-<p>The cells object is similar to the range object but instead of a range you put in the cell coordinates as integers (row, column). This is great for looping through entire rows or columns. You can substitute the column numbers for</p>
+<p>The cells object is similar to the range object but instead of a range you put in the cell coordinates as integers (row, column). This is great for looping through entire rows or columns. You can substitute the column numbers for letters but need to put them in <code class="highlighter-rouge">""</code></p>
 
 <figure>
   <img src="/img/posts/excel-vba/cells.jpg" class="blg-img" alt="Cells Object" />
@@ -355,11 +355,19 @@
 </figure>
 
 <figure>
-  <img src="/img/posts/excel-vba/cells.jpg" class="blg-img" alt="Cells Object" />
-  <figcaption>Cells object</figcaption>
+  <img src="/img/posts/excel-vba/cells2.jpg" class="blg-img" alt="Cells Object" />
+  <figcaption>Cells object with letter column</figcaption>
 </figure>
 
 <p><br /></p>
+
+<h4 id="cell-position-">Cell Position <a name="poscell"></a></h4>
+<p>You can reference the cell’s position by specifying the integer location. It starts with the row A1 = 1, B1 = 2, C1 = 3 etc. However, if you select a range and then use the <code class="highlighter-rouge">.</code> operator and use cell object it will only count within the referenced range.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/poscell.jpg" class="blg-img" alt="Cell Position" />
+  <figcaption>Cell Position</figcaption>
+</figure>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
