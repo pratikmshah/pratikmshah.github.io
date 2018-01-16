@@ -135,6 +135,9 @@
   <li><a href="#cell">Cells</a>
     <ul>
       <li><a href="#cellobj">Cells Object</a></li>
+      <li><a href="#poscell">Cells Position</a></li>
+      <li><a href="#cellall">Select All Cells</a></li>
+      <li><a href="#rangecell">Range with Cells</a></li>
     </ul>
   </li>
 </ol>
@@ -335,8 +338,8 @@
 
 <p><br /></p>
 
-<h4 id="font-bold-underline-italic-">Font Bold, Underline, Italic <a name="font"></a></h4>
-<p>The font property you can change the style of the font but it takes a boolean (true/false) value.</p>
+<h4 id="font-bold-underline-italic-name-size-">Font Bold, Underline, Italic, Name, Size <a name="font"></a></h4>
+<p>The font property you can change the style of the font but it takes a boolean (true/false) value. You can also use <code class="highlighter-rouge">Font.Name = "Font Name"</code> to change the font type. Also change the size by using <code class="highlighter-rouge">Font.Size = 12</code>.</p>
 
 <figure>
   <img src="/img/posts/excel-vba/font.jpg" class="blg-img" alt="Font Style Property" />
@@ -367,6 +370,26 @@
 <figure>
   <img src="/img/posts/excel-vba/poscell.jpg" class="blg-img" alt="Cell Position" />
   <figcaption>Cell Position</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="select-all-cells-">Select All Cells <a name="cellall"></a></h4>
+<p>You can select every cell in the workbook by simply not referencing a specific cell; <code class="highlighter-rouge">Cells</code>.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/cellall.jpg" class="blg-img" alt="Cell Position" />
+  <figcaption>Select all cells</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="range-object-with-cell-">Range Object With Cell <a name="rangecell"></a></h4>
+<p>Sometimes you will want to select from a specific cell to cell without hardcoding the range. You can do this by using <code class="highlighter-rouge">Cell(r,c)</code> as a parameter for the <code class="highlighter-rouge">Range()</code> object.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/rangecell.jpg" class="blg-img" alt="Range object with cell" />
+  <figcaption>Using range object with the cell</figcaption>
 </figure>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
