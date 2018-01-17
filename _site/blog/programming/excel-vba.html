@@ -147,7 +147,8 @@
       <li><a href="#callpro">Calling A Procedure</a></li>
       <li><a href="#pubpriv">Public/Private</a></li>
       <li><a href="#constants">Constants</a></li>
-      <li><a href="#concat">Concating Strings</a></li>
+      <li><a href="#concat">Concatenate Strings</a></li>
+      <li><a href="#valref">Pass By Value/Reference</a></li>
     </ul>
   </li>
 </ol>
@@ -450,8 +451,18 @@
 
 <p><br /></p>
 
-<h4 id="concating-strings-">Concating Strings <a name="concat"></a></h4>
+<h4 id="concatenate-strings-">Concatenate Strings <a name="concat"></a></h4>
 <p>You can combine two or more strings by using the <code class="highlighter-rouge">&amp;</code> symbol. This will also work to combine string variables. <code class="highlighter-rouge">text = "Hello " &amp; "World!"</code></p>
+
+<p><br /></p>
+
+<h4 id="pass-by-value-vs-reference-">Pass by Value vs Reference <a name="valref"></a></h4>
+<p>When passing values into a procedure use the keywords <code class="highlighter-rouge">ByVal</code> &amp; <code class="highlighter-rouge">ByRef</code> to specify how you are passing the variables through. By value means that only the value is being passed and will not change once the procedure is ended. By reference means that any changes made will change the original value.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/refval.jpg" class="blg-img" alt="By reference and by value examples" />
+  <figcaption>ByVal does not change but ByRef does change</figcaption>
+</figure>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
