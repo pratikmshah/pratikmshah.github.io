@@ -172,6 +172,7 @@
       <li><a href="#isnot">Is Not Equal To &amp; Not</a></li>
       <li><a href="#else">Else</a></li>
       <li><a href="#elseif">Else If</a></li>
+      <li><a href="#comptxtnum">Comparative Operators Text &amp; Numbers</a></li>
     </ul>
   </li>
 </ol>
@@ -640,6 +641,16 @@
 <figure>
   <img src="/img/posts/excel-vba/elseif.jpg" class="blg-img" alt="Using else if" />
   <figcaption></figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="comparative-operators-text--numbers-">Comparative Operators Text &amp; Numbers <a name="comptxtnum"></a></h4>
+<p>When comparing numbers, if the cell data is text then the compiler will accept it and convert it to a number; however, to prevent this in the <code class="highlighter-rouge">If</code> statement use method <code class="highlighter-rouge">IsNumeric(cellLocation)</code> ex: <code class="highlighter-rouge">IsNumeric(Range("a1"))</code>. The <code class="highlighter-rouge">And</code> keyword must be used to allow for multiple conditionals where both statements must be true in order for statement to execute.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/comptxtnum.jpg" class="blg-img" alt="Compare numbers only" />
+  <figcaption>If not specificed the compiler will accept text as numbers</figcaption>
 </figure>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
