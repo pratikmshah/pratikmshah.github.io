@@ -159,6 +159,14 @@
       <li><a href="#dbug">Debug Menu</a></li>
     </ul>
   </li>
+  <li><a href="#logic">VBA Logic</a>
+    <ul>
+      <li><a href="#lastrow">Find Last Row</a></li>
+      <li><a href="#lastcolumn">Find Last Column</a></li>
+      <li><a href="#nextrow">Find Next Row</a></li>
+      <li><a href="#macro">Record Macro</a></li>
+    </ul>
+  </li>
 </ol>
 
 <p><br /></p>
@@ -498,6 +506,64 @@
 <p>The <code class="highlighter-rouge">Debug</code> menu is really important as it will help you find and fix errors in your code. <code class="highlighter-rouge">Step Into</code> when run goes into any methods and runs the code line by line. If you wanted to get out of a method <code class="highlighter-rouge">Step Out</code> will get you out of any methods/subs. <code class="highlighter-rouge">Run to Cursor</code> will run the code from beginning to where your cursor is.</p>
 
 <p>In addition is you can also add, edit, remove watches. <code class="highlighter-rouge">Toggle Breakpoint</code> will run the code up to the breakpoint then wait for you to resume the code until the next breakpoint or end. <code class="highlighter-rouge">Set Next Statement</code> will allow you to temporary skip code and jump to the marker (yellow arrow) and start running code from that line.</p>
+
+<p><br /></p>
+
+<h3 id="logic-">Logic <a name="logic"></a></h3>
+<h4 id="last-row-">Last Row <a name="lastrow"></a></h4>
+<p>To find the last row of the data set in your workbook combine these methods and it will return the last row value as an integer ex: <code class="highlighter-rouge">lastRow = Cells(Rows.Count, 1).End(xlup).Row</code>. What this does is it goes through all the rows in column one. Then it goes up until it finds the first cell with a value in it.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/lastrow.jpg" class="blg-img" alt="Find the last row with data" />
+  <figcaption>This method helps find the last row with data</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="last-column-">Last Column <a name="lastcolumn"></a></h4>
+<p>To find the last column of the data set in your workbook cmbine these methods and it will return the last column value as an integer ex: <code class="highlighter-rouge">lastColumn = Cells(1, Columns.Count).End(xlToLeft).Column</code>. What this does is it goes to to the last column then back left to the first cell with a value in it.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/lastcol.jpg" class="blg-img" alt="Find the last column with data" />
+  <figcaption>This method helps find the last column with data</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="next-row-">Next Row <a name="nextrow"></a></h4>
+<p>To get the next row you simply use the formula for the last row and add 1 to it ex: <code class="highlighter-rouge">lastRow = Cells(Rows.Count, 1).End(xlup).Row + 1</code></p>
+
+<p><br /></p>
+
+<h4 id="record-macro-">Record Macro <a name="macro"></a></h4>
+<p>Excel give you the ability to record a macro while you perform the function on the physical workbook. It then creates a module with the code written. See sample below on steps to recording a macro.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/macro1.jpg" class="blg-img" alt="Hit record" />
+  <figcaption>Step 1: Hit record macro on dev tab</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/excel-vba/macro2.jpg" class="blg-img" alt="Enter macros name and other info" />
+  <figcaption>Step 2: Enter macros name and other info</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/excel-vba/macro3.jpg" class="blg-img" alt="Work on your workbook" />
+  <figcaption>Step 3: Work on your workbook until finished</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/excel-vba/macro4.jpg" class="blg-img" alt="Stop recording" />
+  <figcaption>Step 4: Stop recording</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/excel-vba/macro5.jpg" class="blg-img" alt="Your code will be in modules" />
+  <figcaption>Step 5: You can review and edit your code</figcaption>
+</figure>
+
+<p><br /></p>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
