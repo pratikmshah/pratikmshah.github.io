@@ -168,6 +168,8 @@
       <li><a href="#abrelref">Absolute vs Relative Reference</a></li>
       <li><a href="#endwith">With and End</a></li>
       <li><a href="#compare">Comparison Operators</a></li>
+      <li><a href="#ifthen">If Then</a></li>
+      <li><a href="#isnot">Is Not Equal To &amp; Not</a></li>
     </ul>
   </li>
 </ol>
@@ -379,7 +381,7 @@
 <p><br /></p>
 
 <h3 id="cells-">Cells <a name="cell"></a></h3>
-<h4 id="cells-object-">Cells Object <a name="cellsobj"></a></h4>
+<h4 id="cells-object-">Cells Object <a name="cellobj"></a></h4>
 <p>The cells object is similar to the range object but instead of a range you put in the cell coordinates as integers (row, column). This is great for looping through entire rows or columns. You can substitute the column numbers for letters but need to put them in <code class="highlighter-rouge">""</code></p>
 
 <figure>
@@ -599,6 +601,24 @@
 </ul>
 
 <p><br /></p>
+
+<h4 id="if-then-">If Then <a name="ifthen"></a></h4>
+<p>Use the <code class="highlighter-rouge">If</code> <code class="highlighter-rouge">Then</code> keywords to create and execute a conditional statement; if the condition is true. You need to always need to close the conditional block by using <code class="highlighter-rouge">End If</code>.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/ifthen.jpg" class="blg-img" alt="If then conditionals" />
+  <figcaption>Use if then keywords to create conditional statements</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="is-not-equal-to--not">Is Not Equal To &amp; Not<a name="isnot"></a></h4>
+<p>You can use the <code class="highlighter-rouge">&lt;&gt;</code> is not equal to operator to create the opposite of the equals operator ex: <code class="highlighter-rouge">If range("A1").value &lt;&gt; 1 Then</code> etc… You can also you the keyword <code class="highlighter-rouge">Not</code> after <code class="highlighter-rouge">If</code> to say if cell value is not equal to “x” then execute these commands.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/ifnot.jpg" class="blg-img" alt="Use &lt;&gt; operator or Not keyword" />
+  <figcaption></figcaption>
+</figure>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
