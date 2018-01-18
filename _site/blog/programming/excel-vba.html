@@ -173,6 +173,8 @@
       <li><a href="#else">Else</a></li>
       <li><a href="#elseif">Else If</a></li>
       <li><a href="#comptxtnum">Comparative Operators Text &amp; Numbers</a></li>
+      <li><a href="#golabel">Goto &amp; Label</a></li>
+      <li><a href="#selcase">Select Case</a></li>
     </ul>
   </li>
 </ol>
@@ -613,6 +615,8 @@
   <figcaption>Use if then keywords to create conditional statements</figcaption>
 </figure>
 
+<p>If you just have one condition to check you can write the if statement, without the <code class="highlighter-rouge">Then</code> in one line ex: <code class="highlighter-rouge">If Range("c3") = 11 Then MsgBox "YOLO"</code>.</p>
+
 <p><br /></p>
 
 <h4 id="is-not-equal-to--not">Is Not Equal To &amp; Not<a name="isnot"></a></h4>
@@ -651,6 +655,26 @@
 <figure>
   <img src="/img/posts/excel-vba/comptxtnum.jpg" class="blg-img" alt="Compare numbers only" />
   <figcaption>If not specificed the compiler will accept text as numbers</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="goto--labels-">GoTo &amp; Labels <a name="golabel"></a></h4>
+<p>If you have parts of your code that need to be skipped for whatever reason then the <code class="highlighter-rouge">GoTo</code> keyword along with labels allow you to do this. The label must be spelled the same and must include at <code class="highlighter-rouge">:</code> after it.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/goto.jpg" class="blg-img" alt="Use GoTo command to skip over blocks of code" />
+  <figcaption>Use GoTo and labels to skip over code if needed</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="select-case-">Select Case <a name="selcase"></a></h4>
+<p>Similar to If Else the <code class="highlighter-rouge">Select Case</code> keywords are good for conditionals on a specific value. It makes code cleaner and much easier to read/write than If Else. You must end the block by using <code class="highlighter-rouge">End Select</code>.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/selectcase.jpg" class="blg-img" alt="Use the select case keywords for conditions" />
+  <figcaption>Use </figcaption>
 </figure>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
