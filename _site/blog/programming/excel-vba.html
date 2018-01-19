@@ -176,6 +176,7 @@
       <li><a href="#golabel">Goto &amp; Label</a></li>
       <li><a href="#selcase">Select Case</a></li>
       <li><a href="#msgbox">Message Box Options</a></li>
+      <li><a href="#relpos">Relative Positioning</a></li>
     </ul>
   </li>
 </ol>
@@ -624,7 +625,7 @@
 <p>You can use the <code class="highlighter-rouge">&lt;&gt;</code> is not equal to operator to create the opposite of the equals operator ex: <code class="highlighter-rouge">If range("A1").value &lt;&gt; 1 Then</code> etc… You can also you the keyword <code class="highlighter-rouge">Not</code> after <code class="highlighter-rouge">If</code> to say if cell value is not equal to “x” then execute these commands.</p>
 
 <figure>
-  <img src="/img/posts/excel-vba/ifnot.jpg" class="blg-img" alt="Use &lt;&gt; operator or Not keyword" />
+  <img src="/img/posts/excel-vba/isnot.jpg" class="blg-img" alt="Use &lt;&gt; operator or Not keyword" />
   <figcaption></figcaption>
 </figure>
 
@@ -686,6 +687,16 @@
 <figure>
   <img src="/img/posts/excel-vba/msgbox.jpg" class="blg-img" alt="Use message box for more visual experience" />
   <figcaption>Use the additional options for message box</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="relative-positioning-">Relative Positioning <a name="relpos"></a></h4>
+<p>You can select any cell from your current cursor position using the <code class="highlighter-rouge">Selection</code> and <code class="highlighter-rouge">Offset(row, column)</code> functions. You don’t have to use selection only you can use the <code class="highlighter-rouge">Cells</code> or <code class="highlighter-rouge">Range</code> object with the <code class="highlighter-rouge">Offset</code>.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/relpos.jpg" class="blg-img" alt="Use relative positioning" />
+  <figcaption>Offset will allow you to change cell location</figcaption>
 </figure>
 
 <p><br /></p>
