@@ -182,6 +182,10 @@
   <li><a href="#loop">Loops &amp; Reports</a>
     <ul>
       <li><a href="#forl">For Loop</a></li>
+      <li><a href="#report">Simple Report</a></li>
+      <li><a href="#input">Input Box</a></li>
+      <li><a href="#button">Button</a></li>
+      <li><a href="#reportprint">Reporting</a></li>
     </ul>
   </li>
 </ol>
@@ -714,6 +718,97 @@
   <img src="/img/posts/excel-vba/forloop.jpg" class="blg-img" alt="Sample For Loop" />
   <figcaption>Sample for loop</figcaption>
 </figure>
+
+<p><br /></p>
+
+<h4 id="simple-report-">Simple Report <a name="report"></a></h4>
+<p>Using the for loop and conditionals you can create a simple report to grab specific data from the worksheet to be able to print out. The below example will grab data of anything under $500 in sales. To create a new line use the keyword <code class="highlighter-rouge">vbNewLine</code>.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/report1.jpg" class="blg-img" alt="Sample report out put to message box" />
+  <figcaption>Sample report output to message box</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="input-box-">Input Box <a name="input"></a></h4>
+<p>Input boxes allow you to receive some data from the user. Use the function <code class="highlighter-rouge">inputbox("prompt", Title, "default value")</code> and set it equal to a variable to store the value.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/input.jpg" class="blg-img" alt="Input box" />
+  <figcaption>Input Box</figcaption>
+</figure>
+
+<p>You can convert text to number a couple of ways. The first way is to add <code class="highlighter-rouge">0</code> to the the number ex: <code class="highlighter-rouge">"200" + 0</code>.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/txt2num.jpg" class="blg-img" alt="Convert text to number" />
+  <figcaption>Convert text to number</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="button-">Button <a name="button"></a></h4>
+<p>To add a button which executes other code when use the graphical interface in the <code class="highlighter-rouge">insert</code> tab and preferably use <code class="highlighter-rouge">ActiveX Controls</code> ones. Drag and hold until the size is what you like. To edit the properties right click and select <code class="highlighter-rouge">properties</code>.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/button1.jpg" class="blg-img" alt="Button on insert menu" />
+  <figcaption>Select graphical editor</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/excel-vba/button2.jpg" class="blg-img" alt="Edit Properties" />
+  <figcaption>Customize and edit button</figcaption>
+</figure>
+
+<p>To link it to a function use the <code class="highlighter-rouge">Call</code> keyword so that when the button is clicked it executes the function. Double click on the button to open up VBA editor.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/button3.jpg" class="blg-img" alt="Code for button" />
+  <figcaption>Code for the button</figcaption>
+</figure>
+
+<p>Another way to make buttons is to use the <code class="highlighter-rouge">Shapes</code> in the <code class="highlighter-rouge">Insert</code> tab. You can then right click and assign a specific macro to it. This allows your buttons to good visually instead of the generic dark gray square buttons.</p>
+
+<p><br /></p>
+
+<h4 id="printable-report-">Printable Report <a name="reportprint"></a></h4>
+<p>Below is an example on creating a simple printable report. It is important to use the <code class="highlighter-rouge">Set</code> keyword to link worksheets to a variable.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/reportp1.jpg" class="blg-img" alt="Label worksheet tabs" />
+  <figcaption>Step 1: label worksheet tabs</figcaption>
+</figure>
+
+<p>Use <code class="highlighter-rouge">Dim</code> to declare variables and link them to specific data in the workbook.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/reportp2.jpg" class="blg-img" alt="Set worksheets to variables" />
+  <figcaption>Step 2: set variables to link to specific worksheet</figcaption>
+</figure>
+
+<p>Since we are now using more than one worksheets we must specify which worksheet we will be using before using functions such as <code class="highlighter-rouge">Cells</code> <code class="highlighter-rouge">Range</code> etc.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/reportp3.jpg" class="blg-img" alt="Specify worksheet and code logic" />
+  <figcaption>Step 3: Specify which worksheet you are using. Code the logic. </figcaption>
+</figure>
+
+<p>After running the report once the original report will stay. If you add remove data and run the report again you may have data in there from previous runs. it is best to create a function to clear out the old report before running the new one. Use the <code class="highlighter-rouge">ClearContents</code> object for that.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/reportp4.jpg" class="blg-img" alt="Clear out old report" />
+  <figcaption>Step 4: Clear out old report before running new one </figcaption>
+</figure>
+
+<p>To automate the movement to the report tab so that the user doesn’t have to manually find it or go there. If sheet is hidden use the <code class="highlighter-rouge">Visible</code> object and set it to <code class="highlighter-rouge">true</code>. Then you will have to use <code class="highlighter-rouge">Select</code> object to move user’s view to the worksheet.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/reportp5.jpg" class="blg-img" alt="Show report worksheet" />
+  <figcaption>Step 6: Show the report worksheet</figcaption>
+</figure>
+
+<p><br /></p>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
