@@ -199,7 +199,7 @@
   </li>
   <li><a href="#events">Events</a>
     <ul>
-      <li><a href="#introevent">Intro Events</a></li>
+      <li><a href="#introevent">Intro Events &amp; Selection Change</a></li>
     </ul>
   </li>
 </ol>
@@ -919,7 +919,7 @@
 <p><br /></p>
 
 <h3 id="events-">Events <a name="events"></a></h3>
-<h4 id="intro-events-">Intro Events <a name="introevent"></a></h4>
+<h4 id="intro-events--selection-change-">Intro Events &amp; Selection Change <a name="introevent"></a></h4>
 <p>Worksheet events occur whenever something happens on the worksheet. There are other methods to trigger a macro besides just tying it to a button.</p>
 
 <p>In the VBA editor change from <code class="highlighter-rouge">General</code> to <code class="highlighter-rouge">Worksheet</code> and you will see a sub for <code class="highlighter-rouge">Worksheet_SelectionChange</code>. Every time you click on a different cell of the worksheet this sub will run the code inside it.</p>
@@ -928,6 +928,15 @@
   <img src="/img/posts/excel-vba/intro1.jpg" class="blg-img" alt="Intro to events" />
   <figcaption>Worksheet_SelectionChange sub will run each time you select cell on worksheet</figcaption>
 </figure>
+
+<p>The sub passes in an argument called <code class="highlighter-rouge">Target</code> that will get the value of the cell that the cursor is moved to. You can use <code class="highlighter-rouge">target.properties</code> to access information about the targeted cell.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/intro2.jpg" class="blg-img" alt="Intro to events" />
+  <figcaption>Use target variable to extract information from the highlighted cell</figcaption>
+</figure>
+
+<p><br /></p>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
