@@ -747,6 +747,13 @@
   <figcaption>Convert text to number</figcaption>
 </figure>
 
+<p>Sometimes you will have debug error if you cancel out of an input box. To prevent this use the <code class="highlighter-rouge">On Error Resume Next</code> to allow the code to continue on error. Also use an <code class="highlighter-rouge">If</code> statement to check that the input is not <code class="highlighter-rouge">Empty Then Exit Sub</code>.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/inputempty.jpg" class="blg-img" alt="Input is empty" />
+  <figcaption>Prevent empty input value from causing errors</figcaption>
+</figure>
+
 <p><br /></p>
 
 <h4 id="button-">Button <a name="button"></a></h4>
@@ -813,6 +820,10 @@
 
 <h4 id="printing-">Printing <a name="printing"></a></h4>
 <p>You can set a worksheet on print preview mode by using the <code class="highlighter-rouge">PrintPreview</code> object ex: <code class="highlighter-rouge">wrksht.PrintPreview</code>. It will then automatically create and print preview of the worksheet.</p>
+
+<p>To send the worksheet out to the default printer use the <code class="highlighter-rouge">PrintOut(args)</code> object. One property <code class="highlighter-rouge">copies: 1</code> should be set to one unless you want more.</p>
+
+<p><br /></p>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
