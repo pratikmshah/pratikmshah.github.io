@@ -197,6 +197,11 @@
       <li><a href="#exitdo">Exit Loops</a></li>
     </ul>
   </li>
+  <li><a href="#events">Events</a>
+    <ul>
+      <li><a href="#introevent">Intro Events</a></li>
+    </ul>
+  </li>
 </ol>
 
 <p><br /></p>
@@ -912,6 +917,17 @@
 </figure>
 
 <p><br /></p>
+
+<h3 id="events-">Events <a name="events"></a></h3>
+<h4 id="intro-events-">Intro Events <a name="introevent"></a></h4>
+<p>Worksheet events occur whenever something happens on the worksheet. There are other methods to trigger a macro besides just tying it to a button.</p>
+
+<p>In the VBA editor change from <code class="highlighter-rouge">General</code> to <code class="highlighter-rouge">Worksheet</code> and you will see a sub for <code class="highlighter-rouge">Worksheet_SelectionChange</code>. Every time you click on a different cell of the worksheet this sub will run the code inside it.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/intro1.jpg" class="blg-img" alt="Intro to events" />
+  <figcaption>Worksheet_SelectionChange sub will run each time you select cell on worksheet</figcaption>
+</figure>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
