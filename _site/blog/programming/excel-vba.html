@@ -200,6 +200,10 @@
   <li><a href="#events">Events</a>
     <ul>
       <li><a href="#introevent">Intro Events &amp; Selection Change</a></li>
+      <li><a href="#activate">Activate</a></li>
+      <li><a href="#deactivate">Deactivate</a></li>
+      <li><a href="#beforedel">Before Delete</a></li>
+      <li><a href="#beforedouble">Before Double Click</a></li>
     </ul>
   </li>
 </ol>
@@ -934,6 +938,46 @@
 <figure>
   <img src="/img/posts/excel-vba/intro2.jpg" class="blg-img" alt="Intro to events" />
   <figcaption>Use target variable to extract information from the highlighted cell</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="activate-event-">Activate Event <a name="activate"></a></h4>
+<p>The <code class="highlighter-rouge">activate</code> event will trigger when you change worksheet tabs. You must select <code class="highlighter-rouge">Worksheet</code> and then <code class="highlighter-rouge">Activate</code>.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/activate.jpg" class="blg-img" alt="Activate event" />
+  <figcaption>Use activate to trigger when you switch tabs</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="deactivate-event-">Deactivate Event <a name="deactivate"></a></h4>
+<p>The <code class="highlighter-rouge">deactivate</code> event will trigger when you leave current worksheet tab for another one. You must select <code class="highlighter-rouge">Worksheet</code> and then <code class="highlighter-rouge">Deactivate</code>.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/deactivate.jpg" class="blg-img" alt="Deactivate event" />
+  <figcaption>Use activate to trigger when you switch tabs</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="before-delete-">Before Delete <a name="beforedel"></a></h4>
+<p>The <code class="highlighter-rouge">BeforeDelete</code> event will trigger before deleting a worksheet. It doesn’t prevent you from deleting just executes the code before you delete. You must select <code class="highlighter-rouge">Worksheet</code> and then <code class="highlighter-rouge">BeforeDelete</code>.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/beforedel.jpg" class="blg-img" alt="Before Delete" />
+  <figcaption>Before delete</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="before-double-click-">Before Double Click <a name="beforedouble"></a></h4>
+<p>The <code class="highlighter-rouge">Before Double Click</code> event will trigger before the double click action takes place.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/beforedouble.jpg" class="blg-img" alt="Before Double Click" />
+  <figcaption>Before Double Click</figcaption>
 </figure>
 
 <p><br /></p>
