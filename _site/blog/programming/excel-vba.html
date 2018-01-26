@@ -204,6 +204,7 @@
       <li><a href="#deactivate">Deactivate</a></li>
       <li><a href="#beforedel">Before Delete</a></li>
       <li><a href="#beforedouble">Before Double Click</a></li>
+      <li><a href="#beforerightclk">Before Right Click</a></li>
     </ul>
   </li>
 </ol>
@@ -973,11 +974,21 @@
 <p><br /></p>
 
 <h4 id="before-double-click-">Before Double Click <a name="beforedouble"></a></h4>
-<p>The <code class="highlighter-rouge">Before Double Click</code> event will trigger before the double click action takes place.</p>
+<p>The <code class="highlighter-rouge">Before Double Click</code> event will trigger before the double click action takes place. There is an additional argument called <code class="highlighter-rouge">Cancel</code> that is passed in and its of a boolean value. If cancel is false after the double click code runs the cursor will then place cursor ready to edit contents of the cell clicked; to stop this make cancel true.</p>
 
 <figure>
   <img src="/img/posts/excel-vba/beforedouble.jpg" class="blg-img" alt="Before Double Click" />
   <figcaption>Before Double Click</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="before-right-click-">Before Right Click <a name="beforerightclk"></a></h4>
+<p>The <code class="highlighter-rouge">Before Right Click</code> event will execute code before the original right click function works. Setting cancel to true here will prevent the original right click menu from popping up after.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/beforerightclk.jpg" class="blg-img" alt="Before Right Click" />
+  <figcaption>Before Right Click</figcaption>
 </figure>
 
 <p><br /></p>
