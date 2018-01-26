@@ -217,6 +217,8 @@
       <li><a href="#wrkbookactivate">Workbook Activate</a></li>
       <li><a href="#beforesave">Before Save</a></li>
       <li><a href="#aftersave">After Save</a></li>
+      <li><a href="#beforeclose">Before Close</a></li>
+      <li><a href="#beforeprint">Before Print</a></li>
     </ul>
   </li>
 </ol>
@@ -1085,6 +1087,21 @@
   <img src="/img/posts/excel-vba/aftrsave.jpg" class="blg-img" alt="After Save Event" />
   <figcaption>After Save Event</figcaption>
 </figure>
+
+<p><br /></p>
+
+<h4 id="before-close-">Before close <a name="beforeclose"></a></h4>
+<p>The <code class="highlighter-rouge">Before Close</code> event runs before you close the workbook. It also passes in the <code class="highlighter-rouge">Cancel</code> argument as a boolean.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/beforeclose.jpg" class="blg-img" alt="Before Close Event" />
+  <figcaption>Before Close Event</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="before-print-">Before Print <a name="beforeprint"></a></h4>
+<p>The <code class="highlighter-rouge">Before Print</code> event runs before you print a worksheet. It also passes in the <code class="highlighter-rouge">Cancel</code> argument that if set to true won’t allow anyone to print. This is good in preventing confidential data for being allowed to print.</p>
 
 <p><br /></p>
 
