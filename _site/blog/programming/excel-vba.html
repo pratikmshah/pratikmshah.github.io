@@ -206,6 +206,8 @@
       <li><a href="#beforedouble">Before Double Click</a></li>
       <li><a href="#beforerightclk">Before Right Click</a></li>
       <li><a href="#calculate">Calculates Event</a></li>
+      <li><a href="#disableevent">Disable Events</a></li>
+      <li><a href="#changeevent">Change Event</a></li>
     </ul>
   </li>
 </ol>
@@ -1000,6 +1002,33 @@
 <figure>
   <img src="/img/posts/excel-vba/calculate.jpg" class="blg-img" alt="Calculate Event" />
   <figcaption>Calculate Event</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="disable-events-">Disable Events <a name="disableevent"></a></h4>
+<p>You can disable events on a workbook by using the <code class="highlighter-rouge">Application.EnableEvents</code> object and setting it to false.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/disableevent.jpg" class="blg-img" alt="Disable Event" />
+  <figcaption>Disable Event</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="change-event-">Change Event <a name="changeevent"></a></h4>
+<p>Change event will run whenever any cell value changes.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/changeevent.jpg" class="blg-img" alt="Change Event" />
+  <figcaption>Change Event checking single cell value</figcaption>
+</figure>
+
+<p>You can also compare with a range instead of just a single cell. You will need to use the <code class="highlighter-rouge">intersect</code> function to compare your target and then the range to compare it to.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/changeevent2.jpg" class="blg-img" alt="Change Event Intersect" />
+  <figcaption>Change Event comparing a range</figcaption>
 </figure>
 
 <p><br /></p>
