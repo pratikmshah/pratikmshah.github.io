@@ -214,6 +214,7 @@
   <li><a href="#wrkbookevent">Workbook Events</a>
     <ul>
       <li><a href="#wrkbookopen">Workbook Open</a></li>
+      <li><a href="#wrkbookactivate">Workbook Activate</a></li>
     </ul>
   </li>
 </ol>
@@ -1051,7 +1052,19 @@
 
 <h3 id="workbook-events-">Workbook Events <a name="wrkbookevent"></a></h3>
 <h4 id="workbook-open-">Workbook Open <a name="wrkbookopen"></a></h4>
-<p>Workbook events are like worksheet events but they effect the entire workbook.</p>
+<p>Workbook events are like worksheet events but they effect the entire workbook. In the VBA editor select the <code class="highlighter-rouge">ThisWorkbook</code> icon to create macros for the entire workbook. The <code class="highlighter-rouge">Open</code> event runs as soon as the workbook is open.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/openevent.jpg" class="blg-img" alt="Open Event" />
+  <figcaption>Open Event</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="workbook-activate-">Workbook Activate <a name="wrkbookactivate"></a></h4>
+<p>Workbook <code class="highlighter-rouge">Activate</code> event runs once you click on the workbook. If you have 2 workbooks open and switch between them each time you lose focus and come back the <code class="highlighter-rouge">Activate</code> macro will run.</p>
+
+<p><br /></p>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
