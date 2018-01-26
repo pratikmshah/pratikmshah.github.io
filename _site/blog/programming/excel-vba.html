@@ -228,6 +228,11 @@
       <li><a href="#sheetrightclick">Sheet Before Right Click</a></li>
       <li><a href="#sheetcalculation">Sheet Calculation</a></li>
       <li><a href="#sheetchange">Sheet Change</a></li>
+      <li><a href="#sheetdeactivate">Sheet Deactivate</a></li>
+      <li><a href="#sheetselectionchange">Sheet Selection Change</a></li>
+      <li><a href="#windowactivate">Window Activate</a></li>
+      <li><a href="#windowdeactivate">Window Deactivate</a></li>
+      <li><a href="#windowresize">Window Resize</a></li>
     </ul>
   </li>
 </ol>
@@ -1161,6 +1166,36 @@
 
 <h4 id="sheet-change-">Sheet Change <a name="sheetchange"></a></h4>
 <p>The <code class="highlighter-rouge">Sheet Calculation</code> runs when you change any value of a cell in the entire workbook</p>
+
+<p><br /></p>
+
+<h4 id="sheet-deactivate-">Sheet Deactivate <a name="sheetdeactivate"></a></h4>
+<p>The <code class="highlighter-rouge">Sheet Deactivate</code> code runs when you leave the current worksheet to another one.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/sheetdeactivate.jpg" class="blg-img" alt="Sheet Deactivate" />
+  <figcaption>Sheet Deactivate</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="sheet-selection-change-">Sheet Selection Change <a name="sheetselectionchange"></a></h4>
+<p>The <code class="highlighter-rouge">Sheet Selection Change</code> runs anytime you move your cursor to a new cell position anywhere in the entire workbook.</p>
+
+<p><br /></p>
+
+<h4 id="window-activate-">Window Activate <a name="windowactivate"></a></h4>
+<p>The <code class="highlighter-rouge">Window Activate</code> only triggers when the workbook itself is activated and in focus.</p>
+
+<p><br /></p>
+
+<h4 id="window-deactivate-">Window Deactivate <a name="windowdeactivate"></a></h4>
+<p>The <code class="highlighter-rouge">Window Activate</code> only triggers when the workbook itself is deactivated and loses focus.</p>
+
+<p><br /></p>
+
+<h4 id="window-resize-">Window Resize <a name="windowresize"></a></h4>
+<p>The <code class="highlighter-rouge">Window Resize</code> runs each time you resize the workbook. It passes in a window object <code class="highlighter-rouge">Wn</code> that you can get height, width, size and other information about the window.</p>
 
 <p><br /></p>
 
