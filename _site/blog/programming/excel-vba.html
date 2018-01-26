@@ -223,6 +223,11 @@
       <li><a href="#newchart">New Chart</a></li>
       <li><a href="#newsheet">New Sheet</a></li>
       <li><a href="#sheetactive">Sheet Activate</a></li>
+      <li><a href="#sheetbeforedelete">Sheet Before Delete</a></li>
+      <li><a href="#sheetdoubleclick">Sheet Before Double Click</a></li>
+      <li><a href="#sheetrightclick">Sheet Before Right Click</a></li>
+      <li><a href="#sheetcalculation">Sheet Calculation</a></li>
+      <li><a href="#sheetchange">Sheet Change</a></li>
     </ul>
   </li>
 </ol>
@@ -1131,6 +1136,31 @@
 
 <h4 id="sheet-activate-">Sheet Activate <a name="sheetactive"></a></h4>
 <p>The <code class="highlighter-rouge">Sheet Activate</code> event triggers each time you are in focus on the worksheet. The object passed in <code class="highlighter-rouge">Sh</code> is the current sheet.</p>
+
+<p><br /></p>
+
+<h4 id="sheet-before-delete-">Sheet Before Delete <a name="sheetbeforedelete"></a></h4>
+<p>The <code class="highlighter-rouge">Sheet Before Delete</code> runs when any worksheet on the workbook is deleted. There is no <code class="highlighter-rouge">Cancel</code> variable to prevent deletion.</p>
+
+<p><br /></p>
+
+<h4 id="sheet-before-double-click-">Sheet Before Double Click <a name="sheetdoubleclick"></a></h4>
+<p>The <code class="highlighter-rouge">Sheet Before Double Click</code> runs when you double click anywhere on the entire workbook. The arguments passed are worksheet, target, and cancel options.</p>
+
+<p><br /></p>
+
+<h4 id="sheet-before-right-click-">Sheet Before Right Click <a name="sheetrightclick"></a></h4>
+<p>The <code class="highlighter-rouge">Sheet Before Double Click</code> runs when you right click anywhere on the entire workbook. The arguments passed are the worksheet, target, and cancel options.</p>
+
+<p><br /></p>
+
+<h4 id="sheet-calculation-">Sheet Calculation <a name="sheetcalculate"></a></h4>
+<p>The <code class="highlighter-rouge">Sheet Calculation</code> runs when you edit any formulas anywhere in the entire workbook.</p>
+
+<p><br /></p>
+
+<h4 id="sheet-change-">Sheet Change <a name="sheetchange"></a></h4>
+<p>The <code class="highlighter-rouge">Sheet Calculation</code> runs when you change any value of a cell in the entire workbook</p>
 
 <p><br /></p>
 
