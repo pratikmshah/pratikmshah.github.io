@@ -216,6 +216,7 @@
       <li><a href="#wrkbookopen">Workbook Open</a></li>
       <li><a href="#wrkbookactivate">Workbook Activate</a></li>
       <li><a href="#beforesave">Before Save</a></li>
+      <li><a href="#aftersave">After Save</a></li>
     </ul>
   </li>
 </ol>
@@ -1068,7 +1069,22 @@
 <p><br /></p>
 
 <h4 id="before-save-">Before Save <a name="beforesave"></a></h4>
-<p>Workbook <code class="highlighter-rouge">Activate</code> event runs once you click on the workbook. If you have 2 workbooks open and switch between them each time you lose focus and come back the <code class="highlighter-rouge">Activate</code> macro will run.</p>
+<p>Workbook <code class="highlighter-rouge">Before Save</code> will trigger when you click the save button and then execute the macro before saving. If cancel is set to true then it won’t save.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/save.jpg" class="blg-img" alt="Before Save Event" />
+  <figcaption>Before Save Event</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="after-save-">After Save <a name="aftersave"></a></h4>
+<p>Workbook <code class="highlighter-rouge">After Save</code> will trigger after the workbook tries saving. It returns a <code class="highlighter-rouge">Success</code> argument that is true/false depending on if the workbook saved successfully.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/aftrsave.jpg" class="blg-img" alt="After Save Event" />
+  <figcaption>After Save Event</figcaption>
+</figure>
 
 <p><br /></p>
 
