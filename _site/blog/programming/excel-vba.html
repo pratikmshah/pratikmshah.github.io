@@ -219,6 +219,8 @@
       <li><a href="#aftersave">After Save</a></li>
       <li><a href="#beforeclose">Before Close</a></li>
       <li><a href="#beforeprint">Before Print</a></li>
+      <li><a href="#workbookdeactivate">Workbook Deactivate</a></li>
+      <li><a href="#newchart">New Chart</a></li>
     </ul>
   </li>
 </ol>
@@ -1102,6 +1104,21 @@
 
 <h4 id="before-print-">Before Print <a name="beforeprint"></a></h4>
 <p>The <code class="highlighter-rouge">Before Print</code> event runs before you print a worksheet. It also passes in the <code class="highlighter-rouge">Cancel</code> argument that if set to true won’t allow anyone to print. This is good in preventing confidential data for being allowed to print.</p>
+
+<p><br /></p>
+
+<h4 id="workbook-deactivate-">Workbook Deactivate <a name="workbookdeactivate"></a></h4>
+<p>The <code class="highlighter-rouge">Workbook Deactivate</code> event is similar to the <code class="highlighter-rouge">Workbook Activate</code> event but triggers right after you lose focus of the workbook.</p>
+
+<p><br /></p>
+
+<h4 id="new-chart-">New Chart <a name="newchart"></a></h4>
+<p>The <code class="highlighter-rouge">New Chart</code> event is when you create a new chart. The <code class="highlighter-rouge">Ch</code> argument is a chart object. Whenever you create a new chart inside the workbook the values assigned will become the default values of the chart. If you need to figure out how to adjust some of the other chart properties its best to record a macro and then reverse engineer it.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/newchart.jpg" class="blg-img" alt="New Chart Event" />
+  <figcaption>New Chart Event</figcaption>
+</figure>
 
 <p><br /></p>
 
