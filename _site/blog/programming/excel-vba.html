@@ -221,6 +221,8 @@
       <li><a href="#beforeprint">Before Print</a></li>
       <li><a href="#workbookdeactivate">Workbook Deactivate</a></li>
       <li><a href="#newchart">New Chart</a></li>
+      <li><a href="#newsheet">New Sheet</a></li>
+      <li><a href="#sheetactive">Sheet Activate</a></li>
     </ul>
   </li>
 </ol>
@@ -1119,6 +1121,16 @@
   <img src="/img/posts/excel-vba/newchart.jpg" class="blg-img" alt="New Chart Event" />
   <figcaption>New Chart Event</figcaption>
 </figure>
+
+<p><br /></p>
+
+<h4 id="new-sheet-">New Sheet <a name="newsheet"></a></h4>
+<p>The <code class="highlighter-rouge">New Sheet</code> event runs everytime you create a new worksheet. You can edit the properties of the new sheet by using the passed in object <code class="highlighter-rouge">Sh</code>. For example you can edit the font type on all cells to be says bold ex: <code class="highlighter-rouge">Sh.Cells.Font.Bold = True</code>.</p>
+
+<p><br /></p>
+
+<h4 id="sheet-activate-">Sheet Activate <a name="sheetactive"></a></h4>
+<p>The <code class="highlighter-rouge">Sheet Activate</code> event triggers each time you are in focus on the worksheet. The object passed in <code class="highlighter-rouge">Sh</code> is the current sheet.</p>
 
 <p><br /></p>
 
