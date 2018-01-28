@@ -247,6 +247,8 @@
       <li><a href="#optionbutton">Option Buttons</a></li>
       <li><a href="#spinbutton">Spin Button &amp; Textbox</a></li>
       <li><a href="#labels1">Labels</a></li>
+      <li><a href="#combo">ComboBox Fill with List Fill Range</a></li>
+      <li><a href="#listbox">List Box</a></li>
     </ul>
   </li>
 </ol>
@@ -1354,6 +1356,60 @@
   <img src="/img/posts/excel-vba/labels1.jpg" class="blg-img" alt="Label" />
   <figcaption>Using Labels</figcaption>
 </figure>
+
+<p><br /></p>
+
+<h4 id="combobox-fill-with-list-fill-range-">ComboBox Fill with List Fill Range <a name="combo"></a></h4>
+<p>The list fill box is good to create a dropdown list of categories for the user to select from. You setup a group and in properties set the group name into <code class="highlighter-rouge">ListFillRange</code>. The combo box can have a list and or textbox.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/list.jpg" class="blg-img" alt="ComboBox" />
+  <figcaption>Lists</figcaption>
+</figure>
+
+<p>Sometimes you will need to have a dynamic range so that when new records are added it automatically picks up. To do this click <code class="highlighter-rouge">alt + I + N + D</code> for the <code class="highlighter-rouge">names manager</code> edit the value to offset(starting cell, move down #, left or right #, how many rows wide? use counta(get count of nonblank cells) - header(1), how many column wide (1))</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/dynamicrange.jpg" class="blg-img" alt="Dynamic Range" />
+  <figcaption>Dynamic Range</figcaption>
+</figure>
+
+<p>With combo boxes you can have multiple columns. In the ComboBox <code class="highlighter-rouge">properties</code> change the <code class="highlighter-rouge">column count</code> and expand your named range to include more than one columns.</p>
+
+<p>There are more customizable ways to add items to your combobox. Using the <code class="highlighter-rouge">.AddItem</code> function. To clear up all entries inside the combobox use the <code class="highlighter-rouge">.clear</code> function.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/additem.jpg" class="blg-img" alt="Add Item" />
+  <figcaption>Add items to combo box</figcaption>
+</figure>
+
+<p>If you have multiple columns and need to add items you will have to use some array manipulation. Arrays start with 0.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/additem.2jpg" class="blg-img" alt="Add Item" />
+  <figcaption>Add multiple columns to combo box</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="list-box-">List Box <a name="listbox"></a></h4>
+<p>List box is a box with a list in it. You can specify the group name in the <code class="highlighter-rouge">properties</code> as well as the number of columns. You can adjust the column widths also just put <code class="highlighter-rouge">;</code> in between each column. If its a named range you can turn on the property of <code class="highlighter-rouge">ColumnHeads</code> to true.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/listbox.2jpg" class="blg-img" alt="listbox" />
+  <figcaption>List Box</figcaption>
+</figure>
+
+<p>The list box takes the value of whatever line the user clicks on. Columns are in array format starting with 0. You can have a linked cell or you can put events on it using click events.</p>
+
+<p>To use the other columns data you will have to use the list and find the index.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/listbox2.2jpg" class="blg-img" alt="listbox" />
+  <figcaption>Extracting data from list box</figcaption>
+</figure>
+
+<p>To make the listbox dynamic you can use the <code class="highlighter-rouge">AddItem</code> function.</p>
 
 <p><br /></p>
 
