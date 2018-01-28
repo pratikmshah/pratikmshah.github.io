@@ -240,6 +240,7 @@
       <li><a href="#activevsform">Form Buttons</a></li>
       <li><a href="#keydown">Key Down &amp; Press</a></li>
       <li><a href="#mouse">Mouse Move</a></li>
+      <li><a href="#mouseupdown">Mouse Up &amp; Down</a></li>
     </ul>
   </li>
 </ol>
@@ -1236,7 +1237,7 @@
 
 <p><br /></p>
 
-<h4 id="mouse-move-">Mouse Move <a name="mouse"></a></h4>
+<h4 id="mouse-move--application-statusbar-">Mouse Move &amp; Application Statusbar <a name="mouse"></a></h4>
 <p>The mouse move event triggers when your mouse moves onto the object. The additional arguments passed give you the x and y coordinates.</p>
 
 <figure>
@@ -1244,7 +1245,16 @@
   <figcaption>Mouse Movement</figcaption>
 </figure>
 
+<p>You can add a status bar message by using the <code class="highlighter-rouge">Application.Statusbar</code> keyword. This will provide additional information to the user. You can set the value to false to get ride of the statusbar message.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/mouseapp.jpg" class="blg-img" alt="Application Statusbar" />
+  <figcaption>Application Statusbar</figcaption>
+</figure>
+
 <p><br /></p>
+
+<h4 id="mouse-up--down-">Mouse Up &amp; Down <a name="mouseupdown"></a></h4>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
