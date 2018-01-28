@@ -245,6 +245,7 @@
       <li><a href="#checkbox">Checkbox</a></li>
       <li><a href="#linkcell">Link Cell</a></li>
       <li><a href="#optionbutton">Option Buttons</a></li>
+      <li><a href="#spinbutton">Spin Button &amp; Textbox</a></li>
     </ul>
   </li>
 </ol>
@@ -1309,6 +1310,34 @@
 </figure>
 
 <p>To neatly format the icons you can select the option buttons and go to <code class="highlighter-rouge">Format</code> and under <code class="highlighter-rouge">Align</code> select the appropirate function in most cases its <code class="highlighter-rouge">Algin Left</code>. To manually align for the small mm offsets you can use the arrow keys. Another tip on selecting the entire group as one unit.</p>
+
+<p>Below is a sample program on how you can use conditions with the optionbox forms.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/option2.jpg" class="blg-img" alt="Move selection app" />
+  <figcaption>Movie selection app</figcaption>
+</figure>
+
+<p>You can create a checker to see that the user in fact selected the required conditions in order to run. Have an If statement checking to see that at least one of the choices is selected; use the <code class="highlighter-rouge">Or</code> keyword in the conditional <code class="highlighter-rouge">IF x or y or z</code>. Another way is you can set the confirmation button to invisible and when the conditions are met change it to visible.</p>
+
+<p><br /></p>
+
+<h4 id="spin-button--textbox-">Spin Button &amp; Textbox <a name="spinbutton"></a></h4>
+<p>The spin button are arrow buttons that are either up and down or left and right and cycle through a list of choices. The two most common events are spin up and spin down.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/spin.jpg" class="blg-img" alt="Spinner" />
+  <figcaption>Spin form</figcaption>
+</figure>
+
+<p>When cells are empty the compiler automatically thinks its 0 this is why a textbox is great form to be combined with the spinner. Textbox always contains a text value so adding a number to it will not work and throws an error. You can use the <code class="highlighter-rouge">On Error Resume Next</code> and/or check to see if text is empty. Another method is to check to see if it is a numerical value using <code class="highlighter-rouge">IsNumeric</code>.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/spin2.jpg" class="blg-img" alt="Spinner" />
+  <figcaption>Spin form</figcaption>
+</figure>
+
+<p>Spin buttons can also be used for more than just numbers. You can convert the number into a date and use that to display the date type.</p>
 
 <p><br /></p>
 
