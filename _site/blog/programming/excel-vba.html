@@ -235,6 +235,11 @@
       <li><a href="#windowresize">Window Resize</a></li>
     </ul>
   </li>
+  <li><a href="#activex">Active X Controls</a>
+    <ul>
+      <li><a href="#activevsform">Active X vs Forms</a></li>
+    </ul>
+  </li>
 </ol>
 
 <p><br /></p>
@@ -1196,6 +1201,24 @@
 
 <h4 id="window-resize-">Window Resize <a name="windowresize"></a></h4>
 <p>The <code class="highlighter-rouge">Window Resize</code> runs each time you resize the workbook. It passes in a window object <code class="highlighter-rouge">Wn</code> that you can get height, width, size and other information about the window.</p>
+
+<p><br /></p>
+
+<h3 id="active-x-controls-">Active X Controls <a name="activex"></a></h3>
+<h4 id="forms-">Forms <a name="activevsform"></a></h4>
+<p>Active X forms allow a lot more customization and give you a ton more information than a simple form control. You are able to change everything from the name to the mouse cursor. To get the information <code class="highlighter-rouge">right click</code> and select <code class="highlighter-rouge">properties</code>. Also active x allows you to select from various different types of events.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/formx.jpg" class="blg-img" alt="Active X Form" />
+  <figcaption>Active X Form</figcaption>
+</figure>
+
+<p>Below is an example of the code you can use to create a simple wage calculator. With a click, double click, or other events of a button you can compute multiple cells. This is also useful so that formulas cannot be accidentally erased when hardcoded into the excel cell.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/formcalc.jpg" class="blg-img" alt="Active X Form Calculator" />
+  <figcaption>Active X Form Calculator</figcaption>
+</figure>
 
 <p><br /></p>
 
