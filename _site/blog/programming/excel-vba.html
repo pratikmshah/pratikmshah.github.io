@@ -243,6 +243,8 @@
       <li><a href="#mouseupdown">Mouse Up/Down &amp; Left Middle Right Click</a></li>
       <li><a href="#focus">GotFocus &amp; LostFocus</a></li>
       <li><a href="#checkbox">Checkbox</a></li>
+      <li><a href="#linkcell">Link Cell</a></li>
+      <li><a href="#optionbutton">Option Buttons</a></li>
     </ul>
   </li>
 </ol>
@@ -1285,6 +1287,28 @@
   <img src="/img/posts/excel-vba/checkbox2.jpg" class="blg-img" alt="Checkbox example" />
   <figcaption>Checkbox by user interaction</figcaption>
 </figure>
+
+<p><br /></p>
+
+<h4 id="linked-cell-">Linked Cell <a name="linkcell"></a></h4>
+<p>You can link a specific cell to a form. For example the checkbox’s value can be linked to cell “a1” and whenever you check/uncheck the box the value in “a1” will change. To link a cell right click the form and in properties under <code class="highlighter-rouge">LinkedCell</code> enter the cell value.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/linkcell.jpg" class="blg-img" alt="Linked Cell" />
+  <figcaption>Link a cell to a form</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="option-button-">Option Button <a name="optionbutton"></a></h4>
+<p>The option button is more of a grouping setting; such that, you should use more than one. When the option button’s are grouped together you may only select one. To group option buttons you need to first <code class="highlighter-rouge">cntrl + click</code> to select the options you want in the group then click on <code class="highlighter-rouge">properties</code> in the developer tab. Fill out the property called <code class="highlighter-rouge">GroupName</code> to create the group.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/option1.jpg" class="blg-img" alt="Creating a group list" />
+  <figcaption>Creating a group list</figcaption>
+</figure>
+
+<p>To neatly format the icons you can select the option buttons and go to <code class="highlighter-rouge">Format</code> and under <code class="highlighter-rouge">Align</code> select the appropirate function in most cases its <code class="highlighter-rouge">Algin Left</code>. To manually align for the small mm offsets you can use the arrow keys. Another tip on selecting the entire group as one unit.</p>
 
 <p><br /></p>
 
