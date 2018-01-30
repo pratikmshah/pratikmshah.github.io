@@ -259,6 +259,9 @@
       <li><a href="#hideshow">Hide Show &amp; Unload</a></li>
       <li><a href="#status">Status Box</a></li>
       <li><a href="#newdata">New Data</a></li>
+      <li><a href="#txt2num">Convert to Numbers</a></li>
+      <li><a href="#taborder">Tab Order</a></li>
+      <li><a href="#defval">Default Value</a></li>
     </ul>
   </li>
 </ol>
@@ -1476,6 +1479,26 @@
   <img src="/img/posts/excel-vba/newdata2.jpg" class="blg-img" alt="Add new data result" />
   <figcaption>Added new data row to data set</figcaption>
 </figure>
+
+<p><br /></p>
+
+<h4 id="convert-text-to-numbers-">Convert Text to Numbers <a name="txt2num"></a></h4>
+<p>When you extract data from the user form it will be in text format and will need to be converted if you need it to be any other type such as numbers. The best way to do this is to +, -, /* or // to change the text into a number.</p>
+
+<p><br /></p>
+
+<h4 id="tab-order-">Tab Order <a name="taborder"></a></h4>
+<p>To set the tab index order so that when a user is typing and hits tab it goes to the next box you need to change the properties of each text box in sequential order. Change the <code class="highlighter-rouge">TabIndex</code> field and start with 0, 1, 2 and so on.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/taborder.jpg" class="blg-img" alt="tab index" />
+  <figcaption>Tab Index and order</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="default-value-">Default Value <a name="defval"></a></h4>
+<p>To set a default value in a textbox set it in the <code class="highlighter-rouge">caption</code> property.</p>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
