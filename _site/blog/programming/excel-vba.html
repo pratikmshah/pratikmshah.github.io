@@ -262,6 +262,8 @@
       <li><a href="#txt2num">Convert to Numbers</a></li>
       <li><a href="#taborder">Tab Order</a></li>
       <li><a href="#defval">Default Value</a></li>
+      <li><a href="#duplicate">Prevent Duplicate</a></li>
+      <li><a href="#editmode">Edit Mode</a></li>
     </ul>
   </li>
 </ol>
@@ -1499,6 +1501,45 @@
 
 <h4 id="default-value-">Default Value <a name="defval"></a></h4>
 <p>To set a default value in a textbox set it in the <code class="highlighter-rouge">caption</code> property.</p>
+
+<p><br /></p>
+
+<h4 id="prevent-duplicates-">Prevent Duplicates <a name="duplicate"></a></h4>
+<p>Prevent duplicate records by creating a loop and checking to see if ID created matches.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/taborder.jpg" class="blg-img" alt="tab index" />
+  <figcaption>Tab Index and order</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="edit-mode-">Edit Mode <a name="editmode"></a></h4>
+<p>Your form should also be able to edit a record. To do this you should create an <code class="highlighter-rouge">edit</code> button and combine it with a dropdown list of all the records (RowSource). You should create a dynamic named range.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/edit1.jpg" class="blg-img" alt="Create Button" />
+  <figcaption>Create edit button</figcaption>
+</figure>
+
+<p>Once the record has been added its best to clear out and blank the text boxes by just setting them to blank string. To <code class="highlighter-rouge">edit</code> create a loop and compare a unique ID to see if it matches. You may need to convert number to text and the easiest way to do that is just add  <code class="highlighter-rouge">&amp; ""</code> to convert it to a text. When saving it would update the record.</p>
+
+<figure>
+  <img src="/img/posts/excel-vba/edit2.jpg" class="blg-img" alt="Edit existing record" />
+  <figcaption>Edit existing record</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/excel-vba/edit3.jpg" class="blg-img" alt="edit3" />
+  <figcaption>When saving you need to stop firing the change event</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/excel-vba/edit4.jpg" class="blg-img" alt="User Form" />
+  <figcaption>User Form</figcaption>
+</figure>
+
+<p><br /></p>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
