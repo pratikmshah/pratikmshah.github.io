@@ -561,7 +561,8 @@ a.nav-link {
     left: 0;
     width: 0%;
     border-bottom: 2px solid #00AEEF;
-    transition: 0.50s; }
+    border-radius: 25px;
+    transition: 0.25s; }
   a.nav-link:hover:after {
     width: 100%; }
 
