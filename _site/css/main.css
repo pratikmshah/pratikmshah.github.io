@@ -560,8 +560,9 @@ a.nav-link {
     bottom: 0;
     left: 0;
     width: 0%;
-    border-bottom: 1px solid #00AEEF;
-    transition: 0.50s; }
+    border-bottom: 2px solid #00AEEF;
+    border-radius: 25px;
+    transition: 0.25s; }
   a.nav-link:hover:after {
     width: 100%; }
 
@@ -622,7 +623,7 @@ ul li.cust-page-lnks {
 @media only screen and (min-width: 600px) {
   .nav-link {
     display: inline-block;
-    padding: 15px 5px 0px 5px;
+    padding: 15px 5px 5px 5px;
     text-align: center; }
     .nav-link span {
       display: inline-block;
