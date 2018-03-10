@@ -17,14 +17,14 @@ a.nav-link {
     bottom: 0;
     left: 0;
     width: 0%;
-    border-bottom: 2px solid $twt-clr;
-    border-radius: 25px;
-    transition: 0.25s;
+    border-bottom: 2.75px solid $twt-clr;
+    transition: 0.20s;
   }
 
   &:hover:after {
-    width: 100%
+    width: 100%;
   }
+
 }
 
 .font-title {
