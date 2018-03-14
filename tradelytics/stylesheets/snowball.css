@@ -10,7 +10,7 @@ body {
 
 .query-container {
   padding: 10px;
-  margin-top: 16%;
+  margin-top: 13%;
 }
 
 #logo {
@@ -42,6 +42,20 @@ body {
   background-color: #000;
   border-color: #000;
   color: #FFF;
+}
+
+#performance {
+  margin-top: 25px;
+}
+
+#performance a {
+  color: #e6e6e6;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+#performance a:hover {
+  color: #000;
 }
 
 .dbug {
