@@ -21,6 +21,10 @@ body {
   font-size: 4.5em;
 }
 
+#logo h1 i {
+  font-size: .62em;
+}
+
 #search div.input-group input {
   border-radius: 0px;
   border-top-left-radius: 3px;
