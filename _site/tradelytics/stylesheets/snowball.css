@@ -10,7 +10,38 @@ body {
 
 .query-container {
   padding: 10px;
-  margin-top: 20%;
+  margin-top: 16%;
+}
+
+#logo {
+  padding-bottom: 30px;
+}
+
+#logo h1 {
+  font-size: 4.5em;
+}
+
+#search div.input-group input {
+  border-radius: 0px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #292929;
+  border-color: #292929;
+  color: #FFF;
+}
+
+#search div.input-group span {
+  border-radius: 0px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #292929;
+  border-color: #292929;
+}
+
+#search div.input-group span:hover {
+  background-color: #000;
+  border-color: #000;
+  color: #FFF;
 }
 
 .dbug {
