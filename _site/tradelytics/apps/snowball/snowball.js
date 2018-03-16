@@ -61,9 +61,9 @@ $(function() {
   // parse watchlist
   function parseWatchlist() {
     var tickers = $("input:checkbox:checked").map(function() {
-      return $(this).val() + "\n";
+      return $(this).val() + ',';
     }).get();
-    console.log(tickers);
+
     return tickers;
   }
 
