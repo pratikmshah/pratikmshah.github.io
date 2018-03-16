@@ -4,7 +4,7 @@ $(function() {
   $('#run').on('click', function() {
     var tickers = parseTickerSymbols();
     tickers = createUrls(tickers);
-
+    displayCharts(tickers);
   });
 
   // parse user text box symbols
@@ -22,6 +22,16 @@ $(function() {
     }
 
     return arr;
+  }
+
+  // display charts onto the page
+  function displayCharts(arr) {
+    $chart = $('#charts');
+    $chart.empty();
+
+    arr.forEach(function(url) {
+        $chart.append('<div> <img src=' + url + ' class="chart" /> </div>');
+    })
   }
 
 });
