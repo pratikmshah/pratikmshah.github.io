@@ -2,19 +2,19 @@ $(function() {
 
   // execute and return charts for stock tickers from text box
   $('#run').on('click', function() {
-    var value = $.trim($("input").val());
+    var value = $.trim($("#stock-ticker").val());
 
     if(value.length) {
       var tickers = parseTickerSymbols();
       tickers = createUrls(tickers);
       displayCharts(tickers);
     }
-    
+
   });
 
   // parse user text box symbols
   function parseTickerSymbols() {
-    return  $('.input-group input').val().split(',');
+    return  $('#stock-ticker').val().split(',');
   }
 
   // construct chart urls
