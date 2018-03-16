@@ -53,13 +53,18 @@ $(function() {
 
   // generate watchlist file
   function getWatchlist() {
-    var file = new Blob(["x,y,z"], { type: "text/plain;charset=utf-8" });
+    var tickers = parseWatchlist();
+    var file = new Blob(tickers, { type: "text/plain;charset=utf-8" });
     saveAs(file, "watchlist.txt");
   }
 
   // parse watchlist
   function parseWatchlist() {
-
+    var tickers = $("input:checkbox:checked").map(function() {
+      return $(this).val() + "\n";
+    }).get();
+    console.log(tickers);
+    return tickers;
   }
 
 });
