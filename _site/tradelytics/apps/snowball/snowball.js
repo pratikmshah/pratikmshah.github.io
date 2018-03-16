@@ -47,13 +47,14 @@ $(function() {
 
 
   $('#save').on('click', function() {
-    console.log('succes');
+    getWatchlist();
   });
 
 
   // generate watchlist file
   function getWatchlist() {
-
+    var file = new Blob(["x,y,z"], { type: "text/plain;charset=utf-8" });
+    saveAs(file, "watchlist.txt");
   }
 
   // parse watchlist
