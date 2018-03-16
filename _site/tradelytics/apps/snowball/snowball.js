@@ -30,7 +30,7 @@ $(function() {
     $chart.empty();
 
     arr.forEach(function(url) {
-        $chart.append('<div> <img src=' + url + ' class="chart" /> </div>');
+        $chart.append('<div class="chart-container"> <img src=' + url + ' class="chart" /> </div>');
     })
   }
 
