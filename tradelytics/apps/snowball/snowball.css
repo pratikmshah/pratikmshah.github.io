@@ -79,6 +79,10 @@ input[type='checkbox']:checked {
   color: #000;
 }
 
+#save {
+  display: none;
+}
+
 #charts {
   margin-top: 350px;
 }

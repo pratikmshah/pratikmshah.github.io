@@ -1,13 +1,17 @@
 $(function() {
 
+  // hide save button
+  $('#save').hide();
+
   // execute and return charts for stock tickers from text box
   $('#run').on('click', function() {
     var value = $.trim($("#stock-ticker").val());
 
     if(value.length) {
       var tickers = parseTickerSymbols();
+      var copyTickers = tickers.slice();
       tickers = createUrls(tickers);
-      displayCharts(tickers);
+      displayCharts(tickers, copyTickers);
     }
 
   });
@@ -30,13 +34,31 @@ $(function() {
   }
 
   // display charts onto the page
-  function displayCharts(arr) {
+  function displayCharts(arr, sym) {
     $chart = $('#charts');
     $chart.empty();
+    $('#save').show();
 
-    arr.forEach(function(url) {
-        $chart.append('<div class="chart-container"> <img src=' + url + ' class="chart" /> <br> <input type="checkbox"  name="watchlist" value=""> </div>');
-    })
+    for (var i = 0; i < arr.length; i++) {
+      $chart.append('<div class="chart-container"> <img src=' + arr[i] + ' class="chart" /> <br> <input type="checkbox"  name="watchlist" value=' + sym[i].toUpperCase() + '> </div>');
+    }
+
+  }
+
+
+  $('#save').on('click', function() {
+    console.log('succes');
+  });
+
+
+  // generate watchlist file
+  function getWatchlist() {
+
+  }
+
+  // parse watchlist
+  function parseWatchlist() {
+
   }
 
 });
