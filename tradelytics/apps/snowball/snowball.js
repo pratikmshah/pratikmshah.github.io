@@ -2,9 +2,14 @@ $(function() {
 
   // execute and return charts for stock tickers from text box
   $('#run').on('click', function() {
-    var tickers = parseTickerSymbols();
-    tickers = createUrls(tickers);
-    displayCharts(tickers);
+    var value = $.trim($("input").val());
+
+    if(value.length) {
+      var tickers = parseTickerSymbols();
+      tickers = createUrls(tickers);
+      displayCharts(tickers);
+    }
+    
   });
 
   // parse user text box symbols
