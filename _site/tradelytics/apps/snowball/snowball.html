@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Snowball</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="../../stylesheets/normalize.css">
+    <link rel="stylesheet" href="../../stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="../../stylesheets/font-awesome.min.css">
+    <link rel="stylesheet" href="snowball.css">
+    <link rel="icon" type="image/ico" href="../../imgs/favicon.ico" sizes="32x32" />
+
+    <script src="../../scripts/jquery-2.2.0.min.js"></script>
+    <script src="../../scripts/bootstrap.min.js"></script>
+    <script src="FileSaver.js"></script>
+    <script src="snowball.js"></script>
+
+  </head>
+
+  <body>
+
+    <div id="main" class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3 query-container">
+
+            <div id="logo" class="col-sm-12">
+              <h1>Sn<i class="fa fa-snowflake-o"></i>wball</h1>
+            </div> <!-- end of logo -->
+
+            <div id="search" class="col-sm-10 col-sm-offset-1">
+              <div class="input-group">
+                <input type="text" id="stock-ticker" class="form-control input-lg">
+                <span id="run" class="input-group-addon btn">
+                  <i class="glyphicon glyphicon-console"></i>
+                </span>
+              </div>
+            </div>
+
+            <div id="performance" class="col-sm-12">
+              <a href="https://finviz.com/groups.ashx?g=sector&v=210&o=name" target="_blank">Performance</a>
+              <a href="https://finviz.com/screener.ashx?v=111&f=cap_smallover,geo_usa,ind_stocksonly,sh_curvol_o0,sh_relvol_o1,ta_highlow52w_nh&o=-marketcap" target="_blank">52week</a>
+              <a href="https://convert.town/column-to-comma-separated-list" target="_blank">CSV_Convert</a>
+            </div>
+
+          </div> <!-- query container end -->
+
+        </div> <!-- end of row for query container -->
+
+        </div>
+
+        <div class="col-sm-12">
+          <button id="save" type="button" class="btn btn-default text-center col-xs-2 col-xs-offset-5">
+            <strong>Save Watchlist</strong>
+          </button>
+        </div>
+
+        <div id="charts" class="col-sm-12 text-center">
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+
+</html>

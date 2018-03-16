@@ -1,0 +1,103 @@
+body {
+  background-color: #333;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Nunito', sans-serif;
+  color: white;
+}
+
+input[type='checkbox'] {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    width: 24px;
+    height: 24px;
+    background: #333;
+    border-radius: 5px;
+    border: 3px solid black;
+    margin-top: 15px;
+}
+input[type='checkbox']:checked {
+    background: green;
+}
+
+.query-container {
+  padding: 10px;
+  margin-top: 13%;
+}
+
+#logo {
+  padding-bottom: 30px;
+}
+
+#logo h1 {
+  font-size: 4.5em;
+}
+
+#logo h1 i {
+  font-size: .62em;
+}
+
+#search div.input-group input {
+  border-radius: 0px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background-color: #292929;
+  border-color: #292929;
+  color: #FFF;
+}
+
+#search div.input-group span {
+  border-radius: 0px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: #292929;
+  border-color: #292929;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#search div.input-group span:hover {
+  background-color: #000;
+  border-color: #000;
+  color: #FFF;
+}
+
+#performance {
+  margin-top: 25px;
+}
+
+#performance a {
+  color: #e6e6e6;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 15px;
+}
+
+#performance a:hover {
+  color: #000;
+}
+
+#save {
+  display: none;
+}
+
+#charts {
+  margin-top: 350px;
+}
+
+.chart-container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.chart {
+  border: 5px solid black;
+}
+
+.dbug {
+  border: 1px solid red;
+}
