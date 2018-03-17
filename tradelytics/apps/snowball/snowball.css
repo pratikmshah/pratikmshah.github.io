@@ -53,7 +53,7 @@ input[type='checkbox']:checked {
   color: #FFF;
 }
 
-#search div.input-group span {
+#search div.input-group span#run {
   border-radius: 0px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
@@ -63,10 +63,20 @@ input[type='checkbox']:checked {
   padding-right: 20px;
 }
 
-#search div.input-group span:hover {
+#search div.input-group span#run:hover {
   background-color: #000;
   border-color: #000;
   color: #FFF;
+}
+
+#search div.input-group span#erase {
+  background-color: #292929;
+  border-color: #292929;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#search div.input-group span#erase:hover {
+  color: red;
 }
 
 #performance {

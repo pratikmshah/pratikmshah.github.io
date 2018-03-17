@@ -1,8 +1,6 @@
 $(function() {
 
-  // hide save button, reset values on texbox
-  $('#save').hide();
-  $('#stock-ticker').val('');
+  onLoad();
 
   // execute and return charts for stock tickers from text box
   $('#run').on('click', function() {
@@ -14,7 +12,21 @@ $(function() {
       tickers = createUrls(tickers);
       displayCharts(tickers, copyTickers);
     }
+  });
 
+  // erase input box on click of x button
+  $('#erase').on('click', function() {
+    $('#stock-ticker').val('');
+    $('#erase').hide();
+  });
+
+  // check values inside textbox and toggle cancel button
+  $('#search').on('keypress', function() {
+    if($('#stock-ticker').val().length) {
+      $('#erase').show();
+    } else {
+      $('#erase').hide();
+    }
   });
 
   // parse user text box symbols
@@ -46,7 +58,7 @@ $(function() {
 
   }
 
-
+  // save watchlist
   $('#save').on('click', function() {
     getWatchlist();
   });
@@ -82,3 +94,10 @@ $(function() {
   });
 
 });
+
+function onLoad() {
+  // hide save button, reset values on texbox
+  $('#save').hide();
+  $('#stock-ticker').val('');
+  $('#erase').hide();
+}
