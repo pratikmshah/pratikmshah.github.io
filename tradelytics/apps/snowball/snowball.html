@@ -33,12 +33,17 @@
           <div class="col-sm-6 col-sm-offset-3 query-container">
 
             <div id="logo" class="col-sm-12">
-              <h1>Sn<i class="fa fa-snowflake-o"></i>wball</h1>
+              <a href="snowball.html">
+                <h1>Sn<i class="fa fa-snowflake-o"></i>wball</h1>
+              </a>
             </div> <!-- end of logo -->
 
             <div id="search" class="col-sm-10 col-sm-offset-1">
               <div class="input-group">
                 <input type="text" id="stock-ticker" class="form-control input-lg">
+                <span id="erase" class="input-group-addon btn">
+                  <i class="glyphicon glyphicon-remove-circle"></i>
+                </span>
                 <span id="run" class="input-group-addon btn">
                   <i class="glyphicon glyphicon-console"></i>
                 </span>
@@ -46,9 +51,23 @@
             </div>
 
             <div id="performance" class="col-sm-12">
-              <a href="https://finviz.com/groups.ashx?g=sector&v=210&o=name" target="_blank">Performance</a>
-              <a href="https://finviz.com/screener.ashx?v=111&f=cap_smallover,geo_usa,ind_stocksonly,sh_curvol_o0,sh_relvol_o1,ta_highlow52w_nh&o=-marketcap" target="_blank">52week</a>
-              <a href="https://convert.town/column-to-comma-separated-list" target="_blank">CSV_Convert</a>
+              <ul class="list-unstyled list-inline">
+                <li>
+                  <a href="https://finviz.com/groups.ashx?g=sector&v=210&o=name" target="_blank">Performance</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Scans</a>
+                  <ul id="scans" class="dropdown-menu">
+                    <li>
+                      <a href="https://finviz.com/screener.ashx?v=111&f=cap_smallover,geo_usa,ind_stocksonly,sh_curvol_o0,sh_relvol_o1,ta_highlow52w_nh&o=-marketcap" target="_blank">52 Week High</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="https://convert.town/column-to-comma-separated-list" target="_blank">CSV_Convert</a>
+                </li>
+              </ul>
+
             </div>
 
           </div> <!-- query container end -->
@@ -61,6 +80,7 @@
           <button id="save" type="button" class="btn btn-default text-center col-xs-2 col-xs-offset-5">
             <strong>Save Watchlist</strong>
           </button>
+          <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
         </div>
 
         <div id="charts" class="col-sm-12 text-center">

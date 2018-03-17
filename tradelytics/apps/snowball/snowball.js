@@ -1,7 +1,6 @@
 $(function() {
 
-  // hide save button
-  $('#save').hide();
+  onLoad();
 
   // execute and return charts for stock tickers from text box
   $('#run').on('click', function() {
@@ -13,7 +12,21 @@ $(function() {
       tickers = createUrls(tickers);
       displayCharts(tickers, copyTickers);
     }
+  });
 
+  // erase input box on click of x button
+  $('#erase').on('click', function() {
+    $('#stock-ticker').val('');
+    $('#erase').hide();
+  });
+
+  // check values inside textbox and toggle cancel button
+  $('#search').on('keyup', function() {
+    if($('#stock-ticker').val().length) {
+      $('#erase').show();
+    } else {
+      $('#erase').hide();
+    }
   });
 
   // parse user text box symbols
@@ -45,9 +58,11 @@ $(function() {
 
   }
 
-
+  // save watchlist
   $('#save').on('click', function() {
-    getWatchlist();
+    if($("input:checkbox:checked").length) {
+      getWatchlist();
+    }
   });
 
 
@@ -67,4 +82,24 @@ $(function() {
     return tickers;
   }
 
+  // scroll top
+  $(document).scroll(function() {
+    if($(document).scrollTop() > 100) {
+      $("button#scroll-top").css("display", "block");
+    } else {
+      $("button#scroll-top").css("display", "none");
+    }
+  });
+
+  $("#scroll-top").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+  });
+
 });
+
+// hide save button, reset values on texbox when page loads
+function onLoad() {
+  $('#save').hide();
+  $('#stock-ticker').val('');
+  $('#erase').hide();
+}

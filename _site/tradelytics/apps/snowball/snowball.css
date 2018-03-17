@@ -31,11 +31,16 @@ input[type='checkbox']:checked {
   padding-bottom: 30px;
 }
 
-#logo h1 {
+#logo a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+#logo a h1 {
   font-size: 4.5em;
 }
 
-#logo h1 i {
+#logo a h1 i {
   font-size: .62em;
 }
 
@@ -48,7 +53,7 @@ input[type='checkbox']:checked {
   color: #FFF;
 }
 
-#search div.input-group span {
+#search div.input-group span#run {
   border-radius: 0px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
@@ -58,25 +63,40 @@ input[type='checkbox']:checked {
   padding-right: 20px;
 }
 
-#search div.input-group span:hover {
+#search div.input-group span#run:hover {
   background-color: #000;
   border-color: #000;
   color: #FFF;
+}
+
+#search div.input-group span#erase {
+  background-color: #292929;
+  border-color: #292929;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#search div.input-group span#erase:hover {
+  color: red;
 }
 
 #performance {
   margin-top: 25px;
 }
 
-#performance a {
+#performance li a {
   color: #e6e6e6;
   text-decoration: none;
   font-size: 18px;
   padding-left: 15px;
 }
 
-#performance a:hover {
+#performance li a:hover {
   color: #000;
+}
+
+.dropdown-menu {
+  border-radius: 0 !important;
+  background-color: black !important;
 }
 
 #save {
@@ -96,6 +116,42 @@ input[type='checkbox']:checked {
 
 .chart {
   border: 5px solid black;
+}
+
+#scroll-top {
+  display: none;
+  position: fixed;
+  border: none;
+  bottom: 25px;
+  right: 75px;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 99;
+  padding: 0px;
+  font-size: 3em;
+}
+
+#scroll-top  span.glyphicon {
+  color: black;
+  text-shadow: 2px 0px black, 1px -1px black, 1px -1px black, 2px 0px black;
+}
+
+#scroll-top  span.glyphicon:hover {
+  color: white;
+  text-shadow: 2px 0px black, 1px -1px black, 1px -1px black, 2px 0px black;
+}
+
+@media only screen and (max-width: 415px) {
+  #scroll-top {
+    bottom: 20px;
+    right: 40px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #scroll-top {
+    bottom: 10px;
+    right: 20px;
+  }
 }
 
 .dbug {
