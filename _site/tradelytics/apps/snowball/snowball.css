@@ -108,6 +108,42 @@ input[type='checkbox']:checked {
   border: 5px solid black;
 }
 
+#scroll-top {
+  display: none;
+  position: fixed;
+  border: none;
+  bottom: 25px;
+  right: 75px;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 99;
+  padding: 0px;
+  font-size: 3em;
+}
+
+#scroll-top  span.glyphicon {
+  color: black;
+  text-shadow: 2px 0px black, 1px -1px black, 1px -1px black, 2px 0px black;
+}
+
+#scroll-top  span.glyphicon:hover {
+  color: white;
+  text-shadow: 2px 0px black, 1px -1px black, 1px -1px black, 2px 0px black;
+}
+
+@media only screen and (max-width: 415px) {
+  #scroll-top {
+    bottom: 20px;
+    right: 40px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #scroll-top {
+    bottom: 10px;
+    right: 20px;
+  }
+}
+
 .dbug {
   border: 1px solid red;
 }
