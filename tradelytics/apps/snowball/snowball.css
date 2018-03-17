@@ -73,14 +73,14 @@ input[type='checkbox']:checked {
   margin-top: 25px;
 }
 
-#performance a {
+#performance li a {
   color: #e6e6e6;
   text-decoration: none;
   font-size: 18px;
   padding-left: 15px;
 }
 
-#performance a:hover {
+#performance li a:hover {
   color: #000;
 }
 
