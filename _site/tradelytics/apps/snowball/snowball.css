@@ -84,6 +84,11 @@ input[type='checkbox']:checked {
   color: #000;
 }
 
+.dropdown-menu {
+  border-radius: 0 !important;
+  background-color: black !important;
+}
+
 #save {
   display: none;
 }
