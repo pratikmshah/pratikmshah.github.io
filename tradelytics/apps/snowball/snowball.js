@@ -1,7 +1,8 @@
 $(function() {
 
-  // hide save button
+  // hide save button, reset values on texbox
   $('#save').hide();
+  $('#stock-ticker').val('');
 
   // execute and return charts for stock tickers from text box
   $('#run').on('click', function() {
