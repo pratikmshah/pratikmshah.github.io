@@ -21,7 +21,7 @@ $(function() {
   });
 
   // check values inside textbox and toggle cancel button
-  $('#search').on('keypress', function() {
+  $('#search').on('keyup', function() {
     if($('#stock-ticker').val().length) {
       $('#erase').show();
     } else {
@@ -60,7 +60,9 @@ $(function() {
 
   // save watchlist
   $('#save').on('click', function() {
-    getWatchlist();
+    if($("input:checkbox:checked").length) {
+      getWatchlist();
+    }
   });
 
 
@@ -95,8 +97,8 @@ $(function() {
 
 });
 
+// hide save button, reset values on texbox when page loads
 function onLoad() {
-  // hide save button, reset values on texbox
   $('#save').hide();
   $('#stock-ticker').val('');
   $('#erase').hide();
