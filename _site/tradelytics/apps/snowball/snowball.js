@@ -21,7 +21,7 @@ $(function() {
   });
 
   // check values inside textbox and toggle cancel button
-  $('#search').on('keyup', function() {
+  $('#search').on('change paste keyup', function() {
     if($('#stock-ticker').val().length) {
       $('#erase').show();
     } else {

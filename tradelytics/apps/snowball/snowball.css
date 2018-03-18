@@ -24,23 +24,23 @@ input[type='checkbox']:checked {
 
 .query-container {
   padding: 10px;
-  margin-top: 13%;
+  margin-top: 11%;
 }
 
 #logo {
-  padding-bottom: 30px;
+  padding-bottom: 23px;
 }
 
-#logo a {
+#logo h1 a {
   text-decoration: none;
   color: #FFF;
 }
 
-#logo a h1 {
+#logo h1 {
   font-size: 4.5em;
 }
 
-#logo a h1 i {
+#logo h1 a i {
   font-size: .62em;
 }
 
