@@ -1,3 +1,5 @@
+var watchlist = 'watchlist';
+
 $(function() {
 
   onLoad();
@@ -70,7 +72,7 @@ $(function() {
   function getWatchlist() {
     var tickers = parseWatchlist();
     var file = new Blob(tickers, { type: "text/plain;charset=utf-8" });
-    saveAs(file, "watchlist.txt");
+    saveAs(file, watchlist + ".txt");
   }
 
   // parse watchlist
@@ -81,6 +83,11 @@ $(function() {
 
     return tickers;
   }
+
+  // set watchlist name
+  $('#scans li a').on('click', function() {
+    watchlist = $(this).attr("data-text");
+  });
 
   // scroll top
   $(document).scroll(function() {
