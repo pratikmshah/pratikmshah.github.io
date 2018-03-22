@@ -123,6 +123,10 @@ input[type='checkbox']:checked {
   border-color: black;
 }
 
+#markets .modal {
+  color: black !imporant;
+}
+
 #scroll-top {
   display: none;
   position: fixed;
