@@ -55,10 +55,26 @@ $(function() {
     $('#save').show();
 
     for (var i = 0; i < arr.length; i++) {
-      $chart.append('<div class="chart-container"> <img src=' + arr[i] + ' class="chart" /> <br> <input type="checkbox"  name="watchlist" value=' + sym[i].toUpperCase() + '> </div>');
+      $chart.append('<div class="chart-container"> <img src=' + arr[i] + ' class="chart" data-border-color="black" /> <input type="checkbox"  name="watchlist" value=' + sym[i].toUpperCase() + '> </div>');
     }
 
   }
+
+  // on double click change border color to green or black
+  $('#charts').on('click', '.chart-container img', function() {
+    $this = $(this);
+
+    if($this.attr('data-border-color') === 'black') {
+      $this.attr('data-border-color', 'green');
+      $this.css('border-color', '#7CFC00');
+      $this.next().prop("checked", true);
+    } else {
+      $this.attr('data-border-color', 'black');
+      $this.css('border-color', 'black');
+      $this.next().prop("checked", false);
+    }
+
+  });
 
   // save watchlist
   $('#save').on('click', function() {

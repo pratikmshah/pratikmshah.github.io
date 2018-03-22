@@ -114,8 +114,13 @@ input[type='checkbox']:checked {
   padding-bottom: 15px;
 }
 
+.chart-container input {
+  display: none;
+}
+
 .chart {
-  border: 5px solid black;
+  border: 5px solid;
+  border-color: black;
 }
 
 #scroll-top {
