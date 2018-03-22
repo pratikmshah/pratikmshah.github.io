@@ -123,6 +123,19 @@ input[type='checkbox']:checked {
   border-color: black;
 }
 
+.modal-title,
+.modal-body,
+.modal-footer {
+  color: black !important;
+}
+
+.modal-chart-img {
+  max-width: 568px;
+  height: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
 #scroll-top {
   display: none;
   position: fixed;
