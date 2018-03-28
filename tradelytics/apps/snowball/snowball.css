@@ -57,13 +57,7 @@ input[type='checkbox']:checked {
   border-top-color: #FFF;
   border-left-color: #FFF;
   border-bottom-color: #FFF;
-  background: rgba(41,106,212,1);
-  background: -moz-linear-gradient(left, rgba(41,106,212,1) 0%, rgba(78,142,247,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(41,106,212,1)), color-stop(100%, rgba(78,142,247,1)));
-  background: -webkit-linear-gradient(left, rgba(41,106,212,1) 0%, rgba(78,142,247,1) 100%);
-  background: -o-linear-gradient(left, rgba(41,106,212,1) 0%, rgba(78,142,247,1) 100%);
-  background: -ms-linear-gradient(left, rgba(41,106,212,1) 0%, rgba(78,142,247,1) 100%);
-  background: linear-gradient(to right, rgba(41,106,212,1) 0%, rgba(78,142,247,1) 100%);
+  background-color: transparent;
   color: #FFF;
   /* background-color: #292929; */
   /* border-color: #292929; */
@@ -73,10 +67,14 @@ input[type='checkbox']:checked {
   border-radius: 0px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  background-color: #292929;
-  border-color: #292929;
+  border-top-color: #FFF;
+  border-left-color: #FFF;
+  border-bottom-color: #FFF;
+  background-color: transparent;
   padding-left: 20px;
   padding-right: 20px;
+  /* background-color: #292929; */
+  /* border-color: #292929; */
 }
 
 #search div.input-group span#run:hover {
