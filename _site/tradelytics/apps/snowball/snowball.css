@@ -192,6 +192,10 @@ input[type='checkbox']:checked {
   }
 }
 
+.clr-ecko {
+  color: #6633FF;
+}
+
 .dbug {
   border: 1px solid red;
 }
