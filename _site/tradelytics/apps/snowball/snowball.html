@@ -55,7 +55,7 @@
             <div id="performance" class="col-sm-12">
               <ul class="list-unstyled list-inline">
                 <li>
-                  <a href="https://finviz.com/groups.ashx?g=sector&v=210&o=name" target="_blank">Performance</a>
+                  <a href="#" type="button" data-toggle="modal" data-target="#perform" >Performance</a>
                 </li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Scans</a>
@@ -109,7 +109,7 @@
       </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Markets Modal -->
     <div id="markets" class="modal fade" role="dialog">
       <div class="modal-dialog">
 
@@ -152,6 +152,60 @@
                   </div>
                 </div>
 
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- End of Markets Modal -->
+
+    <!-- Perform Modal -->
+    <div id="perform" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title text-center">Overall Markets</h4>
+          </div>
+          <div class="modal-body text-center">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <img src="https://finviz.com/image.ashx?dow&rev=636573436821955378" alt="DOW" class="modal-chart-img">
+                  </div>
+
+                  <div class="col-sm-12">
+                    <img src="https://finviz.com/image.ashx?nasdaq&rev=636573439156110172" alt="NASDAQ" class="modal-chart-img">
+                  </div>
+
+                  <div class="col-sm-12">
+                    <img src="https://finviz.com/image.ashx?sp500&rev=636573439156110172" alt="S&P500" class="modal-chart-img">
+                  </div>
+
+                  <div class="col-sm-12">
+                    <img src="https://finviz.com/chart.ashx?t=IYY&ty=c&ta=1&p=d&s=l" alt="IYY" class="modal-chart-img">
+                  </div>
+
+                  <div class="col-sm-12">
+                    <img src="https://finviz.com/chart.ashx?t=SPY&ty=c&ta=1&p=d&s=l" alt="SPY" class="modal-chart-img">
+                  </div>
+
+                  <div class="col-sm-12">
+                    <img src="https://finviz.com/chart.ashx?t=QQQ&ty=c&ta=1&p=d&s=l" alt="QQQ" class="modal-chart-img">
+                  </div>
+
+                  <div class="col-sm-12">
+                    <img src="https://finviz.com/chart.ashx?t=IWM&ty=c&ta=1&p=d&s=l" alt="IWM" class="modal-chart-img">
+                  </div>
+                </div>
 
               </div>
             </div>
@@ -163,6 +217,7 @@
 
       </div>
     </div>
+    <!-- End of Perform Modal -->
 
   </body>
 
