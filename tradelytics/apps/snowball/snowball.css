@@ -114,6 +114,22 @@ input[type='checkbox']:checked {
   color: #000;
 }
 
+#performance ul li.dropdown {
+  position: inherit;
+}
+
+#scans div div li {
+  padding-bottom: 5px;
+}
+
+#scans div div li a {
+  font-size: 16px;
+}
+
+#scans div div li a:hover {
+  color: #05c3de;
+}
+
 .dropdown-menu {
   border-radius: 0 !important;
   background-color: black !important;
@@ -123,7 +139,7 @@ input[type='checkbox']:checked {
   font-size: 18px;
   font-weight: bold;
   padding-left: 15px;
-  color: #6633FF;
+  color: #05c3de;
 }
 
 #save {
