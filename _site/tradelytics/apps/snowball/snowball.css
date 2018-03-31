@@ -114,6 +114,10 @@ input[type='checkbox']:checked {
   color: #000;
 }
 
+#performance ul li.dropdown {
+  position: inherit;
+}
+
 .dropdown-menu {
   border-radius: 0 !important;
   background-color: black !important;
