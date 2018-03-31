@@ -119,14 +119,11 @@ input[type='checkbox']:checked {
   background-color: black !important;
 }
 
-ul#scans li a {
-  font-size: 16px;
-}
-
 .dropdown-header {
   font-size: 18px;
   font-weight: bold;
   padding-left: 15px;
+  color: #6633FF;
 }
 
 #save {
@@ -200,10 +197,6 @@ ul#scans li a {
     bottom: 10px;
     right: 20px;
   }
-}
-
-.clr-ecko {
-  color: #6633FF;
 }
 
 .dbug {
