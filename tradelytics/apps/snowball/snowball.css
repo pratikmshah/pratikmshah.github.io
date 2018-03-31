@@ -119,6 +119,12 @@ input[type='checkbox']:checked {
   background-color: black !important;
 }
 
+.dropdown-header {
+  font-size: 18px;
+  font-weight: bolder;
+  text-align: center;
+}
+
 #save {
   display: none;
 }
