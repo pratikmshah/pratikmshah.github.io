@@ -133,6 +133,7 @@ input[type='checkbox']:checked {
 .dropdown-menu {
   border-radius: 0 !important;
   background-color: black !important;
+  width: 100%;
 }
 
 .dropdown-header {
