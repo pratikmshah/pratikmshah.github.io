@@ -119,6 +119,13 @@ input[type='checkbox']:checked {
   background-color: black !important;
 }
 
+.dropdown-header {
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 15px;
+  color: #6633FF;
+}
+
 #save {
   display: none;
 }
