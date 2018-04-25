@@ -107,7 +107,8 @@ input[type='checkbox']:checked {
 }
 
 #performance li a {
-  color: #e6e6e6;
+  /* color: #e6e6e6; */
+  color: #fff;
   text-decoration: none;
   font-size: 18px;
   padding-left: 15px;
