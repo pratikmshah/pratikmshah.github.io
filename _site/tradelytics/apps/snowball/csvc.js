@@ -14,8 +14,8 @@ $(function() {
   });
 
   // copy text from box2
-  $("copy-box").on('click', function() {
-    copyText();
+  $("#copy-box").on('click', function() {
+    copyText($box2);
   });
 
 });
@@ -30,6 +30,7 @@ function clearBoxes(one, two) {
   two.val("");
 }
 
-function copyText() {
-
+function copyText(box) {
+  box.select();
+  document.execCommand("Copy");
 }
