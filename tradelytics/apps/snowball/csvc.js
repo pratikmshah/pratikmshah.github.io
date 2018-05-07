@@ -3,7 +3,7 @@ $(function() {
   $box2 = $("#box2");
 
   // convert string from box1 and place into box2
-  $box1.on("keyup", function() {
+  $box1.on('keyup paste change', function() {
     var txt = $box1.val();
     $box2.val(textToCSV(txt));
   });

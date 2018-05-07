@@ -207,3 +207,7 @@ input[type='checkbox']:checked {
 .dbug {
   border: 1px solid red;
 }
+
+.text-none {
+  text-decoration: none !important;
+}
