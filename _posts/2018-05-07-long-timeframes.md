@@ -24,3 +24,9 @@ Over the past month I have studied and incorporated his strategy and even copied
   - Stick to the pattern
   - Manager risk
   - Reduce emotions & reactions to volatility
+
+<br>
+
+With the rules in place lets look at how he looks for the stocks to play. His strategy has 6 parts. First, he scans for plays to analyze. He starts with the monthly time frame and uses the 20DMA as a guide. Anything above the 20DMA is good and anything below is a no. Even better would be if the 20MA is above the 50MA. The key is to buy after a breakout from tight consolidation. The 20MA needs to be rising also because you want to buy stocks that are trending.
+
+After the initial position has been set he then monitors the weekly time frame and adds to the position after another tight consolidation; usually when price hits 20DMA and breaks downtrend. When price gets away from 20DMA severly that is the time to start taking profits. If the price breaks the 20 and trend has changed that is a strong `sell` signal. The whole goal is to catch the run right after the breakout. 
