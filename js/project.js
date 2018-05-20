@@ -1,9 +1,10 @@
 $(function(){
   // call nextImage over and over every 3.5 seconds
-  var slides = ['nextImage("#prism-slide")', 'nextImage("#yeeld-slide")', 'nextImage("#trade-slide")'];
+  var slides = ['nextImage("#prism-slide")', 'nextImage("#yeeld-slide")', 'nextImage("#trade-slide")',
+                'nextImage("#snowball-slide")'];
 
   for (var i = 0; i < slides.length; i++) {
-    setInterval(slides[i], 3500); 
+    setInterval(slides[i], 3500);
   }
 
 });
