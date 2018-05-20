@@ -3,7 +3,8 @@ $(document).ready(function() {
   // 1 button to load favorite links in tabs
 	$("a.exec").on("click", function(e) {
 	    e.preventDefault();
-	    var links = ['http://finviz.com/', 'https://stocktwits.com/home']
+	    var links = ['http://finviz.com/', 'https://stocktwits.com/home', 'https://seekingalpha.com/',
+									 'http://pratikmshah.github.io/tradelytics/apps/snowball/snowball.html']
 
 	    for (var i = 0; i < links.length; i++) {
 	    	window.open(links[i]);

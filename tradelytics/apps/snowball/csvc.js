@@ -22,7 +22,13 @@ $(function() {
 
 // split array on every new line and then join by comma
 function textToCSV(text) {
-  return text.split("\n").join(",");
+  var txt = text.split("\n").join(",");
+
+  if(txt.charAt(txt.length -1) == ',') {
+    return txt.slice(0, -1);
+  }
+
+  return txt;
 }
 
 function clearBoxes(one, two) {
