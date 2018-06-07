@@ -172,3 +172,7 @@ ul.nav li a strong span:hover {
 .max-chart-width {
 	max-width: 550px;
 }
+
+.spacer {
+	min-height: 50px;
+}
