@@ -168,3 +168,7 @@ ul.nav li a strong span:hover {
 #tools div ul li span {
 	color: #999;
 }
+
+.max-chart-width {
+	max-width: 550px;
+}
