@@ -23,4 +23,17 @@ $(document).ready(function() {
       $("#ticker").val('');
   });
 
+	// scroll up button
+  $(document).scroll(function() {
+    if($(document).scrollTop() > 100) {
+      $("button#scroll-top").css("display", "block");
+    } else {
+      $("button#scroll-top").css("display", "none");
+    }
+  });
+
+  $("#scroll-top").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+  });
+
 });

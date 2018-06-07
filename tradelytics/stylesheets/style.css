@@ -168,3 +168,23 @@ ul.nav li a strong span:hover {
 #tools div ul li span {
 	color: #999;
 }
+
+.max-chart-width {
+	max-width: 550px;
+}
+
+.spacer {
+	min-height: 50px;
+}
+
+#scroll-top {
+  display: none;
+  position: fixed;
+  border: none;
+  bottom: 25px;
+  right: 75px;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 99;
+  padding: 0px;
+  font-size: 3em;
+}
