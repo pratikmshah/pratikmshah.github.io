@@ -211,3 +211,9 @@ input[type='checkbox']:checked {
 .text-none {
   text-decoration: none !important;
 }
+
+@media (min-width: 768px) {
+#markets .modal-dialog {
+    width: 1250px;
+  }
+}
