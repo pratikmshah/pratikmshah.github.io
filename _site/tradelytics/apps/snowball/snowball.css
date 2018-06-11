@@ -114,7 +114,11 @@ input[type='checkbox']:checked {
   font-size: 16px;
 }
 
-#scans, #etf-scans div div li a:hover {
+#etf-scans div div li a:hover {
+  color: #05c3de;
+}
+
+#scans div div li a:hover {
   color: #05c3de;
 }
 
