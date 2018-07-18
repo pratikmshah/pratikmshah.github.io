@@ -9,6 +9,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  1. [History of Investment Banking Services](#history)
  - [Importance of History, Name and Tradition](#hisnametrad)
  - [Early Origins of Investment Banking](#earlyorigin)
+ - [Commercial Vs Investment Bank](#cominv)
  2. [Range](#range)
  - [Range Object](#rangeobj)
 
@@ -20,16 +21,36 @@ This blog post contains my notes for a course on basics in understanding Investm
   connections, partnerships and experience allowing them to attract top clients and investors.
 
 <br>
+
 #### Early Origins of Investment Banking <a name="earlyorigin"></a>
 - IB emerged in the early 19th century when economic expansion was occurring and commercial banks could not serve loan growth for railroads, mining, and heavy industry.
 - Security underwriting - when banks buy stocks and bonds from companies and resells them to public.
 - Investment Bankers - bridge that connects businesses in need of financing to investors willing to lend that capital.
-  - Governments used investment bankers to sell bonds to public.
-  - Bankers contact potential investors in order to make sure they could sell the debt.
+  - governments used investment bankers to sell bonds to public.
+  - bankers contact potential investors in order to make sure they could sell the debt.
 - Debt 2 Issues
-  - What if government defaults?
-  - What if government tries to renegotiate its debt?
+  - what if government defaults?
+  - what if government tries to renegotiate its debt?
 - IB as Middleman
   - IB told states that defaulted they could not borrow anymore
-  - States then restructured debt to be able to pay
+  - states then restructured debt to be able to pay
   - reputation was born
+
+<br>
+
+#### Commercial Vs Investment Banking <a name="cominv"></a>
+- Commercial Banking
+  - Takes deposits & lends out to borrowers
+  - Makes money via spread
+    - Interest Income - Interest Expenses = Spread
+- Universal Banks
+  - combine commercial and investment banking services
+  - can sell several products to the client (one stop shop)
+  - advisors for all situations
+  - understand the business (competitive advantage)
+- Dangers of Universal
+  - they have too much information on borrower/investor
+  - tempted to sell risky positions
+  - Glass Steagall Act 1933 prevented this
+    - repealed in 1999
+    - led to mega mergers
