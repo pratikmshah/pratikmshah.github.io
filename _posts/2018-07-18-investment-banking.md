@@ -10,6 +10,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Importance of History, Name and Tradition](#hisnametrad)
  - [Early Origins of Investment Banking](#earlyorigin)
  - [Commercial Vs Investment Bank](#cominv)
+ - [Conflicts of Interest](#intconfl)
  2. [Range](#range)
  - [Range Object](#rangeobj)
 
@@ -54,3 +55,19 @@ This blog post contains my notes for a course on basics in understanding Investm
   - Glass Steagall Act 1933 prevented this
     - repealed in 1999
     - led to mega mergers
+
+<br>
+
+#### Conflicts of Interest <a name="intconfl"></a>
+- Products of IB
+  - Trading
+  - Underwriting Debt & Equity
+  - Asset Management
+  - Advisory
+- Conflicts in Trading
+  - Proprietary - buying shares with banks money (more important)
+  - Brokerage - buying shares with clients' money
+  - Research Department
+    - Chinese Wall - underwritters cannot share info with research.
+
+<br>
