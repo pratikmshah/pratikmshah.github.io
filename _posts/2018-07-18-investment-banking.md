@@ -11,8 +11,8 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Early Origins of Investment Banking](#earlyorigin)
  - [Commercial Vs Investment Bank](#cominv)
  - [Conflicts of Interest](#intconfl)
- 2. [Range](#range)
- - [Range Object](#rangeobj)
+ 2. [Four Main Areas of Investment Banking](#four)
+ - [Capital Markets](#capitalmarket)
 
 <br>
 
@@ -71,3 +71,40 @@ This blog post contains my notes for a course on basics in understanding Investm
     - Chinese Wall - underwritters cannot share info with research.
 
 <br>
+
+### Four Main Areas of Investment Banking] <a name="four"></a>
+#### Capital Markets <a name="capitalmarket"></a>
+- Capital Markets
+  - Issue Equity(ECM) or Debt(DCM)
+- Going Public
+  - Founders - want to sell at right price and raise capital
+  - Investors - investment in management and growth potential
+  - Companies administrative expenses will increase due to regulations and document filings
+- What Company Needs for IPO?
+  - size
+  - profitability
+  - administration
+  - growth
+  - strong management
+- IB's Role
+  - provide guidance
+  - IPO preparations
+  - deal with investors
+  - stabilize stock price
+- Seasoned Equity Offerings (SEO)
+  - sell additional shares (dilution)
+  - shares already priced on market
+  - company is compliant with requirements
+  - IB just needs to find buyers for the securities
+- Debt Capital Markets (DCM)
+  - issue bonds
+  - investors buy loan and expect interest payments
+- IB's Role
+  - advise loan terms
+  - prepare presentations
+  - find investors
+  - price the loan
+    - easy because credit of company is rated by independent agency
+- Loan Syndication
+  - loans granted by a pool of banks
+  - syndicate (banks) -> loan -> company
