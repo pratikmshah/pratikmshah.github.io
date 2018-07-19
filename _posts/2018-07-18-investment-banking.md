@@ -28,6 +28,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  3. [Capital Markets - Debt Capital Markets](#capdebt)
  - [Bonds](#bonds)
  - [Why Issue Bonds?](#issuebonds)
+ - [Bond Offerings](#bondoffer)
 
 <br>
 
@@ -308,3 +309,21 @@ This blog post contains my notes for a course on basics in understanding Investm
 - Benefits larger corporations due to fixed costs associated with bonds; you need scale
 - Banks are very risk averse when loaning large amounts of money vs bonds where investors will take risk for higher reward
 - Bond holders are in the hundreds and dealing with them is a difficult and complex task
+
+<br>
+
+#### Bond Offerings <a name="bondoffer"></a>
+- Similar to equity offering
+- Pricing is easier because credit rating agencies rate the company's ability to repay loan
+  - Standard and Poor's Rating Services
+  - Moody's
+  - Fitch Ratings
+- Process
+  - 25-35 days
+  - 1) Hire an advisor
+  - 2) Assemble syndicate
+  - 3) Hire credit rating agency (2 or more better)
+  - 4) IB contact investors and give them provisional conditions such as interest rates and maturity
+  - 5) Bookbuilding
+  - 6) Underwrite and sell to investors
+  - 7) Stabilization service to hold up price of bond
