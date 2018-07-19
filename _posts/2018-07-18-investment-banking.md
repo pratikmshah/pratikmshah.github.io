@@ -14,6 +14,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  2. [Four Main Areas of Investment Banking](#four)
  - [Capital Markets](#capitalmarket)
  - [Advisory Services](#advise)
+ - [Trading and Brokerage](#trading)
 
 <br>
 
@@ -117,12 +118,12 @@ This blog post contains my notes for a course on basics in understanding Investm
   - Mergers and Acquisitions (M&A)
     - acquisition - company buys assets or shares of another company
     - merger - buying company absorbs target company and ceases to exist
-    - 2 parties - buyer and target
+    - two parties - buyer and target
     - buyer offers cash, shares, or cash + shares
   - What use an IB?
     - bankers have deep industry knowledge
     - M&A specific know-how (bidders & targets)
-  - 2 Sides
+  - Two Sides
     - Buy-side is the acquiring company
       - fee only if client buys target
       - strategic advice
@@ -138,3 +139,22 @@ This blog post contains my notes for a course on basics in understanding Investm
     - services when debt cannot be paid and endangered of going bankrupt
     - private workout - get bought, sell assets, or restructure debt
     - bankruptcy procedure
+
+<br>
+
+#### Trading and Brokerage <a name="trading"></a>
+- Trading and Brokerage
+  - Two Ways
+    - prop trading - bank's own money
+      - buy low sell high and profit
+      - research department provides insights
+    - brokerage - buying on behalf of clients
+    - usually account for 35-50% revenues for IB
+  - Market Makers
+    - buy shares of lightly traded securities
+    - sell to provide liquidity and make money on spread
+  - Traded Securites
+    - stocks
+    - bonds
+    - derivatives (options, futures, forwards, swaps)
+    
