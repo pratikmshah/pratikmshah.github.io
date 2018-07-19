@@ -30,6 +30,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Why Issue Bonds?](#issuebonds)
  - [Bond Offerings](#bondoffer)
  - [Securitization](#securitize)
+ - [Loan Syndication](#loansyndicate)
 
 <br>
 
@@ -339,3 +340,13 @@ This blog post contains my notes for a course on basics in understanding Investm
   - solution was securitization where banks sell the loans and transfer risk to investors
 - Banks act as originators where they can lend money to borrowers, package up the loans and sell to investors generating fees
 - Securitization allows investors to gain diversification; for example, pension funds can't loan to consumers but can buy securitized loan full of mortgages
+
+<br>
+
+#### Loan Syndication <a name="loansyndicate"></a>
+- Large loans pooled from several banks
+- Why group loans from multiple banks?
+  - reduce loan size
+  - access to large corporate clients
+  - commission to the lead bank
+- Great diversification on a global scale
