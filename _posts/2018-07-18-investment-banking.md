@@ -25,6 +25,8 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [IPO Time Table](#timetable)
  - [IPO Syndicate](#iposyndicate)
  - [Seasoned Equity Offerings (SEO)](#seoprivate)
+ 3. [Capital Markets - Debt Capital Markets](#capdebt)
+ - [Bonds](#bonds)
 
 <br>
 
@@ -274,3 +276,25 @@ This blog post contains my notes for a course on basics in understanding Investm
 - Much easier since company already has regulation needed in place
 - Fees are lower since stock is already priced by the market
 - Private placement is equity offered to institutional investors only
+
+<br>
+
+### Capital Markets - Debt Capital Markets <a name="capdebt"></a>
+#### Bonds <a name="bonds"></a>
+- Bonds
+  - similar to bank loans
+  - investors lend money to business/government and eventually recoupe capital plus interest
+  - Four Types
+    - Fixed Rate Bonds
+      - predetermined rate of return
+      - fixed interest rate
+      - Maturity of 5, 10, 20 years
+    - Floating Rate Bonds
+      - linked to a reference rate
+      - interest varies as interest rate fluctuates
+    - Equity Related Bonds
+      - debt securities paying an interest rate
+      - can be converted into equity
+    - Asset Backed Securities
+      - bonds offered by a project vehicle
+      - bank loans, credit card debt, mortgage loans and other similar assets.
