@@ -5,6 +5,8 @@ image: "/invest-bank/investmentbanks.jpg"
 ---
 This blog post contains my notes for a course on basics in understanding Investment Banking(IB). In the course they discussed the history of IB, the four main areas of investment banking, company valuations and modeling, and leverage buyouts(LBO).
 
+<br>
+
 ### Table of Contents
  1. [History of Investment Banking Services](#history)
  - [Importance of History, Name and Tradition](#hisnametrad)
@@ -16,6 +18,9 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Advisory Services](#advise)
  - [Trading and Brokerage](#trading)
  - [Asset Management](#asset)
+ 3. [Capital Markets - Equity Capital Markets](#capequity)
+ - [Why Go Public?](#whygopub)
+ - [Who Are The Investors In IPO?](#ipoinvest)
 
 <br>
 
@@ -75,7 +80,7 @@ This blog post contains my notes for a course on basics in understanding Investm
 
 <br>
 
-### Four Main Areas of Investment Banking] <a name="four"></a>
+### Four Main Areas of Investment Banking <a name="four"></a>
 #### Capital Markets <a name="capitalmarket"></a>
 - Capital Markets
   - Issue Equity(ECM) or Debt(DCM)
@@ -173,4 +178,22 @@ This blog post contains my notes for a course on basics in understanding Investm
   - Department
     - Research provides analysis of the portfolio
     - Portfolio Manager allocates the capital
-    - Sales Representative brings in clients 
+    - Sales Representative brings in clients
+
+<br>
+
+### Capital Markets - Equity Capital Markets <a name="capequity"></a>
+#### Why Go Public? <a name="whygopub"></a>
+- Why Companies Go Public?
+  - Finance growth
+  - Use stock to acquire other companies
+  - Reputation and visibility into company
+  - Signal strong market position
+  - Use stock as management compensation
+  - Exit opportunities for founders and venture capitalists
+
+<br>
+
+#### Who Are The Investors In IPO? <a name="ipoinvest"></a>
+- Why Companies Go Public?
+  - Finance growth
