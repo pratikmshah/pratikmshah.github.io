@@ -15,6 +15,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Capital Markets](#capitalmarket)
  - [Advisory Services](#advise)
  - [Trading and Brokerage](#trading)
+ - [Asset Management](#asset)
 
 <br>
 
@@ -157,4 +158,19 @@ This blog post contains my notes for a course on basics in understanding Investm
     - stocks
     - bonds
     - derivatives (options, futures, forwards, swaps)
-    
+
+<br>
+
+#### Asset Management <a name="asset"></a>
+- Asset Management
+  - Managing clients' investments to make money
+  - Gargeted towards wealthy individuals
+  - Multiple asset classes
+    - stocks, bonds, commodities, real estate, private equity
+  - Geographical expertise
+  - Tailored portfolio towards client's risk portfolio
+  - Goal is to maximize returns with minimal risk
+  - Department
+    - Research provides analysis of the portfolio
+    - Portfolio Manager allocates the capital
+    - Sales Representative brings in clients 
