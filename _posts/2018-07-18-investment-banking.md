@@ -29,6 +29,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Bonds](#bonds)
  - [Why Issue Bonds?](#issuebonds)
  - [Bond Offerings](#bondoffer)
+ - [Securitization](#securitize)
 
 <br>
 
@@ -327,3 +328,14 @@ This blog post contains my notes for a course on basics in understanding Investm
   - 5) Bookbuilding
   - 6) Underwrite and sell to investors
   - 7) Stabilization service to hold up price of bond
+
+<br>
+
+#### Securitization <a name="securitize"></a>
+- Group of loans are collected and group together in a special purpose vehicle (SPV) to be sold to investors
+- Reason for this is that banks must maintain a certain capital adequacy ratio (equity/loans > cap adequacy ratio)
+- Capital Adequacy Ratio = Bank's Capital / Risk-Weighted Assets
+  - to raise ratio you could raise capital (costly) or decrease risk-weighted assets
+  - solution was securitization where banks sell the loans and transfer risk to investors
+- Banks act as originators where they can lend money to borrowers, package up the loans and sell to investors generating fees
+- Securitization allows investors to gain diversification; for example, pension funds can't loan to consumers but can buy securitized loan full of mortgages
