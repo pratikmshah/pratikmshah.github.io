@@ -9,7 +9,7 @@ This blog post contains my notes for a course on basics in understanding Investm
 
 ### Table of Contents
  1. [History of Investment Banking Services](#history)
- - [Importance of History, Name and Tradition](#hisnametrad)
+ - [History, Name and Tradition](#hisnametrad)
  - [Early Origins of Investment Banking](#earlyorigin)
  - [Commercial Vs Investment Bank](#cominv)
  - [Conflicts of Interest](#intconfl)
@@ -23,6 +23,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Who Are The Investors In IPO?](#ipoinvest)
  - [Share Price](#shareprice)
  - [IPO Time Table](#timetable)
+ - [IPO Syndicate](#iposyndicate)
 
 <br>
 
@@ -249,3 +250,18 @@ This blog post contains my notes for a course on basics in understanding Investm
     - 5) roadshow to get potential investor and feedback
     - 6) marketing and price range of stock
     - 7) allocate the shares to retail, institutions, hedge funds
+
+<br>
+
+#### IPO Syndicate <a name="iposyndicate"></a>
+- Every IPO involves multiple banks called syndicate banks
+- Syndicate banks are each able to allocate shares to their clientele
+- Syndicate Roles
+  - Global Coordinator - oversees entire process
+  - Bookrunners - market, prepare analyst presentations, and roadshow (1-3 banks)
+  - Lead Manager - client contacts and selling efforts
+- IPO Fees
+  - Fees are typically 1.5% - 7% (3% avg) - bigger company lower fees
+  - Lead Managers - 60%
+  - Bookrunners - 20%
+  - Global Coordinator - 20%
