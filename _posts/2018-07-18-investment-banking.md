@@ -13,6 +13,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Conflicts of Interest](#intconfl)
  2. [Four Main Areas of Investment Banking](#four)
  - [Capital Markets](#capitalmarket)
+ - [Advisory Services](#advise)
 
 <br>
 
@@ -108,3 +109,32 @@ This blog post contains my notes for a course on basics in understanding Investm
 - Loan Syndication
   - loans granted by a pool of banks
   - syndicate (banks) -> loan -> company
+
+<br>
+
+#### Advisory Services <a name="advise"></a>
+- Advisory Services
+  - Mergers and Acquisitions (M&A)
+    - acquisition - company buys assets or shares of another company
+    - merger - buying company absorbs target company and ceases to exist
+    - 2 parties - buyer and target
+    - buyer offers cash, shares, or cash + shares
+  - What use an IB?
+    - bankers have deep industry knowledge
+    - M&A specific know-how (bidders & targets)
+  - 2 Sides
+    - Buy-side is the acquiring company
+      - fee only if client buys target
+      - strategic advice
+      - provide valuation
+      - estimate synergies
+    - Sell-side is the target company
+      - fee is guaranteed
+      - finds bidders
+      - prepare target with questions
+      - provide valuation
+      - coordinate sales
+  - Restructuring
+    - services when debt cannot be paid and endangered of going bankrupt
+    - private workout - get bought, sell assets, or restructure debt
+    - bankruptcy procedure
