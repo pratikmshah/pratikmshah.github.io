@@ -195,5 +195,24 @@ This blog post contains my notes for a course on basics in understanding Investm
 <br>
 
 #### Who Are The Investors In IPO? <a name="ipoinvest"></a>
-- Why Companies Go Public?
-  - Finance growth
+- Who are the Investors in IPO?
+  - Three Types
+    - Retail Investors
+      - private individuals who want to diversify their holdings
+      - buy for extra income
+    - Institutional Investors
+      - mutual, pension, insurance company
+      - professional investors with resources for analysis
+      - Blackrock & Fidelity
+    - Hedge Funds
+      - investment vehicles with sole purpose of making bets to generate quick returns
+      - short time period
+- What do Investors look for in a IPO Company?
+  - Success stories
+  - Market leadership
+  - Strong management
+  - Solid financials
+  - Visibility and disclosures
+  - Liquidity
+- Investors also want a discount to valuation
+  - institutions and retail tend to hold stock for the long term
