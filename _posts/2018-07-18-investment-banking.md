@@ -31,6 +31,8 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Bond Offerings](#bondoffer)
  - [Securitization](#securitize)
  - [Loan Syndication](#loansyndicate)
+3. [Advisory Services - Mergers & Acquisitions](#adma)
+ - [Why Acquire Another Company?](#aquireco)
 
 <br>
 
@@ -350,3 +352,16 @@ This blog post contains my notes for a course on basics in understanding Investm
   - access to large corporate clients
   - commission to the lead bank
 - Great diversification on a global scale
+
+<br>
+
+### Advisory Services - Mergers & Acquisitions <a name="adma"></a>
+#### Why Acquire Another Company? <a name="aquireco"></a>
+- Why Companies Acquire Other Companies?
+  - Growth and Synergies
+  - Usually companies are in same industry
+  - Some efficient synergies is accounting, sales, IT, finance, basically SGA
+  - Extend product/service offering to their customer base
+  - Extend product/services by integration
+  - Acquiring top talent in management
+- Defensive M&A is acquiring a company so that competitor doesn't buy them
