@@ -27,6 +27,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Seasoned Equity Offerings (SEO)](#seoprivate)
  3. [Capital Markets - Debt Capital Markets](#capdebt)
  - [Bonds](#bonds)
+ - [Why Issue Bonds?](#issuebonds)
 
 <br>
 
@@ -297,4 +298,13 @@ This blog post contains my notes for a course on basics in understanding Investm
       - can be converted into equity
     - Asset Backed Securities
       - bonds offered by a project vehicle
-      - bank loans, credit card debt, mortgage loans and other similar assets.
+      - bank loans, credit card debt, mortgage loans and other similar assets
+
+<br>
+
+#### Why Issue Bonds? <a name="issuebonds"></a>
+- Bonds are much cheaper than bank loans due to a lower interest rate (as long as company's financials are decent)
+- Less covenants or rules/restrictions by the borrower; for example, maintaining key levels of financial ratios
+- Benefits larger corporations due to fixed costs associated with bonds; you need scale
+- Banks are very risk averse when loaning large amounts of money vs bonds where investors will take risk for higher reward
+- Bond holders are in the hundreds and dealing with them is a difficult and complex task
