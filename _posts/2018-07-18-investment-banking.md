@@ -22,6 +22,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Why Go Public?](#whygopub)
  - [Who Are The Investors In IPO?](#ipoinvest)
  - [Share Price](#shareprice)
+ - [IPO Time Table](#timetable)
 
 <br>
 
@@ -234,3 +235,17 @@ This blog post contains my notes for a course on basics in understanding Investm
 - Roadshow feedback
   - IB gather what investors are willing to pay during their attempt to sell shares to potential investors
     - Book building is IMPORTANT as it will give you true pricing vs a model
+
+<br>
+
+#### IPO Time Table <a name="timetable"></a>
+- Two Phases
+  - Pre-launch
+    - 1) company hires advisors to help with analysis, tax, regulation
+    - 2) define key issues or problems on compliance
+    - 3) valuation of company
+    - 4) prepare prospectus about 2 months prior to going public
+  - Execution
+    - 5) roadshow to get potential investor and feedback
+    - 6) marketing and price range of stock
+    - 7) allocate the shares to retail, institutions, hedge funds
