@@ -24,6 +24,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Share Price](#shareprice)
  - [IPO Time Table](#timetable)
  - [IPO Syndicate](#iposyndicate)
+ - [Seasoned Equity Offerings (SEO)](#seoprivate)
 
 <br>
 
@@ -265,3 +266,11 @@ This blog post contains my notes for a course on basics in understanding Investm
   - Lead Managers - 60%
   - Bookrunners - 20%
   - Global Coordinator - 20%
+
+<br>
+
+#### Seasoned Equity Offerings (SEO) <a name="seoprivate"></a>
+- SEO is a seasoned equity offering where a public company already listed raises equity by selling additional shares
+- Much easier since company already has regulation needed in place
+- Fees are lower since stock is already priced by the market
+- Private placement is equity offered to institutional investors only
