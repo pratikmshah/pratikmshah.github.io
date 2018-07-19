@@ -33,6 +33,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Loan Syndication](#loansyndicate)
 3. [Advisory Services - Mergers & Acquisitions](#adma)
  - [Why Acquire Another Company?](#aquireco)
+ - [Deal Lifecycle](#deal)
 
 <br>
 
@@ -365,3 +366,23 @@ This blog post contains my notes for a course on basics in understanding Investm
   - Extend product/services by integration
   - Acquiring top talent in management
 - Defensive M&A is acquiring a company so that competitor doesn't buy them
+
+<br>
+
+#### Deal Lifecycle <a name="deal"></a>
+- Company's Lifecycle
+  - Development
+    - early days in startup stage
+    - rarely acquire company
+    - often get acquired if idea is innovative or team is talented
+  - Growth
+    - ramp up in revenues
+    - even more attractive for acquirers
+    - defensive M&A of smaller firms
+  - Maturity
+    - revenue slows down or flattens
+    - cash rich company
+    - mergers and LBOs instead of getting acquired
+  - Decline
+    - revenue starts to decline
+    - takeovers or restructuring
