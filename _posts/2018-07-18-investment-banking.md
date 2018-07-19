@@ -21,6 +21,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  3. [Capital Markets - Equity Capital Markets](#capequity)
  - [Why Go Public?](#whygopub)
  - [Who Are The Investors In IPO?](#ipoinvest)
+ - [Share Price](#shareprice)
 
 <br>
 
@@ -216,3 +217,20 @@ This blog post contains my notes for a course on basics in understanding Investm
   - Liquidity
 - Investors also want a discount to valuation
   - institutions and retail tend to hold stock for the long term
+
+<br>
+
+#### Share Price <a name="shareprice"></a>
+- IPO process lasts 4-6 months
+- Price is usually given at a discount to keep investors satisfied
+- Methods of Share Price Calculation
+  - DCF Model
+    - discounts all future cash flows for a set time period to the present
+  - Multiples
+    - finds similar companies that are similar size, industry, geography, and market strategy
+    - analyst use this technique
+- Economic environment must be good ex: tech IPOs were hot during dot com boom.
+- Growth perspectives
+- Roadshow feedback
+  - IB gather what investors are willing to pay during their attempt to sell shares to potential investors
+    - Book building is IMPORTANT as it will give you true pricing vs a model
