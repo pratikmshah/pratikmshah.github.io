@@ -36,6 +36,8 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Deal Lifecycle](#deal)
  - [M&A Types](#matype)
  - [Valuation of Target](#targetvalue)
+ - [Payment](#payment)
+ - [Corporate Vs Financial Buyers](#corpvsfin)
 
 <br>
 
@@ -423,3 +425,26 @@ This blog post contains my notes for a course on basics in understanding Investm
   - Multiples compare similar company in same/similar industry, size, market positioning, number of employees, geography, growth perspectives
   - LBO is based on how much leverage is sustainable by the target
   - Market Price is just share price times number of outstanding shares = equity
+
+<br>
+
+#### Payment <a name="payment"></a>
+- Cash
+  - preferred by targets so they can monetize immediately
+  - buyers must be prepared (Microsoft, Facebook, Apple, Google)
+  - must consider cost of issuing new debt
+- Stock
+  - buyers interested in stock to avoid borrowing
+  - must consider cost of issuing new stock
+  - allows targets to retain possible future upside
+- Combination
+  - usually both happens or a choice is given
+- Deal breakers usually when buyer/seller have a difference of >5% for the price
+- Earn-out mechanism could be applied for differences <5%
+  - goals are set that if met additional payouts will be made
+  - ex: if margin of 20% is met in 2 years after closing then $50M will be awarded
+  - seller keeps upside but it can also be difficult to measure
+
+<br>
+
+#### Corporate Vs Financial Buyers <a name="corpvsfin"></a>
