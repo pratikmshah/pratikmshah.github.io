@@ -43,6 +43,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Restructuring Types](#retype)
  4. [Trading & Brokerage](#tradebroke)
  - [Investment Bank Trading & Brokerage](#invtradebroke)
+ - [Types of Securities](#sectype)
 
 
 <br>
@@ -522,3 +523,26 @@ This blog post contains my notes for a course on basics in understanding Investm
   - Buy & Hold Securities
   - Short Selling
     - borrowing a stock to sell now and buy back in future at a lower price
+
+<br>
+
+#### Types of Securities <a name="sectype"></a>
+- Financial Instruments
+  - Equity
+    - shares of stock publicly traded on exchanges
+    - blue chip stocks have market cap > $5 billion & are well recognized established companies
+      - mutual and pension funds
+    - other stocks have market cap < $5 billion which are still in young/growing but higher risk
+      - insurance and retail investors
+  - Fixed Income
+    - Government Bonds
+      - less risky
+      - credit rating agencies track the credibility of government & their macroeconomic data
+    - Corporate Bonds
+      - growing importance
+      - use services of credit rating agencies when issuing
+    - Derivatives Contracts
+      - swaps, futures, forwards, and options
+      - could be linked to commodity price or events
+      - used for hedging positions aka buying an insurance policy
+      - hedge funds use for speculative gambling
