@@ -35,6 +35,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Why Acquire Another Company?](#aquireco)
  - [Deal Lifecycle](#deal)
  - [M&A Types](#matype)
+ - [Valuation of Target](#targetvalue)
 
 <br>
 
@@ -402,3 +403,23 @@ This blog post contains my notes for a course on basics in understanding Investm
   - complicated due to regulatory requirements
   - friendly or hostile takeover (tender offer)
   - easier valuation since public  (usually offers premium to shares)
+
+<br>
+
+#### Valuation of Targets <a name="targetvalue"></a>
+- Buyer
+  - find fair value for target
+- Seller
+ - decide if it is right price to sell
+- Both need to understand and idea about the value of underlying business
+  - acquiring company will end up taking on liabilities
+  - Enterprise Value = Equity + Net Debt
+    - influenced by capital structure
+  - Equity = Total value of a firm's shares
+    - not influenced by capital structure
+- Use DCF, Multiples, LBO Analysis, Market Price (if public)
+  - bankers use couple methods
+  - DCF is most popular method and use discount future cash flows to present
+  - Multiples compare similar company in same/similar industry, size, market positioning, number of employees, geography, growth perspectives
+  - LBO is based on how much leverage is sustainable by the target
+  - Market Price is just share price times number of outstanding shares = equity
