@@ -46,6 +46,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Types of Securities](#sectype)
  6. [Asset Management](#assetmgmt)
  - [Investment Bank as Asset Managers](#invassetmgmt)
+ - [Risk-Return on Assets](#riskreturn)
 
 
 <br>
@@ -561,3 +562,11 @@ This blog post contains my notes for a course on basics in understanding Investm
   - technical expertise
   - trading know-how
   - global macro knowledge
+
+#### Risk-Return on Assets <a name="riskreturn"></a>
+- Types of Asset Vehicles
+  - Open & Closed-end Funds (Low Risk - Low Return)
+  - Real Estate Funds (Moderate Risk - Moderate Returns)
+  - Private Equity Funds (High Risk - High Return)
+  - Hedge Funds & Alternative Investments (Very High Risk - Very High Return)
+- Asset Managers combine asset classes depending on the client's goals and risk tolerance
