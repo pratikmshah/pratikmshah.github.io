@@ -41,9 +41,11 @@ This blog post contains my notes for a course on basics in understanding Investm
  4. [Advisory Services - Restructuring](#restructure)
  - [Restructuring Services](#reservice)
  - [Restructuring Types](#retype)
- 4. [Trading & Brokerage](#tradebroke)
+ 5. [Trading & Brokerage](#tradebroke)
  - [Investment Bank Trading & Brokerage](#invtradebroke)
  - [Types of Securities](#sectype)
+ 6. [Asset Management](#assetmgmt)
+ - [Investment Bank as Asset Managers](#invassetmgmt)
 
 
 <br>
@@ -546,3 +548,16 @@ This blog post contains my notes for a course on basics in understanding Investm
       - could be linked to commodity price or events
       - used for hedging positions aka buying an insurance policy
       - hedge funds use for speculative gambling
+
+<br>
+
+### Asset Management <a name="assetmgmt"></a>
+#### Investment Bank as Asset Managers <a name="invassetmgmt"></a>
+- Investor has high net worth and investible income
+  - person, insurance company, pension funds, or other institutional investors
+- Why Investment Bankers?
+  - specialized knowledge
+  - they are professionals with investment knowledge about the markets
+  - technical expertise
+  - trading know-how
+  - global macro knowledge
