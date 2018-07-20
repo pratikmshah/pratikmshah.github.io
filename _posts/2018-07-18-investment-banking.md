@@ -40,6 +40,7 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Corporate Vs Financial Buyers](#corpvsfin)
  4. [Advisory Services - Restructuring](#restructure)
  - [Restructuring Services](#reservice)
+ - [Restructuring Types](#retype)
 
 
 <br>
@@ -479,3 +480,26 @@ This blog post contains my notes for a course on basics in understanding Investm
   - Employees keep their jobs
 - Restructuring unsuccessful
   - Higher losses due to late liquidation
+
+<br>
+
+#### Restructuring Types <a name="retype"></a>
+- Think firm's balance sheet
+  - easy way to strengthen is to increase capital, but most investors are unwilling to lend
+  - Asset Side
+    - sale of non-core assets
+    - reduce costs such as advertising & R&D
+    - less capital expenditures
+    - sale of controlled firms
+  - Liability Side
+    - agreement between creditors to alter conditions of the liabilities, as they cannot pay entire debt
+      - suspend interest
+      - debt write-off
+      - debt-equity swap
+      - convertible bonds
+- Negotiation with creditors is the hardest part as time could take up to a year
+- Restructuring Plan must be approved by creditors
+  - Creditors Assess Three Parameters
+    - Probability of default
+    - Loss given default liquidation
+    - Successful restructuring
