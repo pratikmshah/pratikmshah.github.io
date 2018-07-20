@@ -41,6 +41,8 @@ This blog post contains my notes for a course on basics in understanding Investm
  4. [Advisory Services - Restructuring](#restructure)
  - [Restructuring Services](#reservice)
  - [Restructuring Types](#retype)
+ 4. [Trading & Brokerage](#tradebroke)
+ - [Investment Bank Trading & Brokerage](#invtradebroke)
 
 
 <br>
@@ -503,3 +505,20 @@ This blog post contains my notes for a course on basics in understanding Investm
     - Probability of default
     - Loss given default liquidation
     - Successful restructuring
+
+<br>
+
+### Trading & Brokerage <a name="tradebroke"></a>
+#### Investment Bank Trading & Brokerage <a name="invtradebroke"></a>
+- Trading is important source of revenue
+- Trading
+  - Brokerage
+    - trade on behalf of clients & profit from bid/ask spread
+    - asset managers and other clients buying in for long-term or short-term (hedge funds)
+  - Proprietary
+    - buy and sell stocks to profit from capital gains
+    - short-term quick profit
+  - Intermediary Service
+  - Buy & Hold Securities
+  - Short Selling
+    - borrowing a stock to sell now and buy back in future at a lower price
