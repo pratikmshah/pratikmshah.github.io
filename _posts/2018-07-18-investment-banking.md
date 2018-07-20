@@ -448,3 +448,11 @@ This blog post contains my notes for a course on basics in understanding Investm
 <br>
 
 #### Corporate Vs Financial Buyers <a name="corpvsfin"></a>
+- Corporate Buyers
+  - firms operating in same industry as target
+  - unlock synergies, long-term, integration of the management of two companies
+- Financial Buyers
+  - main concern is cash flows and capital gains, 3-5 years, follow the company through board of representatives
+  - Venture Capital Funds - startups
+  - Private Equity - growth companies
+  - Leveraged Buyout Funds - mature companies
