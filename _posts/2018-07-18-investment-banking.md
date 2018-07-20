@@ -38,6 +38,9 @@ This blog post contains my notes for a course on basics in understanding Investm
  - [Valuation of Target](#targetvalue)
  - [Payment](#payment)
  - [Corporate Vs Financial Buyers](#corpvsfin)
+ 4. [Advisory Services - Restructuring](#restructure)
+ - [Restructuring Services](#reservice)
+
 
 <br>
 
@@ -456,3 +459,23 @@ This blog post contains my notes for a course on basics in understanding Investm
   - Venture Capital Funds - startups
   - Private Equity - growth companies
   - Leveraged Buyout Funds - mature companies
+
+<br>
+
+### Advisory Services - Restructuring <a name="restructure"></a>
+#### Restructuring Services <a name="reservice"></a>
+- The firm has insufficient cash for operations due to:
+  - Obsolete products
+  - Industry decline
+  - Bad investments
+  - Lack of innovation
+  - Opperation inefficiency
+  - Bad management
+  - Bad M&A deals
+  - Excessive leverage
+- Restructuring is a viable option when recoverable portion of debt is higher vs liquidation
+- Benefits of restructuring
+  - Higher recovery ratio
+  - Employees keep their jobs
+- Restructuring unsuccessful
+  - Higher losses due to late liquidation
