@@ -34,6 +34,7 @@ This blog post contains my notes for a course on basics in understanding Investm
 3. [Advisory Services - Mergers & Acquisitions](#adma)
  - [Why Acquire Another Company?](#aquireco)
  - [Deal Lifecycle](#deal)
+ - [M&A Types](#matype)
 
 <br>
 
@@ -386,3 +387,18 @@ This blog post contains my notes for a course on basics in understanding Investm
   - Decline
     - revenue starts to decline
     - takeovers or restructuring
+
+<br>
+
+#### M&A Types <a name="matype"></a>
+- Private Transaction (1-2 bidders)
+  - easy to organize
+  - no sense of urgency for the buyer since they don't feel threatened by company
+  - often avoided by sell-side
+- Auction (many bidders)
+  - many interested bidders with goal of 3-5 offers
+  - competition causes increase in price
+- Listed Firm (public company)
+  - complicated due to regulatory requirements
+  - friendly or hostile takeover (tender offer)
+  - easier valuation since public  (usually offers premium to shares)
