@@ -20,13 +20,17 @@ This blog post is a continuation of notes from my previous post on investment ba
  - [Two Stages DCF Model](#twodcf)
  - [Discount Cash Flow & Terminal Value](#disccash)
  - [Enterprise & Equity Value](#enterequity)
- 2. [](#)
- - [](#)
- - [](#)
- - [](#)
- - [](#)
- - [](#)
-
+ 2. [Financial Modeling Fundamentals](#finmodelfun)
+ - [Financial Modeling](#finmodelin)
+ - [Why Financial Models](#whyfinancial)
+ - [Inefficient Financial Modeling](#inefinancial)
+ - [Efficient Financial Modeling](#efinancial)
+ - [Types of Financial Models](#typefinmodel)
+ - [Level of Detail](#lod)
+ - [Right Approach Forecasting](#rightfore)
+ - [Building Complete Financial Model](#buildfin)
+ - [Forecasting Income Statement](#incfor)
+ - [Forecasting Balance Sheet](#balfor)
 
 <br>
 
@@ -167,5 +171,47 @@ This blog post is a continuation of notes from my previous post on investment ba
 <figure>
   <img src="/img/posts/valuation/enterpriseval.png" class="blg-img" alt="Enterprise valuation">
 </figure>
+
+<br>
+
+
+### Financial Modeling Fundamentals <a name="finmodelfun"></a>
+#### Financial Modeling <a name="finmodelin"></a>
+
+<br>
+
+#### Why Financial Models <a name="whyfinancial"></a>
+
+<br>
+
+#### Inefficient Financial Modeling <a name="inefinancial"></a>
+
+<br>
+
+#### Efficient Financial Modeling <a name="efinancial"></a>
+
+<br>
+
+#### Types of Financial Models <a name="typefinmodel"></a>
+
+<br>
+
+#### Level of Detail <a name="lod"></a>
+
+<br>
+
+#### Right Approach Forecasting <a name="rightfore"></a>
+
+<br>
+
+#### Building Complete Financial Model <a name="buildfin"></a>
+
+<br>
+
+#### Forecasting Income Statement <a name="incfor"></a>
+
+<br>
+
+#### Forecasting Balance Sheet <a name="balfor"></a>
 
 <br>
