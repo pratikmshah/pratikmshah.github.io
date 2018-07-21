@@ -103,8 +103,27 @@
 
 <h3 id="table-of-contents">Table of Contents</h3>
 <ol>
+  <li><a href="#valuation">Guide To Company Valuation</a>
+    <ul>
+      <li><a href="#whyval">Why Value a Company?</a></li>
+      <li><a href="#cotoinvest">Company Worth To Investor</a></li>
+      <li><a href="#twovar">Two Variables For Firm’s Value</a></li>
+      <li><a href="#uncashflow">Unlevered Cash Flow</a></li>
+      <li><a href="#discwacc">Discount Factor For WACC</a></li>
+      <li><a href="#cod">Cost of Debt</a></li>
+      <li><a href="#coeq">Cost of Equity</a></li>
+      <li><a href="#cashflowfut">Future Cash Flow Estimate</a></li>
+      <li><a href="#twodcf">Two Stages DCF Model</a></li>
+      <li><a href="#disccash">Discount Cash Flow &amp; Terminal Value</a></li>
+      <li><a href="#enterequity">Enterprise &amp; Equity Value</a></li>
+    </ul>
+  </li>
   <li><a href="#"></a>
     <ul>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
       <li><a href="#"></a></li>
     </ul>
   </li>
@@ -112,8 +131,210 @@
 
 <p><br /></p>
 
-<h3><a name=""></a></h3>
-<h4 id="-1"><a name=""></a></h4>
+<h3 id="guide-to-company-valuation-">Guide To Company Valuation <a name="valuation"></a></h3>
+<h4 id="why-value-a-company-">Why Value a Company? <a name="whyval"></a></h4>
+<ul>
+  <li>Reasons to Value?
+    <ul>
+      <li>M&amp;A</li>
+      <li>Subsidiary sales</li>
+      <li>Start-up investments</li>
+      <li>Join ventures</li>
+      <li>IPOs</li>
+      <li>Delistings</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="company-worth-to-investor-">Company Worth To Investor <a name="cotoinvest"></a></h4>
+<ul>
+  <li>You buy/invest to make money</li>
+  <li>If you buy stock of a mature company on the market you expect the value to appreciate over the coming years and along the way collect the dividends</li>
+  <li>Three Variable When Buying
+    <ul>
+      <li>Purchase Price</li>
+      <li>Dividends</li>
+      <li>Selling Price</li>
+    </ul>
+  </li>
+  <li>Price of a stock today depends on future dividends the stock is expected to pay (revenue growth)</li>
+  <li>Cash flow generation is main force that determines dividends growth</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="two-variables-for-firms-value-">Two Variables For Firm’s Value <a name="twovar"></a></h4>
+<ul>
+  <li>Growth &amp; Profitability drives company value</li>
+  <li>Operating Cash Flow = Revenues - Expenses - Investments
+    <ul>
+      <li>what is left over is cash conversion generation</li>
+    </ul>
+  </li>
+  <li>improve cash flows by
+    <ul>
+      <li>growing revenues</li>
+      <li>reducing costs</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="unlevered-cash-flow-">Unlevered Cash Flow <a name="uncashflow"></a></h4>
+
+<figure>
+  <img src="/img/posts/valuation/cashflow.png" class="blg-img" alt="Unlevered Cash Flow Calc" />
+</figure>
+
+<figure>
+  <img src="/img/posts/valuation/cashmove.JPG" class="blg-img" alt="What moves cash" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="discount-factor-for-wacc-">Discount Factor For WACC <a name="discwacc"></a></h4>
+<ul>
+  <li>Time value of money means a dollar today is worth more than a dollar tomorrow</li>
+  <li>Discount Factor
+    <ul>
+      <li>helps determine present value of future cashflows</li>
+      <li>the discount factor reflects the type of cash flow to be discounted
+        <ul>
+          <li>Cash Flows available only to Equity holders -&gt; Cost of Equity</li>
+          <li>Cash Flows available to Equity &amp; Debt Holders -&gt; Weighted Average Cost of Capital (WACC)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Weighted Average Cost of Capital
+    <ul>
+      <li>WACC = (D / D+E) * kd * (1-t) + (E / D+E) * ke</li>
+      <li>D = Debt</li>
+      <li>E = Equity</li>
+      <li>t = Taxes</li>
+      <li>kd = Cost of Debt</li>
+      <li>ke = Cost of Equity</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="cost-of-debt-">Cost of Debt <a name="cod"></a></h4>
+<ul>
+  <li>Cost of Debt
+    <ul>
+      <li>average interest rate paid on a company’s debt</li>
+      <li>use financial statements (balance sheet * income statement)
+        <ul>
+          <li>balance sheet: short + long term debt</li>
+          <li>income statement: interest expense</li>
+        </ul>
+      </li>
+      <li>Cost of Debt = Interest Expense / Financial Liabilities</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="cost-of-equity-">Cost of Equity <a name="coeq"></a></h4>
+<ul>
+  <li>Many ways to calculate but CAPM(Capital Assets Pricing Model) is widely used</li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/CAPM.jpg" class="blg-img" alt="CAPM formula" />
+</figure>
+
+<ul>
+  <li>Risk-free Rate is rate of return on investment with zero risk
+    <ul>
+      <li>10 year government bond</li>
+    </ul>
+  </li>
+  <li>Beta is the volatility of security on the market
+    <ul>
+      <li>Less than 1 is less volatile than the market</li>
+      <li>Equal to 1 is volatile as the market</li>
+      <li>Greater than 1 is more volatile than the market</li>
+    </ul>
+  </li>
+  <li>Market Risk Premium
+    <ul>
+      <li>difference between expected return on a market portfolio and risk-free rate</li>
+      <li>most use 5% in their calculations</li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/coeexample.JPG" class="blg-img" alt="Cost of equity example" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="future-cash-flow-estimate-">Future Cash Flow Estimate <a name="cashflowfut"></a></h4>
+<ul>
+  <li>Projecting Cash Flows
+    <ul>
+      <li>5 - 10 years should be used</li>
+      <li>5 years for older company that is already mature</li>
+      <li>10 years for young company with a growing business</li>
+    </ul>
+  </li>
+  <li>Forecasting P&amp;L and Balance Sheet line items</li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/incomefor.JPG" class="blg-img" alt="income statement items forecast" />
+</figure>
+
+<figure>
+  <img src="/img/posts/valuation/balancefor.JPG" class="blg-img" alt="balance sheet items forecast" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="two-stages-dcf-model-">Two Stages DCF Model <a name="twodcf"></a></h4>
+<ul>
+  <li>Difficult to predict future projections</li>
+  <li>During middle year of forecast company has
+    <ul>
+      <li>stable cash flows</li>
+      <li>lower growth</li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/terminalval.JPG" class="blg-img" alt="terminal value formula" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="discount-cash-flow--terminal-value-">Discount Cash Flow &amp; Terminal Value <a name="disccash"></a></h4>
+<ul>
+  <li>To calculate present value discount all projected cash flows with company’s WACC</li>
+  <li>Present Value = Future Value / (1 + WACC)^n
+    <ul>
+      <li>n = number of periods away from present value</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="enterprise--equity-value-">Enterprise &amp; Equity Value <a name="enterequity"></a></h4>
+
+<figure>
+  <img src="/img/posts/valuation/enterpriseval.png" class="blg-img" alt="Enterprise valuation" />
+</figure>
+
+<p><br /></p>
 
     <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
   </div>
