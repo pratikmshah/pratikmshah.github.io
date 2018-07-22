@@ -31,6 +31,11 @@ This blog post is a continuation of notes from my previous post on investment ba
  - [Building Complete Financial Model](#buildfin)
  - [Forecasting Income Statement](#incfor)
  - [Forecasting Balance Sheet](#balfor)
+ 3. [DCF - Intro](#dcfintro)
+ - [DCF Stages](#dcfstages)
+ - [DCF Structure](#dcfstruct)
+ - [Example Company - Cheeseco](#excompany)
+
 
 <br>
 
@@ -364,5 +369,49 @@ This blog post is a continuation of notes from my previous post on investment ba
   - `Beginning Cash +/- Net Cash Flow = Ending Cash`
     - Net cash flow can be found on bottom of Cash Flow Statement
 - CHECK: Assets = Liabilities + Owners Equity
+
+<br>
+
+### DCF - Introduction <a name="dcfintro"></a>
+#### DCF Stages <a name="dcfstages"></a>
+
+<figure>
+  <img src="/img/posts/valuation/framework.jpg" class="blg-img" alt="valuation framework">
+</figure>
+
+<br>
+
+#### DCF Structure <a name="dcfstruct"></a>
+
+<figure>
+  <img src="/img/posts/valuation/plassum.jpg" class="blg-img" alt="P&L Assumption">
+  <figcaption>P&L assumption tab will have 3 scenarios. Render in output tab.</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/valuation/bsassum.jpg" class="blg-img" alt="BS Assumption">
+  <figcaption>Balance sheet items grow inline with buisness no need for scenarios. Render in output tab.</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/valuation/cashflow.jpg" class="blg-img" alt="Cash Flow">
+  <figcaption>Cash Flow inputs will come from P&L & BS tab</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/valuation/dcfval.jpg" class="blg-img" alt="DCF Valuation Tab">
+  <figcaption>DCF valuation tab is where calculation will be performed</figcaption>
+</figure>
+
+- Data source tabs will be where to put the company's historical financial data
+
+
+<br>
+
+#### Example Company - Cheeseco <a name="excompany"></a>
+
+<figure>
+  <img src="/img/posts/valuation/cheeseco.jpg" class="blg-img" alt="Cheese Company Analysis">
+</figure>
 
 <br>
