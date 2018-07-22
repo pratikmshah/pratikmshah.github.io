@@ -118,13 +118,18 @@
       <li><a href="#enterequity">Enterprise &amp; Equity Value</a></li>
     </ul>
   </li>
-  <li><a href="#"></a>
+  <li><a href="#finmodelfun">Financial Modeling Fundamentals</a>
     <ul>
-      <li><a href="#"></a></li>
-      <li><a href="#"></a></li>
-      <li><a href="#"></a></li>
-      <li><a href="#"></a></li>
-      <li><a href="#"></a></li>
+      <li><a href="#finmodelin">Financial Modeling</a></li>
+      <li><a href="#whyfinancial">Why Financial Models</a></li>
+      <li><a href="#inefinancial">Inefficient Financial Modeling</a></li>
+      <li><a href="#efinancial">Efficient Financial Modeling</a></li>
+      <li><a href="#typefinmodel">Types of Financial Models</a></li>
+      <li><a href="#lod">Level of Detail</a></li>
+      <li><a href="#rightfore">Right Approach Forecasting</a></li>
+      <li><a href="#buildfin">Building Complete Financial Model</a></li>
+      <li><a href="#incfor">Forecasting Income Statement</a></li>
+      <li><a href="#balfor">Forecasting Balance Sheet</a></li>
     </ul>
   </li>
 </ol>
@@ -211,7 +216,7 @@
   </li>
   <li>Weighted Average Cost of Capital
     <ul>
-      <li>WACC = (D / D+E) * kd * (1-t) + (E / D+E) * ke</li>
+      <li><code class="highlighter-rouge">WACC = (D / D+E) * kd * (1-t) + (E / D+E) * ke</code></li>
       <li>D = Debt</li>
       <li>E = Equity</li>
       <li>t = Taxes</li>
@@ -319,7 +324,7 @@
 <h4 id="discount-cash-flow--terminal-value-">Discount Cash Flow &amp; Terminal Value <a name="disccash"></a></h4>
 <ul>
   <li>To calculate present value discount all projected cash flows with company’s WACC</li>
-  <li>Present Value = Future Value / (1 + WACC)^n
+  <li><code class="highlighter-rouge">Present Value = Future Value / (1 + WACC)^n</code>
     <ul>
       <li>n = number of periods away from present value</li>
     </ul>
@@ -333,6 +338,354 @@
 <figure>
   <img src="/img/posts/valuation/enterpriseval.png" class="blg-img" alt="Enterprise valuation" />
 </figure>
+
+<p><br /></p>
+
+<h3 id="financial-modeling-fundamentals-">Financial Modeling Fundamentals <a name="finmodelfun"></a></h3>
+<h4 id="financial-modeling-">Financial Modeling <a name="finmodelin"></a></h4>
+<ul>
+  <li>Virtual representation of a business</li>
+  <li>Logical flow and reasoning vs simple calculation</li>
+  <li>Scenario Building
+    <ul>
+      <li>Management can play with numbers</li>
+      <li>Build scenarios (best, base, worst case)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="why-financial-models-">Why Financial Models <a name="whyfinancial"></a></h4>
+<ul>
+  <li>With financial models the data is interlinked</li>
+  <li>You can’t just say revenues will increase without specifying costs/cash impact</li>
+  <li>Modeling provides 360 view
+    <ul>
+      <li>Balance Sheet -&gt; Scenarios -&gt; Profitability -&gt; Cash Flows -&gt; repeat</li>
+    </ul>
+  </li>
+  <li>Models Answers Questions Such As:
+    <ul>
+      <li>When is the firm planning to break-even?</li>
+      <li>How much is the estimated market potential?</li>
+      <li>How much cash does the firm need before its product to market?</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="inefficient-financial-modeling-">Inefficient Financial Modeling <a name="inefinancial"></a></h4>
+<ul>
+  <li>Wrong Ways for Modeling
+    <ul>
+      <li>Do not write formulas with embedded constants ex: 5% should be reference value <code class="highlighter-rouge">D4 * (1+5%)</code></li>
+      <li>Do not split model across multiple workbooks</li>
+      <li>Do not hide columns in your model</li>
+      <li>Avoid calculating items again that have been calculated</li>
+      <li>NEVER submit model that hasn’t been checked; double check your work (Asset = Liabilities + OE)
+        <ul>
+          <li>add checks below ur model</li>
+        </ul>
+      </li>
+      <li>Avoid using current sheet references in formulas</li>
+      <li>Avoid using complicated formulas</li>
+      <li>Don’t use too many macros/VBA</li>
+      <li>Don’t use different blocks, ex: if year 2018 is in column C have it always in column C</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="efficient-financial-modeling-">Efficient Financial Modeling <a name="efinancial"></a></h4>
+<ul>
+  <li>Accepted Practices
+    <ul>
+      <li>Build flexible models (cells should be linked)</li>
+      <li>Use uniform structure across all worksheets</li>
+      <li>Error-Free by inserting checks (confident about numbers in model)</li>
+      <li>Use calculation blocks that are easy to replicate (easy to copy &amp; paste)</li>
+      <li>Include units in header of tables</li>
+      <li>Create printable documents that are organized and look professional</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="types-of-financial-models-">Types of Financial Models <a name="typefinmodel"></a></h4>
+<ul>
+  <li>Credit Analysis
+    <ul>
+      <li>cash flows</li>
+      <li>borrower’s ability to repay</li>
+      <li>quality of guarantees</li>
+    </ul>
+  </li>
+  <li>Equity Investments
+    <ul>
+      <li>valuation</li>
+      <li>find investment opportunities</li>
+    </ul>
+  </li>
+  <li>M&amp;A
+    <ul>
+      <li>analyze synergies</li>
+      <li>calculate standalone value</li>
+    </ul>
+  </li>
+  <li>LBO
+    <ul>
+      <li>calculate cash flows</li>
+      <li>exit multiples</li>
+      <li>calculate IRR</li>
+    </ul>
+  </li>
+  <li>Project Finance
+    <ul>
+      <li>plan cash flow timing</li>
+      <li>calculate IRR for lenders and equity sponsors</li>
+    </ul>
+  </li>
+  <li>Startup Valuation
+    <ul>
+      <li>break-even analysis</li>
+      <li>market potential</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="level-of-detail-">Level of Detail <a name="lod"></a></h4>
+<ul>
+  <li>Long-term planning
+    <ul>
+      <li>Important Drivers
+        <ul>
+          <li>Revenues</li>
+          <li>Margins (Gross Profit, EBITDA)</li>
+          <li>Number of employees</li>
+          <li>Capex</li>
+          <li>Working Capital</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Mid-term planning</li>
+  <li>Short-term planning
+    <ul>
+      <li>line by line forecasting could work</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="right-approach-forecasting-">Right Approach Forecasting <a name="rightfore"></a></h4>
+<ul>
+  <li>Hockey Stick Effect
+    <ul>
+      <li>be consistent with past performance and avoid strong spikes at the beginning of the forecast period</li>
+    </ul>
+  </li>
+  <li>Industry Outlook
+    <ul>
+      <li>study the analysis of industry opinion leaders and plan accordingly</li>
+      <li>read expert opinions and forecasts</li>
+    </ul>
+  </li>
+  <li>Play With Numbers
+    <ul>
+      <li>take close look at the numbers and see if there is something that looks strange</li>
+      <li>build hypothesis</li>
+    </ul>
+  </li>
+  <li>Stage of Development
+    <ul>
+      <li>build a forecast that takes into account the stage of development of the firm (startup, growth, or mature business)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="building-complete-financial-model-">Building Complete Financial Model <a name="buildfin"></a></h4>
+<ul>
+  <li>P&amp;L
+    <ul>
+      <li>tells how firm has performed and if it is profitable</li>
+      <li>items effect BS &amp; CF statements</li>
+    </ul>
+  </li>
+  <li>Balance Sheet
+    <ul>
+      <li>shows assets and debt</li>
+    </ul>
+  </li>
+  <li>Cash Flow
+    <ul>
+      <li>how much cash was made</li>
+      <li>feeds the balance sheet</li>
+    </ul>
+  </li>
+  <li>Relationships Between P&amp;L &amp; Balance Sheet
+    <ul>
+      <li>Revenues &amp; Trade receivables</li>
+      <li>COGS &amp; Trade payables</li>
+      <li>D&amp;A &amp; Fixed assets</li>
+      <li>Interest expenses &amp; Financial liabilities</li>
+      <li>Net Income &amp; Equity</li>
+      <li>Other more…</li>
+    </ul>
+  </li>
+  <li>Relationships Between Cash Flow &amp; Balance Sheet
+    <ul>
+      <li>Net Cash Flow: The amount of cash that came in within a given year</li>
+      <li>BS: Beginning Cash (BS) + Net Cash Flow (CF) = Ending Cash (BS)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="forecasting-income-statement-">Forecasting Income Statement <a name="incfor"></a></h4>
+<ul>
+  <li>Revenues
+    <ul>
+      <li>The sales forecast is the most important task when forecasting financials</li>
+      <li>Top-down approach
+        <ul>
+          <li>general idea based on top-level view</li>
+          <li>Total Market Size * Market Share = Revenues</li>
+          <li>Blend of: Industry Insight, Past Performance, Macro Trends</li>
+        </ul>
+      </li>
+      <li>Bottom-up approach
+        <ul>
+          <li>consider all small details adding up to a total figure</li>
+          <li>ex: at product level
+            <ul>
+              <li>Sales of A + B + C = Revenues</li>
+            </ul>
+          </li>
+          <li>number of unknowns increases further out</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Analyst Research
+    <ul>
+      <li>Leverage research by analysts who closely follow the company and the industry</li>
+    </ul>
+  </li>
+  <li>Past Performace
+    <ul>
+      <li>Using past evidence as a forecast of the future</li>
+    </ul>
+  </li>
+  <li>Forecasting COGS &amp; Opex
+    <ul>
+      <li>COGS
+        <ul>
+          <li>costs related to the production process</li>
+          <li>frequently modeled as a percentage of revenues</li>
+        </ul>
+      </li>
+      <li>Opex
+        <ul>
+          <li>costs related to selling, general, and admin expenses</li>
+          <li>frequently modeled as a percentage of revenues</li>
+        </ul>
+      </li>
+      <li>D&amp;A
+        <ul>
+          <li>closely linked to fixed assets</li>
+          <li>usually modeled in a fixed asset roll forward schedule (need to make new schedule)</li>
+        </ul>
+      </li>
+      <li>Interest Expense
+        <ul>
+          <li>closely linked to financial liabilities</li>
+          <li>usually modeled in a debt schedule</li>
+        </ul>
+      </li>
+      <li>Taxes
+        <ul>
+          <li>EBT * Statutory tax rate = Taxes</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="forecasting-balance-sheet-">Forecasting Balance Sheet <a name="balfor"></a></h4>
+<ul>
+  <li>Working Capital
+    <ul>
+      <li>Consists of Trade Receivables, Inventory, and Trade Payables</li>
+      <li>Forecasted using  the <code class="highlighter-rouge">Days</code> technique
+        <ul>
+          <li><code class="highlighter-rouge">DSO = Trade Receivables / Revenue * 360</code></li>
+          <li><code class="highlighter-rouge">DIO = Inventory / COGS * 360</code></li>
+          <li><code class="highlighter-rouge">DPO = Trade Payables / COGS * 360</code></li>
+        </ul>
+      </li>
+      <li>Forecast average number of days
+        <ul>
+          <li><code class="highlighter-rouge">Trade Receivables = (DSO * Revenues) / 360</code></li>
+          <li><code class="highlighter-rouge">Inventory = (DIO * COGS) / 360</code></li>
+          <li><code class="highlighter-rouge">Trade Payables = (DPO * COGS) / 360</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Other Assets &amp; Liabilities
+    <ul>
+      <li>Generic categories grouping smaller items</li>
+      <li>Modeled as a percentage of revenues</li>
+    </ul>
+  </li>
+  <li>Property, Plant &amp; Equipment (PPE)
+    <ul>
+      <li>Group of fixed assets used in production or administration</li>
+      <li>Cars, machines, computers etc…</li>
+      <li>D&amp;A reduces the value of PP&amp;E</li>
+      <li>Firms invest in new assets which are listed in Capex</li>
+      <li><code class="highlighter-rouge">Beginning PP&amp;E - D&amp;A + Capex = Ending PP&amp;E</code></li>
+      <li>Some make new schedules or use % of revenues</li>
+    </ul>
+  </li>
+  <li>Financial Liabilities
+    <ul>
+      <li>Modeling financial liabilities depends on the type of facilities used by the company</li>
+      <li><code class="highlighter-rouge">Beginning Debt + New Debt - Debt Repayment = Ending Debt</code></li>
+      <li>Or calculate historical interest rate <code class="highlighter-rouge">Interest Expense / Financial Liabilities = Interest Rate</code></li>
+    </ul>
+  </li>
+  <li>Equity Schedule: <code class="highlighter-rouge">Beginning Equity + Increase of capital +/- Net Income (loss) - Dividend Payments = Ending Equity</code>
+    <ul>
+      <li>Beginning Equity is ending equity of the previous period</li>
+      <li>Increase of capital forecast as 0 as it is tough to calculate</li>
+      <li>Net Income linked to P&amp;L</li>
+      <li>Dividend is modeled as % of firm’s FCF</li>
+    </ul>
+  </li>
+  <li>Cash
+    <ul>
+      <li><code class="highlighter-rouge">Beginning Cash +/- Net Cash Flow = Ending Cash</code>
+        <ul>
+          <li>Net cash flow can be found on bottom of Cash Flow Statement</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>CHECK: Assets = Liabilities + Owners Equity</li>
+</ul>
 
 <p><br /></p>
 
