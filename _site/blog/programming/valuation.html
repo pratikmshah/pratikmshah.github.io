@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Programming tutorials tips and tricks">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Ruby, Jekyll, Sass, Rails, AngularJS, React">
+  <meta name="author" content="Pratik Shah">
+
+  <title>Valuation</title>
+  <meta name="description" content="This blog post is a continuation of notes from my previous post on investment banking. This post will contain notes on company valuations, financial modeling...">
+
+  <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
+  <link rel="stylesheet" href="/css/devicon.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/blog/programming/valuation">
+  <link rel="alternate" type="application/rss+xml" title="pratik." href="http://localhost:4000/feed.xml">
+
+
+  <script type="text/javascript" src="/js/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="/js/analytics.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="/js/masonry.pkgd.min.js"></script>
+  <script type="text/javascript" src="/js/homepage.js"></script>
+  <script type="text/javascript" src="/js/project.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <ul class="trigger list-unstyled list-inline">
+        <li class="cust-page-lnks">
+          <a class="page-link nav-link" href="/"><span class="font-title">Home</span></a>
+        </li>
+        
+          
+            <li class="cust-page-lnks">
+              <a class="page-link nav-link" href="/about/"><span class="font-title">About</span></a>
+            </li>
+          
+        
+          
+            <li class="cust-page-lnks">
+              <a class="page-link nav-link" href="/blog/"><span class="font-title">Blog</span></a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+            <li class="cust-page-lnks">
+              <a class="page-link nav-link" href="/projects/"><span class="font-title">Projects</span></a>
+            </li>
+          
+        
+      </ul>
+
+    </nav>
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article id="post" class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <p class="post-meta"><time datetime="2018-07-18T00:00:00-05:00" itemprop="datePublished">Jul 18, 2018</time></p>
+    <h1 id="post-title" class="post-title" itemprop="name headline">Valuation</h1>
+  </header>
+
+  
+  <div>
+    <img src="/img/posts/valuation/valuation.jpeg">
+  </div>
+  
+
+  <div class="post-content" itemprop="articleBody">
+    <p>This blog post is a continuation of notes from my previous post on investment banking. This post will contain notes on company valuations, financial modeling using the DCF method, and leverage buyouts(LBO).</p>
+
+<p><br /></p>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+<ol>
+  <li><a href="#valuation">Guide To Company Valuation</a>
+    <ul>
+      <li><a href="#whyval">Why Value a Company?</a></li>
+      <li><a href="#cotoinvest">Company Worth To Investor</a></li>
+      <li><a href="#twovar">Two Variables For Firm’s Value</a></li>
+      <li><a href="#uncashflow">Unlevered Cash Flow</a></li>
+      <li><a href="#discwacc">Discount Factor For WACC</a></li>
+      <li><a href="#cod">Cost of Debt</a></li>
+      <li><a href="#coeq">Cost of Equity</a></li>
+      <li><a href="#cashflowfut">Future Cash Flow Estimate</a></li>
+      <li><a href="#twodcf">Two Stages DCF Model</a></li>
+      <li><a href="#disccash">Discount Cash Flow &amp; Terminal Value</a></li>
+      <li><a href="#enterequity">Enterprise &amp; Equity Value</a></li>
+    </ul>
+  </li>
+  <li><a href="#finmodelfun">Financial Modeling Fundamentals</a>
+    <ul>
+      <li><a href="#finmodelin">Financial Modeling</a></li>
+      <li><a href="#whyfinancial">Why Financial Models</a></li>
+      <li><a href="#inefinancial">Inefficient Financial Modeling</a></li>
+      <li><a href="#efinancial">Efficient Financial Modeling</a></li>
+      <li><a href="#typefinmodel">Types of Financial Models</a></li>
+      <li><a href="#lod">Level of Detail</a></li>
+      <li><a href="#rightfore">Right Approach Forecasting</a></li>
+      <li><a href="#buildfin">Building Complete Financial Model</a></li>
+      <li><a href="#incfor">Forecasting Income Statement</a></li>
+      <li><a href="#balfor">Forecasting Balance Sheet</a></li>
+    </ul>
+  </li>
+  <li><a href="#dcfintro">DCF - Intro</a>
+    <ul>
+      <li><a href="#dcfstages">DCF Stages</a></li>
+      <li><a href="#dcfstruct">DCF Structure</a></li>
+      <li><a href="#excompany">Example Company - Cheeseco</a></li>
+    </ul>
+  </li>
+  <li><a href="#forpl">DCF - Forecasting P&amp;L Items</a>
+    <ul>
+      <li><a href="#modtop">Modeling Top Line</a></li>
+      <li><a href="#flexmod">Flexible Excel Models</a></li>
+      <li><a href="#revcogmod">Other Revenues &amp; COGS</a></li>
+      <li><a href="#opexda">Operating Expense &amp; D&amp;A</a></li>
+      <li><a href="#othritem">Other Items &amp; Interest Expense</a></li>
+    </ul>
+  </li>
+  <li><a href="#forbal">DCF - Forecasting Balance Sheet Items</a>
+    <ul>
+      <li><a href="#modelbal">Modeling Balance Sheet</a></li>
+      <li><a href="#confin">Concept for Finance Practitioners</a></li>
+      <li><a href="#daycalc">Days Calculation</a></li>
+      <li><a href="#fordays">Days to Forecast Future</a></li>
+      <li><a href="#ppeasset">Property Plant &amp; Equipment, Other Assets, Other Liabilities</a></li>
+    </ul>
+  </li>
+  <li><a href="#cleanout">DCF - Clean Output Sheets</a>
+    <ul>
+      <li><a href="#excleanout">Excel Practice on Clean Output</a></li>
+      <li><a href="#applypl">Applying Practice P&amp;L</a></li>
+      <li><a href="#cleanbal">Clean Output Balance Sheet</a></li>
+      <li><a href="#outbshis">Output Balance Sheet Historical Data</a></li>
+    </ul>
+  </li>
+  <li><a href="#ufcf">DCF - Unlevered Cash Flows &amp; Net Cash Flow</a>
+    <ul>
+      <li><a href="#fcfcalc">Unlevered Free Cash Flow Calculation</a></li>
+      <li><a href="#netcf">Reconcile UFCF to Net Cash Flow</a></li>
+      <li><a href="#cfcalc">Cash Flow Calculation</a></li>
+      <li><a href="#netcash">Arrive Net Cash</a></li>
+      <li><a href="#multicell">Multiple Cell Reference Modification</a></li>
+    </ul>
+  </li>
+  <li><a href="#calcpv">DCF - Calculate Present Value of Cash Flows</a>
+    <ul>
+      <li><a href="#calcwacc">Weighted Average Cost of Capital (WACC)</a></li>
+    </ul>
+  </li>
+  <li><a href="#enterequval">DCF - Calculating Continuing Value Enterprise &amp; Equity Value</a>
+    <ul>
+      <li><a href="#enterval">Calculating Continuing Value &amp; Enterprise Value</a></li>
+      <li><a href="#finequity">Final Steps Equity Value</a></li>
+    </ul>
+  </li>
+  <li><a href="#analysisfin">DCF - Additional Analysis to Financial Model</a>
+    <ul>
+      <li><a href="#senwacc">Sensitivity For WACC &amp; Perpetuity Growth</a></li>
+      <li><a href="#goalseek">Goal Seek</a></li>
+      <li><a href="#finchart">Financial Model Chart</a></li>
+    </ul>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="guide-to-company-valuation-">Guide To Company Valuation <a name="valuation"></a></h3>
+<h4 id="why-value-a-company-">Why Value a Company? <a name="whyval"></a></h4>
+<ul>
+  <li>Reasons to Value?
+    <ul>
+      <li>M&amp;A</li>
+      <li>Subsidiary sales</li>
+      <li>Start-up investments</li>
+      <li>Join ventures</li>
+      <li>IPOs</li>
+      <li>Delistings</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="company-worth-to-investor-">Company Worth To Investor <a name="cotoinvest"></a></h4>
+<ul>
+  <li>You buy/invest to make money</li>
+  <li>If you buy stock of a mature company on the market you expect the value to appreciate over the coming years and along the way collect the dividends</li>
+  <li>Three Variable When Buying
+    <ul>
+      <li>Purchase Price</li>
+      <li>Dividends</li>
+      <li>Selling Price</li>
+    </ul>
+  </li>
+  <li>Price of a stock today depends on future dividends the stock is expected to pay (revenue growth)</li>
+  <li>Cash flow generation is main force that determines dividends growth</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="two-variables-for-firms-value-">Two Variables For Firm’s Value <a name="twovar"></a></h4>
+<ul>
+  <li>Growth &amp; Profitability drives company value</li>
+  <li>Operating Cash Flow = Revenues - Expenses - Investments
+    <ul>
+      <li>what is left over is cash conversion generation</li>
+    </ul>
+  </li>
+  <li>improve cash flows by
+    <ul>
+      <li>growing revenues</li>
+      <li>reducing costs</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="unlevered-cash-flow-">Unlevered Cash Flow <a name="uncashflow"></a></h4>
+
+<figure>
+  <img src="/img/posts/valuation/cashflow.png" class="blg-img" alt="Unlevered Cash Flow Calc" />
+</figure>
+
+<figure>
+  <img src="/img/posts/valuation/cashmove.JPG" class="blg-img" alt="What moves cash" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="discount-factor-for-wacc-">Discount Factor For WACC <a name="discwacc"></a></h4>
+<ul>
+  <li>Time value of money means a dollar today is worth more than a dollar tomorrow</li>
+  <li>Discount Factor
+    <ul>
+      <li>helps determine present value of future cashflows</li>
+      <li>the discount factor reflects the type of cash flow to be discounted
+        <ul>
+          <li>Cash Flows available only to Equity holders -&gt; Cost of Equity</li>
+          <li>Cash Flows available to Equity &amp; Debt Holders -&gt; Weighted Average Cost of Capital (WACC)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Weighted Average Cost of Capital
+    <ul>
+      <li><code class="highlighter-rouge">WACC = (D / D+E) * kd * (1-t) + (E / D+E) * ke</code></li>
+      <li>D = Debt</li>
+      <li>E = Equity</li>
+      <li>t = Taxes</li>
+      <li>kd = Cost of Debt</li>
+      <li>ke = Cost of Equity</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="cost-of-debt-">Cost of Debt <a name="cod"></a></h4>
+<ul>
+  <li>Cost of Debt
+    <ul>
+      <li>average interest rate paid on a company’s debt</li>
+      <li>use financial statements (balance sheet * income statement)
+        <ul>
+          <li>balance sheet: short + long term debt</li>
+          <li>income statement: interest expense</li>
+        </ul>
+      </li>
+      <li>Cost of Debt = Interest Expense / Financial Liabilities</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="cost-of-equity-">Cost of Equity <a name="coeq"></a></h4>
+<ul>
+  <li>Many ways to calculate but CAPM(Capital Assets Pricing Model) is widely used</li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/CAPM.jpg" class="blg-img" alt="CAPM formula" />
+</figure>
+
+<ul>
+  <li>Risk-free Rate is rate of return on investment with zero risk
+    <ul>
+      <li>10 year government bond</li>
+    </ul>
+  </li>
+  <li>Beta is the volatility of security on the market
+    <ul>
+      <li>Less than 1 is less volatile than the market</li>
+      <li>Equal to 1 is volatile as the market</li>
+      <li>Greater than 1 is more volatile than the market</li>
+    </ul>
+  </li>
+  <li>Market Risk Premium
+    <ul>
+      <li>difference between expected return on a market portfolio and risk-free rate</li>
+      <li>most use 5% in their calculations</li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/coeexample.JPG" class="blg-img" alt="Cost of equity example" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="future-cash-flow-estimate-">Future Cash Flow Estimate <a name="cashflowfut"></a></h4>
+<ul>
+  <li>Projecting Cash Flows
+    <ul>
+      <li>5 - 10 years should be used</li>
+      <li>5 years for older company that is already mature</li>
+      <li>10 years for young company with a growing business</li>
+    </ul>
+  </li>
+  <li>Forecasting P&amp;L and Balance Sheet line items</li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/incomefor.JPG" class="blg-img" alt="income statement items forecast" />
+</figure>
+
+<figure>
+  <img src="/img/posts/valuation/balancefor.JPG" class="blg-img" alt="balance sheet items forecast" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="two-stages-dcf-model-">Two Stages DCF Model <a name="twodcf"></a></h4>
+<ul>
+  <li>Difficult to predict future projections</li>
+  <li>During middle year of forecast company has
+    <ul>
+      <li>stable cash flows</li>
+      <li>lower growth</li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/terminalval.JPG" class="blg-img" alt="terminal value formula" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="discount-cash-flow--terminal-value-">Discount Cash Flow &amp; Terminal Value <a name="disccash"></a></h4>
+<ul>
+  <li>To calculate present value discount all projected cash flows with company’s WACC</li>
+  <li><code class="highlighter-rouge">Present Value = Future Value / (1 + WACC)^n</code>
+    <ul>
+      <li>n = number of periods away from present value</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="enterprise--equity-value-">Enterprise &amp; Equity Value <a name="enterequity"></a></h4>
+
+<figure>
+  <img src="/img/posts/valuation/enterpriseval.png" class="blg-img" alt="Enterprise valuation" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="financial-modeling-fundamentals-">Financial Modeling Fundamentals <a name="finmodelfun"></a></h3>
+<h4 id="financial-modeling-">Financial Modeling <a name="finmodelin"></a></h4>
+<ul>
+  <li>Virtual representation of a business</li>
+  <li>Logical flow and reasoning vs simple calculation</li>
+  <li>Scenario Building
+    <ul>
+      <li>Management can play with numbers</li>
+      <li>Build scenarios (best, base, worst case)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="why-financial-models-">Why Financial Models <a name="whyfinancial"></a></h4>
+<ul>
+  <li>With financial models the data is interlinked</li>
+  <li>You can’t just say revenues will increase without specifying costs/cash impact</li>
+  <li>Modeling provides 360 view
+    <ul>
+      <li>Balance Sheet -&gt; Scenarios -&gt; Profitability -&gt; Cash Flows -&gt; repeat</li>
+    </ul>
+  </li>
+  <li>Models Answers Questions Such As:
+    <ul>
+      <li>When is the firm planning to break-even?</li>
+      <li>How much is the estimated market potential?</li>
+      <li>How much cash does the firm need before its product to market?</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="inefficient-financial-modeling-">Inefficient Financial Modeling <a name="inefinancial"></a></h4>
+<ul>
+  <li>Wrong Ways for Modeling
+    <ul>
+      <li>Do not write formulas with embedded constants ex: 5% should be reference value <code class="highlighter-rouge">D4 * (1+5%)</code></li>
+      <li>Do not split model across multiple workbooks</li>
+      <li>Do not hide columns in your model</li>
+      <li>Avoid calculating items again that have been calculated</li>
+      <li>NEVER submit model that hasn’t been checked; double check your work (Asset = Liabilities + OE)
+        <ul>
+          <li>add checks below ur model</li>
+        </ul>
+      </li>
+      <li>Avoid using current sheet references in formulas</li>
+      <li>Avoid using complicated formulas</li>
+      <li>Don’t use too many macros/VBA</li>
+      <li>Don’t use different blocks, ex: if year 2018 is in column C have it always in column C</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="efficient-financial-modeling-">Efficient Financial Modeling <a name="efinancial"></a></h4>
+<ul>
+  <li>Accepted Practices
+    <ul>
+      <li>Build flexible models (cells should be linked)</li>
+      <li>Use uniform structure across all worksheets</li>
+      <li>Error-Free by inserting checks (confident about numbers in model)</li>
+      <li>Use calculation blocks that are easy to replicate (easy to copy &amp; paste)</li>
+      <li>Include units in header of tables</li>
+      <li>Create printable documents that are organized and look professional</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="types-of-financial-models-">Types of Financial Models <a name="typefinmodel"></a></h4>
+<ul>
+  <li>Credit Analysis
+    <ul>
+      <li>cash flows</li>
+      <li>borrower’s ability to repay</li>
+      <li>quality of guarantees</li>
+    </ul>
+  </li>
+  <li>Equity Investments
+    <ul>
+      <li>valuation</li>
+      <li>find investment opportunities</li>
+    </ul>
+  </li>
+  <li>M&amp;A
+    <ul>
+      <li>analyze synergies</li>
+      <li>calculate standalone value</li>
+    </ul>
+  </li>
+  <li>LBO
+    <ul>
+      <li>calculate cash flows</li>
+      <li>exit multiples</li>
+      <li>calculate IRR</li>
+    </ul>
+  </li>
+  <li>Project Finance
+    <ul>
+      <li>plan cash flow timing</li>
+      <li>calculate IRR for lenders and equity sponsors</li>
+    </ul>
+  </li>
+  <li>Startup Valuation
+    <ul>
+      <li>break-even analysis</li>
+      <li>market potential</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="level-of-detail-">Level of Detail <a name="lod"></a></h4>
+<ul>
+  <li>Long-term planning
+    <ul>
+      <li>Important Drivers
+        <ul>
+          <li>Revenues</li>
+          <li>Margins (Gross Profit, EBITDA)</li>
+          <li>Number of employees</li>
+          <li>Capex</li>
+          <li>Working Capital</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Mid-term planning</li>
+  <li>Short-term planning
+    <ul>
+      <li>line by line forecasting could work</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="right-approach-forecasting-">Right Approach Forecasting <a name="rightfore"></a></h4>
+<ul>
+  <li>Hockey Stick Effect
+    <ul>
+      <li>be consistent with past performance and avoid strong spikes at the beginning of the forecast period</li>
+    </ul>
+  </li>
+  <li>Industry Outlook
+    <ul>
+      <li>study the analysis of industry opinion leaders and plan accordingly</li>
+      <li>read expert opinions and forecasts</li>
+    </ul>
+  </li>
+  <li>Play With Numbers
+    <ul>
+      <li>take close look at the numbers and see if there is something that looks strange</li>
+      <li>build hypothesis</li>
+    </ul>
+  </li>
+  <li>Stage of Development
+    <ul>
+      <li>build a forecast that takes into account the stage of development of the firm (startup, growth, or mature business)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="building-complete-financial-model-">Building Complete Financial Model <a name="buildfin"></a></h4>
+<ul>
+  <li>P&amp;L
+    <ul>
+      <li>tells how firm has performed and if it is profitable</li>
+      <li>items effect BS &amp; CF statements</li>
+    </ul>
+  </li>
+  <li>Balance Sheet
+    <ul>
+      <li>shows assets and debt</li>
+    </ul>
+  </li>
+  <li>Cash Flow
+    <ul>
+      <li>how much cash was made</li>
+      <li>feeds the balance sheet</li>
+    </ul>
+  </li>
+  <li>Relationships Between P&amp;L &amp; Balance Sheet
+    <ul>
+      <li>Revenues &amp; Trade receivables</li>
+      <li>COGS &amp; Trade payables</li>
+      <li>D&amp;A &amp; Fixed assets</li>
+      <li>Interest expenses &amp; Financial liabilities</li>
+      <li>Net Income &amp; Equity</li>
+      <li>Other more…</li>
+    </ul>
+  </li>
+  <li>Relationships Between Cash Flow &amp; Balance Sheet
+    <ul>
+      <li>Net Cash Flow: The amount of cash that came in within a given year</li>
+      <li>BS: Beginning Cash (BS) + Net Cash Flow (CF) = Ending Cash (BS)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="forecasting-income-statement-">Forecasting Income Statement <a name="incfor"></a></h4>
+<ul>
+  <li>Revenues
+    <ul>
+      <li>The sales forecast is the most important task when forecasting financials</li>
+      <li>Top-down approach
+        <ul>
+          <li>general idea based on top-level view</li>
+          <li>Total Market Size * Market Share = Revenues</li>
+          <li>Blend of: Industry Insight, Past Performance, Macro Trends</li>
+        </ul>
+      </li>
+      <li>Bottom-up approach
+        <ul>
+          <li>consider all small details adding up to a total figure</li>
+          <li>ex: at product level
+            <ul>
+              <li>Sales of A + B + C = Revenues</li>
+            </ul>
+          </li>
+          <li>number of unknowns increases further out</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Analyst Research
+    <ul>
+      <li>Leverage research by analysts who closely follow the company and the industry</li>
+    </ul>
+  </li>
+  <li>Past Performace
+    <ul>
+      <li>Using past evidence as a forecast of the future</li>
+    </ul>
+  </li>
+  <li>Forecasting COGS &amp; Opex
+    <ul>
+      <li>COGS
+        <ul>
+          <li>costs related to the production process</li>
+          <li>frequently modeled as a percentage of revenues</li>
+        </ul>
+      </li>
+      <li>Opex
+        <ul>
+          <li>costs related to selling, general, and admin expenses</li>
+          <li>frequently modeled as a percentage of revenues</li>
+        </ul>
+      </li>
+      <li>D&amp;A
+        <ul>
+          <li>closely linked to fixed assets</li>
+          <li>usually modeled in a fixed asset roll forward schedule (need to make new schedule)</li>
+        </ul>
+      </li>
+      <li>Interest Expense
+        <ul>
+          <li>closely linked to financial liabilities</li>
+          <li>usually modeled in a debt schedule</li>
+        </ul>
+      </li>
+      <li>Taxes
+        <ul>
+          <li>EBT * Statutory tax rate = Taxes</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="forecasting-balance-sheet-">Forecasting Balance Sheet <a name="balfor"></a></h4>
+<ul>
+  <li>Working Capital
+    <ul>
+      <li>Consists of Trade Receivables, Inventory, and Trade Payables</li>
+      <li>Forecasted using  the <code class="highlighter-rouge">Days</code> technique
+        <ul>
+          <li><code class="highlighter-rouge">DSO = Trade Receivables / Revenue * 360</code></li>
+          <li><code class="highlighter-rouge">DIO = Inventory / COGS * 360</code></li>
+          <li><code class="highlighter-rouge">DPO = Trade Payables / COGS * 360</code></li>
+        </ul>
+      </li>
+      <li>Forecast average number of days
+        <ul>
+          <li><code class="highlighter-rouge">Trade Receivables = (DSO * Revenues) / 360</code></li>
+          <li><code class="highlighter-rouge">Inventory = (DIO * COGS) / 360</code></li>
+          <li><code class="highlighter-rouge">Trade Payables = (DPO * COGS) / 360</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Other Assets &amp; Liabilities
+    <ul>
+      <li>Generic categories grouping smaller items</li>
+      <li>Modeled as a percentage of revenues</li>
+    </ul>
+  </li>
+  <li>Property, Plant &amp; Equipment (PPE)
+    <ul>
+      <li>Group of fixed assets used in production or administration</li>
+      <li>Cars, machines, computers etc…</li>
+      <li>D&amp;A reduces the value of PP&amp;E</li>
+      <li>Firms invest in new assets which are listed in Capex</li>
+      <li><code class="highlighter-rouge">Beginning PP&amp;E - D&amp;A + Capex = Ending PP&amp;E</code></li>
+      <li>Some make new schedules or use % of revenues</li>
+    </ul>
+  </li>
+  <li>Financial Liabilities
+    <ul>
+      <li>Modeling financial liabilities depends on the type of facilities used by the company</li>
+      <li><code class="highlighter-rouge">Beginning Debt + New Debt - Debt Repayment = Ending Debt</code></li>
+      <li>Or calculate historical interest rate <code class="highlighter-rouge">Interest Expense / Financial Liabilities = Interest Rate</code></li>
+    </ul>
+  </li>
+  <li>Equity Schedule: <code class="highlighter-rouge">Beginning Equity + Increase of capital +/- Net Income (loss) - Dividend Payments = Ending Equity</code>
+    <ul>
+      <li>Beginning Equity is ending equity of the previous period</li>
+      <li>Increase of capital forecast as 0 as it is tough to calculate</li>
+      <li>Net Income linked to P&amp;L</li>
+      <li>Dividend is modeled as % of firm’s FCF</li>
+    </ul>
+  </li>
+  <li>Cash
+    <ul>
+      <li><code class="highlighter-rouge">Beginning Cash +/- Net Cash Flow = Ending Cash</code>
+        <ul>
+          <li>Net cash flow can be found on bottom of Cash Flow Statement</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>CHECK: Assets = Liabilities + Owners Equity</li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="dcf---introduction-">DCF - Introduction <a name="dcfintro"></a></h3>
+<h4 id="dcf-stages-">DCF Stages <a name="dcfstages"></a></h4>
+
+<figure>
+  <img src="/img/posts/valuation/framework.jpg" class="blg-img" alt="valuation framework" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="dcf-structure-">DCF Structure <a name="dcfstruct"></a></h4>
+
+<figure>
+  <img src="/img/posts/valuation/plassum.jpg" class="blg-img" alt="P&amp;L Assumption" />
+  <figcaption>P&amp;L assumption tab will have 3 scenarios. Render in output tab.</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/valuation/bsassum.jpg" class="blg-img" alt="BS Assumption" />
+  <figcaption>Balance sheet items grow inline with buisness no need for scenarios. Render in output tab.</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/valuation/cashflow.jpg" class="blg-img" alt="Cash Flow" />
+  <figcaption>Cash Flow inputs will come from P&amp;L &amp; BS tab</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/valuation/dcfval.jpg" class="blg-img" alt="DCF Valuation Tab" />
+  <figcaption>DCF valuation tab is where calculation will be performed</figcaption>
+</figure>
+
+<ul>
+  <li>Data source tabs will be where to put the company’s historical financial data</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="example-company---cheeseco-">Example Company - Cheeseco <a name="excompany"></a></h4>
+
+<figure>
+  <img src="/img/posts/valuation/cheeseco.jpg" class="blg-img" alt="Cheese Company Analysis" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="dcf---forecasting-pl-items-">DCF - Forecasting P&amp;L Items <a name="excompany"></a></h3>
+<h4 id="modeling-top-line-">Modeling Top Line <a name="modtop"></a></h4>
+<ul>
+  <li>P&amp;L assumptions tab
+    <ul>
+      <li>Create button for selected case where you will have 3 different scenarios (optimistic, base, worst)</li>
+      <li>Optomistic - better than historical growth of revenues</li>
+      <li>Base - historical growth of revenues</li>
+      <li>Worst - marginal growth of revenues</li>
+    </ul>
+  </li>
+  <li>P&amp;L Top Line
+    <ul>
+      <li>Revenues for past 3 years use <code class="highlighter-rouge">P&amp;L source</code> sheet to copy the data over (you may want to link all the other lines too)</li>
+      <li>Under revenues plot the YoY (year over year) growth rate %
+        <ul>
+          <li>calculate <code class="highlighter-rouge">(this year revenue / last years revenue) - 1</code></li>
+        </ul>
+      </li>
+      <li>Below YoY line put the three case scenarios <code class="highlighter-rouge">Case 1</code>, <code class="highlighter-rouge">Case 2</code>, <code class="highlighter-rouge">Case 3</code>
+        <ul>
+          <li>put pattern style on unused cells <code class="highlighter-rouge">highlight cells -&gt; right click -&gt; format cell -&gt; Fill -&gt; select pattern style</code></li>
+          <li>for each case calculate growth rate per year and for base case use historical average growth rate</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/plmodtop.jpg" class="blg-img" alt="Modeling Revenue" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="flexible-excel-models-">Flexible Excel Models <a name="flexmod"></a></h4>
+<ul>
+  <li><code class="highlighter-rouge">Choose</code> allows you to build a dynamic model
+    <ul>
+      <li>in excel formula type <code class="highlighter-rouge">=+CHOOSE(selected_case_value, value1, value2, value3 etc..)</code></li>
+    </ul>
+  </li>
+  <li>Calculate the forecasted revenue based on growth rate
+    <ul>
+      <li><code class="highlighter-rouge">Revenues this year = (Last year revenues) x (1 + YoY growth rate of revs)</code></li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/choose.jpg" class="blg-img" alt="Modeling Revenue" />
+</figure>
+
+<figure>
+  <img src="/img/posts/valuation/revforcast.jpg" class="blg-img" alt="Modeling Revenue" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="other-revenues--cogs-">Other Revenues &amp; COGS <a name="revcogmod"></a></h4>
+<ul>
+  <li>Copy the choose function parameters line from YoY revenues growth to copy formulas to each P&amp;L line</li>
+  <li>Other revenues could be operating or non-operating so use flat rate for each scenario</li>
+  <li>COGS is sum or raw materials + direct costs and will develop in line with revenues
+    <ul>
+      <li>use a percentage weight: <code class="highlighter-rouge">(Revenues for the year) * (COGS % of Revenues)</code></li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/COGS.jpg" class="blg-img" alt="Other revenues and COGS" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="operating-expense--da-">Operating Expense &amp; D&amp;A <a name="opexda"></a></h4>
+<ul>
+  <li>Model them as a % of revenues as they are dependent on the amount of revenue</li>
+  <li>Use the row from COGS (needs to be fixed) and copy onto Opex and D&amp;A</li>
+  <li>For each Opex case model the % of cost
+    <ul>
+      <li>you can then copy the COGS line onto the Opex line</li>
+    </ul>
+  </li>
+  <li>Follow the same steps above for D&amp;A</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="other-items--interest-expense-">Other Items &amp; Interest Expense] <a name="othritem"></a></h4>
+<ul>
+  <li>Interest expense depend on financial structure of firm
+    <ul>
+      <li>assuming company would not incur further debt then IE can be set as flat</li>
+      <li>copy the formula for revenues line and paste onto IE</li>
+    </ul>
+  </li>
+  <li>Extraordinary items cannot be predicted
+    <ul>
+      <li>copy the ready formula for an item modeled as a % of revenues</li>
+    </ul>
+  </li>
+  <li>Taxes
+    <ul>
+      <li>optimistic take lowest historical tax rate</li>
+      <li>base take tax rate in region or corporate</li>
+      <li>worst take highest historical tax rate</li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/otherexp.jpg" class="blg-img" alt="Other expenses" />
+</figure>
+
+<ul>
+  <li>Double check and see that when changing scenario the numbers change</li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="dcf---forecasting-balance-sheet-items-">DCF - Forecasting Balance Sheet Items <a name="forbal"></a></h3>
+<h4 id="modeling-balance-sheet-">Modeling Balance Sheet <a name="modelbal"></a></h4>
+<ul>
+  <li>Trade Receivables, Payables, and Inventory will be forecasted via <code class="highlighter-rouge">Days</code> technique</li>
+  <li>PP&amp;E, Other Assets &amp; Liabilities will be % of revenue</li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/bsforecast.jpg" class="blg-img" alt="Balance Sheet Template" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="concept-for-finance-practitioners-">Concept for Finance Practitioners <a name="confin"></a></h4>
+<ul>
+  <li>Lower DSO number say on accounts receivable means that a company receives payment quickly</li>
+  <li>DIO number tells how long it takes on average a company to convert inventory into cash</li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/daysmethod.jpg" class="blg-img" alt="Balance Sheet Template" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="days-calculation-">Days Calculation <a name="daycalc"></a></h4>
+<ul>
+  <li><code class="highlighter-rouge">DSO = (Trade Receivables / Revenues) * 360</code></li>
+  <li><code class="highlighter-rouge">DPO = (Trade Payable / COGS) * 360</code> use <code class="highlighter-rouge">-</code> to make positive</li>
+  <li><code class="highlighter-rouge">DIO = (Inventory / COGS) * 360</code></li>
+  <li>tip: fix row reference using <code class="highlighter-rouge">$</code> sign in excel</li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/dayscalculation.jpg" class="blg-img" alt="Balance Sheet Template" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="days-to-forecast-future-">Days to Forecast Future <a name="fordays"></a></h4>
+<ul>
+  <li>Two ways to calculate AR, AP, and Inventory
+    <ul>
+      <li>
+        <ol>
+          <li>average amount of days observed in historical</li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li>latest number in FY year (USE this method)</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>For deeper analysis look into by DSO, DPO, DIO either increased or decreased if they did</li>
+  <li>When forecasting you must reverse the calculations done on historical data for DSO, DPO and DIO
+    <ul>
+      <li><code class="highlighter-rouge">Trade Receivable = (DSO * Revenues) / 360</code></li>
+      <li><code class="highlighter-rouge">Trade Payable = (DPO * COGS) / 360</code></li>
+      <li><code class="highlighter-rouge">Trade Inventory = (DIO * COGS) / 360</code></li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/tradecalcs.jpg" class="blg-img" alt="Calculate Trade AR, AP and Inventory" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="property-plant--equipment-other-assets-other-liabilities-">Property Plant &amp; Equipment, Other Assets, Other Liabilities <a name="ppeasset"></a></h4>
+<ul>
+  <li>To find historical value just divide amount of PPE with the amount of revenues for that year (fix row)
+    <ul>
+      <li>fix row and copy for other assets and other liabilities</li>
+    </ul>
+  </li>
+  <li>Other liabilities can include extra items from source balance sheet such as: other liabilities, deferred tax, provisions for retirement benefits etc..</li>
+  <li>For forecasting you can take the average and use that value across all years (fix column)</li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/ppecalc.jpg" class="blg-img" alt="Calculate PPE Other Assets &amp; Liabilities" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="dcf---clean-output-sheets-">DCF - Clean Output Sheets <a name="cleanout"></a></h3>
+<h4 id="excel-practice-on-clean-output-">Excel Practice on Clean Output <a name="excleanout"></a></h4>
+<ul>
+  <li>Before calculating the cash flows you need to make a clean sheet of P&amp;L &amp; Balance Sheet</li>
+  <li>The clean sheet will display a clean output for use and printing</li>
+  <li>Copy total and subtotals and fill entire sheet</li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/plclean.jpg" class="blg-img" alt="Clean P&amp;L sheet" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="applying-practice-pl-">Applying Practice P&amp;L <a name="applypl"></a></h4>
+<ul>
+  <li>Since the clean P&amp;L output has the same item lines as the forecasted P&amp;L use the <code class="highlighter-rouge">SUMIF</code> excel function to transfer the numbers</li>
+  <li><code class="highlighter-rouge">+SUMIF(COLUMN CRITERIA, SELECT LOOKUP &amp; FIX COLUMN CELL, CELL TO PLACE DATA)</code>
+    <ul>
+      <li>you can then paste formula for all items except taxes</li>
+      <li>use <code class="highlighter-rouge">Paste Speical - Formulas</code> shortcut <code class="highlighter-rouge">ALT + E + S + F</code></li>
+    </ul>
+  </li>
+  <li>Taxes link to P&amp;L line in historical figures and calculate tax rate in clean output sheet by dividing taxes on EBT</li>
+  <li>Forecasting tax you just multiply the number by revenue line</li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/plclean2.jpg" class="blg-img" alt="Clean P&amp;L sheet" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="clean-output-balance-sheet-">Clean Output Balance Sheet <a name="cleanbal"></a></h4>
+<ul>
+  <li>Just like with P&amp;L you can use the <code class="highlighter-rouge">SUMIF</code> function to fill in the data</li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/bsclean.jpg" class="blg-img" alt="Clean BS sheet" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="output-balance-sheet-historical-data-">Output Balance Sheet Historical Data <a name="outbshis"></a></h4>
+<ul>
+  <li>For the other accounts first link them to their historical values in the BS source</li>
+  <li>Consolidate any liabilities into one</li>
+  <li>Have a check box below and remember TA = TL + OE</li>
+  <li>Forecasting BS
+    <ul>
+      <li>Intangible Assets leave as flat (unknown future)</li>
+      <li>Financial Assets leave as flat (unknown future)</li>
+      <li>Cash + Cash Equivalents (Opening Cash + Net Cash Flow) calculate later</li>
+      <li>Financial Liabilities leave as flat unless known</li>
+      <li>Shareholders’ equity is <code class="highlighter-rouge">Equity = Opening Equity + Net Income - Dividends</code></li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/bsclean2.jpg" class="blg-img" alt="Clean BS sheet" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="dcf---unlevered-cash-flows--net-cash-flow-">DCF - Unlevered Cash Flows &amp; Net Cash Flow <a name="ufcf"></a></h3>
+<h4 id="unlevered-free-cash-flow-calculation-">Unlevered Free Cash Flow Calculation <a name="fcfcalc"></a></h4>
+<ul>
+  <li>Two ways to to calculate cash flow
+    <ul>
+      <li>Levered Cash Flow - considering financial structure of firm</li>
+      <li>Unlevered Cash Flow - independently away from financial structure of firm</li>
+    </ul>
+  </li>
+  <li>Operating taxes are calculated as a percentage of EBIT
+    <ul>
+      <li>NOPAT is EBIT - Taxes</li>
+    </ul>
+  </li>
+  <li>Add-back D&amp;A
+    <ul>
+      <li>Come to Gross Cash Flow</li>
+    </ul>
+  </li>
+  <li>Next, add in items Inventory, Trade Receivables, Trade Payables
+    <ul>
+      <li>Sum to get investments in working capital</li>
+      <li>investments in other assets/liabilities</li>
+    </ul>
+  </li>
+  <li>Capex, Other Investments, and Extraordinary Items</li>
+  <li>After all of that you will now have Unlevered Free Cash Flow</li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/cashflowunl.jpg" class="blg-img" alt="Cash Flow Statment" />
+</figure>
+
+<h4 id="reconcile-ufcf-to-net-cash-flow-">Reconcile UFCF to Net Cash Flow <a name="netcf"></a></h4>
+<ul>
+  <li>After UFCF add
+    <ul>
+      <li>Interest Expense</li>
+      <li>Delta Taxes vs Operating Taxes (lower taxes due to deduction of interest expense)</li>
+      <li>Delta Financial liabilities</li>
+      <li>Delta Equity incl. dividends</li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/ufcftonet.jpg" class="blg-img" alt="Cash Flow Statment" />
+</figure>
+
+<h4 id="cash-flow-calculation-">Cash Flow Calculation <a name="cfcalc"></a></h4>
+<ul>
+  <li>First link the EBIT numbers from output-P&amp;L sheet</li>
+  <li>Next select operating tax rate from output-P&amp;L sheet (calculated)</li>
+  <li>Add back depreciation after NOPAT</li>
+  <li>Adjust for all BS items that effected cash
+    <ul>
+      <li>asset increase = cash outflow (-)</li>
+      <li>asset decreased = cash inflow (+)</li>
+      <li>liabilities increased = cash inflow (+)</li>
+      <li>liabilities decreased = cash outflow (-)</li>
+      <li>Use balance sheet to see the change between the years
+        <ul>
+          <li>do this for trade AR, AP, Inventory</li>
+          <li>total of these three items is investments in working capital</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Next is Capex (in order to obtain amount of capex during the given year you have to take into account D&amp;A)</li>
+  <li>Next is other investments &amp; extraordinary items</li>
+  <li>UFCF = <code class="highlighter-rouge">Gross Cash Flow + Investments in WC + Investments in Other assets/liabilities + Capex + Other Investments + Extraordinary Items</code></li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/cashflowcalculation.jpg" class="blg-img" alt="Cash Flow Statment" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="arrive-net-cash-">Arrive Net Cash <a name="netcash"></a></h4>
+<ul>
+  <li>Grab interest expense from the “actual” in P&amp;L sheet</li>
+  <li>Find the difference between taxes paid go and take from P&amp;L sheet of actual taxes paid and subtract by theoretical operating taxes</li>
+  <li>Record actual financial liabilities from BS</li>
+  <li>Shareholders equity calculation = <code class="highlighter-rouge">Opening equity + Net Income for year - Dividends</code>
+    <ul>
+      <li>Take into account the closing amount for previous and current year and subtract that amount from net income</li>
+    </ul>
+  </li>
+  <li>Below Net Cash Flow line add line items
+    <ul>
+      <li>Opening cash</li>
+      <li>Closing cash</li>
+      <li>Opening Cash + Net Cash Flow for year = Closing Cash
+        <ul>
+          <li>Closing cash needs to = Cash on balance sheet</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/netcashflow.jpg" class="blg-img" alt="Net Cash Flows" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="multiple-cell-reference-modification-">Multiple Cell Reference Modification <a name="multicell"></a></h4>
+<ul>
+  <li>Fill in the rest of the table and periods as you can copy and paste formula in each</li>
+  <li>On Ouput sheet fill in the cash and equivalents
+    <ul>
+      <li>make sure in the check area you balance to 0</li>
+    </ul>
+  </li>
+  <li>Empty column F enters in the Cash Flow Calculation instead of E use <code class="highlighter-rouge">Find + Replace</code>
+    <ul>
+      <li>We want to replace the references of F with references of E</li>
+      <li>once done copy over next column and repeat <code class="highlighter-rouge">Find + Replace</code></li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/findnreplace.jpg" class="blg-img" alt="" />
+</figure>
+
+<figure>
+<img src="/img/posts/valuation/findnreplace2.jpg" class="blg-img" alt="" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="dcf---calculate-present-value-of-cash-flows-">DCF - Calculate Present Value of Cash Flows <a name="calcpv"></a></h3>
+<h4 id="weighted-average-cost-of-capital-wacc-">Weighted Average Cost of Capital (WACC) <a name="calcwacc"></a></h4>
+<ul>
+  <li>Two key inputs needed WACC &amp; Perpetuity Growth
+    <ul>
+      <li>WACC is the cost at which investors are willing to finance the company</li>
+      <li>Perpetuity growth rate (g) is the pace at which the company’s revenues would grow after forecast period</li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/dcfinputs.jpg" class="blg-img" alt="" />
+</figure>
+
+<ul>
+  <li>Calculate the DCF by using the formula <strong>MISSING VIDEO</strong></li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/dcfufcf.jpg" class="blg-img" alt="" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="dcf---calculating-continuing-value-enterprise--equity-value-">DCF - Calculating Continuing Value Enterprise &amp; Equity Value <a name="enterequval"></a></h3>
+<h4 id="calculating-continuing-value--enterprise-value-">Calculating Continuing Value &amp; Enterprise Value <a name="enterval"></a></h4>
+<ul>
+  <li>Sum the total of <code class="highlighter-rouge">PV of Cash Flows</code></li>
+  <li>Use the continuing value formula
+    <ul>
+      <li><code class="highlighter-rouge">Continuing Value = (UFCFt * (1 + g)) /  WACC - g</code></li>
+      <li>To obtain PV of cash flows take continuing value and multiply it by <code class="highlighter-rouge">discount factor</code></li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/calccontinue.jpg" class="blg-img" alt="" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="final-steps-equity-value-">Final Steps Equity Value <a name="finequity"></a></h4>
+<ul>
+  <li>Enterprise Value - Financial Liabilities + Cash + Value of non-operating assets = Equity Value
+    <ul>
+      <li>get values from the Balance Sheet</li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/equityvalue.jpg" class="blg-img" alt="" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="dcf---additional-analysis-to-financial-model-">DCF - Additional Analysis to Financial Model <a name="analysisfin"></a></h3>
+<h4 id="sensitivity-for-wacc--perpetuity-growth-">Sensitivity For WACC &amp; Perpetuity Growth <a name="senwacc"></a></h4>
+<ul>
+  <li>Sensitivity analysis allows you to quickly test different scenarios</li>
+  <li>Create a data table to do this
+    <ul>
+      <li>link a cell to the Enterprise Value</li>
+      <li>next to it put different WACC rates</li>
+      <li>below the copied EV type the different growth (g) rate</li>
+      <li><code class="highlighter-rouge">Data</code> tab and then <code class="highlighter-rouge">What-If Analysis</code> -&gt; <code class="highlighter-rouge">Data Table</code>
+        <ul>
+          <li>Row cell is WACC</li>
+          <li>Column cell is g</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/sensitiva.jpg" class="blg-img" alt="" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="goal-seek-">Goal Seek <a name="goalseek"></a></h4>
+<ul>
+  <li>Use goal seek to find specific value
+    <ul>
+      <li><code class="highlighter-rouge">Data</code> -&gt; <code class="highlighter-rouge">What-If</code> -&gt; <code class="highlighter-rouge">Goal Seek</code></li>
+      <li>Set cell, the value to find, and last what value to change to find it (WACC)</li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/goalseek.jpg" class="blg-img" alt="" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="financial-model-chart-">Financial Model Chart <a name="finchart"></a></h4>
+<ul>
+  <li>It is best to create visual representation of your data by using charts</li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/revebitda.jpg" class="blg-img" alt="" />
+</figure>
+
+<figure>
+<img src="/img/posts/valuation/chartfcf.jpg" class="blg-img" alt="" />
+</figure>
+
+<figure>
+<img src="/img/posts/valuation/chartbridge.jpg" class="blg-img" alt="" />
+</figure>
+
+<figure>
+<img src="/img/posts/valuation/chartwc.jpg" class="blg-img" alt="" />
+</figure>
+
+<figure>
+<img src="/img/posts/valuation/chartdonut.jpg" class="blg-img" alt="" />
+</figure>
+
+<p><br /></p>
+
+    <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
+  </div>
+
+
+<div id="disqus_thread"></div>
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+
+// var disqus_config = function () {
+//   this.page.url = /blog/programming/valuation;         // Replace PAGE_URL with your page's canonical URL variable
+//   //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+// };
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//pratikshah.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div id="social-media" class="footer-col footer-col-3 center">
+
+        <!-- <div id="twitter-btn">
+          <a href="https://twitter.com/pratikshah" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @pratikshah</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div> -->
+
+        <ul class="social-media-list center">
+          
+          <li>
+            <a href="https://github.com/pratikmshah" class="icon-social" title="GitHub">
+  <img src="/img/icons/github-blk.png">
+  <img src="/img/icons/github-clr.png">
+</a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/pratikshah" class="icon-social" title="Twitter">
+  <img src="/img/icons/twt-blk.png">
+  <img src="/img/icons/twt-clr.png">
+</a>
+
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://linkedin.com/in/pratikmshah" class="icon-social" title="LinkedIn">
+  <img src="/img/icons/lnkdn-blk.png">
+  <img src="/img/icons/lnkdn-clr.png">
+</a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://instagram.com/pratikshah_" class="icon-social" title="Instagram">
+  <img src="/img/icons/insta-blk.png">
+  <img src="/img/icons/insta-clr.png">
+</a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:pratik.t.shah@gmail.com" class="icon-social" title="E-Mail">
+  <img src="/img/icons/email-blk.png">
+  <img src="/img/icons/email-clr.png">
+</a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+     <div class="center">
+      <p class="footer-copyw">This site is powered by <a href="https://jekyllrb.com/">Jekyll</a></p>
+     </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
