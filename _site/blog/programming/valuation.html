@@ -139,6 +139,59 @@
       <li><a href="#excompany">Example Company - Cheeseco</a></li>
     </ul>
   </li>
+  <li><a href="#forpl">DCF - Forecasting P&amp;L Items</a>
+    <ul>
+      <li><a href="#modtop">Modeling Top Line</a></li>
+      <li><a href="#flexmod">Flexible Excel Models</a></li>
+      <li><a href="#revcogmod">Other Revenues &amp; COGS</a></li>
+      <li><a href="#opexda">Operating Expense &amp; D&amp;A</a></li>
+      <li><a href="#othritem">Other Items &amp; Interest Expense</a></li>
+    </ul>
+  </li>
+  <li><a href="#forbal">DCF - Forecasting Balance Sheet Items</a>
+    <ul>
+      <li><a href="#modelbal">Modeling Balance Sheet</a></li>
+      <li><a href="#confin">Concept for Finance Practitioners</a></li>
+      <li><a href="#daycalc">Days Calculation</a></li>
+      <li><a href="#fordays">Days to Forecast Future</a></li>
+      <li><a href="#ppeasset">Property Plant &amp; Equipment, Other Assets, Other Liabilities</a></li>
+    </ul>
+  </li>
+  <li><a href="#cleanout">DCF - Clean Output Sheets</a>
+    <ul>
+      <li><a href="#excleanout">Excel Practice on Clean Output</a></li>
+      <li><a href="#applypl">Applying Practice P&amp;L</a></li>
+      <li><a href="#cleanbal">Clean Output Balance Sheet</a></li>
+      <li><a href="#outbshis">Output Balance Sheet Historical Data</a></li>
+    </ul>
+  </li>
+  <li><a href="#ufcf">DCF - Unlevered Cash Flows &amp; Net Cash Flow</a>
+    <ul>
+      <li><a href="#fcfcalc">Unlevered Free Cash Flow Calculation</a></li>
+      <li><a href="#netcf">Reconcile UFCF to Net Cash Flow</a></li>
+      <li><a href="#cfcalc">Cash Flow Calculation</a></li>
+      <li><a href="#netcash">Arrive Net Cash</a></li>
+      <li><a href="#multicell">Multiple Cell Reference Modification</a></li>
+    </ul>
+  </li>
+  <li><a href="#calcpv">DCF - Calculate Present Value of Cash Flows</a>
+    <ul>
+      <li><a href="#calcwacc">Weighted Average Cost of Capital (WACC)</a></li>
+    </ul>
+  </li>
+  <li><a href="#enterequval">DCF - Calculating Continuing Value Enterprise &amp; Equity Value</a>
+    <ul>
+      <li><a href="#enterval">Calculating Continuing Value &amp; Enterprise Value</a></li>
+      <li><a href="#finequity">Final Steps Equity Value</a></li>
+    </ul>
+  </li>
+  <li><a href="#analysisfin">DCF - Additional Analysis to Financial Model</a>
+    <ul>
+      <li><a href="#senwacc">Sensitivity For WACC &amp; Perpetuity Growth</a></li>
+      <li><a href="#goalseek">Goal Seek</a></li>
+      <li><a href="#finchart">Financial Model Chart</a></li>
+    </ul>
+  </li>
 </ol>
 
 <p><br /></p>
@@ -737,6 +790,542 @@
 
 <figure>
   <img src="/img/posts/valuation/cheeseco.jpg" class="blg-img" alt="Cheese Company Analysis" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="dcf---forecasting-pl-items-">DCF - Forecasting P&amp;L Items <a name="excompany"></a></h3>
+<h4 id="modeling-top-line-">Modeling Top Line <a name="modtop"></a></h4>
+<ul>
+  <li>P&amp;L assumptions tab
+    <ul>
+      <li>Create button for selected case where you will have 3 different scenarios (optimistic, base, worst)</li>
+      <li>Optomistic - better than historical growth of revenues</li>
+      <li>Base - historical growth of revenues</li>
+      <li>Worst - marginal growth of revenues</li>
+    </ul>
+  </li>
+  <li>P&amp;L Top Line
+    <ul>
+      <li>Revenues for past 3 years use <code class="highlighter-rouge">P&amp;L source</code> sheet to copy the data over (you may want to link all the other lines too)</li>
+      <li>Under revenues plot the YoY (year over year) growth rate %
+        <ul>
+          <li>calculate <code class="highlighter-rouge">(this year revenue / last years revenue) - 1</code></li>
+        </ul>
+      </li>
+      <li>Below YoY line put the three case scenarios <code class="highlighter-rouge">Case 1</code>, <code class="highlighter-rouge">Case 2</code>, <code class="highlighter-rouge">Case 3</code>
+        <ul>
+          <li>put pattern style on unused cells <code class="highlighter-rouge">highlight cells -&gt; right click -&gt; format cell -&gt; Fill -&gt; select pattern style</code></li>
+          <li>for each case calculate growth rate per year and for base case use historical average growth rate</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/plmodtop.jpg" class="blg-img" alt="Modeling Revenue" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="flexible-excel-models-">Flexible Excel Models <a name="flexmod"></a></h4>
+<ul>
+  <li><code class="highlighter-rouge">Choose</code> allows you to build a dynamic model
+    <ul>
+      <li>in excel formula type <code class="highlighter-rouge">=+CHOOSE(selected_case_value, value1, value2, value3 etc..)</code></li>
+    </ul>
+  </li>
+  <li>Calculate the forecasted revenue based on growth rate
+    <ul>
+      <li><code class="highlighter-rouge">Revenues this year = (Last year revenues) x (1 + YoY growth rate of revs)</code></li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/choose.jpg" class="blg-img" alt="Modeling Revenue" />
+</figure>
+
+<figure>
+  <img src="/img/posts/valuation/revforcast.jpg" class="blg-img" alt="Modeling Revenue" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="other-revenues--cogs-">Other Revenues &amp; COGS <a name="revcogmod"></a></h4>
+<ul>
+  <li>Copy the choose function parameters line from YoY revenues growth to copy formulas to each P&amp;L line</li>
+  <li>Other revenues could be operating or non-operating so use flat rate for each scenario</li>
+  <li>COGS is sum or raw materials + direct costs and will develop in line with revenues
+    <ul>
+      <li>use a percentage weight: <code class="highlighter-rouge">(Revenues for the year) * (COGS % of Revenues)</code></li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/COGS.jpg" class="blg-img" alt="Other revenues and COGS" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="operating-expense--da-">Operating Expense &amp; D&amp;A <a name="opexda"></a></h4>
+<ul>
+  <li>Model them as a % of revenues as they are dependent on the amount of revenue</li>
+  <li>Use the row from COGS (needs to be fixed) and copy onto Opex and D&amp;A</li>
+  <li>For each Opex case model the % of cost
+    <ul>
+      <li>you can then copy the COGS line onto the Opex line</li>
+    </ul>
+  </li>
+  <li>Follow the same steps above for D&amp;A</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="other-items--interest-expense-">Other Items &amp; Interest Expense] <a name="othritem"></a></h4>
+<ul>
+  <li>Interest expense depend on financial structure of firm
+    <ul>
+      <li>assuming company would not incur further debt then IE can be set as flat</li>
+      <li>copy the formula for revenues line and paste onto IE</li>
+    </ul>
+  </li>
+  <li>Extraordinary items cannot be predicted
+    <ul>
+      <li>copy the ready formula for an item modeled as a % of revenues</li>
+    </ul>
+  </li>
+  <li>Taxes
+    <ul>
+      <li>optimistic take lowest historical tax rate</li>
+      <li>base take tax rate in region or corporate</li>
+      <li>worst take highest historical tax rate</li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/otherexp.jpg" class="blg-img" alt="Other expenses" />
+</figure>
+
+<ul>
+  <li>Double check and see that when changing scenario the numbers change</li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="dcf---forecasting-balance-sheet-items-">DCF - Forecasting Balance Sheet Items <a name="forbal"></a></h3>
+<h4 id="modeling-balance-sheet-">Modeling Balance Sheet <a name="modelbal"></a></h4>
+<ul>
+  <li>Trade Receivables, Payables, and Inventory will be forecasted via <code class="highlighter-rouge">Days</code> technique</li>
+  <li>PP&amp;E, Other Assets &amp; Liabilities will be % of revenue</li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/bsforecast.jpg" class="blg-img" alt="Balance Sheet Template" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="concept-for-finance-practitioners-">Concept for Finance Practitioners <a name="confin"></a></h4>
+<ul>
+  <li>Lower DSO number say on accounts receivable means that a company receives payment quickly</li>
+  <li>DIO number tells how long it takes on average a company to convert inventory into cash</li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/daysmethod.jpg" class="blg-img" alt="Balance Sheet Template" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="days-calculation-">Days Calculation <a name="daycalc"></a></h4>
+<ul>
+  <li><code class="highlighter-rouge">DSO = (Trade Receivables / Revenues) * 360</code></li>
+  <li><code class="highlighter-rouge">DPO = (Trade Payable / COGS) * 360</code> use <code class="highlighter-rouge">-</code> to make positive</li>
+  <li><code class="highlighter-rouge">DIO = (Inventory / COGS) * 360</code></li>
+  <li>tip: fix row reference using <code class="highlighter-rouge">$</code> sign in excel</li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/dayscalculation.jpg" class="blg-img" alt="Balance Sheet Template" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="days-to-forecast-future-">Days to Forecast Future <a name="fordays"></a></h4>
+<ul>
+  <li>Two ways to calculate AR, AP, and Inventory
+    <ul>
+      <li>
+        <ol>
+          <li>average amount of days observed in historical</li>
+        </ol>
+      </li>
+      <li>
+        <ol>
+          <li>latest number in FY year (USE this method)</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>For deeper analysis look into by DSO, DPO, DIO either increased or decreased if they did</li>
+  <li>When forecasting you must reverse the calculations done on historical data for DSO, DPO and DIO
+    <ul>
+      <li><code class="highlighter-rouge">Trade Receivable = (DSO * Revenues) / 360</code></li>
+      <li><code class="highlighter-rouge">Trade Payable = (DPO * COGS) / 360</code></li>
+      <li><code class="highlighter-rouge">Trade Inventory = (DIO * COGS) / 360</code></li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/tradecalcs.jpg" class="blg-img" alt="Calculate Trade AR, AP and Inventory" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="property-plant--equipment-other-assets-other-liabilities-">Property Plant &amp; Equipment, Other Assets, Other Liabilities <a name="ppeasset"></a></h4>
+<ul>
+  <li>To find historical value just divide amount of PPE with the amount of revenues for that year (fix row)
+    <ul>
+      <li>fix row and copy for other assets and other liabilities</li>
+    </ul>
+  </li>
+  <li>Other liabilities can include extra items from source balance sheet such as: other liabilities, deferred tax, provisions for retirement benefits etc..</li>
+  <li>For forecasting you can take the average and use that value across all years (fix column)</li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/ppecalc.jpg" class="blg-img" alt="Calculate PPE Other Assets &amp; Liabilities" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="dcf---clean-output-sheets-">DCF - Clean Output Sheets <a name="cleanout"></a></h3>
+<h4 id="excel-practice-on-clean-output-">Excel Practice on Clean Output <a name="excleanout"></a></h4>
+<ul>
+  <li>Before calculating the cash flows you need to make a clean sheet of P&amp;L &amp; Balance Sheet</li>
+  <li>The clean sheet will display a clean output for use and printing</li>
+  <li>Copy total and subtotals and fill entire sheet</li>
+</ul>
+
+<figure>
+  <img src="/img/posts/valuation/plclean.jpg" class="blg-img" alt="Clean P&amp;L sheet" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="applying-practice-pl-">Applying Practice P&amp;L <a name="applypl"></a></h4>
+<ul>
+  <li>Since the clean P&amp;L output has the same item lines as the forecasted P&amp;L use the <code class="highlighter-rouge">SUMIF</code> excel function to transfer the numbers</li>
+  <li><code class="highlighter-rouge">+SUMIF(COLUMN CRITERIA, SELECT LOOKUP &amp; FIX COLUMN CELL, CELL TO PLACE DATA)</code>
+    <ul>
+      <li>you can then paste formula for all items except taxes</li>
+      <li>use <code class="highlighter-rouge">Paste Speical - Formulas</code> shortcut <code class="highlighter-rouge">ALT + E + S + F</code></li>
+    </ul>
+  </li>
+  <li>Taxes link to P&amp;L line in historical figures and calculate tax rate in clean output sheet by dividing taxes on EBT</li>
+  <li>Forecasting tax you just multiply the number by revenue line</li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/plclean2.jpg" class="blg-img" alt="Clean P&amp;L sheet" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="clean-output-balance-sheet-">Clean Output Balance Sheet <a name="cleanbal"></a></h4>
+<ul>
+  <li>Just like with P&amp;L you can use the <code class="highlighter-rouge">SUMIF</code> function to fill in the data</li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/bsclean.jpg" class="blg-img" alt="Clean BS sheet" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="output-balance-sheet-historical-data-">Output Balance Sheet Historical Data <a name="outbshis"></a></h4>
+<ul>
+  <li>For the other accounts first link them to their historical values in the BS source</li>
+  <li>Consolidate any liabilities into one</li>
+  <li>Have a check box below and remember TA = TL + OE</li>
+  <li>Forecasting BS
+    <ul>
+      <li>Intangible Assets leave as flat (unknown future)</li>
+      <li>Financial Assets leave as flat (unknown future)</li>
+      <li>Cash + Cash Equivalents (Opening Cash + Net Cash Flow) calculate later</li>
+      <li>Financial Liabilities leave as flat unless known</li>
+      <li>Shareholders’ equity is <code class="highlighter-rouge">Equity = Opening Equity + Net Income - Dividends</code></li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/bsclean2.jpg" class="blg-img" alt="Clean BS sheet" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="dcf---unlevered-cash-flows--net-cash-flow-">DCF - Unlevered Cash Flows &amp; Net Cash Flow <a name="ufcf"></a></h3>
+<h4 id="unlevered-free-cash-flow-calculation-">Unlevered Free Cash Flow Calculation <a name="fcfcalc"></a></h4>
+<ul>
+  <li>Two ways to to calculate cash flow
+    <ul>
+      <li>Levered Cash Flow - considering financial structure of firm</li>
+      <li>Unlevered Cash Flow - independently away from financial structure of firm</li>
+    </ul>
+  </li>
+  <li>Operating taxes are calculated as a percentage of EBIT
+    <ul>
+      <li>NOPAT is EBIT - Taxes</li>
+    </ul>
+  </li>
+  <li>Add-back D&amp;A
+    <ul>
+      <li>Come to Gross Cash Flow</li>
+    </ul>
+  </li>
+  <li>Next, add in items Inventory, Trade Receivables, Trade Payables
+    <ul>
+      <li>Sum to get investments in working capital</li>
+      <li>investments in other assets/liabilities</li>
+    </ul>
+  </li>
+  <li>Capex, Other Investments, and Extraordinary Items</li>
+  <li>After all of that you will now have Unlevered Free Cash Flow</li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/cashflowunl.jpg" class="blg-img" alt="Cash Flow Statment" />
+</figure>
+
+<h4 id="reconcile-ufcf-to-net-cash-flow-">Reconcile UFCF to Net Cash Flow <a name="netcf"></a></h4>
+<ul>
+  <li>After UFCF add
+    <ul>
+      <li>Interest Expense</li>
+      <li>Delta Taxes vs Operating Taxes (lower taxes due to deduction of interest expense)</li>
+      <li>Delta Financial liabilities</li>
+      <li>Delta Equity incl. dividends</li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/ufcftonet.jpg" class="blg-img" alt="Cash Flow Statment" />
+</figure>
+
+<h4 id="cash-flow-calculation-">Cash Flow Calculation <a name="cfcalc"></a></h4>
+<ul>
+  <li>First link the EBIT numbers from output-P&amp;L sheet</li>
+  <li>Next select operating tax rate from output-P&amp;L sheet (calculated)</li>
+  <li>Add back depreciation after NOPAT</li>
+  <li>Adjust for all BS items that effected cash
+    <ul>
+      <li>asset increase = cash outflow (-)</li>
+      <li>asset decreased = cash inflow (+)</li>
+      <li>liabilities increased = cash inflow (+)</li>
+      <li>liabilities decreased = cash outflow (-)</li>
+      <li>Use balance sheet to see the change between the years
+        <ul>
+          <li>do this for trade AR, AP, Inventory</li>
+          <li>total of these three items is investments in working capital</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Next is Capex (in order to obtain amount of capex during the given year you have to take into account D&amp;A)</li>
+  <li>Next is other investments &amp; extraordinary items</li>
+  <li>UFCF = <code class="highlighter-rouge">Gross Cash Flow + Investments in WC + Investments in Other assets/liabilities + Capex + Other Investments + Extraordinary Items</code></li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/cashflowcalculation.jpg" class="blg-img" alt="Cash Flow Statment" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="arrive-net-cash-">Arrive Net Cash <a name="netcash"></a></h4>
+<ul>
+  <li>Grab interest expense from the “actual” in P&amp;L sheet</li>
+  <li>Find the difference between taxes paid go and take from P&amp;L sheet of actual taxes paid and subtract by theoretical operating taxes</li>
+  <li>Record actual financial liabilities from BS</li>
+  <li>Shareholders equity calculation = <code class="highlighter-rouge">Opening equity + Net Income for year - Dividends</code>
+    <ul>
+      <li>Take into account the closing amount for previous and current year and subtract that amount from net income</li>
+    </ul>
+  </li>
+  <li>Below Net Cash Flow line add line items
+    <ul>
+      <li>Opening cash</li>
+      <li>Closing cash</li>
+      <li>Opening Cash + Net Cash Flow for year = Closing Cash
+        <ul>
+          <li>Closing cash needs to = Cash on balance sheet</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/netcashflow.jpg" class="blg-img" alt="Net Cash Flows" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="multiple-cell-reference-modification-">Multiple Cell Reference Modification <a name="multicell"></a></h4>
+<ul>
+  <li>Fill in the rest of the table and periods as you can copy and paste formula in each</li>
+  <li>On Ouput sheet fill in the cash and equivalents
+    <ul>
+      <li>make sure in the check area you balance to 0</li>
+    </ul>
+  </li>
+  <li>Empty column F enters in the Cash Flow Calculation instead of E use <code class="highlighter-rouge">Find + Replace</code>
+    <ul>
+      <li>We want to replace the references of F with references of E</li>
+      <li>once done copy over next column and repeat <code class="highlighter-rouge">Find + Replace</code></li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/findnreplace.jpg" class="blg-img" alt="" />
+</figure>
+
+<figure>
+<img src="/img/posts/valuation/findnreplace2.jpg" class="blg-img" alt="" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="dcf---calculate-present-value-of-cash-flows-">DCF - Calculate Present Value of Cash Flows <a name="calcpv"></a></h3>
+<h4 id="weighted-average-cost-of-capital-wacc-">Weighted Average Cost of Capital (WACC) <a name="calcwacc"></a></h4>
+<ul>
+  <li>Two key inputs needed WACC &amp; Perpetuity Growth
+    <ul>
+      <li>WACC is the cost at which investors are willing to finance the company</li>
+      <li>Perpetuity growth rate (g) is the pace at which the company’s revenues would grow after forecast period</li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/dcfinputs.jpg" class="blg-img" alt="" />
+</figure>
+
+<ul>
+  <li>Calculate the DCF by using the formula <strong>MISSING VIDEO</strong></li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/dcfufcf.jpg" class="blg-img" alt="" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="dcf---calculating-continuing-value-enterprise--equity-value-">DCF - Calculating Continuing Value Enterprise &amp; Equity Value <a name="enterequval"></a></h3>
+<h4 id="calculating-continuing-value--enterprise-value-">Calculating Continuing Value &amp; Enterprise Value <a name="enterval"></a></h4>
+<ul>
+  <li>Sum the total of <code class="highlighter-rouge">PV of Cash Flows</code></li>
+  <li>Use the continuing value formula
+    <ul>
+      <li><code class="highlighter-rouge">Continuing Value = (UFCFt * (1 + g)) /  WACC - g</code></li>
+      <li>To obtain PV of cash flows take continuing value and multiply it by <code class="highlighter-rouge">discount factor</code></li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/calccontinue.jpg" class="blg-img" alt="" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="final-steps-equity-value-">Final Steps Equity Value <a name="finequity"></a></h4>
+<ul>
+  <li>Enterprise Value - Financial Liabilities + Cash + Value of non-operating assets = Equity Value
+    <ul>
+      <li>get values from the Balance Sheet</li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/equityvalue.jpg" class="blg-img" alt="" />
+</figure>
+
+<p><br /></p>
+
+<h3 id="dcf---additional-analysis-to-financial-model-">DCF - Additional Analysis to Financial Model <a name="analysisfin"></a></h3>
+<h4 id="sensitivity-for-wacc--perpetuity-growth-">Sensitivity For WACC &amp; Perpetuity Growth <a name="senwacc"></a></h4>
+<ul>
+  <li>Sensitivity analysis allows you to quickly test different scenarios</li>
+  <li>Create a data table to do this
+    <ul>
+      <li>link a cell to the Enterprise Value</li>
+      <li>next to it put different WACC rates</li>
+      <li>below the copied EV type the different growth (g) rate</li>
+      <li><code class="highlighter-rouge">Data</code> tab and then <code class="highlighter-rouge">What-If Analysis</code> -&gt; <code class="highlighter-rouge">Data Table</code>
+        <ul>
+          <li>Row cell is WACC</li>
+          <li>Column cell is g</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/sensitiva.jpg" class="blg-img" alt="" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="goal-seek-">Goal Seek <a name="goalseek"></a></h4>
+<ul>
+  <li>Use goal seek to find specific value
+    <ul>
+      <li><code class="highlighter-rouge">Data</code> -&gt; <code class="highlighter-rouge">What-If</code> -&gt; <code class="highlighter-rouge">Goal Seek</code></li>
+      <li>Set cell, the value to find, and last what value to change to find it (WACC)</li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/goalseek.jpg" class="blg-img" alt="" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="financial-model-chart-">Financial Model Chart <a name="finchart"></a></h4>
+<ul>
+  <li>It is best to create visual representation of your data by using charts</li>
+</ul>
+
+<figure>
+<img src="/img/posts/valuation/revebitda.jpg" class="blg-img" alt="" />
+</figure>
+
+<figure>
+<img src="/img/posts/valuation/chartfcf.jpg" class="blg-img" alt="" />
+</figure>
+
+<figure>
+<img src="/img/posts/valuation/chartbridge.jpg" class="blg-img" alt="" />
+</figure>
+
+<figure>
+<img src="/img/posts/valuation/chartwc.jpg" class="blg-img" alt="" />
+</figure>
+
+<figure>
+<img src="/img/posts/valuation/chartdonut.jpg" class="blg-img" alt="" />
 </figure>
 
 <p><br /></p>
