@@ -408,7 +408,7 @@ This blog post is a continuation of notes from my previous post on investment ba
 #### DCF Stages <a name="dcfstages"></a>
 
 <figure>
-  <img src="/img/posts/valuation/framework.jpg" class="blg-img" alt="valuation framework">
+  <img src="/img/posts/valuation/framework.JPG" class="blg-img" alt="valuation framework">
 </figure>
 
 <br>
@@ -416,22 +416,22 @@ This blog post is a continuation of notes from my previous post on investment ba
 #### DCF Structure <a name="dcfstruct"></a>
 
 <figure>
-  <img src="/img/posts/valuation/plassum.jpg" class="blg-img" alt="P&L Assumption">
+  <img src="/img/posts/valuation/plassum.JPG" class="blg-img" alt="P&L Assumption">
   <figcaption>P&L assumption tab will have 3 scenarios. Render in output tab.</figcaption>
 </figure>
 
 <figure>
-  <img src="/img/posts/valuation/bsassum.jpg" class="blg-img" alt="BS Assumption">
+  <img src="/img/posts/valuation/bsassum.JPG" class="blg-img" alt="BS Assumption">
   <figcaption>Balance sheet items grow inline with buisness no need for scenarios. Render in output tab.</figcaption>
 </figure>
 
 <figure>
-  <img src="/img/posts/valuation/cashflow.jpg" class="blg-img" alt="Cash Flow">
+  <img src="/img/posts/valuation/cashflow.JPG" class="blg-img" alt="Cash Flow">
   <figcaption>Cash Flow inputs will come from P&L & BS tab</figcaption>
 </figure>
 
 <figure>
-  <img src="/img/posts/valuation/dcfval.jpg" class="blg-img" alt="DCF Valuation Tab">
+  <img src="/img/posts/valuation/dcfval.JPG" class="blg-img" alt="DCF Valuation Tab">
   <figcaption>DCF valuation tab is where calculation will be performed</figcaption>
 </figure>
 
@@ -443,7 +443,7 @@ This blog post is a continuation of notes from my previous post on investment ba
 #### Example Company - Cheeseco <a name="excompany"></a>
 
 <figure>
-  <img src="/img/posts/valuation/cheeseco.jpg" class="blg-img" alt="Cheese Company Analysis">
+  <img src="/img/posts/valuation/cheeseco.JPG" class="blg-img" alt="Cheese Company Analysis">
 </figure>
 
 <br>
@@ -464,7 +464,7 @@ This blog post is a continuation of notes from my previous post on investment ba
     - for each case calculate growth rate per year and for base case use historical average growth rate
 
 <figure>
-  <img src="/img/posts/valuation/plmodtop.jpg" class="blg-img" alt="Modeling Revenue">
+  <img src="/img/posts/valuation/plmodtop.JPG" class="blg-img" alt="Modeling Revenue">
 </figure>
 
 <br>
@@ -476,11 +476,11 @@ This blog post is a continuation of notes from my previous post on investment ba
   - `Revenues this year = (Last year revenues) x (1 + YoY growth rate of revs)`
 
 <figure>
-  <img src="/img/posts/valuation/choose.jpg" class="blg-img" alt="Modeling Revenue">
+  <img src="/img/posts/valuation/choose.JPG" class="blg-img" alt="Modeling Revenue">
 </figure>
 
 <figure>
-  <img src="/img/posts/valuation/revforcast.jpg" class="blg-img" alt="Modeling Revenue">
+  <img src="/img/posts/valuation/revforcast.JPG" class="blg-img" alt="Modeling Revenue">
 </figure>
 
 <br>
@@ -492,7 +492,7 @@ This blog post is a continuation of notes from my previous post on investment ba
   - use a percentage weight: `(Revenues for the year) * (COGS % of Revenues)`
 
 <figure>
-  <img src="/img/posts/valuation/COGS.jpg" class="blg-img" alt="Other revenues and COGS">
+  <img src="/img/posts/valuation/COGS.JPG" class="blg-img" alt="Other revenues and COGS">
 </figure>
 
 <br>
@@ -518,7 +518,7 @@ This blog post is a continuation of notes from my previous post on investment ba
   - worst take highest historical tax rate
 
 <figure>
-  <img src="/img/posts/valuation/otherexp.jpg" class="blg-img" alt="Other expenses">
+  <img src="/img/posts/valuation/otherexp.JPG" class="blg-img" alt="Other expenses">
 </figure>
 
 - Double check and see that when changing scenario the numbers change
@@ -531,7 +531,7 @@ This blog post is a continuation of notes from my previous post on investment ba
 - PP&E, Other Assets & Liabilities will be % of revenue
 
 <figure>
-  <img src="/img/posts/valuation/bsforecast.jpg" class="blg-img" alt="Balance Sheet Template">
+  <img src="/img/posts/valuation/bsforecast.JPG" class="blg-img" alt="Balance Sheet Template">
 </figure>
 
 <br>
@@ -541,7 +541,7 @@ This blog post is a continuation of notes from my previous post on investment ba
 - DIO number tells how long it takes on average a company to convert inventory into cash
 
 <figure>
-  <img src="/img/posts/valuation/daysmethod.jpg" class="blg-img" alt="Balance Sheet Template">
+  <img src="/img/posts/valuation/daysmethod.JPG" class="blg-img" alt="Balance Sheet Template">
 </figure>
 
 <br>
@@ -553,7 +553,7 @@ This blog post is a continuation of notes from my previous post on investment ba
 - tip: fix row reference using `$` sign in excel
 
 <figure>
-  <img src="/img/posts/valuation/dayscalculation.jpg" class="blg-img" alt="Balance Sheet Template">
+  <img src="/img/posts/valuation/dayscalculation.JPG" class="blg-img" alt="Balance Sheet Template">
 </figure>
 
 <br>
@@ -569,7 +569,7 @@ This blog post is a continuation of notes from my previous post on investment ba
   - `Trade Inventory = (DIO * COGS) / 360`
 
 <figure>
-  <img src="/img/posts/valuation/tradecalcs.jpg" class="blg-img" alt="Calculate Trade AR, AP and Inventory">
+  <img src="/img/posts/valuation/tradecalcs.JPG" class="blg-img" alt="Calculate Trade AR, AP and Inventory">
 </figure>
 
 <br>
@@ -581,7 +581,7 @@ This blog post is a continuation of notes from my previous post on investment ba
 - For forecasting you can take the average and use that value across all years (fix column)
 
 <figure>
-  <img src="/img/posts/valuation/ppecalc.jpg" class="blg-img" alt="Calculate PPE Other Assets & Liabilities">
+  <img src="/img/posts/valuation/ppecalc.JPG" class="blg-img" alt="Calculate PPE Other Assets & Liabilities">
 </figure>
 
 <br>
@@ -594,7 +594,7 @@ This blog post is a continuation of notes from my previous post on investment ba
 - Copy total and subtotals and fill entire sheet
 
 <figure>
-  <img src="/img/posts/valuation/plclean.jpg" class="blg-img" alt="Clean P&L sheet">
+  <img src="/img/posts/valuation/plclean.JPG" class="blg-img" alt="Clean P&L sheet">
 </figure>
 
 <br>
@@ -608,7 +608,7 @@ This blog post is a continuation of notes from my previous post on investment ba
 - Forecasting tax you just multiply the number by revenue line
 
 <figure>
-<img src="/img/posts/valuation/plclean2.jpg" class="blg-img" alt="Clean P&L sheet">
+<img src="/img/posts/valuation/plclean2.JPG" class="blg-img" alt="Clean P&L sheet">
 </figure>
 
 <br>
@@ -617,7 +617,7 @@ This blog post is a continuation of notes from my previous post on investment ba
 - Just like with P&L you can use the `SUMIF` function to fill in the data
 
 <figure>
-<img src="/img/posts/valuation/bsclean.jpg" class="blg-img" alt="Clean BS sheet">
+<img src="/img/posts/valuation/bsclean.JPG" class="blg-img" alt="Clean BS sheet">
 </figure>
 
 <br>
@@ -634,7 +634,7 @@ This blog post is a continuation of notes from my previous post on investment ba
   - Shareholders' equity is `Equity = Opening Equity + Net Income - Dividends`
 
 <figure>
-<img src="/img/posts/valuation/bsclean2.jpg" class="blg-img" alt="Clean BS sheet">
+<img src="/img/posts/valuation/bsclean2.JPG" class="blg-img" alt="Clean BS sheet">
 </figure>
 
 
@@ -656,7 +656,7 @@ This blog post is a continuation of notes from my previous post on investment ba
 - After all of that you will now have Unlevered Free Cash Flow
 
 <figure>
-<img src="/img/posts/valuation/cashflowunl.jpg" class="blg-img" alt="Cash Flow Statment">
+<img src="/img/posts/valuation/cashflowunl.JPG" class="blg-img" alt="Cash Flow Statment">
 </figure>
 
 
@@ -668,7 +668,7 @@ This blog post is a continuation of notes from my previous post on investment ba
   - Delta Equity incl. dividends
 
 <figure>
-<img src="/img/posts/valuation/ufcftonet.jpg" class="blg-img" alt="Cash Flow Statment">
+<img src="/img/posts/valuation/ufcftonet.JPG" class="blg-img" alt="Cash Flow Statment">
 </figure>
 
 
@@ -689,7 +689,7 @@ This blog post is a continuation of notes from my previous post on investment ba
 - UFCF = `Gross Cash Flow + Investments in WC + Investments in Other assets/liabilities + Capex + Other Investments + Extraordinary Items`
 
 <figure>
-<img src="/img/posts/valuation/cashflowcalculation.jpg" class="blg-img" alt="Cash Flow Statment">
+<img src="/img/posts/valuation/cashflowcalculation.JPG" class="blg-img" alt="Cash Flow Statment">
 </figure>
 
 <br>
@@ -707,7 +707,7 @@ This blog post is a continuation of notes from my previous post on investment ba
     - Closing cash needs to = Cash on balance sheet
 
 <figure>
-<img src="/img/posts/valuation/netcashflow.jpg" class="blg-img" alt="Net Cash Flows">
+<img src="/img/posts/valuation/netcashflow.JPG" class="blg-img" alt="Net Cash Flows">
 </figure>
 
 <br>
@@ -721,11 +721,11 @@ This blog post is a continuation of notes from my previous post on investment ba
   - once done copy over next column and repeat `Find + Replace`
 
 <figure>
-<img src="/img/posts/valuation/findnreplace.jpg" class="blg-img" alt="">
+<img src="/img/posts/valuation/findnreplace.JPG" class="blg-img" alt="">
 </figure>
 
 <figure>
-<img src="/img/posts/valuation/findnreplace2.jpg" class="blg-img" alt="">
+<img src="/img/posts/valuation/findnreplace2.JPG" class="blg-img" alt="">
 </figure>
 
 <br>
@@ -737,13 +737,13 @@ This blog post is a continuation of notes from my previous post on investment ba
   - Perpetuity growth rate (g) is the pace at which the company's revenues would grow after forecast period
 
 <figure>
-<img src="/img/posts/valuation/dcfinputs.jpg" class="blg-img" alt="">
+<img src="/img/posts/valuation/dcfinputs.JPG" class="blg-img" alt="">
 </figure>
 
 - Calculate the DCF by using the formula **MISSING VIDEO**
 
 <figure>
-<img src="/img/posts/valuation/dcfufcf.jpg" class="blg-img" alt="">
+<img src="/img/posts/valuation/dcfufcf.JPG" class="blg-img" alt="">
 </figure>
 
 <br>
@@ -756,7 +756,7 @@ This blog post is a continuation of notes from my previous post on investment ba
   - To obtain PV of cash flows take continuing value and multiply it by `discount factor`
 
 <figure>
-<img src="/img/posts/valuation/calccontinue.jpg" class="blg-img" alt="">
+<img src="/img/posts/valuation/calccontinue.JPG" class="blg-img" alt="">
 </figure>
 
 <br>
@@ -766,7 +766,7 @@ This blog post is a continuation of notes from my previous post on investment ba
   - get values from the Balance Sheet
 
 <figure>
-<img src="/img/posts/valuation/equityvalue.jpg" class="blg-img" alt="">
+<img src="/img/posts/valuation/equityvalue.JPG" class="blg-img" alt="">
 </figure>
 
 <br>
@@ -783,7 +783,7 @@ This blog post is a continuation of notes from my previous post on investment ba
     - Column cell is g
 
 <figure>
-<img src="/img/posts/valuation/sensitiva.jpg" class="blg-img" alt="">
+<img src="/img/posts/valuation/sensitiva.JPG" class="blg-img" alt="">
 </figure>
 
 <br>
@@ -794,7 +794,7 @@ This blog post is a continuation of notes from my previous post on investment ba
   - Set cell, the value to find, and last what value to change to find it (WACC)
 
 <figure>
-<img src="/img/posts/valuation/goalseek.jpg" class="blg-img" alt="">
+<img src="/img/posts/valuation/goalseek.JPG" class="blg-img" alt="">
 </figure>
 
 
@@ -804,23 +804,23 @@ This blog post is a continuation of notes from my previous post on investment ba
 - It is best to create visual representation of your data by using charts
 
 <figure>
-<img src="/img/posts/valuation/revebitda.jpg" class="blg-img" alt="">
+<img src="/img/posts/valuation/revebitda.JPG" class="blg-img" alt="">
 </figure>
 
 <figure>
-<img src="/img/posts/valuation/chartfcf.jpg" class="blg-img" alt="">
+<img src="/img/posts/valuation/chartfcf.JPG" class="blg-img" alt="">
 </figure>
 
 <figure>
-<img src="/img/posts/valuation/chartbridge.jpg" class="blg-img" alt="">
+<img src="/img/posts/valuation/chartbridge.JPG" class="blg-img" alt="">
 </figure>
 
 <figure>
-<img src="/img/posts/valuation/chartwc.jpg" class="blg-img" alt="">
+<img src="/img/posts/valuation/chartwc.JPG" class="blg-img" alt="">
 </figure>
 
 <figure>
-<img src="/img/posts/valuation/chartdonut.jpg" class="blg-img" alt="">
+<img src="/img/posts/valuation/chartdonut.JPG" class="blg-img" alt="">
 </figure>
 
 <br>
