@@ -570,3 +570,5 @@ This blog post contains my notes for a course on basics in understanding Investm
   - Private Equity Funds (High Risk - High Return)
   - Hedge Funds & Alternative Investments (Very High Risk - Very High Return)
 - Asset Managers combine asset classes depending on the client's goals and risk tolerance
+
+<br>
