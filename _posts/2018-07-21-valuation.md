@@ -67,6 +67,28 @@ This blog post is a continuation of notes from my previous post on investment ba
  - [Sensitivity For WACC & Perpetuity Growth](#senwacc)
  - [Goal Seek](#goalseek)
  - [Financial Model Chart](#finchart)
+ 11. [Relative Valuation - DCF with Multiples](#dcfmulti)
+ - [Why Use Multiples?](#whymulti)
+ - [Types of Multiples](#typemulti)
+ - [Finding Comparable Companies](#compcomp)
+ - [Widely Used Multiples](#widemulti)
+ - [Best Practices](#bestpract)
+ 12. [Leveraged Buyouts](#levbuyout)
+ - [What Is LBO](#lbo)
+ - [Phases of LBO](#lbophase)
+ - [When is LBO Feasible](#lbofeas)
+ - [100 Making Money in LBO](#100lbo)
+ - [Lenders in LBO](#lbolend)
+ 13. [Leveraged Buyout Model](#lbomodel)
+ - [Intro to LBO model](#lbointro)
+ - [Max Debt](#maxdebt)
+ - [Financial Sponsors](#finspon)
+ - [Forecast Financials](#lbofinancial)
+ - [Optimal Debt Structure](#optdebt)
+ - [Estimate Cash Flows & Debt Payments](#lbocf)
+ - [Complete Model](#lbocompmod)
+ - [Calculate Enterprise Value & IRR](#lboentirr)
+ - [Sensitivity Analysis](#lbosens)
 
 
 <br>
@@ -821,6 +843,334 @@ This blog post is a continuation of notes from my previous post on investment ba
 
 <figure>
 <img src="/img/posts/valuation/chartdonut.JPG" class="blg-img" alt="">
+</figure>
+
+<br>
+
+### Relative Valuation - DCF with Multiples <a name="dcfmulti"></a>
+#### Why Use Multiples? <a name="whymulti"></a>
+- Comparing assets to others similar assets, like how when you are buying a house, tv, car
+- You need to find a few companies that are similar in the industry, size, growth etc...
+- Multiples
+  - Easy to apply for rough approximation
+  - Great way to triangulate DCF results
+  - Incorporate market sentiment
+
+<br>
+
+#### Types of Multiples <a name="typemulti"></a>
+- Trading & Transaction multiples
+  - Trading multiple use the stock price of comparable companies (ex: P/E, P/S, P/BV ratio)
+    - easy to update and view
+    - incorporate a premium
+    - current and up to date
+  - Transaction multiple is based on the prices paid in previous transactions (ex: EV/EBITDA)
+    - not always up to date
+    - average historical acquisition premium paid in the industry
+
+<br>
+
+#### Finding Comparable Companies <a name="compcomp"></a>
+- Selecting right peer group
+  - Need very similar companies
+  - Focus on
+    - business model
+    - profitability margins
+    - growth rate
+    - location
+    - fixed assets investment
+    - size (revs & employees)
+    - number of customers
+  - Select 8-10 companies
+    - must satisfy 5-6 criteria
+
+<br>
+
+#### Widely Used Multiples <a name="widemulti"></a>
+
+<figure>
+<img src="/img/posts/valuation/widemulti.png" class="blg-img" alt="Multiples Widley Used">
+</figure>
+
+<br>
+
+#### Best Practices <a name="bestpract"></a>
+- Every company is different dig deeper
+  - look into the financial statements
+  - closing period
+  - remove one-off income, expenses, other items
+  - debt-like items maybe hidden such as legal litigations, pension liabilities, etc..
+
+<br>
+
+
+### Leveraged Buyouts <a name="levbuyout"></a>
+#### What Is LBO <a name="lbo"></a>
+- Leveraged Buyouts
+  - Highly leveraged M&A deal where debt is main component
+  - The Target has a solid underlying business where cash flows are the collateral
+  - Equity investors are called financial sponsors they provide capital for deal
+
+<br>
+
+#### Phases of LBO] <a name="lbophase"></a>
+- Phase 1
+  - Financial sponsors have decided they want to go through transactions so they go to lenders
+  - Create an SPV (special purpose vehicle)
+  - Sponsors will provide the cash and lenders will provide the debt
+- Phase 2
+  - Acquiring the target's shares
+  - Cash reduces from the SPV and assets (shares) go increase
+- Phase 3
+  - The SPV is merged with the Target and changes the name to the target's name
+
+<br>
+
+#### When is LBO Feasible <a name="lbofeas"></a>
+- Mature companies make a suitable target because their revenues are slowing and have little innovation but their cash flows are enough to pay off debt and pay out as dividends
+- Needs solid management team
+- Market leadership
+- Excess cash
+- Non-core assets that can be sold to raise cash
+- Low initial leveraged
+
+<br>
+
+#### 100 Making Money in LBO <a name="100lbo"></a>
+- Tax shields
+  - higher debt means higher interest payments
+  - lower taxes due to interest expense
+- Strategies for Value Generation
+  - Deleverage
+    - repay as much of the target's debt and resell company
+  - Arbitrage
+    - bet that the market conditions will change and the company will be sold at a higher multiple
+    - ex: buys at 6 times EBITDA and sell in few years for 7.5 times EBITDA
+  - Growth
+    - EBITDA increases, which leads to a higher Enterprise Value
+    - ex: buy for 6 times EBITDA but earnings grow and sell again for 6 times EBITDA but higher price
+
+<br>
+
+#### Lenders in LBO <a name="lbolend"></a>
+- 70% - 75% of acquisition price is paid with debt
+- Different terms so the higher the term the first priority you have to claiming assets
+
+<figure>
+<img src="/img/posts/valuation/debtstruct.JPG" class="blg-img" alt="">
+</figure>
+
+- Payment in kin (PIK) instrument allows financial sponsors to use more debt in LBO transactions
+- Mezzanine Loans
+  - 50% Debt & 50% Equity
+  - Equity - option that can be converted into equity shares (equity bonus)
+  - Debt - a loan that needs to be repaid
+
+<br>
+
+### Leveraged Buyout Model <a name="lbomodel"></a>
+#### Intro to LBO model <a name="lbointro"></a>
+- Full developed models are only used once we have identified the suitable target
+- Very time consuming task which takes into account all the transactions costs/details
+- Paper LBO modeling give you the general principles
+- Screening process (public or private)
+  - time consuming and difficult to find company that falls into criteria
+- One page vertical models
+
+<figure>
+<img src="/img/posts/valuation/lbodetail.JPG" class="blg-img" alt="">
+</figure>
+
+- Steps
+  - Fill in share price and shares outstanding
+  - Multiply share price with shares outstanding to get market cap
+  - `Net Debt = Financial Debt - Cash`
+  - `Enterprise Value = Market Cap + Net Debt`
+  - Enter current EBITDA
+  - `EV / EBITDA` multiple
+  - Tax rate
+
+<figure>
+<img src="/img/posts/valuation/lbotemplate.JPG" class="blg-img" alt="">
+</figure>
+
+<br>
+
+#### Max Debt <a name="maxdebt"></a>
+- Need to account for the different tranches of debt
+- Lenders want to know that the transaction is not too risky
+- Couple Methods
+  - Forecast cash flows and calculate the amount of debt that can be repaid
+  - Use industry standard multiples based on similar deals (quick & preferred at early stage)
+
+<figure>
+<img src="/img/posts/valuation/lbotemplate.JPG" class="blg-img" alt="">
+</figure>
+
+- Multiply EBITDA by the multiples to get total debt
+  - do this for all tranches of debt (A, B, C etc..)
+- Sum of the Terms to get total debt
+
+<figure>
+<img src="/img/posts/valuation/maxdebt2.JPG" class="blg-img" alt="">
+</figure>
+
+- However usually lenders will put restrictions (covenants) on the loans that you will need to adjust for
+  - Some covenants are restrictions on dividends and required payments
+
+<figure>
+<img src="/img/posts/valuation/maxdebt3.JPG" class="blg-img" alt="">
+</figure>
+
+<br>
+
+#### Financial Sponsors <a name="finspon"></a>
+- Calculating the acquisition price
+  - add in acquisition premium (avg is 30% but check industry)
+  - `acquisition price = market cap * (1 + premium)`
+    - line "Equity Value with premium"
+
+<figure>
+<img src="/img/posts/valuation/acqprem.JPG" class="blg-img" alt="">
+</figure>
+
+- Net debt will be refinanced during acquisition
+- New `Enterprise Value at acquisition = Equity Value with premium + Existing Net Debt`
+- `Equity Needed = Enterprise Value at acquisition - Maximum amount of debt`
+
+<figure>
+<img src="/img/posts/valuation/acqprem2.JPG" class="blg-img" alt="">
+</figure>
+
+
+<br>
+
+#### Forecast Financials <a name="lbofinancial"></a>
+- The business will run as usual for 5 years or more
+  - goal is to grow comapny, increase margins, and improve EBITDA
+- Start forecasting at the company's income statement
+  - revenue growth %
+  - COGS %
+  - OPEX %
+  - EBITDA %
+
+<figure>
+<img src="/img/posts/valuation/forlbo1.JPG" class="blg-img" alt="">
+</figure>
+
+- To get next year's revenues you need to multiply current year's revenues with (1 + growth rate)
+  - copy formula to the right
+- To get next year's COGS multiply the percentage rate to the forecasted revenues
+- Do the same for OPEX as you did with COGS
+- Gross Profit = Sum of revenues + COGS (negative)
+- EBITDA = Gross Profit + OPEX
+- D&A = CAPEX spending and is set as constant
+- After you calculate EBIT
+
+<figure>
+<img src="/img/posts/valuation/forlbo2.JPG" class="blg-img" alt="">
+</figure>
+
+<br>
+
+#### Optimal Debt Structure <a name="optdebt"></a>
+- Need to include interest expense throughout the years
+- Debt Structure
+  - calculate all the loans with their corresponding interest rate
+  - `Interest Expense = Outstanding loan * Interest Rate`
+
+<figure>
+<img src="/img/posts/valuation/optdebt.JPG" class="blg-img" alt="">
+</figure>
+
+- Sum all the interest expenses and fill in the interest expense line
+- Calculate the EBT = EBIT + Interest Expense
+- Taxes = EBT * Tax rate
+- Calculate Net Income
+
+<figure>
+<img src="/img/posts/valuation/optdebt2.JPG" class="blg-img" alt="">
+</figure>
+
+<br>
+
+#### Estimate Cash Flows & Debt Payments <a name="lbocf"></a>
+- Amount of debt the target can reduce depends on cash flow it can generate in a year
+- Target's minimum loan payments and any other covenants must be taken into account
+- Any residual cash flow can be used to reduce other debts or if allowed distributed through dividend
+- Calculation
+  - Net Income
+  - Add back D&A (positive)
+  - Subtract change in working capital (% of revenues)
+  - Subtract CAPEX (should remain constant)
+  - Sum is the cash available for debt payment
+
+<figure>
+<img src="/img/posts/valuation/lbocf1.JPG" class="blg-img" alt="">
+</figure>
+
+- Fill in loan payments under debt structure
+
+<figure>
+<img src="/img/posts/valuation/lbocf2.JPG" class="blg-img" alt="">
+</figure>
+
+
+<br>
+
+#### Complete Model <a name="lbocompmod"></a>
+- Interest expense, EBT, Taxes, & Net Income can be copied over to other cells
+
+<figure>
+<img src="/img/posts/valuation/lbocom1.JPG" class="blg-img" alt="">
+</figure>
+
+- Finish the debt schedule
+  - `Outstanding Debt Next Year = Outstanding Debt Prior Year - Debt Repayment`
+  - Copy the interest expense rates across
+  - Copy the debt repayments
+- Finish the Cash Flow calculations
+
+<figure>
+<img src="/img/posts/valuation/lbocom2.JPG" class="blg-img" alt="">
+</figure>
+
+
+<br>
+
+#### Calculate Enterprise Value & IRR <a name="lboentirr"></a>
+- Once model is complete you can determine if the company is an attractive target
+- Debt Structure
+  - Get the outstanding term loans A & B as of year 5 or the last year
+  - Get the new or same multiple value forecasted at end of year 5
+  - Calculate the new implied enterprise value via `ENDING YEAR EBITDA * Multiple`
+  - Net Debt = Debt left over from sum of all oustanding loans
+  - `Enterprise Value - Net Debt = Equity Value` assuming no cash
+- Cash-on-Cash Ratio = Proceeds at exit / Initial Investment
+  - used by private equity to see how much times they made from initial investment
+  - does not take into account time value of money
+- IRR equity
+  - Calculate Investor Cash Flows throughout the years
+  - Excel's IRR function copy all Investor Cash Flows values
+
+<figure>
+<img src="/img/posts/valuation/lobentirr1.JPG" class="blg-img" alt="">
+</figure>
+
+<br>
+
+#### Sensitivity Analysis <a name="lbosens"></a>
+- Important Variables
+  - EV / EBITDA multiple
+  - Revenue growth
+  - Create a data table
+    - horizontal - multiple rate
+    - vertical - growth rates
+    - base - IRR cell
+    - `Data -> WhatIF -> Data Table -> Row (EBITDA multiple) -> Column (Growth rate cell) `
+
+<figure>
+<img src="/img/posts/valuation/lbosens1.JPG" class="blg-img" alt="">
 </figure>
 
 <br>
