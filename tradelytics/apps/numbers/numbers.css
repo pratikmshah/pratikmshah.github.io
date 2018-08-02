@@ -1,5 +1,12 @@
+@font-face {
+	font-family: 'DINProLight';
+	src: url('fonts/DINProLight.eot');
+	src: local('DINProLight'), url('fonts/DINProLight.woff') format('woff'), url('fonts/DINProLight.ttf') format('truetype');
+}
+
 body {
   background-color: #171718;
+  font-family: 'DINProLight';
 }
 
 a {
