@@ -2,6 +2,21 @@ body {
   background-color: #171718;
 }
 
-.rhtxt {
+.rhtxt-clr {
   color: #21ce99;
+}
+
+.rhtxt-head {
+  font-size: 55px;
+}
+
+.image-select {
+  min-height: 200px;
+  min-width: 200px;
+  max-height: 500px;
+  max-width: 500px;
+}
+
+.dbug {
+  border: 1px solid red;
 }
