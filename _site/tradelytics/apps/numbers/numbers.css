@@ -2,12 +2,20 @@ body {
   background-color: #171718;
 }
 
+a {
+  text-decoration: none !important;
+}
+
+main.container {
+  margin-top: 5%;
+}
+
 .rhtxt-clr {
   color: #21ce99;
 }
 
 .rhtxt-clr:hover {
-  color: #21CE99;
+  color: #1AE9AA;
 }
 
 .rhtxt-clrw {
@@ -23,6 +31,18 @@ body {
   min-width: 350px;
   max-height: 700px;
   max-width: 700px;
+}
+
+div.image-select a img {
+  margin-top: 15%;
+}
+
+div.image-select:hover {
+  background-color: #21CE99;
+}
+
+div.image-select:hover h1 {
+  color: #F9F9F9;
 }
 
 .dbug {
