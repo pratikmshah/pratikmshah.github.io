@@ -57,6 +57,28 @@ h1.rhtxt-head span {
   margin-left: 3px;
 }
 
+
+@media (min-width: 768px) {
+  #searchm .modal-dialog {
+      width: 1250px;
+    }
+
+  #analysism .modal-dialog {
+      width: 1250px;
+    }
+}
+
+.btn-rh {
+  background-color: #21CE99;
+  border-color: #21CE99;
+  color: #F9F9F9 !important;
+}
+
+.btn-rh:hover {
+  background-color: #1AE9AA;
+  border-color: #1AE9AA;
+}
+
 .dbug {
   border: 1px solid red;
 }

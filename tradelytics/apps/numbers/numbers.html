@@ -23,7 +23,9 @@
     <nav class="navbar">
       <div class="container-fluid">
         <div class="text-center">
-          <h1 class="rhtxt-clr rhtxt-head">Numb3rs<span class="h6 rhtxt-clrw">(beta)</span></h1>
+          <h1 class="rhtxt-clr rhtxt-head">
+            <strong>Numb3rs</strong><span class="h6 rhtxt-clrw">(beta)</span>
+          </h1>
         </div>
       </div>
     </nav>
@@ -32,13 +34,13 @@
       <div class="col-sm-12 text-center">
         <div class="row">
           <div class="col-sm-4 image-select">
-            <a href="">
+            <a href="#" data-toggle="modal" data-target="#searchm">
               <img src="imgs/icons/search.png" alt="search">
               <h1 class="rhtxt-clr">Search</h1>
             </a>
           </div>
           <div class="col-sm-4 image-select">
-            <a href="">
+            <a href="#" data-toggle="modal" data-target="#analysism">
               <img src="imgs/icons/analysis.png" alt="analysis">
               <h1 class="rhtxt-clr">Analysis</h1>
             </a>
@@ -52,6 +54,48 @@
         </div>
       </div>
     </main><!-- /.container -->
+
+    <!-- Search Modal -->
+    <div id="searchm" class="modal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Search Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title rhtxt-clr"><strong>Search</strong></h2>
+          </div>
+          <div class="modal-body">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-rh" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Analysis Modal -->
+    <div id="analysism" class="modal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Analysis Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title rhtxt-clr"><strong>Analysis</strong></h2>
+          </div>
+          <div class="modal-body">
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-rh" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
   </body>
 
