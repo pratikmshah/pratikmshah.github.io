@@ -7,7 +7,7 @@ a {
 }
 
 main.container {
-  margin-top: 5%;
+  margin-top: 7%;
 }
 
 .rhtxt-clr {
@@ -34,15 +34,20 @@ main.container {
 }
 
 div.image-select a img {
-  margin-top: 15%;
+  margin-top: 10%;
 }
 
 div.image-select:hover {
   background-color: #21CE99;
+  box-shadow: rgba(26, 233, 170, 0.2) 0px 4px 8px 0px, rgba(26, 233, 170, 0.19) 0px 6px 20px 0px;
 }
 
 div.image-select:hover h1 {
   color: #F9F9F9;
+}
+
+h1.rhtxt-head span {
+  margin-left: 3px;
 }
 
 .dbug {
