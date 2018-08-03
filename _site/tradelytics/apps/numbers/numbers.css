@@ -1,0 +1,106 @@
+@font-face {
+	font-family: 'DINProLight';
+	src: url('fonts/DINProLight.eot');
+	src: local('DINProLight'), url('fonts/DINProLight.woff') format('woff'), url('fonts/DINProLight.ttf') format('truetype');
+}
+
+body {
+  background-color: #171718;
+  font-family: 'DINProLight';
+}
+
+a {
+  text-decoration: none !important;
+}
+
+main.container {
+  margin-top: 7%;
+}
+
+.clr {
+  color: black;
+}
+
+.rhtxt-clr {
+  color: #21ce99;
+}
+
+.rhtxt-clr:hover {
+  color: #1AE9AA;
+}
+
+.rhtxt-clrw {
+  color: #F9F9F9;
+}
+
+.rhtxt-head {
+  font-size: 55px;
+}
+
+.image-select {
+  min-height: 350px;
+  min-width: 350px;
+  max-height: 700px;
+  max-width: 700px;
+}
+
+div.image-select a img {
+  margin-top: 10%;
+}
+
+div.image-select:hover {
+  background-color: #21CE99;
+  box-shadow: rgba(26, 233, 170, 0.2) 0px 4px 8px 0px, rgba(26, 233, 170, 0.19) 0px 6px 20px 0px;
+}
+
+div.image-select:hover h1 {
+  color: #F9F9F9;
+}
+
+h1.rhtxt-head span {
+  margin-left: 3px;
+}
+
+hr {
+  margin-top: 5px;
+}
+
+.btn-rh {
+  background-color: #21CE99;
+  border-color: #21CE99;
+  color: #F9F9F9 !important;
+}
+
+.btn-rh:hover {
+  background-color: #1AE9AA;
+  border-color: #1AE9AA;
+}
+
+.picklinks {
+  max-width: 200px;
+  min-height: 50px;
+  height: auto;
+}
+
+#scanimgs li {
+  margin-left: 20px;
+}
+
+#news-content {
+  margin-top: 20px;
+}
+
+#news-content div ul li {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+  #searchm .modal-dialog {
+    width: 1250px;
+  }
+
+  #analysism .modal-dialog {
+    width: 1250px;
+  }
+}
