@@ -82,12 +82,17 @@ hr {
   height: auto;
 }
 
-ul li:hover {
-  border-bottom: 2px solid #1AE9AA;
-}
-
 #scanimgs li {
   margin-left: 20px;
+}
+
+#news-content {
+  margin-top: 20px;
+}
+
+#news-content div ul li {
+  margin-left: 20px;
+  margin-top: 15px;
 }
 
 @media (min-width: 768px) {
