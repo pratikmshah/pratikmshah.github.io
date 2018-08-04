@@ -95,6 +95,22 @@ hr {
   margin-top: 15px;
 }
 
+div.analysis-links ul li {
+	margin-left: 20px;
+}
+
+#stock-chart {
+	margin-bottom: 50px;
+}
+
+#ticker {
+	padding-right: 5px;
+	padding-left: 10px;
+}
+
+
+
+
 @media (min-width: 768px) {
   #searchm .modal-dialog {
     width: 1250px;
