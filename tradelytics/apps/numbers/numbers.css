@@ -108,6 +108,14 @@ div.analysis-links ul li {
 	padding-left: 10px;
 }
 
+.nav>li>a {
+	color: black;
+}
+
+.nav>li>a:hover {
+	color: black;
+	background-color: white;
+}
 
 
 
