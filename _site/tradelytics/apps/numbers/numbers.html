@@ -331,16 +331,20 @@
             <div class="form-group">
               <div class="row col-sm-offset-1">
                 <div class="col-sm-4">
-                  <label for="company">Company:</label>
-                  <input type="text" class="form-control" id="company">
+                  <input type="text" class="form-control" id="company" placeholder="Company">
                 </div>
                 <div class="col-sm-1">
-                  <label for="company">Ticker:</label>
-                  <input type="text" class="form-control" id="ticker">
+                  <input type="text" class="form-control" id="ticker" style="text-transform:uppercase" placeholder="TICK" maxlength="5">
                 </div>
                 <div class="col-sm-5">
-                  <label for="company">Search Terms:</label>
-                  <input type="text" class="form-control" id="terms">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="submit">
+                          <img src="imgs/icons/google.png" alt="">
+                      </button>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

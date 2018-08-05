@@ -1,8 +1,11 @@
+var ticker;
+
 $(function() {
 
   // get chart after keypress in ticker input
   $('#ticker').on('keyup', function() {
-    var cLink = getFinvizChart( $('#ticker').val() );
+    ticker = $('#ticker').val();
+    var cLink = getFinvizChart(ticker);
     $("#stock-chart img").attr("src", cLink);
   });
 
