@@ -13,6 +13,12 @@ a {
   text-decoration: none !important;
 }
 
+a:active, a:focus {
+	outline: 0;
+	border: none;
+	-moz-outline-style: none;
+}
+
 main.container {
   margin-top: 7%;
 }
@@ -94,6 +100,34 @@ hr {
   margin-left: 20px;
   margin-top: 15px;
 }
+
+div.analysis-links ul li {
+	margin-left: 20px;
+}
+
+#stock-chart {
+	margin-bottom: 50px;
+}
+
+#ticker {
+	padding-right: 5px;
+	padding-left: 10px;
+}
+
+#social-icons li {
+	margin-left: 40px;
+}
+
+.nav>li>a {
+	color: black;
+}
+
+.nav>li>a:hover {
+	color: black;
+	background-color: white;
+}
+
+
 
 @media (min-width: 768px) {
   #searchm .modal-dialog {
