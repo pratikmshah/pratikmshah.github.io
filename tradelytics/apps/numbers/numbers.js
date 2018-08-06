@@ -15,6 +15,7 @@ $(function() {
     var cLink = getFinvizChart(ticker);
     $("#stock-chart img").attr("src", cLink);
     updateLinks();
+    updateHyperLinks();
   });
 
   // google search button
@@ -28,6 +29,7 @@ $(function() {
   $('#social-search').on('keyup', function() {
     if($('#social-search').val()) {
       updateSocialLinks($('#social-search').val());
+      updateSocialHyperLinks();
     }
   });
 
@@ -87,8 +89,6 @@ function updateSocialLinks(terms) {
     linkedinSocial: "https://www.linkedin.com/search/results/index/?keywords=" + terms,
     instagramSocial: "https://www.instagram.com/"
   };
-
-  console.log(socialLinks);
 }
 
 // edit facebook search text
@@ -96,24 +96,28 @@ function facebookSearch(terms) {
   return terms.split(" ").join("+");
 }
 
-function changeHyperLinks() {
+function updateHyperLinks() {
   var PATH = " ul li a";
   var arrHtml = [$("#financial" + PATH), $("#ratios" + PATH), $("#officer" + PATH), $("#ownership" + PATH), $("#profile" + PATH)];
   var arrLinks = [financialLinks, ratioLinks, insiderLinks, ownershipLinks, statsLinks];
   var objCounter = 0;
 
-  // console.log(arrHtml[0][0].href);
   // loop through arrHtml
   arrHtml.forEach(function(link) {
     // loop through each sub array in element
     for (var i = 0; i < link.length; i++) {
+      // update href in each element with arrLinks object
       link[i].href = Object.values(arrLinks[objCounter])[i];
     }
-
     objCounter++;
   });
+}
 
+// updates social links when search is changed
+function updateSocialHyperLinks() {
+  var arrHtml = $("#social-icons li a");
 
-
-  // update href in each element with arrLinks object
+  for (var i = 0; i < arrHtml.length; i++) {
+    arrHtml[i].href = Object.values(socialLinks)[i];
+  }
 }
