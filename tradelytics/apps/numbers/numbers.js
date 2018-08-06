@@ -26,8 +26,9 @@ $(function() {
 
   // social media search
   $('#social-search').on('keyup', function() {
-    var socialSearchTerms = $('#social-search').val();
-    updateSocialLinks(socialSearchTerms);
+    if($('#social-search').val()) {
+      updateSocialLinks($('#social-search').val());
+    }
   });
 
 });
@@ -78,11 +79,13 @@ function updateLinks() {
   };
 }
 
+// updates social links
 function updateSocialLinks(terms) {
   socialLinks = {
     twitterSocial: "https://twitter.com/search?q=" + terms,
     facebookSocial: "https://www.facebook.com/search/str/" + facebookSearch(terms) + "/keywords_search",
     linkedinSocial: "https://www.linkedin.com/search/results/index/?keywords=" + terms,
+    instagramSocial: "https://www.instagram.com/"
   };
 
   console.log(socialLinks);
@@ -91,4 +94,23 @@ function updateSocialLinks(terms) {
 // edit facebook search text
 function facebookSearch(terms) {
   return terms.split(" ").join("+");
+}
+
+function changeHyperLinks() {
+  var PATH = " ul li a";
+  var arrHtml = [$("#financial" + PATH), $("#ratios" + PATH), $("#officer" + PATH), $("#ownership" + PATH), $("#profile" + PATH)];
+  var arrLinks = [financialLinks, ratioLinks, insiderLinks, ownershipLinks, statsLinks];
+
+  // console.log(arrHtml[0][0].href);
+  // loop through arrHtml
+  arrHtml.forEach(function(link) {
+    // loop through each sub array in element
+    for (var i = 0; i < link.length; i++) {
+      console.log(link[i]);
+    }
+  });
+
+
+
+  // update href in each element with arrLinks object
 }
