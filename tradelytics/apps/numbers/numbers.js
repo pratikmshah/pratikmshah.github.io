@@ -100,14 +100,17 @@ function changeHyperLinks() {
   var PATH = " ul li a";
   var arrHtml = [$("#financial" + PATH), $("#ratios" + PATH), $("#officer" + PATH), $("#ownership" + PATH), $("#profile" + PATH)];
   var arrLinks = [financialLinks, ratioLinks, insiderLinks, ownershipLinks, statsLinks];
+  var objCounter = 0;
 
   // console.log(arrHtml[0][0].href);
   // loop through arrHtml
   arrHtml.forEach(function(link) {
     // loop through each sub array in element
     for (var i = 0; i < link.length; i++) {
-      console.log(link[i]);
+      link[i].href = Object.values(arrLinks[objCounter])[i];
     }
+
+    objCounter++;
   });
 
 
