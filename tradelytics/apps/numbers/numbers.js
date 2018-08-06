@@ -25,7 +25,10 @@ $(function() {
   });
 
   // social media search
-  
+  $('#social-search').on('keyup', function() {
+    var socialSearchTerms = $('#social-search').val();
+    updateSocialLinks(socialSearchTerms);
+  });
 
 });
 
@@ -75,8 +78,17 @@ function updateLinks() {
   };
 }
 
-updateSocialLinks() {
+function updateSocialLinks(terms) {
   socialLinks = {
-    twitterSocial: "https://twitter.com/search?q="
-  }
+    twitterSocial: "https://twitter.com/search?q=" + terms,
+    facebookSocial: "https://www.facebook.com/search/str/" + facebookSearch(terms) + "/keywords_search",
+    linkedinSocial: "https://www.linkedin.com/search/results/index/?keywords=" + terms,
+  };
+
+  console.log(socialLinks);
+}
+
+// edit facebook search text
+function facebookSearch(terms) {
+  return terms.split(" ").join("+");
 }
