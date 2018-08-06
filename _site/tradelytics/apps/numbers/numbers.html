@@ -187,6 +187,11 @@
                       <img src="imgs/news/digg.JPG" alt="">
                     </a>
                   </li>
+                  <li>
+                    <a href="https://finviz.com/news.ashx" target="_blank">
+                      <img src="imgs/scans/finviz.JPG" alt="">
+                    </a>
+                  </li>
                 </ul>
               </div>
               <div id="energy" class="tab-pane fade">
@@ -331,19 +336,24 @@
             <div class="form-group">
               <div class="row col-sm-offset-1">
                 <div class="col-sm-4">
-                  <label for="company">Company:</label>
-                  <input type="text" class="form-control" id="company">
+                  <input type="text" class="form-control" id="company" placeholder="Company">
                 </div>
                 <div class="col-sm-1">
-                  <label for="company">Ticker:</label>
-                  <input type="text" class="form-control" id="ticker">
+                  <input type="text" class="form-control" id="ticker" style="text-transform:uppercase" placeholder="TICK" maxlength="5">
                 </div>
                 <div class="col-sm-5">
-                  <label for="company">Search Terms:</label>
-                  <input type="text" class="form-control" id="terms">
+                  <div class="input-group">
+                    <input id="google-search" type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button id="google-btn" class="btn btn-default" type="submit">
+                          <img src="imgs/icons/google.png" alt="">
+                      </button>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
+
             <br>
 
             <div id="stock-chart" class="col-sm-12 text-center">
@@ -351,7 +361,7 @@
             </div>
 
             <h2 class="rhtxt-clr">Financials</h2>
-            <div class="analysis-links">
+            <div id="financial" class="analysis-links">
               <ul class="list-inline list-unstyled">
                 <li>
                   <a href="#" target="_blank">
@@ -380,16 +390,11 @@
             <hr>
 
             <h2 class="rhtxt-clr">Ratios</h2>
-            <div class="analysis-links">
+            <div id="ratios" class="analysis-links">
               <ul class="list-inline list-unstyled">
                 <li>
                   <a href="#" target="_blank">
                     <img src="imgs/news/marketwatch.JPG" alt="">
-                  </a>
-                </li>
-                <li>
-                  <a href="#" target="_blank">
-                    <img src="imgs/news/nasdaq.JPG" alt="nasdaq">
                   </a>
                 </li>
                 <li>
@@ -404,19 +409,25 @@
             <hr>
 
             <h2 class="rhtxt-clr">Management - Officers</h2>
-            <div class="analysis-links">
+            <div id="officer" class="analysis-links">
               <ul class="list-inline list-unstyled">
                 <li>
                   <a href="#" target="_blank">
                     <img src="imgs/news/marketwatch.JPG" alt="">
                   </a>
                 </li>
+                <li>
+                  <a href="#" target="_blank">
+                    <img src="imgs/news/reuters.JPG" alt="">
+                  </a>
+                </li>
               </ul>
+            </div>
 
               <br>
 
               <h2 class="rhtxt-clr">Management - Company Ownership</h2>
-              <div class="analysis-links">
+              <div id="ownership" class="analysis-links">
                 <ul class="list-inline list-unstyled">
                   <li>
                     <a href="#" target="_blank">
@@ -434,12 +445,13 @@
                     </a>
                   </li>
                 </ul>
+              </div>
 
                 <br>
                 <hr>
 
                 <h2 class="rhtxt-clr">Company Profile, Stats, KPIs & Other</h2>
-                <div class="analysis-links">
+                <div id="profile" class="analysis-links">
                   <ul class="list-inline list-unstyled">
                     <li>
                       <a href="#" target="_blank">
@@ -453,15 +465,11 @@
                     </li>
                     <li>
                       <a href="#" target="_blank">
-                        <img src="imgs/news/reuters.JPG" alt="">
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
                         <img src="imgs/news/earnings.JPG" alt="">
                       </a>
                     </li>
                   </ul>
+                </div>
 
                   <br>
                   <hr>
@@ -494,12 +502,10 @@
                         </a>
                       </li>
                     </ul>
+                  </div>
 
 
                 <br>
-
-            </div>
-
 
           </div>
           <div class="modal-footer">
