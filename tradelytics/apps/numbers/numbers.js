@@ -53,6 +53,7 @@ function googleSearch(str) {
 function updateLinks() {
   financialLinks = {
     marketwatchFin: "https://www.marketwatch.com/investing/stock/" + ticker +"/financials",
+    seekingFin: "https://seekingalpha.com/symbol/" + ticker + "/income-statement",
     yahooFin: "https://finance.yahoo.com/quote/" + ticker + "/financials?",
     nasdaqFin: "https://www.nasdaq.com/symbol/" + ticker + "/financials?",
     secFin: "https://www.sec.gov/cgi-bin/browse-edgar?CIK=" + ticker
@@ -78,7 +79,7 @@ function updateLinks() {
     finvizStats: "https://finviz.com/quote.ashx?t=" + ticker,
     marketwatchStats: "https://www.marketwatch.com/investing/stock/" + ticker,
     earningsStats: "https://earningscast.com/companies/" + ticker,
-    seekingStats: "https://seekingalpha.com/symbol/" + ticker + "?"
+    seekingStats: "https://seekingalpha.com/symbol/" + ticker + "/overview"
   };
 }
 
