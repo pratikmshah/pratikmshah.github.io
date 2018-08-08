@@ -8,8 +8,7 @@ var socialLinks = {};
 
 $(function() {
 
-  // get chart after keypress in ticker input
-  // update the website links
+  // get chart after keypress in ticker input, update the website links
   $('#ticker').on('keyup', function() {
     ticker = $('#ticker').val();
     var cLink = getFinvizChart(ticker);
@@ -53,6 +52,7 @@ function googleSearch(str) {
 function updateLinks() {
   financialLinks = {
     marketwatchFin: "https://www.marketwatch.com/investing/stock/" + ticker +"/financials",
+    seekingFin: "https://seekingalpha.com/symbol/" + ticker + "/income-statement",
     yahooFin: "https://finance.yahoo.com/quote/" + ticker + "/financials?",
     nasdaqFin: "https://www.nasdaq.com/symbol/" + ticker + "/financials?",
     secFin: "https://www.sec.gov/cgi-bin/browse-edgar?CIK=" + ticker
@@ -77,7 +77,8 @@ function updateLinks() {
   statsLinks = {
     finvizStats: "https://finviz.com/quote.ashx?t=" + ticker,
     marketwatchStats: "https://www.marketwatch.com/investing/stock/" + ticker,
-    earningsStats: "https://earningscast.com/companies/" + ticker
+    earningsStats: "https://earningscast.com/companies/" + ticker,
+    seekingStats: "https://seekingalpha.com/symbol/" + ticker + "/overview"
   };
 }
 
@@ -86,8 +87,7 @@ function updateSocialLinks(terms) {
   socialLinks = {
     twitterSocial: "https://twitter.com/search?q=" + terms,
     facebookSocial: "https://www.facebook.com/search/str/" + facebookSearch(terms) + "/keywords_search",
-    linkedinSocial: "https://www.linkedin.com/search/results/index/?keywords=" + terms,
-    instagramSocial: "https://www.instagram.com/"
+    linkedinSocial: "https://www.linkedin.com/search/results/index/?keywords=" + terms
   };
 }
 
@@ -96,28 +96,29 @@ function facebookSearch(terms) {
   return terms.split(" ").join("+");
 }
 
+// update the hyperlinks
 function updateHyperLinks() {
   var PATH = " ul li a";
   var arrHtml = [$("#financial" + PATH), $("#ratios" + PATH), $("#officer" + PATH), $("#ownership" + PATH), $("#profile" + PATH)];
   var arrLinks = [financialLinks, ratioLinks, insiderLinks, ownershipLinks, statsLinks];
   var objCounter = 0;
 
-  // loop through arrHtml
+  // loop through arrHtml, then lopp subarray, update href in each element with arrLinks
   arrHtml.forEach(function(link) {
-    // loop through each sub array in element
     for (var i = 0; i < link.length; i++) {
-      // update href in each element with arrLinks object
       link[i].href = Object.values(arrLinks[objCounter])[i];
     }
     objCounter++;
   });
+
+  $("#stocktwits").attr("href", "https://stocktwits.com/symbol/" + ticker);
 }
 
 // updates social links when search is changed
 function updateSocialHyperLinks() {
   var arrHtml = $("#social-icons li a");
 
-  for (var i = 0; i < arrHtml.length; i++) {
+  for (var i = 0; i < arrHtml.length - 4; i++) {
     arrHtml[i].href = Object.values(socialLinks)[i];
   }
 }
