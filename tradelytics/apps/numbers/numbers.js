@@ -77,7 +77,8 @@ function updateLinks() {
   statsLinks = {
     finvizStats: "https://finviz.com/quote.ashx?t=" + ticker,
     marketwatchStats: "https://www.marketwatch.com/investing/stock/" + ticker,
-    earningsStats: "https://earningscast.com/companies/" + ticker
+    earningsStats: "https://earningscast.com/companies/" + ticker,
+    seekingStats: "https://seekingalpha.com/symbol/" + ticker + "?"
   };
 }
 
