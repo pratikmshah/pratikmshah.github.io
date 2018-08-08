@@ -119,7 +119,7 @@ function updateHyperLinks() {
 function updateSocialHyperLinks() {
   var arrHtml = $("#social-icons li a");
 
-  for (var i = 0; i < arrHtml.length; i++) {
+  for (var i = 0; i < arrHtml.length - 2; i++) {
     arrHtml[i].href = Object.values(socialLinks)[i];
   }
 }
