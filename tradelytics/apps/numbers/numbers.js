@@ -8,8 +8,7 @@ var socialLinks = {};
 
 $(function() {
 
-  // get chart after keypress in ticker input
-  // update the website links
+  // get chart after keypress in ticker input, update the website links
   $('#ticker').on('keyup', function() {
     ticker = $('#ticker').val();
     var cLink = getFinvizChart(ticker);
@@ -88,8 +87,7 @@ function updateSocialLinks(terms) {
   socialLinks = {
     twitterSocial: "https://twitter.com/search?q=" + terms,
     facebookSocial: "https://www.facebook.com/search/str/" + facebookSearch(terms) + "/keywords_search",
-    linkedinSocial: "https://www.linkedin.com/search/results/index/?keywords=" + terms,
-    instagramSocial: "https://www.instagram.com/"
+    linkedinSocial: "https://www.linkedin.com/search/results/index/?keywords=" + terms
   };
 }
 
@@ -98,6 +96,7 @@ function facebookSearch(terms) {
   return terms.split(" ").join("+");
 }
 
+// update the hyperlinks
 function updateHyperLinks() {
   var PATH = " ul li a";
   var arrHtml = [$("#financial" + PATH), $("#ratios" + PATH), $("#officer" + PATH), $("#ownership" + PATH), $("#profile" + PATH)];
@@ -119,7 +118,7 @@ function updateHyperLinks() {
 function updateSocialHyperLinks() {
   var arrHtml = $("#social-icons li a");
 
-  for (var i = 0; i < arrHtml.length - 2; i++) {
+  for (var i = 0; i < arrHtml.length - 4; i++) {
     arrHtml[i].href = Object.values(socialLinks)[i];
   }
 }
