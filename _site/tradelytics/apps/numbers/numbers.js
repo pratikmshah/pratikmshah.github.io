@@ -103,15 +103,15 @@ function updateHyperLinks() {
   var arrLinks = [financialLinks, ratioLinks, insiderLinks, ownershipLinks, statsLinks];
   var objCounter = 0;
 
-  // loop through arrHtml
+  // loop through arrHtml, then lopp subarray, update href in each element with arrLinks
   arrHtml.forEach(function(link) {
-    // loop through each sub array in element
     for (var i = 0; i < link.length; i++) {
-      // update href in each element with arrLinks object
       link[i].href = Object.values(arrLinks[objCounter])[i];
     }
     objCounter++;
   });
+
+  $("#stocktwits").attr("href", "https://stocktwits.com/symbol/" + ticker);
 }
 
 // updates social links when search is changed
