@@ -32,6 +32,11 @@ $(function() {
     }
   });
 
+  // clear social search box on click
+  $('#social-search-btn').on('click', function() {
+    $('#social-search').val("");
+  });
+
 });
 
 
@@ -88,7 +93,7 @@ function updateSocialLinks(terms) {
   socialLinks = {
     twitterSocial: "https://twitter.com/search?q=" + terms,
     facebookSocial: "https://www.facebook.com/search/str/" + multipleTermsJoin(terms) + "/keywords_search",
-    youtubeSocial: "https://www.youtube.com/results?search_query="+ multipleTermsJoin(terms), 
+    youtubeSocial: "https://www.youtube.com/results?search_query="+ multipleTermsJoin(terms),
     linkedinSocial: "https://www.linkedin.com/search/results/index/?keywords=" + terms
   };
 }
