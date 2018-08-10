@@ -78,7 +78,8 @@ function updateLinks() {
     finvizStats: "https://finviz.com/quote.ashx?t=" + ticker,
     marketwatchStats: "https://www.marketwatch.com/investing/stock/" + ticker,
     earningsStats: "https://earningscast.com/companies/" + ticker,
-    seekingStats: "https://seekingalpha.com/symbol/" + ticker + "/overview"
+    seekingStats: "https://seekingalpha.com/symbol/" + ticker + "/overview",
+    ibkStats: "https://interactivebrokers.com/en/index.php?key=" + ticker +"&cntry=usa&tag=&ib_entity=&ln=&asset=&f=4587&conf=am&amref=1"
   };
 }
 
