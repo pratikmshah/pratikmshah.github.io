@@ -4,7 +4,7 @@ $(document).ready(function() {
 	$("a.exec").on("click", function(e) {
 	    e.preventDefault();
 	    var links = ['http://finviz.com/', 'https://stocktwits.com/home', 'https://seekingalpha.com/',
-									 'http://pratikmshah.github.io/tradelytics/apps/snowball/snowball.html', 'https://www.tdameritrade.com/home.page']
+									 'http://pratikmshah.github.io/tradelytics/apps/snowball/snowball.html', "http://pratikmshah.github.io/tradelytics/apps/numbers/numbers.html", 'https://www.tdameritrade.com/home.page']
 
 	    for (var i = 0; i < links.length; i++) {
 	    	window.open(links[i]);

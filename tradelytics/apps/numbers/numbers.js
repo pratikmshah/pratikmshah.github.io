@@ -32,6 +32,11 @@ $(function() {
     }
   });
 
+  // clear social search box on click
+  $('#social-search-btn').on('click', function() {
+    $('#social-search').val("");
+  });
+
 });
 
 
@@ -78,7 +83,8 @@ function updateLinks() {
     finvizStats: "https://finviz.com/quote.ashx?t=" + ticker,
     marketwatchStats: "https://www.marketwatch.com/investing/stock/" + ticker,
     earningsStats: "https://earningscast.com/companies/" + ticker,
-    seekingStats: "https://seekingalpha.com/symbol/" + ticker + "/overview"
+    seekingStats: "https://seekingalpha.com/symbol/" + ticker + "/overview",
+    ibkStats: "https://interactivebrokers.com/en/index.php?key=" + ticker +"&cntry=usa&tag=&ib_entity=&ln=&asset=&f=4587&conf=am&amref=1"
   };
 }
 
@@ -86,13 +92,14 @@ function updateLinks() {
 function updateSocialLinks(terms) {
   socialLinks = {
     twitterSocial: "https://twitter.com/search?q=" + terms,
-    facebookSocial: "https://www.facebook.com/search/str/" + facebookSearch(terms) + "/keywords_search",
+    facebookSocial: "https://www.facebook.com/search/str/" + multipleTermsJoin(terms) + "/keywords_search",
+    youtubeSocial: "https://www.youtube.com/results?search_query="+ multipleTermsJoin(terms),
     linkedinSocial: "https://www.linkedin.com/search/results/index/?keywords=" + terms
   };
 }
 
 // edit facebook search text
-function facebookSearch(terms) {
+function multipleTermsJoin(terms) {
   return terms.split(" ").join("+");
 }
 
