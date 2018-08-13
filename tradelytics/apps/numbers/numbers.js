@@ -13,10 +13,8 @@ $(function() {
 
   // get chart after keypress in ticker input, update the website links
   $('#ticker').on('keyup', function() {
-    if($ticker.val()) {
       clearTimeout(typingTimer);
       typingTimer = setTimeout(executeUpdates, doneTypingInterval);
-    }
   });
 
   // google search button
