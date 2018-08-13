@@ -11,10 +11,10 @@ $(function() {
   // get chart after keypress in ticker input, update the website links
   $('#ticker').on('keyup', function() {
     ticker = $('#ticker').val();
-    var cLink = getFinvizChart(ticker);
-    $("#stock-chart img").attr("src", cLink);
+    updateFinvizChart();
     updateLinks();
     updateHyperLinks();
+    getCompanyInformation();
   });
 
   // google search button
@@ -41,8 +41,8 @@ $(function() {
 
 
 // get chart from finviz
-function getFinvizChart(ticker) {
-  return "https://finviz.com/chart.ashx?t=" + ticker + "&ty=c&ta=1&p=d&s=l"
+function updateFinvizChart() {
+  $("#stock-chart img").attr("src", "https://finviz.com/chart.ashx?t=" + ticker + "&ty=c&ta=1&p=d&s=l"); 
 }
 
 // google search
@@ -128,4 +128,9 @@ function updateSocialHyperLinks() {
   for (var i = 0; i < arrHtml.length - 4; i++) {
     arrHtml[i].href = Object.values(socialLinks)[i];
   }
+}
+
+// search and update company name, sector, industry
+function getCompanyInformation() {
+
 }
