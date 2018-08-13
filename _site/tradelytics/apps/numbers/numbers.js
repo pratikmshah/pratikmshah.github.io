@@ -5,7 +5,6 @@ var insiderLinks = {};
 var ownershipLinks = {};
 var statsLinks = {};
 var socialLinks = {};
-var test;
 
 $(function() {
 
@@ -133,20 +132,19 @@ function updateSocialHyperLinks() {
 
 // search and update company name, sector, industry
 function getCompanyInformation() {
-  var symbol = ticker.toUpperCase();
-  var index = symbol.charCodeAt(0) - 65;
+  var SYMBOL = ticker.toUpperCase();
+  var index = SYMBOL.charCodeAt(0) - 65;
 
   // retrieve stock data from stock.json file
   $.getJSON('data/stocks.json', function(data) {
     var arr = data[index];
 
     for (var i = 0; i < arr.length; i++) {
-      if(arr[i].Ticker === symbol) {
+      if(arr[i].Ticker === SYMBOL) {
         updateCompanyInformation(arr[i]);
         break;
       }
     }
-
   });
 }
 
