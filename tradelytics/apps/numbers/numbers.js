@@ -5,16 +5,18 @@ var insiderLinks = {};
 var ownershipLinks = {};
 var statsLinks = {};
 var socialLinks = {};
+var typingTimer;                //timer identifier
+var doneTypingInterval = 2000;  //time in ms, 2.5 second for example
+var $ticker = $('#ticker');
 
 $(function() {
 
   // get chart after keypress in ticker input, update the website links
   $('#ticker').on('keyup', function() {
-    ticker = $('#ticker').val();
-    updateFinvizChart();
-    updateLinks();
-    updateHyperLinks();
-    getCompanyInformation();
+    if($ticker.val()) {
+      clearTimeout(typingTimer);
+      typingTimer = setTimeout(executeUpdates, doneTypingInterval);
+    }
   });
 
   // google search button
@@ -154,4 +156,20 @@ function updateCompanyInformation(info) {
   $('#company').val(info.Company);
   $('#sector').val(info.Sector);
   $('#industry').val(info.Industry);
+}
+
+// execute statements only when ticker typing is done for 3 seconds
+//on keydown, clear the countdown
+$ticker.on('keydown', function () {
+  clearTimeout(typingTimer);
+});
+
+//user is "finished typing," execute statements
+function executeUpdates () {
+  ticker = $("#ticker").val();
+  console.log(ticker);
+  updateFinvizChart();
+  updateLinks();
+  updateHyperLinks();
+  getCompanyInformation();
 }
