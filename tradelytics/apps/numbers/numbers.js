@@ -5,6 +5,7 @@ var insiderLinks = {};
 var ownershipLinks = {};
 var statsLinks = {};
 var socialLinks = {};
+var test;
 
 $(function() {
 
@@ -42,7 +43,7 @@ $(function() {
 
 // get chart from finviz
 function updateFinvizChart() {
-  $("#stock-chart img").attr("src", "https://finviz.com/chart.ashx?t=" + ticker + "&ty=c&ta=1&p=d&s=l"); 
+  $("#stock-chart img").attr("src", "https://finviz.com/chart.ashx?t=" + ticker + "&ty=c&ta=1&p=d&s=l");
 }
 
 // google search
@@ -132,5 +133,11 @@ function updateSocialHyperLinks() {
 
 // search and update company name, sector, industry
 function getCompanyInformation() {
+  var index = ticker.toUpperCase().charCodeAt(0) - 65;
+
+  // retrieve stock data from stock.json file
+  $.getJSON('data/stocks.json', function(data) {
+    console.log(data[index]);
+  });
 
 }
