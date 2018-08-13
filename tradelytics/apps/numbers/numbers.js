@@ -19,8 +19,9 @@ $(function() {
 
   // google search button
   $("#google-btn").on('click', function() {
-    if ($("#google-search").val()) {
-      googleSearch( $("#google-search").val() );
+    console.log("succes");
+    if ($('#social-search').val()) {
+      googleSearch($('#social-search').val());
     }
   });
 
@@ -48,7 +49,7 @@ function updateFinvizChart() {
 // google search
 function googleSearch(str) {
   var GOOGLE_URL = "https://www.google.com/search?q="
-  var url = GOOGLE_URL + str.split(" ").join("+");
+  var url = GOOGLE_URL + multipleTermsJoin(str);
   window.open(url);
 }
 
@@ -98,7 +99,7 @@ function updateSocialLinks(terms) {
   };
 }
 
-// edit facebook search text
+// edit multiple search text and concat with +
 function multipleTermsJoin(terms) {
   return terms.split(" ").join("+");
 }
