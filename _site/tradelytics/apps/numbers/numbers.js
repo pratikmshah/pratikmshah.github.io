@@ -133,11 +133,26 @@ function updateSocialHyperLinks() {
 
 // search and update company name, sector, industry
 function getCompanyInformation() {
-  var index = ticker.toUpperCase().charCodeAt(0) - 65;
+  var symbol = ticker.toUpperCase();
+  var index = symbol.charCodeAt(0) - 65;
 
   // retrieve stock data from stock.json file
   $.getJSON('data/stocks.json', function(data) {
-    console.log(data[index]);
-  });
+    var arr = data[index];
 
+    for (var i = 0; i < arr.length; i++) {
+      if(arr[i].Ticker === symbol) {
+        updateCompanyInformation(arr[i]);
+        break;
+      }
+    }
+
+  });
+}
+
+// update the value in company info boxes
+function updateCompanyInformation(info) {
+  $('#company').val(info.Company);
+  $('#sector').val(info.Sector);
+  $('#industry').val(info.Industry);
 }
