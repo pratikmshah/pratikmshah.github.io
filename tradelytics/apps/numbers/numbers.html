@@ -335,22 +335,20 @@
             <!-- company information -->
             <div class="form-group">
               <div class="row col-sm-offset-1">
-                <div class="col-sm-4">
-                  <input type="text" class="form-control" id="company" placeholder="Company">
-                </div>
+
                 <div class="col-sm-1">
                   <input type="text" class="form-control" id="ticker" style="text-transform:uppercase" placeholder="TICK" maxlength="5">
                 </div>
-                <div class="col-sm-5">
-                  <div class="input-group">
-                    <input id="google-search" type="text" class="form-control" placeholder="Search for...">
-                    <span class="input-group-btn">
-                      <button id="google-btn" class="btn btn-default" type="submit">
-                          <img src="imgs/icons/google.png" alt="">
-                      </button>
-                    </span>
-                  </div>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="company" placeholder="Company">
                 </div>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="sector" placeholder="Sector">
+                </div>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="industry" placeholder="Industry">
+                </div>
+
               </div>
             </div>
 
@@ -492,16 +490,24 @@
                   <h2 class="rhtxt-clr">Social Media</h2>
                   <div class="analysis-links">
 
+                  <div class="col-sm-offset-1 col-sm-10">
+
                     <div class="input-group">
-                      <input id="social-search"  type="text" class="form-control" placeholder="Search social media for...">
+                      <input id="social-search"  type="text" class="form-control .google-search" placeholder="Search social media for...">
                       <span class="input-group-btn">
                         <button id="social-search-btn" class="btn btn-rh" type="submit">
                             CLEAR
+                        </button>
+                        <button id="google-btn" class="btn btn-default" type="submit">
+                            <img src="imgs/icons/google.png" alt="">
                         </button>
                       </span>
                     </div>
 
                     <br>
+                    
+                  </div>
+
 
                     <ul id="social-icons" class="list-inline list-unstyled">
                       <li>

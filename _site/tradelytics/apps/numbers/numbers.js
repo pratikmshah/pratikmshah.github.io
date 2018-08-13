@@ -11,16 +11,17 @@ $(function() {
   // get chart after keypress in ticker input, update the website links
   $('#ticker').on('keyup', function() {
     ticker = $('#ticker').val();
-    var cLink = getFinvizChart(ticker);
-    $("#stock-chart img").attr("src", cLink);
+    updateFinvizChart();
     updateLinks();
     updateHyperLinks();
+    getCompanyInformation();
   });
 
   // google search button
   $("#google-btn").on('click', function() {
-    if ($("#google-search").val()) {
-      googleSearch( $("#google-search").val() );
+    console.log("succes");
+    if ($('#social-search').val()) {
+      googleSearch($('#social-search').val());
     }
   });
 
@@ -41,14 +42,14 @@ $(function() {
 
 
 // get chart from finviz
-function getFinvizChart(ticker) {
-  return "https://finviz.com/chart.ashx?t=" + ticker + "&ty=c&ta=1&p=d&s=l"
+function updateFinvizChart() {
+  $("#stock-chart img").attr("src", "https://finviz.com/chart.ashx?t=" + ticker + "&ty=c&ta=1&p=d&s=l");
 }
 
 // google search
 function googleSearch(str) {
   var GOOGLE_URL = "https://www.google.com/search?q="
-  var url = GOOGLE_URL + str.split(" ").join("+");
+  var url = GOOGLE_URL + multipleTermsJoin(str);
   window.open(url);
 }
 
@@ -98,7 +99,7 @@ function updateSocialLinks(terms) {
   };
 }
 
-// edit facebook search text
+// edit multiple search text and concat with +
 function multipleTermsJoin(terms) {
   return terms.split(" ").join("+");
 }
@@ -128,4 +129,29 @@ function updateSocialHyperLinks() {
   for (var i = 0; i < arrHtml.length - 4; i++) {
     arrHtml[i].href = Object.values(socialLinks)[i];
   }
+}
+
+// search and update company name, sector, industry
+function getCompanyInformation() {
+  var SYMBOL = ticker.toUpperCase();
+  var index = SYMBOL.charCodeAt(0) - 65;
+
+  // retrieve stock data from stock.json file
+  $.getJSON('data/stocks.json', function(data) {
+    var arr = data[index];
+
+    for (var i = 0; i < arr.length; i++) {
+      if(arr[i].Ticker === SYMBOL) {
+        updateCompanyInformation(arr[i]);
+        break;
+      }
+    }
+  });
+}
+
+// update the value in company info boxes
+function updateCompanyInformation(info) {
+  $('#company').val(info.Company);
+  $('#sector').val(info.Sector);
+  $('#industry').val(info.Industry);
 }
