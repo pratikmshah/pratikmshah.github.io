@@ -89,3 +89,14 @@ You can view price changes over different timeframes seconds, minutes, hours, da
 <br>
 
 #### Clean Charts <a name="cleanchart"></a>
+Keep charts clean and with minimal indicators. Over doing indicators and lines makes things difficult to read and evaluate price.
+
+<figure>
+  <img src="/img/posts/tech-analysis/clean.png" class="blg-img" alt="clean chart">
+  <figcaption>Clean</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/messy.PNG" class="blg-img" alt="messy chart">
+  <figcaption>Messy</figcaption>
+</figure>
