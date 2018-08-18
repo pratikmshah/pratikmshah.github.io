@@ -203,7 +203,12 @@ You can connect many new trend lines depending on the time horizon. You start cr
 <br>
 
 #### Trend Lines Kickback <a name="trendlineskickback"></a>
+The kickback is when price breaks through the trendline and then comes back up to try and retest the line but usually gets rejected and fails. That is basically last opportunity to sell before it falls and a new trend forms.
 
+<figure>
+  <img src="/img/posts/tech-analysis/kickback.png" class="blg-img" alt="Kickback">
+  <figcaption>Kickback: price rejected after trendline breaks</figcaption>
+</figure>
 
 <br>
 
