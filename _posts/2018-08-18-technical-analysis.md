@@ -61,6 +61,30 @@ You will immediately see that logarithmic charts are not evenly spaced on the Y 
 <br>
 
 #### Timeframes <a name="timeframe"></a>
+You can view price changes over different timeframes seconds, minutes, hours, days, weeks, months and years. Specific timeframes are well suited for different types of participants. It is best to go one timeframe higher to check for confirmation.
+
+- Chart Timeframes
+  - Day Traders
+    - minutes plus daily
+  - Swing Traders
+    - daily plus weekly
+  - Investors
+    - monthly and yearly
+
+<figure>
+  <img src="/img/posts/tech-analysis/msft1.png" class="blg-img" alt="MSFT 5 days">
+  <figcaption>5 day chart</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/msft2.png" class="blg-img" alt="MSFT 6 months">
+  <figcaption>6 month chart</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/msft3.png" class="blg-img" alt="MSFT 2 years">
+  <figcaption>2 year chart</figcaption>
+</figure>
 
 <br>
 
