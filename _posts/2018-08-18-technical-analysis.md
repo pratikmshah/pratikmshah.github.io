@@ -15,7 +15,16 @@ I remember when I first started investing and trading. I had no clue what I was 
  - [Arithmetic vs Logarithmic](#arilog)
  - [Timeframes](#timeframe)
  - [Clean Charts](#cleanchart)
-
+ 3. [Chart Analysis](#chartanal)
+ - [Bar Chart](#barchart)
+ - [Candlestick](#candle)
+ - [Candlesticks Doji](#candledoji)
+ - [Line Chart](#linechart)
+ - [Moving Averages](#average)
+ - [Trend Lines](#trendlines)
+ - [Trend Lines Horizons](#trendlineshorizon)
+ - [Trend Lines Kickback](#trendlineskickback)
+ - [Trend Identification](#trendidentification)
 
 <br>
 
@@ -100,3 +109,50 @@ Keep charts clean and with minimal indicators. Over doing indicators and lines m
   <img src="/img/posts/tech-analysis/messy.PNG" class="blg-img" alt="messy chart">
   <figcaption>Messy</figcaption>
 </figure>
+
+<br>
+
+### Chart Analysis <a name="chartanal"></a>
+#### Bar Chart <a name="barchart"></a>
+A bar chart is a composed of simple vertical line with a small horizontal line on the left and right of the bar. The bottom of the line shows the lowest price of that period and top shows the highest price of that period. The length of the bar is the difference between the highest and lowest price for that period. The left line shows the opening price for that period and the right line shows the closing price for that period.
+
+<figure>
+  <img src="/img/posts/tech-analysis/bar.png" class="blg-img" alt="TROW bar chart">
+  <figcaption>TROW Bar Chart</figcaption>
+</figure>
+
+<br>
+
+#### Candlestick <a name="candle"></a>
+The most widely used chart is the Japanese candlestick chart. The concept was created by Munehisa Homma who was a rice trader in the 1700s. Its similar to the bar chart but tells a bigger story of how the period went. The candles can be filled(red/bearish) and hollow(green/bullish). The wicks tell us more about the price action for the period such that if the top wick is long it shows that there were more sellers. Likewise, if the shadow was long on the bottom and short on top it means there were more buyers.
+
+<figure>
+  <img src="/img/posts/tech-analysis/candlestick.png" class="blg-img" alt="TROW candlestick chart">
+  <figcaption>TROW Candlestick Chart</figcaption>
+</figure>
+
+This chart type is very important for short term traders, in my opinion, as when you start putting together many candlesticks together you can gain some insight as to what pattern(s) are forming.
+
+<figure>
+  <img src="/img/posts/tech-analysis/4candlesticks.JPG" class="blg-img" alt="4 types of candles">
+  <figcaption>Types of candlesticks</figcaption>
+</figure>
+
+<br>
+
+#### Candlesticks Doji <a name="candledoji"></a>
+Sometimes you will see candlestick with no real body and those are called dojis. Dojis mean that the market was indecisive 
+
+<br>
+#### Line Chart <a name="linechart"></a>
+<br>
+#### Moving Averages <a name="average"></a>
+<br>
+#### Trend Lines <a name="trendlines"></a>
+<br>
+#### Trend Lines Horizons <a name="trendlineshorizon"></a>
+<br>
+#### Trend Lines Kickback <a name="trendlineskickback"></a>
+<br>
+#### Trend Identification <a name="trendidentification"></a>
+<br>
