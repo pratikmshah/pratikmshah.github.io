@@ -30,7 +30,6 @@ I remember when I first started investing and trading. I had no clue what I was 
  - [Polarity 101](#polarity)
  - [Polarity Psychology](#polarpsych)
  - [Polarity Volume By Price](#polvol)
- - [Dow Theory History](#dow)
  - [DJIA And DJTA](#dj)
  - [Market Trends](#markettrends)
  - [Averages Discount Everything](#averagedisc)
@@ -272,17 +271,19 @@ Support becomes resistance - Lets say a stock keeps getting bought at $20 but on
 <br>
 
 #### Polarity Volume By Price <a name="polvol"></a>
+Usually volume is plotted underneath a period but volume by price plots the volume vertically matching it with price. It is perfect tool to find the levels of which support and resistance exist. It is not necessary to have volume by price indicator as you will see several areas on the chart at which price fluctuates.
 
-
-<br>
-
-#### Dow Theory History <a name="dow"></a>
+<figure>
+  <img src="/img/posts/tech-analysis/volumebyprice.png" class="blg-img" alt="Volume By Price">
+</figure>
 
 
 <br>
 
 #### DJIA And DJTA <a name="dj"></a>
+Dow recognized that markets moved together. When indexes are making new highs then the stocks of companies associated with the index should also be making new highs. So taking oldest two indexes the transports and industrials since they are both linked via the economy if the industrials make a new high the transports should also make new highs; confirming the move.
 
+If you see a divergence where the industrials are making new highs but the transports fall then something is changing and it is a signal that the market is shifting. "So goes the DOW so goes the market".
 
 <br>
 
