@@ -689,7 +689,7 @@ ul li.cust-page-lnks {
         transition: color 0.3s;
         color: #7a7a7a; }
     .block div p {
-      font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif; }
+      font-family: "Helvetica Neue", "Open Sans", "Lato", sans-serif; }
       .block div p .btn-read {
         padding: 3px;
         border-radius: 16px;
@@ -737,15 +737,17 @@ code, pre {
   font-family: "Source Code Pro", sans-serif !important; }
 
 #post {
-  font-size: 1.125em;
   max-width: 702.9px;
   padding-left: 10px;
   padding-right: 10px;
   margin: 0 auto;
   display: block; }
   #post div.post-content {
-    font-family: "Open Sans", "Lato", "Helvetica Neue", sans-serif;
-    line-height: 1.75em;
+    font-family: "Helvetica Neue", "Open Sans", "Lato", sans-serif;
+    font-size: 1.250em;
+    line-height: 2.00em;
+    letter-spacing: -.1px;
+    color: #333;
     height: auto; }
     #post div.post-content h3 {
       font-weight: bold; }
