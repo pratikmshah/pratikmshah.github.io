@@ -213,6 +213,10 @@ The kickback is when price breaks through the trendline and then comes back up t
 <br>
 
 #### Trend Identification <a name="trendidentification"></a>
+Three main questions to ask when identifying a trend:
 
+1. In which direction is the trend of the other stocks in this sector? (Sector ETFS)
+2. In which direction is the trend for other stocks in this country? (US, China, Emerging Markets)
+3. In which direction are the major stock indexes heading? (S&P500 & DOW)
 
 <br>
