@@ -288,26 +288,30 @@ If you see a divergence where the industrials are making new highs but the trans
 <br>
 
 #### Market Trends <a name="markettrends"></a>
+You must recognize the direction of the primary trend.
 
+<figure>
+  <img src="/img/posts/tech-analysis/trends.png" class="blg-img" alt="Uptrend and Downtrend">
+</figure>
 
 <br>
 
 #### Averages Discount Everything <a name="averagedisc"></a>
-
+Technical analysis follows the rule that every information known earnings, lawsuits, new product cycles, competition etc... is already priced into the stock. Just think about how fast a stock moves now when news hits the public.
 
 <br>
 
 #### Closing Prices <a name="closeprice"></a>
-
+The closing price is the most important price during the period. This is a collective agreement between buyers/sellers of a price at the end of the period.
 
 <br>
 
 #### Bull Markets <a name="bullmarket"></a>
-
+First phase is accumulation phase where institutions buy out of favor stocks and build up a position. The second phase is the rally or breakout phase where everyone is buying and the prices are driven up. Good or bad news stocks still keep rallying. The third phase is the top or distribution phase where people who have accumulated in the beginning start selling off their positions. Everything is rosy and media is very optomistic.
 
 <br>
 
 #### Bear Markets <a name="bearmarket"></a>
-
+The first phase is the distribution phase where the news is all good but people are selling as prices have become very inflated. Rallies start to fade and gains cannot be held. The second phase is the sell-off where people start selling into earnings or even on good news. Media will create specials like "market meltdowns" and will use words like "profit taking" etc... The last phase is the puke phase where people finally realize and start selling and momentum picks up. Over time the prices become cheap and institutions start to accumulate which leads to another bull market.
 
 <br>
