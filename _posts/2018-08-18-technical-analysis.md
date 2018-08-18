@@ -141,18 +141,55 @@ This chart type is very important for short term traders, in my opinion, as when
 <br>
 
 #### Candlesticks Doji <a name="candledoji"></a>
-Sometimes you will see candlestick with no real body and those are called dojis. Dojis mean that the market was indecisive 
+Sometimes you will see candlestick with no real body and those are called dojis. Dojis mean that the market was indecisive that day and the opening and close are virtually identical.
+
+<figure>
+  <img src="/img/posts/tech-analysis/dojis.png" class="blg-img" alt="types of dojis">
+  <figcaption>Types of Dojis</figcaption>
+</figure>
+
+The two types of important dojis are the dragonfly and gravestone doji. The dragonfly doji has long bottom wick and closes at the top. When you see this in a downtrend it most likely means trend is starting to shift to bullish. Likewise the gravestone doji shows that buyers were getting exhausted during the period. If you see this in an uptrend it could most likely be trend is shifting to bearish.
 
 <br>
+
 #### Line Chart <a name="linechart"></a>
+The line chart plots the closing price point of each period. When you plot several of these points together and connect the dots a directional pattern will emerge in which you can visually see the trend. The closing price is most important point on any chart as it is the agreed upon price by market participants for that period.
+
+<figure>
+  <img src="/img/posts/tech-analysis/line.JPG" class="blg-img" alt="line chart">
+  <figcaption>Line Chart</figcaption>
+</figure>
+
+The best use case for line charts is when you compare two assets classes to see the performance between the two.
+
+<figure>
+  <img src="/img/posts/tech-analysis/faang.png" class="blg-img" alt="FAANG Compared to Nasdaq & S&P500">
+  <figcaption>FAANG compared to Nasdaq & S&P</figcaption>
+</figure>
+
 <br>
+
 #### Moving Averages <a name="average"></a>
+
+
 <br>
+
 #### Trend Lines <a name="trendlines"></a>
+
+
 <br>
+
 #### Trend Lines Horizons <a name="trendlineshorizon"></a>
+
+
 <br>
+
 #### Trend Lines Kickback <a name="trendlineskickback"></a>
+
+
 <br>
+
 #### Trend Identification <a name="trendidentification"></a>
+
+
 <br>
