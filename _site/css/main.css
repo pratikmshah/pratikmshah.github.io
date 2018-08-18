@@ -682,7 +682,8 @@ ul li.cust-page-lnks {
       text-transform: uppercase; }
       .block div h2 a.post-link {
         font-family: "Oswald", "Lato", "Helvetica Neue", sans-serif;
-        color: black; }
+        color: black;
+        margin-bottom: 10px; }
       .block div h2 a.post-link:hover {
         text-decoration: none;
         transition: color 0.3s;
