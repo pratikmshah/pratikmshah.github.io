@@ -11,6 +11,10 @@ I remember when I first started investing and trading. I had no clue what I was 
  1. [Technical Analysis](#techanalysis)
  - [History of Technical Analysis](#techhistory)
  - [Technical Analysis Vs Fundamental Analysis](#techvsfund)
+ 2. [Charts](#charts)
+ - [Arithmetic vs Logarithmic](#arilog)
+ - [Timeframes](#timeframe)
+ - [Clean Charts](#cleanchart)
 
 
 <br>
@@ -26,5 +30,28 @@ He created the first "ETF" and grouped companies that make the goods and compani
 <br>
 
 #### Technical Analysis Vs Fundamental Analysis <a name="techvsfund"></a>
+- Fundamental
+  - earnings of companies
+  - direction of interest rates
+  - micro and macro economic developments
+  - competitors of companies
+  - and a lot more variables that effect underlying company
+  - looking for valuation of the company
+- Technical
+  - assume all information and fundamentals have been priced into a stock
+  - analysis can be applied across all trading vehicles
+  - works on supply and demand principle
 
 <br>
+
+### Charts <a name="charts"></a>
+#### Arithmetic vs Logarithmic <a name="arilog"></a>
+
+
+<br>
+
+#### Timeframes <a name="timeframe"></a>
+
+<br>
+
+#### Clean Charts <a name="cleanchart"></a>
