@@ -749,6 +749,8 @@ code, pre {
     letter-spacing: -.1px;
     color: #333;
     height: auto; }
+    #post div.post-content li {
+      line-height: 1.75em; }
     #post div.post-content h3 {
       font-weight: bold; }
 
