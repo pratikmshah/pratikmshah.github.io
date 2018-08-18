@@ -46,7 +46,17 @@ He created the first "ETF" and grouped companies that make the goods and compani
 
 ### Charts <a name="charts"></a>
 #### Arithmetic vs Logarithmic <a name="arilog"></a>
+You will immediately see that logarithmic charts are not evenly spaced on the Y axis. The larger the space means the larger the percentage change in price. Arithmetic chart on the other hand has an evenly spaced out Y axis. Logarithmic charts show price volatility a lot more clearly vs an arithmetic chart.
 
+<figure>
+  <img src="/img/posts/tech-analysis/logrithmic.png" class="blg-img" alt="logarithmic chart">
+  <figcaption>Logarithmic - Square Inc</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/arithmetic.png" class="blg-img" alt="arithmetic chart">
+  <figcaption>Arithmetic - Square Inc</figcaption>
+</figure>
 
 <br>
 
