@@ -25,6 +25,19 @@ I remember when I first started investing and trading. I had no clue what I was 
  - [Trend Lines Horizons](#trendlineshorizon)
  - [Trend Lines Kickback](#trendlineskickback)
  - [Trend Identification](#trendidentification)
+ 4. [Understanding Technical Analysis](#undertech)
+ - [Support And Resistance](#supres)
+ - [Polarity 101](#polarity)
+ - [Polarity Psychology](#polarpsych)
+ - [Polarity Volume By Price](#polvol)
+ - [Dow Theory History](#dow)
+ - [DJIA And DJTA](#dj)
+ - [Market Trends](#markettrends)
+ - [Averages Discount Everything](#averagedisc)
+ - [Closing Prices](#closeprice)
+ - [Bull Markets](#bullmarket)
+ - [Bear Markets](#bearmarket)
+
 
 <br>
 
@@ -218,5 +231,82 @@ Three main questions to ask when identifying a trend:
 1. In which direction is the trend of the other stocks in this sector? (Sector ETFS)
 2. In which direction is the trend for other stocks in this country? (US, China, Emerging Markets)
 3. In which direction are the major stock indexes heading? (S&P500 & DOW)
+
+<br>
+
+
+### Understanding Technical Analysis <a name="undertech"></a>
+#### Support And Resistance <a name="supres"></a>
+Support is just another name for buying at a certain price area. If price should happen to fall there once again buyers should come in and prevent the price from falling. The more a price area is tested and holds the stronger that level should be in the future should price fall.
+
+Resistance is just another name for selling at a certain price area. If price rises to that area once again sellers will come in and prevent stock from rising. The more an area is tested the more significance it becomes.
+
+<figure>
+  <img src="/img/posts/tech-analysis/suprest.png" class="blg-img" alt="Support & Resistance">
+  <figcaption>Support (green line) and Resistance (red line)</figcaption>
+</figure>
+
+
+<br>
+
+#### Polarity 101 <a name="polarity"></a>
+The main key point here is that <strong>support & resistance is where price gets rejected quickly</strong>. If price is constantly hugging against support or resistance its most likely going to break so watch out. The more times a level is tested the more likely it is to break. The reason is simply that the buyers and sellers at that level are gone.
+
+Once price breaks resistance that level becomes support and if price breaks support that area now becomes resistance. Very similar to kickbacks in trendlines. The buyers move up in willingness to pay for asset and sellers move to a higher level. Reverse is same for when support is broken.
+
+<figure>
+  <img src="/img/posts/tech-analysis/polarity.png" class="blg-img" alt="polarity">
+  <figcaption>Polarity</figcaption>
+</figure>
+
+
+<br>
+
+#### Polarity Psychology <a name="polarpsych"></a>
+They reasoning behind support and resistance polarity is that buyers and sellers have shifted their price at which they are willing to buy or sell.
+
+Resistance becomes support theory - Lets say a stock keeps getting sold off at $20. Once the stock breaks and there are no sellers left buyers drive up the price up to $30 and then stock sells off once high enough. The people who missed their opportunity the first time now buy at the previous resistance level creating support. Also people who shorted at resistance level cover their short.
+
+Support becomes resistance - Lets say a stock keeps getting bought at $20 but one day people buy and the sellers drive price down to $10. On the next leg up the people who bought at support will sell to break even and shorts will start shorting in anticipation of this.
+
+<br>
+
+#### Polarity Volume By Price <a name="polvol"></a>
+
+
+<br>
+
+#### Dow Theory History <a name="dow"></a>
+
+
+<br>
+
+#### DJIA And DJTA <a name="dj"></a>
+
+
+<br>
+
+#### Market Trends <a name="markettrends"></a>
+
+
+<br>
+
+#### Averages Discount Everything <a name="averagedisc"></a>
+
+
+<br>
+
+#### Closing Prices <a name="closeprice"></a>
+
+
+<br>
+
+#### Bull Markets <a name="bullmarket"></a>
+
+
+<br>
+
+#### Bear Markets <a name="bearmarket"></a>
+
 
 <br>
