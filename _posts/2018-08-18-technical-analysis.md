@@ -198,7 +198,7 @@ Our entire goal as technicians is to identify trends in stocks. We want to be bu
 <br>
 
 #### Trend Lines Horizons <a name="trendlineshorizon"></a>
-
+You can connect many new trend lines depending on the time horizon. You start creating fan lines as they are called to spot the short term trends within the longer term trends. See previous section image to see Amazon's trendlines.
 
 <br>
 
