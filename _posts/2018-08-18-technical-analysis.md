@@ -170,7 +170,21 @@ The best use case for line charts is when you compare two assets classes to see 
 <br>
 
 #### Moving Averages <a name="average"></a>
+Next to candlestick charts I believe that the moving average is the second most important tool for any technical analyst and trader. It is a smoothing mechanism for price changes. The three types of moving averages are simple, exponential, and geometric.
 
+- Simple
+  - arithmetic moving avearge calculated by adding recent closing prices and then dividing that by X number of periods (ex: 20, 50, 200 days).
+- Exponential
+  - same as simple moving average but it is a weighted moving average that gives more importance to recent price data.
+- Geometric
+  - takes into account the compounding that occurs from period to period.
+
+<figure>
+  <img src="/img/posts/tech-analysis/movingaverage.png" class="blg-img" alt="Moving avearages">
+  <figcaption>Moving Averages: Exponential(purple) & Simple(blue)</figcaption>
+</figure>
+
+Moving average IS NOT a support or resistance area but its a supplement to help view the direction of the trend
 
 <br>
 
