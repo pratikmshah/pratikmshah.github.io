@@ -184,12 +184,16 @@ Next to candlestick charts I believe that the moving average is the second most 
   <figcaption>Moving Averages: Exponential(purple) & Simple(blue)</figcaption>
 </figure>
 
-Moving average IS NOT a support or resistance area but its a supplement to help view the direction of the trend
+Moving average IS NOT a support or resistance area but its a supplement to help view the direction of the trend. If the moving average is flat it means that the stock is moving sideways and will be choppy; STAY AWAY. When a stock falls near or under a moving average but the direction of the long term trend is still up those would be perfect time to buy.
 
 <br>
 
 #### Trend Lines <a name="trendlines"></a>
+Our entire goal as technicians is to identify trends in stocks. We want to be buying stocks in uptrends and sell stocks in downtrends. Minimum points of contact needed to draw a trend line is 2. When market returns to that contact point it should signal buyer/sellers to come in.
 
+<figure>
+  <img src="/img/posts/tech-analysis/trendline.png" class="blg-img" alt="Trendlines">
+</figure>
 
 <br>
 
