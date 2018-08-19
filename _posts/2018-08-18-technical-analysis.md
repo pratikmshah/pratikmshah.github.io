@@ -527,12 +527,31 @@ The rounding bottom is the same as rounding top but flipped in that it starts in
 
 <br>
 
-#### Double Top & Bottom<a name="doubletb"></a>
+#### Double Top & Bottom <a name="doubletb"></a>
+The double bottom is quick pattern where price comes from a downtrend and slingshots from a price upward and then comes back down to retest the low and holds/slingshots up again. The strongest conviction of a double bottom is when on the second retest the price slightly dips below the first one.
 
+<figure>
+  <img src="/img/posts/tech-analysis/dubbot.png" class="blg-img" alt="Double Bottom">
+  <figcaption>Double Bottom</figcaption>
+</figure>
+
+Double tops are the same but just reversed. Remember we would want the second top to be slightly above the first one for a strong confirmation.
+
+<figure>
+  <img src="/img/posts/tech-analysis/dubtop.png" class="blg-img" alt="Double Top">
+  <figcaption>Double Top</figcaption>
+</figure>
+
+For a stronger conviction look for RSI to make a higher low.
 
 <br>
 
 #### Failed Patterns <a name="failpat"></a>
+Not all continuation patterns continue the trends. If the trend breaks and does not continue something must have fundamentally and sentiment has changed. It is best to get out of the trade but sometimes there are false positives so make sure to get confirmation with a kickback.
 
+<figure>
+  <img src="/img/posts/tech-analysis/fail.png" class="blg-img" alt="Failed Breakout">
+  <figcaption>Failed Flag Breakout</figcaption>
+</figure>
 
 <br>
