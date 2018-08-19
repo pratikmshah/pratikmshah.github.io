@@ -482,6 +482,20 @@ If the pattern forms during a downtrend expect continuation to the downside.
 <br>
 
 #### Head and Shoulders <a name="headshoulder"></a>
+For the Head and Shoulders pattern you first need an underlying uptrend and a new high in price which is followed by a drop in price; this is phase 1. The second phase is the uptrend resumes and reaches a new high where it then falls back down to where the previous drop was before the new high. The final phase is that it rallies once more but fails to reach the new high and falls back down to previous support level also called the neckline where it fails and breaks downward.
+
+<figure>
+  <img src="/img/posts/tech-analysis/hstop.png" class="blg-img" alt="H&S Top">
+  <figcaption>Head & Shoulders Top</figcaption>
+</figure>
+
+We can flip this and also have a head and shoulders bottom reversal pattern. Where the trend goes from bearish to bullish.
+Remember the key is that it needs to break the neckline. If it doesn't then then pattern continues to what it was prior.
+
+<figure>
+  <img src="/img/posts/tech-analysis/hsbot.png" class="blg-img" alt="H&S Bottom">
+  <figcaption>Head & Shoulders Bottom</figcaption>
+</figure>
 
 
 <br>
