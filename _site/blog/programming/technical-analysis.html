@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Programming tutorials tips and tricks">
+  <meta name="keywords" content="HTML, CSS, JavaScript, Ruby, Jekyll, Sass, Rails, AngularJS, React">
+  <meta name="author" content="Pratik Shah">
+
+  <title>Technical Analysis</title>
+  <meta name="description" content="I remember when I first started investing and trading. I had no clue what I was doing. I would hear about a merger and rush into the stock only to watch it f...">
+
+  <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
+  <link rel="stylesheet" href="/css/devicon.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/blog/programming/technical-analysis">
+  <link rel="alternate" type="application/rss+xml" title="pratik." href="http://localhost:4000/feed.xml">
+
+
+  <script type="text/javascript" src="/js/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="/js/analytics.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="/js/masonry.pkgd.min.js"></script>
+  <script type="text/javascript" src="/js/homepage.js"></script>
+  <script type="text/javascript" src="/js/project.js"></script>
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <ul class="trigger list-unstyled list-inline">
+        <li class="cust-page-lnks">
+          <a class="page-link nav-link" href="/"><span class="font-title">Home</span></a>
+        </li>
+        
+          
+            <li class="cust-page-lnks">
+              <a class="page-link nav-link" href="/about/"><span class="font-title">About</span></a>
+            </li>
+          
+        
+          
+            <li class="cust-page-lnks">
+              <a class="page-link nav-link" href="/blog/"><span class="font-title">Blog</span></a>
+            </li>
+          
+        
+          
+        
+          
+        
+          
+            <li class="cust-page-lnks">
+              <a class="page-link nav-link" href="/projects/"><span class="font-title">Projects</span></a>
+            </li>
+          
+        
+      </ul>
+
+    </nav>
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article id="post" class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <p class="post-meta"><time datetime="2018-08-18T00:00:00-05:00" itemprop="datePublished">Aug 18, 2018</time></p>
+    <h1 id="post-title" class="post-title" itemprop="name headline">Technical Analysis</h1>
+  </header>
+
+  
+  <div>
+    <img src="/img/posts/tech-analysis/tanalysis.jpg">
+  </div>
+  
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I remember when I first started investing and trading. I had no clue what I was doing. I would hear about a merger and rush into the stock only to watch it fall in coming months. Or I’d find a stock with a high dividend yield only to to see the stock price fall and collapse. I was buying whenever I thought the price was right and not thinking about what was the perceived sentiment of the company or what price would buyers step in to stop the falling knife, as they call it. Technical analysis changed all this as this study of charting price action is used by millions of investors/traders to evaluate when it is time to buy, sell, or hold a stock. I plan on making this post a primer to technical analysis; you may want to bookmark this post as it will be updated over time. My notes here are from a great course on Technical Analysis from Investopedia Academy.</p>
+
+<p><br /></p>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+<ol>
+  <li><a href="#techanalysis">Technical Analysis</a>
+    <ul>
+      <li><a href="#techhistory">History of Technical Analysis</a></li>
+      <li><a href="#techvsfund">Technical Analysis Vs Fundamental Analysis</a></li>
+    </ul>
+  </li>
+  <li><a href="#charts">Charts</a>
+    <ul>
+      <li><a href="#arilog">Arithmetic vs Logarithmic</a></li>
+      <li><a href="#timeframe">Timeframes</a></li>
+      <li><a href="#cleanchart">Clean Charts</a></li>
+    </ul>
+  </li>
+  <li><a href="#chartanal">Chart Analysis</a>
+    <ul>
+      <li><a href="#barchart">Bar Chart</a></li>
+      <li><a href="#candle">Candlestick</a></li>
+      <li><a href="#candledoji">Candlesticks Doji</a></li>
+      <li><a href="#linechart">Line Chart</a></li>
+      <li><a href="#average">Moving Averages</a></li>
+      <li><a href="#trendlines">Trend Lines</a></li>
+      <li><a href="#trendlineshorizon">Trend Lines Horizons</a></li>
+      <li><a href="#trendlineskickback">Trend Lines Kickback</a></li>
+      <li><a href="#trendidentification">Trend Identification</a></li>
+    </ul>
+  </li>
+  <li><a href="#undertech">Understanding Technical Analysis</a>
+    <ul>
+      <li><a href="#supres">Support And Resistance</a></li>
+      <li><a href="#polarity">Polarity 101</a></li>
+      <li><a href="#polarpsych">Polarity Psychology</a></li>
+      <li><a href="#polvol">Polarity Volume By Price</a></li>
+      <li><a href="#dj">DJIA And DJTA</a></li>
+      <li><a href="#markettrends">Market Trends</a></li>
+      <li><a href="#averagedisc">Averages Discount Everything</a></li>
+      <li><a href="#closeprice">Closing Prices</a></li>
+      <li><a href="#bullmarket">Bull Markets</a></li>
+      <li><a href="#bearmarket">Bear Markets</a></li>
+    </ul>
+  </li>
+  <li><a href="#indicators">Indicators</a>
+    <ul>
+      <li><a href="#rsi">Relative Strength Index</a></li>
+      <li><a href="#over">Overbought &amp; Oversold</a></li>
+      <li><a href="#bullmom">Momentum Divergence Bull</a></li>
+      <li><a href="#bearmom">Momentum Divergence Bear</a></li>
+    </ul>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="technical-analysis-">Technical Analysis <a name="techanalysis"></a></h3>
+<h4 id="history-of-technical-analysis-">History of Technical Analysis <a name="techhistory"></a></h4>
+<p>Technical analysis is the study of the market and its buyers/sellers. Markets can be related to any transaction such as stocks, futures, currencies, commodities etc…</p>
+
+<p>Robert D. Edwards and John Magee wrote the bible of technical analysis like how Benjamin Graham and David Dodd wrote the book on value investing and securities analysis. However, we can go back further in time and see that Charles Dow, creator of Dow Jones Industrial Average, studied price action of a stock and noticed that stocks generally rise together and likewise fall together.</p>
+
+<p>He created the first “ETF” and grouped companies that make the goods and companies that move/ship the goods.</p>
+
+<p><br /></p>
+
+<h4 id="technical-analysis-vs-fundamental-analysis-">Technical Analysis Vs Fundamental Analysis <a name="techvsfund"></a></h4>
+<ul>
+  <li>Fundamental
+    <ul>
+      <li>earnings of companies</li>
+      <li>direction of interest rates</li>
+      <li>micro and macro economic developments</li>
+      <li>competitors of companies</li>
+      <li>and a lot more variables that effect underlying company</li>
+      <li>looking for valuation of the company</li>
+    </ul>
+  </li>
+  <li>Technical
+    <ul>
+      <li>assume all information and fundamentals have been priced into a stock</li>
+      <li>analysis can be applied across all trading vehicles</li>
+      <li>works on supply and demand principle</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="charts-">Charts <a name="charts"></a></h3>
+<h4 id="arithmetic-vs-logarithmic-">Arithmetic vs Logarithmic <a name="arilog"></a></h4>
+<p>You will immediately see that logarithmic charts are not evenly spaced on the Y axis. The larger the space means the larger the percentage change in price. Arithmetic chart on the other hand has an evenly spaced out Y axis. Logarithmic charts show price volatility a lot more clearly vs an arithmetic chart.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/logrithmic.png" class="blg-img" alt="logarithmic chart" />
+  <figcaption>Logarithmic - Square Inc</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/arithmetic.png" class="blg-img" alt="arithmetic chart" />
+  <figcaption>Arithmetic - Square Inc</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="timeframes-">Timeframes <a name="timeframe"></a></h4>
+<p>You can view price changes over different timeframes seconds, minutes, hours, days, weeks, months and years. Specific timeframes are well suited for different types of participants. It is best to go one timeframe higher to check for confirmation.</p>
+
+<ul>
+  <li>Chart Timeframes
+    <ul>
+      <li>Day Traders
+        <ul>
+          <li>minutes plus daily</li>
+        </ul>
+      </li>
+      <li>Swing Traders
+        <ul>
+          <li>daily plus weekly</li>
+        </ul>
+      </li>
+      <li>Investors
+        <ul>
+          <li>monthly and yearly</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+  <img src="/img/posts/tech-analysis/msft1.png" class="blg-img" alt="MSFT 5 days" />
+  <figcaption>5 day chart</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/msft2.png" class="blg-img" alt="MSFT 6 months" />
+  <figcaption>6 month chart</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/msft3.png" class="blg-img" alt="MSFT 2 years" />
+  <figcaption>2 year chart</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="clean-charts-">Clean Charts <a name="cleanchart"></a></h4>
+<p>Keep charts clean and with minimal indicators. Over doing indicators and lines makes things difficult to read and evaluate price.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/clean.png" class="blg-img" alt="clean chart" />
+  <figcaption>Clean</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/messy.PNG" class="blg-img" alt="messy chart" />
+  <figcaption>Messy</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h3 id="chart-analysis-">Chart Analysis <a name="chartanal"></a></h3>
+<h4 id="bar-chart-">Bar Chart <a name="barchart"></a></h4>
+<p>A bar chart is a composed of simple vertical line with a small horizontal line on the left and right of the bar. The bottom of the line shows the lowest price of that period and top shows the highest price of that period. The length of the bar is the difference between the highest and lowest price for that period. The left line shows the opening price for that period and the right line shows the closing price for that period.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/bar.png" class="blg-img" alt="TROW bar chart" />
+  <figcaption>TROW Bar Chart</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="candlestick-">Candlestick <a name="candle"></a></h4>
+<p>The most widely used chart is the Japanese candlestick chart. The concept was created by Munehisa Homma who was a rice trader in the 1700s. Its similar to the bar chart but tells a bigger story of how the period went. The candles can be filled(red/bearish) and hollow(green/bullish). The wicks tell us more about the price action for the period such that if the top wick is long it shows that there were more sellers. Likewise, if the shadow was long on the bottom and short on top it means there were more buyers.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/candlestick.png" class="blg-img" alt="TROW candlestick chart" />
+  <figcaption>TROW Candlestick Chart</figcaption>
+</figure>
+
+<p>This chart type is very important for short term traders, in my opinion, as when you start putting together many candlesticks together you can gain some insight as to what pattern(s) are forming.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/4candlesticks.JPG" class="blg-img" alt="4 types of candles" />
+  <figcaption>Types of candlesticks</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="candlesticks-doji-">Candlesticks Doji <a name="candledoji"></a></h4>
+<p>Sometimes you will see candlestick with no real body and those are called dojis. Dojis mean that the market was indecisive that day and the opening and close are virtually identical.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/dojis.png" class="blg-img" alt="types of dojis" />
+  <figcaption>Types of Dojis</figcaption>
+</figure>
+
+<p>The two types of important dojis are the dragonfly and gravestone doji. The dragonfly doji has long bottom wick and closes at the top. When you see this in a downtrend it most likely means trend is starting to shift to bullish. Likewise the gravestone doji shows that buyers were getting exhausted during the period. If you see this in an uptrend it could most likely be trend is shifting to bearish.</p>
+
+<p><br /></p>
+
+<h4 id="line-chart-">Line Chart <a name="linechart"></a></h4>
+<p>The line chart plots the closing price point of each period. When you plot several of these points together and connect the dots a directional pattern will emerge in which you can visually see the trend. The closing price is most important point on any chart as it is the agreed upon price by market participants for that period.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/line.JPG" class="blg-img" alt="line chart" />
+  <figcaption>Line Chart</figcaption>
+</figure>
+
+<p>The best use case for line charts is when you compare two assets classes to see the performance between the two.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/faang.png" class="blg-img" alt="FAANG Compared to Nasdaq &amp; S&amp;P500" />
+  <figcaption>FAANG compared to Nasdaq &amp; S&amp;P</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="moving-averages-">Moving Averages <a name="average"></a></h4>
+<p>Next to candlestick charts I believe that the moving average is the second most important tool for any technical analyst and trader. It is a smoothing mechanism for price changes. The three types of moving averages are simple, exponential, and geometric.</p>
+
+<ul>
+  <li>Simple
+    <ul>
+      <li>arithmetic moving avearge calculated by adding recent closing prices and then dividing that by X number of periods (ex: 20, 50, 200 days).</li>
+    </ul>
+  </li>
+  <li>Exponential
+    <ul>
+      <li>same as simple moving average but it is a weighted moving average that gives more importance to recent price data.</li>
+    </ul>
+  </li>
+  <li>Geometric
+    <ul>
+      <li>takes into account the compounding that occurs from period to period.</li>
+    </ul>
+  </li>
+</ul>
+
+<figure>
+  <img src="/img/posts/tech-analysis/movingaverage.png" class="blg-img" alt="Moving avearages" />
+  <figcaption>Moving Averages: Exponential(purple) &amp; Simple(blue)</figcaption>
+</figure>
+
+<p>Moving average IS NOT a support or resistance area but its a supplement to help view the direction of the trend. If the moving average is flat it means that the stock is moving sideways and will be choppy; STAY AWAY. When a stock falls near or under a moving average but the direction of the long term trend is still up those would be perfect time to buy.</p>
+
+<p><br /></p>
+
+<h4 id="trend-lines-">Trend Lines <a name="trendlines"></a></h4>
+<p>Our entire goal as technicians is to identify trends in stocks. We want to be buying stocks in uptrends and sell stocks in downtrends. Minimum points of contact needed to draw a trend line is 2. When market returns to that contact point it should signal buyer/sellers to come in.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/trendline.png" class="blg-img" alt="Trendlines" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="trend-lines-horizons-">Trend Lines Horizons <a name="trendlineshorizon"></a></h4>
+<p>You can connect many new trend lines depending on the time horizon. You start creating fan lines as they are called to spot the short term trends within the longer term trends. See previous section image to see Amazon’s trendlines.</p>
+
+<p><br /></p>
+
+<h4 id="trend-lines-kickback-">Trend Lines Kickback <a name="trendlineskickback"></a></h4>
+<p>The kickback is when price breaks through the trendline and then comes back up to try and retest the line but usually gets rejected and fails. That is basically last opportunity to sell before it falls and a new trend forms.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/kickback.png" class="blg-img" alt="Kickback" />
+  <figcaption>Kickback: price rejected after trendline breaks</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="trend-identification-">Trend Identification <a name="trendidentification"></a></h4>
+<p>Three main questions to ask when identifying a trend:</p>
+
+<ol>
+  <li>In which direction is the trend of the other stocks in this sector? (Sector ETFS)</li>
+  <li>In which direction is the trend for other stocks in this country? (US, China, Emerging Markets)</li>
+  <li>In which direction are the major stock indexes heading? (S&amp;P500 &amp; DOW)</li>
+</ol>
+
+<p><br /></p>
+
+<h3 id="understanding-technical-analysis-">Understanding Technical Analysis <a name="undertech"></a></h3>
+<h4 id="support-and-resistance-">Support And Resistance <a name="supres"></a></h4>
+<p>Support is just another name for buying at a certain price area. If price should happen to fall there once again buyers should come in and prevent the price from falling. The more a price area is tested and holds the stronger that level should be in the future should price fall.</p>
+
+<p>Resistance is just another name for selling at a certain price area. If price rises to that area once again sellers will come in and prevent stock from rising. The more an area is tested the more significance it becomes.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/suprest.png" class="blg-img" alt="Support &amp; Resistance" />
+  <figcaption>Support (green line) and Resistance (red line)</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="polarity-101-">Polarity 101 <a name="polarity"></a></h4>
+<p>The main key point here is that <strong>support &amp; resistance is where price gets rejected quickly</strong>. If price is constantly hugging against support or resistance its most likely going to break so watch out. The more times a level is tested the more likely it is to break. The reason is simply that the buyers and sellers at that level are gone.</p>
+
+<p>Once price breaks resistance that level becomes support and if price breaks support that area now becomes resistance. Very similar to kickbacks in trendlines. The buyers move up in willingness to pay for asset and sellers move to a higher level. Reverse is same for when support is broken.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/polarity.png" class="blg-img" alt="polarity" />
+  <figcaption>Polarity</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="polarity-psychology-">Polarity Psychology <a name="polarpsych"></a></h4>
+<p>They reasoning behind support and resistance polarity is that buyers and sellers have shifted their price at which they are willing to buy or sell.</p>
+
+<p>Resistance becomes support theory - Lets say a stock keeps getting sold off at $20. Once the stock breaks and there are no sellers left buyers drive up the price up to $30 and then stock sells off once high enough. The people who missed their opportunity the first time now buy at the previous resistance level creating support. Also people who shorted at resistance level cover their short.</p>
+
+<p>Support becomes resistance - Lets say a stock keeps getting bought at $20 but one day people buy and the sellers drive price down to $10. On the next leg up the people who bought at support will sell to break even and shorts will start shorting in anticipation of this.</p>
+
+<p><br /></p>
+
+<h4 id="polarity-volume-by-price-">Polarity Volume By Price <a name="polvol"></a></h4>
+<p>Usually volume is plotted underneath a period but volume by price plots the volume vertically matching it with price. It is perfect tool to find the levels of which support and resistance exist. It is not necessary to have volume by price indicator as you will see several areas on the chart at which price fluctuates.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/volumebyprice.png" class="blg-img" alt="Volume By Price" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="djia-and-djta-">DJIA And DJTA <a name="dj"></a></h4>
+<p>Dow recognized that markets moved together. When indexes are making new highs then the stocks of companies associated with the index should also be making new highs. So taking oldest two indexes the transports and industrials since they are both linked via the economy if the industrials make a new high the transports should also make new highs; confirming the move.</p>
+
+<p>If you see a divergence where the industrials are making new highs but the transports fall then something is changing and it is a signal that the market is shifting. “So goes the DOW so goes the market”.</p>
+
+<p><br /></p>
+
+<h4 id="market-trends-">Market Trends <a name="markettrends"></a></h4>
+<p>You must recognize the direction of the primary trend.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/trends.png" class="blg-img" alt="Uptrend and Downtrend" />
+</figure>
+
+<p><br /></p>
+
+<h4 id="averages-discount-everything-">Averages Discount Everything <a name="averagedisc"></a></h4>
+<p>Technical analysis follows the rule that every information known earnings, lawsuits, new product cycles, competition etc… is already priced into the stock. Just think about how fast a stock moves now when news hits the public.</p>
+
+<p><br /></p>
+
+<h4 id="closing-prices-">Closing Prices <a name="closeprice"></a></h4>
+<p>The closing price is the most important price during the period. This is a collective agreement between buyers/sellers of a price at the end of the period.</p>
+
+<p><br /></p>
+
+<h4 id="bull-markets-">Bull Markets <a name="bullmarket"></a></h4>
+<p>First phase is accumulation phase where institutions buy out of favor stocks and build up a position. The second phase is the rally or breakout phase where everyone is buying and the prices are driven up. Good or bad news stocks still keep rallying. The third phase is the top or distribution phase where people who have accumulated in the beginning start selling off their positions. Everything is rosy and media is very optomistic.</p>
+
+<p><br /></p>
+
+<h4 id="bear-markets-">Bear Markets <a name="bearmarket"></a></h4>
+<p>The first phase is the distribution phase where the news is all good but people are selling as prices have become very inflated. Rallies start to fade and gains cannot be held. The second phase is the sell-off where people start selling into earnings or even on good news. Media will create specials like “market meltdowns” and will use words like “profit taking” etc… The last phase is the puke phase where people finally realize and start selling and momentum picks up. Over time the prices become cheap and institutions start to accumulate which leads to another bull market.</p>
+
+<p><br /></p>
+
+<h3 id="indicators-">Indicators <a name="indicators"></a></h3>
+<h4 id="relative-strength-index-">Relative Strength Index <a name="rsi"></a></h4>
+<p>The relative strength index has a standard of 14 periods and is a momentum indicator. It is not related to relative strength which is used to compare assets performance. The RSI oscillator goes from 0-100 where 30 = oversold and 70 = overbought.</p>
+
+<p><br /></p>
+
+<h4 id="overbought--oversold-">Overbought &amp; Oversold <a name="over"></a></h4>
+<p>We can observe the range that RSI is in to see the momentum. In an uptrend the RSI will get above 70 in the rallies and when it gets sold off for corrections the RSI will typically stay above 30s may even stay above 50. The stock will not get oversold but will get overbought. If momentum falls and stays below 30s then something has changed</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/rsiup.png" class="blg-img" alt="RSI uptrend" />
+  <figcaption>RSI in an Uptrend</figcaption>
+</figure>
+
+<p>In a downtrend each rally gets sold off and RSI barley if ever gets above 50-60s. The downtrend will usually stay near the 30s. The stock will not get overbought but will get oversold.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/rsidown.png" class="blg-img" alt="RSI downtrend" />
+  <figcaption>RSI in a Downtrend</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="momentum-divergence-bull-">Momentum Divergence Bull <a name="bullmom"></a></h4>
+<p>RSI can be used to find out divergences and confirmation of the trends. If prices make a lower low but the RSI makes a higher low that is a signal for bullish divergence. It means that the trend is changing doesn’t mean trend is reversing.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/rsibulldiv.png" class="blg-img" alt="RSI Bullish Divergence" />
+  <figcaption>RSI Bullish Divergence</figcaption>
+</figure>
+
+<p><br /></p>
+
+<h4 id="momentum-divergence-bear-">Momentum Divergence Bear <a name="bearmom"></a></h4>
+<p>RSI can be used to find out if a bearish divergence is among us. If the price make a higher high but the RSI level make a lower high that is a signal for bearish divergence. It means that the trend is changing doesn’t mean trend is reversing.</p>
+
+<figure>
+  <img src="/img/posts/tech-analysis/rsibeardiv.png" class="blg-img" alt="RSI Bearish Divergence" />
+  <figcaption>RSI Bearish Divergence</figcaption>
+</figure>
+
+<p><br /></p>
+
+    <button id="scroll-top"><span class="glyphicon glyphicon-menu-up"></span></button>
+  </div>
+
+
+<div id="disqus_thread"></div>
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+
+// var disqus_config = function () {
+//   this.page.url = /blog/programming/technical-analysis;         // Replace PAGE_URL with your page's canonical URL variable
+//   //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+// };
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//pratikshah.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      <div id="social-media" class="footer-col footer-col-3 center">
+
+        <!-- <div id="twitter-btn">
+          <a href="https://twitter.com/pratikshah" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @pratikshah</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div> -->
+
+        <ul class="social-media-list center">
+          
+          <li>
+            <a href="https://github.com/pratikmshah" class="icon-social" title="GitHub">
+  <img src="/img/icons/github-blk.png">
+  <img src="/img/icons/github-clr.png">
+</a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/pratikshah" class="icon-social" title="Twitter">
+  <img src="/img/icons/twt-blk.png">
+  <img src="/img/icons/twt-clr.png">
+</a>
+
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://linkedin.com/in/pratikmshah" class="icon-social" title="LinkedIn">
+  <img src="/img/icons/lnkdn-blk.png">
+  <img src="/img/icons/lnkdn-clr.png">
+</a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://instagram.com/pratikshah_" class="icon-social" title="Instagram">
+  <img src="/img/icons/insta-blk.png">
+  <img src="/img/icons/insta-clr.png">
+</a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:pratik.t.shah@gmail.com" class="icon-social" title="E-Mail">
+  <img src="/img/icons/email-blk.png">
+  <img src="/img/icons/email-clr.png">
+</a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+     <div class="center">
+      <p class="footer-copyw">This site is powered by <a href="https://jekyllrb.com/">Jekyll</a></p>
+     </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
