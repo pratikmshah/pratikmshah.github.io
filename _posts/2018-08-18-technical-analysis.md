@@ -49,6 +49,7 @@ I remember when I first started investing and trading. I had no clue what I was 
  - [Rounding Top & Bottom](#rounding)
  - [Double Top & Bottom](#doubletb)
  - [Failed Patterns](#failpat)
+ - [Price Target](#pricetgt)
 
 
 <br>
@@ -552,6 +553,46 @@ Not all continuation patterns continue the trends. If the trend breaks and does 
 <figure>
   <img src="/img/posts/tech-analysis/fail.png" class="blg-img" alt="Failed Breakout">
   <figcaption>Failed Flag Breakout</figcaption>
+</figure>
+
+<br>
+
+#### Price Target <a name="pricetgt"></a>
+To find the measured moved price target after a breakout from the continuation pattern identify these:
+
+1. Identify the amplitude, or the difference between the high and low points, of the Pattern.
+2. Identify the point in which the stock breaks the pattern, or the breakout.
+3. Set the price target by adding the amplitude to the breakout (or subtracting, if going short).
+
+<figure>
+  <img src="/img/posts/tech-analysis/pricetgt.JPG" class="blg-img" alt="Price Target">
+  <figcaption>Measured Price Target</figcaption>
+</figure>
+
+<br>
+
+Pennants and flags are a little bit different since they are short term patterns and will need to identify these:
+
+1. Identify the difference between the start and end of the previous rally (the 'Flag Pole') moving into the pattern.
+2. Identify the point in which the stock breaks the pattern, or the breakout.
+3. Set the price target by adding the flag pole to the breakout (or subtracting, if going short).
+
+<figure>
+  <img src="/img/posts/tech-analysis/flagpt.JPG" class="blg-img" alt="Pennant price target">
+  <figcaption>Pennant Price Target</figcaption>
+</figure>
+
+<br>
+
+For something like a head an shoulders pattern identify these:
+
+1. Identify the amplitude, which in the case of head and shoulders patterns, would be the difference between the head and neckline.
+2. Identify the point in which the stock breaks the pattern. For H&S, the breakout is the same as the neckline.
+3. For H&S tops, set the price target by subtracting the amplitude to the neckline. For H&S bottoms, add the amplitude to the neckline.
+
+<figure>
+  <img src="/img/posts/tech-analysis/hspt.JPG" class="blg-img" alt="Head and shoulders price target">
+  <figcaption>Head & Shoulders Price Target</figcaption>
 </figure>
 
 <br>
