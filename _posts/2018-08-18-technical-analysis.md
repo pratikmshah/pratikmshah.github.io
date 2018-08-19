@@ -501,7 +501,12 @@ Remember the key is that it needs to break the neckline. If it doesn't then then
 <br>
 
 #### Microphone <a name="microphone"></a>
+In the rare microphone pattern the top and bottom boundaries expand away from one another broadening. This means that volatility is starting to pick up. Be careful with this pattern as it fluctuates up and down very quickly.
 
+<figure>
+  <img src="/img/posts/tech-analysis/megaphone.png" class="blg-img" alt="Mega Phone">
+  <figcaption>Mega Phone</figcaption>
+</figure>
 
 <br>
 
