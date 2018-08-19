@@ -633,17 +633,17 @@ When you divide the larger number to the number on its left you will always get 
 <br>
 
 #### Fibonacci Sequence 2.618 <a name="fibs261"></a>
-Going further dividing larger number to the number 2nd to the left of it (ex: 13/5) you will end up at 2.618.
+Going further dividing larger number to the number 2nd to the left of it (ex: 13/5) you will end up closer 2.618 or 261.8%.
 
 
 <br>
 
 #### Fibonacci Sequence 4.236 <a name="fibs423"></a>
-
+Going even further dividing larger number to the number 3rd to the left of it (ex: 13/3) you will end up closer to 4.236 or 423.6%.
 
 <br>
 
 #### Fibonacci Sequence 6.854 <a name="fibs6854"></a>
-
+Lets go one more time further dividing the larger number to the number 4th to the left of it and you will end up closer to 6.854 or 685.4%. Years in an uptrend the market will still respect the fibonacci levels.
 
 <br>
