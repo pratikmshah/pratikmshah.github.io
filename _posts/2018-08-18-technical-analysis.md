@@ -511,7 +511,19 @@ In the rare microphone pattern the top and bottom boundaries expand away from on
 <br>
 
 #### Rounding Top & Bottom <a name="rounding"></a>
+The rounding bottom pattern starts with a decline in prices. The next phase is a long timeframe where bulls and bears battle at prices consolidating and forming a saucer type base. No one is making money in these periods. The phrase "longer the base higher in space" means that the longer the time a base is forming the higher move to the upside could take place.
 
+<figure>
+  <img src="/img/posts/tech-analysis/roundtop.png" class="blg-img" alt="Rounding Top">
+  <figcaption>Rounding Top</figcaption>
+</figure>
+
+The rounding bottom is the same as rounding top but flipped in that it starts in and uptrend, forms the base, and eventually crashes downward.
+
+<figure>
+  <img src="/img/posts/tech-analysis/roundbot.png" class="blg-img" alt="Rounding Bottom">
+  <figcaption>Rounding Bottom</figcaption>
+</figure>
 
 <br>
 
