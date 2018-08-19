@@ -611,16 +611,29 @@ The fibonacci tools is arguably one of the most value tools for a technical anal
 <br>
 
 #### Fibonacci Sequence 0.618 <a name="fibs618"></a>
+In the fibonacci sequence when you add any two numbers together you will arrive at the next number in the fibonacci sequence. If you divide any sequential pair with each other the solution will always be `0.618`.
 
+When markets are trending they correct to both the down and upside. You can use the fibonacci sequence to predict retracement price targets. Market usually will respect those levels. So for instance if a downtrending stock climbs back up it will retrace 61.8% of the price lost from the downtrend.
+
+<figure>
+  <img src="/img/posts/tech-analysis/fib618.png" class="blg-img" alt="Fibonacci Retracement">
+  <figcaption>Fibonacci Retracements</figcaption>
+</figure>
 
 <br>
 
 #### Fibonacci Sequence 1.618 (Golden Ratio) <a name="fibs168"></a>
+When you divide the larger number to the number on its left you will always get 1.618. When you have a breakout take the prior high to the prior low and above that you will see 161.8% range that will be your price target. See twitter after it stalled from an initial rally in March and to the low in April it eventually broke out and went high as 161.8% from the low in April.
 
+<figure>
+  <img src="/img/posts/tech-analysis/fibgold.png" class="blg-img" alt="Fibonacci price target 161.8%">
+  <figcaption>Fibonacci Price Target From Breakout</figcaption>
+</figure>
 
 <br>
 
 #### Fibonacci Sequence 2.618 <a name="fibs261"></a>
+Going further dividing larger number to the number 2nd to the left of it (ex: 13/5) you will end up at 2.618.
 
 
 <br>
