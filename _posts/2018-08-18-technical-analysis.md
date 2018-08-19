@@ -336,7 +336,7 @@ We can observe the range that RSI is in to see the momentum. In an uptrend the R
 </figure>
 
 
-In a downtrend each rally gets sold off and RSI barley if ever gets above 50. The downtrend will usually stay near the 30s. The stock will not get overbought but will get oversold.  
+In a downtrend each rally gets sold off and RSI barley if ever gets above 50-60s. The downtrend will usually stay near the 30s. The stock will not get overbought but will get oversold.  
 
 <figure>
   <img src="/img/posts/tech-analysis/rsidown.png" class="blg-img" alt="RSI downtrend">
@@ -348,11 +348,21 @@ In a downtrend each rally gets sold off and RSI barley if ever gets above 50. Th
 
 
 #### Momentum Divergence Bull <a name="bullmom"></a>
+RSI can be used to find out divergences and confirmation of the trends. If prices make a lower low but the RSI makes a higher low that is a signal for bullish divergence. It means that the trend is changing doesn't mean trend is reversing.
 
+<figure>
+  <img src="/img/posts/tech-analysis/rsibulldiv.png" class="blg-img" alt="RSI Bullish Divergence">
+  <figcaption>RSI Bullish Divergence</figcaption>
+</figure>
 
 <br>
 
 #### Momentum Divergence Bear <a name="bearmom"></a>
+RSI can be used to find out if a bearish divergence is among us. If the price make a higher high but the RSI level make a lower high that is a signal for bearish divergence. It means that the trend is changing doesn't mean trend is reversing.
 
+<figure>
+  <img src="/img/posts/tech-analysis/rsibeardiv.png" class="blg-img" alt="RSI Bearish Divergence">
+  <figcaption>RSI Bearish Divergence</figcaption>
+</figure>
 
 <br>
