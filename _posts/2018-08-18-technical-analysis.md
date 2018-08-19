@@ -41,6 +41,7 @@ I remember when I first started investing and trading. I had no clue what I was 
  - [Overbought & Oversold](#over)
  - [Momentum Divergence Bull](#bullmom)
  - [Momentum Divergence Bear](#bearmom)
+ - [Relatvie Strength](#relstr)
 
 
 <br>
@@ -363,6 +364,16 @@ RSI can be used to find out if a bearish divergence is among us. If the price ma
 <figure>
   <img src="/img/posts/tech-analysis/rsibeardiv.png" class="blg-img" alt="RSI Bearish Divergence">
   <figcaption>RSI Bearish Divergence</figcaption>
+</figure>
+
+<br>
+
+#### Relative Strength <a name="relstr"></a>
+Buy side institutional fund managers look for two things: momentum and relative strength. Relative strength compares 2 or more asset classes with each other and you identify which one is outperforming. The one outperforming is the one you want to be in.
+
+<figure>
+  <img src="/img/posts/tech-analysis/relstr.png" class="blg-img" alt="Big money center banks relative strength">
+  <figcaption>Relative Strength of Banks</figcaption>
 </figure>
 
 <br>
