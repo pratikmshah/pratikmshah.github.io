@@ -41,7 +41,14 @@ I remember when I first started investing and trading. I had no clue what I was 
  - [Overbought & Oversold](#over)
  - [Momentum Divergence Bull](#bullmom)
  - [Momentum Divergence Bear](#bearmom)
- - [Relatvie Strength](#relstr)
+ - [Relative Strength](#relstr)
+ 6. [Patterns](#pattern)
+ - [Continuation Pattern](#contpat)
+ - [Head and Shoulders](#headshoulder)
+ - [Microphone](#microphone)
+ - [Rounding Top & Bottom](#rounding)
+ - [Double Top & Bottom](#doubletb)
+ - [Failed Patterns](#failpat)
 
 
 <br>
@@ -375,5 +382,126 @@ Buy side institutional fund managers look for two things: momentum and relative 
   <img src="/img/posts/tech-analysis/relstr.png" class="blg-img" alt="Big money center banks relative strength">
   <figcaption>Relative Strength of Banks</figcaption>
 </figure>
+
+<br>
+
+### Patterns <a name="pattern"></a>
+#### Continuation Patterns <a name="contpat"></a>
+There are two types of patterns in technical analysis, continuation and reversal patterns. Patterns can take either few weeks to develop or even months to years.
+
+- Symmetrical Triangle
+  - Uptrend followed by consolidation in time where market is digesting the gains
+  - There is a converging trend line where the downtrend meets uptrend
+  - About 2/3 to 3/4 from the apex
+
+<figure>
+  <img src="/img/posts/tech-analysis/symtri.jpg" class="blg-img" alt="Symmetrical Triangle">
+  <figcaption>Symmetrical Triangle</figcaption>
+</figure>
+
+<br>
+
+- Descending Triangle
+  - A downtrend line which is the upward boundary line
+  - A horizontal line forming a lower boundary as the floor
+  - Upward boundary converges to the lower boundary
+
+<figure>
+  <img src="/img/posts/tech-analysis/desctri.png" class="blg-img" alt="Descending Triangle">
+  <figcaption>Descending Triangle</figcaption>
+</figure>
+
+<br>
+
+- Ascending Triangle
+  - Seen a lot in up trending markets on strong stocks
+  - Upward boundary is horizontal forming resistance
+  - Lower boundary is converging up to upward boundary
+
+<figure>
+  <img src="/img/posts/tech-analysis/asctri.jpg" class="blg-img" alt="Ascending Triangle">
+  <figcaption>Ascending Triangle</figcaption>
+</figure>
+
+<br>
+
+If the pattern forms during a downtrend expect continuation to the downside.
+
+- Rectangle Pattern
+  - Top and Lower boundaries are both horizontal
+  - Consolidates in a support and resistance zone.
+
+<figure>
+  <img src="/img/posts/tech-analysis/recpat.png" class="blg-img" alt="Rectangle Pattern">
+  <figcaption>Rectangle Pattern</figcaption>
+</figure>
+
+<br>
+
+- Falling Wedges
+  - both upward and lower boundaries are declining
+
+<figure>
+  <img src="/img/posts/tech-analysis/fallwed.png" class="blg-img" alt="Falling Wedge">
+  <figcaption>Falling Wedge</figcaption>
+</figure>
+
+<br>
+
+- Rising Wedge
+  - both upward and lower boundaries are ascending
+
+<figure>
+  <img src="/img/posts/tech-analysis/riswed.jpg" class="blg-img" alt="Rising Wedge">
+  <figcaption>Rising Wedge</figcaption>
+</figure>
+
+<br>
+
+- Pennant
+  - Previous sharp move up or down
+  - forms a mini asymmetrical triangle
+  - very short period
+
+<figure>
+  <img src="/img/posts/tech-analysis/pennant.png" class="blg-img" alt="Pennant">
+  <figcaption>Pennant</figcaption>
+</figure>
+
+<br>
+
+- Flag
+  - Like the pennant pattern
+  - Top and lower boundaries decline perpendicularly
+
+<figure>
+  <img src="/img/posts/tech-analysis/flagpat.png" class="blg-img" alt="Flag">
+  <figcaption>Flag</figcaption>
+</figure>
+
+<br>
+
+#### Head and Shoulders <a name="headshoulder"></a>
+
+
+<br>
+
+#### Microphone <a name="microphone"></a>
+
+
+<br>
+
+#### Rounding Top & Bottom <a name="rounding"></a>
+
+
+<br>
+
+#### Double Top & Bottom<a name="doubletb"></a>
+
+
+<br>
+
+#### Failed Patterns <a name="failpat"></a>
+
 
 <br>
