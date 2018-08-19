@@ -50,6 +50,13 @@ I remember when I first started investing and trading. I had no clue what I was 
  - [Double Top & Bottom](#doubletb)
  - [Failed Patterns](#failpat)
  - [Price Target](#pricetgt)
+ 7. [Fibonacci Retracement](#fibn)
+ - [Fibonacci Problem](#fibprblm)
+ - [Fibonacci Sequence 0.618](#fibs618)
+ - [Fibonacci Sequence 1.618 (Golden Ratio)](#fibs168)
+ - [Fibonacci Sequence 2.618](#fibs261)
+ - [Fibonacci Sequence 4.236](#fibs423)
+ - [Fibonacci Sequence 6.854](#fibs6854)
 
 
 <br>
@@ -594,5 +601,36 @@ For something like a head an shoulders pattern identify these:
   <img src="/img/posts/tech-analysis/hspt.JPG" class="blg-img" alt="Head and shoulders price target">
   <figcaption>Head & Shoulders Price Target</figcaption>
 </figure>
+
+<br>
+
+### Fibonacci Retracement <a name="fibn"></a>
+#### Fibonacci Problem <a name="fibprblm"></a>
+The fibonacci tools is arguably one of the most value tools for a technical analyst. You either abide by it or don't use it at all. The fibonacci retracements were created by Leonardo Fibonacci on some question about how many rabbits can be produced from a pair of rabbits enclosed in an area. The process of how the solution came about was the fibonacci numbers that supposedly keep reoccurring throughout nature. The number pairs `1, 1, 2, 3, 5, 8, 13, 21, 34...` keep going on forever.
+
+<br>
+
+#### Fibonacci Sequence 0.618 <a name="fibs618"></a>
+
+
+<br>
+
+#### Fibonacci Sequence 1.618 (Golden Ratio) <a name="fibs168"></a>
+
+
+<br>
+
+#### Fibonacci Sequence 2.618 <a name="fibs261"></a>
+
+
+<br>
+
+#### Fibonacci Sequence 4.236 <a name="fibs423"></a>
+
+
+<br>
+
+#### Fibonacci Sequence 6.854 <a name="fibs6854"></a>
+
 
 <br>
