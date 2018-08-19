@@ -36,6 +36,11 @@ I remember when I first started investing and trading. I had no clue what I was 
  - [Closing Prices](#closeprice)
  - [Bull Markets](#bullmarket)
  - [Bear Markets](#bearmarket)
+ 5. [Indicators](#indicators)
+ - [Relative Strength Index](#rsi)
+ - [Overbought & Oversold](#over)
+ - [Momentum Divergence Bull](#bullmom)
+ - [Momentum Divergence Bear](#bearmom)
 
 
 <br>
@@ -313,5 +318,41 @@ First phase is accumulation phase where institutions buy out of favor stocks and
 
 #### Bear Markets <a name="bearmarket"></a>
 The first phase is the distribution phase where the news is all good but people are selling as prices have become very inflated. Rallies start to fade and gains cannot be held. The second phase is the sell-off where people start selling into earnings or even on good news. Media will create specials like "market meltdowns" and will use words like "profit taking" etc... The last phase is the puke phase where people finally realize and start selling and momentum picks up. Over time the prices become cheap and institutions start to accumulate which leads to another bull market.
+
+<br>
+
+### Indicators <a name="indicators"></a>
+#### Relative Strength Index <a name="rsi"></a>
+The relative strength index has a standard of 14 periods and is a momentum indicator. It is not related to relative strength which is used to compare assets performance. The RSI oscillator goes from 0-100 where 30 = oversold and 70 = overbought.
+
+<br>
+
+#### Overbought & Oversold <a name="over"></a>
+We can observe the range that RSI is in to see the momentum. In an uptrend the RSI will get above 70 in the rallies and when it gets sold off for corrections the RSI will typically stay above 30s may even stay above 50. The stock will not get oversold but will get overbought. If momentum falls and stays below 30s then something has changed
+
+<figure>
+  <img src="/img/posts/tech-analysis/rsiup.png" class="blg-img" alt="RSI uptrend">
+  <figcaption>RSI in an Uptrend</figcaption>
+</figure>
+
+
+In a downtrend each rally gets sold off and RSI barley if ever gets above 50. The downtrend will usually stay near the 30s. The stock will not get overbought but will get oversold.  
+
+<figure>
+  <img src="/img/posts/tech-analysis/rsidown.png" class="blg-img" alt="RSI downtrend">
+  <figcaption>RSI in a Downtrend</figcaption>
+</figure>
+
+
+<br>
+
+
+#### Momentum Divergence Bull <a name="bullmom"></a>
+
+
+<br>
+
+#### Momentum Divergence Bear <a name="bearmom"></a>
+
 
 <br>
