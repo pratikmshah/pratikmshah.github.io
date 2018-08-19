@@ -41,6 +41,22 @@ I remember when I first started investing and trading. I had no clue what I was 
  - [Overbought & Oversold](#over)
  - [Momentum Divergence Bull](#bullmom)
  - [Momentum Divergence Bear](#bearmom)
+ - [Relative Strength](#relstr)
+ 6. [Patterns](#pattern)
+ - [Continuation Pattern](#contpat)
+ - [Head and Shoulders](#headshoulder)
+ - [Microphone](#microphone)
+ - [Rounding Top & Bottom](#rounding)
+ - [Double Top & Bottom](#doubletb)
+ - [Failed Patterns](#failpat)
+ - [Price Target](#pricetgt)
+ 7. [Fibonacci Retracement](#fibn)
+ - [Fibonacci Problem](#fibprblm)
+ - [Fibonacci Sequence 0.618](#fibs618)
+ - [Fibonacci Sequence 1.618 (Golden Ratio)](#fibs168)
+ - [Fibonacci Sequence 2.618](#fibs261)
+ - [Fibonacci Sequence 4.236](#fibs423)
+ - [Fibonacci Sequence 6.854](#fibs6854)
 
 
 <br>
@@ -364,5 +380,270 @@ RSI can be used to find out if a bearish divergence is among us. If the price ma
   <img src="/img/posts/tech-analysis/rsibeardiv.png" class="blg-img" alt="RSI Bearish Divergence">
   <figcaption>RSI Bearish Divergence</figcaption>
 </figure>
+
+<br>
+
+#### Relative Strength <a name="relstr"></a>
+Buy side institutional fund managers look for two things: momentum and relative strength. Relative strength compares 2 or more asset classes with each other and you identify which one is outperforming. The one outperforming is the one you want to be in.
+
+<figure>
+  <img src="/img/posts/tech-analysis/relstr.png" class="blg-img" alt="Big money center banks relative strength">
+  <figcaption>Relative Strength of Banks</figcaption>
+</figure>
+
+<br>
+
+### Patterns <a name="pattern"></a>
+#### Continuation Patterns <a name="contpat"></a>
+There are two types of patterns in technical analysis, continuation and reversal patterns. Patterns can take either few weeks to develop or even months to years.
+
+- Symmetrical Triangle
+  - Uptrend followed by consolidation in time where market is digesting the gains
+  - There is a converging trend line where the downtrend meets uptrend
+  - About 2/3 to 3/4 from the apex
+
+<figure>
+  <img src="/img/posts/tech-analysis/symtri.jpg" class="blg-img" alt="Symmetrical Triangle">
+  <figcaption>Symmetrical Triangle</figcaption>
+</figure>
+
+<br>
+
+- Descending Triangle
+  - A downtrend line which is the upward boundary line
+  - A horizontal line forming a lower boundary as the floor
+  - Upward boundary converges to the lower boundary
+
+<figure>
+  <img src="/img/posts/tech-analysis/desctri.png" class="blg-img" alt="Descending Triangle">
+  <figcaption>Descending Triangle</figcaption>
+</figure>
+
+<br>
+
+- Ascending Triangle
+  - Seen a lot in up trending markets on strong stocks
+  - Upward boundary is horizontal forming resistance
+  - Lower boundary is converging up to upward boundary
+
+<figure>
+  <img src="/img/posts/tech-analysis/asctri.jpg" class="blg-img" alt="Ascending Triangle">
+  <figcaption>Ascending Triangle</figcaption>
+</figure>
+
+<br>
+
+If the pattern forms during a downtrend expect continuation to the downside.
+
+- Rectangle Pattern
+  - Top and Lower boundaries are both horizontal
+  - Consolidates in a support and resistance zone.
+
+<figure>
+  <img src="/img/posts/tech-analysis/recpat.png" class="blg-img" alt="Rectangle Pattern">
+  <figcaption>Rectangle Pattern</figcaption>
+</figure>
+
+<br>
+
+- Falling Wedges
+  - both upward and lower boundaries are declining
+
+<figure>
+  <img src="/img/posts/tech-analysis/fallwed.png" class="blg-img" alt="Falling Wedge">
+  <figcaption>Falling Wedge</figcaption>
+</figure>
+
+<br>
+
+- Rising Wedge
+  - both upward and lower boundaries are ascending
+
+<figure>
+  <img src="/img/posts/tech-analysis/riswed.jpg" class="blg-img" alt="Rising Wedge">
+  <figcaption>Rising Wedge</figcaption>
+</figure>
+
+<br>
+
+- Pennant
+  - Previous sharp move up or down
+  - forms a mini asymmetrical triangle
+  - very short period
+
+<figure>
+  <img src="/img/posts/tech-analysis/pennant.png" class="blg-img" alt="Pennant">
+  <figcaption>Pennant</figcaption>
+</figure>
+
+<br>
+
+- Flag
+  - Like the pennant pattern
+  - Top and lower boundaries decline perpendicularly
+
+<figure>
+  <img src="/img/posts/tech-analysis/flagpat.png" class="blg-img" alt="Flag">
+  <figcaption>Flag</figcaption>
+</figure>
+
+<br>
+
+#### Head and Shoulders <a name="headshoulder"></a>
+For the Head and Shoulders pattern you first need an underlying uptrend and a new high in price which is followed by a drop in price; this is phase 1. The second phase is the uptrend resumes and reaches a new high where it then falls back down to where the previous drop was before the new high. The final phase is that it rallies once more but fails to reach the new high and falls back down to previous support level also called the neckline where it fails and breaks downward.
+
+<figure>
+  <img src="/img/posts/tech-analysis/hstop.png" class="blg-img" alt="H&S Top">
+  <figcaption>Head & Shoulders Top</figcaption>
+</figure>
+
+We can flip this and also have a head and shoulders bottom reversal pattern. Where the trend goes from bearish to bullish.
+Remember the key is that it needs to break the neckline. If it doesn't then then pattern continues to what it was prior.
+
+<figure>
+  <img src="/img/posts/tech-analysis/hsbot.png" class="blg-img" alt="H&S Bottom">
+  <figcaption>Head & Shoulders Bottom</figcaption>
+</figure>
+
+
+<br>
+
+#### Microphone <a name="microphone"></a>
+In the rare microphone pattern the top and bottom boundaries expand away from one another broadening. This means that volatility is starting to pick up. Be careful with this pattern as it fluctuates up and down very quickly.
+
+<figure>
+  <img src="/img/posts/tech-analysis/megaphone.png" class="blg-img" alt="Mega Phone">
+  <figcaption>Mega Phone</figcaption>
+</figure>
+
+<br>
+
+#### Rounding Top & Bottom <a name="rounding"></a>
+The rounding bottom pattern starts with a decline in prices. The next phase is a long timeframe where bulls and bears battle at prices consolidating and forming a saucer type base. No one is making money in these periods. The phrase "longer the base higher in space" means that the longer the time a base is forming the higher move to the upside could take place.
+
+<figure>
+  <img src="/img/posts/tech-analysis/roundtop.png" class="blg-img" alt="Rounding Top">
+  <figcaption>Rounding Top</figcaption>
+</figure>
+
+The rounding bottom is the same as rounding top but flipped in that it starts in and uptrend, forms the base, and eventually crashes downward.
+
+<figure>
+  <img src="/img/posts/tech-analysis/roundbot.png" class="blg-img" alt="Rounding Bottom">
+  <figcaption>Rounding Bottom</figcaption>
+</figure>
+
+<br>
+
+#### Double Top & Bottom <a name="doubletb"></a>
+The double bottom is quick pattern where price comes from a downtrend and slingshots from a price upward and then comes back down to retest the low and holds/slingshots up again. The strongest conviction of a double bottom is when on the second retest the price slightly dips below the first one.
+
+<figure>
+  <img src="/img/posts/tech-analysis/dubbot.png" class="blg-img" alt="Double Bottom">
+  <figcaption>Double Bottom</figcaption>
+</figure>
+
+Double tops are the same but just reversed. Remember we would want the second top to be slightly above the first one for a strong confirmation.
+
+<figure>
+  <img src="/img/posts/tech-analysis/dubtop.png" class="blg-img" alt="Double Top">
+  <figcaption>Double Top</figcaption>
+</figure>
+
+For a stronger conviction look for RSI to make a higher low.
+
+<br>
+
+#### Failed Patterns <a name="failpat"></a>
+Not all continuation patterns continue the trends. If the trend breaks and does not continue something must have fundamentally and sentiment has changed. It is best to get out of the trade but sometimes there are false positives so make sure to get confirmation with a kickback.
+
+<figure>
+  <img src="/img/posts/tech-analysis/fail.png" class="blg-img" alt="Failed Breakout">
+  <figcaption>Failed Flag Breakout</figcaption>
+</figure>
+
+<br>
+
+#### Price Target <a name="pricetgt"></a>
+To find the measured moved price target after a breakout from the continuation pattern identify these:
+
+1. Identify the amplitude, or the difference between the high and low points, of the Pattern.
+2. Identify the point in which the stock breaks the pattern, or the breakout.
+3. Set the price target by adding the amplitude to the breakout (or subtracting, if going short).
+
+<figure>
+  <img src="/img/posts/tech-analysis/pricetgt.JPG" class="blg-img" alt="Price Target">
+  <figcaption>Measured Price Target</figcaption>
+</figure>
+
+<br>
+
+Pennants and flags are a little bit different since they are short term patterns and will need to identify these:
+
+1. Identify the difference between the start and end of the previous rally (the 'Flag Pole') moving into the pattern.
+2. Identify the point in which the stock breaks the pattern, or the breakout.
+3. Set the price target by adding the flag pole to the breakout (or subtracting, if going short).
+
+<figure>
+  <img src="/img/posts/tech-analysis/flagpt.JPG" class="blg-img" alt="Pennant price target">
+  <figcaption>Pennant Price Target</figcaption>
+</figure>
+
+<br>
+
+For something like a head an shoulders pattern identify these:
+
+1. Identify the amplitude, which in the case of head and shoulders patterns, would be the difference between the head and neckline.
+2. Identify the point in which the stock breaks the pattern. For H&S, the breakout is the same as the neckline.
+3. For H&S tops, set the price target by subtracting the amplitude to the neckline. For H&S bottoms, add the amplitude to the neckline.
+
+<figure>
+  <img src="/img/posts/tech-analysis/hspt.JPG" class="blg-img" alt="Head and shoulders price target">
+  <figcaption>Head & Shoulders Price Target</figcaption>
+</figure>
+
+<br>
+
+### Fibonacci Retracement <a name="fibn"></a>
+#### Fibonacci Problem <a name="fibprblm"></a>
+The fibonacci tools is arguably one of the most value tools for a technical analyst. You either abide by it or don't use it at all. The fibonacci retracements were created by Leonardo Fibonacci on some question about how many rabbits can be produced from a pair of rabbits enclosed in an area. The process of how the solution came about was the fibonacci numbers that supposedly keep reoccurring throughout nature. The number pairs `1, 1, 2, 3, 5, 8, 13, 21, 34...` keep going on forever.
+
+<br>
+
+#### Fibonacci Sequence 0.618 <a name="fibs618"></a>
+In the fibonacci sequence when you add any two numbers together you will arrive at the next number in the fibonacci sequence. If you divide any sequential pair with each other the solution will always be `0.618`.
+
+When markets are trending they correct to both the down and upside. You can use the fibonacci sequence to predict retracement price targets. Market usually will respect those levels. So for instance if a downtrending stock climbs back up it will retrace 61.8% of the price lost from the downtrend.
+
+<figure>
+  <img src="/img/posts/tech-analysis/fib618.png" class="blg-img" alt="Fibonacci Retracement">
+  <figcaption>Fibonacci Retracements</figcaption>
+</figure>
+
+<br>
+
+#### Fibonacci Sequence 1.618 (Golden Ratio) <a name="fibs168"></a>
+When you divide the larger number to the number on its left you will always get 1.618. When you have a breakout take the prior high to the prior low and above that you will see 161.8% range that will be your price target. See twitter after it stalled from an initial rally in March and to the low in April it eventually broke out and went high as 161.8% from the low in April.
+
+<figure>
+  <img src="/img/posts/tech-analysis/fibgold.png" class="blg-img" alt="Fibonacci price target 161.8%">
+  <figcaption>Fibonacci Price Target From Breakout</figcaption>
+</figure>
+
+<br>
+
+#### Fibonacci Sequence 2.618 <a name="fibs261"></a>
+Going further dividing larger number to the number 2nd to the left of it (ex: 13/5) you will end up closer 2.618 or 261.8%.
+
+
+<br>
+
+#### Fibonacci Sequence 4.236 <a name="fibs423"></a>
+Going even further dividing larger number to the number 3rd to the left of it (ex: 13/3) you will end up closer to 4.236 or 423.6%.
+
+<br>
+
+#### Fibonacci Sequence 6.854 <a name="fibs6854"></a>
+Lets go one more time further dividing the larger number to the number 4th to the left of it and you will end up closer to 6.854 or 685.4%. Years in an uptrend the market will still respect the fibonacci levels.
 
 <br>
