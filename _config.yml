@@ -29,6 +29,7 @@ yeeld-demo: "http://yeeld.herokuapp.com/"
 yeeld-src: "https://github.com/pratikmshah/yeeld"
 trade: "/tradelytics/index.html"
 snowball: "/tradelytics/apps/snowball/snowball.html"
+snowball: "/tradelytics/apps/numbers/numbers.html"
 
 # about me links
 resume: "https://resume.creddle.io/resume/f4o552ugu6v"
