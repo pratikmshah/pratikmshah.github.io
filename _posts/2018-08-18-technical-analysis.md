@@ -61,6 +61,9 @@ I remember when I first started investing and trading. I had no clue what I was 
  - [Top Down Approach](#topdown)
  - [Intermarket Analysis](#intermkt)
  - [US Sector Rotation Models](#usmodels)
+ 7. [Market Breadth](#mktbread)
+ - [Breadth of Momentum](#breadmom)
+ - [Drawdowns & Equal-Weight Indexes](#drawdown)
 
 <br>
 
@@ -752,5 +755,58 @@ Sector rotation graph is a graph that plots all the sectors on a specific timefr
   <img src="/img/posts/tech-analysis/sectorgraph.JPG" class="blg-img" alt="Sector Rotation Graph">
   <figcaption>Rotation Graph</figcaption>
 </figure>
+
+<br>
+
+### Market Breadth <a name="mktbread"></a>
+#### Breadth of Momentum <a name="breadmom"></a>
+One method to view market breadth of momentum is viewing new 52 week lows of common stocks. If the market (SPY) is making lower lows but the number of common stocks that are making new 52 week lows is less than the previous dips this could be signaling a bottom and reversal.
+
+<figure>
+  <img src="/img/posts/tech-analysis/fiftyweeklows.JPG" class="blg-img" alt="SPY vs 52 week lows">
+  <figcaption>S&P500 vs 52 Week Lows</figcaption>
+</figure>
+
+Another alternative is the advanced decline line which is a cumulative tally of the amount of stocks going up minus the number of stocks going down. When market is making new highs we want to see the A/D Line make new highs showing more stocks rising.
+
+<figure>
+  <img src="/img/posts/tech-analysis/advancedec.JPG" class="blg-img" alt="Advanced Decline Line">
+  <figcaption>Advance Decline Line</figcaption>
+</figure>
+
+You can also use the A/D Line even for a specific sector to gain confirmation that yes the sector is in an up/down trend.
+
+<figure>
+  <img src="/img/posts/tech-analysis/advansect.JPG" class="blg-img" alt="Advanced Decline Line by Sector">
+  <figcaption>Advance Decline Line By Sector</figcaption>
+</figure>
+
+- Breadth of Momentum
+  - momentum has ranges ex: 14 days RSI takes a 14 day period.
+  - more stocks that are making new highs represents an uptrend
+  - more stocks that are making new lows represents a downtrend
+  - divergences are signals that sentiment is changing
+  - non-confirmation is evidence of change.
+
+RSI of a stock in an uptrend will stay above 30 and a stock in downtrend will have RSI below 70.
+
+<figure>
+  <img src="/img/posts/tech-analysis/rsirange.JPG" class="blg-img" alt="RSI range">
+  <figcaption>Trend RSI</figcaption>
+</figure>
+
+You can use RSI of a basket of stocks in a sector to determine if the sector is in downtrend or uptrend.
+
+<figure>
+  <img src="/img/posts/tech-analysis/djrsi.JPG" class="blg-img" alt="RSI of ">
+  <figcaption>Dow vs Russell 3000 RSI</figcaption>
+</figure>
+
+Use the breadth of market for confirmation of a trend and on when to be selling or buying. 
+
+<br>
+
+#### Drawdowns & Equal-Weight Indexes <a name="drawdown"></a>
+
 
 <br>
