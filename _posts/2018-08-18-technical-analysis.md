@@ -705,11 +705,52 @@ Last step would be to look at leading stocks in the sector and picking the best 
 <br>
 
 #### Intermarket Analysis <a name="intermkt"></a>
+Intermarket analysis is all about looking into other asset classes and seeing how they are performing. There is information in these areas to help make stock market decisions. You must remember that correlations are always changing which means sentiment is constantly shifting. What maybe in favor today may not be in the future.
+
+One of the traditional comparisons is the Stocks (SPY) Vs Bonds (TLT) analysis. This is basically a ratio analysis of one vs the other (Note: Commodities index is the CRB).
+
+The name of the game is to follow what/where institutions go.  
+
+<figure>
+  <img src="/img/posts/tech-analysis/spyvsbond.JPG" class="blg-img" alt="Stocks Vs Bonds">
+  <figcaption>Stocks Vs Bonds</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/divergencebondspy.JPG" class="blg-img" alt="Bond Vs Stocks Divergence">
+  <figcaption>Divergence</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/intermarketlist.JPG" class="blg-img" alt="Intermarket List">
+  <figcaption>Intermarket List</figcaption>
+</figure>
 
 
 <br>
 
 #### US Sector Rotation Models <a name="usmodels"></a>
+Sector rotation is the lifeblood of a bull market. Money managers will put there money into underperforming sectors and when those sectors become euphoric they will sell and rotate money elsewhere.
 
+- Sector Rotation
+  - Find the most important sectors that need to show leadership (ex: financials & technology)
+  - Identify Offensive Sectors (risk on) vs Defensive Sectors (risk off)
+  - Use relative rotation graph to find leaders and laggards in the sectors
+    - SPY look at the weighting of the sectors
+    - The larger the sector the more importance and strength the sector holds onto the market
+
+Compare two correlated sectors or asset classes (must be relevant) to find patterns and signals on what is going on with money managers.
+
+<figure>
+  <img src="/img/posts/tech-analysis/xlyxlp.JPG" class="blg-img" alt="XLY vs XLP">
+  <figcaption>XLY vs XLP</figcaption>
+</figure>
+
+Sector rotation graph is a graph that plots all the sectors on a specific timeframe and displays current performance of a sector along with its momentum. Top right are the leading sectors, bottom right are the weakening sectors, bottom left are the lagging sectors, and on top right are the improving sectors. They plot relative strength and momentum. Focus on the outer sectors. Start with the weekly and then go into the daily timeframes to find trading opportunities.
+
+<figure>
+  <img src="/img/posts/tech-analysis/sectorgraph.JPG" class="blg-img" alt="Sector Rotation Graph">
+  <figcaption>Rotation Graph</figcaption>
+</figure>
 
 <br>
