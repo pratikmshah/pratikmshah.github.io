@@ -57,7 +57,10 @@ I remember when I first started investing and trading. I had no clue what I was 
  - [Fibonacci Sequence 2.618](#fibs261)
  - [Fibonacci Sequence 4.236](#fibs423)
  - [Fibonacci Sequence 6.854](#fibs6854)
-
+ 7. [Professional Technical Analysis](#protech)
+ - [Top Down Approach](#topdown)
+ - [Intermarket Analysis](#intermkt)
+ - [US Sector Rotation Models](#usmodels)
 
 <br>
 
@@ -645,5 +648,68 @@ Going even further dividing larger number to the number 3rd to the left of it (e
 
 #### Fibonacci Sequence 6.854 <a name="fibs6854"></a>
 Lets go one more time further dividing the larger number to the number 4th to the left of it and you will end up closer to 6.854 or 685.4%. Years in an uptrend the market will still respect the fibonacci levels.
+
+<br>
+
+### Professional Technical Analysis <a name="protech"></a>
+#### Top Down Approach <a name="topdown"></a>
+The top down approach to the market consists of a series of analysis starting with the broader macro economy and then working your way down to a specific company(s).
+
+Top Down Method
+1. International macro indexes all over the world
+  - see what is best performing and or what is about to be breaking out
+2. Indexes in the country where we are focused
+  - look into top performing indexes
+3. Work our way down to sector level
+  - find the leading sectors
+4. Identify the individual stocks within the leading sectors & industry groups
+  - buy leading group stocks
+  - sell laggard group stocks
+
+<figure>
+  <img src="/img/posts/tech-analysis/macro_index.JPG" class="blg-img" alt="world indexes">
+  <figcaption>Macro Indexes</figcaption>
+</figure>
+
+When performing your analysis start with a weekly or yearly timeframe and then take it one step down to looking at the daily timeframe. The shorter the timeframe the shorter the trade timeframe.
+
+<figure>
+  <img src="/img/posts/tech-analysis/macro_etf.JPG" class="blg-img" alt="US world etfs">
+  <figcaption>Macro US ETFS</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/us_etf.JPG" class="blg-img" alt="US etfs">
+  <figcaption>USA ETFS</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/us_sub.JPG" class="blg-img" alt="US subsectors etfs">
+  <figcaption>USA Subsector ETFS</figcaption>
+</figure>
+
+Before heading into trade one should also do some intermarket analysis between other asset classes such as currencies and commodities.
+
+<figure>
+  <img src="/img/posts/tech-analysis/currency.JPG" class="blg-img" alt="Currencies">
+  <figcaption>Currencies</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/commodities.JPG" class="blg-img" alt="Commodities">
+  <figcaption>Commodities</figcaption>
+</figure>
+
+Last step would be to look at leading stocks in the sector and picking the best performing one.
+
+<br>
+
+#### Intermarket Analysis <a name="intermkt"></a>
+
+
+<br>
+
+#### US Sector Rotation Models <a name="usmodels"></a>
+
 
 <br>
