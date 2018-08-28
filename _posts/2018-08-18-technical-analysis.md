@@ -915,6 +915,29 @@ Sometimes you will see an outlier candle that just doesn't seem to fit with the 
 <br>
 
 #### Gaps <a name="gaps"></a>
+There are three different types of GAPS:
+
+- Breakaways - these are when stocks have been in a range and then gap and breakout of the range to begin new trend. They usually do not get filled
+- Measuring - these gaps come in the middle of the moves within an on going trend. It is continuation of trend.
+- Exhaustion - these gaps are the last push before the buying or selling becomes exhausted and reverses. Gets filled really quickly and then trend reverses. People chasing stock.
+
+Where the gaps occurs is the most important. Also note that some gaps occur daily like with and ADR stock where the action takes place overnight; be aware.
+
+<figure>
+  <img src="/img/posts/tech-analysis/breakaway.png" class="blg-img" alt="breakaway gap">
+  <figcaption>AMC - Breakaway</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/breakaway2.JPG" class="blg-img" alt="breakaway gap">
+  <figcaption>SPLUNK - Breakaway</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/samplegaps.JPG" class="blg-img" alt="breakaway gap">
+  <figcaption>Fireeye Gaps</figcaption>
+</figure>
+
 
 
 <br>
