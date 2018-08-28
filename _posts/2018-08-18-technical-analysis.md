@@ -57,13 +57,19 @@ I remember when I first started investing and trading. I had no clue what I was 
  - [Fibonacci Sequence 2.618](#fibs261)
  - [Fibonacci Sequence 4.236](#fibs423)
  - [Fibonacci Sequence 6.854](#fibs6854)
- 7. [Professional Technical Analysis](#protech)
+ 8. [Professional Technical Analysis](#protech)
  - [Top Down Approach](#topdown)
  - [Intermarket Analysis](#intermkt)
  - [US Sector Rotation Models](#usmodels)
- 7. [Market Breadth](#mktbread)
+ 9. [Market Breadth](#mktbread)
  - [Breadth of Momentum](#breadmom)
  - [Drawdowns & Equal-Weight Indexes](#drawdown)
+ 10. [Advanced Application](#advapp)
+ - [Advanced Momentum](#advmom)
+ - [Advanced Candlestick](#advcandle)
+ - [Gaps](#gaps)
+ - [VWAP](#vwap)
+
 
 <br>
 
@@ -802,11 +808,71 @@ You can use RSI of a basket of stocks in a sector to determine if the sector is 
   <figcaption>Dow vs Russell 3000 RSI</figcaption>
 </figure>
 
-Use the breadth of market for confirmation of a trend and on when to be selling or buying. 
+Use the breadth of market for confirmation of a trend and on when to be selling or buying.
 
 <br>
 
 #### Drawdowns & Equal-Weight Indexes <a name="drawdown"></a>
+The media will call it a bear market when stocks are down and a bull market when stocks are up but this is not the real definition. We need to see drawdowns in the stocks as a whole and a stealth bear market. By stealth we mean that the indexes may not fall 20+% but majority of stocks in that sector/index do start to fall by that much. Its not only about the indexes but what is happening to the components of the indexes. As the market was grinding higher in 2017 majority of the gains were caused by just a handful of stocks; FAANG (Facebook, Amazon, Apple, Netflix, Google).
+
+Most indexes are market cap weighted indexes which means that the larger the company the more weight (effect) it has in the index. To get rid of the imbalance we want an equal-weighted index.
+
+- Equal-Weight Index
+  - gives information about the entire universe of stocks in that sector or index
+  - useful in a sum-of-the-parts analysis
+
+A great example of this is if you look at the S&P Consumer Discretionary Sector ETF Weighting Amazon is roughly 35% of the entire ETF. If there is a huge up or down swing in price of Amazon it will effect the index sharply vs say a Lowes which is only 4%. See below how different an equally weighted index is vs cap weighted.
+
+<figure>
+  <img src="/img/posts/tech-analysis/equalwght.JPG" class="blg-img" alt="Equally Weighted Index">
+  <figcaption>Weighted vs Equally Weighted Index</figcaption>
+</figure>
+
+Equally weighted indexes are not correlated to cap weighted index such that when market it going up it doesn't necessarily mean the equally weighted index will also go up. You must utilize RSI, moving averages, pattern recognitions, and even fibonacci levels. A few large caps in a cap index could move the entire index but in reality entire sector has not really changed but in fact could have dropped.
+
+<figure>
+  <img src="/img/posts/tech-analysis/capex.JPG" class="blg-img" alt="Equally Weighted Index">
+  <figcaption>Weighted vs Equally Weighted Index Example</figcaption>
+</figure>
+
+Look at the group of stocks collectively, evaluate the breadth of momentum, and then identify the stocks and see which ones are performing and truly breaking out.
+
+<br>
+
+### Advanced Application <a name="advapp"></a>
+#### Advanced Momentum <a name="advmom"></a>
+There are a lot of different ways to track momentum such as MACD, ADX, CCI... but the most widely used and simplest is the RSI (relative strength index). Use the RSI oscillator to determine if asset is bullish or bearish.
+
+In an uptrend when prices make new highs momentum will get to 70+ which becomes overbought. During the corrections of uptrends RSI will fall but will hold above 30+ and strong trends will hold above 50+. Strong stocks get overbought and if the RSI of a strong assets starts to fall and becomes oversold that leads into distribution.
+
+<figure>
+  <img src="/img/posts/tech-analysis/plntrsi.png" class="blg-img" alt="PLNT RSI ">
+  <figcaption>Planet Fitness RSI Never Oversold</figcaption>
+</figure>
+
+
+In a downtrend prices make new lows momentum will fall below 30 which becomes oversold. During the rallies in a downtrend you will not see 70+ and strong downtrends you will see RSI less than 50.
+
+<figure>
+  <img src="/img/posts/tech-analysis/gersi.png" class="blg-img" alt="GE RSI ">
+  <figcaption>General Electric RSI Never Overbought</figcaption>
+</figure>
+
+Besides using RSI for overbought and oversold readings you can use RSI to find bullish and bearish divergences. So if you are seeing lower lows in stock price but seeing lower highs on the RSI that is a bullish divergence showing that the trend is `maybe` likely to change in the short term. This does not always get confirmed see `GE` and `AMC`. If you see a bullish divergence that isn't turning that means its going a lot lower.
+
+<br>
+
+#### Advanced Candlestick <a name="advcandle"></a>
+
+
+<br>
+
+#### Gaps <a name="gaps"></a>
+
+
+<br>
+
+#### VWAP <a name="vwap"></a>
 
 
 <br>
