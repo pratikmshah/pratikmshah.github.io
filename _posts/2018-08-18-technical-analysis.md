@@ -863,7 +863,54 @@ Besides using RSI for overbought and oversold readings you can use RSI to find b
 <br>
 
 #### Advanced Candlestick <a name="advcandle"></a>
+We need to make sure that each candle's timeframe is equal. When you start using intraday charts such as hourly charts, this becomes a problem because the market is open from 9:30AM ET to 4PM ET totaling 6.5 hours. To solve this problem either switch to 30 minute candle or a 65 minute candle.
 
+Dojis - are found at the ends of moves like tops and bottoms. These candles represent indecision and the market is trying to figure itself out.
+
+<figure>
+  <img src="/img/posts/tech-analysis/doji.JPG" class="blg-img" alt="Dojis">
+  <figcaption>Dojis</figcaption>
+</figure>
+
+- Doji 1 - BEARISH - opens at the bottom rallies but then fades all the way back to opening price
+- Doji 2 - BULLISH - when you see this at the end of a downtrend. Opens at the top sold off but then rallied back to opening
+- Doji 3 - Opened but closed above opening price
+- Doji 4 - Opened but closed below opening price
+
+<br>
+
+Its where the location of the doji is during the trend that matters.
+
+Engulfing Pattern - the two types are bullish and bearish engulfing patterns. What happens is that the lows and highs of the big candle are lower and higher than previous days candle and also real body of the candle overshadows the previous day(s) candles.
+
+<figure>
+  <img src="/img/posts/tech-analysis/bengulf.JPG" class="blg-img" alt="Engulfing">
+  <figcaption>Bullish Engulfing</figcaption>
+</figure>
+
+Hammer - these come during a downtrend which needs few days of nonstop red candles making new lows. The hammer consists of an open near where then price begins to fall and then rallies back near the top but either over it or beneath is forming a "hammer". The confirmation comes the following days where you want to see green candles otherwise it is most likely going lower for other fundamental reasons. `The more hammers next to each other the more powerful the effect`
+
+<figure>
+  <img src="/img/posts/tech-analysis/hammer.JPG" class="blg-img" alt="Hammer">
+  <figcaption>Hammer</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/hammerex.png" class="blg-img" alt="Hammer">
+  <figcaption>Redfin Hammer</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/hammerex2.png" class="blg-img" alt="Hammer">
+  <figcaption>SendGrid Hammers next to each other</figcaption>
+</figure>
+
+Sometimes you will see an outlier candle that just doesn't seem to fit with the rest of the candles, usually near support or resistance, followed by an immediate reversal the next day continuing the pattern it was on. When you see this start buying the stock and have your stop-loss under support zone because that candle signals a failure of stock trying to continue trend and will most likely reverse. Combine with RSI also for more confirmation
+
+<figure>
+  <img src="/img/posts/tech-analysis/outlier.JPG" class="blg-img" alt="Dangling Participle">
+  <figcaption>Dangling Participle</figcaption>
+</figure>
 
 <br>
 
