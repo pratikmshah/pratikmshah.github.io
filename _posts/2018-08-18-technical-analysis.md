@@ -69,6 +69,8 @@ I remember when I first started investing and trading. I had no clue what I was 
  - [Advanced Candlestick](#advcandle)
  - [Gaps](#gaps)
  - [VWAP](#vwap)
+ 11. [Custom Indexes](#custindex)
+ - [Supplements & Weight of Evidence](#suppwght)
 
 
 <br>
@@ -974,5 +976,16 @@ Anchored VWAP is a VWAP that starts from a key date or swing level ex: gaps, int
   <img src="/img/posts/tech-analysis/vwaptest.JPG" class="blg-img" alt="VWAP Test">
   <figcaption>VWAP Test</figcaption>
 </figure>
+
+<br>
+
+
+### Custom Indexes <a name="custindex"></a>
+#### Supplements & Weight of Evidence <a name="suppwght"></a>
+There have been many indexes created S&P500, XLF for Financials, XLK for Technology etc... Think about it, if you're staring at the same indexes as everyone else, what edge do you have?
+
+When creating a custom index think about what asset classes should it be composed of ex: commodities, stocks, metals, countries, continents, currencies etc... Or think of defensive assets like gold/bonds/yen.
+
+New ETFs or Futures are created everyday but they don't have data that can be recreated through a custom index.
 
 <br>
