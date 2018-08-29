@@ -1024,3 +1024,4 @@ The market does not care what you think it should do. Find a balance between pri
 From failed moves come fast moves in the opposite direction. It is a rubber band effect. Take advantage when positioning is skewed in favor of one side because that will creates and explosive unwind.
 
 <br>
+<br>
