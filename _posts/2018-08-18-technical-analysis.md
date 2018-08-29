@@ -939,10 +939,40 @@ Where the gaps occurs is the most important. Also note that some gaps occur dail
 </figure>
 
 
-
 <br>
 
 #### VWAP <a name="vwap"></a>
+A simple moving average is used to help identify the direction of the primary trend. Price is the most important technical indicator. Everything else is a supplemental indicator. Moving averages are not support and resistance areas.
 
+When a primary trend is upwards and there is a break of the 200DMA the media will talk about bear territory or something but use it was a buying opportunity. The moving average is an invisible line.
+
+<figure>
+  <img src="/img/posts/tech-analysis/smabreak.png" class="blg-img" alt="SMA break">
+  <figcaption>200 Day Simple Moving Average False Break</figcaption>
+</figure>
+
+Volume Weighted Average Price (VWAP) is the perfect combination of price, volume, and time. It is not an average because there is volume involved which represents actual institutional money flow. The trading firms have to buy the best price possible. VWAP also does act as support and resistance since institutions are buying and selling against it.
+
+<figure>
+  <img src="/img/posts/tech-analysis/vwap.JPG" class="blg-img" alt="VWAP">
+  <figcaption>VWAP Caluclation</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/vwapsample.JPG" class="blg-img" alt="VWAP Sample">
+  <figcaption>VWAP Buyers Control</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/vwapsample2.JPG" class="blg-img" alt="VWAP Sample">
+  <figcaption>VWAP Sellers Control</figcaption>
+</figure>
+
+Anchored VWAP is a VWAP that starts from a key date or swing level ex: gaps, intraday, year to date, IPO date. In addition to institutions algorithmic traders use VWAP as a basis in their analysis. VWAP is also more responsive to volume than price. Also just like a support and resistance line the more time a VWAP is tested the more likely it will break.
+
+<figure>
+  <img src="/img/posts/tech-analysis/vwaptest.JPG" class="blg-img" alt="VWAP Test">
+  <figcaption>VWAP Test</figcaption>
+</figure>
 
 <br>
