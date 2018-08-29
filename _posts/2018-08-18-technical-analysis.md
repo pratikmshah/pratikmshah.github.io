@@ -57,6 +57,23 @@ I remember when I first started investing and trading. I had no clue what I was 
  - [Fibonacci Sequence 2.618](#fibs261)
  - [Fibonacci Sequence 4.236](#fibs423)
  - [Fibonacci Sequence 6.854](#fibs6854)
+ 8. [Professional Technical Analysis](#protech)
+ - [Top Down Approach](#topdown)
+ - [Intermarket Analysis](#intermkt)
+ - [US Sector Rotation Models](#usmodels)
+ 9. [Market Breadth](#mktbread)
+ - [Breadth of Momentum](#breadmom)
+ - [Drawdowns & Equal-Weight Indexes](#drawdown)
+ 10. [Advanced Application](#advapp)
+ - [Advanced Momentum](#advmom)
+ - [Advanced Candlestick](#advcandle)
+ - [Gaps](#gaps)
+ - [VWAP](#vwap)
+ 11. [Custom Indexes](#custindex)
+ - [Supplements & Weight of Evidence](#suppwght)
+ 12. [Technical Analysis & Trading](#tatrade)
+ - [Technical Signals to Trading Signals](#signals)
+ - [Re-Entry & Whipsaws](#reentrywhip)
 
 
 <br>
@@ -646,4 +663,365 @@ Going even further dividing larger number to the number 3rd to the left of it (e
 #### Fibonacci Sequence 6.854 <a name="fibs6854"></a>
 Lets go one more time further dividing the larger number to the number 4th to the left of it and you will end up closer to 6.854 or 685.4%. Years in an uptrend the market will still respect the fibonacci levels.
 
+<br>
+
+### Professional Technical Analysis <a name="protech"></a>
+#### Top Down Approach <a name="topdown"></a>
+The top down approach to the market consists of a series of analysis starting with the broader macro economy and then working your way down to a specific company(s).
+
+Top Down Method
+1. International macro indexes all over the world
+  - see what is best performing and or what is about to be breaking out
+2. Indexes in the country where we are focused
+  - look into top performing indexes
+3. Work our way down to sector level
+  - find the leading sectors
+4. Identify the individual stocks within the leading sectors & industry groups
+  - buy leading group stocks
+  - sell laggard group stocks
+
+<figure>
+  <img src="/img/posts/tech-analysis/macro_index.JPG" class="blg-img" alt="world indexes">
+  <figcaption>Macro Indexes</figcaption>
+</figure>
+
+When performing your analysis start with a weekly or yearly timeframe and then take it one step down to looking at the daily timeframe. The shorter the timeframe the shorter the trade timeframe.
+
+<figure>
+  <img src="/img/posts/tech-analysis/macro_etf.JPG" class="blg-img" alt="US world etfs">
+  <figcaption>Macro US ETFS</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/us_etf.JPG" class="blg-img" alt="US etfs">
+  <figcaption>USA ETFS</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/us_sub.JPG" class="blg-img" alt="US subsectors etfs">
+  <figcaption>USA Subsector ETFS</figcaption>
+</figure>
+
+Before heading into trade one should also do some intermarket analysis between other asset classes such as currencies and commodities.
+
+<figure>
+  <img src="/img/posts/tech-analysis/currency.JPG" class="blg-img" alt="Currencies">
+  <figcaption>Currencies</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/commodities.JPG" class="blg-img" alt="Commodities">
+  <figcaption>Commodities</figcaption>
+</figure>
+
+Last step would be to look at leading stocks in the sector and picking the best performing one.
+
+<br>
+
+#### Intermarket Analysis <a name="intermkt"></a>
+Intermarket analysis is all about looking into other asset classes and seeing how they are performing. There is information in these areas to help make stock market decisions. You must remember that correlations are always changing which means sentiment is constantly shifting. What maybe in favor today may not be in the future.
+
+One of the traditional comparisons is the Stocks (SPY) Vs Bonds (TLT) analysis. This is basically a ratio analysis of one vs the other (Note: Commodities index is the CRB).
+
+The name of the game is to follow what/where institutions go.  
+
+<figure>
+  <img src="/img/posts/tech-analysis/spyvsbond.JPG" class="blg-img" alt="Stocks Vs Bonds">
+  <figcaption>Stocks Vs Bonds</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/divergencebondspy.JPG" class="blg-img" alt="Bond Vs Stocks Divergence">
+  <figcaption>Divergence</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/intermarketlist.JPG" class="blg-img" alt="Intermarket List">
+  <figcaption>Intermarket List</figcaption>
+</figure>
+
+
+<br>
+
+#### US Sector Rotation Models <a name="usmodels"></a>
+Sector rotation is the lifeblood of a bull market. Money managers will put there money into underperforming sectors and when those sectors become euphoric they will sell and rotate money elsewhere.
+
+- Sector Rotation
+  - Find the most important sectors that need to show leadership (ex: financials & technology)
+  - Identify Offensive Sectors (risk on) vs Defensive Sectors (risk off)
+  - Use relative rotation graph to find leaders and laggards in the sectors
+    - SPY look at the weighting of the sectors
+    - The larger the sector the more importance and strength the sector holds onto the market
+
+Compare two correlated sectors or asset classes (must be relevant) to find patterns and signals on what is going on with money managers.
+
+<figure>
+  <img src="/img/posts/tech-analysis/xlyxlp.JPG" class="blg-img" alt="XLY vs XLP">
+  <figcaption>XLY vs XLP</figcaption>
+</figure>
+
+Sector rotation graph is a graph that plots all the sectors on a specific timeframe and displays current performance of a sector along with its momentum. Top right are the leading sectors, bottom right are the weakening sectors, bottom left are the lagging sectors, and on top right are the improving sectors. They plot relative strength and momentum. Focus on the outer sectors. Start with the weekly and then go into the daily timeframes to find trading opportunities.
+
+<figure>
+  <img src="/img/posts/tech-analysis/sectorgraph.JPG" class="blg-img" alt="Sector Rotation Graph">
+  <figcaption>Rotation Graph</figcaption>
+</figure>
+
+<br>
+
+### Market Breadth <a name="mktbread"></a>
+#### Breadth of Momentum <a name="breadmom"></a>
+One method to view market breadth of momentum is viewing new 52 week lows of common stocks. If the market (SPY) is making lower lows but the number of common stocks that are making new 52 week lows is less than the previous dips this could be signaling a bottom and reversal.
+
+<figure>
+  <img src="/img/posts/tech-analysis/fiftyweeklows.JPG" class="blg-img" alt="SPY vs 52 week lows">
+  <figcaption>S&P500 vs 52 Week Lows</figcaption>
+</figure>
+
+Another alternative is the advanced decline line which is a cumulative tally of the amount of stocks going up minus the number of stocks going down. When market is making new highs we want to see the A/D Line make new highs showing more stocks rising.
+
+<figure>
+  <img src="/img/posts/tech-analysis/advancedec.JPG" class="blg-img" alt="Advanced Decline Line">
+  <figcaption>Advance Decline Line</figcaption>
+</figure>
+
+You can also use the A/D Line even for a specific sector to gain confirmation that yes the sector is in an up/down trend.
+
+<figure>
+  <img src="/img/posts/tech-analysis/advansect.JPG" class="blg-img" alt="Advanced Decline Line by Sector">
+  <figcaption>Advance Decline Line By Sector</figcaption>
+</figure>
+
+- Breadth of Momentum
+  - momentum has ranges ex: 14 days RSI takes a 14 day period.
+  - more stocks that are making new highs represents an uptrend
+  - more stocks that are making new lows represents a downtrend
+  - divergences are signals that sentiment is changing
+  - non-confirmation is evidence of change.
+
+RSI of a stock in an uptrend will stay above 30 and a stock in downtrend will have RSI below 70.
+
+<figure>
+  <img src="/img/posts/tech-analysis/rsirange.JPG" class="blg-img" alt="RSI range">
+  <figcaption>Trend RSI</figcaption>
+</figure>
+
+You can use RSI of a basket of stocks in a sector to determine if the sector is in downtrend or uptrend.
+
+<figure>
+  <img src="/img/posts/tech-analysis/djrsi.JPG" class="blg-img" alt="RSI of ">
+  <figcaption>Dow vs Russell 3000 RSI</figcaption>
+</figure>
+
+Use the breadth of market for confirmation of a trend and on when to be selling or buying.
+
+<br>
+
+#### Drawdowns & Equal-Weight Indexes <a name="drawdown"></a>
+The media will call it a bear market when stocks are down and a bull market when stocks are up but this is not the real definition. We need to see drawdowns in the stocks as a whole and a stealth bear market. By stealth we mean that the indexes may not fall 20+% but majority of stocks in that sector/index do start to fall by that much. Its not only about the indexes but what is happening to the components of the indexes. As the market was grinding higher in 2017 majority of the gains were caused by just a handful of stocks; FAANG (Facebook, Amazon, Apple, Netflix, Google).
+
+Most indexes are market cap weighted indexes which means that the larger the company the more weight (effect) it has in the index. To get rid of the imbalance we want an equal-weighted index.
+
+- Equal-Weight Index
+  - gives information about the entire universe of stocks in that sector or index
+  - useful in a sum-of-the-parts analysis
+
+A great example of this is if you look at the S&P Consumer Discretionary Sector ETF Weighting Amazon is roughly 35% of the entire ETF. If there is a huge up or down swing in price of Amazon it will effect the index sharply vs say a Lowes which is only 4%. See below how different an equally weighted index is vs cap weighted.
+
+<figure>
+  <img src="/img/posts/tech-analysis/equalwght.JPG" class="blg-img" alt="Equally Weighted Index">
+  <figcaption>Weighted vs Equally Weighted Index</figcaption>
+</figure>
+
+Equally weighted indexes are not correlated to cap weighted index such that when market it going up it doesn't necessarily mean the equally weighted index will also go up. You must utilize RSI, moving averages, pattern recognitions, and even fibonacci levels. A few large caps in a cap index could move the entire index but in reality entire sector has not really changed but in fact could have dropped.
+
+<figure>
+  <img src="/img/posts/tech-analysis/capex.JPG" class="blg-img" alt="Equally Weighted Index">
+  <figcaption>Weighted vs Equally Weighted Index Example</figcaption>
+</figure>
+
+Look at the group of stocks collectively, evaluate the breadth of momentum, and then identify the stocks and see which ones are performing and truly breaking out.
+
+<br>
+
+### Advanced Application <a name="advapp"></a>
+#### Advanced Momentum <a name="advmom"></a>
+There are a lot of different ways to track momentum such as MACD, ADX, CCI... but the most widely used and simplest is the RSI (relative strength index). Use the RSI oscillator to determine if asset is bullish or bearish.
+
+In an uptrend when prices make new highs momentum will get to 70+ which becomes overbought. During the corrections of uptrends RSI will fall but will hold above 30+ and strong trends will hold above 50+. Strong stocks get overbought and if the RSI of a strong assets starts to fall and becomes oversold that leads into distribution.
+
+<figure>
+  <img src="/img/posts/tech-analysis/plntrsi.png" class="blg-img" alt="PLNT RSI ">
+  <figcaption>Planet Fitness RSI Never Oversold</figcaption>
+</figure>
+
+
+In a downtrend prices make new lows momentum will fall below 30 which becomes oversold. During the rallies in a downtrend you will not see 70+ and strong downtrends you will see RSI less than 50.
+
+<figure>
+  <img src="/img/posts/tech-analysis/gersi.png" class="blg-img" alt="GE RSI ">
+  <figcaption>General Electric RSI Never Overbought</figcaption>
+</figure>
+
+Besides using RSI for overbought and oversold readings you can use RSI to find bullish and bearish divergences. So if you are seeing lower lows in stock price but seeing lower highs on the RSI that is a bullish divergence showing that the trend is `maybe` likely to change in the short term. This does not always get confirmed see `GE` and `AMC`. If you see a bullish divergence that isn't turning that means its going a lot lower.
+
+<br>
+
+#### Advanced Candlestick <a name="advcandle"></a>
+We need to make sure that each candle's timeframe is equal. When you start using intraday charts such as hourly charts, this becomes a problem because the market is open from 9:30AM ET to 4PM ET totaling 6.5 hours. To solve this problem either switch to 30 minute candle or a 65 minute candle.
+
+Dojis - are found at the ends of moves like tops and bottoms. These candles represent indecision and the market is trying to figure itself out.
+
+<figure>
+  <img src="/img/posts/tech-analysis/doji.JPG" class="blg-img" alt="Dojis">
+  <figcaption>Dojis</figcaption>
+</figure>
+
+- Doji 1 - BEARISH - opens at the bottom rallies but then fades all the way back to opening price
+- Doji 2 - BULLISH - when you see this at the end of a downtrend. Opens at the top sold off but then rallied back to opening
+- Doji 3 - Opened but closed above opening price
+- Doji 4 - Opened but closed below opening price
+
+<br>
+
+Its where the location of the doji is during the trend that matters.
+
+Engulfing Pattern - the two types are bullish and bearish engulfing patterns. What happens is that the lows and highs of the big candle are lower and higher than previous days candle and also real body of the candle overshadows the previous day(s) candles.
+
+<figure>
+  <img src="/img/posts/tech-analysis/bengulf.JPG" class="blg-img" alt="Engulfing">
+  <figcaption>Bullish Engulfing</figcaption>
+</figure>
+
+Hammer - these come during a downtrend which needs few days of nonstop red candles making new lows. The hammer consists of an open near where then price begins to fall and then rallies back near the top but either over it or beneath is forming a "hammer". The confirmation comes the following days where you want to see green candles otherwise it is most likely going lower for other fundamental reasons. `The more hammers next to each other the more powerful the effect`
+
+<figure>
+  <img src="/img/posts/tech-analysis/hammer.JPG" class="blg-img" alt="Hammer">
+  <figcaption>Hammer</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/hammerex.png" class="blg-img" alt="Hammer">
+  <figcaption>Redfin Hammer</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/hammerex2.png" class="blg-img" alt="Hammer">
+  <figcaption>SendGrid Hammers next to each other</figcaption>
+</figure>
+
+Sometimes you will see an outlier candle that just doesn't seem to fit with the rest of the candles, usually near support or resistance, followed by an immediate reversal the next day continuing the pattern it was on. When you see this start buying the stock and have your stop-loss under support zone because that candle signals a failure of stock trying to continue trend and will most likely reverse. Combine with RSI also for more confirmation
+
+<figure>
+  <img src="/img/posts/tech-analysis/outlier.JPG" class="blg-img" alt="Dangling Participle">
+  <figcaption>Dangling Participle</figcaption>
+</figure>
+
+<br>
+
+#### Gaps <a name="gaps"></a>
+There are three different types of GAPS:
+
+- Breakaways - these are when stocks have been in a range and then gap and breakout of the range to begin new trend. They usually do not get filled
+- Measuring - these gaps come in the middle of the moves within an on going trend. It is continuation of trend.
+- Exhaustion - these gaps are the last push before the buying or selling becomes exhausted and reverses. Gets filled really quickly and then trend reverses. People chasing stock.
+
+Where the gaps occurs is the most important. Also note that some gaps occur daily like with and ADR stock where the action takes place overnight; be aware.
+
+<figure>
+  <img src="/img/posts/tech-analysis/breakaway.png" class="blg-img" alt="breakaway gap">
+  <figcaption>AMC - Breakaway</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/breakaway2.JPG" class="blg-img" alt="breakaway gap">
+  <figcaption>SPLUNK - Breakaway</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/samplegaps.JPG" class="blg-img" alt="breakaway gap">
+  <figcaption>Fireeye Gaps</figcaption>
+</figure>
+
+
+<br>
+
+#### VWAP <a name="vwap"></a>
+A simple moving average is used to help identify the direction of the primary trend. Price is the most important technical indicator. Everything else is a supplemental indicator. Moving averages are not support and resistance areas.
+
+When a primary trend is upwards and there is a break of the 200DMA the media will talk about bear territory or something but use it was a buying opportunity. The moving average is an invisible line.
+
+<figure>
+  <img src="/img/posts/tech-analysis/smabreak.png" class="blg-img" alt="SMA break">
+  <figcaption>200 Day Simple Moving Average False Break</figcaption>
+</figure>
+
+Volume Weighted Average Price (VWAP) is the perfect combination of price, volume, and time. It is not an average because there is volume involved which represents actual institutional money flow. The trading firms have to buy the best price possible. VWAP also does act as support and resistance since institutions are buying and selling against it.
+
+<figure>
+  <img src="/img/posts/tech-analysis/vwap.JPG" class="blg-img" alt="VWAP">
+  <figcaption>VWAP Caluclation</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/vwapsample.JPG" class="blg-img" alt="VWAP Sample">
+  <figcaption>VWAP Buyers Control</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/vwapsample2.JPG" class="blg-img" alt="VWAP Sample">
+  <figcaption>VWAP Sellers Control</figcaption>
+</figure>
+
+Anchored VWAP is a VWAP that starts from a key date or swing level ex: gaps, intraday, year to date, IPO date. In addition to institutions algorithmic traders use VWAP as a basis in their analysis. VWAP is also more responsive to volume than price. Also just like a support and resistance line the more time a VWAP is tested the more likely it will break.
+
+<figure>
+  <img src="/img/posts/tech-analysis/vwaptest.JPG" class="blg-img" alt="VWAP Test">
+  <figcaption>VWAP Test</figcaption>
+</figure>
+
+<br>
+
+
+### Custom Indexes <a name="custindex"></a>
+#### Supplements & Weight of Evidence <a name="suppwght"></a>
+There have been many indexes created S&P500, XLF for Financials, XLK for Technology etc... Think about it, if you're staring at the same indexes as everyone else, what edge do you have?
+
+When creating a custom index think about what asset classes should it be composed of ex: commodities, stocks, metals, countries, continents, currencies etc... Or think of defensive assets like gold/bonds/yen.
+
+New ETFs or Futures are created everyday but they don't have data that can be recreated through a custom index.
+
+<br>
+
+### Technical Analysis & Trading <a name="tatrade"></a>
+#### Technical Signals to Trading Signals <a name="signals"></a>
+Scans come LAST, not first. Take what the market gives you first by taking a top down approach. After that then you dive down and find out what types of stocks you're looking for.
+
+We want to be buying winners, stocks making new 52 week highs, positive momentum (RSI). Avoid underperforms and in times when stocks are falling you need to do top down analysis and find out where the money is going.
+
+For the entry targets you want to be buying closer to the risk level so that the risk vs reward ratio is greater. The tighter the risk/stop loss, the higher likelihood for a whipsaw. We need to find a balance where you keep risk minimal but allow the market wiggle room. Remember to wait for the right pitch.
+
+<figure>
+  <img src="/img/posts/tech-analysis/trade1.JPG" class="blg-img" alt="Sample trade">
+  <figcaption>Sample Trade</figcaption>
+</figure>
+
+<br>
+
+#### Re-Entry & Whipsaws <a name="reentrywhip"></a>
+The market does not care what you think it should do. Find a balance between price risk and whipsaw risk. Re-enter appropriately.
+
+<figure>
+  <img src="/img/posts/tech-analysis/longwhip.JPG" class="blg-img" alt="Long Whipsaw GE">
+  <figcaption>Disney Long</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/posts/tech-analysis/shortwhip.JPG" class="blg-img" alt="Short Whipsaw GE">
+  <figcaption>GE Short</figcaption>
+</figure>
+
+From failed moves come fast moves in the opposite direction. It is a rubber band effect. Take advantage when positioning is skewed in favor of one side because that will creates and explosive unwind.
+
+<br>
 <br>
