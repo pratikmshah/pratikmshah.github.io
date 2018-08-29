@@ -71,6 +71,9 @@ I remember when I first started investing and trading. I had no clue what I was 
  - [VWAP](#vwap)
  11. [Custom Indexes](#custindex)
  - [Supplements & Weight of Evidence](#suppwght)
+ 12. [Technical Analysis & Trading](#tatrade)
+ - [Technical Signals to Trading Signals](#signals)
+ - [Re-Entry & Whipsaws](#reentrywhip)
 
 
 <br>
@@ -987,5 +990,25 @@ There have been many indexes created S&P500, XLF for Financials, XLK for Technol
 When creating a custom index think about what asset classes should it be composed of ex: commodities, stocks, metals, countries, continents, currencies etc... Or think of defensive assets like gold/bonds/yen.
 
 New ETFs or Futures are created everyday but they don't have data that can be recreated through a custom index.
+
+<br>
+
+### Technical Analysis & Trading <a name="tatrade"></a>
+#### Technical Signals to Trading Signals <a name="signals"></a>
+Scans come LAST, not first. Take what the market gives you first by taking a top down approach. After that then you dive down and find out what types of stocks you're looking for.
+
+We want to be buying winners, stocks making new 52 week highs, positive momentum (RSI). Avoid underperforms and in times when stocks are falling you need to do top down analysis and find out where the money is going.
+
+For the entry targets you want to be buying closer to the risk level so that the risk vs reward ratio is greater. The tighter the risk/stop loss, the higher likelihood for a whipsaw. We need to find a balance where you keep risk minimal but allow the market wiggle room. Remember to wait for the right pitch.
+
+<figure>
+  <img src="/img/posts/tech-analysis/trade1.JPG" class="blg-img" alt="Sample trade">
+  <figcaption>Sample Trade</figcaption>
+</figure>
+
+<br>
+
+#### Re-Entry & Whipsaws <a name="reentrywhip"></a>
+
 
 <br>
