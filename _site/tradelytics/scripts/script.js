@@ -4,8 +4,10 @@ $(document).ready(function() {
 	$("a.exec").on("click", function(e) {
 	    e.preventDefault();
 	    var links = [
-				'https://finance.yahoo.com/chart/SPY','http://finviz.com/', 	'https://stocktwits.com/home','https://seekingalpha.com/',
-			 	'http://pratikmshah.github.io/tradelytics/apps/snowball/snowball.html', 'http://pratikmshah.github.io/tradelytics/apps/numbers/numbers.html', 
+				'https://finance.yahoo.com/chart/SPY',
+				'http://finviz.com/',
+				'https://seekingalpha.com/market-news',
+			 	'http://pratikmshah.github.io/tradelytics/apps/snowball/snowball.html', 'http://pratikmshah.github.io/tradelytics/apps/numbers/numbers.html',
 			 	'https://www.tdameritrade.com/home.page'
 			]
 
