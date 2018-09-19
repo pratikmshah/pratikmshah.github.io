@@ -10,17 +10,19 @@ Javascript is one of the core programming language for the web. Its purpose was 
 ### Table of Contents
  - [Syntax](#statements)
  - [Comments](#comments)
+ - [Display Results](#disresult)
  - [](#)
  - [](#)
  - [](#)
  - [](#)
  - [](#)
  - [](#)
- - [](#)
+
+### Display Results <a name="disresult"></a>
 
 <br>
 
-### Syntax  <a name="statements"></a>
+### Syntax <a name="statements"></a>
 Each line of code is an instruction to the browser.
 
 ``` javascript
@@ -48,26 +50,16 @@ Some rules about when you comment: is that its purpose should be used to explain
 
 <br>
 
-###  <a name=""></a>
+### Display Results <a name="disresult"></a>
+You can output results of a code in several ways such as, alert box, writing to the document, or console.
 
-<br>
+``` javascript
+alert("displays alert box");
 
-###  <a name=""></a>
+document.write("writes to html doc");
 
-<br>
+console.log("write to console");
 
-###  <a name=""></a>
-
-<br>
-
-###  <a name=""></a>
-
-<br>
-
-###  <a name=""></a>
-
-<br>
-
-###  <a name=""></a>
+```
 
 <br>
