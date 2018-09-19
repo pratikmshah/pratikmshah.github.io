@@ -3,7 +3,7 @@ title:  "JavaScript"
 date:   2018-09-17
 image: "/javascript/javascript-logo.jpg"
 ---
-Javascript is one of the core programming language for the web. Its purpose was to make web pages more interactive to the user. Over time the language has grown from only being used on the client side to being embedded into other server-side technologies. Also there have been extensive frameworks built on top of JavaScript such as React and Angular. Lately the trend has been to move away from other languages, such as Ruby, and to just use native JavaScript.
+Javascript is one of the core programming language for the web. Its purpose was to make web pages more interactive to the user. Over time the language has grown from only being used on the client side to being embedded into other server-side technologies. Also there have been extensive frameworks built on top of JavaScript such as React and Angular. Lately the trend has been to move away from other languages, such as Ruby, and to just use native JavaScript. Note: this post will assume you have programing experience so topics will be condensed.
 
 <br>
 
@@ -12,13 +12,12 @@ Javascript is one of the core programming language for the web. Its purpose was 
  - [Comments](#comments)
  - [Display Results](#disresult)
  - [Variables](#var)
- - [](#)
+ - [Operators, Expressions, & Comparisons](#opexpcom)
  - [](#)
  - [](#)
  - [](#)
  - [](#)
 
-###  <a name=""></a>
 ###  <a name=""></a>
 ###  <a name=""></a>
 ###  <a name=""></a>
@@ -109,6 +108,59 @@ var myValue;
 
 // Special Types - Empty value
 var myValue = null;
+
+```
+<br>
+
+### Operators, Expressions, & Comparisons <a name="opexpcom"></a>
+
+Operators:
+- `+` Addition
+- `-` Subtraction
+- `*` Multiplication
+- `/` Division
+- `%` Modulus
+
+Variables can also store the result of expressions.
+``` javascript
+var x = 5 + 6;
+var name = "Pratik" + "Shah";
+
+```
+
+Increment & Decrement
+``` javascript
+var x = 10;
+
+x++; // x is 11
+x--; // x is 10
+
+// you can also increment or decrement before which will change value first then compute
+++x;
+--x;
+
+```
+
+Comparisons:
+- `==` Equal to
+- `===` Equal value and data type
+- `!=` Not equal to
+- `!==` Not Equal value or data type
+- `>, >=` Greater than, greater than or equal
+- `<, <=` Less than, less than or equal
+
+Logical Opperators:
+- `&&` AND - Both values must be true
+- `||` OR - At least 1 value must be true
+- `!` NOT - Inverse ex: if true it must not be true
+
+``` javascript
+// Logical Operators
+var x = 10;
+var y = 5;
+
+console.log(x < 10 || y > 3); // true
+console.log(x > 5 && y < 3);  // false
 
 ```
 
