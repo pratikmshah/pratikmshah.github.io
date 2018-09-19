@@ -13,12 +13,11 @@ Javascript is one of the core programming language for the web. Its purpose was 
  - [Display Results](#disresult)
  - [Variables](#var)
  - [Operators, Expressions, & Comparisons](#opexpcom)
- - [](#)
+ - [Arrays](#arr)
  - [](#)
  - [](#)
  - [](#)
 
-###  <a name=""></a>
 ###  <a name=""></a>
 ###  <a name=""></a>
 
@@ -163,5 +162,31 @@ console.log(x < 10 || y > 3); // true
 console.log(x > 5 && y < 3);  // false
 
 ```
+
+<br>
+
+### Arrays <a name="arr"></a>
+Arrays are a list of variables and are written using `[]`. To access an item in an array specify element number inside the brackets. Array access is zero based so the first element starts with zero ex: lists[0].
+
+``` javascript
+var restaurants = ["Taco Bell", "Dominos", "Panda Express"];
+
+console.log(restaurants[0]);  // return Taco Bell
+
+```
+
+You can change and add values either by setting a new value to the element or using built in functions.
+
+``` javascript
+var numbers = [5, 6, 7, 8, 9];
+
+numbers[3] = 10; // [5, 6, 7, 10, 9]
+
+numbers.push(11); //[5, 6, 7, 10, 9, 11]
+
+numbers.pop();  // will return last value and remove it [5, 6, 7, 10, 9]
+
+```
+
 
 <br>

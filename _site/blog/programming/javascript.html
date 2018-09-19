@@ -97,7 +97,7 @@
   
 
   <div class="post-content" itemprop="articleBody">
-    <p>Javascript is one of the core programming language for the web. Its purpose was to make web pages more interactive to the user. Over time the language has grown from only being used on the client side to being embedded into other server-side technologies. Also there have been extensive frameworks built on top of JavaScript such as React and Angular. Lately the trend has been to move away from other languages, such as Ruby, and to just use native JavaScript.</p>
+    <p>Javascript is one of the core programming language for the web. Its purpose was to make web pages more interactive to the user. Over time the language has grown from only being used on the client side to being embedded into other server-side technologies. Also there have been extensive frameworks built on top of JavaScript such as React and Angular. Lately the trend has been to move away from other languages, such as Ruby, and to just use native JavaScript. Note: this post will assume you have programing experience so topics will be condensed.</p>
 
 <p><br /></p>
 
@@ -220,6 +220,53 @@ comments
   <li><code class="highlighter-rouge">/</code> Division</li>
   <li><code class="highlighter-rouge">%</code> Modulus</li>
 </ul>
+
+<p>Variables can also store the result of expressions.</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">"Pratik"</span> <span class="o">+</span> <span class="s2">"Shah"</span><span class="p">;</span>
+
+</code></pre>
+</div>
+
+<p>Increment &amp; Decrement</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+<span class="nx">x</span><span class="o">++</span><span class="p">;</span> <span class="c1">// x is 11</span>
+<span class="nx">x</span><span class="o">--</span><span class="p">;</span> <span class="c1">// x is 10</span>
+
+<span class="c1">// you can also increment or decrement before which will change value first then compute</span>
+<span class="o">++</span><span class="nx">x</span><span class="p">;</span>
+<span class="o">--</span><span class="nx">x</span><span class="p">;</span>
+
+</code></pre>
+</div>
+
+<p>Comparisons:</p>
+<ul>
+  <li><code class="highlighter-rouge">==</code> Equal to</li>
+  <li><code class="highlighter-rouge">===</code> Equal value and data type</li>
+  <li><code class="highlighter-rouge">!=</code> Not equal to</li>
+  <li><code class="highlighter-rouge">!==</code> Not Equal value or data type</li>
+  <li><code class="highlighter-rouge">&gt;, &gt;=</code> Greater than, greater than or equal</li>
+  <li><code class="highlighter-rouge">&lt;, &lt;=</code> Less than, less than or equal</li>
+</ul>
+
+<p>Logical Opperators:</p>
+<ul>
+  <li><code class="highlighter-rouge">&amp;&amp;</code> AND - Both values must be true</li>
+  <li><code class="highlighter-rouge">||</code> OR - At least 1 value must be true</li>
+  <li><code class="highlighter-rouge">!</code> NOT - Inverse ex: if true it must not be true</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// Logical Operators</span>
+<span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="o">||</span> <span class="nx">y</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// true</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="o">&amp;&amp;</span> <span class="nx">y</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1">// false</span>
+
+</code></pre>
+</div>
 
 <p><br /></p>
 
