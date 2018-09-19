@@ -11,14 +11,17 @@ Javascript is one of the core programming language for the web. Its purpose was 
  - [Syntax](#statements)
  - [Comments](#comments)
  - [Display Results](#disresult)
- - [](#)
+ - [Variables](#var)
  - [](#)
  - [](#)
  - [](#)
  - [](#)
  - [](#)
 
-### Display Results <a name="disresult"></a>
+###  <a name=""></a>
+###  <a name=""></a>
+###  <a name=""></a>
+###  <a name=""></a>
 
 <br>
 
@@ -59,6 +62,53 @@ alert("displays alert box");
 document.write("writes to html doc");
 
 console.log("write to console");
+
+```
+
+<br>
+
+### Variables <a name="var"></a>
+Initialize variables using keyword `var` followed by variable name (use camelCase) and an initial value.
+
+``` javascript
+// declare and initialize on one line
+var x = 5;
+
+// declare and initialize on two lines
+var x;
+x = 5;
+
+```
+
+Naming Convention:
+- variables start with lower case letter or $ or _
+- don't contain special symbols %,#, !
+- written in camelCase
+
+Variable Types:
+``` javascript
+// Strings - store characters
+var name = "Pratik";
+
+// Numbers
+var days = 365;
+
+var bankBalance = 4534.25;
+
+// Boolean
+var over = true;
+var under = false;
+
+// Functions
+var myFunction = function() {
+  return "Hello!";
+};
+
+// Special Types - Undefined
+var myValue;    
+
+// Special Types - Empty value
+var myValue = null;
 
 ```
 

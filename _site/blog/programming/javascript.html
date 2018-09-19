@@ -106,7 +106,7 @@
   <li><a href="#statements">Syntax</a></li>
   <li><a href="#comments">Comments</a></li>
   <li><a href="#disresult">Display Results</a></li>
-  <li><a href="#"></a></li>
+  <li><a href="#var">Variables</a></li>
   <li><a href="#"></a></li>
   <li><a href="#"></a></li>
   <li><a href="#"></a></li>
@@ -114,7 +114,10 @@
   <li><a href="#"></a></li>
 </ul>
 
-<h3 id="display-results-">Display Results <a name="disresult"></a></h3>
+<h3><a name=""></a></h3>
+<h3 id="-1"><a name=""></a></h3>
+<h3 id="-2"><a name=""></a></h3>
+<h3 id="-3"><a name=""></a></h3>
 
 <p><br /></p>
 
@@ -146,8 +149,66 @@ comments
 
 <p><br /></p>
 
-<h3 id="display-results--1">Display Results <a name="disresult"></a></h3>
+<h3 id="display-results-">Display Results <a name="disresult"></a></h3>
 <p>You can output results of a code in several ways such as, alert box, writing to the document, or console.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">alert</span><span class="p">(</span><span class="s2">"displays alert box"</span><span class="p">);</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"writes to html doc"</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"write to console"</span><span class="p">);</span>
+
+</code></pre>
+</div>
+
+<p><br /></p>
+
+<h3 id="variables-">Variables <a name="var"></a></h3>
+<p>Initialize variables using keyword <code class="highlighter-rouge">var</code> followed by variable name (use camelCase) and an initial value.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// declare and initialize on one line</span>
+<span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+<span class="c1">// declare and initialize on two lines</span>
+<span class="kd">var</span> <span class="nx">x</span><span class="p">;</span>
+<span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+
+</code></pre>
+</div>
+
+<p>Naming Convention:</p>
+<ul>
+  <li>variables start with lower case letter or $ or _</li>
+  <li>don’t contain special symbols %,#, !</li>
+  <li>written in camelCase</li>
+</ul>
+
+<p>Variable Types:</p>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// Strings - store characters</span>
+<span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">"Pratik"</span><span class="p">;</span>
+
+<span class="c1">// Numbers</span>
+<span class="kd">var</span> <span class="nx">days</span> <span class="o">=</span> <span class="mi">365</span><span class="p">;</span>
+
+<span class="kd">var</span> <span class="nx">bankBalance</span> <span class="o">=</span> <span class="mf">4534.25</span><span class="p">;</span>
+
+<span class="c1">// Boolean</span>
+<span class="kd">var</span> <span class="nx">over</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">under</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+<span class="c1">// Functions</span>
+<span class="kd">var</span> <span class="nx">myFunction</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s2">"Hello!"</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// Special Types - Undefined</span>
+<span class="kd">var</span> <span class="nx">myValue</span><span class="p">;</span>    
+
+<span class="c1">// Special Types - Empty value</span>
+<span class="kd">var</span> <span class="nx">myValue</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+</code></pre>
+</div>
 
 <p><br /></p>
 
