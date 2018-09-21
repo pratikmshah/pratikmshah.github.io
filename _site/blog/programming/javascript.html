@@ -108,7 +108,7 @@
   <li><a href="#disresult">Display Results</a></li>
   <li><a href="#var">Variables</a></li>
   <li><a href="#opexpcom">Operators, Expressions, &amp; Comparisons</a></li>
-  <li><a href="#"></a></li>
+  <li><a href="#arr">Arrays</a></li>
   <li><a href="#"></a></li>
   <li><a href="#"></a></li>
   <li><a href="#"></a></li>
@@ -116,7 +116,6 @@
 
 <h3><a name=""></a></h3>
 <h3 id="-1"><a name=""></a></h3>
-<h3 id="-2"><a name=""></a></h3>
 
 <p><br /></p>
 
@@ -264,6 +263,31 @@ comments
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="o">||</span> <span class="nx">y</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// true</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="o">&amp;&amp;</span> <span class="nx">y</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1">// false</span>
+
+</code></pre>
+</div>
+
+<p><br /></p>
+
+<h3 id="arrays-">Arrays <a name="arr"></a></h3>
+<p>Arrays are a list of variables and are written using <code class="highlighter-rouge">[]</code>. To access an item in an array specify element number inside the brackets. Array access is zero based so the first element starts with zero ex: lists[0].</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">restaurants</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Taco Bell"</span><span class="p">,</span> <span class="s2">"Dominos"</span><span class="p">,</span> <span class="s2">"Panda Express"</span><span class="p">];</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">restaurants</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>  <span class="c1">// return Taco Bell</span>
+
+</code></pre>
+</div>
+
+<p>You can change and add values either by setting a new value to the element or using built in functions.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">];</span>
+
+<span class="nx">numbers</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// [5, 6, 7, 10, 9]</span>
+
+<span class="nx">numbers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="mi">11</span><span class="p">);</span> <span class="c1">//[5, 6, 7, 10, 9, 11]</span>
+
+<span class="nx">numbers</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>  <span class="c1">// will return last value and remove it [5, 6, 7, 10, 9]</span>
 
 </code></pre>
 </div>

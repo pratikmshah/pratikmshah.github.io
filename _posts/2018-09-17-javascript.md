@@ -188,5 +188,4 @@ numbers.pop();  // will return last value and remove it [5, 6, 7, 10, 9]
 
 ```
 
-
 <br>
