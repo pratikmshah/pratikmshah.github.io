@@ -15,12 +15,12 @@ Javascript is one of the core programming language for the web. Its purpose was 
  - [Operators, Expressions, & Comparisons](#opexpcom)
  - [Arrays](#arr)
  - [Conditional Statements](#elseif)
- - [](#)
+ - [Loops - For](#forloop)
  - [](#)
  - [](#)
  - [](#)
 
-###  <a name=""></a>
+
 ###  <a name=""></a>
 ###  <a name=""></a>
 ###  <a name=""></a>
@@ -221,6 +221,35 @@ if (grade >= 90) {
   console.log("D");
 } else {
   console.log("F");
+}
+
+```
+
+<br>
+
+### Loops - For <a name="forloop"></a>
+``` javascript
+for ( <counter> ; <counting to> ; <increment counter>) {
+  <expression>
+}
+
+// example
+for (i = 0; i < 5; i++) {
+  console.log(i);
+}
+
+```
+- `counter` is a variable used to keep track of what iteration you're on
+- `counting to` is the condition to keep looping until it returns false
+- `increment counter` is used to change the value of the counter
+
+``` javascript
+// go to use to loop through arrays
+var numbers = [1, 2, 3, 4, 5];
+
+// example
+for (i = 0; i < numbers.length; i++) {
+  console.log(numbers[i]);
 }
 
 ```
