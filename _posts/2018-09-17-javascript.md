@@ -14,10 +14,14 @@ Javascript is one of the core programming language for the web. Its purpose was 
  - [Variables](#var)
  - [Operators, Expressions, & Comparisons](#opexpcom)
  - [Arrays](#arr)
+ - [Conditional Statements](#elseif)
+ - [](#)
  - [](#)
  - [](#)
  - [](#)
 
+###  <a name=""></a>
+###  <a name=""></a>
 ###  <a name=""></a>
 ###  <a name=""></a>
 
@@ -185,6 +189,39 @@ numbers[3] = 10; // [5, 6, 7, 10, 9]
 numbers.push(11); //[5, 6, 7, 10, 9, 11]
 
 numbers.pop();  // will return last value and remove it [5, 6, 7, 10, 9]
+
+```
+
+<br>
+
+### Conditional Statements <a name="elseif"></a>
+Use `if` to tell JS what to execute if the condition is true.
+
+``` javascript
+var count = 5;
+
+if (count > 2) {
+  console.log("execute commands");
+}
+
+```
+
+To include additional conditions or to run a default statement if conditions are not met use the `else if` and `else` keywords; respectively.
+
+``` javascript
+var grade = 87;
+
+if (grade >= 90) {
+  console.log("A");
+} else if (grade >= 80 && < 90) {
+  console.log("B");
+} else if (grade >= 70 && < 80) {
+  console.log("C");
+} else if (grade >= 60 && < 70) {
+  console.log("D");
+} else {
+  console.log("F");
+}
 
 ```
 
