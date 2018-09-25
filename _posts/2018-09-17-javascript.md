@@ -16,11 +16,16 @@ Javascript is one of the core programming language for the web. Its purpose was 
  - [Arrays](#arr)
  - [Conditional Statements](#elseif)
  - [Loops - For](#forloop)
+ - [Functions](#function)
+ - [](#)
+ - [](#)
  - [](#)
  - [](#)
  - [](#)
 
 
+###  <a name=""></a>
+###  <a name=""></a>
 ###  <a name=""></a>
 ###  <a name=""></a>
 ###  <a name=""></a>
@@ -248,10 +253,52 @@ for (i = 0; i < 5; i++) {
 var numbers = [1, 2, 3, 4, 5];
 
 // example
-for (i = 0; i < numbers.length; i++) {
+for (var i = 0; i < numbers.length; i++) {
   console.log(numbers[i]);
 }
 
+```
+
+<br>
+
+### Functions <a name="function"></a>
+Functions are a way to repeat same tasks multiple times. You can create a function once and reuse the code.
+
+``` javascript
+// there are many ways to create functions
+// below we are assigning the function to a variable
+
+// function consist of a name and it can take in arguments; optionally.
+// following the brackets that is the body of the function.
+// after final brackets the semicolon ends the function
+var print = function(line) {
+  for(var i = 0; i < line.length; i++) {
+    console.log(line[i]);
+  };
+};
+
+```
+
+Declaring a function does not do anything as the code will not run but just store inside the variable until it is `called`.
+
+``` javascript
+var letters = ["q", "w", "e", "r", "t", "y"];
+
+print(letters); // call the function
+
+```
+
+``` javascript
+// most functions are functional
+// use return to execute final statement and exit function or loops
+
+var numbers = [1, 2, 3, 4];
+
+var checkArrayLength = function(arr) {
+  if(arr.length < 5) {
+    return "Not enough elements";
+  }
+};
 ```
 
 <br>
