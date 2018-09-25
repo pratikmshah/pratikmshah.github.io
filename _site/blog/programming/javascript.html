@@ -113,16 +113,9 @@
   <li><a href="#forloop">Loops - For</a></li>
   <li><a href="#function">Functions</a></li>
   <li><a href="#scope">Scope</a></li>
-  <li><a href="#"></a></li>
-  <li><a href="#"></a></li>
-  <li><a href="#"></a></li>
-  <li><a href="#"></a></li>
+  <li><a href="#obj">Objects</a></li>
+  <li><a href="#anymsfunc">Anonymous Functions</a></li>
 </ul>
-
-<h3><a name=""></a></h3>
-<h3 id="-1"><a name=""></a></h3>
-<h3 id="-2"><a name=""></a></h3>
-<h3 id="-3"><a name=""></a></h3>
 
 <p><br /></p>
 
@@ -411,6 +404,43 @@ comments
 <p>Scope of a variable depends on where its located in the code block. For example, variables created inside of a function can only be used within the function. Variables declared outside of the function can be used both inside and outside of the function.</p>
 
 <p>If you create a variable without using the <code class="highlighter-rouge">var</code> keyword then JavaScript will make the variable into a global one where any code block can use it and manipulate it (DO NOT DO THIS).</p>
+
+<p><br /></p>
+
+<h3 id="objects-">Objects <a name="obj"></a></h3>
+<p>JavaScript objects are collections of properties. They can contain numbers, strings, functions, arrays, and other objects. The <code class="highlighter-rouge">this</code> keyword refers to the current object itself.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// sample object</span>
+<span class="kd">var</span> <span class="nx">car</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">make</span><span class="p">:</span> <span class="s2">"Ford"</span><span class="p">,</span>
+  <span class="na">model</span><span class="p">:</span> <span class="s2">"Mustang GT"</span><span class="p">,</span>
+  <span class="na">acceleration</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+  <span class="na">accelerate</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">accelerate</span><span class="o">++</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><br /></p>
+
+<h3 id="anonymous-functions-">Anonymous Functions <a name="anymsfunc"></a></h3>
+<p>Anonymous functions are functions without any declaration. You as the programmer must know that it is a function.</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// see function for multiply</span>
+<span class="kd">var</span> <span class="nx">multiply</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">x</span> <span class="o">*</span> <span class="nx">y</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// this function uses an anonymous function to call the multiply function</span>
+<span class="kd">var</span> <span class="nx">math</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">compute</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">compute</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">math</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="nx">multiply</span><span class="p">));</span>  <span class="c1">// you are passing functions around like variables</span>
+
+</code></pre>
+</div>
 
 <p><br /></p>
 

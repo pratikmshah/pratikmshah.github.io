@@ -19,13 +19,7 @@ Javascript is one of the core programming language for the web. Its purpose was 
  - [Functions](#function)
  - [Scope](#scope)
  - [Objects](#obj)
- - [](#)
- - [](#)
- - [](#)
-
-###  <a name=""></a>
-###  <a name=""></a>
-###  <a name=""></a>
+ - [Anonymous Functions](#anymsfunc)
 
 <br>
 
@@ -320,6 +314,26 @@ var car = {
     this.accelerate++;
   }
 }
+```
+
+<br>
+
+### Anonymous Functions <a name="anymsfunc"></a>
+Anonymous functions are functions without any declaration. You as the programmer must know that it is a function.
+
+``` javascript
+// see function for multiply
+var multiply = function(x,y) {
+  return x * y;
+}
+
+// this function uses an anonymous function to call the multiply function
+var math = function(x, y, compute) {
+  return compute(x, y);
+}
+
+console.log(math(5, 4, multiply));  // you are passing functions around like variables
+
 ```
 
 <br>
