@@ -18,14 +18,11 @@ Javascript is one of the core programming language for the web. Its purpose was 
  - [Loops - For](#forloop)
  - [Functions](#function)
  - [Scope](#scope)
- - [](#)
+ - [Objects](#obj)
  - [](#)
  - [](#)
  - [](#)
 
-
-
-###  <a name=""></a>
 ###  <a name=""></a>
 ###  <a name=""></a>
 ###  <a name=""></a>
@@ -306,6 +303,23 @@ var checkArrayLength = function(arr) {
 ### Scope <a name="scope"></a>
 Scope of a variable depends on where its located in the code block. For example, variables created inside of a function can only be used within the function. Variables declared outside of the function can be used both inside and outside of the function.
 
-If you create a variable without using the `var` keyword then JavaScript will make the variable into a global one where any code block can use it and manipulate it (DO NOT DO THIS). 
+If you create a variable without using the `var` keyword then JavaScript will make the variable into a global one where any code block can use it and manipulate it (DO NOT DO THIS).
+
+<br>
+
+### Objects <a name="obj"></a>
+JavaScript objects are collections of properties. They can contain numbers, strings, functions, arrays, and other objects. The `this` keyword refers to the current object itself.
+
+``` javascript
+// sample object
+var car = {
+  make: "Ford",
+  model: "Mustang GT",
+  acceleration: 60,
+  accelerate: function() {
+    this.accelerate++;
+  }
+}
+```
 
 <br>
