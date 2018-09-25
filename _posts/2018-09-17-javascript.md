@@ -17,14 +17,14 @@ Javascript is one of the core programming language for the web. Its purpose was 
  - [Conditional Statements](#elseif)
  - [Loops - For](#forloop)
  - [Functions](#function)
- - [](#)
+ - [Scope](#scope)
  - [](#)
  - [](#)
  - [](#)
  - [](#)
 
 
-###  <a name=""></a>
+
 ###  <a name=""></a>
 ###  <a name=""></a>
 ###  <a name=""></a>
@@ -300,5 +300,12 @@ var checkArrayLength = function(arr) {
   }
 };
 ```
+
+<br>
+
+### Scope <a name="scope"></a>
+Scope of a variable depends on where its located in the code block. For example, variables created inside of a function can only be used within the function. Variables declared outside of the function can be used both inside and outside of the function.
+
+If you create a variable without using the `var` keyword then JavaScript will make the variable into a global one where any code block can use it and manipulate it (DO NOT DO THIS). 
 
 <br>
