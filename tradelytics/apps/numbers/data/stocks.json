@@ -1640,8 +1640,8 @@
 		},
 		{
 			"Ticker": "ALLO",
-			"Company": "Allogene Therapeutics",
-			"Sector": " Inc.",
+			"Company": "Allogene Therapeutics Inc",
+			"Sector": "n/a",
 			"Industry": "n/a"
 		},
 		{
@@ -2840,9 +2840,9 @@
 		},
 		{
 			"Ticker": "ARVN",
-			"Company": "Arvinas",
-			"Sector": " Inc.",
-			"Industry": "Health Care"
+			"Company": "Arvinas Inc",
+			"Sector": "Health Care",
+			"Industry": "Major Pharmaceuticals"
 		},
 		{
 			"Ticker": "ARW",
@@ -5183,13 +5183,19 @@
 		},
 		{
 			"Ticker": "BNFT",
-			"Company": "Benefitfocus Inc.",
+			"Company": "Benefitfocus Inc",
 			"Sector": "Technology",
 			"Industry": "Computer Software: Prepackaged Software"
 		},
 		{
 			"Ticker": "BNGO",
-			"Company": "Bionano Genomics Inc.",
+			"Company": "Bionano Genomics Inc",
+			"Sector": "Capital Goods",
+			"Industry": "Biotechnology: Laboratory Analytical Instruments"
+		},
+		{
+			"Ticker": "BNGOW",
+			"Company": "Bionano Genomics Inc",
 			"Sector": "Capital Goods",
 			"Industry": "Biotechnology: Laboratory Analytical Instruments"
 		},
@@ -5708,6 +5714,12 @@
 			"Company": "BEST Inc.",
 			"Sector": "Transportation",
 			"Industry": "Trucking Freight/Courier Services"
+		},
+		{
+			"Ticker": "BSVN",
+			"Company": "Bank7 Corp.",
+			"Sector": "Finance",
+			"Industry": "Major Banks"
 		},
 		{
 			"Ticker": "BSX",
@@ -6505,10 +6517,22 @@
 			"Industry": "Major Pharmaceuticals"
 		},
 		{
+			"Ticker": "CBMB",
+			"Company": "CBM Bancorp",
+			"Sector": "Finance",
+			"Industry": "Savings Institutions"
+		},
+		{
 			"Ticker": "CBMG",
 			"Company": "Cellular Biomedicine Group Inc.",
 			"Sector": "Health Care",
 			"Industry": "Biotechnology: Biological Products (No Diagnostic Substances)"
+		},
+		{
+			"Ticker": "CBNK",
+			"Company": "Capital Bancorp",
+			"Sector": "Finance",
+			"Industry": "Major Banks"
 		},
 		{
 			"Ticker": "CBO",
@@ -6631,6 +6655,12 @@
 			"Industry": "Building Materials"
 		},
 		{
+			"Ticker": "CCC.U",
+			"Company": "Churchill Capital Corp",
+			"Sector": "n/a",
+			"Industry": "n/a"
+		},
+		{
 			"Ticker": "CCD",
 			"Company": "Calamos Dynamic Convertible & Income Fund",
 			"Sector": "n/a",
@@ -6647,6 +6677,12 @@
 			"Company": "Chase Corporation",
 			"Sector": "Consumer Durables",
 			"Industry": "Building Products"
+		},
+		{
+			"Ticker": "CCH.U",
+			"Company": "Collier Creek Holdings",
+			"Sector": "n/a",
+			"Industry": "n/a"
 		},
 		{
 			"Ticker": "CCI",
@@ -8233,6 +8269,12 @@
 			"Industry": "Power Generation"
 		},
 		{
+			"Ticker": "CMSC",
+			"Company": "CMS Energy Corporation",
+			"Sector": "Public Utilities",
+			"Industry": "Power Generation"
+		},
+		{
 			"Ticker": "CMSA",
 			"Company": "CMS Energy Corporation",
 			"Sector": "Public Utilities",
@@ -9343,6 +9385,12 @@
 			"Industry": "Apparel"
 		},
 		{
+			"Ticker": "CTACU",
+			"Company": "ChaSerg Technology Acquisition Corp.",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
 			"Ticker": "CTB",
 			"Company": "Cooper Tire & Rubber Company",
 			"Sector": "Consumer Durables",
@@ -9395,6 +9443,12 @@
 			"Company": "CTI BioPharma Corp.",
 			"Sector": "Health Care",
 			"Industry": "Major Pharmaceuticals"
+		},
+		{
+			"Ticker": "CTK",
+			"Company": "CooTek (Cayman) Inc.",
+			"Sector": "Technology",
+			"Industry": "EDP Services"
 		},
 		{
 			"Ticker": "CTL",
@@ -11285,6 +11339,12 @@
 		},
 		{
 			"Ticker": "DUK",
+			"Company": "Duke Energy Corporation",
+			"Sector": "Public Utilities",
+			"Industry": "Power Generation"
+		},
+		{
+			"Ticker": "DUKB",
 			"Company": "Duke Energy Corporation",
 			"Sector": "Public Utilities",
 			"Industry": "Power Generation"
