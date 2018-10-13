@@ -1525,6 +1525,24 @@
 			"Industry": "Industrial Specialties"
 		},
 		{
+			"Ticker": "ALGR",
+			"Company": "Allegro Merger Corp.",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "ALGRR",
+			"Company": "Allegro Merger Corp.",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "ALGRW",
+			"Company": "Allegro Merger Corp.",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
 			"Ticker": "ALGRU",
 			"Company": "Allegro Merger Corp.",
 			"Sector": "Finance",
@@ -1619,6 +1637,12 @@
 			"Company": "Allakos Inc.",
 			"Sector": "Health Care",
 			"Industry": "Major Pharmaceuticals"
+		},
+		{
+			"Ticker": "ALLO",
+			"Company": "Allogene Therapeutics",
+			"Sector": " Inc.",
+			"Industry": "n/a"
 		},
 		{
 			"Ticker": "ALLT",
@@ -1763,6 +1787,12 @@
 			"Company": "Applied Materials Inc.",
 			"Sector": "Technology",
 			"Industry": "Semiconductors"
+		},
+		{
+			"Ticker": "AMAL",
+			"Company": "Amalgamated Bank",
+			"Sector": "Consumer Non-Durables",
+			"Industry": "Textiles"
 		},
 		{
 			"Ticker": "AMBA",
@@ -2551,6 +2581,12 @@
 			"Industry": "n/a"
 		},
 		{
+			"Ticker": "ARCE",
+			"Company": "Arco Platform Limited",
+			"Sector": "Consumer Services",
+			"Industry": "Other Consumer Services"
+		},
+		{
 			"Ticker": "ARCH",
 			"Company": "Arch Coal Inc.",
 			"Sector": "Energy",
@@ -2601,6 +2637,12 @@
 		{
 			"Ticker": "ARDX",
 			"Company": "Ardelyx Inc.",
+			"Sector": "Health Care",
+			"Industry": "Major Pharmaceuticals"
+		},
+		{
+			"Ticker": "ARDS",
+			"Company": "Aridis Pharmaceuticals Inc.",
 			"Sector": "Health Care",
 			"Industry": "Major Pharmaceuticals"
 		},
@@ -2797,6 +2839,12 @@
 			"Industry": "Industrial Machinery/Components"
 		},
 		{
+			"Ticker": "ARVN",
+			"Company": "Arvinas",
+			"Sector": " Inc.",
+			"Industry": "Health Care"
+		},
+		{
 			"Ticker": "ARW",
 			"Company": "Arrow Electronics Inc.",
 			"Sector": "Consumer Non-Durables",
@@ -2807,6 +2855,12 @@
 			"Company": "Arrowhead Pharmaceuticals Inc.",
 			"Sector": "Health Care",
 			"Industry": "Major Pharmaceuticals"
+		},
+		{
+			"Ticker": "ARYAU",
+			"Company": "ARYA Sciences Acquisiton Corp.",
+			"Sector": "Finance",
+			"Industry": "Business Services"
 		},
 		{
 			"Ticker": "ASA",
