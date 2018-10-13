@@ -27865,6 +27865,12 @@
 			"Industry": "Telecommunications Equipment"
 		},
 		{
+			"Ticker": "OCCI",
+			"Company": "OFS Credit Company",
+			"Sector": " Inc.",
+			"Industry": "n/a"
+		},
+		{
 			"Ticker": "OCFC",
 			"Company": "OceanFirst Financial Corp.",
 			"Sector": "Finance",
@@ -29054,6 +29060,12 @@
 			"Company": "PACCAR Inc.",
 			"Sector": "Capital Goods",
 			"Industry": "Auto Manufacturing"
+		},
+		{
+			"Ticker": "PCB",
+			"Company": "Pacific City Financial Corporation",
+			"Sector": "Finance",
+			"Industry": "Major Banks"
 		},
 		{
 			"Ticker": "PCF",
@@ -30502,6 +30514,12 @@
 			"Industry": "n/a"
 		},
 		{
+			"Ticker": "PRNB",
+			"Company": "Principia Biopharma Inc.",
+			"Sector": "Health Care",
+			"Industry": "Major Pharmaceuticals"
+		},
+		{
 			"Ticker": "PRO",
 			"Company": "PROS Holdings Inc.",
 			"Sector": "Technology",
@@ -30542,6 +30560,12 @@
 			"Company": "ProQR Therapeutics N.V.",
 			"Sector": "Health Care",
 			"Industry": "Major Pharmaceuticals"
+		},
+		{
+			"Ticker": "PRS",
+			"Company": "Prudential Financial",
+			"Sector": " Inc.",
+			"Industry": "Finance"
 		},
 		{
 			"Ticker": "PRSC",
@@ -31435,6 +31459,12 @@
 			"Industry": "n/a"
 		},
 		{
+			"Ticker": "QTT",
+			"Company": "Qutoutiao Inc.",
+			"Sector": "n/a",
+			"Industry": "n/a"
+		},
+		{
 			"Ticker": "QTWO",
 			"Company": "Q2 Holdings Inc.",
 			"Sector": "Technology",
@@ -31469,6 +31499,12 @@
 			"Company": "uniQure N.V.",
 			"Sector": "Health Care",
 			"Industry": "Major Pharmaceuticals"
+		},
+		{
+			"Ticker": "QVCD",
+			"Company": "QVC Inc",
+			"Sector": "Consumer Services",
+			"Industry": "Catalog/Specialty Distribution"
 		},
 		{
 			"Ticker": "QYLD",
@@ -31652,6 +31688,12 @@
 			"Company": "Recon Technology Ltd.",
 			"Sector": "Energy",
 			"Industry": "Oilfield Services/Equipment"
+		},
+		{
+			"Ticker": "RCP",
+			"Company": "Ready Capital Corporation",
+			"Sector": "Consumer Services",
+			"Industry": "Real Estate Investment Trusts"
 		},
 		{
 			"Ticker": "RCS",
@@ -32258,6 +32300,12 @@
 			"Company": "Regional Management Corp.",
 			"Sector": "Finance",
 			"Industry": "Finance: Consumer Services"
+		},
+		{
+			"Ticker": "RMED",
+			"Company": "Ra Medical Systems",
+			"Sector": " Inc.",
+			"Industry": "Health Care"
 		},
 		{
 			"Ticker": "RMAX",
@@ -32917,10 +32965,22 @@
 			"Industry": "Oil & Gas Production"
 		},
 		{
+			"Ticker": "SAF",
+			"Company": "Saratoga Investment Corp",
+			"Sector": "n/a",
+			"Industry": "n/a"
+		},
+		{
 			"Ticker": "SAFE",
 			"Company": "Safety Income & Growth Inc.",
 			"Sector": "Consumer Services",
 			"Industry": "Real Estate"
+		},
+		{
+			"Ticker": "SFET",
+			"Company": "Safe-T Group Ltd.",
+			"Sector": "Technology",
+			"Industry": "Computer Software: Prepackaged Software"
 		},
 		{
 			"Ticker": "SAFM",
@@ -34021,6 +34081,12 @@
 			"Industry": "Computer Communications Equipment"
 		},
 		{
+			"Ticker": "SILV",
+			"Company": "SilverCrest Metals Inc.",
+			"Sector": "Basic Industries",
+			"Industry": "Precious Metals"
+		},
+		{
 			"Ticker": "SIM",
 			"Company": "Grupo Simec S.A. de C.V.",
 			"Sector": "Basic Industries",
@@ -34489,6 +34555,12 @@
 			"Industry": "Home Furnishings"
 		},
 		{
+			"Ticker": "SNCR",
+			"Company": "Synchronoss Technologies",
+			"Sector": " Inc.",
+			"Industry": "Technology"
+		},
+		{
 			"Ticker": "SND",
 			"Company": "Smart Sand Inc.",
 			"Sector": "Basic Industries",
@@ -34831,7 +34903,19 @@
 			"Industry": "Auto Manufacturing"
 		},
 		{
-			"Ticker": "SPB ",
+			"Ticker": "SPAQ",
+			"Company": "Spartan Energy Acquisition Corp",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "SPAQ.U",
+			"Company": "Spartan Energy Acquisition Corp",
+			"Sector": "n/a",
+			"Industry": "n/a"
+		},
+		{
+			"Ticker": "SPB",
 			"Company": "Spectrum Brands Holdings Inc.",
 			"Sector": "Miscellaneous",
 			"Industry": "Industrial Machinery/Components"
@@ -35641,6 +35725,12 @@
 			"Industry": "EDP Services"
 		},
 		{
+			"Ticker": "STRO",
+			"Company": "Sutro Biopharma",
+			"Sector": " Inc.",
+			"Industry": "Health Care"
+		},
+		{
 			"Ticker": "STRS",
 			"Company": "Stratus Properties Inc.",
 			"Sector": "Consumer Services",
@@ -35807,6 +35897,12 @@
 			"Company": "Silvercorp Metals Inc.",
 			"Sector": "Basic Industries",
 			"Industry": "Precious Metals"
+		},
+		{
+			"Ticker": "SVMK",
+			"Company": "SVMK Inc.",
+			"Sector": "Technology",
+			"Industry": "Computer Software: Programming"
 		},
 		{
 			"Ticker": "SVRA",
