@@ -11713,6 +11713,12 @@
 			"Industry": "Restaurants"
 		},
 		{
+			"Ticker": "EB",
+			"Company": "Eventbrite Inc",
+			"Sector": "Technology",
+			"Industry": "Computer Software: Programming, Data Processing"
+		},
+		{
 			"Ticker": "EBAY",
 			"Company": "eBay Inc.",
 			"Sector": "Miscellaneous",
@@ -11941,6 +11947,12 @@
 			"Industry": "Electric Utilities: Central"
 		},
 		{
+			"Ticker": "EDNT",
+			"Company": "Edison Nation",
+			"Sector": "Consumer Non-Durables",
+			"Industry": "Recreational Products/Toys"
+		},
+		{
 			"Ticker": "EDR",
 			"Company": "Education Realty Trust Inc.",
 			"Sector": "Consumer Services",
@@ -11963,6 +11975,12 @@
 			"Company": "Educational Development Corporation",
 			"Sector": "Consumer Durables",
 			"Industry": "Consumer Specialties"
+		},
+		{
+			"Ticker": "EDTXU",
+			"Company": "EdtechX Holdings Acquisition Corp.",
+			"Sector": "Finance",
+			"Industry": "Business Services"
 		},
 		{
 			"Ticker": "EE",
@@ -12281,6 +12299,12 @@
 			"Company": "Estee Lauder Companies Inc. (The)",
 			"Sector": "Consumer Non-Durables",
 			"Industry": "Package Goods/Cosmetics"
+		},
+		{
+			"Ticker": "ELAN",
+			"Company": "Elanco Animal Health Incorporated",
+			"Sector": "Health Care",
+			"Industry": "Major Pharmaceuticals"
 		},
 		{
 			"Ticker": "ELC",
@@ -13105,6 +13129,12 @@
 			"Industry": "Industrial Specialties"
 		},
 		{
+			"Ticker": "ESTC",
+			"Company": "Elastic N.V.",
+			"Sector": "Technology",
+			"Industry": "Computer Software: Prepackaged Software"
+		},
+		{
 			"Ticker": "ESTE",
 			"Company": "Earthstone Energy Inc.",
 			"Sector": "Energy",
@@ -13217,6 +13247,12 @@
 			"Company": "Etsy Inc.",
 			"Sector": "Miscellaneous",
 			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "ETTX",
+			"Company": "Entasis Therapeutics Holdings Inc.",
+			"Sector": "Health Care",
+			"Industry": "Major Pharmaceuticals"
 		},
 		{
 			"Ticker": "ETV",
@@ -14578,6 +14614,18 @@
 			"Industry": "Savings Institutions"
 		},
 		{
+			"Ticker": "FMCI",
+			"Company": "Forum Merger II Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "FMCIW",
+			"Company": "Forum Merger II Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
 			"Ticker": "FMB",
 			"Company": "First Trust Managed Municipal ETF",
 			"Sector": "n/a",
@@ -15224,6 +15272,12 @@
 			"Company": "First Trust Large Cap Growth AlphaDEX Fund",
 			"Sector": "n/a",
 			"Industry": "n/a"
+		},
+		{
+			"Ticker": "FTCH",
+			"Company": "Farfetch Limited",
+			"Sector": "Miscellaneous",
+			"Industry": "Business Services"
 		},
 		{
 			"Ticker": "FTCS",
@@ -16075,6 +16129,12 @@
 			"Industry": "n/a"
 		},
 		{
+			"Ticker": "GH",
+			"Company": "Guardant Health",
+			"Sector": "Health Care",
+			"Industry": "Medical Specialities"
+		},
+		{
 			"Ticker": "GHC",
 			"Company": "Graham Holdings Company",
 			"Sector": "Consumer Services",
@@ -16238,6 +16298,24 @@
 		},
 		{
 			"Ticker": "GLACU",
+			"Company": "Greenland Acquisition Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "GLAC",
+			"Company": "Greenland Acquisition Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "GLACR",
+			"Company": "Greenland Acquisition Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "GLACW",
 			"Company": "Greenland Acquisition Corporation",
 			"Sector": "Finance",
 			"Industry": "Business Services"
@@ -16945,6 +17023,18 @@
 			"Industry": "Advertising"
 		},
 		{
+			"Ticker": "GRSHU",
+			"Company": "Gores Holdings III Inc",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "GRTS",
+			"Company": "Gritstone Oncology Inc",
+			"Sector": "Health Care",
+			"Industry": "Biotechnology: Biological Products (No Diagnostic Substances)"
+		},
+		{
 			"Ticker": "GRUB",
 			"Company": "GrubHub Inc.",
 			"Sector": "Miscellaneous",
@@ -17231,6 +17321,12 @@
 			"Company": "GTT Communications Inc.",
 			"Sector": "Public Utilities",
 			"Industry": "Telecommunications Equipment"
+		},
+		{
+			"Ticker": "GTX",
+			"Company": "Garrett Motion Inc.",
+			"Sector": "Capital Goods",
+			"Industry": "Auto Parts:O.E.M."
 		},
 		{
 			"Ticker": "GTXI",
