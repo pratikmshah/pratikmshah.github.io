@@ -36286,6 +36286,12 @@
 			"Industry": "Major Banks"
 		},
 		{
+			"Ticker": "TBC",
+			"Company": "AT&T Inc.",
+			"Sector": "Public Utilities",
+			"Industry": "Telecommunications Equipment"
+		},
+		{
 			"Ticker": "TBI",
 			"Company": "TrueBlue Inc.",
 			"Sector": "Technology",
@@ -36469,6 +36475,12 @@
 			"Ticker": "TCRD",
 			"Company": "THL Credit Inc.",
 			"Sector": "n/a",
+			"Industry": "n/a"
+		},
+		{
+			"Ticker": "TCRW",
+			"Company": "THL Credit",
+			"Sector": " Inc.",
 			"Industry": "n/a"
 		},
 		{
@@ -37012,6 +37024,30 @@
 			"Industry": "Telecommunications Equipment"
 		},
 		{
+			"Ticker": "TKKS",
+			"Company": "TKK Symphony Acquisition Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "TKKSR",
+			"Company": "TKK Symphony Acquisition Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "TKKSU",
+			"Company": "TKK Symphony Acquisition Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "TKKSW",
+			"Company": "TKK Symphony Acquisition Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
 			"Ticker": "TKR",
 			"Company": "Timken Company (The)",
 			"Sector": "Capital Goods",
@@ -37295,6 +37331,24 @@
 		},
 		{
 			"Ticker": "TOTAU",
+			"Company": "Tottenham Acquisition I Limited",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "TOTA",
+			"Company": "Tottenham Acquisition I Limited",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "TOTAR",
+			"Company": "Tottenham Acquisition I Limited",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "TOTAW",
 			"Company": "Tottenham Acquisition I Limited",
 			"Sector": "Finance",
 			"Industry": "Business Services"
@@ -38146,6 +38200,12 @@
 			"Industry": "EDP Services"
 		},
 		{
+			"Ticker": "TZACU",
+			"Company": "Tenzing Acquisition Corp.",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
 			"Ticker": "TZOO",
 			"Company": "Travelzoo",
 			"Sector": "Technology",
@@ -38617,6 +38677,12 @@
 			"Industry": "Trucking Freight/Courier Services"
 		},
 		{
+			"Ticker": "UPWK",
+			"Company": "Upwork Inc.",
+			"Sector": "Technology",
+			"Industry": "EDP Services"
+		},
+		{
 			"Ticker": "UQM",
 			"Company": "UQM Technologies Inc.",
 			"Sector": "Capital Goods",
@@ -38645,6 +38711,12 @@
 			"Company": "United Rentals Inc.",
 			"Sector": "Technology",
 			"Industry": "Diversified Commercial Services"
+		},
+		{
+			"Ticker": "UROV",
+			"Company": "Urovant Sciences Ltd.",
+			"Sector": "Health Care",
+			"Industry": "Major Pharmaceuticals"
 		},
 		{
 			"Ticker": "USA",
@@ -39034,6 +39106,12 @@
 			"Industry": "n/a"
 		},
 		{
+			"Ticker": "VCNX",
+			"Company": "Vaccinex",
+			"Sector": " Inc.",
+			"Industry": "Health Care"
+		},
+		{
 			"Ticker": "VCLT",
 			"Company": "Vanguard Long-Term Corporate Bond ETF",
 			"Sector": "n/a",
@@ -39296,6 +39374,12 @@
 			"Company": "Virco Manufacturing Corporation",
 			"Sector": "Consumer Durables",
 			"Industry": "Industrial Specialties"
+		},
+		{
+			"Ticker": "VIOT",
+			"Company": "Viomi Technology Co.",
+			"Sector": " Ltd",
+			"Industry": "Consumer Durables"
 		},
 		{
 			"Ticker": "VIRT",
@@ -41248,6 +41332,12 @@
 			"Industry": "Farming/Seeds/Milling"
 		},
 		{
+			"Ticker": "XYF",
+			"Company": "X Financial",
+			"Sector": "Finance",
+			"Industry": "Finance: Consumer Services"
+		},
+		{
 			"Ticker": "XYL",
 			"Company": "Xylem Inc.",
 			"Sector": "Capital Goods",
@@ -41261,6 +41351,12 @@
 			"Company": "Alleghany Corporation",
 			"Sector": "Finance",
 			"Industry": "Property-Casualty Insurers"
+		},
+		{
+			"Ticker": "YI",
+			"Company": "111 Inc",
+			"Sector": "Health Care",
+			"Industry": "Medical/Nursing Services"
 		},
 		{
 			"Ticker": "YDIV",
@@ -41315,6 +41411,12 @@
 			"Company": "Yandex N.V.",
 			"Sector": "Technology",
 			"Industry": "Computer Software: Programming Data Processing"
+		},
+		{
+			"Ticker": "YMAB",
+			"Company": "Y-mAbs Therapeutics Inc",
+			"Sector": "Health Care",
+			"Industry": "Major Pharmaceuticals"
 		},
 		{
 			"Ticker": "YOGA",
