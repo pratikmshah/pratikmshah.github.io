@@ -17752,6 +17752,12 @@
 			"Industry": "Hospital/Nursing Management"
 		},
 		{
+			"Ticker": "HCXY",
+			"Company": "Hercules Capital",
+			"Sector": " Inc.",
+			"Industry": "n/a"
+		},
+		{
 			"Ticker": "HCXZ",
 			"Company": "Hercules Capital Inc.",
 			"Sector": "n/a",
@@ -21709,6 +21715,12 @@
 			"Industry": "Beverages (Production/Distribution)"
 		},
 		{
+			"Ticker": "KOD",
+			"Company": "Kodiak Sciences Inc",
+			"Sector": "Health Care",
+			"Industry": "Biotechnology: Biological Products (No Diagnostic Substances)"
+		},
+		{
 			"Ticker": "KODK",
 			"Company": "Eastman Kodak Company",
 			"Sector": "Miscellaneous",
@@ -22052,6 +22064,12 @@
 			"Company": "Ladder Capital Corp",
 			"Sector": "Consumer Services",
 			"Industry": "Real Estate Investment Trusts"
+		},
+		{
+			"Ticker": "LAIX",
+			"Company": "LAIX Inc.",
+			"Sector": "Consumer Services",
+			"Industry": "Other Consumer Services"
 		},
 		{
 			"Ticker": "LAKE",
@@ -22870,6 +22888,12 @@
 			"Industry": "Real Estate Investment Trusts"
 		},
 		{
+			"Ticker": "LOACU",
+			"Company": "Longevity Acquisition Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
 			"Ticker": "LOB",
 			"Company": "Live Oak Bancshares Inc.",
 			"Sector": "Finance",
@@ -23116,6 +23140,12 @@
 			"Industry": "Real Estate Investment Trusts"
 		},
 		{
+			"Ticker": "LTHM",
+			"Company": "Livent Corporation",
+			"Sector": "n/a",
+			"Industry": "n/a"
+		},
+		{
 			"Ticker": "LTM",
 			"Company": "LATAM Airlines Group S.A.",
 			"Sector": "Transportation",
@@ -23165,6 +23195,12 @@
 		},
 		{
 			"Ticker": "LTS",
+			"Company": "Ladenburg Thalmann Financial Services Inc",
+			"Sector": "Finance",
+			"Industry": "Investment Bankers/Brokers/Service"
+		},
+		{
+			"Ticker": "LTSK",
 			"Company": "Ladenburg Thalmann Financial Services Inc",
 			"Sector": "Finance",
 			"Industry": "Investment Bankers/Brokers/Service"
@@ -23929,6 +23965,12 @@
 			"Industry": "Paper"
 		},
 		{
+			"Ticker": "MESA",
+			"Company": "Mesa Air Group",
+			"Sector": " Inc.",
+			"Industry": "Transportation"
+		},
+		{
 			"Ticker": "MESO",
 			"Company": "Mesoblast Limited",
 			"Sector": "Health Care",
@@ -23967,6 +24009,18 @@
 		{
 			"Ticker": "MFA.B",
 			"Company": "MFA Financial Inc.",
+			"Sector": "n/a",
+			"Industry": "n/a"
+		},
+		{
+			"Ticker": "MFAC",
+			"Company": "Megalith Financial Acquisition Corp.",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "MFAC.U",
+			"Company": "Megalith Financial Acquisition Corp.",
 			"Sector": "n/a",
 			"Industry": "n/a"
 		},
@@ -26530,6 +26584,12 @@
 			"Industry": "Oilfield Services/Equipment"
 		},
 		{
+			"Ticker": "NIO",
+			"Company": "NIO Inc.",
+			"Sector": "Capital Goods",
+			"Industry": "Auto Manufacturing"
+		},
+		{
 			"Ticker": "NIQ",
 			"Company": "Nuveenn Intermediate Duration Quality Municipal Term Fund",
 			"Sector": "n/a",
@@ -26669,6 +26729,12 @@
 		},
 		{
 			"Ticker": "NMFC",
+			"Company": "New Mountain Finance Corporation",
+			"Sector": "n/a",
+			"Industry": "n/a"
+		},
+		{
+			"Ticker": "NMFX",
 			"Company": "New Mountain Finance Corporation",
 			"Sector": "n/a",
 			"Industry": "n/a"
