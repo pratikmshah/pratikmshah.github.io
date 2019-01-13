@@ -1525,6 +1525,24 @@
 			"Industry": "Industrial Specialties"
 		},
 		{
+			"Ticker": "ALGR",
+			"Company": "Allegro Merger Corp.",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "ALGRR",
+			"Company": "Allegro Merger Corp.",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "ALGRW",
+			"Company": "Allegro Merger Corp.",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
 			"Ticker": "ALGRU",
 			"Company": "Allegro Merger Corp.",
 			"Sector": "Finance",
@@ -1619,6 +1637,12 @@
 			"Company": "Allakos Inc.",
 			"Sector": "Health Care",
 			"Industry": "Major Pharmaceuticals"
+		},
+		{
+			"Ticker": "ALLO",
+			"Company": "Allogene Therapeutics Inc",
+			"Sector": "n/a",
+			"Industry": "n/a"
 		},
 		{
 			"Ticker": "ALLT",
@@ -1763,6 +1787,12 @@
 			"Company": "Applied Materials Inc.",
 			"Sector": "Technology",
 			"Industry": "Semiconductors"
+		},
+		{
+			"Ticker": "AMAL",
+			"Company": "Amalgamated Bank",
+			"Sector": "Consumer Non-Durables",
+			"Industry": "Textiles"
 		},
 		{
 			"Ticker": "AMBA",
@@ -2551,6 +2581,12 @@
 			"Industry": "n/a"
 		},
 		{
+			"Ticker": "ARCE",
+			"Company": "Arco Platform Limited",
+			"Sector": "Consumer Services",
+			"Industry": "Other Consumer Services"
+		},
+		{
 			"Ticker": "ARCH",
 			"Company": "Arch Coal Inc.",
 			"Sector": "Energy",
@@ -2601,6 +2637,12 @@
 		{
 			"Ticker": "ARDX",
 			"Company": "Ardelyx Inc.",
+			"Sector": "Health Care",
+			"Industry": "Major Pharmaceuticals"
+		},
+		{
+			"Ticker": "ARDS",
+			"Company": "Aridis Pharmaceuticals Inc.",
 			"Sector": "Health Care",
 			"Industry": "Major Pharmaceuticals"
 		},
@@ -2797,6 +2839,12 @@
 			"Industry": "Industrial Machinery/Components"
 		},
 		{
+			"Ticker": "ARVN",
+			"Company": "Arvinas Inc",
+			"Sector": "Health Care",
+			"Industry": "Major Pharmaceuticals"
+		},
+		{
 			"Ticker": "ARW",
 			"Company": "Arrow Electronics Inc.",
 			"Sector": "Consumer Non-Durables",
@@ -2807,6 +2855,12 @@
 			"Company": "Arrowhead Pharmaceuticals Inc.",
 			"Sector": "Health Care",
 			"Industry": "Major Pharmaceuticals"
+		},
+		{
+			"Ticker": "ARYAU",
+			"Company": "ARYA Sciences Acquisiton Corp.",
+			"Sector": "Finance",
+			"Industry": "Business Services"
 		},
 		{
 			"Ticker": "ASA",
@@ -5129,13 +5183,19 @@
 		},
 		{
 			"Ticker": "BNFT",
-			"Company": "Benefitfocus Inc.",
+			"Company": "Benefitfocus Inc",
 			"Sector": "Technology",
 			"Industry": "Computer Software: Prepackaged Software"
 		},
 		{
 			"Ticker": "BNGO",
-			"Company": "Bionano Genomics Inc.",
+			"Company": "Bionano Genomics Inc",
+			"Sector": "Capital Goods",
+			"Industry": "Biotechnology: Laboratory Analytical Instruments"
+		},
+		{
+			"Ticker": "BNGOW",
+			"Company": "Bionano Genomics Inc",
 			"Sector": "Capital Goods",
 			"Industry": "Biotechnology: Laboratory Analytical Instruments"
 		},
@@ -5654,6 +5714,12 @@
 			"Company": "BEST Inc.",
 			"Sector": "Transportation",
 			"Industry": "Trucking Freight/Courier Services"
+		},
+		{
+			"Ticker": "BSVN",
+			"Company": "Bank7 Corp.",
+			"Sector": "Finance",
+			"Industry": "Major Banks"
 		},
 		{
 			"Ticker": "BSX",
@@ -6451,10 +6517,22 @@
 			"Industry": "Major Pharmaceuticals"
 		},
 		{
+			"Ticker": "CBMB",
+			"Company": "CBM Bancorp",
+			"Sector": "Finance",
+			"Industry": "Savings Institutions"
+		},
+		{
 			"Ticker": "CBMG",
 			"Company": "Cellular Biomedicine Group Inc.",
 			"Sector": "Health Care",
 			"Industry": "Biotechnology: Biological Products (No Diagnostic Substances)"
+		},
+		{
+			"Ticker": "CBNK",
+			"Company": "Capital Bancorp",
+			"Sector": "Finance",
+			"Industry": "Major Banks"
 		},
 		{
 			"Ticker": "CBO",
@@ -6577,6 +6655,12 @@
 			"Industry": "Building Materials"
 		},
 		{
+			"Ticker": "CCC.U",
+			"Company": "Churchill Capital Corp",
+			"Sector": "n/a",
+			"Industry": "n/a"
+		},
+		{
 			"Ticker": "CCD",
 			"Company": "Calamos Dynamic Convertible & Income Fund",
 			"Sector": "n/a",
@@ -6593,6 +6677,12 @@
 			"Company": "Chase Corporation",
 			"Sector": "Consumer Durables",
 			"Industry": "Building Products"
+		},
+		{
+			"Ticker": "CCH.U",
+			"Company": "Collier Creek Holdings",
+			"Sector": "n/a",
+			"Industry": "n/a"
 		},
 		{
 			"Ticker": "CCI",
@@ -8179,6 +8269,12 @@
 			"Industry": "Power Generation"
 		},
 		{
+			"Ticker": "CMSC",
+			"Company": "CMS Energy Corporation",
+			"Sector": "Public Utilities",
+			"Industry": "Power Generation"
+		},
+		{
 			"Ticker": "CMSA",
 			"Company": "CMS Energy Corporation",
 			"Sector": "Public Utilities",
@@ -9289,6 +9385,12 @@
 			"Industry": "Apparel"
 		},
 		{
+			"Ticker": "CTACU",
+			"Company": "ChaSerg Technology Acquisition Corp.",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
 			"Ticker": "CTB",
 			"Company": "Cooper Tire & Rubber Company",
 			"Sector": "Consumer Durables",
@@ -9341,6 +9443,12 @@
 			"Company": "CTI BioPharma Corp.",
 			"Sector": "Health Care",
 			"Industry": "Major Pharmaceuticals"
+		},
+		{
+			"Ticker": "CTK",
+			"Company": "CooTek (Cayman) Inc.",
+			"Sector": "Technology",
+			"Industry": "EDP Services"
 		},
 		{
 			"Ticker": "CTL",
@@ -11236,6 +11344,12 @@
 			"Industry": "Power Generation"
 		},
 		{
+			"Ticker": "DUKB",
+			"Company": "Duke Energy Corporation",
+			"Sector": "Public Utilities",
+			"Industry": "Power Generation"
+		},
+		{
 			"Ticker": "DUKH",
 			"Company": "Duke Energy Corporation",
 			"Sector": "Public Utilities",
@@ -11599,6 +11713,12 @@
 			"Industry": "Restaurants"
 		},
 		{
+			"Ticker": "EB",
+			"Company": "Eventbrite Inc",
+			"Sector": "Technology",
+			"Industry": "Computer Software: Programming, Data Processing"
+		},
+		{
 			"Ticker": "EBAY",
 			"Company": "eBay Inc.",
 			"Sector": "Miscellaneous",
@@ -11827,6 +11947,12 @@
 			"Industry": "Electric Utilities: Central"
 		},
 		{
+			"Ticker": "EDNT",
+			"Company": "Edison Nation",
+			"Sector": "Consumer Non-Durables",
+			"Industry": "Recreational Products/Toys"
+		},
+		{
 			"Ticker": "EDR",
 			"Company": "Education Realty Trust Inc.",
 			"Sector": "Consumer Services",
@@ -11849,6 +11975,12 @@
 			"Company": "Educational Development Corporation",
 			"Sector": "Consumer Durables",
 			"Industry": "Consumer Specialties"
+		},
+		{
+			"Ticker": "EDTXU",
+			"Company": "EdtechX Holdings Acquisition Corp.",
+			"Sector": "Finance",
+			"Industry": "Business Services"
 		},
 		{
 			"Ticker": "EE",
@@ -12167,6 +12299,12 @@
 			"Company": "Estee Lauder Companies Inc. (The)",
 			"Sector": "Consumer Non-Durables",
 			"Industry": "Package Goods/Cosmetics"
+		},
+		{
+			"Ticker": "ELAN",
+			"Company": "Elanco Animal Health Incorporated",
+			"Sector": "Health Care",
+			"Industry": "Major Pharmaceuticals"
 		},
 		{
 			"Ticker": "ELC",
@@ -12991,6 +13129,12 @@
 			"Industry": "Industrial Specialties"
 		},
 		{
+			"Ticker": "ESTC",
+			"Company": "Elastic N.V.",
+			"Sector": "Technology",
+			"Industry": "Computer Software: Prepackaged Software"
+		},
+		{
 			"Ticker": "ESTE",
 			"Company": "Earthstone Energy Inc.",
 			"Sector": "Energy",
@@ -13103,6 +13247,12 @@
 			"Company": "Etsy Inc.",
 			"Sector": "Miscellaneous",
 			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "ETTX",
+			"Company": "Entasis Therapeutics Holdings Inc.",
+			"Sector": "Health Care",
+			"Industry": "Major Pharmaceuticals"
 		},
 		{
 			"Ticker": "ETV",
@@ -14464,6 +14614,18 @@
 			"Industry": "Savings Institutions"
 		},
 		{
+			"Ticker": "FMCI",
+			"Company": "Forum Merger II Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "FMCIW",
+			"Company": "Forum Merger II Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
 			"Ticker": "FMB",
 			"Company": "First Trust Managed Municipal ETF",
 			"Sector": "n/a",
@@ -15110,6 +15272,12 @@
 			"Company": "First Trust Large Cap Growth AlphaDEX Fund",
 			"Sector": "n/a",
 			"Industry": "n/a"
+		},
+		{
+			"Ticker": "FTCH",
+			"Company": "Farfetch Limited",
+			"Sector": "Miscellaneous",
+			"Industry": "Business Services"
 		},
 		{
 			"Ticker": "FTCS",
@@ -15961,6 +16129,12 @@
 			"Industry": "n/a"
 		},
 		{
+			"Ticker": "GH",
+			"Company": "Guardant Health",
+			"Sector": "Health Care",
+			"Industry": "Medical Specialities"
+		},
+		{
 			"Ticker": "GHC",
 			"Company": "Graham Holdings Company",
 			"Sector": "Consumer Services",
@@ -16124,6 +16298,24 @@
 		},
 		{
 			"Ticker": "GLACU",
+			"Company": "Greenland Acquisition Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "GLAC",
+			"Company": "Greenland Acquisition Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "GLACR",
+			"Company": "Greenland Acquisition Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "GLACW",
 			"Company": "Greenland Acquisition Corporation",
 			"Sector": "Finance",
 			"Industry": "Business Services"
@@ -16831,6 +17023,18 @@
 			"Industry": "Advertising"
 		},
 		{
+			"Ticker": "GRSHU",
+			"Company": "Gores Holdings III Inc",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "GRTS",
+			"Company": "Gritstone Oncology Inc",
+			"Sector": "Health Care",
+			"Industry": "Biotechnology: Biological Products (No Diagnostic Substances)"
+		},
+		{
 			"Ticker": "GRUB",
 			"Company": "GrubHub Inc.",
 			"Sector": "Miscellaneous",
@@ -17117,6 +17321,12 @@
 			"Company": "GTT Communications Inc.",
 			"Sector": "Public Utilities",
 			"Industry": "Telecommunications Equipment"
+		},
+		{
+			"Ticker": "GTX",
+			"Company": "Garrett Motion Inc.",
+			"Sector": "Capital Goods",
+			"Industry": "Auto Parts:O.E.M."
 		},
 		{
 			"Ticker": "GTXI",
@@ -17540,6 +17750,12 @@
 			"Company": "Healthcare Services Group Inc.",
 			"Sector": "Health Care",
 			"Industry": "Hospital/Nursing Management"
+		},
+		{
+			"Ticker": "HCXY",
+			"Company": "Hercules Capital",
+			"Sector": " Inc.",
+			"Industry": "n/a"
 		},
 		{
 			"Ticker": "HCXZ",
@@ -21499,6 +21715,12 @@
 			"Industry": "Beverages (Production/Distribution)"
 		},
 		{
+			"Ticker": "KOD",
+			"Company": "Kodiak Sciences Inc",
+			"Sector": "Health Care",
+			"Industry": "Biotechnology: Biological Products (No Diagnostic Substances)"
+		},
+		{
 			"Ticker": "KODK",
 			"Company": "Eastman Kodak Company",
 			"Sector": "Miscellaneous",
@@ -21842,6 +22064,12 @@
 			"Company": "Ladder Capital Corp",
 			"Sector": "Consumer Services",
 			"Industry": "Real Estate Investment Trusts"
+		},
+		{
+			"Ticker": "LAIX",
+			"Company": "LAIX Inc.",
+			"Sector": "Consumer Services",
+			"Industry": "Other Consumer Services"
 		},
 		{
 			"Ticker": "LAKE",
@@ -22660,6 +22888,12 @@
 			"Industry": "Real Estate Investment Trusts"
 		},
 		{
+			"Ticker": "LOACU",
+			"Company": "Longevity Acquisition Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
 			"Ticker": "LOB",
 			"Company": "Live Oak Bancshares Inc.",
 			"Sector": "Finance",
@@ -22906,6 +23140,12 @@
 			"Industry": "Real Estate Investment Trusts"
 		},
 		{
+			"Ticker": "LTHM",
+			"Company": "Livent Corporation",
+			"Sector": "n/a",
+			"Industry": "n/a"
+		},
+		{
 			"Ticker": "LTM",
 			"Company": "LATAM Airlines Group S.A.",
 			"Sector": "Transportation",
@@ -22955,6 +23195,12 @@
 		},
 		{
 			"Ticker": "LTS",
+			"Company": "Ladenburg Thalmann Financial Services Inc",
+			"Sector": "Finance",
+			"Industry": "Investment Bankers/Brokers/Service"
+		},
+		{
+			"Ticker": "LTSK",
 			"Company": "Ladenburg Thalmann Financial Services Inc",
 			"Sector": "Finance",
 			"Industry": "Investment Bankers/Brokers/Service"
@@ -23719,6 +23965,12 @@
 			"Industry": "Paper"
 		},
 		{
+			"Ticker": "MESA",
+			"Company": "Mesa Air Group",
+			"Sector": " Inc.",
+			"Industry": "Transportation"
+		},
+		{
 			"Ticker": "MESO",
 			"Company": "Mesoblast Limited",
 			"Sector": "Health Care",
@@ -23757,6 +24009,18 @@
 		{
 			"Ticker": "MFA.B",
 			"Company": "MFA Financial Inc.",
+			"Sector": "n/a",
+			"Industry": "n/a"
+		},
+		{
+			"Ticker": "MFAC",
+			"Company": "Megalith Financial Acquisition Corp.",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "MFAC.U",
+			"Company": "Megalith Financial Acquisition Corp.",
 			"Sector": "n/a",
 			"Industry": "n/a"
 		},
@@ -26320,6 +26584,12 @@
 			"Industry": "Oilfield Services/Equipment"
 		},
 		{
+			"Ticker": "NIO",
+			"Company": "NIO Inc.",
+			"Sector": "Capital Goods",
+			"Industry": "Auto Manufacturing"
+		},
+		{
 			"Ticker": "NIQ",
 			"Company": "Nuveenn Intermediate Duration Quality Municipal Term Fund",
 			"Sector": "n/a",
@@ -26459,6 +26729,12 @@
 		},
 		{
 			"Ticker": "NMFC",
+			"Company": "New Mountain Finance Corporation",
+			"Sector": "n/a",
+			"Industry": "n/a"
+		},
+		{
+			"Ticker": "NMFX",
 			"Company": "New Mountain Finance Corporation",
 			"Sector": "n/a",
 			"Industry": "n/a"
@@ -27587,6 +27863,12 @@
 			"Company": "Optical Cable Corporation",
 			"Sector": "Basic Industries",
 			"Industry": "Telecommunications Equipment"
+		},
+		{
+			"Ticker": "OCCI",
+			"Company": "OFS Credit Company",
+			"Sector": " Inc.",
+			"Industry": "n/a"
 		},
 		{
 			"Ticker": "OCFC",
@@ -28778,6 +29060,12 @@
 			"Company": "PACCAR Inc.",
 			"Sector": "Capital Goods",
 			"Industry": "Auto Manufacturing"
+		},
+		{
+			"Ticker": "PCB",
+			"Company": "Pacific City Financial Corporation",
+			"Sector": "Finance",
+			"Industry": "Major Banks"
 		},
 		{
 			"Ticker": "PCF",
@@ -30226,6 +30514,12 @@
 			"Industry": "n/a"
 		},
 		{
+			"Ticker": "PRNB",
+			"Company": "Principia Biopharma Inc.",
+			"Sector": "Health Care",
+			"Industry": "Major Pharmaceuticals"
+		},
+		{
 			"Ticker": "PRO",
 			"Company": "PROS Holdings Inc.",
 			"Sector": "Technology",
@@ -30266,6 +30560,12 @@
 			"Company": "ProQR Therapeutics N.V.",
 			"Sector": "Health Care",
 			"Industry": "Major Pharmaceuticals"
+		},
+		{
+			"Ticker": "PRS",
+			"Company": "Prudential Financial",
+			"Sector": " Inc.",
+			"Industry": "Finance"
 		},
 		{
 			"Ticker": "PRSC",
@@ -31159,6 +31459,12 @@
 			"Industry": "n/a"
 		},
 		{
+			"Ticker": "QTT",
+			"Company": "Qutoutiao Inc.",
+			"Sector": "n/a",
+			"Industry": "n/a"
+		},
+		{
 			"Ticker": "QTWO",
 			"Company": "Q2 Holdings Inc.",
 			"Sector": "Technology",
@@ -31193,6 +31499,12 @@
 			"Company": "uniQure N.V.",
 			"Sector": "Health Care",
 			"Industry": "Major Pharmaceuticals"
+		},
+		{
+			"Ticker": "QVCD",
+			"Company": "QVC Inc",
+			"Sector": "Consumer Services",
+			"Industry": "Catalog/Specialty Distribution"
 		},
 		{
 			"Ticker": "QYLD",
@@ -31376,6 +31688,12 @@
 			"Company": "Recon Technology Ltd.",
 			"Sector": "Energy",
 			"Industry": "Oilfield Services/Equipment"
+		},
+		{
+			"Ticker": "RCP",
+			"Company": "Ready Capital Corporation",
+			"Sector": "Consumer Services",
+			"Industry": "Real Estate Investment Trusts"
 		},
 		{
 			"Ticker": "RCS",
@@ -31982,6 +32300,12 @@
 			"Company": "Regional Management Corp.",
 			"Sector": "Finance",
 			"Industry": "Finance: Consumer Services"
+		},
+		{
+			"Ticker": "RMED",
+			"Company": "Ra Medical Systems",
+			"Sector": " Inc.",
+			"Industry": "Health Care"
 		},
 		{
 			"Ticker": "RMAX",
@@ -32641,10 +32965,22 @@
 			"Industry": "Oil & Gas Production"
 		},
 		{
+			"Ticker": "SAF",
+			"Company": "Saratoga Investment Corp",
+			"Sector": "n/a",
+			"Industry": "n/a"
+		},
+		{
 			"Ticker": "SAFE",
 			"Company": "Safety Income & Growth Inc.",
 			"Sector": "Consumer Services",
 			"Industry": "Real Estate"
+		},
+		{
+			"Ticker": "SFET",
+			"Company": "Safe-T Group Ltd.",
+			"Sector": "Technology",
+			"Industry": "Computer Software: Prepackaged Software"
 		},
 		{
 			"Ticker": "SAFM",
@@ -33745,6 +34081,12 @@
 			"Industry": "Computer Communications Equipment"
 		},
 		{
+			"Ticker": "SILV",
+			"Company": "SilverCrest Metals Inc.",
+			"Sector": "Basic Industries",
+			"Industry": "Precious Metals"
+		},
+		{
 			"Ticker": "SIM",
 			"Company": "Grupo Simec S.A. de C.V.",
 			"Sector": "Basic Industries",
@@ -34213,6 +34555,12 @@
 			"Industry": "Home Furnishings"
 		},
 		{
+			"Ticker": "SNCR",
+			"Company": "Synchronoss Technologies",
+			"Sector": " Inc.",
+			"Industry": "Technology"
+		},
+		{
 			"Ticker": "SND",
 			"Company": "Smart Sand Inc.",
 			"Sector": "Basic Industries",
@@ -34555,7 +34903,19 @@
 			"Industry": "Auto Manufacturing"
 		},
 		{
-			"Ticker": "SPB ",
+			"Ticker": "SPAQ",
+			"Company": "Spartan Energy Acquisition Corp",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "SPAQ.U",
+			"Company": "Spartan Energy Acquisition Corp",
+			"Sector": "n/a",
+			"Industry": "n/a"
+		},
+		{
+			"Ticker": "SPB",
 			"Company": "Spectrum Brands Holdings Inc.",
 			"Sector": "Miscellaneous",
 			"Industry": "Industrial Machinery/Components"
@@ -35365,6 +35725,12 @@
 			"Industry": "EDP Services"
 		},
 		{
+			"Ticker": "STRO",
+			"Company": "Sutro Biopharma",
+			"Sector": " Inc.",
+			"Industry": "Health Care"
+		},
+		{
 			"Ticker": "STRS",
 			"Company": "Stratus Properties Inc.",
 			"Sector": "Consumer Services",
@@ -35531,6 +35897,12 @@
 			"Company": "Silvercorp Metals Inc.",
 			"Sector": "Basic Industries",
 			"Industry": "Precious Metals"
+		},
+		{
+			"Ticker": "SVMK",
+			"Company": "SVMK Inc.",
+			"Sector": "Technology",
+			"Industry": "Computer Software: Programming"
 		},
 		{
 			"Ticker": "SVRA",
@@ -35914,6 +36286,12 @@
 			"Industry": "Major Banks"
 		},
 		{
+			"Ticker": "TBC",
+			"Company": "AT&T Inc.",
+			"Sector": "Public Utilities",
+			"Industry": "Telecommunications Equipment"
+		},
+		{
 			"Ticker": "TBI",
 			"Company": "TrueBlue Inc.",
 			"Sector": "Technology",
@@ -36097,6 +36475,12 @@
 			"Ticker": "TCRD",
 			"Company": "THL Credit Inc.",
 			"Sector": "n/a",
+			"Industry": "n/a"
+		},
+		{
+			"Ticker": "TCRW",
+			"Company": "THL Credit",
+			"Sector": " Inc.",
 			"Industry": "n/a"
 		},
 		{
@@ -36640,6 +37024,30 @@
 			"Industry": "Telecommunications Equipment"
 		},
 		{
+			"Ticker": "TKKS",
+			"Company": "TKK Symphony Acquisition Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "TKKSR",
+			"Company": "TKK Symphony Acquisition Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "TKKSU",
+			"Company": "TKK Symphony Acquisition Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "TKKSW",
+			"Company": "TKK Symphony Acquisition Corporation",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
 			"Ticker": "TKR",
 			"Company": "Timken Company (The)",
 			"Sector": "Capital Goods",
@@ -36923,6 +37331,24 @@
 		},
 		{
 			"Ticker": "TOTAU",
+			"Company": "Tottenham Acquisition I Limited",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "TOTA",
+			"Company": "Tottenham Acquisition I Limited",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "TOTAR",
+			"Company": "Tottenham Acquisition I Limited",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
+			"Ticker": "TOTAW",
 			"Company": "Tottenham Acquisition I Limited",
 			"Sector": "Finance",
 			"Industry": "Business Services"
@@ -37774,6 +38200,12 @@
 			"Industry": "EDP Services"
 		},
 		{
+			"Ticker": "TZACU",
+			"Company": "Tenzing Acquisition Corp.",
+			"Sector": "Finance",
+			"Industry": "Business Services"
+		},
+		{
 			"Ticker": "TZOO",
 			"Company": "Travelzoo",
 			"Sector": "Technology",
@@ -38245,6 +38677,12 @@
 			"Industry": "Trucking Freight/Courier Services"
 		},
 		{
+			"Ticker": "UPWK",
+			"Company": "Upwork Inc.",
+			"Sector": "Technology",
+			"Industry": "EDP Services"
+		},
+		{
 			"Ticker": "UQM",
 			"Company": "UQM Technologies Inc.",
 			"Sector": "Capital Goods",
@@ -38273,6 +38711,12 @@
 			"Company": "United Rentals Inc.",
 			"Sector": "Technology",
 			"Industry": "Diversified Commercial Services"
+		},
+		{
+			"Ticker": "UROV",
+			"Company": "Urovant Sciences Ltd.",
+			"Sector": "Health Care",
+			"Industry": "Major Pharmaceuticals"
 		},
 		{
 			"Ticker": "USA",
@@ -38662,6 +39106,12 @@
 			"Industry": "n/a"
 		},
 		{
+			"Ticker": "VCNX",
+			"Company": "Vaccinex",
+			"Sector": " Inc.",
+			"Industry": "Health Care"
+		},
+		{
 			"Ticker": "VCLT",
 			"Company": "Vanguard Long-Term Corporate Bond ETF",
 			"Sector": "n/a",
@@ -38924,6 +39374,12 @@
 			"Company": "Virco Manufacturing Corporation",
 			"Sector": "Consumer Durables",
 			"Industry": "Industrial Specialties"
+		},
+		{
+			"Ticker": "VIOT",
+			"Company": "Viomi Technology Co.",
+			"Sector": " Ltd",
+			"Industry": "Consumer Durables"
 		},
 		{
 			"Ticker": "VIRT",
@@ -40876,6 +41332,12 @@
 			"Industry": "Farming/Seeds/Milling"
 		},
 		{
+			"Ticker": "XYF",
+			"Company": "X Financial",
+			"Sector": "Finance",
+			"Industry": "Finance: Consumer Services"
+		},
+		{
 			"Ticker": "XYL",
 			"Company": "Xylem Inc.",
 			"Sector": "Capital Goods",
@@ -40889,6 +41351,12 @@
 			"Company": "Alleghany Corporation",
 			"Sector": "Finance",
 			"Industry": "Property-Casualty Insurers"
+		},
+		{
+			"Ticker": "YI",
+			"Company": "111 Inc",
+			"Sector": "Health Care",
+			"Industry": "Medical/Nursing Services"
 		},
 		{
 			"Ticker": "YDIV",
@@ -40943,6 +41411,12 @@
 			"Company": "Yandex N.V.",
 			"Sector": "Technology",
 			"Industry": "Computer Software: Programming Data Processing"
+		},
+		{
+			"Ticker": "YMAB",
+			"Company": "Y-mAbs Therapeutics Inc",
+			"Sector": "Health Care",
+			"Industry": "Major Pharmaceuticals"
 		},
 		{
 			"Ticker": "YOGA",
