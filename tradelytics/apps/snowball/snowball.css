@@ -44,6 +44,12 @@ input[type='checkbox']:checked {
   font-size: .62em;
 }
 
+#snowb {
+  width: 48px;
+  height: auto;
+  padding-bottom: 9px;
+}
+
 #search div.input-group input {
   border-radius: 0px;
   border-top-left-radius: 3px;
