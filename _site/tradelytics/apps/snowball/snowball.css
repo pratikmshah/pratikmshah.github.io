@@ -67,9 +67,7 @@ input[type='checkbox']:checked {
   border-radius: 0px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  border-top-color: #FFF;
-  border-left-color: #FFF;
-  border-bottom-color: #FFF;
+  border-color: #FFF #FFF #FFF #FFF;
   background-color: transparent;
   padding-left: 20px;
   padding-right: 20px;
