@@ -66,7 +66,7 @@ $(function() {
 
     if($this.attr('data-border-color') === 'black') {
       $this.attr('data-border-color', 'green');
-      $this.css('border-color', '#7CFC00');
+      $this.css('border-color', '#00A8FF, #00A8FF, #00A8FF, #00A8FF');
       $this.next().prop("checked", true);
     } else {
       $this.attr('data-border-color', 'black');
