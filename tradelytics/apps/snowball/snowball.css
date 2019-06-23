@@ -1,6 +1,6 @@
 body {
-  /* background: #0088dc; /* #0064ff; */
-  background: #8E0E00;
+  /* background: #0088dc; /* #0064ff; #8E0E00; */
+  background: #1A1D27;
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -105,7 +105,7 @@ input[type='checkbox']:checked {
 }
 
 #performance li a:hover {
-  color: #000;
+  color: #01CD74;
 }
 
 #performance ul li.dropdown {
