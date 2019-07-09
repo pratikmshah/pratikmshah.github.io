@@ -31,6 +31,13 @@ $(function() {
     }
   });
 
+  // retrieve stock data from mystocks.json file
+  $('#snowb').on('click', function() {
+    $.get('mystocks.txt', function(data) {
+      $("#stock-ticker").val(data);
+    });
+  });
+
   // parse user text box symbols
   function parseTickerSymbols() {
     return  $('#stock-ticker').val().split(',');
