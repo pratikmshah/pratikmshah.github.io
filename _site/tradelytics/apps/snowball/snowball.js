@@ -35,6 +35,7 @@ $(function() {
   $('#snowb').on('click', function() {
     $.get('mystocks.txt', function(data) {
       $("#stock-ticker").val(data);
+      $('#erase').show();
     });
   });
 
