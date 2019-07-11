@@ -13,6 +13,8 @@ $(function() {
       var copyTickers = tickers.slice();
       tickers = createUrls(tickers);
       displayCharts(tickers, copyTickers);
+    } else {
+      clear();
     }
   });
 
@@ -59,7 +61,7 @@ $(function() {
   // display charts onto the page
   function displayCharts(arr, sym) {
     $chart = $('#charts');
-    $chart.empty();
+    $('#charts').empty();
     $('#save').show();
 
     for (var i = 0; i < arr.length; i++) {
@@ -142,6 +144,13 @@ $(function() {
 
 // hide save button, reset values on texbox when page loads
 function onLoad() {
+  $('#save').hide();
+  $('#stock-ticker').val('');
+  $('#erase').hide();
+}
+
+function clear() {
+  $('#charts').empty();
   $('#save').hide();
   $('#stock-ticker').val('');
   $('#erase').hide();
