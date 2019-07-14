@@ -147,6 +147,7 @@ function onLoad() {
   $('#save').hide();
   $('#stock-ticker').val('');
   $('#erase').hide();
+  infoTabs();
 }
 
 function clear() {
@@ -154,4 +155,11 @@ function clear() {
   $('#save').hide();
   $('#stock-ticker').val('');
   $('#erase').hide();
+}
+
+function infoTabs() {
+  $('#infoTabs a').click(function (e) {
+    e.preventDefault();
+    $(this).tab('show');
+  })
 }

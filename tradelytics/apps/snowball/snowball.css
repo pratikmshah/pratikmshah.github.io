@@ -116,6 +116,28 @@ input[type='checkbox']:checked {
   position: inherit;
 }
 
+ /* overide tabs */
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  border: none;
+  color: #ea0a8e !important;
+  background-color: black !important;
+}
+
+ul.nav-tabs {
+  border-bottom: 1px solid #ea0a8e !important;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+  background-color: black !important;
+}
+
+.nav-tabs>li>a:hover {
+  border-color: black !important;
+  border-bottom: 0px;
+}
+
+ /* end of override of tabs */
+
 #scans div div li {
   padding-bottom: 5px;
 }
