@@ -109,7 +109,7 @@ input[type='checkbox']:checked {
 }
 
 #performance li a:hover {
-  color: #01CD74;
+  color: #FF0090; /* #01CD74; */
 }
 
 #performance ul li.dropdown {
@@ -125,11 +125,11 @@ input[type='checkbox']:checked {
 }
 
 #etf-scans div div li a:hover {
-  color: #00A8FF;
+  color: #FF0090;
 }
 
 #scans div div li a:hover {
-  color: #00A8FF;
+  color: #FF0090;
 }
 
 .dropdown-menu {
@@ -142,7 +142,13 @@ input[type='checkbox']:checked {
   font-size: 18px;
   font-weight: bold;
   padding-left: 15px;
-  color: #00A8FF;
+  color: #FF0090;
+}
+
+/* for dropdown menu hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
 }
 
 #save {
@@ -216,13 +222,6 @@ input[type='checkbox']:checked {
     bottom: 10px;
     right: 20px;
   }
-}
-
-/* for dropdown menu hover */
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0;
 }
 
 .dbug {
