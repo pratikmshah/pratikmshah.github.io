@@ -109,7 +109,7 @@ input[type='checkbox']:checked {
 }
 
 #performance li a:hover {
-  color: #FF0090; /* #01CD74; */
+  color: #ea0a8e; /* #01CD74; */
 }
 
 #performance ul li.dropdown {
@@ -125,11 +125,11 @@ input[type='checkbox']:checked {
 }
 
 #etf-scans div div li a:hover {
-  color: #FF0090;
+  color: #ea0a8e;
 }
 
 #scans div div li a:hover {
-  color: #FF0090;
+  color: #ea0a8e;
 }
 
 .dropdown-menu {
