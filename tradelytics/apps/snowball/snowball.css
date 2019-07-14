@@ -97,6 +97,10 @@ input[type='checkbox']:checked {
   margin-top: 25px;
 }
 
+#performance ul {
+  margin-bottom: 0px;
+}
+
 #performance li a {
   color: #fff;
   text-decoration: none;
