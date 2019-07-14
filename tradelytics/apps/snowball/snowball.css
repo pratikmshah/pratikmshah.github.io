@@ -138,6 +138,11 @@ ul.nav-tabs {
 
  /* end of override of tabs */
 
+#funds table tbody tr td a {
+  padding: 0px !important;
+  font-size: 14px;
+}
+
 #scans div div li {
   padding-bottom: 5px;
 }
