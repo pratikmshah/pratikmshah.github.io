@@ -214,6 +214,13 @@ input[type='checkbox']:checked {
   }
 }
 
+/* for dropdown menu hover */
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
 .dbug {
   border: 1px solid red;
 }

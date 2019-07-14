@@ -61,7 +61,7 @@ $(function() {
   // display charts onto the page
   function displayCharts(arr, sym) {
     $chart = $('#charts');
-    $('#charts').empty();
+    $('#charts div').remove();
     $('#save').show();
 
     for (var i = 0; i < arr.length; i++) {
