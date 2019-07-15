@@ -143,6 +143,11 @@ ul.nav-tabs {
   font-size: 14px;
 }
 
+#funds table tbody tr th {
+  font-size: 18px;
+  font-weight: 900;
+}
+
 #scans div div li {
   padding-bottom: 5px;
 }
