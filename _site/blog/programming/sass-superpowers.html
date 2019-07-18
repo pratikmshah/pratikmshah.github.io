@@ -131,20 +131,19 @@
 
 <p><br /></p>
 
-<div class="language-sass highlighter-rouge"><pre class="highlight"><code><span class="c1">// variables in sass start off with at $variableName: value
-</span><span class="nv">$offwhite</span><span class="p">:</span> <span class="mh">#EEE86D</span><span class="err">;</span>
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// variables in sass start off with at $variableName: value</span>
+<span class="nv">$offwhite</span><span class="p">:</span> <span class="mh">#EEE86D</span><span class="err">;</span>
 
 <span class="na">body</span><span class="err"> { </span><span class="nl">background-color</span><span class="p">:</span> <span class="nv">$offwhite</span> <span class="err">}</span>
 
-<span class="c1">// you can even pair selector and value as variables
-</span><span class="nv">$color-main</span><span class="p">:</span> <span class="nv">$offwhite</span>
+<span class="c1">// you can even pair selector and value as variables</span>
+<span class="nv">$color-main</span><span class="p">:</span> <span class="nv">$offwhite</span>
 
 <span class="na">body</span><span class="err"> { </span><span class="nl">background-color</span><span class="p">:</span> <span class="nv">$color-main</span><span class="err">;</span> <span class="err">}</span>
 
-<span class="c1">// Variables are really useful when using them for fonts
-</span><span class="nv">$font-main</span><span class="p">:</span> <span class="s1">'Oswald'</span><span class="o">,</span> <span class="s1">'Helvetica'</span><span class="o">,</span> <span class="s1">'serif'</span><span class="err">;</span>
-</code></pre>
-</div>
+<span class="c1">// Variables are really useful when using them for fonts</span>
+<span class="nv">$font-main</span><span class="p">:</span> <span class="s1">'Oswald'</span><span class="o">,</span> <span class="s1">'Helvetica'</span><span class="o">,</span> <span class="s1">'serif'</span><span class="err">;</span>
+</code></pre></div></div>
 
 <p><br /></p>
 
@@ -154,8 +153,8 @@
 
 <p><br /></p>
 
-<div class="language-sass highlighter-rouge"><pre class="highlight"><code><span class="c1">// putting rules inside other rules creates nested sub rules
-</span><span class="nc">.div</span> <span class="err">{</span>
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// putting rules inside other rules creates nested sub rules</span>
+<span class="nc">.div</span> <span class="err">{</span>
     <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="err">;</span>
     <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="err">;</span>
 
@@ -168,8 +167,7 @@
         <span class="err">}</span>
     <span class="err">}</span>
 <span class="err">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><br /></p>
 
@@ -179,14 +177,13 @@
 
 <p><br /></p>
 
-<div class="language-sass highlighter-rouge"><pre class="highlight"><code><span class="c1">// to import files partial files use @import
-// you could have all of these imported in style.scss file
-// partial file begin with _ ex: _variables
-</span><span class="k">@import</span> <span class="s">'variables';</span>
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// to import files partial files use @import</span>
+<span class="c1">// you could have all of these imported in style.scss file</span>
+<span class="c1">// partial file begin with _ ex: _variables</span>
+<span class="k">@import</span> <span class="s">'variables';</span>
 <span class="k">@import</span> <span class="s">'base';</span>
 <span class="k">@import</span> <span class="s">'modules/media';</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><br /></p>
 
@@ -196,22 +193,21 @@
 
 <p><br /></p>
 
-<div class="language-sass highlighter-rouge"><pre class="highlight"><code><span class="c1">// to create a mixin use @mixin mixinName($varName) { code }
-</span><span class="k">@mixin</span> <span class="nf">setSize</span><span class="p">(</span><span class="nv">$height</span><span class="o">,</span> <span class="nv">$width</span><span class="p">)</span> <span class="err">{</span>
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// to create a mixin use @mixin mixinName($varName) { code }</span>
+<span class="k">@mixin</span> <span class="nf">setSize</span><span class="p">(</span><span class="nv">$height</span><span class="o">,</span> <span class="nv">$width</span><span class="p">)</span> <span class="err">{</span>
     <span class="nl">height</span><span class="p">:</span> <span class="nv">$height</span><span class="err">;</span>
     <span class="nl">width</span><span class="p">:</span> <span class="nv">$width</span><span class="err">;</span>
 <span class="err">}</span>
 
-<span class="c1">// to use mixin - file path is relative to style.css NOT style.scss
-</span><span class="nt">img</span> <span class="err">{</span>
+<span class="c1">// to use mixin - file path is relative to style.css NOT style.scss</span>
+<span class="nt">img</span> <span class="err">{</span>
     <span class="k">@include</span> <span class="nd">setSize</span><span class="p">(</span><span class="nb">auto</span><span class="o">,</span> <span class="m">600px</span><span class="p">)</span>
 <span class="err">}</span>
 
-<span class="c1">// you can specify a default value using : value
-// below height value is 100% of viewport height
-</span><span class="k">@mixin</span> <span class="nf">setSize</span><span class="p">(</span><span class="nv">$height</span><span class="o">:</span> <span class="nb">auto</span><span class="o">,</span> <span class="nv">$width</span><span class="o">:</span> <span class="m">100%</span><span class="p">)</span> <span class="err">{</span> <span class="n">code</span> <span class="err">}</span>
-</code></pre>
-</div>
+<span class="c1">// you can specify a default value using : value</span>
+<span class="c1">// below height value is 100% of viewport height</span>
+<span class="k">@mixin</span> <span class="nf">setSize</span><span class="p">(</span><span class="nv">$height</span><span class="o">:</span> <span class="nb">auto</span><span class="o">,</span> <span class="nv">$width</span><span class="o">:</span> <span class="m">100%</span><span class="p">)</span> <span class="err">{</span> <span class="n">code</span> <span class="err">}</span>
+</code></pre></div></div>
 
 <p><br /></p>
 
@@ -221,7 +217,7 @@
 
 <p><br /></p>
 
-<div class="language-sass highlighter-rouge"><pre class="highlight"><code><span class="nc">.button</span> <span class="err">{</span>
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.button</span> <span class="err">{</span>
     <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span><span class="err">;</span>
     <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">blue</span><span class="err">;</span>
     <span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="err">;</span>
@@ -237,8 +233,7 @@
 	<span class="k">@extend</span> <span class="nc">.button</span><span class="o">;</span>
 	<span class="nl">background-color</span><span class="p">:</span> <span class="no">green</span><span class="err">;</span>
 <span class="err">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><br /></p>
 
@@ -248,24 +243,23 @@
 
 <p><br /></p>
 
-<div class="language-sass highlighter-rouge"><pre class="highlight"><code><span class="nt">a</span> <span class="err">{</span>
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">a</span> <span class="err">{</span>
     <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span> <span class="m">5px</span><span class="err">;</span>
 
     <span class="k">&amp;</span><span class="nd">:hover</span> <span class="err">{</span>
         <span class="nl">background</span><span class="p">:</span> <span class="nv">$yellow</span><span class="err">;</span>
     <span class="err">}</span>
 <span class="err">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p><br /></p>
 
 <p>The <code class="highlighter-rouge">&amp;</code> symbol is also used as a conditional if that you can apply styling to if the html doc contains the selector. See below</p>
 
 <p><br /></p>
 
-<div class="language-sass highlighter-rouge"><pre class="highlight"><code><span class="c1">// you can use &amp; for a conditional and
-// below says if inside html there is a head class and typography id then apply a color of twitter blue
-</span>
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// you can use &amp; for a conditional and</span>
+<span class="c1">// below says if inside html there is a head class and typography id then apply a color of twitter blue</span>
+
 <span class="nc">.title</span> <span class="err">{</span>
     <span class="nl">margin</span><span class="err">, </span><span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="err">;</span>
     <span class="nl">color</span><span class="p">:</span> <span class="nv">$color-media-head</span><span class="err">;</span>
@@ -275,8 +269,7 @@
         <span class="nl">color</span><span class="p">:</span> <span class="nv">$twt-clr</span>
     <span class="err">}</span>
 <span class="err">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><br /></p>
 
@@ -286,11 +279,10 @@
 
 <p><br /></p>
 
-<div class="language-sass highlighter-rouge"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">setWidth</span><span class="p">(</span><span class="nv">$qty</span><span class="p">)</span> <span class="err">{</span>
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@mixin</span> <span class="nf">setWidth</span><span class="p">(</span><span class="nv">$qty</span><span class="p">)</span> <span class="err">{</span>
     <span class="nl">width</span><span class="p">:</span> <span class="m">960px</span> <span class="o">/</span> <span class="nv">$qty</span> <span class="o">*</span> <span class="m">100%</span><span class="err">;</span>
 <span class="err">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><br /></p>
 
@@ -300,14 +292,13 @@
 
 <p><br /></p>
 
-<div class="language-sass highlighter-rouge"><pre class="highlight"><code><span class="c1">// you can create lists using commas or spaces
-</span><span class="nv">$font-body</span><span class="p">:</span> <span class="n">Industry</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Serif</span><span class="err">;</span>
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// you can create lists using commas or spaces</span>
+<span class="nv">$font-body</span><span class="p">:</span> <span class="n">Industry</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Serif</span><span class="err">;</span>
 
-<span class="c1">// you can access a specific element using $(varName index#) NOT 0 index
-</span><span class="nv">$font-body</span><span class="p">:</span> <span class="n">Industry</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Serif</span><span class="err">;</span>
+<span class="c1">// you can access a specific element using $(varName index#) NOT 0 index</span>
+<span class="nv">$font-body</span><span class="p">:</span> <span class="n">Industry</span><span class="o">,</span> <span class="n">Helvetica</span><span class="o">,</span> <span class="n">Serif</span><span class="err">;</span>
 <span class="err">$</span><span class="o">(</span><span class="nt">font-body</span> <span class="nt">1</span><span class="o">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><br /></p>
 
@@ -337,16 +328,15 @@ $btn-clr: blue;
 
 <p><br /></p>
 
-<div class="language-sass highlighter-rouge"><pre class="highlight"><code><span class="c1">// you can use for loop by @for counterName from start# through end# { code }
-</span><span class="nv">$colors</span><span class="p">:</span> <span class="nv">$red</span><span class="o">,</span> <span class="nv">$blue</span><span class="o">,</span> <span class="nv">$green</span><span class="o">,</span> <span class="nv">$orange</span><span class="o">,</span> <span class="nv">$yellow</span><span class="o">,</span> <span class="nv">$purple</span><span class="err">;</span>
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// you can use for loop by @for counterName from start# through end# { code }</span>
+<span class="nv">$colors</span><span class="p">:</span> <span class="nv">$red</span><span class="o">,</span> <span class="nv">$blue</span><span class="o">,</span> <span class="nv">$green</span><span class="o">,</span> <span class="nv">$orange</span><span class="o">,</span> <span class="nv">$yellow</span><span class="o">,</span> <span class="nv">$purple</span><span class="err">;</span>
 
 <span class="k">@for</span> <span class="nv">$item</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="nf">length</span><span class="p">(</span><span class="nv">$colors</span><span class="p">)</span> <span class="err">{</span>
     <span class="nt">h</span><span class="si">#{</span><span class="nv">$item</span><span class="si">}</span> <span class="err">{</span>
         <span class="nl">color</span><span class="p">:</span> <span class="err">$</span><span class="p">(</span><span class="n">colors</span><span class="o">,</span> <span class="nv">$item</span><span class="p">)</span><span class="err">;</span>
     <span class="err">}</span>
 <span class="err">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><br /></p>
 
@@ -356,7 +346,7 @@ $btn-clr: blue;
 
 <p><br /></p>
 
-<div class="language-sass highlighter-rouge"><pre class="highlight"><code><span class="nv">$button-color</span><span class="p">:</span> <span class="p">(</span>
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$button-color</span><span class="p">:</span> <span class="p">(</span>
     <span class="na">default</span><span class="p">:</span> <span class="nv">$white</span><span class="o">,</span>
     <span class="na">danger</span><span class="p">:</span> <span class="nv">$red</span><span class="o">,</span>
     <span class="na">primary</span><span class="p">:</span> <span class="nv">$blue</span><span class="o">,</span>
@@ -364,8 +354,7 @@ $btn-clr: blue;
 <span class="o">);</span>
 
 <span class="err">.</span><span class="na">btn-sucess</span><span class="err"> { </span><span class="nl">color</span><span class="p">:</span> <span class="nf">map-get</span><span class="p">(</span><span class="nv">$button-color</span><span class="o">,</span> <span class="nv">$success</span><span class="p">)</span> <span class="err">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><br /></p>
 
