@@ -52,6 +52,10 @@ input[type='checkbox']:checked {
   padding-top: 5px;
 }
 
+#search div.input-group {
+  background-color: #11131D;
+}
+
 #search div.input-group input {
   border-radius: 0px;
   border-top-left-radius: 3px;
