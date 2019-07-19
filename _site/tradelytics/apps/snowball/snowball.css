@@ -49,7 +49,6 @@ input[type='checkbox']:checked {
 #snowb {
   width: 48px;
   height: auto;
-  padding-top: 5px;
 }
 
 #search div.input-group {
@@ -247,13 +246,28 @@ ul.nav-tabs {
 }
 
 #scroll-top  span.glyphicon {
-  color: black;
+  color: #00A3E0;
   text-shadow: 2px 0px black, 1px -1px black, 1px -1px black, 2px 0px black;
 }
 
 #scroll-top  span.glyphicon:hover {
   color: #ea0a8e;
   text-shadow: 2px 0px black, 1px -1px black, 1px -1px black, 2px 0px black;
+}
+
+.input-focus-txt {
+  border-top-color: #252d3f !important;
+  border-left-color: #252d3f !important;
+  border-bottom-color: #252d3f !important;
+}
+
+.input-focus-del {
+  border-top-color: #252d3f !important;
+  border-bottom-color: #252d3f !important;
+}
+
+.input-focus-btn {
+  border-color: #252d3f !important;
 }
 
 @media only screen and (max-width: 415px) {
