@@ -169,7 +169,6 @@ function infoTabs() {
 
 function inputFocus() {
   $("#stock-ticker").focus(function() {
-    console.log("entered");
     $(this).addClass("input-focus-txt");
     $("#erase").addClass("input-focus-del");
     $("#run").addClass("input-focus-btn");
@@ -177,7 +176,7 @@ function inputFocus() {
 }
 
 function inputFocusOut() {
-  $("#stock-ticker").focusout(function() {
+  $("#stock-ticker").blur(function() {
     $(this).removeClass("input-focus-txt");
     $("#erase").removeClass("input-focus-del");
     $("#run").removeClass("input-focus-btn");
