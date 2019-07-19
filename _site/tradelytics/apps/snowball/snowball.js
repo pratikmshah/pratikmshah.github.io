@@ -18,6 +18,11 @@ $(function() {
     }
   });
 
+  // execute above method when user hits enter in input box
+  $("#stock-ticker").on("keypress", function(e) {
+    if(e.which == 13) { $("#run").trigger('click') }
+  });
+
   // erase input box on click of x button
   $('#erase').on('click', function() {
     $('#stock-ticker').val('');
