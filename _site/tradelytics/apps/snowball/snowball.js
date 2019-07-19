@@ -132,22 +132,20 @@ $(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
 
-
-  /* ETFS - DEFUNCT
-  $('#etf-scans li a').on('click', function(e) {
-    $('#stock-ticker').val('');
-    $('#stock-ticker').val(ETF[$(this).attr("data-text")]);
-    $('#erase').show();
-  }); */
-
 });
 
 // hide save button, reset values on texbox when page loads
 function onLoad() {
+  hide();
+  infoTabs();
+  inputFocus();
+  inputFocusOut();
+}
+
+function hide() {
   $('#save').hide();
   $('#stock-ticker').val('');
   $('#erase').hide();
-  infoTabs();
 }
 
 function clear() {
@@ -158,8 +156,25 @@ function clear() {
 }
 
 function infoTabs() {
-  $('#infoTabs a').click(function (e) {
+  $('#infoTabs a').click(function(e) {
     e.preventDefault();
     $(this).tab('show');
   })
+}
+
+function inputFocus() {
+  $("#stock-ticker").focus(function() {
+    console.log("entered");
+    $(this).addClass("input-focus-txt");
+    $("#erase").addClass("input-focus-del");
+    $("#run").addClass("input-focus-btn");
+  });
+}
+
+function inputFocusOut() {
+  $("#stock-ticker").focusout(function() {
+    $(this).removeClass("input-focus-txt");
+    $("#erase").removeClass("input-focus-del");
+    $("#run").removeClass("input-focus-btn");
+  });
 }
