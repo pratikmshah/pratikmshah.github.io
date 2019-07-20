@@ -57,7 +57,7 @@ $(function() {
     const URL_CHART_SPEC = "&ty=c&ta=1&p=d&s=l";
 
     for(var i = 0; i < arr.length; i++) {
-      arr[i] = URL_BASE + arr[i].toUpperCase() + URL_CHART_SPEC;
+      arr[i] = URL_BASE + arr[i].toUpperCase() + URL_CHART_SPEC + new Date().getTime();
     }
 
     return arr;

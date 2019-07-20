@@ -957,7 +957,7 @@ ul, ol {
   border: none;
   bottom: 25px;
   right: 75px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   z-index: 99;
   padding: 0px;
   font-size: 3em; }
