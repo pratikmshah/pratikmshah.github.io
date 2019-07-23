@@ -145,6 +145,7 @@ function onLoad() {
   infoTabs();
   inputFocus();
   inputFocusOut();
+  changeInputWidth()
 }
 
 function hide() {
@@ -181,4 +182,14 @@ function inputFocusOut() {
     $("#erase").removeClass("input-focus-del");
     $("#run").removeClass("input-focus-btn");
   });
+}
+
+
+function changeInputWidth() {
+  if( $(window).width() > 1700 ) {
+    var $input = $("#search");
+
+    $input.removeClass()
+          .addClass('col-md-8 col-md-offset-2');
+  }
 }
