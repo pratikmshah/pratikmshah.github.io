@@ -24,6 +24,10 @@ input[type='checkbox']:checked {
     background: green;
 }
 
+a:focus {
+  outline: none;
+}
+
 .query-container {
   padding: 10px;
   margin-top: 11%;
