@@ -224,6 +224,22 @@ ul.nav-tabs {
   border-color: black;
 }
 
+.chart-link {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 10px;
+  color: #222222;
+}
+
+a.chart-link:hover {
+  color: #ea0a8e;
+  text-decoration: none;
+}
+
+a.chart-link:focus {
+  text-decoration: none;
+}
+
 .modal-title,
 .modal-body,
 .modal-footer {
