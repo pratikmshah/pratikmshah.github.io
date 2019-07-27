@@ -70,7 +70,7 @@ $(function() {
     $('#save').show();
 
     for (var i = 0; i < arr.length; i++) {
-      $chart.append('<div class="chart-container"> <img src=' + arr[i] + ' class="chart" data-border-color="black" /> <input type="checkbox"  name="watchlist" value=' + sym[i].toUpperCase() + '> <div class="col-sm-2 col-sm-offset-5 text-center"> <div class="col-xs-2 col-xs-offset-5""> <a href="https://finviz.com/quote.ashx?t=' + sym[i].toUpperCase() + '" target="_blank" class="chart-link glyphicon glyphicon-new-window"></a> </div> </div> </div>');
+      $chart.append('<div class="chart-container"> <img src=' + arr[i] + ' class="chart" data-border-color="black" /> <input type="checkbox"  name="watchlist" value=' + sym[i].toUpperCase() + '> <br> <div class="col-sm-2 col-sm-offset-5 text-center"> <div class="col-xs-2 col-xs-offset-5""> <a href="https://finviz.com/quote.ashx?t=' + sym[i].toUpperCase() + '" target="_blank" class="chart-link glyphicon glyphicon-new-window"></a> </div> </div> </div>');
     }
 
   }
