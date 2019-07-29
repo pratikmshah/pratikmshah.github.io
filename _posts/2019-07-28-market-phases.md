@@ -35,18 +35,38 @@ In the first part of stage 2 you should see a sharp upside momentum along with h
 
 In the middle part of stage 2 pullbacks will occur often with sharp selloffs where price falls towards a short term moving average. It should find some buying support only to resume the markup shortly after.
 
-The final stage of markup you will see that the momentum is there but fading as it is taking longer to advance higher after pullbacks occur. Gains occur after early short sellers become trapped by shorting too early or via some news catalyst. 
+The final stage of markup you will see that the momentum is there but fading as it is taking longer to advance higher after pullbacks occur. Gains occur after early short sellers become trapped by shorting too early or via some news catalyst.
 
 <br>
 
 #### Stage 3: Distribution
+
+This stage is simple to understand as the price has advanced higher it is now time for longs to lock in profits and shorts to come in heavy. The shorts are now fighting for control and sellers also cause resistance.
+
 <figure>
   <img src="/img/posts/market-phase-blog/ntnx3.png" class="blg-img" alt="Nutanix Distribution Phase">
 </figure>
 
+In the early stage the short term moving averages start curving towards the downside and being to cross each other.
+
+Shortly after the stock becomes more neutral as there is not as much momentum to lift it towards the upside as short term traders start to bail. It is still possible for stocks to go higher if there is the right catalyst; however, at this stage it is most likely to stay neutral or any pop to be sold off.
+
+The later stage the short term moving averages start heading south and acting as resistance. The key support level is still there but begins being tested more and more.
+
 <br>
 
 #### Stage 4: Decline
+
+This is the bearish stage of the cycle and is where you want to short every breakdown of support levels.
+
 <figure>
   <img src="/img/posts/market-phase-blog/ntnx4.png" class="blg-img" alt="Nutanix Decline Phase">
 </figure>
+
+In the first part of the phase you begin to see a pattern of lower highs and lower lows. The stock is beginning to show some signs of short term death and could drop sharply very fast.
+
+In the middle part of this stage any rally towards the moving averages fail and the stock gets sold off. It struggles to make higher highs.
+
+The final stage of this phase you see short term support being broken and price fall drastically until it can find a strong level where bulls come in to buy the stock. When bulls do come in you return to stage 1 and repeat the cycle.
+
+<br>
