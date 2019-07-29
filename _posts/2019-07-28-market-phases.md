@@ -24,9 +24,18 @@ The later/last phase of the accumulation stage buyers start buying up the stock 
 <br>
 
 #### Stage 2: Markup
+
+This stage occurs after the resistance from the accumulation stage has been broken and the sellers back off. This is the stage you want to get long on the breakout retest or pullback to a short term moving average. You must want to see higher highs and higher lows. Momentum will kick in and stock will keep advancing higher.
+
 <figure>
   <img src="/img/posts/market-phase-blog/ntnx2.png" class="blg-img" alt="Nutanix Markup Phase">
 </figure>
+
+In the first part of stage 2 you should see a sharp upside momentum along with higher highs and higher lows. The short term moving averages should advance sharply.
+
+In the middle part of stage 2 pullbacks will occur often with sharp selloffs where price falls towards a short term moving average. It should find some buying support only to resume the markup shortly after.
+
+The final stage of markup you will see that the momentum is there but fading as it is taking longer to advance higher after pullbacks occur. Gains occur after early short sellers become trapped by shorting too early or via some news catalyst. 
 
 <br>
 
