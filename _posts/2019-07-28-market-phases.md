@@ -15,14 +15,29 @@ This stage occurs after prices drop from a much higher level. It its the phase i
   <img src="/img/posts/market-phase-blog/ntnx1.png" class="blg-img" alt="Nutanix Accumulation Phase">
 </figure>
 
+In the early transition stage from declining to neutral the longer term moving averages are still declining. The stock will cross above and below the averages; once they catch up.
+
+In the middle part of the accumulation stage buyers will hold a floor on the price and accumulate; however, there is no momentum to propel the stock.
+
+The later/last phase of the accumulation stage buyers start buying up the stock making new higher lows on the price but sellers prevent the resistance level from being broken. The moving averages will become flat.
+
+<br>
+
+#### Stage 2: Markup
 <figure>
   <img src="/img/posts/market-phase-blog/ntnx2.png" class="blg-img" alt="Nutanix Markup Phase">
 </figure>
 
+<br>
+
+#### Stage 3: Distribution
 <figure>
   <img src="/img/posts/market-phase-blog/ntnx3.png" class="blg-img" alt="Nutanix Distribution Phase">
 </figure>
 
+<br>
+
+#### Stage 4: Decline
 <figure>
   <img src="/img/posts/market-phase-blog/ntnx4.png" class="blg-img" alt="Nutanix Decline Phase">
 </figure>
