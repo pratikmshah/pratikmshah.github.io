@@ -1,9 +1,8 @@
+AMD,
+TWTR,
+MU,
 ATVI,
 BAC,
 CLDR,
 EB,
-FB,
-KKR,
-MU,
-NTNX,
-SPOT
+NTNX
