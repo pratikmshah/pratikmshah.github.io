@@ -1,4 +1,5 @@
 TWTR,
+AMD,
 MU,
 CLDR,
 ATVI,
