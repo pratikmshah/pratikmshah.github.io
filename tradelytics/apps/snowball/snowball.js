@@ -184,7 +184,6 @@ function inputFocusOut() {
   });
 }
 
-
 function changeInputWidth() {
   if( $(window).width() > 1700 ) {
     var $input = $("#search");
