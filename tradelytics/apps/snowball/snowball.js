@@ -1,5 +1,4 @@
 var watchlist = 'watchlist';
-var refresh;
 
 $(function() {
 
@@ -14,7 +13,6 @@ $(function() {
       var copyTickers = tickers.slice();
       tickers = createUrls(tickers);
       displayCharts(tickers, copyTickers);
-      refresh = setInterval(function(){ refreshCharts(); }, 420000); // refresh charts every 7 minutes
     } else {
       clear();
     }
@@ -161,7 +159,6 @@ function clear() {
   $('#save').hide();
   $('#stock-ticker').val('');
   $('#erase').hide();
-  stopRefreshCharts();
 }
 
 function infoTabs() {
@@ -194,13 +191,4 @@ function changeInputWidth() {
     $input.removeClass()
           .addClass('col-md-8 col-md-offset-2');
   }
-}
-
-// refresh charts
-function refreshCharts() {
-  $("#run").trigger('click');
-}
-
-function stopRefreshCharts() {
-  clearInterval(refresh);
 }
