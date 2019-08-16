@@ -137,6 +137,13 @@ $(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
 
+  $('#news').imagesLoaded( function() {
+    $("#news div").masonry({
+      FitWidth: true,
+      itemSelector: 'grid'
+    });
+  });
+
 });
 
 // hide save button, reset values on texbox when page loads

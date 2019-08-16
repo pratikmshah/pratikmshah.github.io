@@ -23,6 +23,8 @@
     <script src="../../scripts/jquery-2.2.0.min.js"></script>
     <script src="../../scripts/bootstrap.min.js"></script>
     <script src="FileSaver.js"></script>
+    <script src="masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="snowball.js"></script>
     <script src="csvc.js"></script>
 
@@ -107,35 +109,59 @@
                      <div class="tab-content">
 
                        <div id="news" class="row tab-pane fade in active">
-                         <div class="col-md-4">
-                           <ul>
-                             <li><a href="http://www.cnbc.com/" target="_blank">CNBC</a></li>
-                             <li><a href="https://www.thestreet.com/" target="_blank">The Street</a></li>
-                             <li><a href="http://www.reuters.com/" target="_blank">Reuters</a></li>
-                             <li><a href="https://finance.yahoo.com/" target="_blank">Yahoo</a></li>
-                             <li><a href="http://www.benzinga.com/" target="_blank">Benzinga</a></li>
-                             <li><a href="https://www.bloomberg.com/" target="_blank">Bloomberg</a></li>
-                             <li><a href="http://www.investors.com/" target="_blank">Invest Biz Day</a></li>
-                           </ul>
-                         </div>
-                         <div class="col-md-4">
-                           <ul>
-                             <li><a href="https://seekingalpha.com/market-news" target="_blank">Seeking Alpha</a></li>
-                             <li><a href="https://stocktwits.com/" target="_blank">StockTwits</a></li>
-                             <li><a href="http://www.wsj.com/" target="_blank">Wall Street Jrl</a></li>
-                             <li><a href="http://www.marketwatch.com/" target="_blank">MarketWatch</a></li>
-                             <li><a href="http://investorplace.com/" target="_blank">Investor Place</a></li>
-                             <li><a href="http://www.investmentnews.com/" target="_blank">Investment News</a></li>
-                             <li><a href="https://www.streetinsider.com/" target="_blank">Street Insider</a></li>
-                           </ul>
-                         </div>
-                         <div class="col-md-4">
-                           <ul>
-                             <li><a href="https://money.cnn.com/data/markets/" target="_blank">CNN</a></li>
-                             <li><a href="https://www.investing.com/" target="_blank">Investing</a></li>
-                             <li><a href="https://www.barrons.com/" target="_blank">Barrons</a></li>
-                           </ul>
-                         </div>
+                        <div class="grid">
+                          <a href="https://www.cnbc.com/" target="_blank">
+                            <img src="files/imgs/news/cnbc.png" alt="CNBC" class="grid-item">
+                          </a>
+                          <a href="https://www.thestreet.com/" target="_blank">
+                            <img src="files/imgs/news/thestreet.png" alt="The Street" class="grid-item">
+                          </a>
+                          <a href="http://www.reuters.com/" target="_blank">
+                            <img src="files/imgs/news/reuters.jpg" alt="Reuters" class="grid-item">
+                          </a>
+                          <a href="https://stocktwits.com/" target="_blank">
+                            <img src="files/imgs/news/stocktwits.png" alt="StockTwits" class="grid-item">
+                          </a>
+                          <a href="https://seekingalpha.com/" target="_blank">
+                            <img src="files/imgs/news/seekingalpha.png" alt="Seeking Alpha" class="grid-item">
+                          </a>
+                          <a href="https://finance.yahoo.com/" target="_blank">
+                            <img src="files/imgs/news/yahoo.jpg" alt="Yahoo" class="grid-item">
+                          </a>
+                          <a href="http://www.benzinga.com/" target="_blank">
+                            <img src="files/imgs/news/benzinga.jpg" alt="Benzinga" class="grid-item">
+                          </a>
+                          <a href="https://www.bloomberg.com/" target="_blank">
+                            <img src="files/imgs/news/bloomberg.jpg" alt="Bloomberg" class="grid-item">
+                          </a>
+                          <a href="http://www.investors.com/" target="_blank">
+                            <img src="files/imgs/news/ibd.jpg" alt="Investors Business Daily" class="grid-item">
+                          </a>
+                          <a href="http://www.wsj.com/" target="_blank">
+                            <img src="files/imgs/news/wsj.png" alt="WSJ" class="grid-item">
+                          </a>
+                          <a href="http://www.marketwatch.com/" target="_blank">
+                            <img src="files/imgs/news/marketwatch.jpg" alt="Market Watch" class="grid-item">
+                          </a>
+                          <a href="http://investorplace.com/" target="_blank">
+                            <img src="files/imgs/news/investorplace.jpg" alt="Investor" class="grid-item">
+                          </a>
+                          <a href="http://www.investmentnews.com/" target="_blank">
+                            <img src="files/imgs/news/investmentnews.jpg" alt="Investment News" class="grid-item">
+                          </a>
+                          <a href="https://www.streetinsider.com/" target="_blank">
+                            <img src="files/imgs/news/streetinsider.jpg" alt="Street Insider" class="grid-item">
+                          </a>
+                          <a href="https://money.cnn.com/data/markets/" target="_blank">
+                            <img src="files/imgs/news/cnn.png" alt="CNN" class="grid-item">
+                          </a>
+                          <a href="https://www.investing.com/" target="_blank">
+                            <img src="files/imgs/news/investing.png" alt="Investing" class="grid-item">
+                          </a>
+                          <a href="https://www.barrons.com/" target="_blank">
+                            <img src="files/imgs/news/barrons.jpg" alt="Barrons" class="grid-item">
+                          </a>
+                        </div>
                        </div>
 
                        <div id="blog" class="row tab-pane fade">

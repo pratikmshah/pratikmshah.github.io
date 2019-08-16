@@ -127,6 +127,15 @@ a:focus {
   position: inherit;
 }
 
+#news {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#news div.grid a {
+  padding: 0px !important;
+}
+
  /* overide tabs */
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
   border: none;
@@ -291,6 +300,21 @@ a.chart-link:focus {
 
 .input-focus-btn {
   border-color: #252d3f !important;
+}
+
+.grid {
+  min-height: 300px;
+}
+
+.grid-item {
+  float: left;
+  width: 96px;
+  height: auto;
+  transition: all .2s ease-in-out;
+}
+
+.grid-item:hover {
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 415px) {
