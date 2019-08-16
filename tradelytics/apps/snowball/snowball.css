@@ -127,6 +127,11 @@ a:focus {
   position: inherit;
 }
 
+#news {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
  /* overide tabs */
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
   border: none;
@@ -293,8 +298,11 @@ a.chart-link:focus {
   border-color: #252d3f !important;
 }
 
+.grid {
+  min-height: 300px;
+}
+
 .grid-item {
-  float: left;
   width: 96px;
   height: auto;
   transition: all .2s ease-in-out;
