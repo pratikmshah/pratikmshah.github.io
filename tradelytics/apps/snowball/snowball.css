@@ -293,6 +293,17 @@ a.chart-link:focus {
   border-color: #252d3f !important;
 }
 
+.grid-item {
+  float: left;
+  width: 96px;
+  height: auto;
+  transition: all .2s ease-in-out;
+}
+
+.grid-item:hover {
+  transform: scale(1.1);
+}
+
 @media only screen and (max-width: 415px) {
   #scroll-top {
     bottom: 20px;
