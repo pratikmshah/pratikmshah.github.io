@@ -139,7 +139,7 @@ $(function() {
 
   $('#news').imagesLoaded( function() {
     $("#news div").masonry({
-      isFitWidth: true,
+      FitWidth: true,
       itemSelector: 'grid'
     });
   });
