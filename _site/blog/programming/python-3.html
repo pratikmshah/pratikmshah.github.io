@@ -134,43 +134,40 @@
 
 <p>The main function is used so that functions can be invoked no matter where the function is defined. We need an if statement to insure that the main function gets called if one exists in the script.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#!/usr/bin/python3</span>
-<span class="c"># auto exec main function if exists</span>
-
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/python3
+# auto exec main function if exists
+</span>
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
   <span class="k">print</span><span class="p">(</span><span class="s">"Hello World!"</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span> <span class="n">main</span><span class="p">()</span>
 
-</code></pre>
-</div>
+</code></pre></div></div>
 <p><br /></p>
 
 <h4 id="whitespace">Whitespace</h4>
 <p>The whitespace tell the compiler that the statements are associated with the preceding function or conditional. Traditionally there are 4 spaces for indentation. There are no character braces ({}) like there are in other languages to specify a block.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># this is correct</span>
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># this is correct
+</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
   <span class="k">print</span><span class="p">(</span><span class="s">"Hello World!"</span><span class="p">)</span>
   <span class="k">print</span><span class="p">(</span><span class="s">"Line 2"</span><span class="p">)</span>
 
-<span class="c"># if you have one line to exec you can put all on one line</span>
-<span class="c"># you can put spaces after :</span>
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span><span class="k">print</span><span class="p">(</span><span class="s">"This will work"</span><span class="p">)</span>
+<span class="c1"># if you have one line to exec you can put all on one line
+# you can put spaces after :
+</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span><span class="k">print</span><span class="p">(</span><span class="s">"This will work"</span><span class="p">)</span>
 
-<span class="c">#....</span>
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span> <span class="n">main</span><span class="p">()</span>
+<span class="c1">#....
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span> <span class="n">main</span><span class="p">()</span>
 
-</code></pre>
-</div>
+</code></pre></div></div>
 <p><br /></p>
 
 <h4 id="comments">Comments</h4>
 <p>To comment use the <code class="highlighter-rouge">#</code> symbol for one line comments. Other languages have multi line comments; however, in python they should be avoided.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># this is a comment</span>
-</code></pre>
-</div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># this is a comment
+</span></code></pre></div></div>
 <p><br /></p>
 
 <h4 id="assignment">Assignment</h4>
@@ -187,7 +184,7 @@
 <h4 id="conditionals-structure">Conditionals Structure</h4>
 <p>The conditionals are similarly structured to how they are in other languages. Use <code class="highlighter-rouge">if</code>, <code class="highlighter-rouge">elif</code>, <code class="highlighter-rouge">else</code> to evaluate statements</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
 
 <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
   <span class="k">print</span><span class="p">(</span><span class="s">"first statement"</span><span class="p">)</span>
@@ -195,45 +192,41 @@
   <span class="k">print</span><span class="p">(</span><span class="s">"second statement"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
   <span class="k">print</span><span class="p">(</span><span class="s">"third statement"</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p><br /></p>
 
 <p>You can use ternary operation but instead of <code class="highlighter-rouge">?</code> and <code class="highlighter-rouge">:</code> you use <code class="highlighter-rouge">if</code> and <code class="highlighter-rouge">else</code>.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span>
 <span class="n">x</span> <span class="o">=</span> <span class="s">"is True"</span> <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span> <span class="k">else</span> <span class="s">"is False"</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p><br /></p>
 
 <h4 id="function-structure">Function Structure</h4>
 <p>To create a function you must specify the <code class="highlighter-rouge">def</code> keyword followed by the <code class="highlighter-rouge">name</code> of the function and then brackets <code class="highlighter-rouge">()</code> or with arguments <code class="highlighter-rouge">(x)</code>. You can also specify default value for an argument <code class="highlighter-rouge">(a=3)</code>.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># prints out a + b</span>
-<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># prints out a + b
+</span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
   <span class="k">print</span><span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p><br /></p>
 
 <h4 id="objects">Objects</h4>
 <p>You need a class before you can instantiate and object. Every class will have an <code class="highlighter-rouge">init</code> method which is called each time you create an object for that class.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># create person class</span>
-<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># create person class
+</span><span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
   <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">"John Smith"</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
 
   <span class="k">def</span> <span class="nf">getName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
 
-<span class="c"># create a person object    </span>
-<span class="n">pratik</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
+<span class="c1"># create a person object    
+</span><span class="n">pratik</span> <span class="o">=</span> <span class="n">Person</span><span class="p">()</span>
 <span class="n">pratik</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Pratik Shah"</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">pratik</span><span class="o">.</span><span class="n">getName</span><span class="p">())</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p><br /></p>
 
 <h3 id="variables-objects--values-">Variables, Objects &amp; Values <a name="var-obj-val"></a></h3>
@@ -268,7 +261,7 @@
 <h4 id="strings">Strings</h4>
 <p>Strings are immutable objects that can be created using single or double quotes <code class="highlighter-rouge">'string'</code> or <code class="highlighter-rouge">"string"</code>. You can also use escape characters within a string. If you want the string on one line you place an <code class="highlighter-rouge">r</code> before the string; <code class="highlighter-rouge">r"this is a raw string"</code>. This is good for regular expressions.</p>
 
-<p>You can also do string interpolation with variables by using the <code class="highlighter-rouge"><span class="p">{}</span></code> along with the <code class="highlighter-rouge">.format(var)</code> method.</p>
+<p>You can also do string interpolation with variables by using the <code class="highlighter-rouge">{}</code> along with the <code class="highlighter-rouge">.format(var)</code> method.</p>
 
 <figure>
   <img src="/img/posts/python3/strings.png" class="blg-img" alt="strings" />
@@ -299,16 +292,15 @@
 <h4 id="boolean">Boolean</h4>
 <p>A boolean object has the value of either <code class="highlighter-rouge">True</code> or <code class="highlighter-rouge">False</code>. They are immutable objects so values that are true will always have same id and vice versa if they are false.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">15</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">15</span>
 
-<span class="n">x</span> <span class="o">==</span> <span class="n">y</span>  <span class="c"># will return false</span>
-<span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>   <span class="c"># will return false</span>
-<span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span>   <span class="c"># will return true</span>
-
-<span class="c"># you can specify true false directly</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">true</span>
-</code></pre>
-</div>
+<span class="n">x</span> <span class="o">==</span> <span class="n">y</span>  <span class="c1"># will return false
+</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>   <span class="c1"># will return false
+</span><span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span>   <span class="c1"># will return true
+</span>
+<span class="c1"># you can specify true false directly
+</span><span class="n">t</span> <span class="o">=</span> <span class="n">true</span>
+</code></pre></div></div>
 
 <p><br /></p>
 
@@ -332,9 +324,9 @@
 <h4 id="switch-case">Switch Case</h4>
 <p>Python does’t have a switch case statement but you can combine a dictionary and a simple variable to create something similar.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># use dictionary to create cases and variable to store choice</span>
-<span class="c"># use the get method to get return the value and create a default value if choice does not exist</span>
-<span class="n">select</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># use dictionary to create cases and variable to store choice
+# use the get method to get return the value and create a default value if choice does not exist
+</span><span class="n">select</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
   <span class="n">one</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
   <span class="n">ten</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
   <span class="n">hundred</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
@@ -342,17 +334,15 @@
 <span class="p">)</span>
 <span class="n">choice</span> <span class="o">=</span> <span class="s">'hundred'</span>
 <span class="k">print</span><span class="p">(</span><span class="n">select</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">choice</span><span class="p">,</span> <span class="s">'error'</span><span class="p">))</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><br /></p>
 
 <h4 id="ternary">Ternary</h4>
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># for simple if else statements condensed into one line</span>
-<span class="n">x</span> <span class="o">=</span> <span class="bp">True</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># for simple if else statements condensed into one line
+</span><span class="n">x</span> <span class="o">=</span> <span class="bp">True</span>
 <span class="k">print</span><span class="p">(</span><span class="s">"X is true"</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="bp">True</span> <span class="k">else</span> <span class="s">"X is false"</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><br /></p>
 
@@ -361,32 +351,29 @@
 <h4 id="while">While</h4>
 <p>The <code class="highlighter-rouge">while</code> loop loops through until the expression evaluates to false. While loop ex: <code class="highlighter-rouge">while x &lt; 15</code>.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># fibonacci sequence up to 10</span>
-<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># fibonacci sequence up to 10
+</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
 <span class="k">while</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
   <span class="k">print</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">' '</span><span class="p">)</span>
   <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p><br /></p>
 
 <h4 id="for">For</h4>
 <p><code class="highlighter-rouge">for</code> loops allows you to to iterate through an object’s values one by one. For loop ex; <code class="highlighter-rouge">for i in cards</code>. For introduces the loop, variable i represents each value one by one and cards will be object you are looping through. You can loop through almost any object.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'text'</span><span class="p">,</span> <span class="mf">4.57</span><span class="p">]</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s">'text'</span><span class="p">,</span> <span class="mf">4.57</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
   <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p><br /></p>
 
 <h4 id="for-with-counter-og-style">For with Counter (OG style)</h4>
 <p>You can use the enumerate method to create and index while looping. <code class="highlighter-rouge">for index, line in enumerate(array)</code>.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]):</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]):</span>
   <span class="k">print</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p><br /></p>
 
 <h4 id="break--continue">Break &amp; Continue</h4>
@@ -471,38 +458,36 @@
 <h3 id="exceptions-">Exceptions <a name="except"></a></h3>
 <p>Exceptions are use to handle error control. You can use <code class="highlighter-rouge">try</code> and <code class="highlighter-rouge">catch</code> to execute statements and retrieve errors if any. You can create your own exceptions with <code class="highlighter-rouge">raise</code></p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">try</span><span class="p">:</span>
     <span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"filename"</span><span class="p">)</span>
 <span class="k">except</span> <span class="nb">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span><span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="handling-exceptions">Handling Exceptions</h4>
 <p>Use <code class="highlighter-rouge">try</code> and <code class="highlighter-rouge">except</code> for code that may return errors.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># this will catch all error</span>
-<span class="k">try</span><span class="p">:</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># this will catch all error
+</span><span class="k">try</span><span class="p">:</span>
     <span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"errrrror.txt"</span><span class="p">)</span>
 <span class="k">except</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="s">"File open error"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 
-<span class="c">#-----------------------------</span>
-
-<span class="c"># you can also specify a specific error type</span>
-<span class="k">except</span> <span class="nb">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-</code></pre>
-</div>
+<span class="c1">#-----------------------------
+</span>
+<span class="c1"># you can also specify a specific error type
+</span><span class="k">except</span> <span class="nb">IOError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+</code></pre></div></div>
 
 <h4 id="raising-exceptions">Raising Exceptions</h4>
 <p>You can create your own custom error messages by using <code class="highlighter-rouge">raise</code></p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># check to see if the filename ends with .doc</span>
-<span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">'.doc'</span><span class="p">):</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># check to see if the filename ends with .doc
+</span><span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s">'.doc'</span><span class="p">):</span>
   <span class="n">fh</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
   <span class="k">raise</span> <span class="n">FileExtension</span><span class="p">(</span><span class="s">'Filename must end with .doc'</span><span class="p">)</span>
@@ -513,8 +498,7 @@
     <span class="k">print</span><span class="p">(</span><span class="s">"Bad filename"</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span> <span class="k">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><br /></p>
 
@@ -523,82 +507,77 @@
 <h4 id="defining-a-function">Defining a Function</h4>
 <p>To create a function you must first use the <code class="highlighter-rouge">def</code> keyword followed by the name of the function and parenthesis with optional arguments, if any, ex: <code class="highlighter-rouge">def add(x, y)</code>. If you would like to create the function signature without any statements you can use the <code class="highlighter-rouge">pass</code> keyword so that the interpreter will skip over it.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># run main function on load</span>
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># run main function on load
+</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">testfunc</span><span class="p">()</span>
     <span class="n">add</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
 
-<span class="c"># function without arguments</span>
-<span class="k">def</span> <span class="nf">testfunc</span><span class="p">():</span>
+<span class="c1"># function without arguments
+</span><span class="k">def</span> <span class="nf">testfunc</span><span class="p">():</span>
     <span class="k">print</span><span class="p">(</span><span class="s">"this is a test function"</span><span class="p">)</span>
 
-<span class="c"># function with arguments</span>
-<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="c1"># function with arguments
+</span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span> <span class="n">main</span><span class="p">()</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="arguments">Arguments</h4>
 <p>If you don’t know the number of arguments that may be passed you can pass <code class="highlighter-rouge">*args</code> which will then give you access to the values through a tuple.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># function with unknown arguments</span>
-<span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># function with unknown arguments
+</span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
       <span class="n">total</span> <span class="o">+=</span> <span class="n">i</span>
     <span class="k">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
 
 <span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="named-functions">Named Functions</h4>
 <p>Use named arguments <code class="highlighter-rouge">**kwargs</code> to specify default values and access via dictionary.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">numbers</span><span class="p">(</span><span class="n">one</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ten</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">hundred</span> <span class="o">=</span> <span class="mi">100</span><span class="p">)</span>
 
-<span class="c"># function with named arguments</span>
-<span class="k">def</span> <span class="nf">numbers</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="c1"># function with named arguments
+</span><span class="k">def</span> <span class="nf">numbers</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
   <span class="k">print</span><span class="p">(</span><span class="n">kwargs</span><span class="p">[</span><span class="s">'one'</span><span class="p">],</span> <span class="n">kwargs</span><span class="p">[</span><span class="s">'ten'</span><span class="p">])</span>
 
 <span class="n">main</span><span class="p">()</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="return-values-from-functions">Return Values from Functions</h4>
 <p>Use <code class="highlighter-rouge">return</code> keyword followed by object or variable</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="n">numbers</span><span class="p">()</span>
 
-<span class="c"># function with named arguments</span>
-<span class="k">def</span> <span class="nf">numbers</span><span class="p">():</span>
+<span class="c1"># function with named arguments
+</span><span class="k">def</span> <span class="nf">numbers</span><span class="p">():</span>
     <span class="k">return</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 
 <span class="n">main</span><span class="p">()</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="generator-function">Generator Function</h4>
 <p>The generator function allows you to continue running statements after the <code class="highlighter-rouge">yield</code> keyword each time it runs until the loop becomes false.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">numbers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
       <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">' '</span><span class="p">)</span>
 
-<span class="c"># function with named arguments</span>
-<span class="k">def</span> <span class="nf">numbers</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+<span class="c1"># function with named arguments
+</span><span class="k">def</span> <span class="nf">numbers</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
     <span class="n">i</span> <span class="o">=</span> <span class="n">start</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">stop</span><span class="p">:</span>
       <span class="k">yield</span> <span class="n">i</span>
       <span class="n">i</span> <span class="o">+=</span> <span class="n">step</span>
 
 <span class="n">main</span><span class="p">()</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p><br /></p>
 
 <h3 id="classes-">Classes <a name="classes"></a></h3>
@@ -606,52 +585,50 @@
 <h4 id="classes-and-objects">Classes and Objects</h4>
 <p>Classes are how you create your own objects. A class is the blueprint for an object. An object is an instance of a class.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># create human class</span>
-<span class="k">class</span> <span class="nc">Human</span><span class="p">:</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># create human class
+</span><span class="k">class</span> <span class="nc">Human</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">print</span><span class="p">(</span><span class="s">'Hello!'</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">print</span><span class="p">(</span><span class="s">'Zoom zoom!'</span><span class="p">)</span>
 
-<span class="c"># create an instance from Human class        </span>
-<span class="n">pratik</span> <span class="o">=</span> <span class="n">Human</span><span class="p">()</span>
+<span class="c1"># create an instance from Human class        
+</span><span class="n">pratik</span> <span class="o">=</span> <span class="n">Human</span><span class="p">()</span>
 <span class="n">pratik</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
 <span class="n">pratik</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="methods">Methods</h4>
 <p>Call an attribute of an object by using the <code class="highlighter-rouge">.</code> operator. The keyword <code class="highlighter-rouge">self</code> refers to the instance of the object. You can create a constructor method <code class="highlighter-rouge">def __init__(self)</code> which auto executes when a new instance of the class is created.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># create human class</span>
-<span class="k">class</span> <span class="nc">Human</span><span class="p">:</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># create human class
+</span><span class="k">class</span> <span class="nc">Human</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
 
     <span class="k">def</span> <span class="nf">info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"My name is {} and I am {} years old and am {} tall"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"My name is {} and I am {} years old and am {} tall"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
 
-<span class="c"># create an instance from Human class        </span>
-<span class="n">pratik</span> <span class="o">=</span> <span class="n">Human</span><span class="p">(</span><span class="s">"Pratik"</span><span class="p">,</span> <span class="s">"25"</span><span class="p">,</span> <span class="s">"5</span><span class="se">\'</span><span class="s">7"</span><span class="p">)</span>
+<span class="c1"># create an instance from Human class        
+</span><span class="n">pratik</span> <span class="o">=</span> <span class="n">Human</span><span class="p">(</span><span class="s">"Pratik"</span><span class="p">,</span> <span class="s">"25"</span><span class="p">,</span> <span class="s">"5</span><span class="se">\'</span><span class="s">7"</span><span class="p">)</span>
 <span class="n">pratik</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="object-data">Object Data</h4>
 <p>After creating attributes for an object you can create methods to get and set values of each attribute. A better design would be to take in a hash of values and mass assign it.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># create human class</span>
-<span class="k">class</span> <span class="nc">Human</span><span class="p">:</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># create human class
+</span><span class="k">class</span> <span class="nc">Human</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
 
     <span class="k">def</span> <span class="nf">info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"My name is {} and I am {} years old and am {} tall"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"My name is {} and I am {} years old and am {} tall"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
 
     <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
       <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
@@ -662,11 +639,10 @@
 <span class="n">pratik</span> <span class="o">=</span> <span class="n">Human</span><span class="p">(</span><span class="s">"Pratik"</span><span class="p">,</span> <span class="s">"25"</span><span class="p">,</span> <span class="s">"5</span><span class="se">\'</span><span class="s">7"</span><span class="p">)</span>
 <span class="n">pratik</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 <span class="k">print</span><span class="p">(</span><span class="n">pratik</span><span class="o">.</span><span class="n">get_name</span><span class="p">())</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>scalability refactoring</p>
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">variables</span> <span class="o">=</span> <span class="n">kwargs</span>
 
 <span class="k">def</span> <span class="nf">set_variable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">):</span>
@@ -674,26 +650,25 @@
 
 <span class="k">def</span> <span class="nf">get_variable</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">variables</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="inheritance">Inheritance</h4>
 <p>A class can use methods of another class via inheritance. To inherit you simply drop the class as an argument to the inheriting class ex: <code class="highlighter-rouge">def Human(Mammal)</code>. If you have conflicting method signatures the child will override the parent unless you use the <code class="highlighter-rouge">super().methodName()</code>.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># create mammal class</span>
-<span class="k">class</span> <span class="nc">Mammal</span><span class="p">:</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># create mammal class
+</span><span class="k">class</span> <span class="nc">Mammal</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">walk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">print</span><span class="p">(</span><span class="s">'I walk normally.'</span><span class="p">)</span>
     <span class="k">def</span> <span class="nf">talk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">print</span><span class="p">(</span><span class="s">'I can speak!'</span><span class="p">)</span>
 
-<span class="c"># human class inherits from Mammal</span>
-<span class="k">class</span> <span class="nc">Human</span><span class="p">(</span><span class="n">Mammal</span><span class="p">):</span>
+<span class="c1"># human class inherits from Mammal
+</span><span class="k">class</span> <span class="nc">Human</span><span class="p">(</span><span class="n">Mammal</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">height</span><span class="p">):</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">height</span>
 
     <span class="k">def</span> <span class="nf">info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">"My name is {} and I am {} years old and am {} tall"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"My name is {} and I am {} years old and am {} tall"</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">))</span>
 
     <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
       <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
@@ -701,8 +676,8 @@
     <span class="k">def</span> <span class="nf">set_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
       <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
 
-    <span class="c"># The super().method() will call the parent</span>
-    <span class="k">def</span> <span class="nf">walk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># The super().method() will call the parent
+</span>    <span class="k">def</span> <span class="nf">walk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
       <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">walk</span><span class="p">()</span>
       <span class="k">print</span><span class="p">(</span><span class="s">'Zoom Zoom!'</span><span class="p">)</span>
 
@@ -711,13 +686,12 @@
 <span class="k">print</span><span class="p">(</span><span class="n">pratik</span><span class="o">.</span><span class="n">get_name</span><span class="p">())</span>
 <span class="n">pratik</span><span class="o">.</span><span class="n">walk</span><span class="p">()</span>
 <span class="n">pratik</span><span class="o">.</span><span class="n">talk</span><span class="p">()</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="polymorphism">Polymorphism</h4>
 <p>Transforms one class as if it was another class. Also known is duck typing. This is good to create one super class to be used by multiple sub classes.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Dog</span><span class="p">:</span>
   <span class="k">def</span> <span class="nf">bark</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">print</span><span class="p">(</span><span class="s">'Wooof!'</span><span class="p">)</span>
 
@@ -745,20 +719,19 @@
   <span class="n">obj</span><span class="o">.</span><span class="n">walk</span><span class="p">()</span>
   <span class="n">obj</span><span class="o">.</span><span class="n">fur</span><span class="p">()</span>
 
-<span class="c"># create method where it takes an obj</span>
-<span class="k">def</span> <span class="nf">dog_or_cat_doesnt_matter</span><span class="p">(</span><span class="n">dog</span><span class="p">):</span>
+<span class="c1"># create method where it takes an obj
+</span><span class="k">def</span> <span class="nf">dog_or_cat_doesnt_matter</span><span class="p">(</span><span class="n">dog</span><span class="p">):</span>
   <span class="n">dog</span><span class="o">.</span><span class="n">bark</span><span class="p">()</span>
   <span class="n">dog</span><span class="o">.</span><span class="n">walk</span><span class="p">()</span>
 
-<span class="c"># put cat obj inside method for dog obj</span>
-<span class="n">dog_or_cat_doesnt_matter</span><span class="p">(</span><span class="n">whisk</span><span class="p">)</span>
-</code></pre>
-</div>
+<span class="c1"># put cat obj inside method for dog obj
+</span><span class="n">dog_or_cat_doesnt_matter</span><span class="p">(</span><span class="n">whisk</span><span class="p">)</span>
+</code></pre></div></div>
 
 <h4 id="using-generators">Using Generators</h4>
 <p>You can create a class that is iterate-able.  You need to specify in the class the method <code class="highlighter-rouge">def __iter__(self)</code>.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">inclusive_range</span><span class="p">:</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">inclusive_range</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
       <span class="n">numargs</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
       <span class="k">if</span> <span class="n">numargs</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span> <span class="k">raise</span> <span class="nb">TypeError</span><span class="p">(</span><span class="s">'Requires 1 or more arguments'</span><span class="p">)</span>
@@ -771,34 +744,32 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">step</span> <span class="o">=</span> <span class="mi">1</span>
       <span class="k">elif</span> <span class="n">numargs</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
         <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="p">)</span> <span class="o">=</span> <span class="n">args</span>
-      <span class="k">else</span><span class="p">:</span> <span class="k">raise</span> <span class="nb">TypeError</span><span class="p">(</span><span class="s">'Expected 3 arguments, got {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">numargs</span><span class="p">))</span>
+      <span class="k">else</span><span class="p">:</span> <span class="k">raise</span> <span class="nb">TypeError</span><span class="p">(</span><span class="s">'Expected 3 arguments, got {}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="n">numargs</span><span class="p">))</span>
 
-    <span class="c"># allows class to iterate</span>
-    <span class="k">def</span> <span class="nf">__iter_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># allows class to iterate
+</span>    <span class="k">def</span> <span class="nf">__iter_</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
       <span class="n">i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">start</span>
       <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">stop</span><span class="p">:</span>
           <span class="k">yield</span> <span class="n">i</span>
           <span class="n">i</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">step</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="decorators">Decorators</h4>
-<p>Special functions that return other functions. Using <code class="highlighter-rouge"><span class="k">@property</span></code> before a getter or setter method turns it into a decorator. Other decs are <code class="highlighter-rouge">@prop.setter</code> or <code class="highlighter-rouge">@prop.deleter</code>. This will give the control to the object and you don’t have to call the method each time simply access the property and set a new value.</p>
+<p>Special functions that return other functions. Using <code class="highlighter-rouge">@property</code> before a getter or setter method turns it into a decorator. Other decs are <code class="highlighter-rouge">@prop.setter</code> or <code class="highlighter-rouge">@prop.deleter</code>. This will give the control to the object and you don’t have to call the method each time simply access the property and set a new value.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nd">@property</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">@</span><span class="nb">property</span>
 <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">properties</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'name'</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
 
-<span class="nd">@name.setter</span>
+<span class="o">@</span><span class="n">name</span><span class="o">.</span><span class="n">setter</span>
 <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
 
-<span class="c"># you can now do this</span>
-<span class="n">pratik</span> <span class="o">=</span> <span class="n">Human</span><span class="p">()</span>
+<span class="c1"># you can now do this
+</span><span class="n">pratik</span> <span class="o">=</span> <span class="n">Human</span><span class="p">()</span>
 
 <span class="n">pratik</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Pratik"</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p><br /></p>
 
 <h3 id="string-methods--">String Methods  <a name="strings"></a></h3>
@@ -821,15 +792,14 @@
 </ul>
 
 <h4 id="string-format">String Format</h4>
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># this will display b twice and a once.</span>
-<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">4</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># this will display b twice and a once.
+</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">4</span>
 <span class="s">'this {1} will display {1} {0}'</span>
 
-<span class="c"># you can even use variables and drop in a dictionary in the format</span>
-<span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span> <span class="n">pratik</span> <span class="o">=</span> <span class="n">a</span><span class="p">,</span> <span class="n">john</span> <span class="o">=</span> <span class="n">b</span><span class="p">)</span>
-<span class="s">'my name is {pratik} and he is {john}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">d</span><span class="p">)</span>
-</code></pre>
-</div>
+<span class="c1"># you can even use variables and drop in a dictionary in the format
+</span><span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span> <span class="n">pratik</span> <span class="o">=</span> <span class="n">a</span><span class="p">,</span> <span class="n">john</span> <span class="o">=</span> <span class="n">b</span><span class="p">)</span>
+<span class="s">'my name is {pratik} and he is {john}'</span><span class="o">.</span><span class="nb">format</span><span class="p">(</span><span class="o">**</span><span class="n">d</span><span class="p">)</span>
+</code></pre></div></div>
 
 <h4 id="split-and-join-strings">Split and Join Strings</h4>
 <ul>
@@ -886,27 +856,25 @@
   <li><code class="highlighter-rouge">rb</code> binary mode</li>
 </ul>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c"># alternate options r = read only, w = write, a = append to end of file.</span>
-<span class="c"># r+ for read and write</span>
-<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'text.txt'</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># alternate options r = read only, w = write, a = append to end of file.
+# r+ for read and write
+</span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'text.txt'</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
   <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s">''</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="reading-and-writing-files">Reading and Writing Files</h4>
 <p>For small text files you can copy line by line</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">infile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'lines.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">infile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'lines.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
 <span class="n">outfile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'new.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">infile</span><span class="p">:</span>
     <span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="nb">file</span> <span class="o">=</span> <span class="n">outfile</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s">''</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Use buffer for large text files to copy in chunks</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">buffersize</span> <span class="o">=</span> <span class="mi">50000</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">buffersize</span> <span class="o">=</span> <span class="mi">50000</span>
 <span class="n">infile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'lines.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span>
 <span class="n">outfile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'new.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
 <span class="nb">buffer</span> <span class="o">=</span> <span class="n">infile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">buffersize</span><span class="p">)</span>
@@ -914,13 +882,12 @@
     <span class="n">outfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">buffer</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="s">'.'</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s">''</span><span class="p">)</span>
     <span class="nb">buffer</span> <span class="o">=</span> <span class="n">infile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">buffersize</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h4 id="reading-and-writing-binary-files">Reading and Writing Binary Files</h4>
 <p>You must open the file in binary mode but also use buffer</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">buffersize</span> <span class="o">=</span> <span class="mi">50000</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">buffersize</span> <span class="o">=</span> <span class="mi">50000</span>
 <span class="n">infile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'pics.jpg'</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">)</span>
 <span class="n">outfile</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'new.jpg'</span><span class="p">,</span> <span class="s">'w'</span><span class="n">b</span><span class="p">)</span>
 <span class="nb">buffer</span> <span class="o">=</span> <span class="n">infile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">buffersize</span><span class="p">)</span>
@@ -928,8 +895,7 @@
     <span class="n">outfile</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">buffer</span><span class="p">)</span>
     <span class="k">print</span><span class="p">(</span><span class="s">'.'</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s">''</span><span class="p">)</span>
     <span class="nb">buffer</span> <span class="o">=</span> <span class="n">infile</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">buffersize</span><span class="p">)</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 <p><br /></p>
 
 <h3 id="databases-">Databases <a name="database"></a></h3>
