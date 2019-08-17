@@ -304,6 +304,7 @@ a.chart-link:focus {
 
 .grid {
   min-height: 300px;
+  margin-left: 2%;
 }
 
 .grid-item {
