@@ -136,6 +136,14 @@ a:focus {
   padding: 0px !important;
 }
 
+#macro-links li a {
+  font-size: 2em;
+}
+
+#macro-links li a:hover {
+  background-color: black;
+}
+
  /* overide tabs */
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
   border: none;
