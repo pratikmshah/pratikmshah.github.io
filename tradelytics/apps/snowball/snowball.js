@@ -8,12 +8,10 @@ $(function() {
   $('#run').on('click', function() {
     var value = $.trim($("#stock-ticker").val());
 
-    console.log(value);
-
-    // if there is no commmand query get charts
+    // if there is no commmand query get charts or clear search
     if(value.length) {
-      if(value[0] == '-') {
-        console.log("TRUE");
+      if(value[0] == '-' && value[2] == ' ') {
+        commandExe(value);
       } else {
         var tickers = parseTickerSymbols();
         var copyTickers = tickers.slice();
@@ -205,4 +203,24 @@ function changeInputWidth() {
     $input.removeClass()
           .addClass('col-md-8 col-md-offset-2');
   }
+}
+
+
+// Command Execute
+function commandExe(str) {
+  if(str[1].toUpperCase() == 'C') {
+    compareEquities(str);
+  }
+}
+
+// command functions
+function compareEquities(str) {
+  const URL_BASE = "http://bigcharts.marketwatch.com/advchart/frames/frames.asp?show=&insttype=Index&symb=SPX&comptemptext="
+  const URL_MID = "&comp="
+  const URL_END = "&ma=0&maval=9&uf=0&lf=1&lf2=0&lf3=0&type=64&style=320&size=4&x=42&y=10&timeFrameToggle=false&compareToToggle=false&indicatorsToggle=false&chartStyleToggle=false&state=15"
+  console.log(str);
+  var tickers = str.slice(3).split(",").join("%2C");
+
+  // open new window with constructed urls
+  window.open(URL_BASE + tickers + URL_MID + tickers + URL_END);
 }
