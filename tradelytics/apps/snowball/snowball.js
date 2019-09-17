@@ -8,11 +8,16 @@ $(function() {
   $('#run').on('click', function() {
     var value = $.trim($("#stock-ticker").val());
 
+    // if there is no commmand query get charts or clear search
     if(value.length) {
-      var tickers = parseTickerSymbols();
-      var copyTickers = tickers.slice();
-      tickers = createUrls(tickers);
-      displayCharts(tickers, copyTickers);
+      if(value[0] == '-' && value[2] == ' ') {
+        commandExe(value);
+      } else {
+        var tickers = parseTickerSymbols();
+        var copyTickers = tickers.slice();
+        tickers = createUrls(tickers);
+        displayCharts(tickers, copyTickers);
+      }
     } else {
       clear();
     }
@@ -71,7 +76,7 @@ $(function() {
     $('#save').show();
 
     for (var i = 0; i < arr.length; i++) {
-      $chart.append('<div class="chart-container"> <img src=' + arr[i] + ' class="chart" data-border-color="black" /> <input type="checkbox"  name="watchlist" value=' + sym[i].toUpperCase() + '> <br> <div class="col-sm-2 col-sm-offset-5 text-center"> <div class="col-xs-2 col-xs-offset-5""> <a href="https://finviz.com/quote.ashx?t=' + sym[i].toUpperCase() + '" target="_blank" class="chart-link glyphicon glyphicon-new-window"></a> </div> </div> </div>');
+      $chart.append('<div class="chart-container"> <img src=' + arr[i] + ' class="chart" data-border-color="black" /> <input type="checkbox"  name="watchlist" value=' + sym[i].toUpperCase() + '> <br> <div class="col-sm-2 col-sm-offset-5 text-center"> <div class="col-xs-5 col-xs-offset-2""> <a href="https://finviz.com/quote.ashx?t=' + sym[i].toUpperCase() + '" target="_blank" class="chart-link glyphicon glyphicon-object-align-bottom"></a> <a href="https://www.marketwatch.com/investing/stock/' + sym[i].toUpperCase() +'/financials" target="_blank" class="chart-link glyphicon glyphicon-usd"></a></div> </div> </div>');
     }
 
   }
@@ -198,4 +203,24 @@ function changeInputWidth() {
     $input.removeClass()
           .addClass('col-md-8 col-md-offset-2');
   }
+}
+
+
+// Command Execute
+function commandExe(str) {
+  if(str[1].toUpperCase() == 'C') {
+    compareEquities(str);
+  }
+}
+
+// command functions
+function compareEquities(str) {
+  const URL_BASE = "http://bigcharts.marketwatch.com/advchart/frames/frames.asp?show=&insttype=Index&symb=SPX&comptemptext="
+  const URL_MID = "&comp="
+  const URL_END = "&ma=0&maval=9&uf=0&lf=1&lf2=0&lf3=0&type=64&style=320&size=4&x=42&y=10&timeFrameToggle=false&compareToToggle=false&indicatorsToggle=false&chartStyleToggle=false&state=15"
+  console.log(str);
+  var tickers = str.slice(3).split(",").join("%2C");
+
+  // open new window with constructed urls
+  window.open(URL_BASE + tickers + URL_MID + tickers + URL_END);
 }
