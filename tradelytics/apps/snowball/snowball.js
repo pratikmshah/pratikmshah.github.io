@@ -8,11 +8,18 @@ $(function() {
   $('#run').on('click', function() {
     var value = $.trim($("#stock-ticker").val());
 
+    console.log(value);
+
+    // if there is no commmand query get charts
     if(value.length) {
-      var tickers = parseTickerSymbols();
-      var copyTickers = tickers.slice();
-      tickers = createUrls(tickers);
-      displayCharts(tickers, copyTickers);
+      if(value[0] == '-') {
+        console.log("TRUE");
+      } else {
+        var tickers = parseTickerSymbols();
+        var copyTickers = tickers.slice();
+        tickers = createUrls(tickers);
+        displayCharts(tickers, copyTickers);
+      }
     } else {
       clear();
     }
