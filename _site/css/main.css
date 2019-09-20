@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,400italic,700,700italic,300);
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,800,300);
+@import url(https://fonts.googleapis.com/css?family=Muli&display=swap);
 /**
  * Reset some basic elements
  */
@@ -689,7 +690,7 @@ ul li.cust-page-lnks {
         transition: color 0.3s;
         color: #7a7a7a; }
     .block div p {
-      font-family: "Helvetica Neue", "Open Sans", "Lato", sans-serif; }
+      font-family: "Muli", sans-serif; }
       .block div p .btn-read {
         padding: 3px;
         border-radius: 16px;
@@ -743,10 +744,9 @@ code, pre {
   margin: 0 auto;
   display: block; }
   #post div.post-content {
-    font-family: "Helvetica Neue", "Open Sans", "Lato", sans-serif;
-    font-size: 1.250em;
-    line-height: 2.00em;
-    letter-spacing: -.1px;
+    font-family: "Muli", sans-serif;
+    font-size: 1em;
+    line-height: 1.8em;
     color: #333;
     height: auto; }
     #post div.post-content li {
