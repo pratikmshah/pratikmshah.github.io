@@ -1,4 +1,3 @@
-BBBY,
 TWTR,
 AMD,
 MU,

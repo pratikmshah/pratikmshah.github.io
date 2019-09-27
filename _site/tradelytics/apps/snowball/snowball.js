@@ -1,4 +1,5 @@
 var watchlist = 'watchlist';
+var pshahListCounter = 0;
 
 $(function() {
 
@@ -46,9 +47,13 @@ $(function() {
 
   // retrieve stock data from mystocks.json file
   $('#snowb').on('click', function() {
-    $.get('mystocks.txt', function(data) {
+
+    var myList = ['trades.txt', 'investments.txt'];
+
+    $.get(myList[pshahListCounter], function(data) {
       $("#stock-ticker").val(data);
       $('#erase').show();
+      pshahListCounterCheck();
     });
   });
 
@@ -223,4 +228,13 @@ function compareEquities(str) {
 
   // open new window with constructed urls
   window.open(URL_BASE + tickers + URL_MID + tickers + URL_END);
+}
+
+// increment pshahListCounter
+function pshahListCounterCheck() {
+  if(pshahListCounter == 1) {
+    pshahListCounter--;
+  } else {
+    pshahListCounter++;
+  }
 }
