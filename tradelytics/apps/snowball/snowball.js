@@ -11,7 +11,7 @@ $(function() {
 
     // if there is no commmand query get charts or clear search
     if(value.length) {
-      if(value[0] == '-' && value[2] == ' ') {
+      if(value[0] == '-') {
         commandExe(value);
       } else {
         var tickers = parseTickerSymbols();
@@ -215,6 +215,8 @@ function changeInputWidth() {
 function commandExe(str) {
   if(str[1].toUpperCase() == 'C') {
     compareEquities(str);
+  } else if (str.substring(1).toUpperCase() == "TD") {
+    openInNewTab("https://www.tdameritrade.com/home.page");
   }
 }
 
@@ -237,4 +239,10 @@ function pshahListCounterCheck() {
   } else {
     pshahListCounter++;
   }
+}
+
+// open new window and have window in focus
+function openInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
 }
