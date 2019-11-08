@@ -1,8 +1,8 @@
+PAYS,
+HUM,
 TWTR,
-AMD,
 MU,
 CLDR,
 ATVI,
-BAC,
 EB,
 NTNX
