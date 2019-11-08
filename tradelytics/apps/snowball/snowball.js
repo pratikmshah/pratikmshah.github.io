@@ -167,15 +167,13 @@ function onLoad() {
 
 function hide() {
   $('#save').hide();
-  $('#stock-ticker').val('');
-  $('#erase').hide();
+  clearSearch();
 }
 
 function clear() {
   $('#charts').empty();
   $('#save').hide();
-  $('#stock-ticker').val('');
-  $('#erase').hide();
+  clearSearch();
 }
 
 function infoTabs() {
@@ -226,6 +224,7 @@ function commandExe(str) {
                   "https://seekingalpha.com/",
                   "https://www.tdameritrade.com/home.page"]);
   }
+  clearSearch();
 }
 
 // command functions
@@ -237,7 +236,7 @@ function compareEquities(str) {
   var tickers = str.slice(3).split(",").join("%2C");
 
   // open new window with constructed urls
-  window.open(URL_BASE + tickers + URL_MID + tickers + URL_END);
+  openInNewTab([URL_BASE + tickers + URL_MID + tickers + URL_END]);
 }
 
 // increment pshahListCounter
@@ -254,4 +253,10 @@ function openInNewTab(url) {
   for (var i = 0; i < url.length; i++) {
     window.open(url[i], '_blank');
   }
+}
+
+// clear search box
+function clearSearch() {
+  $('#stock-ticker').val('');
+  $('#erase').hide();
 }
