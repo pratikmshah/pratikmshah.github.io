@@ -216,7 +216,15 @@ function commandExe(str) {
   if(str[1].toUpperCase() == 'C') {
     compareEquities(str);
   } else if (str.substring(1).toUpperCase() == "TD") {
-    openInNewTab("https://www.tdameritrade.com/home.page");
+    openInNewTab(["https://www.tdameritrade.com/home.page"]);
+  } else if (str.substring(1).toUpperCase() == "OPENL") {
+    openInNewTab(["https://stocktwits.com/",
+                  "https://seekingalpha.com/"]);
+  } else if (str.substring(1).toUpperCase() == "OPEN") {
+    openInNewTab(["https://www.cnbc.com/",
+                  "https://stocktwits.com/",
+                  "https://seekingalpha.com/",
+                  "https://www.tdameritrade.com/home.page"]);
   }
 }
 
@@ -243,6 +251,7 @@ function pshahListCounterCheck() {
 
 // open new window and have window in focus
 function openInNewTab(url) {
-  var win = window.open(url, '_blank');
-  win.focus();
+  for (var i = 0; i < url.length; i++) {
+    window.open(url[i], '_blank');
+  }
 }
