@@ -1,5 +1,5 @@
-PAYS,
-HUM,
+PYPL,
+SPLK,
 TWTR,
 MU,
 CLDR,

@@ -1,8 +1,8 @@
+PYPL,
+SPLK,
 TWTR,
-AMD,
 MU,
 CLDR,
 ATVI,
-BAC,
 EB,
 NTNX
