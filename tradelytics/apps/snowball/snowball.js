@@ -215,6 +215,8 @@ function commandExe(str) {
     compareEquities(str);
   } else if (str.substring(1).toUpperCase() == "TD") {
     openInNewTab(["https://www.tdameritrade.com/home.page"]);
+  } else if (str.substring(1).toUpperCase() == "NUM") {
+    openInNewTab(["http://pratikmshah.github.io/tradelytics/apps/numbers/numbers.html"]);
   } else if (str.substring(1).toUpperCase() == "OPENL") {
     openInNewTab(["https://stocktwits.com/",
                   "https://seekingalpha.com/"]);
