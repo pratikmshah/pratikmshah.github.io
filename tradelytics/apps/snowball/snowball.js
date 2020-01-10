@@ -224,7 +224,8 @@ function commandExe(str) {
     openInNewTab(["https://www.cnbc.com/",
                   "https://stocktwits.com/",
                   "https://seekingalpha.com/",
-                  "https://www.tdameritrade.com/home.page"]);
+                  "https://www.tdameritrade.com/home.page",
+                  "https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
   }
   clearSearch();
 }
