@@ -5,5 +5,4 @@ TWTR,
 MU,
 CLDR,
 ATVI,
-EB,
 NTNX
