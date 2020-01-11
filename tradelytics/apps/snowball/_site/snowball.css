@@ -1,0 +1,375 @@
+body {
+  /* background: #0088dc; /* #0064ff; #8E0E00; #1A1D27; */
+  background: #050510;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Nunito', sans-serif;
+  color: white;
+}
+
+input[type='checkbox'] {
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    width: 24px;
+    height: 24px;
+    background: #333;
+    border-radius: 5px;
+    border: 3px solid black;
+    margin-top: 15px;
+}
+input[type='checkbox']:checked {
+    background: green;
+}
+
+a:focus {
+  outline: none;
+}
+
+.query-container {
+  padding: 10px;
+  margin-top: 11%;
+}
+
+#logo {
+  padding-bottom: 23px;
+}
+
+#logo h1 a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+#logo h1 {
+  font-size: 4.5em;
+}
+
+#logo h1 a i {
+  font-size: .62em;
+}
+
+#snowb {
+  width: 48px;
+  height: auto;
+}
+
+#search div.input-group {
+  background-color: #11131D;
+  outline: 0;
+}
+
+#search div.input-group input {
+  box-shadow: none;
+  border-radius: 0px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-right: 0px;
+  border-top-color: #11131D;
+  border-left-color: #11131D;
+  border-bottom-color: #11131D;
+  background-color: transparent;
+  color: #FFF;
+}
+
+#search div.input-group span#run {
+  color: #FFF;
+  border-radius: 0px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-color: #11131D;
+  background-color: transparent;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#search div.input-group span#run:hover {
+  color: #ea0a8e;
+  background-color: black;
+  border-color: black;
+}
+
+#search div.input-group span#erase {
+  color: #FFF;
+  background-color: transparent;
+  border-top-color: #11131D;
+  border-bottom-color: #11131D;
+  border-left: 0px;
+  border-right: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#search div.input-group span#erase:hover {
+  color: red;
+}
+
+#performance {
+  margin-top: 25px;
+}
+
+#performance ul {
+  margin-bottom: 0px;
+}
+
+#performance li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 15px;
+}
+
+#performance li a:hover {
+  color: #ea0a8e; /* #01CD74; */
+}
+
+#performance ul li.dropdown {
+  position: inherit;
+}
+
+#news {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#news div.grid a {
+  padding: 0px !important;
+}
+
+#macro-links li a {
+  font-size: 2em;
+}
+
+#macro-links li a:hover {
+  background-color: black;
+}
+
+ /* overide tabs */
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  border: none;
+  color: #ea0a8e !important;
+  background-color: black !important;
+}
+
+ul.nav-tabs {
+  border-bottom: 1px solid #ea0a8e !important;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+  background-color: black !important;
+}
+
+.nav-tabs>li>a:hover {
+  border-color: black !important;
+  border-bottom: 0px;
+}
+
+ /* end of override of tabs */
+
+#funds table tbody tr td a {
+  padding: 0px !important;
+  font-size: 14px;
+}
+
+#funds table tbody tr th {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* override table color */
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  border-color: #ea0a8e;
+}
+
+
+#scans div div li {
+  padding-bottom: 5px;
+}
+
+#scans div div li a {
+  font-size: 16px;
+}
+
+#etf-scans div div li a:hover {
+  color: #ea0a8e;
+}
+
+#scans div div li a:hover {
+  color: #ea0a8e;
+}
+
+.dropdown-menu {
+  border-radius: 0 !important;
+  background-color: black !important;
+  width: 100%;
+}
+
+.dropdown-header {
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 15px;
+  color: #FF0090;
+}
+
+/* for dropdown menu hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+#save {
+  display: none;
+  background-color: #FF0090;
+  color: white;
+  border-color: #FF0090;
+}
+
+#charts {
+  margin-top: 350px;
+}
+
+.chart-container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.chart-container input {
+  display: none;
+}
+
+.chart {
+  border: 5px solid;
+  border-color: black;
+}
+
+.chart-link {
+  font-size: 1.5em;
+  margin-top: 10px;
+  color: #222222;
+}
+
+a.chart-link:hover {
+  color: #ea0a8e;
+  text-decoration: none;
+}
+
+a.chart-link:focus {
+  text-decoration: none;
+}
+
+.modal-title,
+.modal-body,
+.modal-footer {
+  color: black !important;
+}
+
+.modal-chart-img {
+  max-width: 568px;
+  height: auto;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+#scroll-top {
+  display: none;
+  position: fixed;
+  border: none;
+  bottom: 25px;
+  right: 75px;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 99;
+  padding: 0px;
+  font-size: 3em;
+}
+
+#scroll-top  span.glyphicon {
+  color: #00A3E0;
+  text-shadow: 2px 0px black, 1px -1px black, 1px -1px black, 2px 0px black;
+}
+
+#scroll-top  span.glyphicon:hover {
+  color: #ea0a8e;
+  text-shadow: 2px 0px black, 1px -1px black, 1px -1px black, 2px 0px black;
+}
+
+.input-focus-txt {
+  border-top-color: #252d3f !important;
+  border-left-color: #252d3f !important;
+  border-bottom-color: #252d3f !important;
+}
+
+.input-focus-del {
+  border-top-color: #252d3f !important;
+  border-bottom-color: #252d3f !important;
+}
+
+.input-focus-btn {
+  border-color: #252d3f !important;
+}
+
+.grid {
+  min-height: 300px;
+  margin-left: 2%;
+}
+
+.grid-item {
+  float: left;
+  width: 96px;
+  height: auto;
+  transition: all .2s ease-in-out;
+}
+
+.grid-item:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 415px) {
+  #scroll-top {
+    bottom: 20px;
+    right: 40px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #scroll-top {
+    bottom: 10px;
+    right: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  #markets .modal-dialog {
+    width: 1250px;
+  }
+}
+
+/* START ROTATE STYLES */
+.rotator img {
+-webkit-transition: all 1s ease-in-out;
+-moz-transition: all 1s ease-in-out;
+-o-transition: all 1s ease-in-out;
+-ms-transition: all 1s ease-in-out;
+}
+
+.rotator img:hover {
+-webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-o-transform: rotate(360deg);
+-ms-transform: rotate(360deg);
+}
+/* END ROTATE STYLES */
+
+.text-none {
+  text-decoration: none !important;
+}
+
+.blk {
+  color: black;
+}
+
+/* DEBUG TOOLS */
+.dbug {
+  border: 1px solid red;
+}
