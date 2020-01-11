@@ -1,0 +1,8 @@
+PYPL,
+AYX,
+OKTA,
+TWTR,
+MU,
+CLDR,
+ATVI,
+NTNX
