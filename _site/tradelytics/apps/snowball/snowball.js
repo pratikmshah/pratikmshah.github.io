@@ -222,6 +222,7 @@ function commandExe(str) {
                   "https://seekingalpha.com/"]);
   } else if (str.substring(1).toUpperCase() == "OPEN") {
     openInNewTab(["https://www.cnbc.com/",
+                  "https://twitter.com/home",
                   "https://stocktwits.com/",
                   "https://seekingalpha.com/",
                   "https://www.tdameritrade.com/home.page",
