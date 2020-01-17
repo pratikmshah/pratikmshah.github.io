@@ -211,24 +211,29 @@ function changeInputWidth() {
 
 // Command Execute
 function commandExe(str) {
+
+  var userCmd = str.substring(1).toUpperCase() // get user command
+
   if(str[1].toUpperCase() == 'C') {
     compareEquities(str);
-  } else if (str.substring(1).toUpperCase() == "TD") {
+  } else if (userCmd == "TD") {
     openInNewTab(["https://www.tdameritrade.com/home.page"]);
-  } else if (str.substring(1).toUpperCase() == "NUM") {
+  } else if (userCmd == "NUM") {
     openInNewTab(["http://pratikmshah.github.io/tradelytics/apps/numbers/numbers.html"]);
-  } else if (str.substring(1).toUpperCase() == "OPENL") {
+  } else if (userCmd == "SEARCH") {
+    openInNewTab(["https://docs.google.com/spreadsheets/d/17GLAgTKGnVbRGqBJyYDuVOeDbHZOrxrlezlzAcGk-vg/edit?usp=sharing"]);
+  } else if (userCmd == "OPENL") {
     openInNewTab(["https://stocktwits.com/",
                   "https://seekingalpha.com/"]);
-  } else if (str.substring(1).toUpperCase() == "SEARCH") {
-    openInNewTab(["https://docs.google.com/spreadsheets/d/17GLAgTKGnVbRGqBJyYDuVOeDbHZOrxrlezlzAcGk-vg/edit?usp=sharing"]);
-  } else if (str.substring(1).toUpperCase() == "OPEN") {
+  } else if (userCmd == "OPEN") {
     openInNewTab(["https://www.cnbc.com/",
                   "https://twitter.com/home",
                   "https://stocktwits.com/",
                   "https://seekingalpha.com/",
                   "https://www.tdameritrade.com/home.page",
                   "https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
+  } else if (userCmd == "HELP") {
+    $("#help").modal('show');
   }
   clearSearch();
 }
