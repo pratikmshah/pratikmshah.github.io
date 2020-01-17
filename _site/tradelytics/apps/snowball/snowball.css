@@ -369,6 +369,30 @@ a.chart-link:focus {
   color: black;
 }
 
+/* help modal */
+div#help div div.modal-content {
+  background-color: black;
+  min-height: 500px;
+}
+
+div#help div div.modal-content div.modal-header {
+  border-bottom: none;
+}
+
+div#help div div.modal-content div.modal-body div div ul {
+  padding-left: 25px;
+}
+
+div#help div div.modal-content div.modal-body div div ul li {
+  margin-bottom: 2px;
+}
+
+.matrix {
+    color: #00DA00 !important;
+}
+
+/* help modal END */
+
 /* DEBUG TOOLS */
 .dbug {
   border: 1px solid red;
