@@ -220,6 +220,8 @@ function commandExe(str) {
   } else if (str.substring(1).toUpperCase() == "OPENL") {
     openInNewTab(["https://stocktwits.com/",
                   "https://seekingalpha.com/"]);
+  } else if (str.substring(1).toUpperCase() == "SEARCH") {
+    openInNewTab(["https://docs.google.com/spreadsheets/d/17GLAgTKGnVbRGqBJyYDuVOeDbHZOrxrlezlzAcGk-vg/edit?usp=sharing"]);
   } else if (str.substring(1).toUpperCase() == "OPEN") {
     openInNewTab(["https://www.cnbc.com/",
                   "https://twitter.com/home",
