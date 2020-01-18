@@ -227,6 +227,8 @@ function commandExe(str) {
                   "https://seekingalpha.com/"]);
   } else if (userCmd == "OPEN") {
     openInNewTab(["https://www.cnbc.com/",
+                  "https://www.marketwatch.com/tools/screener/premarket?mod=stocks",
+                  "https://www.marketwatch.com/tools/stockresearch/updown/?mod=stocks",
                   "https://twitter.com/home",
                   "https://stocktwits.com/",
                   "https://seekingalpha.com/",
