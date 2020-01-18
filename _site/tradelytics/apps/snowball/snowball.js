@@ -218,6 +218,8 @@ function commandExe(str) {
     compareEquities(str);
   } else if (userCmd == "TD") {
     openInNewTab(["https://www.tdameritrade.com/home.page"]);
+  } else if (userCmd == "CNBC") {
+    openInNewTab(["https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
   } else if (userCmd == "NUM") {
     openInNewTab(["http://pratikmshah.github.io/tradelytics/apps/numbers/numbers.html"]);
   } else if (userCmd == "SEARCH") {
@@ -227,6 +229,9 @@ function commandExe(str) {
                   "https://seekingalpha.com/"]);
   } else if (userCmd == "OPEN") {
     openInNewTab(["https://www.cnbc.com/",
+                  "https://www.marketwatch.com/tools/screener/premarket?mod=stocks",
+                  "https://www.marketwatch.com/tools/stockresearch/updown/?mod=stocks",
+                  "https://www.barchart.com/options/most-active/stocks",
                   "https://twitter.com/home",
                   "https://stocktwits.com/",
                   "https://seekingalpha.com/",
