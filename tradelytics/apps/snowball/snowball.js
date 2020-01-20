@@ -218,7 +218,7 @@ function commandExe(str) {
     compareEquities(str);
   } else if (userCmd == "TD") {
     openInNewTab(["https://www.tdameritrade.com/home.page"]);
-  } else if (userCmd == "CNBC") {
+  } else if (userCmd == "TV") {
     openInNewTab(["https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
   } else if (userCmd == "NUM") {
     openInNewTab(["http://pratikmshah.github.io/tradelytics/apps/numbers/numbers.html"]);
