@@ -33,7 +33,7 @@ numbers: "/tradelytics/apps/numbers/numbers.html"
 
 # about me links
 resume:
-resume-pdf: 
+resume-pdf:
 
 # Build settings
 markdown: kramdown
@@ -46,6 +46,6 @@ defaults:
       type: "posts"
     values:
       category: programming
-      permalink: /blog/:categories/:title
+      permalink: /blog/:title
       layout: "post"
       comments: true
