@@ -3,7 +3,7 @@ title:  "Valuation"
 date:   2018-07-18
 image: "/valuation/valuation.jpeg"
 ---
-This blog post is a continuation of notes from my previous post on investment banking. This post will contain notes on company valuations, financial modeling using the DCF method, and leverage buyouts(LBO).
+This blog post is a continuation of notes from my previous post on investment banking. This post will contain notes on company valuations, financial modeling using the DCF method, and leverage buyouts(LBO). My notes are from a course called <a href="https://www.udemy.com/course/the-complete-investment-banking-course-2016/">The Complete Investment Banking Course</a> on Udemy. It is really great and there is a lot of information that has since been updated check it out (not affiliate link or affiliated in anyway).
 
 <br>
 

@@ -3,7 +3,7 @@ title:  "Investment Banking"
 date:   2018-07-18
 image: "/invest-bank/investmentbanks.jpg"
 ---
-This blog post contains my notes for a course on basics in understanding Investment Banking(IB). In the course they discussed the history of IB, the four main areas of investment banking, company valuations and modeling, and leverage buyouts(LBO).
+This blog post contains my notes for a course on basics in understanding Investment Banking(IB). In the course they discussed the history of IB, the four main areas of investment banking, company valuations and modeling, and leverage buyouts(LBO). My notes are from a course called <a href="https://www.udemy.com/course/the-complete-investment-banking-course-2016/">The Complete Investment Banking Course</a> on Udemy. It is really great and there is a lot of information that has since been updated check it out (not affiliate link or affiliated in anyway).
 
 <br>
 
