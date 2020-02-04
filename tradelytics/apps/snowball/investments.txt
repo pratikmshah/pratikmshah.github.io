@@ -16,4 +16,5 @@ MSFT,
 NKE,
 T,
 TROW,
-WFC
+WFC,
+XOM
