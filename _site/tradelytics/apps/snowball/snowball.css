@@ -318,7 +318,7 @@ a.chart-link:focus {
   float: left;
   width: 96px;
   height: auto;
-  transition: all .2s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 .grid-item:hover {
