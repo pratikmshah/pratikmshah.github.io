@@ -1,5 +1,4 @@
-CRON,
-ZS,
+SQ,
 PYPL,
 AYX,
 OKTA,

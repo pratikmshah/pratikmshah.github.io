@@ -81,7 +81,7 @@ $(function() {
     $('#save').show();
 
     for (var i = 0; i < arr.length; i++) {
-      $chart.append('<div class="chart-container"> <img src=' + arr[i] + ' class="chart" data-border-color="black" /> <input type="checkbox"  name="watchlist" value=' + sym[i].toUpperCase() + '> <br> <div class="col-sm-2 col-sm-offset-5 text-center"> <div class="col-xs-5 col-xs-offset-2""> <a href="https://finviz.com/quote.ashx?t=' + sym[i].toUpperCase() + '" target="_blank" class="chart-link glyphicon glyphicon-object-align-bottom"></a> <a href="https://www.marketwatch.com/investing/stock/' + sym[i].toUpperCase() +'/financials" target="_blank" class="chart-link glyphicon glyphicon-usd"></a> <a href="https://seekingalpha.com/symbol/' + sym[i].toUpperCase() + '" target="_blank" class="chart-link glyphicon glyphicon-book"></a> </div> </div> </div>');
+      $chart.append('<div class="chart-container"> <img src=' + arr[i] + ' class="chart" data-border-color="black" /> <input type="checkbox"  name="watchlist" value=' + sym[i].toUpperCase() + '> <br> <div class="col-sm-2 col-sm-offset-5 text-center"> <div class="col-xs-6 col-xs-offset-2""> <a href="https://finviz.com/quote.ashx?t=' + sym[i].toUpperCase() + '" target="_blank" class="chart-link glyphicon glyphicon-object-align-bottom"></a> <a href="https://www.marketwatch.com/investing/stock/' + sym[i].toUpperCase() +'/financials" target="_blank" class="chart-link glyphicon glyphicon-usd"></a> <a href="https://seekingalpha.com/symbol/' + sym[i].toUpperCase() + '" target="_blank" class="chart-link glyphicon glyphicon-book"></a> <a href="https://stocktwits.com/symbol/' + sym[i].toUpperCase() + '" target="_blank" class="chart-link glyphicon glyphicon-comment"></a> </div> </div> </div>');
     }
 
   }
