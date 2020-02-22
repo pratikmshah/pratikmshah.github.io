@@ -237,22 +237,31 @@ function commandExe(str) {
                   "https://seekingalpha.com/",
                   "https://www.tdameritrade.com/home.page",
                   "https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
+  } else if (str[1].toUpperCase() == 'A') {
+    seekingAlpha(str);
   } else if (userCmd == "HELP") {
     $("#help").modal('show');
   }
-  clearSearch();
+
 }
 
 // command functions
 function compareEquities(str) {
-  const URL_BASE = "http://bigcharts.marketwatch.com/advchart/frames/frames.asp?show=&insttype=Index&symb=SPX&comptemptext="
-  const URL_MID = "&comp="
-  const URL_END = "&ma=0&maval=9&uf=0&lf=1&lf2=0&lf3=0&type=64&style=320&size=4&x=42&y=10&timeFrameToggle=false&compareToToggle=false&indicatorsToggle=false&chartStyleToggle=false&state=15"
-  console.log(str);
+  const URL_BASE = "http://bigcharts.marketwatch.com/advchart/frames/frames.asp?show=&insttype=Index&symb=SPX&comptemptext=";
+  const URL_MID = "&comp=";
+  const URL_END = "&ma=0&maval=9&uf=0&lf=1&lf2=0&lf3=0&type=64&style=320&size=4&x=42&y=10&timeFrameToggle=false&compareToToggle=false&indicatorsToggle=false&chartStyleToggle=false&state=15";
   var tickers = str.slice(3).split(",").join("%2C");
 
   // open new window with constructed urls
   openInNewTab([URL_BASE + tickers + URL_MID + tickers + URL_END]);
+}
+
+// open seeking alpha hubs
+function seekingAlpha(str) {
+  const URL_BASE = "https://seekingalpha.com/symbol/";
+  var tickers = combineURL(URL_BASE, str.slice(3).split(","));
+  console.log(tickers);
+  openInNewTab(tickers);
 }
 
 // increment pshahListCounter
@@ -275,4 +284,12 @@ function openInNewTab(url) {
 function clearSearch() {
   $('#stock-ticker').val('');
   $('#erase').hide();
+}
+
+// concate urls base url + array of links to join
+function combineURL(base, arr) {
+  for (var i = 0; i < arr.length; i++) {
+    arr[i] = base + arr[i];
+  }
+  return arr;
 }

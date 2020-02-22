@@ -1,4 +1,4 @@
-SQ,
+CSCO,
 PYPL,
 AYX,
 OKTA,
