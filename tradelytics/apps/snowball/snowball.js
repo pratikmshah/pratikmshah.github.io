@@ -242,7 +242,7 @@ function commandExe(str) {
   } else if (userCmd == "HELP") {
     $("#help").modal('show');
   }
-
+  clearSearch();
 }
 
 // command functions
