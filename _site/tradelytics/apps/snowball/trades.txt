@@ -1,6 +1,6 @@
+INTC,
 CSCO,
 PYPL,
-AYX,
 OKTA,
 TWTR,
 MU,
