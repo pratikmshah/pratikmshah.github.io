@@ -213,9 +213,12 @@ function changeInputWidth() {
 function commandExe(str) {
 
   var userCmd = str.substring(1).toUpperCase() // get user command
+  var charCmd = str[1].toUpperCase();
 
-  if(str[1].toUpperCase() == 'C') {
+  if (charCmd == 'C') {
     compareEquities(str);
+  } else if (charCmd == 'A') {
+    stockAnalysis(str.slice(3).split(","));
   } else if (userCmd == "TD") {
     openInNewTab(["https://www.tdameritrade.com/home.page"]);
   } else if (userCmd == "TV") {
@@ -237,7 +240,7 @@ function commandExe(str) {
                   "https://seekingalpha.com/",
                   "https://www.tdameritrade.com/home.page",
                   "https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
-  } else if (str[1].toUpperCase() == 'A') {
+  } else if (charCmd == 'S') {
     seekingAlpha(str);
   } else if (userCmd == "HELP") {
     $("#help").modal('show');
@@ -260,7 +263,6 @@ function compareEquities(str) {
 function seekingAlpha(str) {
   const URL_BASE = "https://seekingalpha.com/symbol/";
   var tickers = combineURL(URL_BASE, str.slice(3).split(","));
-  console.log(tickers);
   openInNewTab(tickers);
 }
 
@@ -292,4 +294,20 @@ function combineURL(base, arr) {
     arr[i] = base + arr[i];
   }
   return arr;
+}
+
+function stockAnalysis(ticker) {
+  ticker = ticker[0];
+  openInNewTab(["https://trends.google.com/trends/?geo=US",
+                "https://stocktwits.com/symbol/" + ticker,
+                "https://www.linkedin.com/search/results/all/?keywords=" + ticker,
+                "https://twitter.com/search?q=" + ticker + "company",
+                "https://www.google.com/search?q=" + ticker + " stock+company+news",
+                "https://www.marketwatch.com/investing/stock/" + ticker +"/financials",
+                "https://finviz.com/quote.ashx?t=" + ticker,
+                "https://earningscast.com/companies/" + ticker,
+                "https://www.reuters.com/companies/" + ticker + "/people",
+                "https://seekingalpha.com/symbol/" + ticker,
+                "https://www.sec.gov/cgi-bin/browse-edgar?CIK=" + ticker,
+              ]);
 }

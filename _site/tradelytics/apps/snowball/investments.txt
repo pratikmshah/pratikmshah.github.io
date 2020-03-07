@@ -17,4 +17,5 @@ NKE,
 T,
 TROW,
 WFC,
-XOM
+XOM,
+CVX
