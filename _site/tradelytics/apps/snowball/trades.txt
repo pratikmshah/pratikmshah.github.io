@@ -1,9 +1,6 @@
 INTC,
 CSCO,
-PYPL,
-OKTA,
 TWTR,
-MU,
 CLDR,
 ATVI,
 NTNX

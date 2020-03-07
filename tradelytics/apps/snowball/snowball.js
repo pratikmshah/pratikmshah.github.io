@@ -298,12 +298,16 @@ function combineURL(base, arr) {
 
 function stockAnalysis(ticker) {
   ticker = ticker[0];
-  openInNewTab(["https://www.sec.gov/cgi-bin/browse-edgar?CIK=" + ticker,
-                "https://seekingalpha.com/symbol/" + ticker,
-                "https://earningscast.com/companies/" + ticker,
-                "https://finviz.com/quote.ashx?t=" + ticker,
-                "https://www.marketwatch.com/investing/stock/" + ticker +"/financials",
-                "https://www.google.com/search?q=" + ticker + "stock+company+news",
+  openInNewTab(["https://trends.google.com/trends/?geo=US",
+                "https://stocktwits.com/symbol/" + ticker,
+                "https://www.linkedin.com/search/results/all/?keywords=" + ticker,
                 "https://twitter.com/search?q=" + ticker + "company",
+                "https://www.google.com/search?q=" + ticker + " stock+company+news",
+                "https://www.marketwatch.com/investing/stock/" + ticker +"/financials",
+                "https://finviz.com/quote.ashx?t=" + ticker,
+                "https://earningscast.com/companies/" + ticker,
+                "https://www.reuters.com/companies/" + ticker + "/people",
+                "https://seekingalpha.com/symbol/" + ticker,
+                "https://www.sec.gov/cgi-bin/browse-edgar?CIK=" + ticker,
               ]);
 }
