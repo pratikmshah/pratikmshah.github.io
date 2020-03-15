@@ -1,7 +1,5 @@
 AAPL,
-BK,
 BLK,
-BMY,
 BX,
 CMCSA,
 CSCO,
