@@ -200,9 +200,15 @@ function inputFocusOut() {
 }
 
 function changeInputWidth() {
-  if( $(window).width() > 1700 ) {
-    var $input = $("#search");
+  var $input = $("#search");
+  var $performance = $("#performance");
 
+  if( $(window).width() > 2000 ) {
+    $input.removeClass()
+          .addClass('col-lg-6 col-lg-offset-3');
+    $performance.removeClass()
+          .addClass('col-lg-8 col-lg-offset-2');
+  } else if( $(window).width() > 1700 ) {
     $input.removeClass()
           .addClass('col-md-8 col-md-offset-2');
   }
