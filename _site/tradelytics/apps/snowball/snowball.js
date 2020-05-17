@@ -235,7 +235,8 @@ function commandExe(str) {
     openInNewTab(["https://docs.google.com/spreadsheets/d/17GLAgTKGnVbRGqBJyYDuVOeDbHZOrxrlezlzAcGk-vg/edit?usp=sharing"]);
   } else if (userCmd == "OPENL") {
     openInNewTab(["https://stocktwits.com/",
-                  "https://seekingalpha.com/"]);
+                  "https://seekingalpha.com/",
+                  "https://twitter.com/home"]);
   } else if (userCmd == "OPEN") {
     openInNewTab(["https://www.cnbc.com/",
                   "https://www.marketwatch.com/tools/screener/premarket?mod=stocks",
