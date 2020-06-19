@@ -1,7 +1,5 @@
-MU,
-LMT,
-INTC,
-CSCO,
-TWTR,
+WMG,
 CLDR,
+INTC,
+TWTR,
 NTNX
