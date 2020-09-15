@@ -1,3 +1,5 @@
+FB,
+TSM,
 GOLD,
 BAC,
 NET,
