@@ -1,9 +1,6 @@
-FB,
 TSM,
 GOLD,
-BAC,
 NET,
 CLDR,
 INTC,
-TWTR,
 NTNX
