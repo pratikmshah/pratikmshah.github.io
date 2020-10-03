@@ -1,6 +1,6 @@
+IVZ,
 TSM,
 GOLD,
-NET,
 CLDR,
 INTC,
 NTNX
