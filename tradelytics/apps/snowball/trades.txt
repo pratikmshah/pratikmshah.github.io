@@ -1,3 +1,6 @@
+ARWR,
+AMD,
+FSLY,
 IVZ,
 TSM,
 GOLD,
