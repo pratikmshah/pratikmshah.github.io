@@ -1,7 +1,6 @@
-PYPL,
+DKNG,
 ARWR,
 AMD,
-IVZ,
 TSM,
 GOLD,
 CLDR,
