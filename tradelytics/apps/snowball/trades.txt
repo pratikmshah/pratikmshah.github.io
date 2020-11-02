@@ -1,3 +1,4 @@
+LMND,
 DKNG,
 ARWR,
 AMD,
