@@ -144,6 +144,10 @@ a:focus {
   background-color: black;
 }
 
+#earnings div div.modal-content {
+  background-color: #292F33;
+}
+
  /* overide tabs */
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
   border: none;

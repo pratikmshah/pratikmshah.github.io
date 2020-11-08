@@ -1,3 +1,4 @@
+LUMN,
 BLK,
 CSCO,
 INTC,
