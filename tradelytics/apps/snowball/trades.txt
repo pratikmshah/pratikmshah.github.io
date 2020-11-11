@@ -1,6 +1,6 @@
+BAC,
 LMND,
 DKNG,
-ARWR,
 AMD,
 BAM,
 CLDR,
