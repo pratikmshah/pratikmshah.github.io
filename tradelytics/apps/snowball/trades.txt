@@ -1,7 +1,7 @@
 TSM,
+AMD,
 BAC,
 DKNG,
-AMD,
-CLDR,
+NTNX,
 INTC,
-NTNX
+CLDR,

@@ -1,7 +1,7 @@
-LUMN,
 BLK,
 CSCO,
 INTC,
+LUMN,
 MO,
 MSFT,
 T,
