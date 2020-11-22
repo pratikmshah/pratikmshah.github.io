@@ -275,8 +275,8 @@ function seekingAlpha(str) {
 
 // increment pshahListCounter
 function pshahListCounterCheck() {
-  if(pshahListCounter == 1) {
-    pshahListCounter--;
+  if(pshahListCounter == 2) {
+    pshahListCounter = 0;
   } else {
     pshahListCounter++;
   }

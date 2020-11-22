@@ -4,4 +4,4 @@ BAC,
 DKNG,
 NTNX,
 INTC,
-CLDR,
+CLDR
