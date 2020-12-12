@@ -1,7 +1,4 @@
-DOCU,
 PLTR,
-AAPL,
-TSM,
 AMD,
 DKNG,
 NTNX,
