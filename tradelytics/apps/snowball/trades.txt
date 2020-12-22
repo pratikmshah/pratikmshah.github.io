@@ -1,3 +1,6 @@
+PZZA,
+JKS,
+MS,
 PLTR,
 AMD,
 DKNG,
