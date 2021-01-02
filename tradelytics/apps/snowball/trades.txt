@@ -1,11 +1,9 @@
-DKNG,
 BRK-B,
 KEY,
 COUP,
 PZZA,
 MS,
 PLTR,
-AMD,
 NTNX,
 INTC,
 CLDR
