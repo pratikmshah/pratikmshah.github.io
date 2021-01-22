@@ -86,7 +86,7 @@
         <article id="post" class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <p class="post-meta"><time datetime="2018-09-17T00:00:00-07:00" itemprop="datePublished">Sep 17, 2018</time></p>
+    <p class="post-meta"><time datetime="2018-09-17T00:00:00-05:00" itemprop="datePublished">Sep 17, 2018</time></p>
     <h1 id="post-title" class="post-title" itemprop="name headline">JavaScript</h1>
   </header>
 
@@ -122,15 +122,16 @@
 <h3 id="syntax-">Syntax <a name="statements"></a></h3>
 <p>Each line of code is an instruction to the browser.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Hello World</span><span class="dl">"</span><span class="p">);</span>
-</code></pre></div></div>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Hello World"</span><span class="p">);</span>
+</code></pre>
+</div>
 <p>The <code class="highlighter-rouge">;</code> is used to end a statement just like a period at the end of a sentence.</p>
 
 <p><br /></p>
 
 <h3 id="comments-">Comments <a name="comments"></a></h3>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// for single line comment</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// for single line comment</span>
 
 <span class="cm">/*
 
@@ -139,7 +140,8 @@ comments
 
 */</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>Some rules about when you comment: is that its purpose should be used to explain complex or complicated code, no need to comment for obvious things, and when you update the code remember to update the comment also.</p>
 
@@ -148,27 +150,29 @@ comments
 <h3 id="display-results-">Display Results <a name="disresult"></a></h3>
 <p>You can output results of a code in several ways such as, alert box, writing to the document, or console.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">displays alert box</span><span class="dl">"</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">alert</span><span class="p">(</span><span class="s2">"displays alert box"</span><span class="p">);</span>
 
-<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="dl">"</span><span class="s2">writes to html doc</span><span class="dl">"</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s2">"writes to html doc"</span><span class="p">);</span>
 
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">write to console</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"write to console"</span><span class="p">);</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p><br /></p>
 
 <h3 id="variables-">Variables <a name="var"></a></h3>
 <p>Initialize variables using keyword <code class="highlighter-rouge">var</code> followed by variable name (use camelCase) and an initial value.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// declare and initialize on one line</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// declare and initialize on one line</span>
 <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 
 <span class="c1">// declare and initialize on two lines</span>
 <span class="kd">var</span> <span class="nx">x</span><span class="p">;</span>
 <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>Naming Convention:</p>
 <ul>
@@ -178,8 +182,8 @@ comments
 </ul>
 
 <p>Variable Types:</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Strings - store characters</span>
-<span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Pratik</span><span class="dl">"</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// Strings - store characters</span>
+<span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">"Pratik"</span><span class="p">;</span>
 
 <span class="c1">// Numbers</span>
 <span class="kd">var</span> <span class="nx">days</span> <span class="o">=</span> <span class="mi">365</span><span class="p">;</span>
@@ -192,7 +196,7 @@ comments
 
 <span class="c1">// Functions</span>
 <span class="kd">var</span> <span class="nx">myFunction</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="dl">"</span><span class="s2">Hello!</span><span class="dl">"</span><span class="p">;</span>
+  <span class="k">return</span> <span class="s2">"Hello!"</span><span class="p">;</span>
 <span class="p">};</span>
 
 <span class="c1">// Special Types - Undefined</span>
@@ -201,7 +205,8 @@ comments
 <span class="c1">// Special Types - Empty value</span>
 <span class="kd">var</span> <span class="nx">myValue</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 <p><br /></p>
 
 <h3 id="operators-expressions--comparisons-">Operators, Expressions, &amp; Comparisons <a name="opexpcom"></a></h3>
@@ -216,13 +221,14 @@ comments
 </ul>
 
 <p>Variables can also store the result of expressions.</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span><span class="p">;</span>
-<span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Pratik</span><span class="dl">"</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">Shah</span><span class="dl">"</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="s2">"Pratik"</span> <span class="o">+</span> <span class="s2">"Shah"</span><span class="p">;</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>Increment &amp; Decrement</p>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 
 <span class="nx">x</span><span class="o">++</span><span class="p">;</span> <span class="c1">// x is 11</span>
 <span class="nx">x</span><span class="o">--</span><span class="p">;</span> <span class="c1">// x is 10</span>
@@ -231,7 +237,8 @@ comments
 <span class="o">++</span><span class="nx">x</span><span class="p">;</span>
 <span class="o">--</span><span class="nx">x</span><span class="p">;</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>Comparisons:</p>
 <ul>
@@ -250,29 +257,31 @@ comments
   <li><code class="highlighter-rouge">!</code> NOT - Inverse ex: if true it must not be true</li>
 </ul>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Logical Operators</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// Logical Operators</span>
 <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="o">||</span> <span class="nx">y</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// true</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="o">&amp;&amp;</span> <span class="nx">y</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">);</span>  <span class="c1">// false</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p><br /></p>
 
 <h3 id="arrays-">Arrays <a name="arr"></a></h3>
 <p>Arrays are a list of variables and are written using <code class="highlighter-rouge">[]</code>. To access an item in an array specify element number inside the brackets. Array access is zero based so the first element starts with zero ex: lists[0].</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">restaurants</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">Taco Bell</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Dominos</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Panda Express</span><span class="dl">"</span><span class="p">];</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">restaurants</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Taco Bell"</span><span class="p">,</span> <span class="s2">"Dominos"</span><span class="p">,</span> <span class="s2">"Panda Express"</span><span class="p">];</span>
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">restaurants</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>  <span class="c1">// return Taco Bell</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>You can change and add values either by setting a new value to the element or using built in functions.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">];</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">];</span>
 
 <span class="nx">numbers</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span> <span class="c1">// [5, 6, 7, 10, 9]</span>
 
@@ -280,43 +289,46 @@ comments
 
 <span class="nx">numbers</span><span class="p">.</span><span class="nx">pop</span><span class="p">();</span>  <span class="c1">// will return last value and remove it [5, 6, 7, 10, 9]</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p><br /></p>
 
 <h3 id="conditional-statements-">Conditional Statements <a name="elseif"></a></h3>
 <p>Use <code class="highlighter-rouge">if</code> to tell JS what to execute if the condition is true.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="nx">count</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">execute commands</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"execute commands"</span><span class="p">);</span>
 <span class="p">}</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>To include additional conditions or to run a default statement if conditions are not met use the <code class="highlighter-rouge">else if</code> and <code class="highlighter-rouge">else</code> keywords; respectively.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">grade</span> <span class="o">=</span> <span class="mi">87</span><span class="p">;</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">grade</span> <span class="o">=</span> <span class="mi">87</span><span class="p">;</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="nx">grade</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">A</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"A"</span><span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">grade</span> <span class="o">&gt;=</span> <span class="mi">80</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span> <span class="mi">90</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">B</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"B"</span><span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">grade</span> <span class="o">&gt;=</span> <span class="mi">70</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span> <span class="mi">80</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">C</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"C"</span><span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">grade</span> <span class="o">&gt;=</span> <span class="mi">60</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span> <span class="mi">70</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">D</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"D"</span><span class="p">);</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">F</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"F"</span><span class="p">);</span>
 <span class="p">}</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p><br /></p>
 
 <h3 id="loops---for-">Loops - For <a name="forloop"></a></h3>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span> <span class="o">&lt;</span><span class="nx">counter</span><span class="o">&gt;</span> <span class="p">;</span> <span class="o">&lt;</span><span class="nx">counting</span> <span class="nx">to</span><span class="o">&gt;</span> <span class="p">;</span> <span class="o">&lt;</span><span class="nx">increment</span> <span class="nx">counter</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span> <span class="o">&lt;</span><span class="nx">counter</span><span class="o">&gt;</span> <span class="p">;</span> <span class="o">&lt;</span><span class="nx">counting</span> <span class="nx">to</span><span class="o">&gt;</span> <span class="p">;</span> <span class="o">&lt;</span><span class="nx">increment</span> <span class="nx">counter</span><span class="o">&gt;</span><span class="p">)</span> <span class="p">{</span>
   <span class="o">&lt;</span><span class="nx">expression</span><span class="o">&gt;</span>
 <span class="p">}</span>
 
@@ -325,14 +337,15 @@ comments
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
 <span class="p">}</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 <ul>
   <li><code class="highlighter-rouge">counter</code> is a variable used to keep track of what iteration you’re on</li>
   <li><code class="highlighter-rouge">counting to</code> is the condition to keep looping until it returns false</li>
   <li><code class="highlighter-rouge">increment counter</code> is used to change the value of the counter</li>
 </ul>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// go to use to loop through arrays</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// go to use to loop through arrays</span>
 <span class="kd">var</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
 
 <span class="c1">// example</span>
@@ -340,14 +353,15 @@ comments
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numbers</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
 <span class="p">}</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p><br /></p>
 
 <h3 id="functions-">Functions <a name="function"></a></h3>
 <p>Functions are a way to repeat same tasks multiple times. You can create a function once and reuse the code.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// there are many ways to create functions</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// there are many ways to create functions</span>
 <span class="c1">// below we are assigning the function to a variable</span>
 
 <span class="c1">// function consist of a name and it can take in arguments; optionally.</span>
@@ -359,27 +373,30 @@ comments
   <span class="p">};</span>
 <span class="p">};</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p>Declaring a function does not do anything as the code will not run but just store inside the variable until it is <code class="highlighter-rouge">called</code>.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">letters</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">q</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">w</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">e</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">r</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">t</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">y</span><span class="dl">"</span><span class="p">];</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"q"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">,</span> <span class="s2">"e"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span> <span class="s2">"t"</span><span class="p">,</span> <span class="s2">"y"</span><span class="p">];</span>
 
 <span class="nx">print</span><span class="p">(</span><span class="nx">letters</span><span class="p">);</span> <span class="c1">// call the function</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// most functions are functional</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// most functions are functional</span>
 <span class="c1">// use return to execute final statement and exit function or loops</span>
 
 <span class="kd">var</span> <span class="nx">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
 
 <span class="kd">var</span> <span class="nx">checkArrayLength</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">if</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="dl">"</span><span class="s2">Not enough elements</span><span class="dl">"</span><span class="p">;</span>
+    <span class="k">return</span> <span class="s2">"Not enough elements"</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">};</span>
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p><br /></p>
 
@@ -393,23 +410,24 @@ comments
 <h3 id="objects-">Objects <a name="obj"></a></h3>
 <p>JavaScript objects are collections of properties. They can contain numbers, strings, functions, arrays, and other objects. The <code class="highlighter-rouge">this</code> keyword refers to the current object itself.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// sample object</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// sample object</span>
 <span class="kd">var</span> <span class="nx">car</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="na">make</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Ford</span><span class="dl">"</span><span class="p">,</span>
-  <span class="na">model</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Mustang GT</span><span class="dl">"</span><span class="p">,</span>
+  <span class="na">make</span><span class="p">:</span> <span class="s2">"Ford"</span><span class="p">,</span>
+  <span class="na">model</span><span class="p">:</span> <span class="s2">"Mustang GT"</span><span class="p">,</span>
   <span class="na">acceleration</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
   <span class="na">accelerate</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">accelerate</span><span class="o">++</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p><br /></p>
 
 <h3 id="anonymous-functions-">Anonymous Functions <a name="anymsfunc"></a></h3>
 <p>Anonymous functions are functions without any declaration. You as the programmer must know that it is a function.</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// see function for multiply</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// see function for multiply</span>
 <span class="kd">var</span> <span class="nx">multiply</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="nx">x</span> <span class="o">*</span> <span class="nx">y</span><span class="p">;</span>
 <span class="p">}</span>
@@ -421,7 +439,8 @@ comments
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">math</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="nx">multiply</span><span class="p">));</span>  <span class="c1">// you are passing functions around like variables</span>
 
-</code></pre></div></div>
+</code></pre>
+</div>
 
 <p><br /></p>
 

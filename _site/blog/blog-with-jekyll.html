@@ -86,7 +86,7 @@
         <article id="post" class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <p class="post-meta"><time datetime="2016-04-08T00:00:00-07:00" itemprop="datePublished">Apr 8, 2016</time></p>
+    <p class="post-meta"><time datetime="2016-04-08T00:00:00-05:00" itemprop="datePublished">Apr 8, 2016</time></p>
     <h1 id="post-title" class="post-title" itemprop="name headline">Blog With Jekyll</h1>
   </header>
 
@@ -155,23 +155,22 @@
 
 <p><br /></p>
 
-<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-yaml" data-lang="yaml"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
 5
 6
 7
-8
-</pre></td><td class="code"><pre><span class="c1"># Site settings</span>
-<span class="na">title</span><span class="pi">:</span> <span class="s">Stocks</span>
-<span class="na">email</span><span class="pi">:</span> <span class="s">stocks@domain.com</span>
-<span class="na">description</span><span class="pi">:</span> <span class="s">A blog about my opinions and anaylsis of stocks and whether they are worth buying or selling.</span>
-<span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> <span class="c1"># the subpath of your site, e.g. /blog</span>
-<span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http://pratikmshah.github.io"</span> <span class="c1"># the base hostname &amp; protocol for your site</span>
-<span class="na">twitter_username</span><span class="pi">:</span> <span class="s">pratikshah</span>
-<span class="na">github_username</span><span class="pi">:</span>  <span class="s">pratikmshah</span>
-</pre></td></tr></tbody></table></code></pre></figure>
+8</pre></td><td class="code"><pre><span class="c1"># Site settings</span>
+<span class="s">title</span><span class="pi">:</span> <span class="s">Stocks</span>
+<span class="s">email</span><span class="pi">:</span> <span class="s">stocks@domain.com</span>
+<span class="s">description</span><span class="pi">:</span> <span class="s">A blog about my opinions and anaylsis of stocks and whether they are worth buying or selling.</span>
+<span class="s">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span> <span class="c1"># the subpath of your site, e.g. /blog</span>
+<span class="s">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http://pratikmshah.github.io"</span> <span class="c1"># the base hostname &amp; protocol for your site</span>
+<span class="s">twitter_username</span><span class="pi">:</span> <span class="s">pratikshah</span>
+<span class="s">github_username</span><span class="pi">:</span>  <span class="s">pratikmshah</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p><br /></p>
 
@@ -199,7 +198,7 @@
 
 <p>Your entire project will be made up of either posts or pages. Jekyll uses liquid templates to render a model for each page or post and these templates are stored in the layouts folder. The default.html file provides the html layout and has handles (the brackets) which contain data to render or logic to be performed. Handles with percent signs (%) after it perform logic/calculations while double handles stands for render content. The handles are used throughout to render partials from includes folder, layouts and posts.</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -215,8 +214,7 @@
 14
 15
 16
-17
-</pre></td><td class="code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
+17</pre></td><td class="code"><pre><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
   {% include head.html %}
   <span class="nt">&lt;body&gt;</span>
@@ -232,14 +230,14 @@
     {% include footer.html %}
 
   <span class="nt">&lt;/body&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
-</pre></td></tr></tbody></table></code></pre></figure>
+<span class="nt">&lt;/html&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p><br /></p>
 
 <p>Let’s edit the format of how we show our blog posts on the homepage. Go to the index.html file and inside the <code class="highlighter-rouge">&lt;ul&gt;</code> tags move the <code class="highlighter-rouge">h2</code> tag up above the span tag. In the span tag add <code class="highlighter-rouge">by:  on</code>. So we can display the author’s name. Next add a <code class="highlighter-rouge">&lt;p&gt;</code> tag after the span tags and add this line in between them ``. Reload the page and see the difference! We just added an author to each post and the first 50 words of the post.</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -260,8 +258,7 @@
 19
 20
 21
-22
-</pre></td><td class="code"><pre>---
+22</pre></td><td class="code"><pre>---
 layout: default
 ---
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"home"</span><span class="nt">&gt;</span>
@@ -282,8 +279,8 @@ layout: default
       <span class="nt">&lt;/li&gt;</span>
     {% endfor %}
   <span class="nt">&lt;/ul&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</pre></td></tr></tbody></table></code></pre></figure>
+<span class="nt">&lt;/div&gt;</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <figure>
   <img src="/img/posts/jekyll-blog/edited-homepage.jpg" class="blg-img" alt="edited post" />
@@ -294,39 +291,37 @@ layout: default
 <h3 id="adding-images">Adding Images</h3>
 <p>We can easily embed an image to our blog post. First grab an image and then create a new folder called <code class="highlighter-rouge">img</code> at the root path of the project folder and place the image inside. Go to <code class="highlighter-rouge">post.html</code> under layouts folder and type the below code right after the ending header tag.</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
-5
-</pre></td><td class="code"><pre>{% if page.image %}
+5</pre></td><td class="code"><pre>{% if page.image %}
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post-img"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/img/{{ page.image }}"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
-{% endif %}
-</pre></td></tr></tbody></table></code></pre></figure>
+{% endif %}<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p><br /></p>
 
 <p>Now go back to your first post in the posts folder and inside the yaml front matter block add <code class="highlighter-rouge">image: your-image-name.file-extension</code>. I added a bit of styling to center the image. Refresh the site and check it out a picture. We added an if statement so for posts that do not have an image the code is not rendered.</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
 5
 6
 7
-8
-</pre></td><td class="code"><pre>---
+8</pre></td><td class="code"><pre>---
 layout: post
 title: "Take a Bite of Apple"
 date: 2016-03-30 19:40:24 -0500
 categories: stocks
 author: Pratik Shah
 image: traders.jpeg
----
-</pre></td></tr></tbody></table></code></pre></figure>
+---<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <figure>
   <img src="/img/posts/jekyll-blog/post-w-img.jpg" class="blg-img" alt="edited post" />
@@ -337,7 +332,7 @@ image: traders.jpeg
 <h3 id="refactor-by-creating-default-variables">Refactor by Creating Default Variables</h3>
 <p>When creating new posts defining the yaml front matter variables again and again can be tiresome but Jekyll lets you configure the default values in the config.yml file copy the code below to your config file. What we are doing is defining values that should automatically be loaded in any post template so that we don’t have to keep writing the yaml block. Next, go to our post and delete the author, category and layout we do not need them anymore. Restart your sever (whenver you alter config you must restart the server for changes to take effect) and everything should be the same as it was. You can always override the defaults by specifying the values in the yaml block in the post.</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
@@ -353,8 +348,7 @@ image: traders.jpeg
 14
 15
 16
-17
-</pre></td><td class="code"><pre># Default settings
+17</pre></td><td class="code"><pre># Default settings
 defaults:
   -
     scope:
@@ -370,29 +364,28 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: "page"
-</pre></td></tr></tbody></table></code></pre></figure>
+      layout: "page"<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p><br /></p>
 
 <h3 id="creating-a-new-page">Creating a New Page</h3>
 <p>Creating a new page is simple too. Let’s create a contact page for our blog. In the root folder of your project create a new file called <code class="highlighter-rouge">contact.md</code> or <code class="highlighter-rouge">contact.html</code> it doesn’t matter Jekyll will render both as long as you have the front matter at the top of the page; I will use markdown. See below how I did the contact page. Now when you refresh the page you should see a new link up top next to navigation called contact.  I have the <code class="highlighter-rouge">layout: page</code> variable but technically this should be under defaults in the config.yml file.</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><table style="border-spacing: 0"><tbody><tr><td class="gutter gl" style="text-align: right"><pre class="lineno">1
 2
 3
 4
 5
 6
-7
-</pre></td><td class="code"><pre>---
+7</pre></td><td class="code"><pre>---
 title: Contact
 permalink:  /contact/
 layout: page
 ---
 
-Please feel free to [email me](mailto:{{ site.email }})
-</pre></td></tr></tbody></table></code></pre></figure>
+Please feel free to [email me](mailto:{{ site.email }})<span class="w">
+</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p><br /></p>
 
