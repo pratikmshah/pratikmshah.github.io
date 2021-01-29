@@ -2,6 +2,7 @@ C,
 F,
 IBM,
 DKNG,
+PLTR,
 MRK,
 NEE,
 T
