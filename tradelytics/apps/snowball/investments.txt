@@ -1,4 +1,5 @@
 PLTR,
+CLOV,
 BLK,
 CSCO,
 INTC,
