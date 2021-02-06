@@ -1,6 +1,7 @@
+BX,
 DKNG,
+PLTR,
 RUN,
-CLOV,
 NTNX,
 INTC,
 CLDR
