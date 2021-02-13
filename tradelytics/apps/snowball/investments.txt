@@ -1,7 +1,6 @@
 PLTR,
 CLOV,
 BLK,
-CSCO,
 INTC,
 MO,
 MSFT,

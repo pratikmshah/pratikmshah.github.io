@@ -1,6 +1,7 @@
-DKNG,
+SKLZ,
+NIO,
+ATVI,
 RUN,
-CLOV,
 NTNX,
 INTC,
 CLDR

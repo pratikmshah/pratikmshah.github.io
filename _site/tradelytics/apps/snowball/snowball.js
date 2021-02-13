@@ -255,6 +255,8 @@ function commandExe(str) {
                   "https://seekingalpha.com/",
                   "https://www.tdameritrade.com/home.page",
                   "https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
+  } else if (charCmd == 'Q') {
+    canslim(str.slice(3).split(","));
   } else if (charCmd == 'S') {
     seekingAlpha(str);
   } else if (userCmd == "HELP") {
@@ -324,5 +326,15 @@ function stockAnalysis(ticker) {
                 "https://www.reuters.com/companies/" + ticker + "/people",
                 "https://seekingalpha.com/symbol/" + ticker,
                 "https://www.sec.gov/cgi-bin/browse-edgar?CIK=" + ticker,
+              ]);
+}
+
+function canslim(ticker) {
+  ticker = ticker[0];
+  openInNewTab(["https://www.nasdaq.com/market-activity/stocks/" + ticker + "/institutional-holdings",
+                "https://money.cnn.com/quote/shareholders/shareholders.html?symb=" + ticker + "&subView=institutional",
+                "https://www.nasdaq.com/market-activity/stocks/" + ticker + "/earnings",
+                "https://www.nasdaq.com/market-activity/stocks/" + ticker +"/financials",
+                "https://finviz.com/quote.ashx?t=" + ticker
               ]);
 }
