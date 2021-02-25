@@ -255,6 +255,8 @@ function commandExe(str) {
                   "https://seekingalpha.com/",
                   "https://www.tdameritrade.com/home.page",
                   "https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
+  } else if (userCmd == "ETFSTR") {
+    openInNewTab(["https://docs.google.com/spreadsheets/d/1jmK0vabn0UWdBOmZwU7MMWHldb1f0xLePjCjVERlNYc/edit#gid=0"]);
   } else if (charCmd == 'Q') {
     canslim(str.slice(3).split(","));
   } else if (charCmd == 'S') {

@@ -1,7 +1,3 @@
-ADP,
-AFRM,
-BCRX,
-TDC,
 RUN,
 NTNX,
 INTC,
