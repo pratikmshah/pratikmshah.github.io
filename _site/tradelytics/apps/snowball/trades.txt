@@ -1,6 +1,3 @@
-SKLZ,
-NIO,
-ATVI,
 RUN,
 NTNX,
 INTC,
