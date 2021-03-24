@@ -243,6 +243,7 @@ function commandExe(str) {
   } else if (userCmd == "OPENL") {
     openInNewTab(["https://stocktwits.com/",
                   "https://seekingalpha.com/",
+                  "https://docs.google.com/spreadsheets/d/1jmK0vabn0UWdBOmZwU7MMWHldb1f0xLePjCjVERlNYc/edit#gid=0",
                   "https://twitter.com/home"]);
   } else if (userCmd == "OPEN") {
     openInNewTab(["https://www.forexfactory.com/calendar",
@@ -254,6 +255,7 @@ function commandExe(str) {
                   "https://stocktwits.com/",
                   "https://seekingalpha.com/",
                   "https://www.tdameritrade.com/home.page",
+                  "https://docs.google.com/spreadsheets/d/1jmK0vabn0UWdBOmZwU7MMWHldb1f0xLePjCjVERlNYc/edit#gid=0",
                   "https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
   } else if (userCmd == "ETFSTR") {
     openInNewTab(["https://docs.google.com/spreadsheets/d/1jmK0vabn0UWdBOmZwU7MMWHldb1f0xLePjCjVERlNYc/edit#gid=0"]);
