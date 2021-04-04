@@ -1,5 +1,6 @@
 XOP,
-VPU,
+GOOGL,
+SOCL,
 GAMR,
 RKT,
 LMT,
