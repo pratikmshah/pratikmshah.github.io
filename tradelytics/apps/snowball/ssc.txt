@@ -1,0 +1,7 @@
+DKNG,
+NIO,
+GME,
+BA,
+ARWR,
+LMT,
+MSTR
