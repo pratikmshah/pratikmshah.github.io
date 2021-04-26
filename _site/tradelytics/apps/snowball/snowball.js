@@ -48,7 +48,7 @@ $(function() {
   // retrieve stock data from mystocks.json file
   $('#snowb').on('click', function() {
 
-    var myList = ['trades.txt', 'investments.txt', 'dad.txt'];
+    var myList = ['trades.txt', 'investments.txt', 'dad.txt', 'ssc.txt'];
 
     $.get(myList[pshahListCounter], function(data) {
       $("#stock-ticker").val(data);
@@ -289,7 +289,7 @@ function seekingAlpha(str) {
 
 // increment pshahListCounter
 function pshahListCounterCheck() {
-  if(pshahListCounter == 2) {
+  if(pshahListCounter == 3) {
     pshahListCounter = 0;
   } else {
     pshahListCounter++;
