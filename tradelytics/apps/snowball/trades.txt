@@ -1,6 +1,5 @@
-CRWD,
-NVAX,
-PLTR,
+FB,
+PYPL,
 RKT,
 RUN,
 NTNX,
