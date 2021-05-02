@@ -1,4 +1,3 @@
-FB,
 PYPL,
 RKT,
 RUN,
