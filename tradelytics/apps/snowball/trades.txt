@@ -1,7 +1,10 @@
-AEM,
-LMT,
+FB,
+GS,
 PYPL,
 RKT,
 RUN,
 NTNX,
-CLDR
+CLDR,
+MO,
+IPOE,
+CLOV
