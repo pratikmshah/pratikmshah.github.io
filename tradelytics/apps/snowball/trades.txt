@@ -1,10 +1,6 @@
-FB,
-GS,
-PYPL,
 RKT,
 RUN,
 NTNX,
 CLDR,
 MO,
-IPOE,
 CLOV
