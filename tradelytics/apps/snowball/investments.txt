@@ -1,4 +1,4 @@
-IPOE,
+SOFI,
 BLK,
 MSFT,
 AAPL,
