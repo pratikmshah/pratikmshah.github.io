@@ -1,6 +1,6 @@
-VIRT,
+CRSR,
+LUMN,
 RKT,
 RUN,
 NTNX,
 MO,
-CLOV
