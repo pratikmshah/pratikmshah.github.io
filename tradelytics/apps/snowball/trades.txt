@@ -1,3 +1,4 @@
+SOFI,
 DKNG,
 CRSR,
 LUMN,
