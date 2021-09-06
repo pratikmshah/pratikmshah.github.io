@@ -1,8 +1,9 @@
+MO,
+NTNX,
+PTLR,
 SOFI,
 DKNG,
 CRSR,
 LUMN,
 RKT,
-RUN,
-NTNX,
-MO
+RUN
