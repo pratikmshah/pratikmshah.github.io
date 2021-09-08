@@ -1,6 +1,6 @@
 MO,
 NTNX,
-PTLR,
+PLTR,
 SOFI,
 DKNG,
 CRSR,
