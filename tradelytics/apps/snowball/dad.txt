@@ -1,7 +1,5 @@
-C,
-F,
-IBM,
+SOFI,
+LUMN,
 PLTR,
-MRK,
-NEE,
+C,
 T
