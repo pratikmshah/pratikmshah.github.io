@@ -1,8 +1,5 @@
-C,
-F,
-IBM,
-DKNG,
+SOFI,
+LUMN,
 PLTR,
-MRK,
-NEE,
+C,
 T
