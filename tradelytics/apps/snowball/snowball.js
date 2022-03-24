@@ -48,7 +48,7 @@ $(function() {
   // retrieve stock data from mystocks.json file
   $('#snowb').on('click', function() {
 
-    var myList = ['trades.txt', 'investments.txt', 'dad.txt', 'ssc.txt'];
+    var myList = ['trades.txt', 'investments.txt', 'dad.txt'];
 
     $.get(myList[pshahListCounter], function(data) {
       $("#stock-ticker").val(data);
@@ -255,6 +255,8 @@ function commandExe(str) {
                   "https://stocktwits.com/",
                   "https://seekingalpha.com/",
                   "https://www.tdameritrade.com/home.page",
+
+                  "https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
                   "https://docs.google.com/spreadsheets/d/14_bohTEOzPxB0hQP3SkD0so_CPhDEDzotsaUl1T8fXs/",
                   "https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
   } else if (userCmd == "ETFSTR") {
@@ -289,7 +291,7 @@ function seekingAlpha(str) {
 
 // increment pshahListCounter
 function pshahListCounterCheck() {
-  if(pshahListCounter == 3) {
+  if(pshahListCounter == 2) {
     pshahListCounter = 0;
   } else {
     pshahListCounter++;
