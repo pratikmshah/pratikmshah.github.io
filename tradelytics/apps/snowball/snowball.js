@@ -255,8 +255,6 @@ function commandExe(str) {
                   "https://stocktwits.com/",
                   "https://seekingalpha.com/",
                   "https://www.tdameritrade.com/home.page",
-
-                  "https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
                   "https://docs.google.com/spreadsheets/d/14_bohTEOzPxB0hQP3SkD0so_CPhDEDzotsaUl1T8fXs/",
                   "https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
   } else if (userCmd == "ETFSTR") {

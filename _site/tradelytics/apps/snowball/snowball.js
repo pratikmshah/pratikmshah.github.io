@@ -48,7 +48,7 @@ $(function() {
   // retrieve stock data from mystocks.json file
   $('#snowb').on('click', function() {
 
-    var myList = ['trades.txt', 'investments.txt', 'dad.txt', 'ssc.txt'];
+    var myList = ['trades.txt', 'investments.txt', 'dad.txt'];
 
     $.get(myList[pshahListCounter], function(data) {
       $("#stock-ticker").val(data);
@@ -243,7 +243,7 @@ function commandExe(str) {
   } else if (userCmd == "OPENL") {
     openInNewTab(["https://stocktwits.com/",
                   "https://seekingalpha.com/",
-                  "https://docs.google.com/spreadsheets/d/1jmK0vabn0UWdBOmZwU7MMWHldb1f0xLePjCjVERlNYc/edit#gid=0",
+                  "https://docs.google.com/spreadsheets/d/14_bohTEOzPxB0hQP3SkD0so_CPhDEDzotsaUl1T8fXs/",
                   "https://twitter.com/home"]);
   } else if (userCmd == "OPEN") {
     openInNewTab(["https://www.forexfactory.com/calendar",
@@ -255,10 +255,10 @@ function commandExe(str) {
                   "https://stocktwits.com/",
                   "https://seekingalpha.com/",
                   "https://www.tdameritrade.com/home.page",
-                  "https://docs.google.com/spreadsheets/d/1jmK0vabn0UWdBOmZwU7MMWHldb1f0xLePjCjVERlNYc/edit#gid=0",
+                  "https://docs.google.com/spreadsheets/d/14_bohTEOzPxB0hQP3SkD0so_CPhDEDzotsaUl1T8fXs/",
                   "https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
   } else if (userCmd == "ETFSTR") {
-    openInNewTab(["https://docs.google.com/spreadsheets/d/1jmK0vabn0UWdBOmZwU7MMWHldb1f0xLePjCjVERlNYc/edit#gid=0"]);
+    openInNewTab(["https://docs.google.com/spreadsheets/d/14_bohTEOzPxB0hQP3SkD0so_CPhDEDzotsaUl1T8fXs/"]);
   } else if (charCmd == 'Q') {
     canslim(str.slice(3).split(","));
   } else if (charCmd == 'S') {
@@ -289,7 +289,7 @@ function seekingAlpha(str) {
 
 // increment pshahListCounter
 function pshahListCounterCheck() {
-  if(pshahListCounter == 3) {
+  if(pshahListCounter == 2) {
     pshahListCounter = 0;
   } else {
     pshahListCounter++;
