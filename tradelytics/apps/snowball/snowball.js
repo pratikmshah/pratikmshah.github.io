@@ -228,7 +228,7 @@ function commandExe(str) {
   } else if (userCmd == "TD") {
     openInNewTab(["https://www.tdameritrade.com/home.page"]);
   } else if (userCmd == "TV") {
-    openInNewTab(["https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
+    openInNewTab(["https://www.newslive.com/american/cnbc.html"]);
   } else if (userCmd == "NUM") {
     openInNewTab(["http://pratikmshah.github.io/tradelytics/apps/numbers/numbers.html"]);
   } else if (userCmd == "SEARCH") {
@@ -256,7 +256,7 @@ function commandExe(str) {
                   "https://seekingalpha.com/",
                   "https://www.tdameritrade.com/home.page",
                   "https://docs.google.com/spreadsheets/d/1kq6WIjdSMlDa6zhCIUcru-xeyqJAq1lC3D2Uak7htWc/",
-                  "https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
+                  "https://www.newslive.com/american/cnbc.html"]);
   } else if (userCmd == "ETFSTR") {
     openInNewTab(["https://docs.google.com/spreadsheets/d/1kq6WIjdSMlDa6zhCIUcru-xeyqJAq1lC3D2Uak7htWc/"]);
   } else if (charCmd == 'Q') {
