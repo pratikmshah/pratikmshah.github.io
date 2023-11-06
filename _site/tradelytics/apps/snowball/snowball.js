@@ -228,11 +228,11 @@ function commandExe(str) {
   } else if (userCmd == "TD") {
     openInNewTab(["https://www.tdameritrade.com/home.page"]);
   } else if (userCmd == "TV") {
-    openInNewTab(["https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
+    openInNewTab(["https://www.newslive.com/american/cnbc.html"]);
   } else if (userCmd == "NUM") {
     openInNewTab(["http://pratikmshah.github.io/tradelytics/apps/numbers/numbers.html"]);
   } else if (userCmd == "SEARCH") {
-    openInNewTab(["https://docs.google.com/spreadsheets/d/17GLAgTKGnVbRGqBJyYDuVOeDbHZOrxrlezlzAcGk-vg/edit?usp=sharing"]);
+    openInNewTab(["www.google.com"]);
   } else if (userCmd == "RELSTR") {
     openInNewTab(["https://finviz.com/screener.ashx?v=141&f=geo_usa,ind_exchangetradedfund,sh_avgvol_o300,ta_perf_1wup&ft=3&o=-perf1w",
                   "https://finviz.com/screener.ashx?v=111&f=cap_midover,geo_usa,ind_stocksonly,ta_perf_1wup&o=-change",
@@ -243,7 +243,6 @@ function commandExe(str) {
   } else if (userCmd == "OPENL") {
     openInNewTab(["https://stocktwits.com/",
                   "https://seekingalpha.com/",
-                  "https://docs.google.com/spreadsheets/d/14_bohTEOzPxB0hQP3SkD0so_CPhDEDzotsaUl1T8fXs/",
                   "https://twitter.com/home"]);
   } else if (userCmd == "OPEN") {
     openInNewTab(["https://www.forexfactory.com/calendar",
@@ -254,11 +253,8 @@ function commandExe(str) {
                   "https://twitter.com/home",
                   "https://stocktwits.com/",
                   "https://seekingalpha.com/",
-                  "https://www.tdameritrade.com/home.page",
-                  "https://docs.google.com/spreadsheets/d/14_bohTEOzPxB0hQP3SkD0so_CPhDEDzotsaUl1T8fXs/",
-                  "https://watchnewslive.tv/watch-cnbc-live-stream-free-24-7/"]);
-  } else if (userCmd == "ETFSTR") {
-    openInNewTab(["https://docs.google.com/spreadsheets/d/14_bohTEOzPxB0hQP3SkD0so_CPhDEDzotsaUl1T8fXs/"]);
+                  "https://www.schwab.com/",
+                  "https://www.newslive.com/american/cnbc.html"]);
   } else if (charCmd == 'Q') {
     canslim(str.slice(3).split(","));
   } else if (charCmd == 'S') {

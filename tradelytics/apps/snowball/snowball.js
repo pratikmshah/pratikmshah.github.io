@@ -243,7 +243,6 @@ function commandExe(str) {
   } else if (userCmd == "OPENL") {
     openInNewTab(["https://stocktwits.com/",
                   "https://seekingalpha.com/",
-                  "https://docs.google.com/spreadsheets/d/1kq6WIjdSMlDa6zhCIUcru-xeyqJAq1lC3D2Uak7htWc/",
                   "https://twitter.com/home"]);
   } else if (userCmd == "OPEN") {
     openInNewTab(["https://www.forexfactory.com/calendar",
@@ -254,11 +253,8 @@ function commandExe(str) {
                   "https://twitter.com/home",
                   "https://stocktwits.com/",
                   "https://seekingalpha.com/",
-                  "https://www.tdameritrade.com/home.page",
-                  "https://docs.google.com/spreadsheets/d/1kq6WIjdSMlDa6zhCIUcru-xeyqJAq1lC3D2Uak7htWc/",
+                  "https://www.schwab.com/",
                   "https://www.newslive.com/american/cnbc.html"]);
-  } else if (userCmd == "ETFSTR") {
-    openInNewTab(["https://docs.google.com/spreadsheets/d/1kq6WIjdSMlDa6zhCIUcru-xeyqJAq1lC3D2Uak7htWc/"]);
   } else if (charCmd == 'Q') {
     canslim(str.slice(3).split(","));
   } else if (charCmd == 'S') {
