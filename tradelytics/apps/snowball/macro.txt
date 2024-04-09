@@ -1,0 +1,13 @@
+SPY,
+QQQ,
+DIA,
+MDY,
+IWM,
+IWV,
+TLT,
+GLD,
+SLV,
+IBIT,
+IPO,
+IVW,
+IVE
