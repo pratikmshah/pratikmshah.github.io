@@ -1,8 +1,0 @@
-SOFI,
-BLK,
-MSFT,
-AAPL,
-CMCSA,
-JPM,
-NKE,
-TROW

@@ -48,7 +48,7 @@ $(function() {
   // retrieve stock data from mystocks.json file
   $('#snowb').on('click', function() {
 
-    var myList = ['trades.txt', 'investments.txt', 'dad.txt'];
+    var myList = ['macro.txt', 'spysec.txt', 'subsec.txt'];
 
     $.get(myList[pshahListCounter], function(data) {
       $("#stock-ticker").val(data);
