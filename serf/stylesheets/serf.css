@@ -1,0 +1,11 @@
+body {
+  /* background: #0088dc; /* #0064ff; #8E0E00; #1A1D27; */
+  background: #050510;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Nunito', sans-serif;
+  color: white;
+}
