@@ -1,5 +1,0 @@
-SOFI,
-LUMN,
-PLTR,
-C,
-T
