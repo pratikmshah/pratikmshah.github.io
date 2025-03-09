@@ -1,0 +1,26 @@
+body {
+  /* background: #0088dc; /* #0064ff; #8E0E00; #1A1D27; */
+  background: #050510;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Roboto Flex", 'Nunito', sans-serif;
+  color: white;
+}
+
+.grid-item {
+  float: left;
+  width: 96px;
+  height: auto;
+  transition: all .1s ease-in-out;
+}
+
+.grid-item:hover {
+  transform: scale(1.15);
+}
+
+.bg-dark-mod {
+  background-color:  #050510;
+}
