@@ -1,6 +1,6 @@
 body {
   /* background: #0088dc; /* #0064ff; #8E0E00; #1A1D27; */
-  background: #050510;
+  background: #0E1113;
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -11,7 +11,11 @@ body {
 }
 
 .bg-dark-mod {
-  background-color:  #050510;
+  background-color:  #0E1113;
+}
+
+.card:hover {
+  background-color:  #181C1F;
 }
 
 .grid-item {
@@ -26,15 +30,20 @@ body {
 }
 
 .jumbotron {
-  background-image: url("../icons/jumbotron_bg.png");
-  background-size: cover;
+  border-radius: 0px;
+  background-color: #0E1113;
+  /*background-image: url("../icons/jumbotron_bg.png");
+  background-size: cover; */
+}
+
+.style-border {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
 }
 
 .title {
   color: black;
   font-weight: bolder;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: white;
 }
 
 .title i {
