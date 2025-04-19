@@ -1,13 +1,21 @@
 body {
   /* background: #0088dc; /* #0064ff; #8E0E00; #1A1D27; */
-  background: #050510;
+  background: #0E1113;
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: "Roboto Flex", 'Nunito', sans-serif;
+  font-family:  "Noto Sans", 'Nunito', sans-serif;
   color: white;
+}
+
+.bg-dark-mod {
+  background-color:  #0E1113;
+}
+
+.card:hover {
+  background-color:  #181C1F;
 }
 
 .grid-item {
@@ -21,6 +29,23 @@ body {
   transform: scale(1.15);
 }
 
-.bg-dark-mod {
-  background-color:  #050510;
+.jumbotron {
+  border-radius: 0px;
+  background-color: #0E1113;
+  /*background-image: url("../icons/jumbotron_bg.png");
+  background-size: cover; */
+}
+
+.style-border {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+}
+
+.title {
+  color: black;
+  font-weight: bolder;
+}
+
+.title i {
+  color: #0096FF;
 }
