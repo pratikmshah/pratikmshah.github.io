@@ -6,8 +6,12 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: "Roboto Flex", 'Nunito', sans-serif;
+  font-family:  "Noto Sans", 'Nunito', sans-serif;
   color: white;
+}
+
+.bg-dark-mod {
+  background-color:  #050510;
 }
 
 .grid-item {
@@ -21,6 +25,18 @@ body {
   transform: scale(1.15);
 }
 
-.bg-dark-mod {
-  background-color:  #050510;
+.jumbotron {
+  background-image: url("../icons/jumbotron_bg.png");
+  background-size: cover;
+}
+
+.title {
+  color: black;
+  font-weight: bolder;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+}
+
+.title i {
+  color: #0096FF;
 }
