@@ -48,6 +48,8 @@ body {
 .jumbotron {
   border-radius: 0px;
   background-color: #0E1113;
+  margin-bottom: 0px;
+  padding-bottom: 2rem;
   /*background-image: url("../icons/jumbotron_bg.png");
   background-size: cover; */
 }
@@ -64,4 +66,35 @@ body {
 
 .title i {
   color: #0096FF;
+}
+
+.hover-underline {
+  font-size: 2rem;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, white, #0096FF);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
 }
