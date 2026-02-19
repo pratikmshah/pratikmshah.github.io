@@ -38,10 +38,12 @@ body {
   width: 96px;
   height: auto;
   transition: all .1s ease-in-out;
+  border: 2px solid black;
 }
 
 .grid-item:hover {
   transform: scale(1.15);
+  border; none;
 }
 
 .jumbotron {
