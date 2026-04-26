@@ -1,6 +1,6 @@
 body {
   /* background: #0088dc; /* #0064ff; #8E0E00; #1A1D27; */
-  background: #0E1113;
+  background: black;
 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -10,27 +10,32 @@ body {
   color: white;
 }
 
+#title img {
+  max-height: 11em;
+  max-width: 50%;
+}
+
 .bg-dark-mod {
-  background:  #0E1113;
+  background:  black;
 }
 
 .card-header {
-  background:  #0E1113;
+  background:  black;
   border: none;
 }
 
 .card {
-  background: #0E1113;
+  background: black;
   border-radius: 0px;
   border: none;
 }
 
 .card:hover {
-  background:  #181C1F;
+  background:  black;
 }
 
 .card:hover .card-header {
-  background:  #181C1F;
+  background:  black;
 }
 
 .grid-item {
@@ -48,10 +53,10 @@ body {
 
 .jumbotron {
   border-radius: 0px;
-  background-color: #0E1113;
+  background-color: black;
   margin-bottom: 0px;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .style-border {
@@ -97,4 +102,16 @@ body {
 .hover-underline:hover::after,
 .hover-underline:hover::before {
   transform: scaleX(1);
+}
+
+.hide-scrollbar {
+  /* For Internet Explorer and Edge */
+  -ms-overflow-style: none;
+  /* For Firefox */
+  scrollbar-width: none;
+  /* For Chrome, Safari, and Opera */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
