@@ -10,6 +10,11 @@ body {
   color: white;
 }
 
+#title img {
+  max-height: 11em;
+  max-width: 40%;
+}
+
 .bg-dark-mod {
   background:  #0E1113;
 }
@@ -97,4 +102,16 @@ body {
 .hover-underline:hover::after,
 .hover-underline:hover::before {
   transform: scaleX(1);
+}
+
+.hide-scrollbar {
+  /* For Internet Explorer and Edge */
+  -ms-overflow-style: none;
+  /* For Firefox */
+  scrollbar-width: none;
+  /* For Chrome, Safari, and Opera */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
