@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Glitch';
+  src: url('../fonts/GlitchInside.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body {
   /* background: #0088dc; /* #0064ff; #8E0E00; #1A1D27; */
   background: black;
@@ -6,7 +14,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family:  "Noto Sans", 'Nunito', sans-serif;
+  font-family:  'Glitch', "Noto Sans", 'Nunito', sans-serif;
   color: white;
 }
 
@@ -36,6 +44,7 @@ body {
 
 .card:hover .card-header {
   background:  black;
+  color: #F4FF00;
 }
 
 .grid-item {
