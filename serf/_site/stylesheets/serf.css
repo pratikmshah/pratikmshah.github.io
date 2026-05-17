@@ -52,7 +52,7 @@ a:hover {
 }
 
 .grid-item {
-  width: 96px;
+  width: 64px;
   height: auto;
   transition: all .1s ease-in-out;
   border: 2px solid black;
