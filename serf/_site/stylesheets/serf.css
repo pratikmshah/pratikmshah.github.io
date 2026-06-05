@@ -1,24 +1,15 @@
-@font-face {
-  font-family: 'Glitch';
-  src: url('../fonts/GlitchInside.otf');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
 body {
-  /* background: #0088dc; /* #0064ff; #8E0E00; #1A1D27; */
-  background: black;
-
+  /* Changed from pure black to a deep dark grey matching "theme.png" */
+  background: #0f0f0f;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family:  'Glitch', 'Noto Sans', 'Nunito', sans-serif;
-  color: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #ececec;
 }
 
-a:hover {
+a.link-container:hover {
    text-decoration: none;
 }
 
@@ -28,63 +19,83 @@ a:hover {
 }
 
 .bg-dark-mod {
-  background:  black;
+  background: transparent;
 }
 
+/* Adjusted headers to match the "Today's Highlights" / "Top Stories" typography */
 .card-header {
-  background:  black;
+  background: transparent;
   border: none;
+  color: #ffffff;
+  font-size: 1.5rem !important;
+  font-weight: 700;
+  text-align: center !important;
+  padding-left: 0;
+  padding-bottom: 15px;
 }
 
 .card {
-  background: black;
-  border-radius: 0px;
+  background: transparent;
+  border-radius: 0;
   border: none;
+  margin-bottom: 2rem;
 }
 
 .card:hover {
-  background:  black;
+  background: transparent;
 }
 
 .card:hover .card-header {
-  background:  black;
-  color: #F4FF00;
+  background: transparent;
+  color: #ffffff; /* Removed the #F4FF00 hover color */
 }
 
-.grid-item {
-  width: 64px;
-  height: auto;
-  transition: all .1s ease-in-out;
-  border: 2px solid black;
-  flex-shrink: 0; /* Prevents the image from shrinking when text is long */
-}
-
-.grid-item:hover {
-  transform: scale(1.15);
-}
-
-/* New styles for the layout */
+/* Redesigned the link containers to look like the article cards in "theme.png" */
 .link-container {
   text-decoration: none;
-  color: white; /* Keeps the text white */
-  transition: color 0.2s;
+  color: #a0a0a0;
+  transition: all 0.2s ease;
+  background: #161616; /* Subdued card background */
+  border: 1px solid #222; /* Subtle border */
+  border-radius: 8px; /* Soft rounded corners */
+  padding: 15px;
+  height: 100%;
+}
+
+.link-container:hover {
+  background: #1c1c1c; /* Slightly lighter surface on hover */
+  border-color: #333;
 }
 
 .link-container:hover .link-desc {
-  color: #0096FF;
+  color: #ffffff;
   text-decoration: none;
-  text-shadow: 0 0 7px rgb(190 254 194), 0 0 122px rgb(173 236 175);
+  text-shadow: none; /* Removed the bright neon green/blue glow */
 }
 
 .link-desc {
-  font-family: 'Noto Sans', 'Nunito', sans-serif;
-  font-size: .75em;
-  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+.grid-item {
+  width: 48px; /* Slightly scaled down for better proportions in the card */
+  height: auto;
+  transition: transform .2s ease-in-out;
+  border: none; /* Removed the harsh 2px solid black border */
+  border-radius: 6px; /* Soft edges for icons */
+  flex-shrink: 0;
+}
+
+.link-container:hover .grid-item {
+  transform: scale(1.05); /* Subtler, more professional zoom effect */
 }
 
 .jumbotron {
   border-radius: 0px;
-  background-color: black;
+  background-color: transparent;
   margin-bottom: 0px;
   padding-bottom: 1rem;
   padding-top: 1rem;
@@ -96,7 +107,7 @@ a:hover {
 }
 
 .title {
-  color: black;
+  color: #ffffff;
   font-weight: bolder;
 }
 
@@ -104,47 +115,18 @@ a:hover {
   color: #0096FF;
 }
 
-/*
-.hover-underline {
-  font-size: 2rem;
-  color: #ffffff;
-  position: relative;
-  display: inline-block;
-}
-
-.hover-underline::after,
-.hover-underline::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(to right, white, #0096FF);
-  bottom: -5px;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.4s ease-out;
-}
-
-.hover-underline::before {
-  top: -5px;
-  transform-origin: left;
-}
-
-.hover-underline:hover::after,
-.hover-underline:hover::before {
-  transform: scaleX(1);
-}
-*/
-
 .hide-scrollbar {
-  /* For Internet Explorer and Edge */
   -ms-overflow-style: none;
-  /* For Firefox */
   scrollbar-width: none;
-  /* For Chrome, Safari, and Opera */
 }
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+.hover-underline:hover {
+  text-decoration-line: underline;       /* Adds the line */
+  text-decoration-style: solid;          /* Keeps it straight */
+  text-decoration-color: #333;            /* Changes the color */
+  text-decoration-thickness: 1px;        /* Makes it thinner (e.g., 1px or 0.1em) */
 }
