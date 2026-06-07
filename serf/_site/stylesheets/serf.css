@@ -22,6 +22,21 @@ a.link-container:hover {
   background: transparent;
 }
 
+#clock-container {
+  color: #B25E27 !important;
+  text-decoration: none;
+  padding: 5px;
+  height: 100%;
+  font-weight: 700;
+}
+
+#brew {
+  height: 2em;
+  width: auto;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
 /* Adjusted headers to match the "Today's Highlights" / "Top Stories" typography */
 .card-header {
   background: transparent;
@@ -57,7 +72,7 @@ a.link-container:hover {
   transition: all 0.2s ease;
   background: #161616; /* Subdued card background */
   border: 1px solid #222; /* Subtle border */
-  border-radius: 8px; /* Soft rounded corners */
+  border-radius: 8px;  /* Soft rounded corners */
   padding: 15px;
   height: 100%;
 }
