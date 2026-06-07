@@ -9,7 +9,7 @@ body {
   color: #ececec;
 }
 
-a.link-container:hover {
+a.link-container:hover, a.link-container-2:hover {
    text-decoration: none;
 }
 
@@ -93,6 +93,26 @@ a.link-container:hover {
   font-size: 0.9em;
   font-weight: 500;
   color: #e0e0e0;
+}
+
+.link-container-2 {
+  text-decoration: none;
+  color: #a0a0a0;
+  transition: all 0.2s ease;
+  background: #161616; /* Subdued card background */
+  padding: 30px;
+  height: 100%;
+}
+
+.link-container-2:hover {
+  background: #1c1c1c; /* Slightly lighter surface on hover */
+  border-color: #333;
+}
+
+.link-container-2:hover .link-desc {
+  color: #ffffff;
+  text-decoration: none;
+  text-shadow: none; /* Removed the bright neon green/blue glow */
 }
 
 .grid-item {
