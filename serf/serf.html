@@ -29,14 +29,48 @@
   </div>
 
   <!-- insert time and quote -->
-  <div class="row">
-    <div class="col-lg-8 offset-lg-2">
-      <div class="text-center title mt-3 mb-4">
-        <img id="brew" src="brew.png" alt="coffee mug">
-        <span id="clock-container"></span>history is brewing.
+  <!-- insert time and quote -->
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2">
+        <!-- Added d-flex and justify-content-between to push items to opposite ends -->
+        <div class="title mt-3 mb-2 d-flex justify-content-between align-items-center">
+          <div class="text-left">Today's News Brewing</div>
+          <div class="text-right">
+            <!-- Added inline CSS to the image so it scales with the font size -->
+            <img id="brew" src="brew.png" alt="coffee mug">
+            <span id="clock-container"></span>
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
+
+  <!-- insert quick links -->
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="row">
+          <div class="col-lg-4">
+            <a href="https://www.barrons.com/" target="_blank" class="d-flex align-items-center link-container">
+              <img src="icons/business/barrons.png" alt="barrons" class="grid-item">
+              <span class="ms-3 link-desc">Barron's</span>
+            </a>
+          </div>
+          <div class="col-lg-4">
+            <a href="https://www.barrons.com/" target="_blank" class="d-flex align-items-center link-container">
+              <img src="icons/business/barrons.png" alt="barrons" class="grid-item">
+              <span class="ms-3 link-desc">Barron's</span>
+            </a>
+          </div>
+          <div class="col-lg-4">
+            <a href="https://www.barrons.com/" target="_blank" class="d-flex align-items-center link-container">
+              <img src="icons/business/barrons.png" alt="barrons" class="grid-item">
+              <span class="ms-3 link-desc">Barron's</span>
+            </a>
+          </div>
+        </div>
+      </div>
+     </div>
+    </div>
 
   <!-- each section is for new topic -->
   <!-- Business -->
