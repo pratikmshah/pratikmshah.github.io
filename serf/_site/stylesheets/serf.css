@@ -278,3 +278,108 @@ a.link-container:hover, a.link-container-2:hover {
   /* Ensures the text doesn't block the user from clicking the link */
   pointer-events: none;
 }
+
+/* =========================================
+   Hover-to-Play GIF Styles
+   ========================================= */
+
+/* The static image sits at the bottom of the stack */
+.static-img {
+  position: relative;
+  z-index: 1;
+}
+
+/* The GIF is positioned directly over the static image and hidden by default */
+.gif-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out; /* Smooth fade effect */
+}
+
+/* When the card is hovered, reveal the GIF */
+.video-card:hover .gif-img {
+  opacity: 1;
+}
+
+/* Make sure the text overlay stays on top of both images */
+.video-overlay-text {
+  z-index: 3;
+
+  /* (Keep your existing .video-overlay-text styles below this) */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+}
+
+/* =========================================
+   Quick Links Carousel Styles
+   ========================================= */
+
+.quick-links-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 10px; /* Provides room for the scrollbar */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+
+  /* Firefox Scrollbar Styling */
+  scrollbar-width: thin;
+  scrollbar-color: #333 transparent;
+}
+
+/* Chrome/Edge/Safari Scrollbar Styling */
+.quick-links-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+.quick-links-carousel::-webkit-scrollbar-track {
+  background: transparent;
+}
+.quick-links-carousel::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 4px;
+}
+.quick-links-carousel::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Forces items to stay a specific width instead of shrinking */
+.quick-link-item {
+  flex: 0 0 auto;
+  width: 240px; /* Adjust this width if you want the cards wider/narrower */
+  scroll-snap-align: start;
+}
+
+/* =========================================
+   Mobile Full-Width Carousel Override
+   ========================================= */
+
+@media (max-width: 768px) {
+  .video-carousel-container {
+    width: 100vw; /* Forces the container to be exactly the width of the screen */
+    margin-left: calc(-50vw + 50%); /* Pulls the container out of the Bootstrap padding */
+    padding-left: 15px; /* Pushes the first card inward so it aligns with your title */
+    padding-right: 15px; /* Ensures there is a gap after the final card when scrolled completely to the right */
+  }
+
+  /* Optional: Adjust card size slightly for smaller screens */
+  .video-card {
+    width: 260px;
+  }
+
+  .video-thumbnail-container {
+    height: 146px; /* Adjusts the 16:9 ratio for the 260px width */
+  }
+}
