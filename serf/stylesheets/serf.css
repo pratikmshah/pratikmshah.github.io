@@ -163,8 +163,8 @@ a.link-container:hover, a.link-container-2:hover {
 .hover-underline:hover {
   text-decoration-line: underline;       /* Adds the line */
   text-decoration-style: solid;          /* Keeps it straight */
-  text-decoration-color: #333;            /* Changes the color */
-  text-decoration-thickness: 1px;        /* Makes it thinner (e.g., 1px or 0.1em) */
+  text-decoration-color: rgb(206, 203, 198);            /* Changes the color */
+  text-decoration-thickness: 1.25px;        /* Makes it thinner (e.g., 1px or 0.1em) */
 }
 
 
@@ -316,6 +316,8 @@ a.link-container:hover, a.link-container-2:hover {
   flex: 0 0 auto;
   width: 240px; /* Adjust this width if you want the cards wider/narrower */
   scroll-snap-align: start;
+  padding-left: 5px;
+  padding-top: 10px;
 }
 
 /* =========================================
@@ -382,4 +384,65 @@ a.link-container:hover, a.link-container-2:hover {
   font-weight: 600;
   letter-spacing: 0.5px;
   pointer-events: none;
+}
+
+/* Add camera hover effect */
+/* 1. Anchor the pseudo-elements to the cards */
+.link-container,
+.link-container-2,
+.video-card {
+  position: relative;
+}
+
+/* 2. Bring the hovered card forward so the corners don't slide under adjacent cards */
+.link-container:hover,
+.link-container-2:hover,
+.video-card:hover {
+  z-index: 10;
+}
+
+/* 3. Build the corner brackets using background gradients */
+.link-container::after,
+.link-container-2::after,
+.video-card::after {
+  content: '';
+  position: absolute;
+  /* Adjust these negative values to pull the frame tighter or wider around the card */
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  pointer-events: none; /* Prevents the invisible box from blocking your link clicks */
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 10;
+
+  /* Easily tweak your corner dimensions here */
+  --c-size: 20px; /* Length of the corner segments */
+  --c-thick: 4px; /* 'Medium thick' border width */
+  --c-color: rgb(83, 252, 24); /* The required green */
+
+  background:
+    /* Top Left */
+    linear-gradient(var(--c-color), var(--c-color)) top left / var(--c-size) var(--c-thick) no-repeat,
+    linear-gradient(var(--c-color), var(--c-color)) top left / var(--c-thick) var(--c-size) no-repeat,
+
+    /* Top Right */
+    linear-gradient(var(--c-color), var(--c-color)) top right / var(--c-size) var(--c-thick) no-repeat,
+    linear-gradient(var(--c-color), var(--c-color)) top right / var(--c-thick) var(--c-size) no-repeat,
+
+    /* Bottom Left */
+    linear-gradient(var(--c-color), var(--c-color)) bottom left / var(--c-size) var(--c-thick) no-repeat,
+    linear-gradient(var(--c-color), var(--c-color)) bottom left / var(--c-thick) var(--c-size) no-repeat,
+
+    /* Bottom Right */
+    linear-gradient(var(--c-color), var(--c-color)) bottom right / var(--c-size) var(--c-thick) no-repeat,
+    linear-gradient(var(--c-color), var(--c-color)) bottom right / var(--c-thick) var(--c-size) no-repeat;
+}
+
+/* 4. Trigger the fade-in effect on hover */
+.link-container:hover::after,
+.link-container-2:hover::after,
+.video-card:hover::after {
+  opacity: 1;
 }
