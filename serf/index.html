@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Serf — Daily News & Media Hub</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Local Compiled Stylesheet (Zero CDN) -->
+  <link rel="stylesheet" href="stylesheets/serf.css">
+</head>
+
+<body class="bg-surface-950 text-zinc-100 min-h-screen flex flex-col">
+
+  <!-- Top Ambient Glow -->
+  <div class="pointer-events-none fixed inset-x-0 top-0 h-64 bg-gradient-to-b from-accent-blue/10 via-transparent to-transparent -z-10"></div>
+
+  <!-- Header & Brand Bar -->
+  <header class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-4">
+    <div class="flex flex-col items-center justify-center">
+      <a href="#" class="group inline-flex items-center justify-center focus:outline-none">
+        <img
+          src="Serf.png"
+          alt="SerF"
+          class="h-20 sm:h-28 md:h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+        >
+      </a>
+    </div>
+
+    <!-- Status Bar: "News Brewing" + Live Clock -->
+    <div class="mt-5 flex flex-col sm:flex-row items-center justify-between gap-3 rounded-xl bg-surface-900/90 border border-surface-700/80 px-4 py-3 backdrop-blur-md shadow-lg">
+      <div class="flex items-center gap-2.5">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-neon opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent-neon"></span>
+        </span>
+        <span class="text-sm sm:text-base font-bold tracking-tight text-white">News Brewing</span>
+      </div>
+
+      <div class="flex items-center gap-2 text-xs sm:text-sm font-mono font-bold text-accent-blue">
+        <img id="brew" src="brew.png" alt="coffee mug" class="h-6 w-auto object-contain -mt-0.5">
+        <span id="clock-container">Loading time...</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-10">
+
+    <!-- Quick Links Section -->
+    <!-- <section aria-label="Quick Links">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <a href="https://news.google.com/" target="_blank" rel="noopener noreferrer"
+           class="viewfinder-card group flex items-center gap-3.5 rounded-xl bg-surface-850 hover:bg-surface-800 border border-surface-700/80 hover:border-zinc-600 p-3.5 sm:p-4">
+          <img src="icons/header/gnews.png" alt="Google News" class="w-10 h-10 sm:w-11 sm:h-11 rounded-lg object-contain shrink-0 transition-transform duration-200 group-hover:scale-105">
+          <div class="min-w-0">
+            <div class="text-sm sm:text-base font-semibold text-zinc-100 group-hover:text-white truncate">Google News</div>
+            <div class="text-xs text-zinc-400 truncate">Headlines &amp; Feed</div>
+          </div>
+        </a>
+
+        <a href="https://www.alltop.com/" target="_blank" rel="noopener noreferrer"
+           class="viewfinder-card group flex items-center gap-3.5 rounded-xl bg-surface-850 hover:bg-surface-800 border border-surface-700/80 hover:border-zinc-600 p-3.5 sm:p-4">
+          <img src="icons/header/alltop.png" alt="Alltop" class="w-10 h-10 sm:w-11 sm:h-11 rounded-lg object-contain shrink-0 transition-transform duration-200 group-hover:scale-105">
+          <div class="min-w-0">
+            <div class="text-sm sm:text-base font-semibold text-zinc-100 group-hover:text-white truncate">Alltop</div>
+            <div class="text-xs text-zinc-400 truncate">Top Stories Aggregator</div>
+          </div>
+        </a>
+
+        <a href="https://finviz.com/news" target="_blank" rel="noopener noreferrer"
+           class="viewfinder-card group flex items-center gap-3.5 rounded-xl bg-surface-850 hover:bg-surface-800 border border-surface-700/80 hover:border-zinc-600 p-3.5 sm:p-4">
+          <img src="icons/header/finviz.png" alt="Finviz" class="w-10 h-10 sm:w-11 sm:h-11 rounded-lg object-contain shrink-0 transition-transform duration-200 group-hover:scale-105">
+          <div class="min-w-0">
+            <div class="text-sm sm:text-base font-semibold text-zinc-100 group-hover:text-white truncate">Finviz News</div>
+            <div class="text-xs text-zinc-400 truncate">Market &amp; Ticker Wire</div>
+          </div>
+        </a>
+
+        <a href="https://www.fark.com/" target="_blank" rel="noopener noreferrer"
+           class="viewfinder-card group flex items-center gap-3.5 rounded-xl bg-surface-850 hover:bg-surface-800 border border-surface-700/80 hover:border-zinc-600 p-3.5 sm:p-4">
+          <img src="icons/header/fark.png" alt="Fark" class="w-10 h-10 sm:w-11 sm:h-11 rounded-lg object-contain shrink-0 transition-transform duration-200 group-hover:scale-105">
+          <div class="min-w-0">
+            <div class="text-sm sm:text-base font-semibold text-zinc-100 group-hover:text-white truncate">Fark</div>
+            <div class="text-xs text-zinc-400 truncate">Offbeat &amp; Community</div>
+          </div>
+        </a>
+      </div>
+    </section> -->
+
+    <!-- Trending News Section -->
+    <section aria-labelledby="trending-heading">
+      <div class="flex items-center justify-between mb-3.5">
+        <h2 id="trending-heading" class="text-lg sm:text-xl font-bold tracking-tight text-white flex items-center gap-2">
+          <svg class="w-5 h-5 text-accent-blue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+          </svg>
+          Trending News
+        </h2>
+        <div class="flex items-center gap-3">
+          <span id="trending-status" class="text-xs text-zinc-400">Updating...</span>
+          <button
+            id="refresh-trending-btn"
+            type="button"
+            class="rounded-lg bg-surface-850 hover:bg-surface-800 border border-surface-700/80 px-2.5 py-1 text-xs font-medium text-zinc-300 hover:text-white transition-colors"
+          >
+            Refresh
+          </button>
+        </div>
+      </div>
+
+      <!-- Loading Skeleton (6 items) -->
+      <div id="trending-skeleton" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+        <div class="h-24 rounded-xl bg-surface-850 border border-surface-700/70 animate-pulse"></div>
+        <div class="h-24 rounded-xl bg-surface-850 border border-surface-700/70 animate-pulse"></div>
+        <div class="h-24 rounded-xl bg-surface-850 border border-surface-700/70 animate-pulse"></div>
+        <div class="h-24 rounded-xl bg-surface-850 border border-surface-700/70 animate-pulse hidden sm:block"></div>
+        <div class="h-24 rounded-xl bg-surface-850 border border-surface-700/70 animate-pulse hidden lg:block"></div>
+        <div class="h-24 rounded-xl bg-surface-850 border border-surface-700/70 animate-pulse hidden lg:block"></div>
+      </div>
+
+      <!-- Trending Cards Grid -->
+      <div id="trending-grid" class="hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section aria-labelledby="videos-heading">
+      <div class="flex items-center justify-between mb-3.5">
+        <h2 id="videos-heading" class="text-lg sm:text-xl font-bold tracking-tight text-white flex items-center gap-2">
+          <svg class="w-5 h-5 text-accent-blue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          Videos
+        </h2>
+        <span class="text-xs text-zinc-400 hidden sm:inline">Hover to preview channel</span>
+      </div>
+
+      <div class="flex md:grid md:grid-cols-4 gap-4 overflow-x-auto thin-scrollbar pb-2 snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0">
+        <!-- CNBC -->
+        <a href="https://www.youtube.com/@CNBCtelevision" target="_blank" rel="noopener noreferrer"
+           class="viewfinder-card group flex-none w-64 sm:w-72 md:w-auto snap-start rounded-xl bg-surface-850 border border-surface-700/80 hover:border-zinc-600 overflow-hidden flex flex-col">
+          <div class="relative aspect-video w-full bg-surface-900 overflow-hidden border-b border-surface-700/70">
+            <img src="icons/videos/cnbcv.jpg" alt="CNBC" class="w-full h-full object-cover">
+            <img src="icons/videos/cnbcv.gif" alt="CNBC Preview" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span class="absolute bottom-2 left-2 rounded bg-black/75 px-2 py-0.5 text-[11px] font-semibold text-white backdrop-blur-sm">CNBC</span>
+          </div>
+          <div class="p-3">
+            <div class="text-sm font-medium text-zinc-200 group-hover:text-white truncate">Market Analysis &amp; Weekly Recap</div>
+          </div>
+        </a>
+
+        <!-- IGN -->
+        <a href="https://www.youtube.com/@IGN" target="_blank" rel="noopener noreferrer"
+           class="viewfinder-card group flex-none w-64 sm:w-72 md:w-auto snap-start rounded-xl bg-surface-850 border border-surface-700/80 hover:border-zinc-600 overflow-hidden flex flex-col">
+          <div class="relative aspect-video w-full bg-surface-900 overflow-hidden border-b border-surface-700/70">
+            <img src="icons/videos/ignv.jpg" alt="IGN" class="w-full h-full object-cover">
+            <img src="icons/videos/ignv.gif" alt="IGN Preview" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span class="absolute bottom-2 left-2 rounded bg-black/75 px-2 py-0.5 text-[11px] font-semibold text-white backdrop-blur-sm">IGN</span>
+          </div>
+          <div class="p-3">
+            <div class="text-sm font-medium text-zinc-200 group-hover:text-white truncate">Gaming News</div>
+          </div>
+        </a>
+
+        <!-- The Verge -->
+        <a href="https://www.youtube.com/@TheVerge" target="_blank" rel="noopener noreferrer"
+           class="viewfinder-card group flex-none w-64 sm:w-72 md:w-auto snap-start rounded-xl bg-surface-850 border border-surface-700/80 hover:border-zinc-600 overflow-hidden flex flex-col">
+          <div class="relative aspect-video w-full bg-surface-900 overflow-hidden border-b border-surface-700/70">
+            <img src="icons/videos/vergev.jpg" alt="The Verge" class="w-full h-full object-cover">
+            <img src="icons/videos/vergev.gif" alt="The Verge Preview" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span class="absolute bottom-2 left-2 rounded bg-black/75 px-2 py-0.5 text-[11px] font-semibold text-white backdrop-blur-sm">The Verge</span>
+          </div>
+          <div class="p-3">
+            <div class="text-sm font-medium text-zinc-200 group-hover:text-white truncate">Technology News</div>
+          </div>
+        </a>
+
+        <!-- Kinda Funny -->
+        <a href="https://www.youtube.com/@KindaFunnyGames" target="_blank" rel="noopener noreferrer"
+           class="viewfinder-card group flex-none w-64 sm:w-72 md:w-auto snap-start rounded-xl bg-surface-850 border border-surface-700/80 hover:border-zinc-600 overflow-hidden flex flex-col">
+          <div class="relative aspect-video w-full bg-surface-900 overflow-hidden border-b border-surface-700/70">
+            <img src="icons/videos/kindafunnyv.jpg" alt="Kinda Funny Games" class="w-full h-full object-cover">
+            <img src="icons/videos/kindafunnyv.gif" alt="Kinda Funny Preview" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span class="absolute bottom-2 left-2 rounded bg-black/75 px-2 py-0.5 text-[11px] font-semibold text-white backdrop-blur-sm">Kinda Funny</span>
+          </div>
+          <div class="p-3">
+            <div class="text-sm font-medium text-zinc-200 group-hover:text-white truncate">Gaming News</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Sticky Filter & Search Toolbar -->
+    <section aria-label="Directory Controls" class="sticky top-2 z-30 rounded-xl bg-surface-900/95 border border-surface-700/90 p-3 backdrop-blur-md shadow-xl">
+      <div class="flex flex-col md:flex-row items-stretch md:items-center gap-3">
+        <!-- Search Input -->
+        <div class="relative flex-1">
+          <svg class="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            id="site-search"
+            type="text"
+            placeholder="Filter publications (e.g. Bloomberg, Verge, ESPN)... Press /"
+            class="w-full rounded-lg bg-surface-950 border border-surface-700 pl-10 pr-16 py-2 text-sm text-white placeholder-zinc-500 focus:border-accent-blue focus:outline-none focus:ring-1 focus:ring-accent-blue"
+          >
+          <button
+            id="clear-search"
+            type="button"
+            class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 rounded bg-surface-800 px-2 py-0.5 text-xs text-zinc-300 hover:bg-surface-700 hover:text-white"
+          >
+            Clear
+          </button>
+        </div>
+
+        <!-- Expand / Collapse All -->
+        <div class="flex items-center gap-2 shrink-0">
+          <button
+            id="toggle-all-btn"
+            type="button"
+            class="w-full md:w-auto inline-flex items-center justify-center gap-1.5 rounded-lg bg-surface-800 hover:bg-surface-700 border border-surface-700 px-3.5 py-2 text-xs font-semibold text-zinc-200 transition-colors"
+          >
+            <span id="toggle-all-label">Expand All</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Category Pills (Horizontally scrollable on mobile) -->
+      <div id="category-pills" class="mt-3 flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-0.5">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </section>
+
+    <!-- Directory Sections Container -->
+    <div id="directory-container" class="space-y-4">
+      <!-- Populated dynamically via JS -->
+    </div>
+
+    <!-- Empty Search State -->
+    <div id="empty-state" class="hidden rounded-xl border border-surface-700/80 bg-surface-900/60 p-10 text-center">
+      <p class="text-base font-semibold text-zinc-200">No publications matched your filter.</p>
+      <p class="mt-1 text-sm text-zinc-400">Try another keyword or clear your search.</p>
+    </div>
+
+  </main>
+
+  <footer class="border-t border-surface-800/80 py-6 text-center text-xs text-zinc-500">
+    Serf Startpage &bull; Press <kbd class="rounded bg-surface-800 px-1.5 py-0.5 text-zinc-300 font-mono">/</kbd> anytime to search
+  </footer>
+
+  <!-- Clock Script -->
+  <script src="clock.js"></script>
+
+  <!-- Trending News Fetcher (Frontend-Only) -->
+  <script>
+    (function () {
+      const STORY_LIMIT = 8;
+      const FEED_URL = encodeURIComponent('https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en');
+      const API_ENDPOINT = `https://api.rss2json.com/v1/api.json?rss_url=${FEED_URL}`;
+
+      const FALLBACK_STORIES = [
+        { title: "Google News Top Headlines", url: "https://news.google.com/", source: "Google News", pubDate: "" },
+        { title: "Finviz Market & Stock News Wire", url: "https://finviz.com/news", source: "Finviz", pubDate: "" },
+        { title: "Alltop Curated Daily Stories", url: "https://www.alltop.com/", source: "Alltop", pubDate: "" },
+        { title: "Reuters Global & Business Coverage", url: "https://www.reuters.com/", source: "Reuters", pubDate: "" },
+        { title: "Ars Technica Technology & Science", url: "https://arstechnica.com/", source: "Ars Technica", pubDate: "" },
+        { title: "AP News Breaking & World Wire", url: "https://apnews.com/", source: "AP News", pubDate: "" }
+      ];
+
+      const gridEl = document.getElementById('trending-grid');
+      const skeletonEl = document.getElementById('trending-skeleton');
+      const statusEl = document.getElementById('trending-status');
+      const refreshBtn = document.getElementById('refresh-trending-btn');
+
+      function formatRelativeTime(dateStr) {
+        if (!dateStr) return '';
+        const parsed = new Date(dateStr.replace(' ', 'T'));
+        if (Number.isNaN(parsed.getTime())) return '';
+        const diffMins = Math.max(1, Math.floor((Date.now() - parsed.getTime()) / 60000));
+        if (diffMins < 60) return `${diffMins}m ago`;
+        const diffHrs = Math.floor(diffMins / 60);
+        if (diffHrs < 24) return `${diffHrs}h ago`;
+        return `${Math.floor(diffHrs / 24)}d ago`;
+      }
+
+      function parseSourceAndCleanTitle(rawTitle) {
+        const parts = rawTitle.split(' - ');
+        if (parts.length > 1) {
+          const source = parts.pop().trim();
+          return { title: parts.join(' - ').trim(), source };
+        }
+        return { title: rawTitle.trim(), source: 'Trending' };
+      }
+
+      function renderStories(stories, isFallback = false) {
+        const sliced = stories.slice(0, STORY_LIMIT);
+        gridEl.innerHTML = sliced.map((story, idx) => {
+          const timeLabel = formatRelativeTime(story.pubDate);
+          return `
+            <a href="${story.url}" target="_blank" rel="noopener noreferrer"
+               class="viewfinder-card group flex flex-col justify-between gap-2.5 rounded-xl bg-surface-850 hover:bg-surface-800 border border-surface-700/75 hover:border-zinc-600 p-4">
+              <div class="flex items-start gap-3">
+                <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-surface-900 border border-surface-700 text-xs font-mono font-bold text-accent-blue">
+                  ${idx + 1}
+                </span>
+                <h3 class="text-sm font-semibold text-zinc-100 group-hover:text-white leading-snug line-clamp-2">
+                  ${story.title}
+                </h3>
+              </div>
+              <div class="flex items-center justify-between text-xs text-zinc-400 pl-9">
+                <span class="truncate font-medium text-zinc-400 group-hover:text-zinc-300">${story.source}</span>
+                <span class="shrink-0 font-mono text-[11px] text-zinc-500">${timeLabel}</span>
+              </div>
+            </a>
+          `;
+        }).join('');
+
+        skeletonEl.classList.add('hidden');
+        gridEl.classList.remove('hidden');
+        gridEl.classList.add('grid');
+        statusEl.textContent = isFallback ? 'Quick links fallback' : `Top ${sliced.length} stories`;
+      }
+
+      async function loadTrending() {
+        statusEl.textContent = 'Fetching...';
+        try {
+          const res = await fetch(API_ENDPOINT, { cache: 'no-store' });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const data = await res.json();
+
+          if (data.status !== 'ok' || !Array.isArray(data.items) || data.items.length === 0) {
+            throw new Error('Empty feed');
+          }
+
+          const normalized = data.items.slice(0, STORY_LIMIT).map(item => {
+            const parsed = parseSourceAndCleanTitle(item.title || 'Untitled');
+            return {
+              title: parsed.title,
+              source: item.author || parsed.source,
+              url: item.link,
+              pubDate: item.pubDate
+            };
+          }).filter(s => s.url);
+
+          if (normalized.length === 0) throw new Error('No valid links');
+          renderStories(normalized, false);
+        } catch (err) {
+          renderStories(FALLBACK_STORIES, true);
+        }
+      }
+
+      refreshBtn.addEventListener('click', loadTrending);
+      loadTrending();
+    })();
+  </script>
+
+  <!-- Directory Data & Interactive UI Logic -->
+  <script>
+    const CATEGORY_ICONS = {
+      all: `<svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect></svg>`,
+      business: `<svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>`,
+      technology: `<svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"></path></svg>`,
+      newspapers: `<svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6Z"></path></svg>`,
+      entertainment: `<svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>`,
+      gaming: `<svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line><rect x="2" y="6" width="20" height="12" rx="2"></rect></svg>`,
+      food: `<svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg>`,
+      sports: `<svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>`,
+      political: `<svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="22" x2="21" y2="22"></line><line x1="6" y1="18" x2="6" y2="11"></line><line x1="10" y1="18" x2="10" y2="11"></line><line x1="14" y1="18" x2="14" y2="11"></line><line x1="18" y1="18" x2="18" y2="11"></line><polygon points="12 2 20 7 4 7"></polygon></svg>`,
+      health: `<svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>`,
+      social: `<svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>`
+    };
+
+    const DIRECTORY_DATA = [
+      {
+        id: 'business',
+        title: 'Business',
+        defaultOpen: true,
+        items: [
+          { name: "Barron's", url: "https://www.barrons.com/", icon: "icons/business/barrons.png" },
+          { name: "Benzinga", url: "https://www.benzinga.com/", icon: "icons/business/benzinga.png" },
+          { name: "Bloomberg", url: "https://www.bloomberg.com/", icon: "icons/business/bloomberg.png" },
+          { name: "Business Insider", url: "https://www.businessinsider.com/", icon: "icons/business/businessinsider.png" },
+          { name: "Cheddar", url: "https://www.cheddar.com/", icon: "icons/business/cheddar.png" },
+          { name: "CNBC", url: "https://www.cnbc.com/", icon: "icons/business/cnbc.png" },
+          { name: "Crunchbase", url: "https://www.crunchbase.com/", icon: "icons/business/crunchbase.png" },
+          { name: "Fast Company", url: "https://www.fastcompany.com/", icon: "icons/business/fastcompany.png" },
+          { name: "Finviz", url: "https://finviz.com/", icon: "icons/business/finviz.png" },
+          { name: "Forbes", url: "https://www.forbes.com/", icon: "icons/business/forbes.png" },
+          { name: "Fortune", url: "https://www.fortune.com/", icon: "icons/business/fortune.png" },
+          { name: "Fox Business", url: "https://www.foxbusiness.com/", icon: "icons/business/fox.png" },
+          { name: "Financial Times", url: "https://www.ft.com/", icon: "icons/business/ft.png" },
+          { name: "Investor's Business Daily", url: "https://www.investors.com/", icon: "icons/business/ibd.png" },
+          { name: "Institutional Investor", url: "https://www.institutionalinvestor.com/", icon: "icons/business/II.png" },
+          { name: "Inc.", url: "https://www.inc.com/", icon: "icons/business/inc.png" },
+          { name: "Investing.com", url: "https://www.investing.com/", icon: "icons/business/investing.png" },
+          { name: "InvestmentNews", url: "https://www.investmentnews.com/", icon: "icons/business/investmentnews.png" },
+          { name: "InvestorPlace", url: "https://www.investorplace.com/", icon: "icons/business/investorplace.png" },
+          { name: "MarketWatch", url: "https://www.marketwatch.com/", icon: "icons/business/marketwatch.png" },
+          { name: "Morningstar", url: "https://www.morningstar.com/", icon: "icons/business/morningstar.png" },
+          { name: "Reuters", url: "https://www.reuters.com/", icon: "icons/business/reuters.png" },
+          { name: "Seeking Alpha", url: "https://www.seekingalpha.com/", icon: "icons/business/seekingalpha.png" },
+          { name: "StreetInsider", url: "https://www.streetinsider.com/", icon: "icons/business/streetinsider.png" },
+          { name: "TheStreet", url: "https://www.thestreet.com/", icon: "icons/business/thestreet.png" },
+          { name: "WSJ", url: "https://www.wsj.com/", icon: "icons/business/wsj.png" },
+          { name: "Yahoo Finance", url: "https://finance.yahoo.com/", icon: "icons/business/yahoo_finance.png" }
+        ]
+      },
+      {
+        id: 'technology',
+        title: 'Technology',
+        defaultOpen: true,
+        items: [
+          { name: "Ars Technica", url: "https://arstechnica.com/", icon: "icons/technology/ars.png" },
+          { name: "Blocks & Files", url: "https://blocksandfiles.com/", icon: "icons/technology/blocksandfiles.png" },
+          { name: "CNET", url: "https://www.cnet.com/", icon: "icons/technology/cnet.png" },
+          { name: "Computerworld", url: "https://www.computerworld.com/", icon: "icons/technology/computer_world.png" },
+          { name: "Engadget", url: "https://www.engadget.com/", icon: "icons/technology/engadget.png" },
+          { name: "ExtremeTech", url: "https://www.extremetech.com/", icon: "icons/technology/extreme_tech.png" },
+          { name: "Gizmodo", url: "https://gizmodo.com/", icon: "icons/technology/gizmodo.png" },
+          { name: "Mashable", url: "https://mashable.com/", icon: "icons/technology/mashable.png" },
+          { name: "TechCrunch", url: "https://www.techcrunch.com/", icon: "icons/technology/techcrunch.png" },
+          { name: "TechRadar", url: "https://www.techradar.com/", icon: "icons/technology/techradar.png" },
+          { name: "The Verge", url: "https://www.theverge.com/", icon: "icons/technology/theverge.png" },
+          { name: "Tom's Hardware", url: "https://www.tomshardware.com/", icon: "icons/technology/toms_hardware.png" },
+          { name: "VentureBeat", url: "https://www.venturebeat.com/", icon: "icons/technology/venturebeat.png" },
+          { name: "Vox", url: "https://www.vox.com/", icon: "icons/technology/vox.png" },
+          { name: "WIRED", url: "https://www.wired.com/", icon: "icons/technology/wired.png" },
+          { name: "ZDNET", url: "https://www.zdnet.com/", icon: "icons/technology/zdnet.png" }
+        ]
+      },
+      {
+        id: 'newspapers',
+        title: 'Newspapers',
+        defaultOpen: false,
+        items: [
+          { name: "ABC News", url: "https://abcnews.go.com/", icon: "icons/newspapers/abc_news.png" },
+          { name: "AP News", url: "https://apnews.com/", icon: "icons/newspapers/associated_press.png" },
+          { name: "BBC", url: "https://www.bbc.com/", icon: "icons/newspapers/bbc.png" },
+          { name: "Boston Globe", url: "https://www.bostonglobe.com/", icon: "icons/newspapers/boston_globe.png" },
+          { name: "CBS News", url: "https://www.cbsnews.com/", icon: "icons/newspapers/cbs_news.png" },
+          { name: "Chicago Tribune", url: "https://www.chicagotribune.com/", icon: "icons/newspapers/chicago_tribune.png" },
+          { name: "LA Times", url: "https://www.latimes.com/", icon: "icons/newspapers/los_angeles_times.png" },
+          { name: "NY Post", url: "https://nypost.com/", icon: "icons/newspapers/new_york_post.png" },
+          { name: "Newsweek", url: "https://www.newsweek.com/", icon: "icons/newspapers/newsweek.png" },
+          { name: "NPR", url: "https://www.npr.org/", icon: "icons/newspapers/npr.png" },
+          { name: "NY Times", url: "https://www.nytimes.com/", icon: "icons/newspapers/nyt.png" },
+          { name: "Slate", url: "https://slate.com/", icon: "icons/newspapers/slate.png" },
+          { name: "Telegraph", url: "https://www.telegraph.co.uk/us/", icon: "icons/newspapers/telegraph.png" },
+          { name: "The Atlantic", url: "https://www.theatlantic.com/", icon: "icons/newspapers/the_atlantic.png" },
+          { name: "The New Yorker", url: "https://www.newyorker.com/", icon: "icons/newspapers/the_new_yorker.png" },
+          { name: "TIME", url: "https://time.com/", icon: "icons/newspapers/time.png" },
+          { name: "USA Today", url: "https://www.usatoday.com/", icon: "icons/newspapers/usa_today.png" },
+          { name: "Washington Post", url: "https://www.washingtonpost.com/", icon: "icons/newspapers/washingtonpost.png" },
+          { name: "Yahoo", url: "https://www.yahoo.com/", icon: "icons/newspapers/yahoo.png" }
+        ]
+      },
+      {
+        id: 'entertainment',
+        title: 'Entertainment',
+        defaultOpen: false,
+        items: [
+          { name: "Billboard", url: "https://www.billboard.com/", icon: "icons/entertainment/billboard.png" },
+          { name: "CinemaBlend", url: "https://www.cinemablend.com/", icon: "icons/entertainment/cinemablend.png" },
+          { name: "Collider", url: "https://www.collider.com/", icon: "icons/entertainment/collider.png" },
+          { name: "Deadline", url: "https://www.deadline.com/", icon: "icons/entertainment/deadline.png" },
+          { name: "Empire", url: "https://www.empireonline.com/movies/news/", icon: "icons/entertainment/empire.png" },
+          { name: "E! News", url: "https://www.eonline.com/", icon: "icons/entertainment/enews.png" },
+          { name: "Entertainment Weekly", url: "https://ew.com/", icon: "icons/entertainment/entertainment_weekly.png" },
+          { name: "IMDb", url: "https://www.imdb.com/", icon: "icons/entertainment/imdb.png" },
+          { name: "IndieWire", url: "https://www.indiewire.com/", icon: "icons/entertainment/indiewire.png" },
+          { name: "Metacritic", url: "https://www.metacritic.com/", icon: "icons/entertainment/metacritic.png" },
+          { name: "People", url: "https://www.people.com/", icon: "icons/entertainment/people.png" },
+          { name: "Rolling Stone", url: "https://www.rollingstone.com/", icon: "icons/entertainment/rolling_stone.png" },
+          { name: "Rotten Tomatoes", url: "https://www.rottentomatoes.com/", icon: "icons/entertainment/rotten_tomatoes.png" },
+          { name: "ScreenCrush", url: "https://screencrush.com/", icon: "icons/entertainment/screen_crush.png" },
+          { name: "Screen Rant", url: "https://www.screenrant.com/", icon: "icons/entertainment/screenrant.png" },
+          { name: "/Film", url: "https://www.slashfilm.com/", icon: "icons/entertainment/slash_film.png" },
+          { name: "Hollywood Reporter", url: "https://www.hollywoodreporter.com/", icon: "icons/entertainment/the_hollywood_reporter.png" },
+          { name: "Us Weekly", url: "https://www.usmagazine.com/", icon: "icons/entertainment/usweekly.png" },
+          { name: "Vanity Fair", url: "https://www.vanityfair.com/", icon: "icons/entertainment/vanityfair.png" },
+          { name: "Variety", url: "https://www.variety.com/", icon: "icons/entertainment/variety.png" },
+          { name: "Vulture", url: "https://www.vulture.com/", icon: "icons/entertainment/vulture.png" }
+        ]
+      },
+      {
+        id: 'gaming',
+        title: 'Gaming',
+        defaultOpen: false,
+        items: [
+          { name: "Aftermath", url: "https://aftermath.site/", icon: "icons/gaming/aftermath.png" },
+          { name: "Destructoid", url: "https://www.destructoid.com/", icon: "icons/gaming/destructoid.png" },
+          { name: "Dexerto", url: "https://www.dexerto.com/", icon: "icons/gaming/dexerto.png" },
+          { name: "Eurogamer", url: "https://www.eurogamer.net/", icon: "icons/gaming/eurogamer.png" },
+          { name: "Game Rant", url: "https://gamerant.com/", icon: "icons/gaming/gamerant.png" },
+          { name: "GamesBeat", url: "https://venturebeat.com/category/games/", icon: "icons/gaming/gamesbeat.png" },
+          { name: "Game Informer", url: "https://www.gameinformer.com/", icon: "icons/gaming/gameinformer.png" },
+          { name: "GamesIndustry", url: "https://www.gamesindustry.biz/", icon: "icons/gaming/gamesindustry.png" },
+          { name: "GameSpot", url: "https://www.gamespot.com/", icon: "icons/gaming/gamespot.png" },
+          { name: "GamesRadar+", url: "https://www.gamesradar.com/", icon: "icons/gaming/gamesradar.png" },
+          { name: "IGN", url: "https://www.ign.com/", icon: "icons/gaming/ign.png" },
+          { name: "Kotaku", url: "https://www.kotaku.com/", icon: "icons/gaming/kotaku.png" },
+          { name: "Nintendo", url: "https://www.nintendo.com/", icon: "icons/gaming/nintendo.png" },
+          { name: "PC Gamer", url: "https://www.pcgamer.com/", icon: "icons/gaming/pcgamer.png" },
+          { name: "PlayStation", url: "https://www.playstation.com/", icon: "icons/gaming/playstation.png" },
+          { name: "Polygon", url: "https://www.polygon.com/", icon: "icons/gaming/polygon.png" },
+          { name: "Shacknews", url: "https://www.shacknews.com/", icon: "icons/gaming/shacknews.png" },
+          { name: "SIFTD", url: "https://siftd.net/", icon: "icons/gaming/siftd.png" },
+          { name: "theScore esports", url: "https://www.thescoreesports.com/", icon: "icons/gaming/thescoreesports.png" },
+          { name: "VGC", url: "https://www.videogameschronicle.com/", icon: "icons/gaming/vgc.png" },
+          { name: "Xbox", url: "https://www.xbox.com/", icon: "icons/gaming/xbox.png" }
+        ]
+      },
+      {
+        id: 'food',
+        title: 'Food',
+        defaultOpen: false,
+        items: [
+          { name: "Bon Appétit", url: "https://www.bonappetit.com/", icon: "icons/food/bonappetit.png" },
+          { name: "BuzzFeed Food", url: "https://www.buzzfeed.com/food", icon: "icons/food/buzzfeedfood.png" },
+          { name: "Delish", url: "https://www.delish.com/", icon: "icons/food/delish.png" },
+          { name: "Eater", url: "https://www.eater.com/", icon: "icons/food/eater.png" },
+          { name: "Epicurious", url: "https://www.epicurious.com/", icon: "icons/food/epicurious.png" },
+          { name: "Foodbeast", url: "https://www.foodbeast.com/", icon: "icons/food/food_beast.png" },
+          { name: "Food Dive", url: "https://www.fooddive.com/", icon: "icons/food/food_dive.png" },
+          { name: "Food Network", url: "https://www.foodnetwork.com/", icon: "icons/food/food_network.png" },
+          { name: "Food & Wine", url: "https://www.foodandwine.com/", icon: "icons/food/food_wine.png" },
+          { name: "Yelp", url: "https://www.yelp.com/", icon: "icons/food/yelp.png" }
+        ]
+      },
+      {
+        id: 'sports',
+        title: 'Sports',
+        defaultOpen: false,
+        items: [
+          { name: "Barstool Sports", url: "https://www.barstoolsports.com/", icon: "icons/sports/barstool_sports.png" },
+          { name: "Bleacher Report", url: "https://bleacherreport.com/", icon: "icons/sports/bleacherreport.png" },
+          { name: "CBS Sports", url: "https://www.cbssports.com/", icon: "icons/sports/cbs_sports.png" },
+          { name: "Deadspin", url: "https://deadspin.com/", icon: "icons/sports/deadspin.png" },
+          { name: "ESPN", url: "https://www.espn.com/", icon: "icons/sports/espn.png" },
+          { name: "Fox Sports", url: "https://www.foxsports.com/", icon: "icons/sports/fox_sports.png" },
+          { name: "The Ringer", url: "https://www.theringer.com/", icon: "icons/sports/ringer.png" },
+          { name: "SB Nation", url: "https://www.sbnation.com/", icon: "icons/sports/sbnation.png" },
+          { name: "Sports Illustrated", url: "https://www.si.com/", icon: "icons/sports/sports_illustrated.png" },
+          { name: "The Athletic", url: "https://www.nytimes.com/athletic/", icon: "icons/sports/theathletic.png" },
+          { name: "TheLines", url: "https://www.thelines.com/", icon: "icons/sports/the_lines.png" },
+          { name: "Yahoo Sports", url: "https://sports.yahoo.com/", icon: "icons/sports/yahoo_sports.png" },
+          { name: "Yardbarker", url: "https://www.yardbarker.com/", icon: "icons/sports/yard_barker.png" }
+        ]
+      },
+      {
+        id: 'political',
+        title: 'Political',
+        defaultOpen: false,
+        items: [
+          { name: "Axios", url: "https://www.axios.com/", icon: "icons/politics/axios.png" },
+          { name: "CNN", url: "https://www.cnn.com/", icon: "icons/politics/cnn.png" },
+          { name: "The Economist", url: "https://www.economist.com/", icon: "icons/politics/economist.png" },
+          { name: "Fox News", url: "https://www.foxnews.com/", icon: "icons/politics/fox_news.png" },
+          { name: "Mother Jones", url: "https://www.motherjones.com/", icon: "icons/politics/mother_jones.png" },
+          { name: "ProPublica", url: "https://www.propublica.org/", icon: "icons/politics/propublica.png" },
+          { name: "The Hill", url: "https://www.thehill.com/", icon: "icons/politics/thehill.png" },
+          { name: "VICE", url: "https://www.vice.com/", icon: "icons/politics/vice.png" }
+        ]
+      },
+      {
+        id: 'health',
+        title: 'Health',
+        defaultOpen: false,
+        items: [
+          { name: "Art of Manliness", url: "https://www.artofmanliness.com/", icon: "icons/health/art_of_manliness.png" },
+          { name: "AskMen", url: "https://www.askmen.com/", icon: "icons/health/askmen.png" },
+          { name: "Medical News Today", url: "https://www.medicalnewstoday.com/", icon: "icons/health/medical_news_today.png" },
+          { name: "Men's Fitness", url: "https://www.mensfitness.com/", icon: "icons/health/mens_fitness.png" },
+          { name: "Men's Health", url: "https://www.menshealth.com/", icon: "icons/health/mens_health.png" },
+          { name: "Men's Journal", url: "https://www.mensjournal.com/", icon: "icons/health/mens_journal.png" }
+        ]
+      },
+      {
+        id: 'social',
+        title: 'Social',
+        defaultOpen: false,
+        items: [
+          { name: "BuzzFeed", url: "https://www.buzzfeed.com/", icon: "icons/social/buzzfeed.png" },
+          { name: "Digg", url: "https://www.digg.com/", icon: "icons/social/digg.png" },
+          { name: "Facebook", url: "https://www.facebook.com/", icon: "icons/social/facebook.png" },
+          { name: "FMHY", url: "https://fmhy.net/", icon: "icons/social/fmhy.png" },
+          { name: "Instagram", url: "https://www.instagram.com/", icon: "icons/social/instagram.png" },
+          { name: "Kick", url: "https://kick.com/", icon: "icons/social/kick.png" },
+          { name: "Reddit", url: "https://www.reddit.com/", icon: "icons/social/reddit.png" },
+          { name: "Stocktwits", url: "https://www.stocktwits.com/", icon: "icons/social/stocktwits.png" },
+          { name: "TikTok", url: "https://www.tiktok.com/", icon: "icons/social/tiktok.png" },
+          { name: "Twitch", url: "https://www.twitch.tv/", icon: "icons/social/twitch.png" },
+          { name: "WallStreetBets", url: "https://www.reddit.com/r/wallstreetbets/", icon: "icons/social/wsb.png" },
+          { name: "X", url: "https://www.x.com/", icon: "icons/social/x.png" },
+          { name: "YouTube", url: "https://www.youtube.com/", icon: "icons/social/youtube.png" },
+          { name: "Snowball", url: "https://pratikmshah.github.io/tradelytics/apps/snowball/snowball.html", icon: "icons/social/snowball.png" }
+        ]
+      }
+    ];
+
+    const directoryContainer = document.getElementById('directory-container');
+    const pillsContainer = document.getElementById('category-pills');
+    const searchInput = document.getElementById('site-search');
+    const clearSearchBtn = document.getElementById('clear-search');
+    const toggleAllBtn = document.getElementById('toggle-all-btn');
+    const toggleAllLabel = document.getElementById('toggle-all-label');
+    const emptyState = document.getElementById('empty-state');
+
+    let activeCategory = 'all';
+    const openState = {};
+    DIRECTORY_DATA.forEach(cat => {
+      openState[cat.id] = cat.defaultOpen;
+    });
+
+    function renderPills() {
+      const pills = [{ id: 'all', title: 'All Categories' }, ...DIRECTORY_DATA];
+      pillsContainer.innerHTML = pills.map(pill => {
+        const isActive = activeCategory === pill.id;
+        const iconSvg = CATEGORY_ICONS[pill.id] || '';
+        return `
+          <button
+            type="button"
+            data-cat="${pill.id}"
+            class="cat-pill inline-flex items-center gap-1.5 shrink-0 rounded-full px-3.5 py-1.5 text-xs font-semibold transition-colors ${
+              isActive
+                ? 'bg-accent-blue text-white shadow-sm'
+                : 'bg-surface-850 text-zinc-400 hover:bg-surface-800 hover:text-zinc-200 border border-surface-700/70'
+            }"
+          >
+            ${iconSvg}
+            <span>${pill.title}</span>
+          </button>
+        `;
+      }).join('');
+
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeCategory = btn.dataset.cat;
+          if (activeCategory !== 'all') {
+            openState[activeCategory] = true;
+          }
+          renderPills();
+          renderDirectory();
+        });
+      });
+    }
+
+    function renderDirectory() {
+      const query = searchInput.value.trim().toLowerCase();
+      let visibleSections = 0;
+
+      directoryContainer.innerHTML = DIRECTORY_DATA.map(section => {
+        if (activeCategory !== 'all' && activeCategory !== section.id) {
+          return '';
+        }
+
+        const filteredItems = section.items.filter(item =>
+          item.name.toLowerCase().includes(query) ||
+          section.title.toLowerCase().includes(query)
+        );
+
+        if (filteredItems.length === 0) {
+          return '';
+        }
+
+        visibleSections++;
+        const isExpanded = query.length > 0 || activeCategory !== 'all' || openState[section.id];
+        const sectionIcon = CATEGORY_ICONS[section.id] || '';
+
+        const cardsHtml = filteredItems.map(item => `
+          <a href="${item.url}" target="_blank" rel="noopener noreferrer"
+             class="viewfinder-card group flex items-center gap-3.5 rounded-xl bg-surface-850 hover:bg-surface-800 border border-surface-700/75 hover:border-zinc-600 p-3.5">
+            <img src="${item.icon}" alt="${item.name}" loading="lazy"
+                 class="w-10 h-10 sm:w-11 sm:h-11 rounded-lg object-contain shrink-0 transition-transform duration-200 group-hover:scale-105">
+            <span class="text-sm font-medium text-zinc-200 group-hover:text-white leading-snug line-clamp-2">
+              ${item.name}
+            </span>
+          </a>
+        `).join('');
+
+        return `
+          <section class="rounded-2xl bg-surface-900/75 border border-surface-800 overflow-hidden transition-colors">
+            <button
+              type="button"
+              data-toggle="${section.id}"
+              aria-expanded="${isExpanded}"
+              class="section-toggle w-full flex items-center justify-between px-4 sm:px-6 py-4 text-left hover:bg-surface-850/70 transition-colors focus:outline-none"
+            >
+              <div class="flex items-center gap-3">
+                <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-800 border border-surface-700 text-accent-blue">
+                  ${sectionIcon}
+                </span>
+                <h2 class="text-lg sm:text-xl font-bold tracking-tight text-white">${section.title}</h2>
+                <span class="rounded-full bg-surface-800 border border-surface-700 px-2.5 py-0.5 text-xs font-mono font-medium text-zinc-400">
+                  ${filteredItems.length}
+                </span>
+              </div>
+              <svg class="w-5 h-5 text-zinc-400 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}"
+                   fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+
+            <div class="${isExpanded ? 'block' : 'hidden'} px-4 sm:px-6 pb-5 pt-1">
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-3.5">
+                ${cardsHtml}
+              </div>
+            </div>
+          </section>
+        `;
+      }).join('');
+
+      emptyState.classList.toggle('hidden', visibleSections > 0);
+      updateToggleAllButton();
+
+      document.querySelectorAll('.section-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.dataset.toggle;
+          openState[id] = !openState[id];
+          renderDirectory();
+        });
+      });
+    }
+
+    function updateToggleAllButton() {
+      const allOpen = DIRECTORY_DATA.every(cat => openState[cat.id]);
+      toggleAllLabel.textContent = allOpen ? 'Collapse All' : 'Expand All';
+    }
+
+    searchInput.addEventListener('input', () => {
+      clearSearchBtn.classList.toggle('hidden', searchInput.value.length === 0);
+      renderDirectory();
+    });
+
+    clearSearchBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      clearSearchBtn.classList.add('hidden');
+      renderDirectory();
+      searchInput.focus();
+    });
+
+    toggleAllBtn.addEventListener('click', () => {
+      const allOpen = DIRECTORY_DATA.every(cat => openState[cat.id]);
+      DIRECTORY_DATA.forEach(cat => {
+        openState[cat.id] = !allOpen;
+      });
+      renderDirectory();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement !== searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+      } else if (e.key === 'Escape' && document.activeElement === searchInput) {
+        searchInput.value = '';
+        clearSearchBtn.classList.add('hidden');
+        searchInput.blur();
+        renderDirectory();
+      }
+    });
+
+    renderPills();
+    renderDirectory();
+  </script>
+</body>
+</html>

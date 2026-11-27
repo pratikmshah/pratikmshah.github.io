@@ -1,448 +1,274 @@
-body {
-  /* Changed from pure black to a deep dark grey matching "theme.png" */
-  background: #0f0f0f;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  color: #ececec;
+/*! Serf Production Stylesheet — Zero-CDN Standalone Build */
+*,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:#2a2a30}
+html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background-color:#0a0a0b;color:#f4f4f5}
+body{margin:0;line-height:inherit;background-color:#0a0a0b;color:#f4f4f5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;min-height:100vh;display:flex;flex-direction:column}
+h1,h2,h3,p,figure,blockquote,ul,ol,dl,dd{margin:0}
+h1,h2,h3{font-size:inherit;font-weight:inherit}
+a{color:inherit;text-decoration:inherit}
+button,input{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}
+button{background-color:transparent;background-image:none;cursor:pointer}
+img,svg{display:block;vertical-align:middle}
+img{max-width:100%;height:auto}
+kbd{font-family:'JetBrains Mono',monospace}
+::selection{background-color:#3D90D9;color:#ffffff}
+
+/* Scrollbars */
+.no-scrollbar::-webkit-scrollbar{display:none}
+.no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+.thin-scrollbar::-webkit-scrollbar{height:6px}
+.thin-scrollbar::-webkit-scrollbar-track{background:transparent}
+.thin-scrollbar::-webkit-scrollbar-thumb{background-color:#2a2a30;border-radius:9999px}
+.thin-scrollbar::-webkit-scrollbar-thumb:hover{background-color:#44444e}
+
+/* Card transition */
+.viewfinder-card{position:relative;transition:transform .2s cubic-bezier(.16,1,.3,1),background-color .2s ease,border-color .2s ease}
+.viewfinder-card:hover{z-index:20}
+
+/* Layout & Positioning */
+.pointer-events-none{pointer-events:none}
+.fixed{position:fixed}
+.absolute{position:absolute}
+.relative{position:relative}
+.sticky{position:sticky}
+.inset-0{inset:0}
+.inset-x-0{left:0;right:0}
+.top-0{top:0}
+.top-2{top:.5rem}
+.top-1\/2{top:50%}
+.bottom-2{bottom:.5rem}
+.left-2{left:.5rem}
+.left-3\.5{left:.875rem}
+.right-2\.5{right:.625rem}
+.-z-10{z-index:-10}
+.z-30{z-index:30}
+
+/* Display & Flex & Grid */
+.block{display:block}
+.inline-flex{display:inline-flex}
+.flex{display:flex}
+.grid{display:grid}
+.hidden{display:none}
+.flex-1{flex:1 1 0%}
+.flex-none{flex:none}
+.flex-col{flex-direction:column}
+.items-start{align-items:flex-start}
+.items-center{align-items:center}
+.items-stretch{align-items:stretch}
+.justify-center{justify-content:center}
+.justify-between{justify-content:space-between}
+.shrink-0{flex-shrink:0}
+.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}
+.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+
+/* Gaps & Spacing */
+.gap-1\.5{gap:.375rem}
+.gap-2{gap:.5rem}
+.gap-2\.5{gap:.625rem}
+.gap-3{gap:.75rem}
+.gap-3\.5{gap:.875rem}
+.gap-4{gap:1rem}
+.space-y-4>:not([hidden])~:not([hidden]){margin-top:1rem}
+.space-y-10>:not([hidden])~:not([hidden]){margin-top:2.5rem}
+.mx-auto{margin-left:auto;margin-right:auto}
+.-mx-4{margin-left:-1rem;margin-right:-1rem}
+.mt-0\.5{margin-top:.125rem}
+.-mt-0\.5{margin-top:-.125rem}
+.mt-1{margin-top:.25rem}
+.mt-3{margin-top:.75rem}
+.mt-5{margin-top:1.25rem}
+.mb-3\.5{margin-bottom:.875rem}
+.p-3{padding:.75rem}
+.p-3\.5{padding:.875rem}
+.p-4{padding:1rem}
+.p-10{padding:2.5rem}
+.px-1\.5{padding-left:.375rem;padding-right:.375rem}
+.px-2{padding-left:.5rem;padding-right:.5rem}
+.px-2\.5{padding-left:.625rem;padding-right:.625rem}
+.px-3\.5{padding-left:.875rem;padding-right:.875rem}
+.px-4{padding-left:1rem;padding-right:1rem}
+.py-0\.5{padding-top:.125rem;padding-bottom:.125rem}
+.py-1{padding-top:.25rem;padding-bottom:.25rem}
+.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}
+.py-2{padding-top:.5rem;padding-bottom:.5rem}
+.py-3{padding-top:.75rem;padding-bottom:.75rem}
+.py-4{padding-top:1rem;padding-bottom:1rem}
+.py-6{padding-top:1.5rem;padding-bottom:1.5rem}
+.pt-0\.5{padding-top:.125rem}
+.pt-1{padding-top:.25rem}
+.pt-6{padding-top:1.5rem}
+.pb-2{padding-bottom:.5rem}
+.pb-4{padding-bottom:1rem}
+.pb-5{padding-bottom:1.25rem}
+.pb-16{padding-bottom:4rem}
+.pl-9{padding-left:2.25rem}
+.pl-10{padding-left:2.5rem}
+.pr-16{padding-right:4rem}
+
+/* Sizing */
+.w-full{width:100%}
+.w-auto{width:auto}
+.w-2\.5{width:.625rem}
+.w-4{width:1rem}
+.w-5{width:1.25rem}
+.w-6{width:1.5rem}
+.w-8{width:2rem}
+.w-10{width:2.5rem}
+.w-64{width:16rem}
+.min-w-0{min-width:0}
+.max-w-7xl{max-width:80rem}
+.h-full{height:100%}
+.h-2\.5{height:.625rem}
+.h-4{height:1rem}
+.h-5{height:1.25rem}
+.h-6{height:1.5rem}
+.h-8{height:2rem}
+.h-10{height:2.5rem}
+.h-20{height:5rem}
+.h-24{height:6rem}
+.h-64{height:16rem}
+.min-h-screen{min-height:100vh}
+.aspect-video{aspect-ratio:16/9}
+
+/* Typography */
+.font-sans{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif}
+.font-mono{font-family:'JetBrains Mono',monospace}
+.text-\[11px\]{font-size:11px;line-height:1rem}
+.text-xs{font-size:.75rem;line-height:1rem}
+.text-sm{font-size:.875rem;line-height:1.25rem}
+.text-base{font-size:1rem;line-height:1.5rem}
+.text-lg{font-size:1.125rem;line-height:1.75rem}
+.font-medium{font-weight:500}
+.font-semibold{font-weight:600}
+.font-bold{font-weight:700}
+.leading-snug{line-height:1.375}
+.tracking-tight{letter-spacing:-.025em}
+.text-left{text-align:left}
+.text-center{text-align:center}
+.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.line-clamp-2{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+
+/* Colors & Backgrounds */
+.bg-surface-950{background-color:#0a0a0b}
+.bg-surface-900{background-color:#111113}
+.bg-surface-900\/60{background-color:rgba(17,17,19,.6)}
+.bg-surface-900\/75{background-color:rgba(17,17,19,.75)}
+.bg-surface-900\/90{background-color:rgba(17,17,19,.9)}
+.bg-surface-900\/95{background-color:rgba(17,17,19,.95)}
+.bg-surface-850{background-color:#161619}
+.bg-surface-800{background-color:#1d1d21}
+.bg-accent-blue{background-color:#3D90D9}
+.bg-accent-neon{background-color:#53fc18}
+.bg-black\/75{background-color:rgba(0,0,0,.75)}
+.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}
+.from-accent-blue\/10{--tw-gradient-from:rgba(61,144,217,.1);--tw-gradient-to:rgba(61,144,217,0);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}
+.via-transparent{--tw-gradient-to:transparent;--tw-gradient-stops:var(--tw-gradient-from),transparent,var(--tw-gradient-to)}
+.to-transparent{--tw-gradient-to:transparent}
+
+.text-white{color:#ffffff}
+.text-zinc-100{color:#f4f4f5}
+.text-zinc-200{color:#e4e4e7}
+.text-zinc-300{color:#d4d4d8}
+.text-zinc-400{color:#a1a1aa}
+.text-zinc-500{color:#71717a}
+.text-accent-blue{color:#3D90D9}
+.placeholder-zinc-500::placeholder{color:#71717a}
+
+/* Borders & Radii & Effects */
+.border{border-width:1px}
+.border-b{border-bottom-width:1px}
+.border-t{border-top-width:1px}
+.border-surface-800{border-color:#1d1d21}
+.border-surface-800\/80{border-color:rgba(29,29,33,.8)}
+.border-surface-700{border-color:#2a2a30}
+.border-surface-700\/70{border-color:rgba(42,42,48,.7)}
+.border-surface-700\/75{border-color:rgba(42,42,48,.75)}
+.border-surface-700\/80{border-color:rgba(42,42,48,.8)}
+.border-surface-700\/90{border-color:rgba(42,42,48,.9)}
+.rounded{border-radius:.25rem}
+.rounded-md{border-radius:.375rem}
+.rounded-lg{border-radius:.5rem}
+.rounded-xl{border-radius:.75rem}
+.rounded-2xl{border-radius:1rem}
+.rounded-full{border-radius:9999px}
+.overflow-hidden{overflow:hidden}
+.overflow-x-auto{overflow-x:auto}
+.object-contain{object-fit:contain}
+.object-cover{object-fit:cover}
+.opacity-0{opacity:0}
+.opacity-75{opacity:.75}
+.shadow-sm{box-shadow:0 1px 2px 0 rgba(0,0,0,.05)}
+.shadow-lg{box-shadow:0 10px 15px -3px rgba(0,0,0,.35),0 4px 6px -4px rgba(0,0,0,.35)}
+.shadow-xl{box-shadow:0 20px 25px -5px rgba(0,0,0,.45),0 8px 10px -6px rgba(0,0,0,.45)}
+.backdrop-blur-sm{backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.backdrop-blur-md{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.snap-x{scroll-snap-type:x mandatory}
+.snap-mandatory{--tw-scroll-snap-strictness:mandatory}
+.snap-start{scroll-snap-align:start}
+
+/* Transforms & Transitions & Animations */
+.-translate-y-1\/2{transform:translateY(-50%)}
+.rotate-180{transform:rotate(180deg)}
+.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}
+.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}
+.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}
+.duration-200{transition-duration:.2s}
+.duration-300{transition-duration:.3s}
+
+@keyframes ping{75%,100%{transform:scale(2);opacity:0}}
+.animate-ping{animation:ping 1s cubic-bezier(0,0,.2,1) infinite}
+@keyframes pulse{50%{opacity:.5}}
+.animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}
+
+/* Hover & Focus States */
+.hover\:bg-surface-850\/70:hover{background-color:rgba(22,22,25,.7)}
+.hover\:bg-surface-800:hover{background-color:#1d1d21}
+.hover\:bg-surface-700:hover{background-color:#2a2a30}
+.hover\:border-zinc-600:hover{border-color:#52525b}
+.hover\:text-white:hover{color:#ffffff}
+.hover\:text-zinc-200:hover{color:#e4e4e7}
+.group:hover .group-hover\:text-white{color:#ffffff}
+.group:hover .group-hover\:text-zinc-300{color:#d4d4d8}
+.group:hover .group-hover\:opacity-100{opacity:1}
+.group:hover .group-hover\:scale-\[1\.02\]{transform:scale(1.02)}
+.group:hover .group-hover\:scale-105{transform:scale(1.05)}
+.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}
+.focus\:border-accent-blue:focus{border-color:#3D90D9}
+.focus\:ring-1:focus{box-shadow:0 0 0 1px #3D90D9}
+
+/* Responsive Breakpoints */
+@media (min-width:640px){
+  .sm\:block{display:block}
+  .sm\:inline{display:inline}
+  .sm\:flex-row{flex-direction:row}
+  .sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sm\:gap-3\.5{gap:.875rem}
+  .sm\:gap-4{gap:1rem}
+  .sm\:p-4{padding:1rem}
+  .sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}
+  .sm\:w-11{width:2.75rem}
+  .sm\:h-11{height:2.75rem}
+  .sm\:w-72{width:18rem}
+  .sm\:h-28{height:7rem}
+  .sm\:text-sm{font-size:.875rem;line-height:1.25rem}
+  .sm\:text-base{font-size:1rem;line-height:1.5rem}
+  .sm\:text-xl{font-size:1.25rem;line-height:1.75rem}
 }
 
-a.link-container:hover, a.link-container-2:hover {
-   text-decoration: none;
+@media (min-width:768px){
+  .md\:grid{display:grid}
+  .md\:flex-row{flex-direction:row}
+  .md\:items-center{align-items:center}
+  .md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .md\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .md\:mx-0{margin-left:0;margin-right:0}
+  .md\:px-0{padding-left:0;padding-right:0}
+  .md\:w-auto{width:auto}
+  .md\:h-32{height:8rem}
 }
 
-#title img {
-  max-height: 9.5em;
-  max-width: 50%;
-}
-
-.bg-dark-mod {
-  background: transparent;
-}
-
-#clock-container {
-  color: #3D90D9 !important;
-  text-decoration: none;
-  padding: 5px;
-  height: 100%;
-  font-weight: 700;
-}
-
-#brew {
-  height: 2em;
-  width: auto;
-  vertical-align: middle;
-  margin-right: -4px;
-  padding-bottom: 4px;
-}
-
-/* Adjusted headers to match the "Today's Highlights" / "Top Stories" typography */
-.card-header {
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  font-size: 1.5rem !important;
-  font-weight: 700;
-  text-align: center !important;
-  padding-left: 0;
-  padding-bottom: 15px;
-}
-
-.card {
-  background: transparent;
-  border-radius: 0;
-  border: none;
-  margin-bottom: 2rem;
-}
-
-.card:hover {
-  background: transparent;
-}
-
-.card:hover .card-header {
-  background: transparent;
-  color: #ffffff; /* Removed the #F4FF00 hover color */
-}
-
-/* Redesigned the link containers to look like the article cards in "theme.png" */
-.link-container {
-  text-decoration: none;
-  color: #a0a0a0;
-  transition: all 0.2s ease;
-  background: #161616; /* Subdued card background */
-  border: 1px solid #222; /* Subtle border */
-  border-radius: 8px;  /* Soft rounded corners */
-  padding: 15px;
-  height: 100%;
-}
-
-.link-container:hover {
-  background: #1c1c1c; /* Slightly lighter surface on hover */
-  border-color: #333;
-}
-
-.link-container:hover .link-desc {
-  color: #ffffff;
-  text-decoration: none;
-  text-shadow: none; /* Removed the bright neon green/blue glow */
-}
-
-.link-desc {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.9em;
-  font-weight: 500;
-  color: #e0e0e0;
-}
-
-.link-container-2 {
-  text-decoration: none;
-  color: #a0a0a0;
-  transition: all 0.2s ease;
-  background: #161616; /* Subdued card background */
-  padding: 30px;
-  height: 100%;
-}
-
-.link-container-2:hover {
-  background: #1c1c1c; /* Slightly lighter surface on hover */
-  border-color: #333;
-}
-
-.link-container-2:hover .link-desc {
-  color: #ffffff;
-  text-decoration: none;
-  text-shadow: none; /* Removed the bright neon green/blue glow */
-}
-
-.grid-item {
-  width: 48px; /* Slightly scaled down for better proportions in the card */
-  height: auto;
-  transition: transform .2s ease-in-out;
-  border: none; /* Removed the harsh 2px solid black border */
-  border-radius: 6px; /* Soft edges for icons */
-  flex-shrink: 0;
-}
-
-.link-container:hover .grid-item {
-  transform: scale(1.05); /* Subtler, more professional zoom effect */
-}
-
-.jumbotron {
-  border-radius: 0px;
-  background-color: transparent;
-  margin-bottom: 0px;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-}
-
-.style-border {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: white;
-}
-
-.title {
-  color: #ffffff;
-  font-weight: bolder;
-}
-
-.title i {
-  color: #0096FF;
-}
-
-.hide-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.hover-underline:hover {
-  text-decoration-line: underline;       /* Adds the line */
-  text-decoration-style: solid;          /* Keeps it straight */
-  text-decoration-color: rgb(206, 203, 198);            /* Changes the color */
-  text-decoration-thickness: 1.25px;        /* Makes it thinner (e.g., 1px or 0.1em) */
-}
-
-
-/* =========================================
-   Video Carousel Styles
-   ========================================= */
-
-.video-carousel-container {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  padding-bottom: 15px; /* Room for the scrollbar */
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-
-  /* Firefox Scrollbar Styling */
-  scrollbar-width: thin;
-  scrollbar-color: #333 #0f0f0f;
-}
-
-/* Chrome/Edge/Safari Scrollbar Styling */
-.video-carousel-container::-webkit-scrollbar {
-  height: 8px;
-}
-.video-carousel-container::-webkit-scrollbar-track {
-  background: #0f0f0f;
-  border-radius: 4px;
-}
-.video-carousel-container::-webkit-scrollbar-thumb {
-  background-color: #333;
-  border-radius: 4px;
-}
-.video-carousel-container::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-}
-
-.video-card {
-  flex: 0 0 auto;
-  width: 250px; /* Standard 16:9 thumbnail width */
-  height: 140px;
-  background: #1c1c1c; /* Matches your hover surface */
-  border-radius: 8px;
-  overflow: hidden;
-  scroll-snap-align: start;
-  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
-}
-
-.video-card:hover {
-  transform: scale(1.03); /* Subtle zoom similar to your grid-items */
-  background: #2a2a2a;
-}
-
-.video-card a {
-  text-decoration: none;
-  color: #ececec;
-  display: block;
-}
-
-.video-thumbnail {
-  width: 100%;
-  height: 168px; /* Maintains 16:9 ratio for 300px width */
-  object-fit: cover;
-  border-bottom: 1px solid #333;
-}
-
-.video-title {
-  padding: 12px 15px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; /* Adds '...' if title is too long */
-}
-
-/* =========================================
-   Video Thumbnail Overlay Styles
-   ========================================= */
-
-/* 1. Set the container to relative so the absolute text stays inside it */
-.video-thumbnail-container {
-  position: relative;
-  width: 100%;
-  height: 168px; /* Matches the previous thumbnail height */
-  border-bottom: 1px solid #333;
-}
-
-/* 2. Make sure the image fills the new container */
-.video-thumbnail {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* 3. The floating text overlay */
-.video-overlay-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centers the text perfectly */
-
-  /* Styling for readability */
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  color: #ffffff;
-  padding: 6px 14px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-
-  /* Ensures the text doesn't block the user from clicking the link */
-  pointer-events: none;
-}
-
-/* =========================================
-   Quick Links Carousel Styles
-   ========================================= */
-
-.quick-links-carousel {
-  display: flex;
-  overflow-x: auto;
-  gap: 15px;
-  padding-bottom: 10px; /* Provides room for the scrollbar */
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-
-  /* Firefox Scrollbar Styling */
-  scrollbar-width: thin;
-  scrollbar-color: #333 transparent;
-}
-
-/* Chrome/Edge/Safari Scrollbar Styling */
-.quick-links-carousel::-webkit-scrollbar {
-  height: 6px;
-}
-.quick-links-carousel::-webkit-scrollbar-track {
-  background: transparent;
-}
-.quick-links-carousel::-webkit-scrollbar-thumb {
-  background-color: #333;
-  border-radius: 4px;
-}
-.quick-links-carousel::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-}
-
-/* Forces items to stay a specific width instead of shrinking */
-.quick-link-item {
-  flex: 0 0 auto;
-  width: 240px; /* Adjust this width if you want the cards wider/narrower */
-  scroll-snap-align: start;
-  padding-left: 5px;
-  padding-top: 10px;
-}
-
-/* =========================================
-   Mobile Full-Width Carousel Override
-   ========================================= */
-
-@media (max-width: 768px) {
-  .video-carousel-container {
-    width: 100vw; /* Forces the container to be exactly the width of the screen */
-    margin-left: 5px; calc(-50vw + 50%); /* Pulls the container out of the Bootstrap padding */
-    padding-left: 15px; /* Pushes the first card inward so it aligns with your title */
-    padding-right: 15px; /* Ensures there is a gap after the final card when scrolled completely to the right */
-  }
-
-  /* Optional: Adjust card size slightly for smaller screens */
-  .video-card {
-    width: 260px;
-  }
-
-  .video-thumbnail-container {
-    height: 146px; /* Adjusts the 16:9 ratio for the 260px width */
-  }
-}
-
-/* =========================================
-   Hover-to-Play GIF Styles
-   ========================================= */
-
-/* The static image sits at the bottom of the stack */
-.static-img {
-  position: relative;
-  z-index: 1;
-}
-
-/* The GIF is positioned directly over the static image and hidden by default */
-.gif-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out; /* Smooth fade effect */
-}
-
-/* When the card is hovered, reveal the GIF */
-.video-card:hover .gif-img {
-  opacity: 1;
-}
-
-/* Make sure the text overlay stays on top of both images */
-.video-overlay-text {
-  z-index: 3;
-
-  /* (Keep your existing .video-overlay-text styles below this) */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.7);
-  color: #ffffff;
-  padding: 6px 14px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  pointer-events: none;
-}
-
-/* Add camera hover effect */
-/* 1. Anchor the pseudo-elements to the cards */
-.link-container,
-.link-container-2,
-.video-card {
-  position: relative;
-}
-
-/* 2. Bring the hovered card forward so the corners don't slide under adjacent cards */
-.link-container:hover,
-.link-container-2:hover,
-.video-card:hover {
-  z-index: 10;
-}
-
-/* 3. Build the corner brackets using background gradients */
-.link-container::after,
-.link-container-2::after,
-.video-card::after {
-  content: '';
-  position: absolute;
-  /* Adjust these negative values to pull the frame tighter or wider around the card */
-  top: -6px;
-  left: -6px;
-  right: -6px;
-  bottom: -6px;
-  pointer-events: none; /* Prevents the invisible box from blocking your link clicks */
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-  z-index: 10;
-
-  /* Easily tweak your corner dimensions here */
-  --c-size: 20px; /* Length of the corner segments */
-  --c-thick: 4px; /* 'Medium thick' border width */
-  --c-color: rgb(83, 252, 24); /* The required green */
-
-  background:
-    /* Top Left */
-    linear-gradient(var(--c-color), var(--c-color)) top left / var(--c-size) var(--c-thick) no-repeat,
-    linear-gradient(var(--c-color), var(--c-color)) top left / var(--c-thick) var(--c-size) no-repeat,
-
-    /* Top Right */
-    linear-gradient(var(--c-color), var(--c-color)) top right / var(--c-size) var(--c-thick) no-repeat,
-    linear-gradient(var(--c-color), var(--c-color)) top right / var(--c-thick) var(--c-size) no-repeat,
-
-    /* Bottom Left */
-    linear-gradient(var(--c-color), var(--c-color)) bottom left / var(--c-size) var(--c-thick) no-repeat,
-    linear-gradient(var(--c-color), var(--c-color)) bottom left / var(--c-thick) var(--c-size) no-repeat,
-
-    /* Bottom Right */
-    linear-gradient(var(--c-color), var(--c-color)) bottom right / var(--c-size) var(--c-thick) no-repeat,
-    linear-gradient(var(--c-color), var(--c-color)) bottom right / var(--c-thick) var(--c-size) no-repeat;
-}
-
-/* 4. Trigger the fade-in effect on hover */
-.link-container:hover::after,
-.link-container-2:hover::after,
-.video-card:hover::after {
-  opacity: 1;
+@media (min-width:1024px){
+  .lg\:block{display:block}
+  .lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .lg\:px-8{padding-left:2rem;padding-right:2rem}
 }
