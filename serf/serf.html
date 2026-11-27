@@ -11,71 +11,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            surface: {
-              950: '#0a0a0b',
-              900: '#111113',
-              850: '#161619',
-              800: '#1d1d21',
-              700: '#2a2a30',
-            },
-            accent: {
-              blue: '#3D90D9',
-              neon: '#53fc18',
-            }
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    /* Custom Scrollbars */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-
-    .thin-scrollbar::-webkit-scrollbar {
-      height: 6px;
-    }
-    .thin-scrollbar::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    .thin-scrollbar::-webkit-scrollbar-thumb {
-      background-color: #2a2a30;
-      border-radius: 9999px;
-    }
-    .thin-scrollbar::-webkit-scrollbar-thumb:hover {
-      background-color: #44444e;
-    }
-
-    .viewfinder-card {
-      position: relative;
-      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, border-color 0.2s ease;
-    }
-
-    .viewfinder-card:hover {
-      z-index: 20;
-    }
-  </style>
+  <!-- Local Compiled Stylesheet (Zero CDN) -->
+  <link rel="stylesheet" href="stylesheets/serf.css">
 </head>
 
-<body class="bg-surface-950 text-zinc-100 antialiased selection:bg-accent-blue selection:text-white min-h-screen flex flex-col">
+<body class="bg-surface-950 text-zinc-100 min-h-screen flex flex-col">
 
   <!-- Top Ambient Glow -->
   <div class="pointer-events-none fixed inset-x-0 top-0 h-64 bg-gradient-to-b from-accent-blue/10 via-transparent to-transparent -z-10"></div>
@@ -111,6 +51,84 @@
 
   <main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 space-y-10">
 
+    <!-- Quick Links Section -->
+    <!-- <section aria-label="Quick Links">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <a href="https://news.google.com/" target="_blank" rel="noopener noreferrer"
+           class="viewfinder-card group flex items-center gap-3.5 rounded-xl bg-surface-850 hover:bg-surface-800 border border-surface-700/80 hover:border-zinc-600 p-3.5 sm:p-4">
+          <img src="icons/header/gnews.png" alt="Google News" class="w-10 h-10 sm:w-11 sm:h-11 rounded-lg object-contain shrink-0 transition-transform duration-200 group-hover:scale-105">
+          <div class="min-w-0">
+            <div class="text-sm sm:text-base font-semibold text-zinc-100 group-hover:text-white truncate">Google News</div>
+            <div class="text-xs text-zinc-400 truncate">Headlines &amp; Feed</div>
+          </div>
+        </a>
+
+        <a href="https://www.alltop.com/" target="_blank" rel="noopener noreferrer"
+           class="viewfinder-card group flex items-center gap-3.5 rounded-xl bg-surface-850 hover:bg-surface-800 border border-surface-700/80 hover:border-zinc-600 p-3.5 sm:p-4">
+          <img src="icons/header/alltop.png" alt="Alltop" class="w-10 h-10 sm:w-11 sm:h-11 rounded-lg object-contain shrink-0 transition-transform duration-200 group-hover:scale-105">
+          <div class="min-w-0">
+            <div class="text-sm sm:text-base font-semibold text-zinc-100 group-hover:text-white truncate">Alltop</div>
+            <div class="text-xs text-zinc-400 truncate">Top Stories Aggregator</div>
+          </div>
+        </a>
+
+        <a href="https://finviz.com/news" target="_blank" rel="noopener noreferrer"
+           class="viewfinder-card group flex items-center gap-3.5 rounded-xl bg-surface-850 hover:bg-surface-800 border border-surface-700/80 hover:border-zinc-600 p-3.5 sm:p-4">
+          <img src="icons/header/finviz.png" alt="Finviz" class="w-10 h-10 sm:w-11 sm:h-11 rounded-lg object-contain shrink-0 transition-transform duration-200 group-hover:scale-105">
+          <div class="min-w-0">
+            <div class="text-sm sm:text-base font-semibold text-zinc-100 group-hover:text-white truncate">Finviz News</div>
+            <div class="text-xs text-zinc-400 truncate">Market &amp; Ticker Wire</div>
+          </div>
+        </a>
+
+        <a href="https://www.fark.com/" target="_blank" rel="noopener noreferrer"
+           class="viewfinder-card group flex items-center gap-3.5 rounded-xl bg-surface-850 hover:bg-surface-800 border border-surface-700/80 hover:border-zinc-600 p-3.5 sm:p-4">
+          <img src="icons/header/fark.png" alt="Fark" class="w-10 h-10 sm:w-11 sm:h-11 rounded-lg object-contain shrink-0 transition-transform duration-200 group-hover:scale-105">
+          <div class="min-w-0">
+            <div class="text-sm sm:text-base font-semibold text-zinc-100 group-hover:text-white truncate">Fark</div>
+            <div class="text-xs text-zinc-400 truncate">Offbeat &amp; Community</div>
+          </div>
+        </a>
+      </div>
+    </section> -->
+
+    <!-- Trending News Section -->
+    <section aria-labelledby="trending-heading">
+      <div class="flex items-center justify-between mb-3.5">
+        <h2 id="trending-heading" class="text-lg sm:text-xl font-bold tracking-tight text-white flex items-center gap-2">
+          <svg class="w-5 h-5 text-accent-blue" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+          </svg>
+          Trending News
+        </h2>
+        <div class="flex items-center gap-3">
+          <span id="trending-status" class="text-xs text-zinc-400">Updating...</span>
+          <button
+            id="refresh-trending-btn"
+            type="button"
+            class="rounded-lg bg-surface-850 hover:bg-surface-800 border border-surface-700/80 px-2.5 py-1 text-xs font-medium text-zinc-300 hover:text-white transition-colors"
+          >
+            Refresh
+          </button>
+        </div>
+      </div>
+
+      <!-- Loading Skeleton (6 items) -->
+      <div id="trending-skeleton" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+        <div class="h-24 rounded-xl bg-surface-850 border border-surface-700/70 animate-pulse"></div>
+        <div class="h-24 rounded-xl bg-surface-850 border border-surface-700/70 animate-pulse"></div>
+        <div class="h-24 rounded-xl bg-surface-850 border border-surface-700/70 animate-pulse"></div>
+        <div class="h-24 rounded-xl bg-surface-850 border border-surface-700/70 animate-pulse hidden sm:block"></div>
+        <div class="h-24 rounded-xl bg-surface-850 border border-surface-700/70 animate-pulse hidden lg:block"></div>
+        <div class="h-24 rounded-xl bg-surface-850 border border-surface-700/70 animate-pulse hidden lg:block"></div>
+      </div>
+
+      <!-- Trending Cards Grid -->
+      <div id="trending-grid" class="hidden grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </section>
+
     <!-- Videos Section -->
     <section aria-labelledby="videos-heading">
       <div class="flex items-center justify-between mb-3.5">
@@ -120,7 +138,7 @@
           </svg>
           Videos
         </h2>
-        <!-- <span class="text-xs text-zinc-400 hidden sm:inline">Hover to preview channel</span> -->
+        <span class="text-xs text-zinc-400 hidden sm:inline">Hover to preview channel</span>
       </div>
 
       <div class="flex md:grid md:grid-cols-4 gap-4 overflow-x-auto thin-scrollbar pb-2 snap-x snap-mandatory -mx-4 px-4 md:mx-0 md:px-0">
@@ -133,7 +151,7 @@
             <span class="absolute bottom-2 left-2 rounded bg-black/75 px-2 py-0.5 text-[11px] font-semibold text-white backdrop-blur-sm">CNBC</span>
           </div>
           <div class="p-3">
-            <div class="text-sm font-medium text-zinc-200 group-hover:text-white truncate">Market Analysis & Weekly Recap</div>
+            <div class="text-sm font-medium text-zinc-200 group-hover:text-white truncate">Market Analysis &amp; Weekly Recap</div>
           </div>
         </a>
 
@@ -239,6 +257,109 @@
 
   <!-- Clock Script -->
   <script src="clock.js"></script>
+
+  <!-- Trending News Fetcher (Frontend-Only) -->
+  <script>
+    (function () {
+      const STORY_LIMIT = 8;
+      const FEED_URL = encodeURIComponent('https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en');
+      const API_ENDPOINT = `https://api.rss2json.com/v1/api.json?rss_url=${FEED_URL}`;
+
+      const FALLBACK_STORIES = [
+        { title: "Google News Top Headlines", url: "https://news.google.com/", source: "Google News", pubDate: "" },
+        { title: "Finviz Market & Stock News Wire", url: "https://finviz.com/news", source: "Finviz", pubDate: "" },
+        { title: "Alltop Curated Daily Stories", url: "https://www.alltop.com/", source: "Alltop", pubDate: "" },
+        { title: "Reuters Global & Business Coverage", url: "https://www.reuters.com/", source: "Reuters", pubDate: "" },
+        { title: "Ars Technica Technology & Science", url: "https://arstechnica.com/", source: "Ars Technica", pubDate: "" },
+        { title: "AP News Breaking & World Wire", url: "https://apnews.com/", source: "AP News", pubDate: "" }
+      ];
+
+      const gridEl = document.getElementById('trending-grid');
+      const skeletonEl = document.getElementById('trending-skeleton');
+      const statusEl = document.getElementById('trending-status');
+      const refreshBtn = document.getElementById('refresh-trending-btn');
+
+      function formatRelativeTime(dateStr) {
+        if (!dateStr) return '';
+        const parsed = new Date(dateStr.replace(' ', 'T'));
+        if (Number.isNaN(parsed.getTime())) return '';
+        const diffMins = Math.max(1, Math.floor((Date.now() - parsed.getTime()) / 60000));
+        if (diffMins < 60) return `${diffMins}m ago`;
+        const diffHrs = Math.floor(diffMins / 60);
+        if (diffHrs < 24) return `${diffHrs}h ago`;
+        return `${Math.floor(diffHrs / 24)}d ago`;
+      }
+
+      function parseSourceAndCleanTitle(rawTitle) {
+        const parts = rawTitle.split(' - ');
+        if (parts.length > 1) {
+          const source = parts.pop().trim();
+          return { title: parts.join(' - ').trim(), source };
+        }
+        return { title: rawTitle.trim(), source: 'Trending' };
+      }
+
+      function renderStories(stories, isFallback = false) {
+        const sliced = stories.slice(0, STORY_LIMIT);
+        gridEl.innerHTML = sliced.map((story, idx) => {
+          const timeLabel = formatRelativeTime(story.pubDate);
+          return `
+            <a href="${story.url}" target="_blank" rel="noopener noreferrer"
+               class="viewfinder-card group flex flex-col justify-between gap-2.5 rounded-xl bg-surface-850 hover:bg-surface-800 border border-surface-700/75 hover:border-zinc-600 p-4">
+              <div class="flex items-start gap-3">
+                <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-surface-900 border border-surface-700 text-xs font-mono font-bold text-accent-blue">
+                  ${idx + 1}
+                </span>
+                <h3 class="text-sm font-semibold text-zinc-100 group-hover:text-white leading-snug line-clamp-2">
+                  ${story.title}
+                </h3>
+              </div>
+              <div class="flex items-center justify-between text-xs text-zinc-400 pl-9">
+                <span class="truncate font-medium text-zinc-400 group-hover:text-zinc-300">${story.source}</span>
+                <span class="shrink-0 font-mono text-[11px] text-zinc-500">${timeLabel}</span>
+              </div>
+            </a>
+          `;
+        }).join('');
+
+        skeletonEl.classList.add('hidden');
+        gridEl.classList.remove('hidden');
+        gridEl.classList.add('grid');
+        statusEl.textContent = isFallback ? 'Quick links fallback' : `Top ${sliced.length} stories`;
+      }
+
+      async function loadTrending() {
+        statusEl.textContent = 'Fetching...';
+        try {
+          const res = await fetch(API_ENDPOINT, { cache: 'no-store' });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const data = await res.json();
+
+          if (data.status !== 'ok' || !Array.isArray(data.items) || data.items.length === 0) {
+            throw new Error('Empty feed');
+          }
+
+          const normalized = data.items.slice(0, STORY_LIMIT).map(item => {
+            const parsed = parseSourceAndCleanTitle(item.title || 'Untitled');
+            return {
+              title: parsed.title,
+              source: item.author || parsed.source,
+              url: item.link,
+              pubDate: item.pubDate
+            };
+          }).filter(s => s.url);
+
+          if (normalized.length === 0) throw new Error('No valid links');
+          renderStories(normalized, false);
+        } catch (err) {
+          renderStories(FALLBACK_STORIES, true);
+        }
+      }
+
+      refreshBtn.addEventListener('click', loadTrending);
+      loadTrending();
+    })();
+  </script>
 
   <!-- Directory Data & Interactive UI Logic -->
   <script>
@@ -613,7 +734,6 @@
       toggleAllLabel.textContent = allOpen ? 'Collapse All' : 'Expand All';
     }
 
-    // Event Listeners
     searchInput.addEventListener('input', () => {
       clearSearchBtn.classList.toggle('hidden', searchInput.value.length === 0);
       renderDirectory();
@@ -634,7 +754,6 @@
       renderDirectory();
     });
 
-    // Keyboard shortcut '/' to focus search
     document.addEventListener('keydown', (e) => {
       if (e.key === '/' && document.activeElement !== searchInput) {
         e.preventDefault();
@@ -647,7 +766,6 @@
       }
     });
 
-    // Initial Render
     renderPills();
     renderDirectory();
   </script>
